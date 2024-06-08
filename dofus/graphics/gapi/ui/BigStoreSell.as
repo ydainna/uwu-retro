@@ -386,7 +386,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreSell extends dofus.§\x18\x03\x10§
             var _loc3_ = this.api.lang.getText("BIGSTORE_MAX_LEVEL") + " : " + this._oData["\x18\x19\x19"];
             _loc3_ += "\n" + this.api.lang.getText("BIGSTORE_TAX") + " : " + this._oData["\x1b\x0e\x02"] + "%";
             _loc3_ += "\n" + this.api.lang.getText("BIGSTORE_MAX_ITEM_PER_ACCOUNT") + " : " + this._oData["\x18\x19\x16"];
-            _loc3_ += "\n" + this.api.lang.getText("BIGSTORE_MAX_SELL_TIME") + " : " + this._oData.maxSellTime + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("HOURS"),"m",this._oData.maxSellTime < 2);
+            _loc3_ += "\n" + this.api.lang.getText("BIGSTORE_MAX_SELL_TIME") + " : " + this._oData.maxSellTime + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("HOURS"),"m",this._oData.maxSellTime < 2);
             _loc3_ += "\n\n" + this.api.lang.getText("BIGSTORE_GAIN_SLOT");
             _loc3_ += "\n\n" + this.api.lang.getText("BIGSTORE_TYPES") + " :";
             var _loc4_ = this._oData.types;

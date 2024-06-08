@@ -155,7 +155,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                this.api.network.Chat.send(_loc17_,_loc16_,_loc4_);
                break;
             case "WHOAMI":
-               this.api.networkBasics["\x1b\x19\b"]();
+               this.api.network.Basics["\x1b\x19\b"]();
                break;
             case "WHOIS":
                if(_loc5_.length == 0)
@@ -163,7 +163,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                   this.api.kernel.showMessage(undefined,this.api.lang.getText("SYNTAX_ERROR",[" /whois &lt;" + this.api.lang.getText("NAME") + "&gt;"]),"ERROR_CHAT");
                   break;
                }
-               this.api.networkBasics["\x1b\x19\t"](_loc5_[0]);
+               this.api.network.Basics["\x1b\x19\t"](_loc5_[0]);
                break;
             case "F":
             case "FRIEND":
@@ -315,10 +315,10 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                this.api.network.Fights["\x16\x0e\x10"]();
                break;
             case "AWAY":
-               this.api.networkBasics["\x16\b\x06"]();
+               this.api.network.Basics["\x16\b\x06"]();
                break;
             case "INVISIBLE":
-               this.api.networkBasics["\x18\f\x0e"]();
+               this.api.network.Basics["\x18\f\x0e"]();
                break;
             case "INVITE":
                var _loc37_ = String(_loc5_[0]);

@@ -48,7 +48,7 @@ class dofus.§\x17\x04\x19§.§\x1a\t\x01§
             _loc5_[1] = this.api.lang["\x17\x1c\t"](_loc4_[1]).n;
             _loc5_[2] = _loc4_[2];
       }
-      var _loc7_ = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](_loc6_,_loc5_);
+      var _loc7_ = ank.utils.PatternDecoder.getDescription(_loc6_,_loc5_);
       if(_loc7_ != null && dofus.Constants.DEBUG)
       {
          _loc7_ = _loc7_ + " (" + this["\x1d\x17\x01"] + ")";

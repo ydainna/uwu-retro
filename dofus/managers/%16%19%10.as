@@ -189,7 +189,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       }
       if(_loc3_ >= this.api.lang.getConfigText("SEND_CENSORSHIP_SINCE"))
       {
-         this.api.networkBasics["\x1a\x0f\x0e"](_loc3_,_loc4_);
+         this.api.network.Basics["\x1a\x0f\x0e"](_loc3_,_loc4_);
       }
       if(_loc3_ > 0)
       {

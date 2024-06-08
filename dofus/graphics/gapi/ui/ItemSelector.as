@@ -98,7 +98,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSelector extends dofus.§\x18\x03\x10§
             }
          }
       }
-      this["\x1c\x1c\x03"].text = this["\x1c\x0f\x14"].length + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("OBJECTS"),"m",this["\x1c\x0f\x14"].length < 2);
+      this["\x1c\x1c\x03"].text = this["\x1c\x0f\x14"].length + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("OBJECTS"),"m",this["\x1c\x0f\x14"].length < 2);
    }
    function §\x1a\x12\t§(sText)
    {
@@ -126,7 +126,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSelector extends dofus.§\x18\x03\x10§
          }
       }
       this["\x1d\x06\x0b"].dataProvider = _loc4_;
-      this["\x1c\x1c\x03"].text = _loc4_.length + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("OBJECTS"),"m",_loc4_.length < 2);
+      this["\x1c\x1c\x03"].text = _loc4_.length + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("OBJECTS"),"m",_loc4_.length < 2);
    }
    function §\x1a\x12\x0b§(§\x16\b\x07§, sName, §\x19\n\f§)
    {
@@ -173,7 +173,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSelector extends dofus.§\x18\x03\x10§
       else if(this["\x1d\x06\x0b"].dataProvider != this["\x1c\x0f\x14"])
       {
          this["\x1d\x06\x0b"].dataProvider = this["\x1c\x0f\x14"];
-         this["\x1c\x1c\x03"].text = this["\x1c\x0f\x14"].length + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("OBJECTS"),"m",this["\x1c\x0f\x14"].length < 2);
+         this["\x1c\x1c\x03"].text = this["\x1c\x0f\x14"].length + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("OBJECTS"),"m",this["\x1c\x0f\x14"].length < 2);
       }
    }
    function itemSelected(oEvent)

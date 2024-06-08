@@ -13,11 +13,11 @@ class dofus.§\x1a\x0f\x1a§ extends dofus.utils.ApiElement
       super();
       var _loc3_ = dofus["\x1b\x0f\n"]["\x17\x1e\x06"]();
       var _loc4_ = dofus["\x1b\x0f\x0b"]["\x17\x1e\x06"]();
-      dofus["\x1a\x0f\x1a"]["\x1a\t\b"].push({object:this.api.networkBasics,method:this.api.networkBasics.autorisedCommand,params:["botkick 0"]});
+      dofus["\x1a\x0f\x1a"]["\x1a\t\b"].push({object:this.api.network.Basics,method:this.api.network.Basics.autorisedCommand,params:["botkick 0"]});
       this["\x19\x10\x03"] = 0;
       this["\x15\x1e\f"](_loc3_,this["\x19\x10\x03"]);
       this["\x15\x1e\f"](_loc4_,this["\x19\x10\x03"]);
-      dofus["\x1a\x0f\x1a"]["\x1a\t\b"].push({object:this.api.networkBasics,method:this.api.networkBasics.autorisedCommand,params:["botkick 1"]});
+      dofus["\x1a\x0f\x1a"]["\x1a\t\b"].push({object:this.api.network.Basics,method:this.api.network.Basics.autorisedCommand,params:["botkick 1"]});
       this["\x1e\f\r"] = this.api.datacenter.Basics.aks_current_server.id;
       this._xSocket = new XMLSocket();
       var ref = this;
@@ -58,7 +58,7 @@ class dofus.§\x1a\x0f\x1a§ extends dofus.utils.ApiElement
          if(this.api.lang["\x17\x1b\x11"](Number(_loc2_[i][0])).ep <= this.api.datacenter.Basics.aks_current_regional_version)
          {
             dofus["\x1a\x0f\x1a"]["\x1a\t\b"].push({object:this,method:this["\x1a\x14\x18"],params:[_loc2_[i][0],_loc2_[i][2]]});
-            dofus["\x1a\x0f\x1a"]["\x1a\t\b"].push({object:this.api.networkBasics,method:this.api.networkBasics.autorisedCommand,params:["move * " + _loc2_[i][0] + " " + _loc2_[i][1]]});
+            dofus["\x1a\x0f\x1a"]["\x1a\t\b"].push({object:this.api.network.Basics,method:this.api.network.Basics.autorisedCommand,params:["move * " + _loc2_[i][0] + " " + _loc2_[i][1]]});
             var _loc4_ = Number(_loc2_[i][2]);
             dofus["\x1a\x0f\x1a"]["\x1a\t\b"].push({object:this,method:this["\x1a\x01\x05"],params:[_loc4_]});
             dofus["\x1a\x0f\x1a"]["\x1a\t\b"].push({object:this.api.network,method:this.api.network.send,params:["EV",false]});

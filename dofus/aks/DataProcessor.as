@@ -101,7 +101,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                         this.aks.Basics["\x19\x14\f"](_loc5_.substr(3));
                         break;
                      case "P":
-                        this.aks.Basics["\x19\x14\t"](_loc5_.substr(3));
+                        this.aks.Basics.onAuthorizedCommandPrompt(_loc5_.substr(3));
                         break;
                      case "C":
                         this.aks.Basics["\x19\x14\b"]();
@@ -184,10 +184,10 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   }
                   break;
                case "c":
-                  this.aks.Account.["\x19\x15\x17"](_loc5_.substr(2));
+                  this.aks.Account.onCommunity(_loc5_.substr(2));
                   break;
                case "d":
-                  this.aks.Account.["\x19\x16\x14"](_loc5_.substr(2));
+                  this.aks.Account.onDofusPseudo(_loc5_.substr(2));
                   break;
                case "l":
                   this.aks.Account.onLogin(!_loc4_,_loc5_.substr(3));
@@ -196,7 +196,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Account.["\x19\x15\x10"](!_loc4_,_loc5_.substr(3));
                   break;
                case "x":
-                  this.aks.Account.["\x19\x1c\x14"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.onServersList(!_loc4_,_loc5_.substr(3));
                   break;
                case "A":
                   this.aks.Account.["\x19\x15\n"](!_loc4_,_loc5_.substr(3));

@@ -180,7 +180,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ItemViewer extends dofus.§\x
          {
             this._txtPriceLabel.text = _loc3_;
          }
-         this["\x1d\x04\t"].text = _loc2_.weight + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this._parent.api.lang.getText("PODS"),"m",_loc2_.weight < 2);
+         this["\x1d\x04\t"].text = _loc2_.weight + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this._parent.api.lang.getText("PODS"),"m",_loc2_.weight < 2);
          if(dofus.Constants.DEBUG)
          {
             var _loc5_ = " (" + _loc2_.type + "/" + _loc2_.gfx;
@@ -434,7 +434,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ItemViewer extends dofus.§\x
                _loc5_ = this["\x1e\x03\x18"].skinDurabilityMax;
             }
             var _loc6_ = this.api.lang["\x17\x17\x05"](_loc3_).d;
-            var _loc7_ = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](_loc6_,[undefined,_loc4_,_loc5_]);
+            var _loc7_ = ank.utils.PatternDecoder.getDescription(_loc6_,[undefined,_loc4_,_loc5_]);
             this.gapi.showTooltip(_loc7_,_loc2_.target,-20);
             break;
          case "_ldrTwoHanded":

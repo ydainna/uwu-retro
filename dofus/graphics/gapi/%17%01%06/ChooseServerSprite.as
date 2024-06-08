@@ -25,7 +25,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseServerSprite extends do
    }
    function §\b\x18§()
    {
-      var _loc2_ = this.api.datacenter.Basics["\x16\x02\x12"];
+      var _loc2_ = this.api.datacenter.Basics.aks_servers;
       var _loc3_ = 0;
       while(_loc3_ < _loc2_.length)
       {
@@ -70,7 +70,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseServerSprite extends do
       {
          getURL(this._parent.api.lang.getConfigText("FORUM_SERVERS_STATE_LAST_POST"),"_blank");
       };
-      this.api.datacenter.Basics["\x16\x02\x12"].addEventListener("modelChanged",this);
+      this.api.datacenter.Basics.aks_servers.addEventListener("modelChanged",this);
    }
    function §\x1a\x16\x07§()
    {
@@ -138,8 +138,8 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseServerSprite extends do
          this._lblState.text = _loc2_["\x1b\t\x19"];
          this["\x1d\x06\x01"].forceReload = true;
          this["\x1d\x06\x01"].contentPath = dofus.Constants["\x1a\x14\x17"] + _loc2_.id + ".swf";
-         this.enabled = _loc2_.state == dofus.datacenter.["\x1a\x14\x05"].SERVER_ONLINE;
-         this["\x1c\x0e\x03"].contentPath = _loc2_.state != dofus.datacenter.["\x1a\x14\x05"].SERVER_ONLINE ? "NewCross" : "NewValid";
+         this.enabled = _loc2_.state == dofus.datacenter.Server.SERVER_ONLINE;
+         this["\x1c\x0e\x03"].contentPath = _loc2_.state != dofus.datacenter.Server.SERVER_ONLINE ? "NewCross" : "NewValid";
       }
       else if(this["\x1c\x1b\x0f"].text != undefined)
       {

@@ -142,7 +142,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\x04\x1b§()
    {
-      var _loc2_ = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].n),dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1c"]());
+      var _loc2_ = ank.utils.PatternDecoder.getDescription(dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].n),dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1c"]());
       if(dofus.Constants.DEBUG)
       {
          var _loc3_ = " (" + this.unicID;
@@ -157,7 +157,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function get nameUppercase()
    {
-      var _loc2_ = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].nn),dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1c"]());
+      var _loc2_ = ank.utils.PatternDecoder.getDescription(dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].nn),dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1c"]());
       if(dofus.Constants.DEBUG)
       {
          var _loc3_ = " (" + this.unicID;
@@ -187,7 +187,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
       {
          _loc3_ = "<u>" + dofus.datacenter.["\x18\x10\x15"].api.lang.getText("ITEM_TYPE") + " : " + _loc2_ + "</u>\n";
       }
-      _loc3_ += ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].d),dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1c"]());
+      _loc3_ += ank.utils.PatternDecoder.getDescription(dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].d),dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1c"]());
       if(this.isCeremonial)
       {
          _loc3_ += " " + dofus.datacenter.["\x18\x10\x15"].api.lang.getText("SUPERTYPE_" + this.superType + "_CERMONIAL_DESCRIPTION");

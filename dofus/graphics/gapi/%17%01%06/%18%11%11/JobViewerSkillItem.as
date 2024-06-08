@@ -27,15 +27,15 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x18\x11\x11§.JobViewerSki
             {
                _loc5_ = "(#4s)  #1{~2 " + this["\x1d\r\t"].gapi.api.lang.getText("TO_RANGE") + " }#2";
             }
-            this["\x1c\x1d\t"].text = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](_loc5_,new Array(_loc4_["\x1a\x03\r"],_loc4_["\x1a\x03\x0e"],_loc4_["\x1a\x03\x0f"],Math.round(_loc4_["\x1a\x03\x10"] / 100) / 10));
+            this["\x1c\x1d\t"].text = ank.utils.PatternDecoder.getDescription(_loc5_,new Array(_loc4_["\x1a\x03\r"],_loc4_["\x1a\x03\x0e"],_loc4_["\x1a\x03\x0f"],Math.round(_loc4_["\x1a\x03\x10"] / 100) / 10));
             this["\x1c\r\x1c"].contentData = _loc4_.item;
          }
          else
          {
             var _loc6_ = this._parent._parent._parent._parent;
-            var _loc7_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this["\x1d\r\t"].gapi.api.lang.getText("SLOT"),"n",_loc4_["\x1a\x03\r"] < 2);
+            var _loc7_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this["\x1d\r\t"].gapi.api.lang.getText("SLOT"),"n",_loc4_["\x1a\x03\r"] < 2);
             var _loc8_ = "#1 " + _loc7_ + " (#2%)";
-            this["\x1c\x1d\t"].text = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](_loc8_,new Array(_loc4_["\x1a\x03\r"],_loc4_["\x1a\x03\x10"]));
+            this["\x1c\x1d\t"].text = ank.utils.PatternDecoder.getDescription(_loc8_,new Array(_loc4_["\x1a\x03\r"],_loc4_["\x1a\x03\x10"]));
             this["\x1c\r\x1c"].contentData = undefined;
          }
       }

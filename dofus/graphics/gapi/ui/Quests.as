@@ -7,7 +7,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Quests extends dofus.§\x18\x03\x10§.gapi.
    }
    function §\x1a\x18\x16§(§\x19\x05\f§)
    {
-      this["\x1c\x1d\x0b"].text = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("PENDING_QUEST",[_loc2_]),"m",_loc2_ < 2);
+      this["\x1c\x1d\x0b"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("PENDING_QUEST",[_loc2_]),"m",_loc2_ < 2);
    }
    function §\x1a\x1a\f§(§\x1a\x02\r§)
    {

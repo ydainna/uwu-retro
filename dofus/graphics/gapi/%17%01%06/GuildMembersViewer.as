@@ -45,7 +45,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.GuildMembersViewer extends do
          }
          _loc4_ = _loc4_ + 1;
       }
-      this["\x1c\x15\x1a"].text = _loc3_ + " / " + String(_loc2_.length) + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("MEMBERS"),"m",_loc2_.length < 2);
+      this["\x1c\x15\x1a"].text = _loc3_ + " / " + String(_loc2_.length) + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("MEMBERS"),"m",_loc2_.length < 2);
       var _loc5_ = new ank.utils.ExtendedArray();
       if(!this["\x1c\x0b\x03"].selected)
       {

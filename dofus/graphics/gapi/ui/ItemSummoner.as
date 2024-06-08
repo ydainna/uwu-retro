@@ -103,7 +103,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSummoner extends dofus.§\x18\x03\x10§
             }
          }
       }
-      this["\x1c\x1c\x03"].text = this["\x1c\x0f\x14"].length + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("OBJECTS"),"m",this["\x1c\x0f\x14"].length < 2);
+      this["\x1c\x1c\x03"].text = this["\x1c\x0f\x14"].length + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("OBJECTS"),"m",this["\x1c\x0f\x14"].length < 2);
    }
    function §\x1a\x12\t§(sText)
    {
@@ -175,7 +175,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSummoner extends dofus.§\x18\x03\x10§
       for(var i in this["\x1c\x0f\x0e"])
       {
          var _loc2_ = dofus.datacenter.["\x18\x10\x15"](this["\x1c\x0f\x0e"][i]);
-         this.api.networkBasics.autorisedCommand("getitem " + _loc2_.unicID + " " + _loc2_.Quantity);
+         this.api.network.Basics.autorisedCommand("getitem " + _loc2_.unicID + " " + _loc2_.Quantity);
       }
       this["\x1c\x0f\x0e"] = new ank.utils.ExtendedArray();
       this._cgGrid.dataProvider = this["\x1c\x0f\x0e"];

@@ -251,7 +251,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MonsterAndLookSelector extends dofus.§\x18
          case this["\x1c\f\x1b"]:
             var _loc3_ = this["\x1c\f\x1b"].selectedItem.data;
             this["\x1c\r\x03"].dataProvider = _loc3_;
-            this["\x1c\x1c\x03"].text = _loc3_.length + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText(!this["\x1c\x06\x13"] ? "LOOK" : "MONSTER"),"m",_loc3_.length < 2);
+            this["\x1c\x1c\x03"].text = _loc3_.length + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText(!this["\x1c\x06\x13"] ? "LOOK" : "MONSTER"),"m",_loc3_.length < 2);
             break;
          case this["\x1c\f\n"]:
             this._cciSprite.setAnim(this["\x1c\f\n"].selectedItem.label,true);

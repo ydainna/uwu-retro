@@ -60,10 +60,10 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x1b\x07§.ChooseServerListItem exten
          this["\x1c\x15\b"].text = _loc4_.sortCommunity;
          switch(_loc4_.state)
          {
-            case dofus.datacenter.["\x1a\x14\x05"].SERVER_OFFLINE:
+            case dofus.datacenter.Server.SERVER_OFFLINE:
                this["\x1c\x1c\t"].styleName = "RedCenterSmallLabel";
                break;
-            case dofus.datacenter.["\x1a\x14\x05"].SERVER_ONLINE:
+            case dofus.datacenter.Server.SERVER_ONLINE:
                this["\x1c\x1c\t"].styleName = "GreenCenterSmallLabel";
                break;
             default:
@@ -86,7 +86,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x1b\x07§.ChooseServerListItem exten
          }
          this["\x1c\x1c\x1c"].text = _loc4_["\x1a\x06\x11"];
          this["\x1d\x03\x18"].text = _loc4_.type;
-         if(_loc4_["\x1b\x12\n"] == dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x10"])
+         if(_loc4_["\x1b\x12\n"] == dofus.datacenter.Server["\x1a\x14\x10"])
          {
             this["\x1c\x1b\x0f"].styleName = "RedLeftSmallLabel";
             this["\x1d\x03\x18"].styleName = "RedCenterSmallLabel";
@@ -128,7 +128,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x1b\x07§.ChooseServerListItem exten
          return undefined;
       }
       var _loc2_ = this["\x1d\r\t"].gapi.api;
-      var _loc3_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](_loc2_.lang.getText("A_POSSESS_CHARACTER",[this["\x1e\x03\x18"]["\x1a\x12\x04"],this["\x1e\x03\x18"].friendCharactersCount]),null,this["\x1e\x03\x18"].friendCharactersCount == 1);
+      var _loc3_ = ank.utils.PatternDecoder["\x16\x1d\x15"](_loc2_.lang.getText("A_POSSESS_CHARACTER",[this["\x1e\x03\x18"]["\x1a\x12\x04"],this["\x1e\x03\x18"].friendCharactersCount]),null,this["\x1e\x03\x18"].friendCharactersCount == 1);
       _loc2_.ui.showTooltip(_loc3_,this._mcOver,-20);
    }
    function out(oEvent)

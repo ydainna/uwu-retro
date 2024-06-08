@@ -165,7 +165,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.StatsJob extends dofus.§\x18\x03\x10§.gap
    function initTexts()
    {
       this["\x1c\x17\x12"].text = this.api.lang.getText("ENERGY");
-      if(this.api.datacenter.Basics.aks_current_server["\x1b\x12\n"] == dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x10"])
+      if(this.api.datacenter.Basics.aks_current_server["\x1b\x12\n"] == dofus.datacenter.Server["\x1a\x14\x10"])
       {
          this["\x1c\x17\x12"]._alpha = 50;
          this["\x1d\x0e\t"]._visible = false;
@@ -473,7 +473,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.StatsJob extends dofus.§\x18\x03\x10§.gap
    }
    function energyChanged(oEvent)
    {
-      if(this.api.datacenter.Basics.aks_current_server["\x1b\x12\n"] != dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x10"])
+      if(this.api.datacenter.Basics.aks_current_server["\x1b\x12\n"] != dofus.datacenter.Server["\x1a\x14\x10"])
       {
          this["\x1d\x0b\x04"].onRollOver = function()
          {

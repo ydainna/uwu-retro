@@ -728,7 +728,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MiniMap extends dofus.§\x18\
          var _loc4_ = _loc2_.coordinates.y;
          if(_loc3_ != undefined && _loc4_ != undefined)
          {
-            this.api.networkBasics["\x16\x07\x1c"](_loc3_,_loc4_);
+            this.api.network.Basics["\x16\x07\x1c"](_loc3_,_loc4_);
          }
       }
    }

@@ -156,9 +156,9 @@ class dofus.§\x18\x18\x0b§.§\x18\x18\x18§ extends dofus.§\x18\x18\x0b§.§\
       _loc25_.ambianceID = _loc14_;
       _loc25_.musicID = _loc15_;
       this.api.gfx["\x16\x14\x02"](_loc3_,_loc9_,_loc10_,_loc11_,_loc12_,_loc13_,_loc25_);
-      if(this.api.networkBasics.lastReceivedReferenceTime != undefined)
+      if(this.api.network.Basics.lastReceivedReferenceTime != undefined)
       {
-         this.api.kernel["\x19\b\x11"]["\x1a\x19\t"](this.api.networkBasics.lastReceivedReferenceTime,this.api.kernel.OptionsManager.getOption("NightMode"),_loc25_);
+         this.api.kernel["\x19\b\x11"]["\x1a\x19\t"](this.api.network.Basics.lastReceivedReferenceTime,this.api.kernel.OptionsManager.getOption("NightMode"),_loc25_);
       }
       this["\x1c\x02\f"] = false;
       new org.flashdevelop.utils.FlashConnect.trace("===== Map Built =====","dofus.managers.MapsServersManager::parseMap","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/MapsServersManager.as",227);

@@ -22,11 +22,11 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestZonesViewer extends d
    function initTexts()
    {
       this["\x1c\x17\x18"].text = this.api.lang.getText("FILTER");
-      this["\x1c\x12\x18"].text = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_AREA_WORD"),null,false);
-      this["\x1c\x12\x1a"].text = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_AREA_WORD"),null,true);
+      this["\x1c\x12\x18"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_AREA_WORD"),null,false);
+      this["\x1c\x12\x1a"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_AREA_WORD"),null,true);
       this["\x1c\x12\x16"].text = this.api.lang.getText("CONQUEST_STATE_WORD") + " / " + this.api.lang.getText("CONQUEST_PRISM_WORD");
-      this["\x1d\x04\x03"].text = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_VILLAGE_WORD"),null,false);
-      this["\x1d\x04\x04"].text = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_VILLAGE_WORD"),null,true);
+      this["\x1d\x04\x03"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_VILLAGE_WORD"),null,false);
+      this["\x1d\x04\x04"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_VILLAGE_WORD"),null,true);
       this["\x1d\x04\x02"].text = this.api.lang.getText("CONQUEST_STATE_WORD") + " / " + this.api.lang.getText("CONQUEST_DOOR_WORD") + " / " + this.api.lang.getText("CONQUEST_PRISM_WORD");
    }
    function addListeners()
@@ -85,8 +85,8 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestZonesViewer extends d
    function §\x18\t\x14§()
    {
       var _loc2_ = this.api.datacenter.Conquest["\x1b\x19\x0f"];
-      this["\x1c\x18\n"].text = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_POSSESSED_WORD"),"f",false) + " : " + _loc2_["\x1a\x03\x04"] + " / " + _loc2_["\x1a\x06\x13"] + " / " + _loc2_["\x1b\x11\x03"];
-      this["\x1c\x18\f"].text = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_POSSESSED_WORD"),"m",false) + " : " + _loc2_["\x1a\x03\x05"] + " / " + _loc2_["\x1b\x11\x06"];
+      this["\x1c\x18\n"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_POSSESSED_WORD"),"f",false) + " : " + _loc2_["\x1a\x03\x04"] + " / " + _loc2_["\x1a\x06\x13"] + " / " + _loc2_["\x1b\x11\x03"];
+      this["\x1c\x18\f"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_POSSESSED_WORD"),"m",false) + " : " + _loc2_["\x1a\x03\x05"] + " / " + _loc2_["\x1b\x11\x06"];
       this["\x1d\x07\n"].dataProvider = _loc2_["\x1b\x17\x1a"];
       var _loc3_ = new ank.utils.ExtendedArray();
       var _loc4_ = this.api.lang["\x17\x14\x04"]();

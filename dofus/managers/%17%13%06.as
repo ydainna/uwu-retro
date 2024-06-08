@@ -60,7 +60,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    }
    function §\x18\x02\x1d§()
    {
-      if(this.api.datacenter.Game["\x17\x10\x02"] == dofus.managers.GameManager["\x17\x10\x05"] || this.api.datacenter.Basics.aks_current_server["\x1b\x12\n"] != dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x10"])
+      if(this.api.datacenter.Game["\x17\x10\x02"] == dofus.managers.GameManager["\x17\x10\x05"] || this.api.datacenter.Basics.aks_current_server["\x1b\x12\n"] != dofus.datacenter.Server["\x1a\x14\x10"])
       {
          this.api.kernel.showMessage(undefined,this.api.lang.getText("DO_U_GIVEUP"),"CAUTION_YESNO",{name:"GiveUp",listener:this});
       }
@@ -465,7 +465,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          }
          if(_loc3_ != "")
          {
-            _loc3_ = this.api.lang.getText("DISGRACE_SANCTION",[ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("POINTS",[_loc2_]),"m",_loc2_ < 2)]) + _loc3_;
+            _loc3_ = this.api.lang.getText("DISGRACE_SANCTION",[ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("POINTS",[_loc2_]),"m",_loc2_ < 2)]) + _loc3_;
             this.api.kernel.showMessage(this.api.lang.getText("INFORMATIONS"),_loc3_,"ERROR_BOX");
          }
       }
@@ -740,51 +740,51 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       var _loc10_ = this.api.lang.getText("REMAINING_TIME") + " ";
       if(_loc4_ != 0 && _loc5_ == 0)
       {
-         var _loc11_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("YEARS"),"m",_loc4_ == 1);
+         var _loc11_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("YEARS"),"m",_loc4_ == 1);
          _loc10_ += _loc4_ + " " + _loc11_;
       }
       else if(_loc4_ != 0 && _loc5_ != 0)
       {
-         var _loc12_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("YEARS"),"m",_loc4_ == 1);
-         var _loc13_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("MONTHS"),"m",_loc5_ == 1);
+         var _loc12_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("YEARS"),"m",_loc4_ == 1);
+         var _loc13_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("MONTHS"),"m",_loc5_ == 1);
          _loc10_ += _loc4_ + " " + _loc12_ + _loc9_ + _loc5_ + " " + _loc13_;
       }
       else if(_loc5_ != 0 && _loc6_ == 0)
       {
-         var _loc14_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("MONTHS"),"m",_loc5_ == 1);
+         var _loc14_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("MONTHS"),"m",_loc5_ == 1);
          _loc10_ += _loc5_ + " " + _loc14_;
       }
       else if(_loc5_ != 0 && _loc6_ != 0)
       {
-         var _loc15_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("MONTHS"),"m",_loc5_ == 1);
-         var _loc16_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("DAYS"),"m",_loc6_ == 1);
+         var _loc15_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("MONTHS"),"m",_loc5_ == 1);
+         var _loc16_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("DAYS"),"m",_loc6_ == 1);
          _loc10_ += _loc5_ + " " + _loc15_ + _loc9_ + _loc6_ + " " + _loc16_;
       }
       else if(_loc6_ != 0 && _loc7_ == 0)
       {
-         var _loc17_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("DAYS"),"m",_loc6_ == 1);
+         var _loc17_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("DAYS"),"m",_loc6_ == 1);
          _loc10_ += _loc6_ + " " + _loc17_;
       }
       else if(_loc6_ != 0 && _loc7_ != 0)
       {
-         var _loc18_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("DAYS"),"m",_loc6_ == 1);
-         var _loc19_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("HOURS"),"m",_loc7_ == 1);
+         var _loc18_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("DAYS"),"m",_loc6_ == 1);
+         var _loc19_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("HOURS"),"m",_loc7_ == 1);
          _loc10_ += _loc6_ + " " + _loc18_ + _loc9_ + _loc7_ + " " + _loc19_;
       }
       else if(_loc7_ != 0 && _loc8_ == 0)
       {
-         var _loc20_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("HOURS"),"m",_loc7_ == 1);
+         var _loc20_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("HOURS"),"m",_loc7_ == 1);
          _loc10_ += _loc7_ + " " + _loc20_;
       }
       else if(_loc7_ != 0 && _loc8_ != 0)
       {
-         var _loc21_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("HOURS"),"m",_loc7_ == 1);
-         var _loc22_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("MINUTES"),"m",_loc8_ == 1);
+         var _loc21_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("HOURS"),"m",_loc7_ == 1);
+         var _loc22_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("MINUTES"),"m",_loc8_ == 1);
          _loc10_ += _loc7_ + " " + _loc21_ + _loc9_ + _loc8_ + " " + _loc22_;
       }
       else if(_loc8_ != 0)
       {
-         var _loc23_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("MINUTES"),"m",_loc8_ == 1);
+         var _loc23_ = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("MINUTES"),"m",_loc8_ == 1);
          _loc10_ += _loc8_ + " " + _loc23_;
       }
       return _loc10_;
@@ -1064,7 +1064,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       {
          return (_loc5_ == 0 ? "" : _loc5_ + " " + this.api.lang.getText("HOURS_SMALL") + " ") + _loc6_ + " " + this.api.lang.getText("MINUTES_SMALL") + " " + _loc7_ + " " + this.api.lang.getText("SECONDS_SMALL");
       }
-      return (_loc5_ == 0 ? "" : _loc5_ + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("HOURS"),"m",_loc5_ < 2) + " ") + _loc6_ + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("MINUTES"),"m",_loc6_ < 2) + " " + _loc7_ + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("SECONDS"),"m",_loc7_ < 2);
+      return (_loc5_ == 0 ? "" : _loc5_ + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("HOURS"),"m",_loc5_ < 2) + " ") + _loc6_ + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("MINUTES"),"m",_loc6_ < 2) + " " + _loc7_ + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("SECONDS"),"m",_loc7_ < 2);
    }
    function §\x18\n\x1d§(§\x19\x13\x07§, §\x1b\x07\x01§, §\x1b\b\x18§)
    {
@@ -1267,7 +1267,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          }
          if(!_loc9_ || _loc9_ && _loc11_ != undefined)
          {
-            _loc12_["\x15\x1d\x12"](this.api.lang.getText("WHOIS"),this.api.networkBasics,this.api.networkBasics["\x1b\x19\t"],[_loc11_]);
+            _loc12_["\x15\x1d\x12"](this.api.lang.getText("WHOIS"),this.api.network.Basics,this.api.network.Basics["\x1b\x19\t"],[_loc11_]);
             if(_loc10_ != undefined && (_loc11_ != undefined && _loc10_ != this.api.datacenter.Player.ID))
             {
                var _loc15_ = _loc2_ != null && _loc2_ instanceof dofus.datacenter.["\x19\x12\x19"];

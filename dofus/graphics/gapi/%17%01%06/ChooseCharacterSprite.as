@@ -139,7 +139,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseCharacterSprite extends
       this._cbServers.addEventListener("itemSelected",this);
       this["\x1c\x0e\x03"].addEventListener("over",this);
       this["\x1c\x0e\x03"].addEventListener("out",this);
-      this.api.datacenter.Basics["\x16\x02\x12"].addEventListener("modelChanged",this);
+      this.api.datacenter.Basics.aks_servers.addEventListener("modelChanged",this);
       Key.addListener(this);
    }
    function §\x18\t\x14§()
@@ -228,7 +228,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseCharacterSprite extends
       {
          this["\x1d\x1c\x17"] = _loc2_;
       }
-      var _loc3_ = this.api.datacenter.Basics["\x16\x02\x12"];
+      var _loc3_ = this.api.datacenter.Basics.aks_servers;
       var _loc4_ = 0;
       var _loc5_ = 0;
       while(_loc5_ < _loc3_.length)
@@ -249,7 +249,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseCharacterSprite extends
       }
       else
       {
-         this.enabled = _loc7_.state == dofus.datacenter.["\x1a\x14\x05"].SERVER_ONLINE;
+         this.enabled = _loc7_.state == dofus.datacenter.Server.SERVER_ONLINE;
          this["\x1c\x0e\x03"].contentPath = "ChooseCharacterServerState" + _loc7_.state;
       }
       if(this["\x1c\b\x06"] && this["\x1d\x01\n"].text != undefined)

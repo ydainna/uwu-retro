@@ -125,7 +125,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.JoinFriend extends dofus.§\x18\x03\x10§.g
             var _loc4_ = 0;
             while(_loc4_ < this["\x1c\x10\x0b"].length)
             {
-               if(this["\x1c\x10\x0b"][_loc4_].state == dofus.datacenter.["\x1a\x14\x05"].SERVER_ONLINE && this["\x1c\x10\x0b"][_loc4_]["\x18\f\x11"]())
+               if(this["\x1c\x10\x0b"][_loc4_].state == dofus.datacenter.Server.SERVER_ONLINE && this["\x1c\x10\x0b"][_loc4_].isAllowed())
                {
                   _loc3_.push(this["\x1c\x10\x0b"][_loc4_]);
                }
@@ -140,7 +140,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.JoinFriend extends dofus.§\x18\x03\x10§.g
             var _loc6_ = 0;
             while(_loc6_ < _loc3_.length)
             {
-               if(_loc3_[_loc6_]["\x16\x16\x07"] && (_loc3_[_loc6_]["\x1b\x12\n"] == dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x0e"] || _loc3_[_loc6_]["\x1b\x12\n"] == dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x13"]))
+               if(_loc3_[_loc6_]["\x16\x16\x07"] && (_loc3_[_loc6_]["\x1b\x12\n"] == dofus.datacenter.Server["\x1a\x14\x0e"] || _loc3_[_loc6_]["\x1b\x12\n"] == dofus.datacenter.Server["\x1a\x14\x13"]))
                {
                   _loc5_.push(_loc3_[_loc6_]);
                }
@@ -164,7 +164,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.JoinFriend extends dofus.§\x18\x03\x10§.g
             var _loc7_ = 0;
             while(_loc7_ < _loc3_.length)
             {
-               if(_loc3_[_loc7_]["\x16\x1d\x1b"] == this.api.datacenter.Basics.communityId || _loc3_[_loc7_]["\x16\x1d\x1b"] == dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x0f"])
+               if(_loc3_[_loc7_]["\x16\x1d\x1b"] == this.api.datacenter.Basics.communityId || _loc3_[_loc7_]["\x16\x1d\x1b"] == dofus.datacenter.Server["\x1a\x14\x0f"])
                {
                   _loc5_.push(_loc3_[_loc7_]);
                }
@@ -217,13 +217,13 @@ class dofus.§\x18\x03\x10§.gapi.ui.JoinFriend extends dofus.§\x18\x03\x10§.g
    function serverSelected(oEvent)
    {
       this.gapi.unloadUIComponent("ServerInformations");
-      var _loc3_ = new dofus.datacenter.["\x1a\x14\x05"](_loc2_.value,1,0);
+      var _loc3_ = new dofus.datacenter.Server(_loc2_.value,1,0);
       if(_loc3_["\x18\x0e\x1d"]())
       {
          this.api.kernel.showMessage(undefined,this.api.lang.getText("SRV_MSG_41"),"ERROR_BOX");
          return undefined;
       }
-      if(_loc3_["\x18\f\x11"]())
+      if(_loc3_.isAllowed())
       {
          this.api.datacenter.Basics.aks_current_server = _loc3_;
          this.api.datacenter.Basics.createCharacter = true;

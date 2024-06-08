@@ -352,7 +352,7 @@ class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
             _loc4_ = true;
             _loc5_ = function(sPlayerNamesPart, sSexPart)
             {
-               return ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText(feMessage.permanentArgs[0],[sPlayerNamesPart]),sSexPart,true);
+               return ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText(feMessage.permanentArgs[0],[sPlayerNamesPart]),sSexPart,true);
             };
             break;
          case 117:

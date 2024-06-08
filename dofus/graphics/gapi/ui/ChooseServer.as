@@ -181,16 +181,16 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseServer extends dofus.§\x18\x03\x10§
       }
       else
       {
-         var _loc3_ = this.api.datacenter.Basics["\x16\x02\x12"].findFirstItem("id",_loc2_).item;
-         if(_loc3_.state == dofus.datacenter.["\x1a\x14\x05"].SERVER_ONLINE)
+         var _loc3_ = this.api.datacenter.Basics.aks_servers.findFirstItem("id",_loc2_).item;
+         if(_loc3_.state == dofus.datacenter.Server.SERVER_ONLINE)
          {
-            var _loc4_ = new dofus.datacenter.["\x1a\x14\x05"](_loc2_,1,0);
+            var _loc4_ = new dofus.datacenter.Server(_loc2_,1,0);
             if(_loc4_["\x18\x0e\x1d"]())
             {
                this.api.kernel.showMessage(undefined,this.api.lang.getText("SRV_MSG_41"),"ERROR_BOX");
                return undefined;
             }
-            if(_loc4_["\x18\f\x11"]())
+            if(_loc4_.isAllowed())
             {
                this.api.datacenter.Basics.aks_current_server = _loc4_;
                this.api.network.Account.setServer(_loc2_);
@@ -250,7 +250,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseServer extends dofus.§\x18\x03\x10§
             break;
          case "_btnCreate":
          case "_btnAutomaticSelection":
-            this.gapi.loadUIComponent("ServerList","ServerList",{servers:this.api.datacenter.Basics["\x16\x02\x12"]});
+            this.gapi.loadUIComponent("ServerList","ServerList",{servers:this.api.datacenter.Basics.aks_servers});
             this.gapi.getUIComponent("ServerList").addEventListener("serverSelected",this);
             this.api.datacenter.Basics.hasForcedManualSelection = false;
             break;

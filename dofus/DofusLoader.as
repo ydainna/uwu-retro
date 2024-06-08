@@ -1132,7 +1132,7 @@ _loc1_["\x16\x1a\x0f"] = function(sFiles)
    this.log(this["\x1b\r\x12"] + this.getDataBankLogHeader(_loc3_.dataBankId) + this.getText("CHECKING_VERSIONS"));
    _loc4_.loadClip(eval("\x1b\f\x12"),this["\x1d\r\f"]);
 };
-_loc1_["\x18\x17\x02"] = function()
+_loc1_loadXtra = function()
 {
    this["\x16\x1c\b"]();
    this["\x1a\x1e\b"](true);

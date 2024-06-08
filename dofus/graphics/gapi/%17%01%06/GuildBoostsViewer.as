@@ -58,7 +58,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.GuildBoostsViewer extends dof
       this["\x1c\x14\t"].text = _loc2_["\x1b\x0e\x0e"] + "";
       this["\x1c\x14\x0b"].text = _loc2_["\x1b\x0e\x10"] + "";
       this["\x1c\x14\x07"].text = _loc2_["\x1b\x0e\r"] + "";
-      this["\x1c\x14\x05"].text = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("POINTS",[_loc2_["\x16\x10\x05"]]),"m",_loc2_["\x16\x10\x05"] < 2);
+      this["\x1c\x14\x05"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("POINTS",[_loc2_["\x16\x10\x05"]]),"m",_loc2_["\x16\x10\x05"] < 2);
       this["\x1d\x07\x04"].dataProvider = _loc2_["\x1b\x0e\x0f"];
       var _loc3_ = _loc2_["\x1a\x05\x15"]["\x16\x16\b"] && _loc2_["\x16\x10\x05"] > 0;
       this._btnBoostPod._visible = _loc3_ && _loc2_["\x16\x15\x19"]("w");

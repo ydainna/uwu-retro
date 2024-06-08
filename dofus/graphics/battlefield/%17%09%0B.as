@@ -665,7 +665,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
                   var _loc42_ = 2;
                   if(this.api.datacenter.["\x18\x18\x0e"].isMyHome)
                   {
-                     _loc40_["\x15\x1d\x12"](this.api.lang.getText("KICKOFF"),this.api.networkBasics,this.api.networkBasics["\x18\x12\x01"],[_loc4_.cellNum]);
+                     _loc40_["\x15\x1d\x12"](this.api.lang.getText("KICKOFF"),this.api.network.Basics,this.api.network.Basics["\x18\x12\x01"],[_loc4_.cellNum]);
                      _loc42_ = _loc42_ + 1;
                   }
                   if(this.api.datacenter.Player.isAuthorized)

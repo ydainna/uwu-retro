@@ -148,19 +148,19 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x18\x04\x05§.GuildMembers
          {
             if(_loc6_ == 0)
             {
-               var _loc10_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](_loc3_.lang.getText("MONTHS"),"m",_loc5_ == 1);
+               var _loc10_ = ank.utils.PatternDecoder["\x16\x1d\x15"](_loc3_.lang.getText("MONTHS"),"m",_loc5_ == 1);
                _loc9_ += _loc5_ + " " + _loc10_;
             }
             else
             {
-               var _loc11_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](_loc3_.lang.getText("MONTHS"),"m",_loc5_ == 1);
-               var _loc12_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](_loc3_.lang.getText("DAYS"),"m",_loc6_ == 1);
+               var _loc11_ = ank.utils.PatternDecoder["\x16\x1d\x15"](_loc3_.lang.getText("MONTHS"),"m",_loc5_ == 1);
+               var _loc12_ = ank.utils.PatternDecoder["\x16\x1d\x15"](_loc3_.lang.getText("DAYS"),"m",_loc6_ == 1);
                _loc9_ += _loc5_ + " " + _loc11_ + _loc8_ + _loc6_ + " " + _loc12_;
             }
          }
          else if(_loc6_ != 0)
          {
-            var _loc13_ = ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](_loc3_.lang.getText("DAYS"),"m",_loc6_ == 1);
+            var _loc13_ = ank.utils.PatternDecoder["\x16\x1d\x15"](_loc3_.lang.getText("DAYS"),"m",_loc6_ == 1);
             _loc9_ += _loc6_ + " " + _loc13_;
          }
          else

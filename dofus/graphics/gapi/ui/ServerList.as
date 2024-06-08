@@ -94,7 +94,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ServerList extends dofus.§\x18\x03\x10§.g
       while(_loc5_ < this["\x1c\x10\x0b"].length)
       {
          var _loc6_ = this["\x1c\x10\x0b"][_loc5_];
-         if((_loc6_["\x18\x0e\x03"]() || (this["\x1c\t\x14"].selected || (_loc6_["\x16\x1d\x1b"] == this.api.datacenter.Basics.communityId || _loc6_["\x16\x1d\x1b"] == dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x0f"]))) && _loc6_["\x18\f\x11"]())
+         if((_loc6_["\x18\x0e\x03"]() || (this["\x1c\t\x14"].selected || (_loc6_["\x16\x1d\x1b"] == this.api.datacenter.Basics.communityId || _loc6_["\x16\x1d\x1b"] == dofus.datacenter.Server["\x1a\x14\x0f"]))) && _loc6_.isAllowed())
          {
             _loc2_.push(this["\x1c\x10\x0b"][_loc5_]);
          }

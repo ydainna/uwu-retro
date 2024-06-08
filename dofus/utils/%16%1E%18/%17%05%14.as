@@ -595,7 +595,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                   _loc74_.targetPseudos += "," + _loc64_;
                   _loc74_.description = _loc68_;
                }
-               this.api.networkBasics["\x16\x06\n"](1,_loc64_,_loc65_);
+               this.api.network.Basics["\x16\x06\n"](1,_loc64_,_loc65_);
                break;
             case "RETROCONSOLE":
                if(!this.api.electron.enabled)
@@ -927,7 +927,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
       else if(this.api.datacenter.Basics.isLogged)
       {
          _loc2_ = this.analyseCmd(_loc2_);
-         this.api.networkBasics.autorisedCommand(_loc2_);
+         this.api.network.Basics.autorisedCommand(_loc2_);
       }
       else
       {

@@ -143,7 +143,7 @@ class dofus.§\x17\x04\x19§.InventoryShortcutItem extends Object
    }
    function §\x04\x1b§()
    {
-      var _loc2_ = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](this.api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].n),this.api.lang["\x17\x19\x1c"]());
+      var _loc2_ = ank.utils.PatternDecoder.getDescription(this.api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].n),this.api.lang["\x17\x19\x1c"]());
       if(dofus.Constants.DEBUG)
       {
          _loc2_ += " (" + this._nGenericID + ")";

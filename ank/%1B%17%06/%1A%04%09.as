@@ -7,7 +7,7 @@ class ank.utils.§\x1a\x04\t§
    {
       ank.utils.["\x17\x0e\x10"]["\x15\x1d\f"]();
       var _loc4_ = _loc2_.split("");
-      var _loc5_ = ank.utils.["\x1a\x04\t"]["\x17\x05\x1d"](_loc4_,_loc3_).join("");
+      var _loc5_ = ank.utils.PatternDecoder["\x17\x05\x1d"](_loc4_,_loc3_).join("");
       return _loc5_;
    }
    static function §\x16\x1d\x15§(§\x1b\x0b\t§, §\x17\x13\f§, §\x1b\x01\x1c§)
@@ -20,7 +20,7 @@ class ank.utils.§\x1a\x04\t§
       _loc6_.n = _loc3_ == "n";
       _loc6_.p = !_loc4_;
       _loc6_.s = _loc4_;
-      var _loc7_ = ank.utils.["\x1a\x04\t"]["\x17\x05\x1c"](_loc5_,_loc6_).join("");
+      var _loc7_ = ank.utils.PatternDecoder["\x17\x05\x1c"](_loc5_,_loc6_).join("");
       return _loc7_;
    }
    static function §\x1a\r\n§(§\x1b\b\x13§, §\x1b\x05\t§)
@@ -30,7 +30,7 @@ class ank.utils.§\x1a\x04\t§
       while(_loc5_ < _loc4_.length)
       {
          var _loc6_ = _loc4_[_loc5_].split(",");
-         _loc4_[_loc5_] = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](_loc3_,_loc6_);
+         _loc4_[_loc5_] = ank.utils.PatternDecoder.getDescription(_loc3_,_loc6_);
          _loc5_ += 2;
       }
       return _loc4_.join("");
@@ -79,12 +79,12 @@ class ank.utils.§\x1a\x04\t§
                }
                break;
             case "{":
-               var _loc9_ = ank.utils.["\x1a\x04\t"]["\x17\x11\x07"](_loc2_.slice(_loc4_),"}");
-               var _loc10_ = ank.utils.["\x1a\x04\t"]["\x17\x05\x1d"](_loc2_.slice(_loc4_ + 1,_loc4_ + _loc9_),_loc3_).join("");
+               var _loc9_ = ank.utils.PatternDecoder["\x17\x11\x07"](_loc2_.slice(_loc4_),"}");
+               var _loc10_ = ank.utils.PatternDecoder["\x17\x05\x1d"](_loc2_.slice(_loc4_ + 1,_loc4_ + _loc9_),_loc3_).join("");
                _loc2_.splice(_loc4_,_loc9_ + 1,_loc10_);
                break;
             case "[":
-               var _loc11_ = ank.utils.["\x1a\x04\t"]["\x17\x11\x07"](_loc2_.slice(_loc4_),"]");
+               var _loc11_ = ank.utils.PatternDecoder["\x17\x11\x07"](_loc2_.slice(_loc4_),"]");
                var _loc12_ = Number(_loc2_.slice(_loc4_ + 1,_loc4_ + _loc11_).join(""));
                if(!_global.isNaN(_loc12_))
                {
@@ -117,8 +117,8 @@ class ank.utils.§\x1a\x04\t§
                _loc4_ -= 2;
                break;
             case "{":
-               var _loc8_ = ank.utils.["\x1a\x04\t"]["\x17\x11\x07"](_loc2_.slice(_loc4_),"}");
-               var _loc9_ = ank.utils.["\x1a\x04\t"]["\x17\x05\x1c"](_loc2_.slice(_loc4_ + 1,_loc4_ + _loc8_),_loc3_).join("");
+               var _loc8_ = ank.utils.PatternDecoder["\x17\x11\x07"](_loc2_.slice(_loc4_),"}");
+               var _loc9_ = ank.utils.PatternDecoder["\x17\x05\x1c"](_loc2_.slice(_loc4_ + 1,_loc4_ + _loc8_),_loc3_).join("");
                _loc2_.splice(_loc4_,_loc8_ + 1,_loc9_);
                break;
          }

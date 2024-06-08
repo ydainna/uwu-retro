@@ -60,7 +60,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.JobOptionsViewer extends dofu
    }
    function §\x1a\n\x1a§(§\x19\n\x11§)
    {
-      this["\x1c\x16\x06"].text = _loc2_.toString() + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("SLOT"),"m",_loc2_ < 2);
+      this["\x1c\x16\x06"].text = _loc2_.toString() + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("SLOT"),"m",_loc2_ < 2);
    }
    function change(oEvent)
    {

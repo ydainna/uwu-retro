@@ -472,7 +472,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
          this.api.ui.unloadUIComponent("WaitingMessage");
          if(!this.api.datacenter.Basics.isLogged)
          {
-            this.api.ui.loadUIComponent("MainMenu","MainMenu",{§\x1a\t\f§:(!(System.capabilities.playerType == "PlugIn" && !this.api.electron.enabled) ? "quit" : "no")},{bStayIfPresent:true,bAlwaysOnTop:true});
+            this.api.ui.loadUIComponent("MainMenu","MainMenu",{quitMode:(!(System.capabilities.playerType == "PlugIn" && !this.api.electron.enabled) ? "quit" : "no")},{bStayIfPresent:true,bAlwaysOnTop:true});
          }
          this._bConnected = true;
       }

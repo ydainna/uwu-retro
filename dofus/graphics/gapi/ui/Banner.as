@@ -1294,7 +1294,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
          case "_btnFights":
             if(this["\x1d\x16\x05"] != 0)
             {
-               this.gapi.showTooltip(ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("FIGHTS_ON_MAP",[this["\x1d\x16\x05"]]),"m",this["\x1d\x16\x05"] < 2),_loc2_.target,-20,{bYLimit:false});
+               this.gapi.showTooltip(ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("FIGHTS_ON_MAP",[this["\x1d\x16\x05"]]),"m",this["\x1d\x16\x05"] < 2),_loc2_.target,-20,{bYLimit:false});
             }
             break;
          case "_btnNextTurn":

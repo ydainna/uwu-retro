@@ -64,7 +64,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MainMenu extends dofus.§\x18\x03\x10§.gap
          this["\x1c\t\x07"]._visible = false;
       }
    }
-   function §\x1b\x16\n§()
+   function updateSubscribeButton()
    {
       if(dofus.Constants.BETAVERSION == 0 && (!this.api.datacenter.Player.subscriber && !this.api.datacenter.Basics.aks_is_free_community))
       {

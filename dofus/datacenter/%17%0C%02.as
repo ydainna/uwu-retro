@@ -84,7 +84,7 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
    }
    function §\x1e\x18\r§()
    {
-      return this["\x17\x16\x10"](true);
+      return this.getDescription(true);
    }
    function §\x17\x16\x10§(bShowRemainingTurns)
    {
@@ -178,7 +178,7 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
                var _loc10_ = String(Math.floor(this._nParam3) / 100).split(".");
                var _loc11_ = Number(_loc10_[0]);
                var _loc12_ = this._nParam3 - _loc11_ * 100;
-               _loc4_[0] = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](this.api.lang.getConfigText("DATE_FORMAT"),[this._nParam1,new ank.utils.ExtendedString(_loc8_ + 1)["\x15\x1d\x18"]("0",2),new ank.utils.ExtendedString(_loc9_)["\x15\x1d\x18"]("0",2),_loc11_,new ank.utils.ExtendedString(_loc12_)["\x15\x1d\x18"]("0",2)]);
+               _loc4_[0] = ank.utils.PatternDecoder.getDescription(this.api.lang.getConfigText("DATE_FORMAT"),[this._nParam1,new ank.utils.ExtendedString(_loc8_ + 1)["\x15\x1d\x18"]("0",2),new ank.utils.ExtendedString(_loc9_)["\x15\x1d\x18"]("0",2),_loc11_,new ank.utils.ExtendedString(_loc12_)["\x15\x1d\x18"]("0",2)]);
             }
             break;
          case 806:
@@ -280,7 +280,7 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
       }
       else
       {
-         var _loc17_ = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](_loc3_,_loc4_);
+         var _loc17_ = ank.utils.PatternDecoder.getDescription(_loc3_,_loc4_);
          _loc16_ += _loc17_;
       }
       if(this["\x1d\x1a\x04"] > 0 && this.api.kernel["\x1b\x06\x10"]["\x18\f\x19"](this["\x1d\x1e\x18"]))

@@ -17,7 +17,7 @@ class dofus.§\x17\x04\x19§.§\x17\x0f\r§ extends Object
    }
    function §\x1e\x18\r§()
    {
-      return ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](this["\x1e\t\x10"],this["\x1b\x1e\x0b"]);
+      return ank.utils.PatternDecoder.getDescription(this["\x1e\t\x10"],this["\x1b\x1e\x0b"]);
    }
    function §\x1a\x03§(§\x16\x03\x1d§)
    {

@@ -50,11 +50,11 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
    {
       switch(this["\x1d\x1d\r"])
       {
-         case dofus.datacenter.["\x1a\x14\x05"].SERVER_OFFLINE:
+         case dofus.datacenter.Server.SERVER_OFFLINE:
             return this.api.lang.getText("SERVER_OFFLINE");
-         case dofus.datacenter.["\x1a\x14\x05"].SERVER_ONLINE:
+         case dofus.datacenter.Server.SERVER_ONLINE:
             return this.api.lang.getText("SERVER_ONLINE");
-         case dofus.datacenter.["\x1a\x14\x05"].SERVER_STARTING:
+         case dofus.datacenter.Server.SERVER_STARTING:
             return this.api.lang.getText("SERVER_STARTING");
          default:
             return "";
@@ -64,11 +64,11 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
    {
       switch(this["\x1d\x1d\r"])
       {
-         case dofus.datacenter.["\x1a\x14\x05"].SERVER_OFFLINE:
+         case dofus.datacenter.Server.SERVER_OFFLINE:
             return this.api.lang.getText("SERVER_OFFLINE_SHORT");
-         case dofus.datacenter.["\x1a\x14\x05"].SERVER_ONLINE:
+         case dofus.datacenter.Server.SERVER_ONLINE:
             return this.api.lang.getText("SERVER_ONLINE_SHORT");
-         case dofus.datacenter.["\x1a\x14\x05"].SERVER_STARTING:
+         case dofus.datacenter.Server.SERVER_STARTING:
             return this.api.lang.getText("SERVER_STARTING_SHORT");
          default:
             return "";
@@ -138,26 +138,26 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
       var _loc2_ = this["\x1b\x12\n"];
       switch(_loc2_)
       {
-         case dofus.datacenter.["\x1a\x14\x05"].SERVER_TEMPORIS:
-            return dofus.datacenter.["\x1a\x14\x05"].SERVER_RULES_TEMPORIS;
-         case dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x12"]:
-            return dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x16"];
-         case dofus.datacenter.["\x1a\x14\x05"].SERVER_TEMPORIS:
-            return dofus.datacenter.["\x1a\x14\x05"].SERVER_RULES_TEMPORIS;
-         case dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\r"]:
-         case dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x13"]:
-            return dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x14"];
+         case dofus.datacenter.Server.SERVER_TEMPORIS:
+            return dofus.datacenter.Server.SERVER_RULES_TEMPORIS;
+         case dofus.datacenter.Server["\x1a\x14\x12"]:
+            return dofus.datacenter.Server["\x1a\x14\x16"];
+         case dofus.datacenter.Server.SERVER_TEMPORIS:
+            return dofus.datacenter.Server.SERVER_RULES_TEMPORIS;
+         case dofus.datacenter.Server["\x1a\x14\r"]:
+         case dofus.datacenter.Server["\x1a\x14\x13"]:
+            return dofus.datacenter.Server["\x1a\x14\x14"];
          default:
             return _loc2_;
       }
    }
    function §\x18\x0e\x03§()
    {
-      return this["\x1b\x12\n"] == dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x10"];
+      return this["\x1b\x12\n"] == dofus.datacenter.Server["\x1a\x14\x10"];
    }
    function isTemporis()
    {
-      return this["\x1b\x12\n"] == dofus.datacenter.["\x1a\x14\x05"].SERVER_TEMPORIS;
+      return this["\x1b\x12\n"] == dofus.datacenter.Server.SERVER_TEMPORIS;
    }
    function initialize(§\x19\b\x0b§, §\x19\x0e\x1d§, §\x19\x05\x0b§, §\x16\t\x1b§)
    {
@@ -192,7 +192,7 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
    }
    function §\x18\x0e\x1d§()
    {
-      if(this["\x1b\x12\n"] != dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x12"] && this["\x1b\x12\n"] != dofus.datacenter.["\x1a\x14\x05"].SERVER_TEMPORIS)
+      if(this["\x1b\x12\n"] != dofus.datacenter.Server["\x1a\x14\x12"] && this["\x1b\x12\n"] != dofus.datacenter.Server.SERVER_TEMPORIS)
       {
          return false;
       }

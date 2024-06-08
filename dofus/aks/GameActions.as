@@ -386,7 +386,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          case 130:
             var _loc73_ = Number(_loc7_);
             var _loc74_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
-            _loc11_.addAction(67,false,this.api.kernel,this.api.kernel.showMessage,[undefined,ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("STEAL_GOLD",[_loc74_.name,_loc73_]),"m",_loc73_ < 2),"INFO_FIGHT_CHAT"]);
+            _loc11_.addAction(67,false,this.api.kernel,this.api.kernel.showMessage,[undefined,ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("STEAL_GOLD",[_loc74_.name,_loc73_]),"m",_loc73_ < 2),"INFO_FIGHT_CHAT"]);
             break;
          case 132:
             var _loc75_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);

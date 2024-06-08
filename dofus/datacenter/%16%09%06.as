@@ -87,7 +87,7 @@ class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.ApiElement
       delete this.aks_gameserver_ip;
       delete this.aks_gameserver_port;
       this.aks_rescue_count = -1;
-      this["\x16\x02\x12"] = new ank.utils.ExtendedArray();
+      this.aks_servers = new ank.utils.ExtendedArray();
       delete this.aks_current_server;
       delete this.aks_identity;
       if(this.aks_a_logs == undefined)

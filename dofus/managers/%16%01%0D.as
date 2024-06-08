@@ -660,7 +660,7 @@ if(!dofus.managers["\x16\x01\r"])
                var _loc8_ = this.api.datacenter.["\x1b\x0f\b"].Report;
                if(_loc8_ != undefined)
                {
-                  this.api.networkBasics["\x16\x06\n"](2,_loc8_.currentTargetPseudos,_loc8_.currentTargetIsAllAccounts);
+                  this.api.network.Basics["\x16\x06\n"](2,_loc8_.currentTargetPseudos,_loc8_.currentTargetIsAllAccounts);
                }
             }
             ank.utils.Timer.setTimer(this,"batch",this,this["\x19\x15\x16"],_loc7_);
@@ -692,7 +692,7 @@ if(!dofus.managers["\x16\x01\r"])
          var _loc12_ = this.api.datacenter.["\x1b\x0f\b"].Report;
          if(_loc12_ != undefined)
          {
-            this.api.networkBasics["\x16\x06\n"](2,_loc12_.currentTargetPseudos,_loc12_.currentTargetIsAllAccounts);
+            this.api.network.Basics["\x16\x06\n"](2,_loc12_.currentTargetPseudos,_loc12_.currentTargetIsAllAccounts);
          }
       }
       return true;

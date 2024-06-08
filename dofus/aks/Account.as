@@ -285,37 +285,39 @@ class dofus.aks.Account extends dofus.aks.Handler
       this.aks.startUsingKey(_loc3_);
    }
 
-   function §\x19\x16\x14§(sExtraData)
+   function onDofusPseudo(sExtraData)
    {
-      this.api.datacenter.Basics.dofusPseudo = _loc2_;
+      this.api.datacenter.Basics.dofusPseudo = sExtraData;
    }
-   function §\x19\x15\x17§(sExtraData)
+
+   function onCommunity(sExtraData)
    {
-      var _loc3_ = Number(_loc2_);
+      var _loc3_ = Number(sExtraData);
       if(_loc3_ >= 0)
       {
          this.api.datacenter.Basics.communityId = _loc3_;
       }
    }
+
    function onLogin(bSuccess, sExtraData)
    {
       ank.utils.Timer.removeTimer(this.WaitQueueTimer,"WaitQueue");
       this.api.ui.unloadUIComponent("CenterText");
       this.api.ui.unloadUIComponent("WaitingMessage");
       this.api.ui.unloadUIComponent("WaitingQueue");
-      if(_loc2_)
+      if(bSuccess)
       {
          this.api.datacenter.Basics.isLogged = true;
          this.api.ui.unloadUIComponent("Login");
          this.api.ui.unloadUIComponent("ChooseNickName");
-         var _loc4_ = _loc3_ == "1";
+         var _loc4_ = sExtraData == "1";
          this.api.datacenter.Player.isAuthorized = _loc4_;
          this.api.electron.setWidescreenPanelId(!_loc4_ ? dofus.Eelectron.WIDESCREEN_PANEL_CHAT : dofus.Eelectron.WIDESCREEN_PANEL_CONSOLE);
-         _root._loader["\x18\x17\x02"]();
+         _root._loader.loadXtra();
       }
       else
       {
-         var _loc5_ = _loc3_.charAt(0);
+         var _loc5_ = sExtraData.charAt(0);
          var _loc6_ = this.api.lang.getText("LOGIN");
          var _loc8_ = false;
          new org.flashdevelop.utils.FlashConnect.trace(_loc5_,"dofus.aks.Account::onLogin","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Account.as",429);
@@ -344,7 +346,7 @@ class dofus.aks.Account extends dofus.aks.Handler
                _loc7_ = this.api.lang.getText("U_DISCONNECT_ACCOUNT");
                break;
             case "k":
-               var _loc9_ = _loc3_.substr(1).split("|");
+               var _loc9_ = sExtraData.substr(1).split("|");
                var _loc10_ = _loc9_.slice(0,3);
                var _loc11_ = _loc9_.slice(3);
                var _loc12_ = 0;
@@ -356,7 +358,7 @@ class dofus.aks.Account extends dofus.aks.Handler
                   }
                   _loc12_ = _loc12_ + 1;
                }
-               _loc7_ = ank.utils.["\x1a\x04\t"]["\x17\x16\x10"](this.api.lang.getText("KICKED"),_loc10_);
+               _loc7_ = ank.utils.PatternDecoder.getDescription(this.api.lang.getText("KICKED"),_loc10_);
                if(_loc11_ != undefined && _loc11_.length >= 2)
                {
                   var _loc13_ = _loc11_[0];
@@ -393,7 +395,7 @@ class dofus.aks.Account extends dofus.aks.Handler
                this.api.ui.loadUIComponent("ChooseNickName","ChooseNickName");
                return undefined;
             case "s":
-               this.api.ui.getUIComponent("ChooseNickName")["\x19\b\t"] = true;
+               this.api.ui.getUIComponent("ChooseNickName").nickAlreadyUsed = true;
                return undefined;
             case "i":
                _loc7_ = this.api.lang.getText("LOGIN_ERROR_ANONYMOUS_IP");
@@ -409,30 +411,31 @@ class dofus.aks.Account extends dofus.aks.Handler
          }
          if(dofus.Constants.USE_JS_LOG && _global.CONFIG.isNewAccount)
          {
-            getURL("JavaScript:WriteLog(\'LoginError;" + _loc7_ + "\')","_self");
+            getURL("JavaScript:WriteLog(\'LoginError;" + _loc7_ + "\')", "_self");
          }
-         this.aks.disconnect(false,false);
-         var _loc16_ = this.api.ui.loadUIComponent("AskOk",!_loc8_ ? "AskOkOnLogin" : "AskOkOnLoginCloseClient",{title:_loc6_,text:_loc7_});
-         _loc16_.addEventListener("ok",this);
+         this.aks.disconnect(false, false);
+         var _loc16_ = this.api.ui.loadUIComponent("AskOk", !_loc8_ ? "AskOkOnLogin" : "AskOkOnLoginCloseClient", {title: _loc6_, text: _loc7_});
+         _loc16_.addEventListener("ok", this);
          this.api.kernel.manualLogon();
       }
    }
-   function §\x19\x1c\x14§(bSuccess, sExtraData)
+
+   function onServersList(bSuccess, sExtraData)
    {
       this.api.ui.unloadUIComponent("WaitingMessage");
-      var _loc4_ = this.api.datacenter.Basics["\x16\x02\x12"];
+      var _loc4_ = this.api.datacenter.Basics.aks_servers;
       var _loc5_ = 0;
       while(_loc5_ < _loc4_.length)
       {
          _loc4_[_loc5_].charactersCount = 0;
          _loc5_ = _loc5_ + 1;
       }
-      this.api.ui.getUIComponent("MainMenu")["\x1a\t\f"] = "menu";
-      var _loc6_ = _loc3_.split("|");
+      this.api.ui.getUIComponent("MainMenu").quitMode = "menu";
+      var _loc6_ = sExtraData.split("|");
       var _loc7_ = Number(_loc6_[0]);
       var _loc8_ = -1;
       this.api.datacenter.Player.subscriber = _loc7_ > 0;
-      this.api.ui.getUIComponent("MainMenu")["\x1b\x16\n"]();
+      this.api.ui.getUIComponent("MainMenu").updateSubscribeButton();
       var _loc9_ = 0;
       var _loc10_ = 1;
       while(_loc10_ < _loc6_.length)
@@ -471,7 +474,7 @@ class dofus.aks.Account extends dofus.aks.Handler
       this.api.ui.unloadUIComponent("ChooseCharacter");
       this.api.ui.unloadUIComponent("AutomaticServer");
       this.api.ui.unloadUIComponent("ChooseServer");
-      this.api.networkBasics["\x19\x14\t"]("Connection Server");
+      this.api.network.Basics.onAuthorizedCommandPrompt("Connection Server");
       if(dofus.kernel.FAST_SWITCHING_SERVER_REQUEST != undefined)
       {
          var _loc15_ = dofus.kernel.FAST_SWITCHING_SERVER_REQUEST;
@@ -483,7 +486,7 @@ class dofus.aks.Account extends dofus.aks.Handler
             var _loc19_ = _loc4_[_loc18_];
             if(_loc19_.id == _loc16_)
             {
-               if(!(_loc19_.state != dofus.datacenter.["\x1a\x14\x05"].SERVER_ONLINE || !_loc19_["\x18\f\x11"]))
+               if(!(_loc19_.state != dofus.datacenter.Server.SERVER_ONLINE || !_loc19_.isAllowed))
                {
                   _loc17_ = _loc19_;
                   break;
@@ -519,8 +522,8 @@ class dofus.aks.Account extends dofus.aks.Handler
          }
          else if(_loc8_ != -1 && this.api.config.isStreaming)
          {
-            var _loc20_ = new dofus.datacenter.["\x1a\x14\x05"](_loc8_,1,0);
-            if(_loc20_["\x18\f\x11"]())
+            var _loc20_ = new dofus.datacenter.Server(_loc8_,1,0);
+            if(_loc20_.isAllowed())
             {
                this.api.datacenter.Basics.aks_current_server = _loc20_;
                this.api.network.Account.setServer(_loc8_);
@@ -536,9 +539,10 @@ class dofus.aks.Account extends dofus.aks.Handler
          this.api.ui.loadUIComponent("ChooseServer","ChooseServer",{servers:_loc4_,remainingTime:_loc7_});
       }
    }
+
    function §\x19\x18\x0f§(sExtraData)
    {
-      var _loc3_ = this.api.datacenter.Basics["\x16\x02\x12"];
+      var _loc3_ = this.api.datacenter.Basics.aks_servers;
       var _loc4_ = new Array();
       var _loc5_ = _loc2_.split("|");
       var _loc6_ = 0;
@@ -549,8 +553,8 @@ class dofus.aks.Account extends dofus.aks.Handler
          var _loc9_ = Number(_loc7_[1]);
          var _loc10_ = Number(_loc7_[2]);
          var _loc11_ = _loc7_[3] == "1";
-         var _loc12_ = new dofus.datacenter.["\x1a\x14\x05"](_loc8_,_loc9_,_loc10_,_loc11_);
-         if(!(_global.CONFIG.onlyHardcore && _loc12_["\x1b\x12\n"] != dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x10"]))
+         var _loc12_ = new dofus.datacenter.Server(_loc8_,_loc9_,_loc10_,_loc11_);
+         if(!(_global.CONFIG.onlyHardcore && _loc12_["\x1b\x12\n"] != dofus.datacenter.Server["\x1a\x14\x10"]))
          {
             var _loc13_ = _loc3_.findFirstItem("id",_loc8_).item;
             if(_loc13_ != undefined)
@@ -561,7 +565,7 @@ class dofus.aks.Account extends dofus.aks.Handler
          }
          _loc6_ = _loc6_ + 1;
       }
-      this.api.datacenter.Basics["\x16\x02\x12"].createFromArray(_loc4_);
+      this.api.datacenter.Basics.aks_servers.createFromArray(_loc4_);
    }
    function §\x19\x15\x10§(bSuccess, sExtraData, §\x16\r\x18§)
    {
@@ -575,7 +579,7 @@ class dofus.aks.Account extends dofus.aks.Handler
       var _loc6_ = _loc3_.split("|");
       var _loc7_ = Number(_loc6_[0]);
       this.api.datacenter.Player.subscriber = _loc7_ > 0;
-      this.api.ui.getUIComponent("MainMenu")["\x1b\x16\n"]();
+      this.api.ui.getUIComponent("MainMenu").updateSubscribeButton();
       var _loc8_ = Number(_loc6_[1]);
       var _loc9_ = new Array();
       this.api.datacenter.["\x1b\x07\x0e"].clear();
@@ -608,7 +612,7 @@ class dofus.aks.Account extends dofus.aks.Handler
       this.api.ui.unloadUIComponent("ChooseServer");
       this.api.ui.unloadUIComponent("AutomaticServer");
       ank.utils.Timer.removeTimer(this.WaitQueueTimer,"WaitQueue");
-      this.api.ui.getUIComponent("MainMenu")["\x1a\t\f"] = "menu";
+      this.api.ui.getUIComponent("MainMenu").quitMode = "menu";
       if(this.api.datacenter.Basics.hasCreatedCharacter)
       {
          this.api.datacenter.Basics.hasCreatedCharacter = false;
@@ -723,9 +727,9 @@ class dofus.aks.Account extends dofus.aks.Handler
    function §\x19\x1c\x0f§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
-      var _loc4_ = new dofus.datacenter.["\x1a\x14\x05"](_loc3_,1,0);
+      var _loc4_ = new dofus.datacenter.Server(_loc3_,1,0);
       this.api.datacenter.Basics.aks_current_server = _loc4_;
-      this.api.networkBasics["\x19\x14\t"](this.api.datacenter.Basics.aks_current_server.label);
+      this.api.network.Basics.onAuthorizedCommandPrompt(this.api.datacenter.Basics.aks_current_server.label);
    }
    function §\x19\x1c\x0e§(bSuccess, §\x16\x14\x0b§, sExtraData)
    {
@@ -774,7 +778,7 @@ class dofus.aks.Account extends dofus.aks.Handler
          this.api.ui.loadUIComponent("Waiting","Waiting");
          this.aks["\x1b\x04\x0f"]();
          this.api.ui.loadUIComponent("WaitingMessage","WaitingMessage",{text:this.api.lang.getText("CONNECTING")},{bAlwaysOnTop:true,bForceLoad:true});
-         this.api.networkBasics["\x19\x14\t"](this.api.datacenter.Basics.aks_current_server.label);
+         this.api.network.Basics.onAuthorizedCommandPrompt(this.api.datacenter.Basics.aks_current_server.label);
          if(_global.CONFIG.delay != undefined)
          {
             ank.utils.Timer.setTimer(this,"connect",this.aks,this.aks.connect,_global.CONFIG.delay,[_loc5_,_loc6_,false]);
@@ -1108,7 +1112,7 @@ class dofus.aks.Account extends dofus.aks.Handler
          _loc17_ = _loc17_ + 1;
       }
       _loc4_["\x17\x13\x01"] = _loc15_;
-      this.api.networkBasics.getDate();
+      this.api.network.Basics.getDate();
    }
    function §\x19\x1a\x13§(sExtraData)
    {

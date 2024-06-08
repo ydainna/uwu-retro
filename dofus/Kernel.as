@@ -410,7 +410,7 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.ApiElement
       this.api.electron.setInitialized();
       this.api.electron.updateWindowTitle();
       this.api.electron.setLoginDiscordActivity();
-      this.api.ui.loadUIComponent("MainMenu","MainMenu",{§\x1a\t\f§:(!(System.capabilities.playerType == "PlugIn" && !this.api.electron.enabled) ? "quit" : "no")},{bStayIfPresent:true,bAlwaysOnTop:true});
+      this.api.ui.loadUIComponent("MainMenu","MainMenu",{quitMode:(!(System.capabilities.playerType == "PlugIn" && !this.api.electron.enabled) ? "quit" : "no")},{bStayIfPresent:true,bAlwaysOnTop:true});
    }
    function §\x16\x05\x19§()
    {
@@ -434,7 +434,7 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.ApiElement
          _loc2_.onRelease = function()
          {
             this.stopDrag();
-            this.api.networkBasics.onAuthorizedCommand(true,"2|0|" + new ank.utils.ExtendedString(this._dropTarget).replace("/","."));
+            this.api.network.Basics.onAuthorizedCommand(true,"2|0|" + new ank.utils.ExtendedString(this._dropTarget).replace("/","."));
             this.startDrag(true);
          };
          _loc2_.startDrag(true);

@@ -101,7 +101,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.InventorySearch extends dofus.§\x18\x03\x1
          }
       }
       this._lstItems.dataProvider = _loc4_;
-      this["\x1c\x1e\x1a"].text = _loc4_.length != 0 ? _loc4_.length + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText("OBJECTS"),"m",_loc4_ < 2) : this.api.lang.getText("NO_INVENTORY_SEARCH_RESULT");
+      this["\x1c\x1e\x1a"].text = _loc4_.length != 0 ? _loc4_.length + " " + ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("OBJECTS"),"m",_loc4_ < 2) : this.api.lang.getText("NO_INVENTORY_SEARCH_RESULT");
       this._btnView.enabled = false;
    }
    function §\x1a\x12\x0b§(§\x16\b\x07§, sName, §\x19\n\f§)

@@ -11,7 +11,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x1a\x05\x11§.§\x1a\x05\x12§ extends d
       {
          this._ldrIcon["\x17\x12\x07"]();
          this._ldrIcon.contentPath = dofus.Constants["\x17\f\b"];
-         this["\x1c\x16\x17"].text = _loc4_["\x17\x16\x10"](false);
+         this["\x1c\x16\x17"].text = _loc4_.getDescription(false);
          this["\x1c\x1e\x03"].text = _loc4_["\x1a\x0b\x13"];
          this["\x1d\x01\x1a"].text = _loc4_["\x1b\x06\x0f"];
          var ref = this;
