@@ -183,7 +183,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          this.api.datacenter.Exchange = _loc9_;
          if(this.api.datacenter.Player.ID == _loc5_)
          {
-            var _loc10_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc10_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             switch(_loc7_)
             {
                case 1:
@@ -199,7 +199,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          }
          else
          {
-            var _loc12_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc5_);
+            var _loc12_ = this.api.datacenter.Sprites.getItemAt(_loc5_);
             if(this.api.kernel.ChatManager["\x18\f\x16"](_loc12_.name))
             {
                this["\x18\x13\x1d"]();
@@ -318,10 +318,10 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          case 0:
          case 4:
             _loc7_["\x1a\x1c\x0e"] = new dofus.datacenter.["\x1a\x1c\x0e"]();
-            var _loc8_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc8_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             _loc7_["\x1a\x1c\x0e"].id = _loc8_.id;
             _loc7_["\x1a\x1c\x0e"].name = _loc8_.name;
-            _loc7_["\x1a\x1c\x0e"].gfx = _loc8_["\x18\x02\x16"];
+            _loc7_["\x1a\x1c\x0e"].gfx = _loc8_.gfxID;
             var _loc9_ = new Array();
             _loc9_[1] = _loc8_.color1 != undefined ? _loc8_.color1 : -1;
             _loc9_[2] = _loc8_.color2 != undefined ? _loc8_.color2 : -1;
@@ -383,9 +383,9 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             break;
          case 8:
             _loc7_.Storage = new dofus.datacenter..TaxCollectorStorage();
-            var _loc12_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc12_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             _loc7_.Storage.name = _loc12_.name;
-            _loc7_.Storage.gfx = _loc12_["\x18\x02\x16"];
+            _loc7_.Storage.gfx = _loc12_.gfxID;
             this.api.ui.loadUIComponent("TaxCollectorStorage","TaxCollectorStorage",{data:_loc7_.Storage});
             break;
          case 6:
@@ -522,7 +522,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          _loc18_.color1 = _loc15_[0];
          _loc18_.color2 = _loc15_[1];
          _loc18_.color3 = _loc15_[2];
-         this.api.kernel["\x16\x19\t"]["\x1a\x1a\x01"](_loc18_,_loc16_);
+         this.api.kernel.CharactersManager["\x1a\x1a\x01"](_loc18_,_loc16_);
          if(_loc8_.index != -1)
          {
             _loc5_["\x1b\x15\x05"](_loc8_.index,_loc18_);
@@ -1036,7 +1036,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
                switch(_loc21_)
                {
                   case "O":
-                     var _loc23_ = this.api.kernel["\x16\x19\t"]["\x17\x19\x15"](_loc22_);
+                     var _loc23_ = this.api.kernel.CharactersManager["\x17\x19\x15"](_loc22_);
                      _loc19_.push(_loc23_);
                      break;
                   case "G":
@@ -1275,7 +1275,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          var _loc4_ = _loc2_.charAt(0);
          var _loc5_ = _loc2_.substr(1).split("|");
          var _loc6_ = _loc5_[0];
-         var _loc7_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+         var _loc7_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
          if(_loc4_ == "+" && _loc5_[1].length > 0)
          {
             var _loc8_ = _loc5_[1].split(";");

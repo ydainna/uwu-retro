@@ -26,7 +26,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x19\n§.CharactersMigrationItem exte
          this["\x1c\x1a\x07"].text = _loc4_.level;
          this["\x1c\x1b\x0f"].text = _loc4_.newPlayerName;
          this.list = _loc4_.list;
-         this["\x1d\x05\n"].contentPath = dofus.Constants["\x18\x04\x16"] + _loc4_["\x18\x02\x16"] + ".swf";
+         this["\x1d\x05\n"].contentPath = dofus.Constants["\x18\x04\x16"] + _loc4_.gfxID + ".swf";
          this["\x1e\x03\x18"].ref = this;
       }
       else

@@ -107,7 +107,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Friends extends dofus.§\x18\x03\x10§.gapi
          {
             var _loc4_ = new Object();
             _loc4_.name = _loc2_[i].sName;
-            _loc4_["\x18\x02\x16"] = _loc2_[i].nClass;
+            _loc4_.gfxID = _loc2_[i].nClass;
             _loc3_.push(_loc4_);
          }
       }

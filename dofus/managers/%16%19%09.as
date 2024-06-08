@@ -1,14 +1,14 @@
-class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
+class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
 {
    static var §\x1e\f\x10§ = null;
-   function §\x16\x19\t§(oAPI)
+   function CharactersManager(oAPI)
    {
-      dofus.managers["\x16\x19\t"]["\x1e\f\x10"] = this;
+      dofus.managers.CharactersManager["\x1e\f\x10"] = this;
       super.initialize(oAPI);
    }
    static function §\x17\x19\t§()
    {
-      return dofus.managers["\x16\x19\t"]["\x1e\f\x10"];
+      return dofus.managers.CharactersManager["\x1e\f\x10"];
    }
    function §\x1a\x17\x16§(§\x19\b\x0b§, sName, §\x19\x12\x10§)
    {
@@ -64,17 +64,17 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
    }
    function §\x17\x02\n§(sID, sName, §\x19\x12\x10§)
    {
-      if(this.api.datacenter.Player.isAuthorized && _loc4_["\x18\x02\x16"] == ank.battlefield.datacenter..Sprite.ANGELS_OF_THE_WORLD_SPRITE_ID)
+      if(this.api.datacenter.Player.isAuthorized && _loc4_.gfxID == ank.battlefield.datacenter..Sprite.ANGELS_OF_THE_WORLD_SPRITE_ID)
       {
-         _loc4_["\x18\x02\x16"] = ank.battlefield.datacenter..Sprite.ANGELS_OF_THE_WORLD_REPLACEMENT_SPRITE_ID;
+         _loc4_.gfxID = ank.battlefield.datacenter..Sprite.ANGELS_OF_THE_WORLD_REPLACEMENT_SPRITE_ID;
       }
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
+      var _loc5_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
       {
-         _loc5_ = new dofus.datacenter.["\x16\x19\x02"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_["\x18\x02\x16"] + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x18\x02\x16"],_loc4_.title);
-         this.api.datacenter.["\x1b\x07\x0e"]["\x15\x1d\x13"](sID,_loc5_);
+         _loc5_ = new dofus.datacenter.["\x16\x19\x02"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID,_loc4_.title);
+         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
       }
-      _loc5_["\x17\x13\x05"].init();
+      _loc5_.GameActionsManager.init();
       _loc5_.cellNum = Number(_loc4_.cell);
       _loc5_.scaleX = _loc4_.scaleX;
       _loc5_.scaleY = _loc4_.scaleY;
@@ -91,8 +91,8 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
       _loc5_.alignment = _loc4_.alignment;
       _loc5_.rank = _loc4_.rank;
       _loc5_.mount = _loc4_.mount;
-      _loc5_["\x18\r\x0f"] = _loc4_["\x18\r\x0f"] == 1;
-      _loc5_["\x17\x05\x11"] = Number(_loc4_["\x18\r\x0f"]);
+      _loc5_.isDead = _loc4_.isDead == 1;
+      _loc5_["\x17\x05\x11"] = Number(_loc4_.isDead);
       _loc5_.deathCount = Number(_loc4_.deathCount);
       _loc5_.lvlMax = Number(_loc4_.lvlMax);
       _loc5_.pvpGain = Number(_loc4_.pvpGain);
@@ -159,13 +159,13 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
    }
    function §\x17\x02\r§(sID, sName, §\x19\x12\x10§)
    {
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
+      var _loc5_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
       {
-         _loc5_ = new dofus.datacenter..Creature(sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_["\x18\x02\x16"] + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x18\x02\x16"]);
-         this.api.datacenter.["\x1b\x07\x0e"]["\x15\x1d\x13"](sID,_loc5_);
+         _loc5_ = new dofus.datacenter..Creature(sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID);
+         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
       }
-      _loc5_["\x17\x13\x05"].init();
+      _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
       _loc5_.name = _loc3_;
       _loc5_["\x1a\x06\x15"] = _loc4_["\x1a\x06\x15"];
@@ -213,13 +213,13 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
    }
    function §\x17\x02\x12§(sID, sName, §\x19\x12\x10§)
    {
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
+      var _loc5_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
       {
-         _loc5_ = new dofus.datacenter.["\x18\x1d\x18"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_["\x18\x02\x16"] + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x18\x02\x16"]);
-         this.api.datacenter.["\x1b\x07\x0e"]["\x15\x1d\x13"](sID,_loc5_);
+         _loc5_ = new dofus.datacenter.["\x18\x1d\x18"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID);
+         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
       }
-      _loc5_["\x17\x13\x05"].init();
+      _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
       _loc5_.name = _loc3_;
       _loc5_.scaleX = _loc4_.scaleX;
@@ -263,13 +263,13 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
    }
    function §\x17\x02\x13§(sID, sName, §\x19\x12\x10§)
    {
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
+      var _loc5_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
       {
-         _loc5_ = new dofus.datacenter.["\x18\x1d\x19"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_["\x18\x02\x16"] + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x16\x0f\x1c"]);
-         this.api.datacenter.["\x1b\x07\x0e"]["\x15\x1d\x13"](sID,_loc5_);
+         _loc5_ = new dofus.datacenter.["\x18\x1d\x19"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x16\x0f\x1c"]);
+         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
       }
-      _loc5_["\x17\x13\x05"].init();
+      _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
       _loc5_.name = _loc3_;
       _loc5_.Level = _loc4_.level;
@@ -284,13 +284,13 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
    }
    function §\x17\x02\x16§(sID, §\x19\x10\n§, §\x19\x12\x10§)
    {
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
+      var _loc5_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
       {
-         _loc5_ = new dofus.datacenter.["\x19\x0b\x07"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_["\x18\x02\x16"] + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x18\x02\x16"],_loc4_.customArtwork);
-         this.api.datacenter.["\x1b\x07\x0e"]["\x15\x1d\x13"](sID,_loc5_);
+         _loc5_ = new dofus.datacenter.["\x19\x0b\x07"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID,_loc4_.customArtwork);
+         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
       }
-      _loc5_["\x17\x13\x05"].init();
+      _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
       _loc5_.unicID = _loc3_;
       _loc5_.scaleX = _loc4_.scaleX;
@@ -307,13 +307,13 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
    }
    function §\x17\x02\x17§(sID, sName, §\x19\x12\x10§)
    {
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
+      var _loc5_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
       {
-         _loc5_ = new dofus.datacenter.["\x19\x12\x19"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_["\x18\x02\x16"] + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x18\x02\x16"]);
-         this.api.datacenter.["\x1b\x07\x0e"]["\x15\x1d\x13"](sID,_loc5_);
+         _loc5_ = new dofus.datacenter.["\x19\x12\x19"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID);
+         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
       }
-      _loc5_["\x17\x13\x05"].init();
+      _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
       _loc5_.name = _loc3_;
       _loc5_.scaleX = _loc4_.scaleX;
@@ -333,13 +333,13 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
    }
    function §\x17\x02\x1c§(sID, sName, §\x19\x12\x10§)
    {
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
+      var _loc5_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
       {
-         _loc5_ = new dofus.datacenter.["\x1b\x0e\x04"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_["\x18\x02\x16"] + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x18\x02\x16"],_loc4_["\x18\x0e\x1c"]);
-         this.api.datacenter.["\x1b\x07\x0e"]["\x15\x1d\x13"](sID,_loc5_);
+         _loc5_ = new dofus.datacenter.["\x1b\x0e\x04"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID,_loc4_["\x18\x0e\x1c"]);
+         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
       }
-      _loc5_["\x17\x13\x05"].init();
+      _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
       _loc5_.scaleX = _loc4_.scaleX;
       _loc5_.scaleY = _loc4_.scaleY;
@@ -384,13 +384,13 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
    }
    function §\x17\x02\x1b§(sID, sName, §\x19\x12\x10§)
    {
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
+      var _loc5_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
       {
-         _loc5_ = new dofus.datacenter.["\x1a\x07\x0b"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_["\x18\x02\x16"] + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x18\x02\x16"]);
-         this.api.datacenter.["\x1b\x07\x0e"]["\x15\x1d\x13"](sID,_loc5_);
+         _loc5_ = new dofus.datacenter.["\x1a\x07\x0b"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID);
+         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
       }
-      _loc5_["\x17\x13\x05"].init();
+      _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
       _loc5_.scaleX = _loc4_.scaleX;
       _loc5_.scaleY = _loc4_.scaleY;
@@ -401,13 +401,13 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
    }
    function §\x17\x02\x18§(sID, sName, §\x19\x12\x10§)
    {
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
+      var _loc5_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
       {
-         _loc5_ = new dofus.datacenter.["\x1a\x03\x14"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_["\x18\x02\x16"] + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x18\x02\x16"],_loc4_.modelID);
-         this.api.datacenter.["\x1b\x07\x0e"]["\x15\x1d\x13"](sID,_loc5_);
+         _loc5_ = new dofus.datacenter.["\x1a\x03\x14"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID,_loc4_.modelID);
+         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
       }
-      _loc5_["\x17\x13\x05"].init();
+      _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
       _loc5_.name = _loc3_;
       _loc5_.scaleX = _loc4_.scaleX;
@@ -418,13 +418,13 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.ApiElement
    }
    function §\x17\x02\x15§(sID, §\x19\x12\x10§)
    {
-      var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
+      var _loc4_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc4_ == undefined)
       {
-         _loc4_ = new dofus.datacenter.["\x19\x02\x13"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc3_["\x18\x02\x16"] + ".swf",_loc3_.cell,_loc3_.dir,_loc3_["\x18\x02\x16"]);
-         this.api.datacenter.["\x1b\x07\x0e"]["\x15\x1d\x13"](sID,_loc4_);
+         _loc4_ = new dofus.datacenter.["\x19\x02\x13"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc3_.gfxID + ".swf",_loc3_.cell,_loc3_.dir,_loc3_.gfxID);
+         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc4_);
       }
-      _loc4_["\x17\x13\x05"].init();
+      _loc4_.GameActionsManager.init();
       _loc4_.scaleX = _loc3_.scaleX;
       _loc4_.scaleY = _loc3_.scaleY;
       _loc4_.cellNum = Number(_loc3_.cell);

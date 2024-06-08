@@ -294,7 +294,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpellFullInfosViewer extends 
             {
                var _loc19_ = _loc16_["\x1a\x03\r"];
                var _loc20_ = _loc16_["\x1a\x03\x0e"];
-               var _loc21_ = this.api.kernel["\x16\x19\t"]["\x18\x01\x05"](_loc19_ + "~" + _loc20_ + "~");
+               var _loc21_ = this.api.kernel.CharactersManager["\x18\x01\x05"](_loc19_ + "~" + _loc20_ + "~");
                _loc18_ = _loc21_["\x17\f\n"];
             }
             this["\x1d\x06\x14"].dataProvider = _loc18_;
@@ -324,7 +324,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpellFullInfosViewer extends 
    }
    function §\x1a\x17\x15§(§\x19\t\x0f§)
    {
-      var _loc3_ = this.api.kernel["\x16\x19\t"]["\x18\x01\x05"](this["\x1e\x05\x14"].ID + "~" + _loc2_);
+      var _loc3_ = this.api.kernel.CharactersManager["\x18\x01\x05"](this["\x1e\x05\x14"].ID + "~" + _loc2_);
       if(_loc3_["\x18\x10\n"])
       {
          this.spell = _loc3_;

@@ -140,7 +140,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.JoinFriend extends dofus.§\x18\x03\x10§.g
             var _loc6_ = 0;
             while(_loc6_ < _loc3_.length)
             {
-               if(_loc3_[_loc6_]["\x16\x16\x07"] && (_loc3_[_loc6_]["\x1b\x12\n"] == dofus.datacenter.Server["\x1a\x14\x0e"] || _loc3_[_loc6_]["\x1b\x12\n"] == dofus.datacenter.Server["\x1a\x14\x13"]))
+               if(_loc3_[_loc6_]["\x16\x16\x07"] && (_loc3_[_loc6_].typeNum == dofus.datacenter.Server["\x1a\x14\x0e"] || _loc3_[_loc6_].typeNum == dofus.datacenter.Server["\x1a\x14\x13"]))
                {
                   _loc5_.push(_loc3_[_loc6_]);
                }

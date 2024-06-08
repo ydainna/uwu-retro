@@ -137,7 +137,7 @@ class dofus.aks.Enemies extends dofus.aks.Handler
          _loc4_.alignement = Number(_loc3_[4]);
          _loc4_.guild = _loc3_[5];
          _loc4_["\x1a\x1b\f"] = _loc3_[6];
-         _loc4_["\x18\x02\x16"] = _loc3_[7];
+         _loc4_.gfxID = _loc3_[7];
          _loc4_.id = _loc3_[8];
       }
       else

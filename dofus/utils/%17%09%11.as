@@ -491,7 +491,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.ApiElement
    {
       return this["\x18\x02\b"]("CNS");
    }
-   function §\x17\x1e\f§(§\x19\b\x0b§)
+   function getServerInfos(§\x19\b\x0b§)
    {
       return this["\x18\x02\t"]("SR",dofus.utils.["\x17\t\x11"].STANDARD_DATA_BANK)[_loc2_];
    }

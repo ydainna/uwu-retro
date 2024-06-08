@@ -86,7 +86,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CharactersMigration extends dofus.§\x18\x0
          _loc3_.level = this["\x1c\x01\x06"][i].Level;
          _loc3_.playerName = this["\x1c\x01\x06"][i].name;
          _loc3_.newPlayerName = _loc3_.playerName;
-         _loc3_["\x18\x02\x16"] = this["\x1c\x01\x06"][i]["\x18\x02\x16"];
+         _loc3_.gfxID = this["\x1c\x01\x06"][i].gfxID;
          _loc3_.rowId = i;
          _loc3_.list = this;
          _loc3_.playerID = this["\x1c\x01\x06"][i].id;

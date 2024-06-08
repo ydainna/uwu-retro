@@ -465,8 +465,8 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                var _loc54_ = 0;
                while(_loc54_ < _loc3_[0].length)
                {
-                  var _loc55_ = ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc3_[0].charAt(_loc54_)) << 6;
-                  _loc55_ += ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc3_[0].charAt(_loc54_ + 1));
+                  var _loc55_ = ank.utils.Compressor.decode64(_loc3_[0].charAt(_loc54_)) << 6;
+                  _loc55_ += ank.utils.Compressor.decode64(_loc3_[0].charAt(_loc54_ + 1));
                   this.showMessage(undefined,_loc3_[0].charAt(_loc54_) + _loc3_[0].charAt(_loc54_ + 1) + " : " + _loc55_,"DEBUG_LOG");
                   _loc54_ += 2;
                }
@@ -490,7 +490,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                   {
                      var _loc59_ = Math.floor(_loc58_ / 64);
                      var _loc60_ = _loc58_ % 64;
-                     var _loc61_ = ank.utils.["\x16\x1e\t"]["\x17\r\x07"](_loc59_) + ank.utils.["\x16\x1e\t"]["\x17\r\x07"](_loc60_);
+                     var _loc61_ = ank.utils.Compressor["\x17\r\x07"](_loc59_) + ank.utils.Compressor["\x17\r\x07"](_loc60_);
                      this.showMessage(undefined,_loc58_ + " : " + _loc61_,"DEBUG_LOG");
                   }
                   _loc57_ = _loc57_ + 1;
@@ -801,7 +801,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                this.api.gfx["\x18\x18\x15"]["\x1a\r\x1b"]();
                break;
             case "SEQACTIONS":
-               var _loc92_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+               var _loc92_ = this.api.datacenter.Sprites.getItems();
                for(var k in _loc92_)
                {
                   var _loc93_ = k;

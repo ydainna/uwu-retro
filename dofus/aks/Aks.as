@@ -121,7 +121,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       var _loc5_ = this._xSocket.connect(_loc2_,_loc3_);
       return _loc5_;
    }
-   function §\x1b\x04\x0f§()
+   function §softDisconnect§()
    {
       if(this._bConnected)
       {
@@ -139,7 +139,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
    }
    function disconnect(§\x16\x10\x1a§, bShowMessage, §\x16\x10\x1b§)
    {
-      this["\x1b\x04\x0f"]();
+      this.softDisconnect();
       if(!_loc4_)
       {
          this.onClose(_loc2_,_loc3_,true);
@@ -464,7 +464,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
          this.api.ui.unloadUIComponent("ChooseCharacter");
          this.api.kernel.manualLogon();
          this.api.kernel.showMessage(this.api.lang.getText("CONNECTION"),this.api.lang.getText("CANT_CONNECT"),"ERROR_BOX",{name:"OnConnect"});
-         this["\x1b\x04\x0f"]();
+         this.softDisconnect();
       }
       else
       {

@@ -12,9 +12,9 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.ApiElement
          dofus.sounds.AudioManager.initialize(_root.createEmptyMovieClip("\x1b\x04\x16",99999),oAPI);
          this.AudioManager = dofus.sounds.AudioManager.getInstance();
       }
-      if((this["\x16\x19\t"] = dofus.managers["\x16\x19\t"].getInstance()) == null)
+      if((this.CharactersManager = dofus.managers.CharactersManager.getInstance()) == null)
       {
-         this["\x16\x19\t"] = new dofus.managers["\x16\x19\t"](oAPI);
+         this.CharactersManager = new dofus.managers.CharactersManager(oAPI);
       }
       if((this.ChatManager = dofus.managers.ChatManager.getInstance()) == null)
       {

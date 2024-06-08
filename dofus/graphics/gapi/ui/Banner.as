@@ -936,7 +936,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
    function doAutoComplete()
    {
       var _loc2_ = new Array();
-      var _loc3_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+      var _loc3_ = this.api.datacenter.Sprites.getItems();
       for(var k in _loc3_)
       {
          if(_loc3_[k] instanceof dofus.datacenter.["\x16\x19\x02"])
@@ -1489,7 +1489,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
                   break loop1;
                }
                var _loc8_ = _loc4_[_loc7_];
-               var _loc9_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc8_);
+               var _loc9_ = this.api.datacenter.Sprites.getItemAt(_loc8_);
                if(_loc9_ != undefined)
                {
                   if(!(!_loc9_["\x18\x10\x0e"] || _loc9_["\x18\r\x04"]))

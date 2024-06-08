@@ -108,7 +108,7 @@ class dofus.aks.Fights extends dofus.aks.Handler
          if(_loc6_[_loc7_] != "")
          {
             var _loc8_ = _loc6_[_loc7_].split("~");
-            var _loc9_ = this.api.kernel["\x16\x19\t"]["\x17\x1c\x0f"](_loc8_[0]);
+            var _loc9_ = this.api.kernel.CharactersManager["\x17\x1c\x0f"](_loc8_[0]);
             var _loc10_ = Number(_loc8_[1]);
             var _loc11_ = _loc8_[2];
             _loc5_.push({name:_loc9_.name,level:_loc10_,type:_loc9_.type,id:_loc11_});
@@ -123,7 +123,7 @@ class dofus.aks.Fights extends dofus.aks.Handler
          if(_loc13_[_loc14_] != "")
          {
             var _loc15_ = _loc13_[_loc14_].split("~");
-            var _loc16_ = this.api.kernel["\x16\x19\t"]["\x17\x1c\x0f"](_loc15_[0]);
+            var _loc16_ = this.api.kernel.CharactersManager["\x17\x1c\x0f"](_loc15_[0]);
             var _loc17_ = Number(_loc15_[1]);
             var _loc18_ = _loc15_[2];
             _loc12_.push({name:_loc16_.name,level:_loc17_,type:_loc16_.type,id:_loc18_});

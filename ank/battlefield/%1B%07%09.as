@@ -448,7 +448,7 @@ class ank.battlefield.§\x1b\x07\t§
       var _loc6_ = this["\x1e\x05\x1c"].getItemAt(sID);
       var _loc7_ = _loc6_["\x17\x13\x02"] == -1 ? _loc6_.cellNum : _loc6_["\x17\x13\x02"];
       var _loc8_ = ank.battlefieldutils.["\x1a\x04\b"]["\x17\x16\x16"](this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc7_).x,this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc7_)["\x1a\x0e\x17"],this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc3_).x,this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc3_)["\x1a\x0e\x17"],false);
-      var _loc9_ = ank.battlefieldutils.["\x16\x1e\t"]["\x18\x18\b"](this["\x1d\b\x12"]["\x18\x18\x15"],[{num:_loc7_},{num:_loc3_,dir:_loc8_}]);
+      var _loc9_ = ank.battlefieldutils.Compressor["\x18\x18\b"](this["\x1d\b\x12"]["\x18\x18\x15"],[{num:_loc7_},{num:_loc3_,dir:_loc8_}]);
       if(_loc9_ != undefined)
       {
          this["\x19\x01\n"](sID,_loc9_,_loc4_,false,_loc5_);
@@ -556,7 +556,7 @@ class ank.battlefield.§\x1b\x07\t§
    }
    function §\x1a\x15\x17§(§\x16\x0b\t§)
    {
-      var _loc3_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+      var _loc3_ = this.api.datacenter.Sprites.getItems();
       for(var k in _loc3_)
       {
          var _loc4_ = _loc3_[k];
@@ -695,7 +695,7 @@ class ank.battlefield.§\x1b\x07\t§
             var _loc19_ = this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc18_);
             var _loc20_ = this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc4_);
             var _loc21_ = ank.battlefieldutils.["\x1a\x04\b"]["\x17\x16\x16"](_loc19_.x,_loc19_.y,_loc20_.x,_loc20_.y,false);
-            var _loc22_ = ank.battlefieldutils.["\x16\x1e\t"]["\x18\x18\b"](this["\x1d\b\x12"]["\x18\x18\x15"],ank.battlefieldutils.["\x1a\x04\b"]["\x1a\x04\x07"](this.api,this["\x1d\b\x12"]["\x18\x18\x15"],_loc18_,_loc4_,{bIgnoreSprites:true,bWithBeginCellNum:true}));
+            var _loc22_ = ank.battlefieldutils.Compressor["\x18\x18\b"](this["\x1d\b\x12"]["\x18\x18\x15"],ank.battlefieldutils.["\x1a\x04\b"]["\x1a\x04\x07"](this.api,this["\x1d\b\x12"]["\x18\x18\x15"],_loc18_,_loc4_,{bIgnoreSprites:true,bWithBeginCellNum:true}));
             _loc22_.pop();
             var _loc23_ = _loc22_[_loc22_.length - 1];
             this["\x19\x01\n"](sID,_loc22_,_loc14_,false,_loc6_[0],false,true);
@@ -705,7 +705,7 @@ class ank.battlefield.§\x1b\x07\t§
             {
                _loc14_.addAction(15,_loc16_,this["\x1d\b\x12"]["\x1b\x18\x05"],this["\x1d\b\x12"]["\x1b\x18\x05"]["\x15\x1d\b"],[_loc11_,_loc3_,_loc4_,_loc5_,_loc12_,!_loc9_ ? _loc11_["\x18\x10\x0e"] : true]);
             }
-            var _loc24_ = ank.battlefieldutils.["\x16\x1e\t"]["\x18\x18\b"](this["\x1d\b\x12"]["\x18\x18\x15"],ank.battlefieldutils.["\x1a\x04\b"]["\x1a\x04\x07"](this.api,this["\x1d\b\x12"]["\x18\x18\x15"],_loc23_,_loc18_,{bIgnoreSprites:true,bWithBeginCellNum:true}));
+            var _loc24_ = ank.battlefieldutils.Compressor["\x18\x18\b"](this["\x1d\b\x12"]["\x18\x18\x15"],ank.battlefieldutils.["\x1a\x04\b"]["\x1a\x04\x07"](this.api,this["\x1d\b\x12"]["\x18\x18\x15"],_loc23_,_loc18_,{bIgnoreSprites:true,bWithBeginCellNum:true}));
             this["\x19\x01\n"](sID,_loc24_,_loc14_,false,_loc6_[2],false,true);
             _loc14_.addAction(16,false,_loc13_,_loc13_["\x1a\x16\x04"],[_loc21_]);
             if(_loc6_[3] != undefined)

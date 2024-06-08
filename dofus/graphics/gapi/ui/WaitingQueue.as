@@ -39,7 +39,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.WaitingQueue extends dofus.§\x18\x03\x10§
    }
    function §\x18\t\x14§()
    {
-      var _loc2_ = this.api.lang["\x17\x1e\f"](this["\x1e\x05\x03"].queueId).n;
+      var _loc2_ = this.api.lang.getServerInfos(this["\x1e\x05\x03"].queueId).n;
       if(_loc2_ != undefined)
       {
          this["\x1d\x04\f"].text = this["\x1c\x13\x14"].text = this["\x1c\x13\x17"].text = this["\x1c\x13\x0f"].text = this["\x1c\x13\x11"].text = this.api.lang.getText("WAITING_FOR_CONNECTION_ON",[_loc2_]);

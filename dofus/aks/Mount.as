@@ -95,7 +95,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
          var _loc10_ = Number(_loc6_[3]);
          var _loc11_ = _loc6_[4];
          var _loc12_ = _loc6_[5];
-         var _loc13_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x0f"](_loc12_);
+         var _loc13_ = this.api.kernel.CharactersManager["\x17\x02\x0f"](_loc12_);
          var _loc14_ = Number(_loc6_[6]);
          var _loc15_ = new dofus.datacenter.["\x18\x1e\t"](_loc7_,_loc8_,_loc9_,undefined,_loc10_,_loc11_,_loc13_,this.api.datacenter.["\x18\x18\x0e"].id,_loc4_,_loc14_);
          this.api.datacenter.["\x18\x18\x0e"].addMountPark(_loc15_);

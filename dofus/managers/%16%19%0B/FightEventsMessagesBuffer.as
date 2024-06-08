@@ -56,7 +56,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x0b§.FightEventsMessagesBuffer
       this._aMessagesBuffer = new Array();
       var _loc3_ = new ank.utils.["\x17\x0e\r"]();
       var _loc4_ = new ank.utils.["\x17\x0e\r"]();
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"];
+      var _loc5_ = this.api.datacenter.Sprites;
       for(var i in _loc5_.getItems())
       {
          var _loc6_ = _loc5_.getItemAt(i);

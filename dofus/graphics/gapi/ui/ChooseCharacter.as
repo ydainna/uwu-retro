@@ -89,7 +89,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseCharacter extends dofus.§\x18\x03\x1
          _loc3_.params = {index:_loc2_ + this["\x1d\x13\x1b"]};
          _loc3_.data = this["\x1c\x01\x06"][_loc2_ + this["\x1d\x13\x1b"]];
          _loc3_.enabled = this["\x1c\x01\x06"][_loc2_ + this["\x1d\x13\x1b"]] != undefined;
-         _loc3_["\x18\r\x0f"] = _loc3_.data["\x18\r\x0f"];
+         _loc3_.isDead = _loc3_.data.isDead;
          _loc3_["\x17\x05\x10"] = _loc3_.data.deathCount;
          _loc3_["\x17\x05\x11"] = _loc3_.data["\x17\x05\x11"];
          _loc2_ = _loc2_ + 1;

@@ -270,7 +270,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                   return undefined;
                }
                var _loc32_ = new Array();
-               var _loc33_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+               var _loc33_ = this.api.datacenter.Sprites.getItems();
                for(var k in _loc33_)
                {
                   if(_loc33_[k] instanceof dofus.datacenter.["\x16\x19\x02"])
@@ -287,7 +287,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                   return undefined;
                }
                var _loc34_ = String(_loc5_[0]);
-               var _loc35_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+               var _loc35_ = this.api.datacenter.Sprites.getItems();
                for(var k in _loc35_)
                {
                   if(_loc35_[k] instanceof dofus.datacenter.["\x16\x19\x02"] && _loc35_[k].name == _loc34_)

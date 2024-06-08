@@ -23,7 +23,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.FightChallengeViewer extends 
       this["\x1e\x10\t"].title = _loc2_.lang.getText("CURRENT_FIGHT_CHALLENGE");
       if(this.challenge["\x1b\r\x1c"])
       {
-         var _loc4_ = _loc2_.datacenter.["\x1b\x07\x0e"].getItemAt(this.challenge["\x1b\r\x1c"]).name + " (" + _loc2_.lang.getText("LEVEL_SMALL") + " " + _loc2_.datacenter.["\x1b\x07\x0e"].getItemAt(this.challenge["\x1b\r\x1c"]).mc.data.Level + ")";
+         var _loc4_ = _loc2_.datacenter.Sprites.getItemAt(this.challenge["\x1b\r\x1c"]).name + " (" + _loc2_.lang.getText("LEVEL_SMALL") + " " + _loc2_.datacenter.Sprites.getItemAt(this.challenge["\x1b\r\x1c"]).mc.data.Level + ")";
          this["\x1e\r\x14"].text = _loc3_.d.split("%1").join(_loc4_);
       }
       else

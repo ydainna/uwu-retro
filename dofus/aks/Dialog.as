@@ -35,7 +35,7 @@ class dofus.aks.Dialog extends dofus.aks.Handler
          return undefined;
       }
       var _loc4_ = Number(_loc3_);
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc4_);
+      var _loc5_ = this.api.datacenter.Sprites.getItemAt(_loc4_);
       var _loc6_ = new Array();
       var _loc7_ = _loc5_.name;
       if(dofus.Constants.DEBUG && _loc5_.unicID != undefined)
@@ -45,7 +45,7 @@ class dofus.aks.Dialog extends dofus.aks.Handler
       _loc6_[1] = _loc5_.color1 != undefined ? _loc5_.color1 : -1;
       _loc6_[2] = _loc5_.color2 != undefined ? _loc5_.color2 : -1;
       _loc6_[3] = _loc5_.color3 != undefined ? _loc5_.color3 : -1;
-      this.api.ui.loadUIComponent("NpcDialog","NpcDialog",{name:_loc7_,gfx:_loc5_["\x18\x02\x16"],id:_loc4_,customArtwork:_loc5_.customArtwork,colors:_loc6_});
+      this.api.ui.loadUIComponent("NpcDialog","NpcDialog",{name:_loc7_,gfx:_loc5_.gfxID,id:_loc4_,customArtwork:_loc5_.customArtwork,colors:_loc6_});
    }
    function §\x19\x1b\x15§(sExtraData)
    {

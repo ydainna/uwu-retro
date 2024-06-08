@@ -208,7 +208,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
             _loc8_.color1 = _loc10_[0];
             _loc8_.color2 = _loc10_[1];
             _loc8_.color3 = _loc10_[2];
-            this.api.kernel["\x16\x19\t"]["\x1a\x1a\x01"](_loc8_,_loc11_);
+            this.api.kernel.CharactersManager["\x1a\x1a\x01"](_loc8_,_loc11_);
             if(_loc9_)
             {
                _loc5_.members.push(_loc8_);

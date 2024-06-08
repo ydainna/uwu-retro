@@ -210,7 +210,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
    function initTexts()
    {
       this["\x1e\x10\x11"].title = this.api.datacenter.Player.data.name;
-      this["\x1e\x10\x10"].title = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name;
+      this["\x1e\x10\x10"].title = this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name;
       this._btnValidate.label = this.api.lang.getText("COMBINE");
       this["\x1c\x0b\x11"].label = this.api.lang.getText("VALIDATE");
       this["\x1c\t\x0f"].label = this.api.lang.getText("RECEIPTS");
@@ -220,7 +220,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
       this["\x1c\x1b\x13"].text = this.api.lang.getText("CRAFTED_ITEM");
       this["\x1e\x10\x0f"].title = this.api.lang.getText("RECEIPTS_FROM_JOB");
       this["\x1d\x01\x14"].text = this.api.lang.getText("SKILL") + " : " + this.api.lang["\x17\x1e\x15"](this["\x1d\x1c\x1c"]).d;
-      this["\x1e\x10\x10"].title = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name;
+      this["\x1e\x10\x10"].title = this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name;
       this["\x1c\x19\x1c"].text = new ank.utils.ExtendedString(this.api.datacenter.Player.Kama)["\x15\x1e\x01"](this.api.lang.getConfigText("THOUSAND_SEPARATOR"),3);
       this["\x1d\x0e\x0f"]._visible = this["\x18\r\x05"];
       this["\x1d\x0e\x0e"]._visible = this["\x18\r\x05"];
@@ -898,7 +898,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
       }
       if(_loc2_.target == this._btnPrivateMessage || _loc2_.target == this["\x1c\n\x10"])
       {
-         this.api.kernel.GameManager["\x16\x06\x07"](this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name);
+         this.api.kernel.GameManager["\x16\x06\x07"](this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name);
       }
       if(_loc2_.target == this["\x1c\n\f"] || _loc2_.target == this["\x1c\x0b\x11"])
       {

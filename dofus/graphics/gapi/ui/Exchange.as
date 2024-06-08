@@ -129,7 +129,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Exchange extends dofus.§\x18\x03\x10§.gap
    {
       this["\x1c\x17\x18"].text = this.api.lang.getText("EQUIPEMENT");
       this["\x1e\x10\x11"].title = this.api.datacenter.Player.data.name;
-      this["\x1e\x10\x10"].title = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name;
+      this["\x1e\x10\x10"].title = this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name;
       this._btnValidate.label = this.api.lang.getText("ACCEPT");
       this["\x1c\x19\x1c"].text = new ank.utils.ExtendedString(this.api.datacenter.Player.Kama)["\x15\x1e\x01"](this.api.lang.getConfigText("THOUSAND_SEPARATOR"),3);
       this._btnPrivateChat.label = this.api.lang.getText("WISPER_MESSAGE");
@@ -305,7 +305,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Exchange extends dofus.§\x18\x03\x10§.gap
          case "_btnPrivateChat":
             if(this.api.datacenter.Exchange["\x17\b\x1d"] > 0)
             {
-               this.api.kernel.GameManager["\x16\x06\x07"](this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name);
+               this.api.kernel.GameManager["\x16\x06\x07"](this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name);
             }
             break;
          default:

@@ -540,11 +540,11 @@ class dofus.aks.Account extends dofus.aks.Handler
       }
    }
 
-   function §\x19\x18\x0f§(sExtraData)
+   function onHosts(sExtraData)
    {
       var _loc3_ = this.api.datacenter.Basics.aks_servers;
       var _loc4_ = new Array();
-      var _loc5_ = _loc2_.split("|");
+      var _loc5_ = sExtraData.split("|");
       var _loc6_ = 0;
       while(_loc6_ < _loc5_.length)
       {
@@ -554,7 +554,7 @@ class dofus.aks.Account extends dofus.aks.Handler
          var _loc10_ = Number(_loc7_[2]);
          var _loc11_ = _loc7_[3] == "1";
          var _loc12_ = new dofus.datacenter.Server(_loc8_,_loc9_,_loc10_,_loc11_);
-         if(!(_global.CONFIG.onlyHardcore && _loc12_["\x1b\x12\n"] != dofus.datacenter.Server["\x1a\x14\x10"]))
+         if(!(_global.CONFIG.onlyHardcore && _loc12_.typeNum != dofus.datacenter.Server.SERVER_HARDCORE))
          {
             var _loc13_ = _loc3_.findFirstItem("id",_loc8_).item;
             if(_loc13_ != undefined)
@@ -567,7 +567,8 @@ class dofus.aks.Account extends dofus.aks.Handler
       }
       this.api.datacenter.Basics.aks_servers.createFromArray(_loc4_);
    }
-   function §\x19\x15\x10§(bSuccess, sExtraData, §\x16\r\x18§)
+
+   function onCharactersList(bSuccess, sExtraData, bIsMigration)
    {
       if(this.api.datacenter.Player.isAuthorized)
       {
@@ -576,13 +577,13 @@ class dofus.aks.Account extends dofus.aks.Handler
       this.api.ui.unloadUIComponent("WaitingMessage");
       this.api.ui.unloadUIComponent("WaitingQueue");
       var _loc5_ = new Array();
-      var _loc6_ = _loc3_.split("|");
+      var _loc6_ = sExtraData.split("|");
       var _loc7_ = Number(_loc6_[0]);
       this.api.datacenter.Player.subscriber = _loc7_ > 0;
       this.api.ui.getUIComponent("MainMenu").updateSubscribeButton();
       var _loc8_ = Number(_loc6_[1]);
       var _loc9_ = new Array();
-      this.api.datacenter.["\x1b\x07\x0e"].clear();
+      this.api.datacenter.Sprites.clear();
       var _loc10_ = 2;
       while(_loc10_ < _loc6_.length)
       {
@@ -591,17 +592,17 @@ class dofus.aks.Account extends dofus.aks.Handler
          var _loc13_ = _loc11_[0];
          var _loc14_ = _loc11_[1];
          _loc12_.level = _loc11_[2];
-         _loc12_["\x18\x02\x16"] = _loc11_[3];
+         _loc12_.gfxID = _loc11_[3];
          _loc12_.color1 = _loc11_[4];
          _loc12_.color2 = _loc11_[5];
          _loc12_.color3 = _loc11_[6];
          _loc12_.accessories = _loc11_[7];
          _loc12_.merchant = _loc11_[8];
          _loc12_.serverID = _loc11_[9];
-         _loc12_["\x18\r\x0f"] = _loc11_[10];
+         _loc12_.isDead = _loc11_[10];
          _loc12_.deathCount = _loc11_[11];
          _loc12_.lvlMax = _loc11_[12];
-         var _loc15_ = this.api.kernel["\x16\x19\t"].createCharacter(_loc13_,_loc14_,_loc12_);
+         var _loc15_ = this.api.kernel.CharactersManager.createCharacter(_loc13_,_loc14_,_loc12_);
          _loc15_.sortID = Number(_loc13_);
          _loc5_.push(_loc15_);
          _loc9_.push(Number(_loc13_));
@@ -664,14 +665,14 @@ class dofus.aks.Account extends dofus.aks.Handler
       }
       this.api.datacenter.Basics.oldCharList = _loc9_;
       new org.flashdevelop.utils.FlashConnect.trace("ignoreMigration 2 : " + this.api.datacenter.Basics.ignoreMigration,"dofus.aks.Account::onCharactersList","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Account.as",886);
-      if((!_loc4_ || this.api.datacenter.Basics.ignoreMigration) && ((this.api.datacenter.Basics.createCharacter || !_loc8_) && !this.api.datacenter.Basics.ignoreCreateCharacter))
+      if((!bIsMigration || this.api.datacenter.Basics.ignoreMigration) && ((this.api.datacenter.Basics.createCharacter || !_loc8_) && !this.api.datacenter.Basics.ignoreCreateCharacter))
       {
          this.api.ui.loadUIComponent("CreateCharacter","CreateCharacter",{remainingTime:_loc7_});
       }
       else
       {
          this.api.ui.unloadUIComponent("CharactersMigration");
-         if(!_loc4_ || this.api.datacenter.Basics.ignoreMigration)
+         if(!bIsMigration || this.api.datacenter.Basics.ignoreMigration)
          {
             this.api.datacenter.Basics.createCharacter = false;
             this.api.ui.loadUIComponent("ChooseCharacter","ChooseCharacter",{spriteList:_loc5_,remainingTime:_loc7_,characterCount:_loc8_},{bForceLoad:true});
@@ -684,11 +685,13 @@ class dofus.aks.Account extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x1a\t§()
+
+   function onMiniClipInfo()
    {
       this.api.datacenter.Basics.first_connection_from_miniclip = true;
    }
-   function §\x19\x15\n§(bSuccess, sExtraData)
+
+   function onCharacterAdd(bSuccess, sExtraData)
    {
       var _loc4_ = dofus.graphics.gapi.ui.Gifts(this.api.ui.getUIComponent("Gifts"));
       if(_loc4_ == undefined || !_loc4_.isAttributingGifts)
@@ -697,11 +700,11 @@ class dofus.aks.Account extends dofus.aks.Handler
       }
       if(dofus.Constants.USE_JS_LOG && _global.CONFIG.isNewAccount)
       {
-         getURL("JavaScript:WriteLog(\'CharacterValidation;" + _loc2_ + "\')","_self");
+         getURL("JavaScript:WriteLog(\'CharacterValidation;" + bSuccess + "\')","_self");
       }
-      if(!_loc2_)
+      if(!bSuccess)
       {
-         switch(_loc3_)
+         switch(sExtraData)
          {
             case "s":
                this.api.kernel.showMessage(undefined,this.api.lang.getText("SUBSCRIPTION_OUT"),"ERROR_BOX",{name:"CreateNameExists"});
@@ -724,6 +727,8 @@ class dofus.aks.Account extends dofus.aks.Handler
          this.api.datacenter.Basics.createCharacter = false;
       }
    }
+
+   //TODO : check this
    function §\x19\x1c\x0f§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
@@ -731,16 +736,17 @@ class dofus.aks.Account extends dofus.aks.Handler
       this.api.datacenter.Basics.aks_current_server = _loc4_;
       this.api.network.Basics.onAuthorizedCommandPrompt(this.api.datacenter.Basics.aks_current_server.label);
    }
-   function §\x19\x1c\x0e§(bSuccess, §\x16\x14\x0b§, sExtraData)
+
+   function onSelectServer(bSuccess, bUseIp, sExtraData)
    {
       this.api.ui.unloadUIComponent("WaitingMessage");
-      if(_loc2_)
+      if(bSuccess)
       {
-         if(_loc3_)
+         if(bUseIp)
          {
-            var _loc8_ = _loc4_.substr(0,8);
-            var _loc9_ = _loc4_.substr(8,3);
-            var _loc7_ = _loc4_.substr(11);
+            var _loc8_ = sExtraData.substr(0,8);
+            var _loc9_ = sExtraData.substr(8,3);
+            var _loc7_ = sExtraData.substr(11);
             var _loc10_ = new Array();
             var _loc11_ = 0;
             while(_loc11_ < 8)
@@ -751,17 +757,17 @@ class dofus.aks.Account extends dofus.aks.Handler
                _loc11_ += 2;
             }
             var _loc5_ = _loc10_.join(".");
-            var _loc6_ = (ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc9_.charAt(0)) & 63) << 12 | (ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc9_.charAt(1)) & 63) << 6 | ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc9_.charAt(2)) & 63;
+            var _loc6_ = (ank.utils.Compressor.decode64(_loc9_.charAt(0)) & 63) << 12 | (ank.utils.Compressor.decode64(_loc9_.charAt(1)) & 63) << 6 | ank.utils.Compressor.decode64(_loc9_.charAt(2)) & 63;
          }
          else
          {
-            var _loc14_ = _loc4_.split(";");
+            var _loc14_ = sExtraData.split(";");
             var _loc15_ = _loc14_[0].split(":");
             _loc5_ = _loc15_[0];
             _loc6_ = _loc15_[1];
             _loc7_ = _loc14_[1];
          }
-         var _loc16_ = this.api.config["\x17\x16\b"](this.api.datacenter.Basics.aks_incoming_server_id);
+         var _loc16_ = this.api.config.getCustomIP(this.api.datacenter.Basics.aks_incoming_server_id);
          if(_loc16_ != undefined)
          {
             _loc5_ = _loc16_.ip;
@@ -776,7 +782,7 @@ class dofus.aks.Account extends dofus.aks.Handler
          this.api.ui.unloadUIComponent("ChooseServer");
          this.api.ui.unloadUIComponent("AutomaticServer");
          this.api.ui.loadUIComponent("Waiting","Waiting");
-         this.aks["\x1b\x04\x0f"]();
+         this.aks.softDisconnect();
          this.api.ui.loadUIComponent("WaitingMessage","WaitingMessage",{text:this.api.lang.getText("CONNECTING")},{bAlwaysOnTop:true,bForceLoad:true});
          this.api.network.Basics.onAuthorizedCommandPrompt(this.api.datacenter.Basics.aks_current_server.label);
          if(_global.CONFIG.delay != undefined)
@@ -792,7 +798,7 @@ class dofus.aks.Account extends dofus.aks.Handler
       {
          delete this.api.datacenter.Basics.aks_current_server;
          this.api.datacenter.Basics.createCharacter = false;
-         switch(_loc4_.charAt(0))
+         switch(sExtraData.charAt(0))
          {
             case "d":
                this.api.kernel.showMessage(undefined,this.api.lang.getText("CANT_CHOOSE_CHARACTER_SERVER_DOWN"),"ERROR_BOX");
@@ -804,7 +810,7 @@ class dofus.aks.Account extends dofus.aks.Handler
                this.api.kernel.showMessage(undefined,this.api.lang.getText("SERVER_FULL"),"ERROR_BOX");
                break;
             case "s":
-               var _loc17_ = this.api.lang["\x17\x1e\f"](Number(_loc4_.substr(1))).n;
+               var _loc17_ = this.api.lang.getServerInfos(Number(_loc4_.substr(1))).n;
                this.api.kernel.showMessage(undefined,this.api.lang.getText("CANT_CHOOSE_CHARACTER_SHOP_OTHER_SERVER",[_loc17_]),"ERROR_BOX");
                break;
             case "r":
@@ -812,18 +818,20 @@ class dofus.aks.Account extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x1c\x07§(bSuccess)
+
+   function onRescue(bSuccess)
    {
-      this.api.datacenter.Player.data["\x17\x13\x05"].clear();
+      this.api.datacenter.Player.data.GameActionsManager.clear();
       this.api.ui.unloadUIComponent("WaitingMessage");
       this.api.ui.unloadUIComponent("WaitingQueue");
       ank.utils.Timer.removeTimer(this.WaitQueueTimer,"WaitQueue");
-      if(!_loc2_)
+      if(!bSuccess)
       {
          this.api.datacenter.Basics.aks_rescue_count = -1;
          this.aks.disconnect(false,true);
       }
    }
+
    function §\x19\x1d\x1a§(bSuccess, sExtraData)
    {
       this.api.ui.unloadUIComponent("WaitingMessage");
@@ -856,6 +864,7 @@ class dofus.aks.Account extends dofus.aks.Handler
          this.aks.disconnect(false,true);
       }
    }
+   
    function §\x19\x15\x0f§(bSuccess, sExtraData)
    {
       this.api.datacenter.Basics.inGame = true;
@@ -876,12 +885,12 @@ class dofus.aks.Account extends dofus.aks.Handler
          _loc5_.level = _loc4_[2];
          _loc5_.guild = _loc4_[3];
          _loc5_["\x1a\x1b\f"] = _loc4_[4];
-         _loc5_["\x18\x02\x16"] = _loc4_[5];
+         _loc5_.gfxID = _loc4_[5];
          _loc5_.color1 = _loc4_[6];
          _loc5_.color2 = _loc4_[7];
          _loc5_.color3 = _loc4_[8];
          _loc5_.items = _loc4_[9];
-         this.api.kernel["\x16\x19\t"]["\x1a\x17\x16"](_loc6_,_loc7_,_loc5_);
+         this.api.kernel.CharactersManager["\x1a\x17\x16"](_loc6_,_loc7_,_loc5_);
          this.aks.Game["\x17\x02\x04"]();
          if(this.api.datacenter.Player.isAuthorized)
          {
@@ -1160,7 +1169,7 @@ class dofus.aks.Account extends dofus.aks.Handler
       {
          if(_loc20_[_loc21_] != "")
          {
-            var _loc22_ = this.api.kernel["\x16\x19\t"]["\x17\x19\x15"](_loc20_[_loc21_]);
+            var _loc22_ = this.api.kernel.CharactersManager["\x17\x19\x15"](_loc20_[_loc21_]);
             _loc19_.push(_loc22_);
          }
          _loc21_ = _loc21_ + 1;

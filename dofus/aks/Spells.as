@@ -24,7 +24,7 @@ class dofus.aks.Spells extends dofus.aks.Handler
    {
       if(_loc2_)
       {
-         var _loc4_ = this.api.kernel["\x16\x19\t"]["\x18\x01\x05"](_loc3_);
+         var _loc4_ = this.api.kernel.CharactersManager["\x18\x01\x05"](_loc3_);
          this.api.datacenter.Player["\x1b\x16\x05"](_loc4_);
       }
       else
@@ -48,7 +48,7 @@ class dofus.aks.Spells extends dofus.aks.Handler
             var _loc9_ = _loc7_[_loc8_];
             if(_loc9_.length != 0)
             {
-               var _loc10_ = this.api.kernel["\x16\x19\t"]["\x18\x01\x05"](_loc9_);
+               var _loc10_ = this.api.kernel.CharactersManager["\x18\x01\x05"](_loc9_);
                if(_loc10_ != undefined)
                {
                   _loc5_.push(_loc10_);

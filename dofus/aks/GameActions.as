@@ -97,7 +97,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          return undefined;
       }
       var _loc4_ = this.api.datacenter.Player.data;
-      _loc4_["\x17\x13\x05"].m_bNextAction = true;
+      _loc4_.GameActionsManager.m_bNextAction = true;
       if(this.api.datacenter.Game.isFight)
       {
          var _loc5_ = _loc4_.sequencer;
@@ -115,7 +115,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
       }
       var _loc6_ = this.api.datacenter.Player.data;
       var _loc7_ = _loc6_.sequencer;
-      _loc6_["\x17\x13\x05"].m_bNextAction = false;
+      _loc6_.GameActionsManager.m_bNextAction = false;
       if(this.api.datacenter.Game.isFight)
       {
          _loc7_.addAction(32,false,this.api.kernel.GameManager,this.api.kernel.GameManager["\x1a\x16\x0b"],[ank.battlefield.Constants["\x18\x0b\r"]]);
@@ -163,9 +163,9 @@ class dofus.aks.GameActions extends dofus.aks.Handler
       {
          _loc8_ = _loc6_;
       }
-      var _loc10_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc8_);
+      var _loc10_ = this.api.datacenter.Sprites.getItemAt(_loc8_);
       var _loc11_ = _loc10_.sequencer;
-      var _loc12_ = _loc10_["\x17\x13\x05"];
+      var _loc12_ = _loc10_.GameActionsManager;
       var _loc13_ = new Object();
       _loc13_.bSequence = true;
       var _loc14_ = _loc12_["\x19\x1c\x12"](_loc4_);
@@ -190,7 +190,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             break;
          case 51:
             var _loc19_ = Number(_loc7_);
-            var _loc20_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc20_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             var _loc21_ = _loc20_["\x16\x17\x03"];
             var _loc22_ = new ank.battlefield.datacenter.["\x1b\x18\x04"]();
             _loc22_.file = dofus.Constants["\x1b\x06\x15"] + "1200.swf";
@@ -203,7 +203,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          case 52:
             var _loc23_ = _loc7_.split(",");
             var _loc24_ = _loc23_[0];
-            var _loc25_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc24_);
+            var _loc25_ = this.api.datacenter.Sprites.getItemAt(_loc24_);
             var _loc26_ = Number(_loc23_[1]);
             if(_loc25_["\x18\x05\x05"]() && !_loc25_["\x1b\x13\x0b"])
             {
@@ -217,7 +217,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          case 110:
             var _loc27_ = _loc7_.split(",");
             var _loc28_ = _loc27_[0];
-            var _loc29_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc28_);
+            var _loc29_ = this.api.datacenter.Sprites.getItemAt(_loc28_);
             var _loc30_ = Number(_loc27_[1]);
             var _loc31_ = Number(_loc27_[2]);
             var _loc32_ = dofus.Constants["\x17\x17\x06"](_loc31_);
@@ -242,7 +242,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          case 120:
          case 168:
             var _loc36_ = _loc7_.split(",");
-            var _loc37_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc36_[0]);
+            var _loc37_ = this.api.datacenter.Sprites.getItemAt(_loc36_[0]);
             var _loc38_ = Number(_loc36_[1]);
             if(_loc38_ == 0)
             {
@@ -265,7 +265,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             var _loc42_ = _loc7_.split(",");
             var _loc43_ = _loc42_[0];
             var _loc44_ = Number(_loc42_[1]);
-            var _loc45_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc43_);
+            var _loc45_ = this.api.datacenter.Sprites.getItemAt(_loc43_);
             if(_loc44_ == 0)
             {
                break;
@@ -281,7 +281,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             break;
          case 103:
             var _loc49_ = _loc7_;
-            var _loc50_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc49_);
+            var _loc50_ = this.api.datacenter.Sprites.getItemAt(_loc49_);
             var _loc51_ = _loc50_.mc;
             new org.flashdevelop.utils.FlashConnect.trace("[mort] idSprite : " + _loc49_ + "  mc :" + _loc51_,"dofus.aks.GameActions::onActions","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/GameActions.as",484);
             if(_loc51_ == undefined)
@@ -322,8 +322,8 @@ class dofus.aks.GameActions extends dofus.aks.Handler
                }
                else
                {
-                  var _loc54_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Player.ID)["\x1b\x0e\x15"];
-                  var _loc55_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_global.parseInt(_loc6_))["\x1b\x0e\x15"];
+                  var _loc54_ = this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Player.ID)["\x1b\x0e\x15"];
+                  var _loc55_ = this.api.datacenter.Sprites.getItemAt(_global.parseInt(_loc6_))["\x1b\x0e\x15"];
                   if(_loc54_ == _loc55_)
                   {
                      this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x17"]);
@@ -333,14 +333,14 @@ class dofus.aks.GameActions extends dofus.aks.Handler
                      this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x18"]);
                   }
                }
-               this.api.datacenter.Player["\x18\r\x0f"] = true;
+               this.api.datacenter.Player.isDead = true;
                this.api.ui.getUIComponent("Banner")["\x1a\x1c\x10"]["\x1a\x19\x1b"]();
                this.api.gfx.clearSpellPreview();
             }
             else if(_loc6_ == this.api.datacenter.Player.ID)
             {
-               var _loc56_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Player.ID)["\x1b\x0e\x15"];
-               var _loc57_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_global.parseInt(_loc49_))["\x1b\x0e\x15"];
+               var _loc56_ = this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Player.ID)["\x1b\x0e\x15"];
+               var _loc57_ = this.api.datacenter.Sprites.getItemAt(_global.parseInt(_loc49_))["\x1b\x0e\x15"];
                if(_loc56_ == _loc57_)
                {
                   this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x1a"]);
@@ -352,7 +352,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             }
             break;
          case 104:
-            var _loc58_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc58_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             var _loc59_ = _loc58_.mc;
             _loc11_.addAction(62,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("CANT_MOVEOUT"),"INFO_FIGHT_CHAT"]);
             if(!this.api.datacenter.Player.isSkippingFightAnimations && this.api.electron["\x18\x10\x11"])
@@ -365,14 +365,14 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             var _loc60_ = _loc7_.split(",");
             var _loc61_ = _loc60_[0];
             var _loc62_ = _loc5_ != 164 ? _loc60_[1] : _loc60_[1] + "%";
-            var _loc63_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc61_);
+            var _loc63_ = this.api.datacenter.Sprites.getItemAt(_loc61_);
             _loc11_.addAction(64,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("REDUCE_DAMAGES",[_loc63_.name,_loc62_]),"INFO_FIGHT_CHAT"]);
             break;
          case 106:
             var _loc64_ = _loc7_.split(",");
             var _loc65_ = _loc64_[0];
             var _loc66_ = _loc64_[1] == "1";
-            var _loc67_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc65_);
+            var _loc67_ = this.api.datacenter.Sprites.getItemAt(_loc65_);
             var _loc68_ = !_loc66_ ? this.api.lang.getText("RETURN_SPELL_NO",[_loc67_.name]) : this.api.lang.getText("RETURN_SPELL_OK",[_loc67_.name]);
             _loc11_.addAction(65,false,this.api.kernel,this.api.kernel.showMessage,[undefined,_loc68_,"INFO_FIGHT_CHAT"]);
             break;
@@ -380,44 +380,44 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             var _loc69_ = _loc7_.split(",");
             var _loc70_ = _loc69_[0];
             var _loc71_ = _loc69_[1];
-            var _loc72_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc70_);
+            var _loc72_ = this.api.datacenter.Sprites.getItemAt(_loc70_);
             _loc11_.addAction(66,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("RETURN_DAMAGES",[_loc72_.name,_loc71_]),"INFO_FIGHT_CHAT"]);
             break;
          case 130:
             var _loc73_ = Number(_loc7_);
-            var _loc74_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc74_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             _loc11_.addAction(67,false,this.api.kernel,this.api.kernel.showMessage,[undefined,ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("STEAL_GOLD",[_loc74_.name,_loc73_]),"m",_loc73_ < 2),"INFO_FIGHT_CHAT"]);
             break;
          case 132:
-            var _loc75_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
-            var _loc76_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc7_);
+            var _loc75_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
+            var _loc76_ = this.api.datacenter.Sprites.getItemAt(_loc7_);
             _loc11_.addAction(68,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("REMOVE_ALL_EFFECTS",[_loc75_.name,_loc76_.name]),"INFO_FIGHT_CHAT"]);
             _loc11_.addAction(69,false,_loc76_["\x16\x19\x06"],_loc76_["\x16\x19\x06"]["\x1b\x0f\r"]);
             _loc11_.addAction(70,false,_loc76_["\x17\f\t"],_loc76_["\x17\f\t"]["\x1b\x0f\r"]);
             break;
          case 140:
             var _loc77_ = Number(_loc7_);
-            var _loc78_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
-            var _loc79_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc7_);
+            var _loc78_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
+            var _loc79_ = this.api.datacenter.Sprites.getItemAt(_loc7_);
             _loc11_.addAction(71,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("A_PASS_NEXT_TURN",[_loc79_.name]),"INFO_FIGHT_CHAT"]);
             break;
          case 151:
             var _loc80_ = Number(_loc7_);
-            var _loc81_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc81_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             var _loc82_ = _loc80_ != -1 ? this.api.lang.getText("INVISIBLE_OBSTACLE",[_loc81_.name,this.api.lang["\x18\x01\x07"](_loc80_).n]) : this.api.lang.getText("CANT_DO_INVISIBLE_OBSTACLE");
             _loc11_.addAction(72,false,this.api.kernel,this.api.kernel.showMessage,[undefined,_loc82_,"ERROR_CHAT"]);
             break;
          case 166:
             var _loc83_ = _loc7_.split(",");
             var _loc84_ = Number(_loc83_[0]);
-            var _loc85_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc85_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             var _loc86_ = Number(_loc83_[1]);
             _loc11_.addAction(73,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("RETURN_AP",[_loc85_.name,_loc86_]),"INFO_FIGHT_CHAT"]);
             break;
          case 164:
             var _loc87_ = _loc7_.split(",");
             var _loc88_ = Number(_loc87_[0]);
-            var _loc89_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc89_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             var _loc90_ = Number(_loc87_[1]);
             _loc11_.addAction(74,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("REDUCE_LP_DAMAGES",[_loc89_.name,_loc90_]),"INFO_FIGHT_CHAT"]);
             break;
@@ -435,7 +435,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             _loc11_.addAction(76,false,this.aks.Game.extendIn,this.aks.Game.extendIn["\x19\x1a\x0f"],[_loc7_,true]);
             if(_loc92_ == this.api.datacenter.Player.ID)
             {
-               this.api.datacenter.Player["\x18\r\x0f"] = false;
+               this.api.datacenter.Player.isDead = false;
                this.api.ui.getUIComponent("Banner")["\x1a\x1c\x10"]["\x1a\x19\x1b"]();
             }
             break;
@@ -458,7 +458,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          case 2011:
             var _loc95_ = _loc7_.split(",");
             var _loc96_ = _loc95_[0];
-            var _loc97_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc96_);
+            var _loc97_ = this.api.datacenter.Sprites.getItemAt(_loc96_);
             var _loc98_ = _loc97_["\x17\f\t"];
             _loc98_.removeEffectsByType(2010);
          case 117:
@@ -528,7 +528,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          case 2114:
             var _loc99_ = _loc7_.split(",");
             var _loc100_ = _loc99_[0];
-            var _loc101_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc100_);
+            var _loc101_ = this.api.datacenter.Sprites.getItemAt(_loc100_);
             var _loc102_ = Number(_loc99_[1]);
             var _loc103_ = Number(_loc99_[2]);
             var _loc104_ = _loc101_["\x16\x19\x06"];
@@ -539,7 +539,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          case 149:
             var _loc106_ = _loc7_.split(",");
             var _loc107_ = _loc106_[0];
-            var _loc108_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc107_);
+            var _loc108_ = this.api.datacenter.Sprites.getItemAt(_loc107_);
             var _loc109_ = Number(_loc106_[1]);
             var _loc110_ = Number(_loc106_[2]);
             var _loc111_ = Number(_loc106_[3]);
@@ -553,7 +553,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          case 150:
             var _loc116_ = _loc7_.split(",");
             var _loc117_ = _loc116_[0];
-            var _loc118_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc117_);
+            var _loc118_ = this.api.datacenter.Sprites.getItemAt(_loc117_);
             var _loc119_ = Number(_loc116_[1]);
             var _loc120_ = Number(_loc116_[2]) == 1;
             if(_loc119_ > 0)
@@ -600,7 +600,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          case 208:
             new org.flashdevelop.utils.FlashConnect.trace("effect 208","dofus.aks.GameActions::onActions","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/GameActions.as",1001);
             var _loc129_ = _loc7_.split(",");
-            var _loc130_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc130_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             var _loc131_ = Number(_loc129_[0]);
             var _loc132_ = _loc129_[1];
             var _loc133_ = Number(_loc129_[2]);
@@ -615,7 +615,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             break;
          case 228:
             var _loc137_ = _loc7_.split(",");
-            var _loc138_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc6_);
+            var _loc138_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             var _loc139_ = Number(_loc137_[0]);
             var _loc140_ = _loc137_[1];
             var _loc141_ = Number(_loc137_[2]);

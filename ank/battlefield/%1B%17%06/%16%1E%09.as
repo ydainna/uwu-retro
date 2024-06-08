@@ -1,6 +1,6 @@
-class ank.battlefield.utils.§\x16\x1e\t§ extends ank.utils.§\x16\x1e\t§
+class ank.battlefield.utils.Compressor extends ank.utils.Compressor
 {
-   function §\x16\x1e\t§()
+   function Compressor()
    {
       super();
    }
@@ -17,7 +17,7 @@ class ank.battlefield.utils.§\x16\x1e\t§ extends ank.utils.§\x16\x1e\t§
       var _loc15_ = 0;
       while(_loc15_ < _loc12_)
       {
-         var _loc13_ = ank.battlefieldutils.["\x16\x1e\t"]["\x1b\x13\f"](_loc7_.substring(_loc15_,_loc15_ + 10),_loc9_,0);
+         var _loc13_ = ank.battlefieldutils.Compressor["\x1b\x13\f"](_loc7_.substring(_loc15_,_loc15_ + 10),_loc9_,0);
          _loc13_.num = _loc14_;
          _loc10_.push(_loc13_);
          _loc14_ = _loc14_ + 1;
@@ -55,7 +55,7 @@ class ank.battlefield.utils.§\x16\x1e\t§ extends ank.utils.§\x16\x1e\t§
       var _loc8_ = new Array();
       while(_loc7_ >= 0)
       {
-         _loc8_[_loc7_] = ank.utils.["\x16\x1e\t"]._self["\x1c\x11\x04"][_loc6_[_loc7_]];
+         _loc8_[_loc7_] = ank.utils.Compressor._self["\x1c\x11\x04"][_loc6_[_loc7_]];
          _loc7_ = _loc7_ - 1;
       }
       _loc5_["\x15\x1c\x1a"] = !((_loc8_[0] & 32) >> 5) ? false : true;
@@ -92,7 +92,7 @@ class ank.battlefield.utils.§\x16\x1e\t§ extends ank.utils.§\x16\x1e\t§
       var _loc6_ = 0;
       while(_loc6_ < _loc5_)
       {
-         _loc3_.push(ank.battlefieldutils.["\x16\x1e\t"]["\x16\x1e\x03"](_loc4_[_loc6_]));
+         _loc3_.push(ank.battlefieldutils.Compressor["\x16\x1e\x03"](_loc4_[_loc6_]));
          _loc6_ = _loc6_ + 1;
       }
       return _loc3_.join("");
@@ -125,7 +125,7 @@ class ank.battlefield.utils.§\x16\x1e\t§ extends ank.utils.§\x16\x1e\t§
       var _loc5_ = _loc4_.length - 1;
       while(_loc5_ >= 0)
       {
-         _loc4_[_loc5_] = ank.utils.["\x16\x1e\t"]["\x17\r\x07"](_loc4_[_loc5_]);
+         _loc4_[_loc5_] = ank.utils.Compressor["\x17\r\x07"](_loc4_[_loc5_]);
          _loc5_ = _loc5_ - 1;
       }
       var _loc3_ = _loc4_.join("");
@@ -134,7 +134,7 @@ class ank.battlefield.utils.§\x16\x1e\t§ extends ank.utils.§\x16\x1e\t§
    static function §\x16\x1e\n§(§\x16\x01\x1b§, §\x16\x14\x1d§)
    {
       var _loc4_ = new String();
-      var _loc5_ = ank.battlefieldutils.["\x16\x1e\t"]["\x18\x18\t"](_loc2_,_loc3_);
+      var _loc5_ = ank.battlefieldutils.Compressor["\x18\x18\t"](_loc2_,_loc3_);
       var _loc11_ = _loc5_.length;
       var _loc6_ = 0;
       while(_loc6_ < _loc11_)
@@ -143,9 +143,9 @@ class ank.battlefield.utils.§\x16\x1e\t§ extends ank.utils.§\x16\x1e\t§
          var _loc8_ = _loc7_.dir & 7;
          var _loc9_ = (_loc7_.num & 4032) >> 6;
          var _loc10_ = _loc7_.num & 63;
-         _loc4_ += ank.utils.["\x16\x1e\t"]["\x17\r\x07"](_loc8_);
-         _loc4_ += ank.utils.["\x16\x1e\t"]["\x17\r\x07"](_loc9_);
-         _loc4_ += ank.utils.["\x16\x1e\t"]["\x17\r\x07"](_loc10_);
+         _loc4_ += ank.utils.Compressor["\x17\r\x07"](_loc8_);
+         _loc4_ += ank.utils.Compressor["\x17\r\x07"](_loc9_);
+         _loc4_ += ank.utils.Compressor["\x17\r\x07"](_loc10_);
          _loc6_ = _loc6_ + 1;
       }
       return _loc4_;
@@ -183,9 +183,9 @@ class ank.battlefield.utils.§\x16\x1e\t§ extends ank.utils.§\x16\x1e\t§
       var _loc6_ = 0;
       while(_loc6_ < _loc7_)
       {
-         _loc5_[_loc6_] = ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc5_[_loc6_]);
-         _loc5_[_loc6_ + 1] = ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc5_[_loc6_ + 1]);
-         _loc5_[_loc6_ + 2] = ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc5_[_loc6_ + 2]);
+         _loc5_[_loc6_] = ank.utils.Compressor.decode64(_loc5_[_loc6_]);
+         _loc5_[_loc6_ + 1] = ank.utils.Compressor.decode64(_loc5_[_loc6_ + 1]);
+         _loc5_[_loc6_ + 2] = ank.utils.Compressor.decode64(_loc5_[_loc6_ + 2]);
          var _loc9_ = (_loc5_[_loc6_ + 1] & 15) << 6 | _loc5_[_loc6_ + 2];
          if(_loc9_ < 0)
          {
@@ -200,7 +200,7 @@ class ank.battlefield.utils.§\x16\x1e\t§ extends ank.utils.§\x16\x1e\t§
          _loc4_.push({num:_loc9_,dir:_loc5_[_loc6_]});
          _loc6_ += 3;
       }
-      return ank.battlefieldutils.["\x16\x1e\t"]["\x18\x18\b"](_loc2_,_loc4_);
+      return ank.battlefieldutils.Compressor["\x18\x18\b"](_loc2_,_loc4_);
    }
    static function §\x18\x18\b§(§\x18\x18\x15§, §\x16\x02\x18§)
    {

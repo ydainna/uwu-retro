@@ -1,7 +1,7 @@
 class dofus.§\x17\x04\x19§.Creature extends dofus.§\x17\x04\x19§.§\x1a\x05\t§
 {
    var §\x1e\f\x18§ = "appear";
-   function Creature(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, §\x18\x02\x16§)
+   function Creature(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, gfxID)
    {
       super();
       this.initialize(sID,_loc4_,_loc5_,_loc6_,_loc7_,_loc8_);

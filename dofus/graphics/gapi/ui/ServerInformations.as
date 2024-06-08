@@ -64,10 +64,10 @@ if(!dofus.graphics.gapi.ui.ServerInformations)
       this["\x1c\x1c\x1c"].text = this.api.lang.getText("POPULATION");
       this["\x1c\x15\b"].text = this.api.lang.getText("COMMUNITY");
       this["\x1c\x19\x03"].text = this.api.lang.getText("OPENING_DATE");
-      this["\x1d\x01\f"].text = this.api.lang.getText("SERVER_GAME_TYPE",[this.api.lang.getText("SERVER_GAME_TYPE_" + this["\x1e\f\x11"]["\x1b\x12\n"])]);
+      this["\x1d\x01\f"].text = this.api.lang.getText("SERVER_GAME_TYPE",[this.api.lang.getText("SERVER_GAME_TYPE_" + this["\x1e\f\x11"].typeNum)]);
       if(this["\x1e\f\x11"]["\x18\x0e\x03"]())
       {
-         this["\x1e\r\x15"].text = this.api.lang.getText("SERVER_RULES_" + this["\x1e\f\x11"]["\x1b\x12\n"]);
+         this["\x1e\r\x15"].text = this.api.lang.getText("SERVER_RULES_" + this["\x1e\f\x11"].typeNum);
          this["\x1c\x1b\x02"].text = this.api.lang.getText("SHORTCUTS_DESCRIPTION");
          this["\x1c\b\x07"] = false;
       }

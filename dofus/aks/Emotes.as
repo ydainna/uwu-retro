@@ -36,7 +36,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
       var _loc5_ = _loc4_[0];
       var _loc6_ = Number(_loc4_[1]);
       var _loc7_ = Number(_loc4_[2]);
-      if(_loc6_ != 1 && (_loc6_ != 19 && !this.api.electron["\x18\x10\x11"]) || this.api.kernel.ChatManager["\x18\f\x16"](this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc5_).name))
+      if(_loc6_ != 1 && (_loc6_ != 19 && !this.api.electron["\x18\x10\x11"]) || this.api.kernel.ChatManager["\x18\f\x16"](this.api.datacenter.Sprites.getItemAt(_loc5_).name))
       {
          return undefined;
       }

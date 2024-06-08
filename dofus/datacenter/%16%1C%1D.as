@@ -282,7 +282,7 @@ class dofus.§\x17\x04\x19§.§\x16\x1c\x1d§ extends Object
       var _loc6_ = 0;
       while(_loc6_ < _loc5_.length)
       {
-         this["\x1b\x1c\x16"].push({shape:_loc5_[_loc6_],size:ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc5_[_loc6_ + 1])});
+         this["\x1b\x1c\x16"].push({shape:_loc5_[_loc6_],size:ank.utils.Compressor.decode64(_loc5_[_loc6_ + 1])});
          _loc6_ += 2;
       }
       var _loc7_ = this.api.lang.getClassText(this.api.datacenter.Player.Guild).cc;

@@ -970,16 +970,16 @@ class ank.battlefield.§\x18\x18\x16§
       var _loc5_ = 0;
       while(_loc5_ < _loc2_.length)
       {
-         var _loc6_ = ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc2_.charAt(_loc5_)) << 6;
-         _loc6_ += ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc2_.charAt(_loc5_ + 1));
+         var _loc6_ = ank.utils.Compressor.decode64(_loc2_.charAt(_loc5_)) << 6;
+         _loc6_ += ank.utils.Compressor.decode64(_loc2_.charAt(_loc5_ + 1));
          this.api.gfx.select(_loc6_,dofus.Constants["\x1b\x0f\x03"][0],"startPosition");
          _loc5_ += 2;
       }
       var _loc7_ = 0;
       while(_loc7_ < _loc3_.length)
       {
-         var _loc8_ = ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc3_.charAt(_loc7_)) << 6;
-         _loc8_ += ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc3_.charAt(_loc7_ + 1));
+         var _loc8_ = ank.utils.Compressor.decode64(_loc3_.charAt(_loc7_)) << 6;
+         _loc8_ += ank.utils.Compressor.decode64(_loc3_.charAt(_loc7_ + 1));
          this.api.gfx.select(_loc8_,dofus.Constants["\x1b\x0f\x03"][1],"startPosition");
          _loc7_ += 2;
       }

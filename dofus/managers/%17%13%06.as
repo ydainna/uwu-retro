@@ -60,7 +60,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    }
    function §\x18\x02\x1d§()
    {
-      if(this.api.datacenter.Game["\x17\x10\x02"] == dofus.managers.GameManager["\x17\x10\x05"] || this.api.datacenter.Basics.aks_current_server["\x1b\x12\n"] != dofus.datacenter.Server["\x1a\x14\x10"])
+      if(this.api.datacenter.Game["\x17\x10\x02"] == dofus.managers.GameManager["\x17\x10\x05"] || this.api.datacenter.Basics.aks_current_server.typeNum != dofus.datacenter.Server.SERVER_HARDCORE)
       {
          this.api.kernel.showMessage(undefined,this.api.lang.getText("DO_U_GIVEUP"),"CAUTION_YESNO",{name:"GiveUp",listener:this});
       }
@@ -83,7 +83,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       if(_loc5_.isInMove)
       {
          _loc5_.isInMove = false;
-         _loc5_["\x17\x13\x05"].cancel(_loc5_.cellNum,true);
+         _loc5_.GameActionsManager.cancel(_loc5_.cellNum,true);
       }
       this.api.network.Exchange["\x1a\r\x13"](_loc2_,Number(_loc3_),_loc4_);
    }
@@ -93,13 +93,13 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       if(_loc3_.isInMove)
       {
          _loc3_.isInMove = false;
-         _loc3_["\x17\x13\x05"].cancel(_loc3_.cellNum,true);
+         _loc3_.GameActionsManager.cancel(_loc3_.cellNum,true);
       }
       this.api.network.Dialog["\x17\x02\x04"](_loc2_);
    }
    function §\x16\x05\x15§(§\x1b\b\x10§)
    {
-      var _loc3_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc2_);
+      var _loc3_ = this.api.datacenter.Sprites.getItemAt(_loc2_);
       var _loc4_ = "";
       if(!this.api.datacenter.Player.rank.enable)
       {
@@ -147,12 +147,12 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    }
    function §\x16\x06\t§(§\x1b\b\x10§)
    {
-      var _loc3_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc2_).name;
+      var _loc3_ = this.api.datacenter.Sprites.getItemAt(_loc2_).name;
       this.api.kernel.showMessage(undefined,this.api.lang.getText("DO_U_REMOVE_TAXCOLLECTOR",[_loc3_]),"CAUTION_YESNO",{name:"RemoveTaxCollector",listener:this,params:{spriteID:_loc2_}});
    }
    function §\x1b\x16\x19§(§\x18\x1b\x10§, §\x19\x04\x12§, §\x19\x0e\f§, nInstancedID)
    {
-      var _loc6_ = this.api.datacenter.Player.data["\x17\x13\x05"];
+      var _loc6_ = this.api.datacenter.Player.data.GameActionsManager;
       if(_loc6_ == undefined || _loc6_["\x18\x0f\n"](1))
       {
          return undefined;
@@ -185,10 +185,10 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    {
       if(_loc2_ != this.api.datacenter.Game["\x17\x03\x1a"])
       {
-         var _loc3_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc2_);
+         var _loc3_ = this.api.datacenter.Sprites.getItemAt(_loc2_);
          _loc3_["\x17\f\t"].nextTurn();
          _loc3_["\x16\x19\x06"].nextTurn();
-         _loc3_["\x17\x13\x05"].clear();
+         _loc3_.GameActionsManager.clear();
       }
    }
    function §\x16\x1b\x18§(§\x16\x0e\x04§)
@@ -322,15 +322,15 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          {
             return undefined;
          }
-         if(_loc6_["\x17\x01\x03"](_loc5_["\x17\x13\x05"],_loc5_["\x17\x13\x05"]["\x1b\x11\n"]))
+         if(_loc6_["\x17\x01\x03"](_loc5_.GameActionsManager,_loc5_.GameActionsManager["\x1b\x11\n"]))
          {
             return undefined;
          }
-         if(_loc5_["\x17\x13\x05"]["\x18\x10\x10"]())
+         if(_loc5_.GameActionsManager["\x18\x10\x10"]())
          {
             return undefined;
          }
-         if(_loc5_["\x17\x13\x05"].m_bNextAction)
+         if(_loc5_.GameActionsManager.m_bNextAction)
          {
             return undefined;
          }
@@ -916,7 +916,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          var _loc5_ = this.api.gfx["\x18\x01\b"](k);
          if(_loc5_ instanceof dofus.datacenter.["\x16\x19\x02"] || _loc5_ instanceof dofus.datacenter.["\x19\x02\x13"] && _loc5_["\x1a\x1d\x1c"])
          {
-            if(_loc5_["\x18\x02\x16"] != ank.battlefield.datacenter..Sprite.ANGELS_OF_THE_WORLD_SPRITE_ID)
+            if(_loc5_.gfxID != ank.battlefield.datacenter..Sprite.ANGELS_OF_THE_WORLD_SPRITE_ID)
             {
                _loc3_ = true;
                var _loc6_ = _loc5_.name + " >>";
@@ -981,7 +981,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          {
             return undefined;
          }
-         var _loc9_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+         var _loc9_ = this.api.datacenter.Sprites.getItems();
          loop0:
          for(var a in _loc9_)
          {
@@ -1130,7 +1130,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       }
       else
       {
-         this.api.kernel.ChatManager["\x16\x01\x03"](_loc2_,_loc5_["\x18\x02\x16"]);
+         this.api.kernel.ChatManager["\x16\x01\x03"](_loc2_,_loc5_.gfxID);
          this.api.kernel.showMessage(undefined,this.api.lang.getText("TEMPORARY_BLACKLISTED",[_loc2_]),"INFO_CHAT");
       }
    }
@@ -1315,7 +1315,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
                }
             }
          }
-         if(!_loc9_ && (_loc2_ != null && (_loc2_["\x18\x02\x16"] != ank.battlefield.datacenter..Sprite.ANGELS_OF_THE_WORLD_SPRITE_ID && !_loc5_)))
+         if(!_loc9_ && (_loc2_ != null && (_loc2_.gfxID != ank.battlefield.datacenter..Sprite.ANGELS_OF_THE_WORLD_SPRITE_ID && !_loc5_)))
          {
             if(this.api.datacenter.["\x18\x18\x0e"].isMyHome)
             {
@@ -1418,7 +1418,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    }
    function §\x02\x10§()
    {
-      var _loc2_ = this.api.datacenter.Basics["\x1b\x0e\x14"](this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Player.ID)["\x1b\x0e\x15"]);
+      var _loc2_ = this.api.datacenter.Basics["\x1b\x0e\x14"](this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Player.ID)["\x1b\x0e\x15"]);
       var _loc3_ = 0;
       for(var i in _loc2_)
       {

@@ -51,7 +51,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
          var _loc9_ = _loc7_[1];
          var _loc10_ = _loc7_[2];
          var _loc11_ = _loc7_[3];
-         var _loc12_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x0f"](_loc7_[4]);
+         var _loc12_ = this.api.kernel.CharactersManager["\x17\x02\x0f"](_loc7_[4]);
          var _loc13_ = _loc7_[5] == "1";
          var _loc14_ = _loc7_[6] == "1";
          var _loc15_ = this.api.kernel.HouseManager.getHouseByInstance(_loc5_,_loc8_);
@@ -148,7 +148,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
       var _loc4_ = Number(_loc3_[0]);
       var _loc5_ = Number(_loc3_[1]);
       var _loc6_ = _loc3_[2];
-      var _loc7_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x0f"](_loc3_[3]);
+      var _loc7_ = this.api.kernel.CharactersManager["\x17\x02\x0f"](_loc3_[3]);
       var _loc8_ = Number(_loc3_[4]);
       var _loc9_ = !_global.isNaN(_loc8_);
       var _loc10_ = this.api.kernel.HouseManager.getHouseByInstance(_loc4_,_loc5_);

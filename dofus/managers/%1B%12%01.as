@@ -204,7 +204,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
                   break;
                case "GFX_MOVE_SPRITE":
                   var _loc14_ = this["\x18\x01\t"](_loc2_.params[0]);
-                  var _loc15_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc14_);
+                  var _loc15_ = this.api.datacenter.Sprites.getItemAt(_loc14_);
                   var _loc16_ = ank.battlefieldutils.["\x1a\x04\b"]["\x1a\x04\x07"](this.api,this.api.gfx["\x18\x18\x15"],_loc15_.cellNum,_loc2_.params[1],{bAllDirections:false,bIgnoreSprites:true,bCellNumOnly:true,bWithBeginCellNum:true});
                   if(_loc16_ != null)
                   {
@@ -241,7 +241,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
                   break;
                case "GFX_SPRITE_EXEC_FUNCTION":
                   var _loc23_ = this["\x18\x01\t"](_loc2_.params[0]);
-                  var _loc24_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc23_);
+                  var _loc24_ = this.api.datacenter.Sprites.getItemAt(_loc23_);
                   var _loc25_ = _loc24_[_loc2_.params[1]];
                   if(typeof _loc25_ != "function")
                   {
@@ -252,7 +252,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
                   break;
                case "GFX_SPRITE_SET_PROPERTY":
                   var _loc26_ = this["\x18\x01\t"](_loc2_.params[0]);
-                  var _loc27_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc26_);
+                  var _loc27_ = this.api.datacenter.Sprites.getItemAt(_loc26_);
                   this["\x1e\x05\n"].addAction(148,false,this,this["\x1a\x18\x11"],[_loc27_,_loc2_.params[1],_loc2_.params[2]]);
                   break;
                case "GFX_DRAW_ZONE":

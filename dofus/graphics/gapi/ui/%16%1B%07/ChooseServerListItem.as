@@ -86,7 +86,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x1b\x07§.ChooseServerListItem exten
          }
          this["\x1c\x1c\x1c"].text = _loc4_["\x1a\x06\x11"];
          this["\x1d\x03\x18"].text = _loc4_.type;
-         if(_loc4_["\x1b\x12\n"] == dofus.datacenter.Server["\x1a\x14\x10"])
+         if(_loc4_.typeNum == dofus.datacenter.Server.SERVER_HARDCORE)
          {
             this["\x1c\x1b\x0f"].styleName = "RedLeftSmallLabel";
             this["\x1d\x03\x18"].styleName = "RedCenterSmallLabel";

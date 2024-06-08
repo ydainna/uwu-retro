@@ -199,7 +199,7 @@ class dofus.aks.Party extends dofus.aks.Handler
                _loc20_.prospection = _loc18_;
                _loc20_.side = _loc19_;
                _loc20_["\x18\x02\x15"] = _loc10_;
-               this.api.kernel["\x16\x19\t"]["\x1a\x1a\x01"](_loc20_,_loc14_);
+               this.api.kernel.CharactersManager["\x1a\x1a\x01"](_loc20_,_loc14_);
                _loc4_["\x15\x1d\x1d"](_loc20_);
                break;
             case "-":
@@ -230,7 +230,7 @@ class dofus.aks.Party extends dofus.aks.Handler
                _loc32_.prospection = _loc30_;
                _loc32_.side = _loc31_;
                _loc32_["\x18\x02\x15"] = _loc22_;
-               this.api.kernel["\x16\x19\t"]["\x1a\x1a\x01"](_loc32_,_loc26_);
+               this.api.kernel.CharactersManager["\x1a\x1a\x01"](_loc32_,_loc26_);
                _loc4_["\x1b\x14\x14"](_loc32_);
          }
          _loc6_ = _loc6_ + 1;

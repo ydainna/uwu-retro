@@ -193,22 +193,22 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Account.onLogin(!_loc4_,_loc5_.substr(3));
                   break;
                case "L":
-                  this.aks.Account.["\x19\x15\x10"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.onCharactersList(!_loc4_,_loc5_.substr(3));
                   break;
                case "x":
                   this.aks.Account.onServersList(!_loc4_,_loc5_.substr(3));
                   break;
                case "A":
-                  this.aks.Account.["\x19\x15\n"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.onCharacterAdd(!_loc4_,_loc5_.substr(3));
                   break;
                case "T":
                   this.aks.Account.["\x19\x1d\x1a"](!_loc4_,_loc5_.substr(3));
                   break;
                case "X":
-                  this.aks.Account.["\x19\x1c\x0e"](!_loc4_,true,_loc5_.substr(3));
+                  this.aks.Account.onSelectServer(!_loc4_,true,_loc5_.substr(3));
                   break;
                case "Y":
-                  this.aks.Account.["\x19\x1c\x0e"](!_loc4_,false,_loc5_.substr(3));
+                  this.aks.Account.onSelectServer(!_loc4_,false,_loc5_.substr(3));
                   break;
                case "Z":
                   this.aks.Account.["\x19\x1c\x0f"](_loc5_.substr(3));
@@ -226,10 +226,10 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Account.["\x19\x1c\b"](_loc5_.substr(2));
                   break;
                case "H":
-                  this.aks.Account.["\x19\x18\x0f"](_loc5_.substr(2));
+                  this.aks.Account.onHosts(_loc5_.substr(2));
                   break;
                case "r":
-                  this.aks.Account.["\x19\x1c\x07"](!_loc4_);
+                  this.aks.Account.onRescue(!_loc4_);
                   break;
                case "g":
                   this.aks.Account.["\x19\x18\x07"](_loc5_.substr(2));
@@ -261,7 +261,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                case "M":
                   if((_loc0_ = _loc5_.charAt(2)) !== "?")
                   {
-                     this.aks.Account.["\x19\x15\x10"](!_loc4_,_loc5_.substr(3),true);
+                     this.aks.Account.onCharactersList(!_loc4_,_loc5_.substr(3),true);
                   }
                   else
                   {
@@ -274,7 +274,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                case "m":
                   if(!_global.CONFIG.isStreaming)
                   {
-                     this.aks.Account.["\x19\x1a\t"]();
+                     this.aks.Account.onMiniClipInfo();
                      break;
                   }
                   var _loc10_ = _global.parseInt(_loc5_.charAt(2),10);

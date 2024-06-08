@@ -8,7 +8,7 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
    static var §\x1a\x14\x16§ = 2;
    static var SERVER_RULES_TEMPORIS = 3;
    static var §\x1a\x14\x0e§ = 0;
-   static var §\x1a\x14\x10§ = 1;
+   static var SERVER_HARDCORE = 1;
    static var §\x1a\x14\r§ = 3;
    static var §\x1a\x14\x13§ = 4;
    static var §\x1a\x14\x12§ = 5;
@@ -85,19 +85,19 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
    }
    function §\x01\x15§()
    {
-      return this.api.lang["\x17\x1e\f"](this["\x1d\x17\x01"]).n;
+      return this.api.lang.getServerInfos(this["\x1d\x17\x01"]).n;
    }
    function §\x1e\x18\r§()
    {
-      return this.api.lang["\x17\x1e\f"](this["\x1d\x17\x01"]).d;
+      return this.api.lang.getServerInfos(this["\x1d\x17\x01"]).d;
    }
    function §\x01\x1b§()
    {
-      return this.api.lang["\x17\x1e\f"](this["\x1d\x17\x01"]).l;
+      return this.api.lang.getServerInfos(this["\x1d\x17\x01"]).l;
    }
    function §\x06\x11§()
    {
-      return Number(this.api.lang["\x17\x1e\f"](this["\x1d\x17\x01"]).p);
+      return Number(this.api.lang.getServerInfos(this["\x1d\x17\x01"]).p);
    }
    function §\x06\x12§()
    {
@@ -105,7 +105,7 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
    }
    function §\x1e\x16\x0b§()
    {
-      return Number(this.api.lang["\x17\x1e\f"](this["\x1d\x17\x01"]).c);
+      return Number(this.api.lang.getServerInfos(this["\x1d\x17\x01"]).c);
    }
    function §\x1e\x16\f§()
    {
@@ -113,29 +113,29 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
    }
    function §\x1e\x18\x05§()
    {
-      var _loc2_ = new Date(Number(this.api.lang["\x17\x1e\f"](this["\x1d\x17\x01"]).date));
+      var _loc2_ = new Date(Number(this.api.lang.getServerInfos(this["\x1d\x17\x01"]).date));
       return _loc2_;
    }
    function §\x1e\x18\x06§()
    {
-      var _loc2_ = new Date(Number(this.api.lang["\x17\x1e\f"](this["\x1d\x17\x01"]).date));
+      var _loc2_ = new Date(Number(this.api.lang.getServerInfos(this["\x1d\x17\x01"]).date));
       return eval("\x1a\x01\x1a")utils.["\x1b\x01\x19"]["\x17\x12\r"](_loc2_,this.api.lang.getConfigText("LONG_DATE_FORMAT"),this.api.config.language);
    }
    function §\f\r§()
    {
-      return this.api.lang.getText("SERVER_GAME_TYPE_" + this["\x1b\x12\n"]);
+      return this.api.lang.getText("SERVER_GAME_TYPE_" + this.typeNum);
    }
    function §\f\x0e§()
    {
       if(this._nCachedTypeNum == undefined)
       {
-         this._nCachedTypeNum = this.api.lang["\x17\x1e\f"](this["\x1d\x17\x01"]).t;
+         this._nCachedTypeNum = this.api.lang.getServerInfos(this["\x1d\x17\x01"]).t;
       }
       return this._nCachedTypeNum;
    }
    function §\x17\x1e\x05§()
    {
-      var _loc2_ = this["\x1b\x12\n"];
+      var _loc2_ = this.typeNum;
       switch(_loc2_)
       {
          case dofus.datacenter.Server.SERVER_TEMPORIS:
@@ -153,11 +153,11 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
    }
    function §\x18\x0e\x03§()
    {
-      return this["\x1b\x12\n"] == dofus.datacenter.Server["\x1a\x14\x10"];
+      return this.typeNum == dofus.datacenter.Server.SERVER_HARDCORE;
    }
    function isTemporis()
    {
-      return this["\x1b\x12\n"] == dofus.datacenter.Server.SERVER_TEMPORIS;
+      return this.typeNum == dofus.datacenter.Server.SERVER_TEMPORIS;
    }
    function initialize(§\x19\b\x0b§, §\x19\x0e\x1d§, §\x19\x05\x0b§, §\x16\t\x1b§)
    {
@@ -174,7 +174,7 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
       {
          return true;
       }
-      var _loc2_ = this.api.lang["\x17\x1e\f"](this["\x1d\x17\x01"]).rlng;
+      var _loc2_ = this.api.lang.getServerInfos(this["\x1d\x17\x01"]).rlng;
       if(_loc2_ == undefined || (_loc2_.length == undefined || (_loc2_.length == 0 || this.api.config["\x1b\x02\x0e"])))
       {
          return true;
@@ -192,7 +192,7 @@ class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
    }
    function §\x18\x0e\x1d§()
    {
-      if(this["\x1b\x12\n"] != dofus.datacenter.Server["\x1a\x14\x12"] && this["\x1b\x12\n"] != dofus.datacenter.Server.SERVER_TEMPORIS)
+      if(this.typeNum != dofus.datacenter.Server["\x1a\x14\x12"] && this.typeNum != dofus.datacenter.Server.SERVER_TEMPORIS)
       {
          return false;
       }

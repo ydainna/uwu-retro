@@ -668,7 +668,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
       var _loc12_ = 0;
       while(_loc12_ < _loc11_.length)
       {
-         this["\x1b\x1c\x16"].push({shape:_loc11_[_loc12_],size:ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc11_[_loc12_ + 1])});
+         this["\x1b\x1c\x16"].push({shape:_loc11_[_loc12_],size:ank.utils.Compressor.decode64(_loc11_[_loc12_ + 1])});
          _loc12_ += 2;
       }
       this._itemLevel = this.level;

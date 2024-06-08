@@ -82,7 +82,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Timeline extends dofus.§\x18
       var _loc4_ = 0;
       while(_loc4_ < this["\x1c\x01\f"].length)
       {
-         _loc3_.push(_loc2_["\x1b\x07\x0e"].getItemAt(this["\x1c\x01\f"][_loc4_]));
+         _loc3_.push(_loc2_Sprites.getItemAt(this["\x1c\x01\f"][_loc4_]));
          _loc4_ = _loc4_ + 1;
       }
       var _loc5_ = _loc3_.length;
@@ -127,7 +127,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Timeline extends dofus.§\x18
       var _loc5_ = 0;
       while(_loc5_ < _loc2_.length)
       {
-         var _loc6_ = _loc3_["\x1b\x07\x0e"].getItemAt(_loc2_[_loc5_]);
+         var _loc6_ = _loc3_Sprites.getItemAt(_loc2_[_loc5_]);
          if(_loc6_ != undefined)
          {
             _loc4_.push(_loc6_);

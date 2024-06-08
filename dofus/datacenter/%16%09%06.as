@@ -54,12 +54,12 @@ class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.ApiElement
    function §\x1b\x0e\x14§(§\x19\x0f\x13§)
    {
       var _loc3_ = new ank.utils.ExtendedArray();
-      var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+      var _loc4_ = this.api.datacenter.Sprites.getItems();
       for(var i in _loc4_)
       {
-         if(this.api.datacenter.["\x1b\x07\x0e"].getItemAt(i)["\x1b\x0e\x15"] == _loc2_)
+         if(this.api.datacenter.Sprites.getItemAt(i)["\x1b\x0e\x15"] == _loc2_)
          {
-            _loc3_.push(this.api.datacenter.["\x1b\x07\x0e"].getItemAt(i));
+            _loc3_.push(this.api.datacenter.Sprites.getItemAt(i));
          }
       }
       return _loc3_;

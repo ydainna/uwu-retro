@@ -1,7 +1,7 @@
 class dofus.§\x17\x04\x19§.§\x19\x12\x19§ extends ank.battlefield.§\x17\x04\x19§.§\x1b\x07\x04§
 {
    var §\x1b\x1a\x10§ = {staticL:true,staticF:true,staticR:true};
-   function §\x19\x12\x19§(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, §\x18\x02\x16§)
+   function §\x19\x12\x19§(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, gfxID)
    {
       super();
       if(this.__proto__ == dofus.datacenter.["\x19\x12\x19"].prototype)
@@ -35,7 +35,7 @@ class dofus.§\x17\x04\x19§.§\x19\x12\x19§ extends ank.battlefield.§\x17\x04
       this["\x1c\x11\x02"] = _loc2_;
       return this["\x1e\x1b\x05"]();
    }
-   function initialize(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, §\x18\x02\x16§)
+   function initialize(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, gfxID)
    {
       super.initialize(sID,_loc4_,_loc5_,_loc6_,_loc7_);
       this["\x1c\x11\x02"] = _loc8_;

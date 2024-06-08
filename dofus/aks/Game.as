@@ -207,8 +207,8 @@ class dofus.aks.Game extends dofus.aks.Handler
       var _loc7_ = 0;
       while(_loc7_ < _loc4_.length)
       {
-         var _loc8_ = ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc4_.charAt(_loc7_)) << 6;
-         _loc8_ += ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc4_.charAt(_loc7_ + 1));
+         var _loc8_ = ank.utils.Compressor.decode64(_loc4_.charAt(_loc7_)) << 6;
+         _loc8_ += ank.utils.Compressor.decode64(_loc4_.charAt(_loc7_ + 1));
          this.api.datacenter.Basics["\x16\x02\x14"].push(_loc8_);
          if(_loc6_ == 0)
          {
@@ -219,8 +219,8 @@ class dofus.aks.Game extends dofus.aks.Handler
       var _loc9_ = 0;
       while(_loc9_ < _loc5_.length)
       {
-         var _loc10_ = ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc5_.charAt(_loc9_)) << 6;
-         _loc10_ += ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc5_.charAt(_loc9_ + 1));
+         var _loc10_ = ank.utils.Compressor.decode64(_loc5_.charAt(_loc9_)) << 6;
+         _loc10_ += ank.utils.Compressor.decode64(_loc5_.charAt(_loc9_ + 1));
          this.api.datacenter.Basics["\x16\x02\x15"].push(_loc10_);
          if(_loc6_ == 1)
          {
@@ -302,7 +302,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.gfx["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\n"]);
       this.api.kernel.GameManager["\x1b\x01\x18"]();
       this.api.datacenter.Game.isRunning = true;
-      var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+      var _loc4_ = this.api.datacenter.Sprites.getItems();
       for(var k in _loc4_)
       {
          this.api.gfx["\x15\x1e\x11"](k,dofus.Constants["\x16\x1b\r"],dofus.Constants["\x1b\x0f\x03"][_loc4_[k]["\x1b\x0e\x15"]]);
@@ -329,8 +329,8 @@ class dofus.aks.Game extends dofus.aks.Handler
       var _loc7_ = Number(_loc4_[2]);
       var _loc8_ = _loc4_.length > 3 && _loc4_[3] == "1";
       this.api.datacenter.Game.currentTableTurn = _loc7_;
-      var _loc9_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc5_);
-      _loc9_["\x17\x13\x05"].clear();
+      var _loc9_ = this.api.datacenter.Sprites.getItemAt(_loc5_);
+      _loc9_.GameActionsManager.clear();
       this.api.gfx["\x1b\x13\x18"](true);
       this.api.datacenter.Game["\x17\x03\x1a"] = _loc5_;
       this.api.kernel.GameManager["\x16\x1b\x15"](this.api.datacenter.Game["\x18\x12\x19"]);
@@ -387,7 +387,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    function §\x19\x1e\x05§(sExtraData)
    {
       var _loc3_ = _loc2_;
-      var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc3_);
+      var _loc4_ = this.api.datacenter.Sprites.getItemAt(_loc3_);
       if(this.api.datacenter.Player.isCurrentPlayer)
       {
          this.api.gfx["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\n"]);
@@ -430,7 +430,7 @@ class dofus.aks.Game extends dofus.aks.Handler
             var _loc13_ = Number(_loc6_[6]);
             var _loc14_ = Number(_loc6_[7]);
             _loc4_[_loc7_] = true;
-            var _loc15_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc7_);
+            var _loc15_ = this.api.datacenter.Sprites.getItemAt(_loc7_);
             if(_loc15_ != undefined)
             {
                var _loc16_ = _loc15_.sequencer;
@@ -469,13 +469,13 @@ class dofus.aks.Game extends dofus.aks.Handler
             }
          }
       }
-      var _loc17_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+      var _loc17_ = this.api.datacenter.Sprites.getItems();
       for(var k in _loc17_)
       {
          if(!_loc4_[k])
          {
             _loc17_[k].mc.clear();
-            this.api.datacenter.["\x1b\x07\x0e"]["\x1a\f\n"](k);
+            this.api.datacenter.Sprites["\x1a\f\n"](k);
          }
       }
       this.api.ui.getUIComponent("Timeline")["\x1b\x10\x03"]["\x1b\x14\f"]();
@@ -497,7 +497,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    function §\x19\x1e\b§(sExtraData)
    {
       var _loc3_ = _loc2_;
-      var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc3_);
+      var _loc4_ = this.api.datacenter.Sprites.getItemAt(_loc3_);
       if(_loc4_ != undefined)
       {
          var _loc5_ = _loc4_.sequencer;
@@ -666,7 +666,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
       var _loc5_ = Number(_loc3_[1]);
-      var _loc6_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc4_);
+      var _loc6_ = this.api.datacenter.Sprites.getItemAt(_loc4_);
       var _loc7_ = new ank.battlefield.datacenter.["\x1b\x18\x04"]();
       _loc7_.file = dofus.Constants["\x16\x1c\x19"] + "flag.swf";
       _loc7_.bInFrontOfSprite = true;

@@ -1,7 +1,7 @@
 class dofus.§\x17\x04\x19§.§\x1a\x05\t§ extends ank.battlefield.§\x17\x04\x19§.§\x1b\x07\x04§
 {
    var §\x1e\r\x0b§ = false;
-   function §\x1a\x05\t§(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, §\x18\x02\x16§)
+   function §\x1a\x05\t§(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, gfxID)
    {
       super();
       if(this.__proto__ == dofus.datacenter.["\x1a\x05\t"].prototype)
@@ -9,12 +9,12 @@ class dofus.§\x17\x04\x19§.§\x1a\x05\t§ extends ank.battlefield.§\x17\x04\x
          this.initialize(sID,_loc4_,_loc5_,_loc6_,_loc7_,_loc8_);
       }
    }
-   function initialize(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, §\x18\x02\x16§)
+   function initialize(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, gfxID)
    {
       super.initialize(sID,_loc4_,_loc5_,_loc6_,_loc7_);
       this.api = _global.api;
       this["\x1c\x11\x02"] = _loc8_;
-      this["\x17\x13\x05"] = new dofus.managers["\x17\x13\x05"](this,this.api);
+      this.GameActionsManager = new dofus.managers.GameActionsManager(this,this.api);
       this["\x16\x19\x06"] = new dofus.managers["\x16\x19\x06"](this,this.api);
       this["\x17\f\t"] = new dofus.managers["\x17\f\t"](this,this.api);
       if(sID == this.api.datacenter.Player.ID)

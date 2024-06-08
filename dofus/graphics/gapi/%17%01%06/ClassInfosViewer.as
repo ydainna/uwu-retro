@@ -52,7 +52,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ClassInfosViewer extends dofu
    }
    function §\x1b\x01\x02§(§\x19\x0e\x17§)
    {
-      var _loc3_ = this.api.kernel["\x16\x19\t"]["\x18\x01\x05"](_loc2_ + "~1~");
+      var _loc3_ = this.api.kernel.CharactersManager["\x18\x01\x05"](_loc2_ + "~1~");
       if(_loc3_.name == undefined)
       {
          this["\x1d\x01\x1d"].text = "";

@@ -156,7 +156,7 @@ if(!dofus.aks.Items)
          }
          _loc7_ = _loc7_ + 1;
       }
-      var _loc13_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc4_);
+      var _loc13_ = this.api.datacenter.Sprites.getItemAt(_loc4_);
       _loc13_.accessories = _loc6_;
       this.api.gfx["\x1a\x16\x17"](_loc4_,"static");
       if(_loc4_ == this.api.datacenter.Player.ID)
@@ -214,7 +214,7 @@ if(!dofus.aks.Items)
                   var _loc9_ = 0;
                   while(_loc9_ < _loc8_.length)
                   {
-                     var _loc10_ = this.api.kernel["\x16\x19\t"]["\x17\x19\x15"](_loc8_[_loc9_]);
+                     var _loc10_ = this.api.kernel.CharactersManager["\x17\x19\x15"](_loc8_[_loc9_]);
                      if(this.api.datacenter.Basics.aks_exchange_echangeType == 0)
                      {
                         var _loc11_ = this.api.datacenter.["\x1b\x0f\b"]["\x1a\x1c\x0e"]["\x18\f\n"];
@@ -258,7 +258,7 @@ if(!dofus.aks.Items)
          var _loc7_ = 0;
          while(_loc7_ < _loc6_.length)
          {
-            var _loc8_ = this.api.kernel["\x16\x19\t"]["\x17\x19\x15"](_loc6_[_loc7_]);
+            var _loc8_ = this.api.kernel.CharactersManager["\x17\x19\x15"](_loc6_[_loc7_]);
             if(_loc8_ != undefined)
             {
                this.api.datacenter.Player["\x1b\x15\x05"](_loc8_);

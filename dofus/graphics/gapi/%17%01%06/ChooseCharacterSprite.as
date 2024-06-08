@@ -191,7 +191,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseCharacterSprite extends
          this._mcUnknown._visible = true;
          this.selected = false;
       }
-      this["\x18\r\x0f"] = this["\x1c\x11\x0b"];
+      this.isDead = this["\x1c\x11\x0b"];
    }
    function §\x1b\x14\x14§()
    {
@@ -395,7 +395,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseCharacterSprite extends
    }
    function §\x18\n\x1b§()
    {
-      if(this["\x18\r\x0f"])
+      if(this.isDead)
       {
          return undefined;
       }
@@ -404,7 +404,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseCharacterSprite extends
    }
    function §\x18\n\x19§()
    {
-      if(this["\x18\r\x0f"])
+      if(this.isDead)
       {
          return undefined;
       }

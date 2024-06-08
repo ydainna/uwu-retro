@@ -54,7 +54,7 @@ if(!dofus.managers["\x16\x01\r"])
       {
          return false;
       }
-      var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+      var _loc5_ = this.api.datacenter.Sprites.getItems();
       var _loc6_ = false;
       for(var a in _loc5_)
       {
@@ -222,7 +222,7 @@ if(!dofus.managers["\x16\x01\r"])
       this["\x1c\x07\x15"] = _loc3_;
       Selection.setFocus(null);
       this._aPendingModReportAppendCommands = new Array();
-      var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
+      var _loc4_ = this.api.datacenter.Sprites.getItems();
       var _loc5_ = false;
       loop0:
       for(var a in _loc4_)
@@ -761,11 +761,11 @@ if(!dofus.managers["\x16\x01\r"])
       this.api.datacenter.Player["\x18\x0b\b"]["\x16\x15\b"](this.api.gfx["\x18\x18\x15"],_loc2_,true,this.api.datacenter.Game.isFight,true,_loc3_);
       if(this.api.datacenter.Basics.interactionsManager_path.length != 0)
       {
-         var _loc4_ = ank.battlefieldutils.["\x16\x1e\t"]["\x16\x1e\n"](this.api.datacenter.Basics.interactionsManager_path);
+         var _loc4_ = ank.battlefieldutils.Compressor["\x16\x1e\n"](this.api.datacenter.Basics.interactionsManager_path);
          if(_loc4_ != undefined)
          {
-            this["\x19\x02\x1c"]["\x17\x13\x05"].clear();
-            this["\x19\x02\x1c"]["\x17\x13\x05"]["\x1b\x11\n"](1,[_loc4_]);
+            this["\x19\x02\x1c"].GameActionsManager.clear();
+            this["\x19\x02\x1c"].GameActionsManager["\x1b\x11\n"](1,[_loc4_]);
             delete this.api.datacenter.Basics.interactionsManager_path;
          }
       }

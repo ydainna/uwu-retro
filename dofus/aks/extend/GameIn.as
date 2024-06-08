@@ -85,7 +85,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                }
                if(_loc7_)
                {
-                  var _loc31_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc14_);
+                  var _loc31_ = this.api.datacenter.Sprites.getItemAt(_loc14_);
                   this["\x19\x1d\x04"](false,_loc31_);
                }
                loop3:
@@ -95,7 +95,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                   case "-2":
                      var _loc33_ = new Object();
                      _loc33_.spriteType = _loc23_;
-                     _loc33_["\x18\x02\x16"] = _loc21_;
+                     _loc33_.gfxID = _loc21_;
                      _loc33_.scaleX = _loc27_;
                      _loc33_.scaleY = _loc28_;
                      _loc33_["\x19\x0b\x04"] = _loc18_;
@@ -126,11 +126,11 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      }
                      if(_loc23_ == -1)
                      {
-                        _loc31_ = this.api.kernel["\x16\x19\t"]["\x17\x02\r"](_loc14_,_loc15_,_loc33_);
+                        _loc31_ = this.api.kernel.CharactersManager["\x17\x02\r"](_loc14_,_loc15_,_loc33_);
                      }
                      else
                      {
-                        _loc31_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x12"](_loc14_,_loc15_,_loc33_);
+                        _loc31_ = this.api.kernel.CharactersManager["\x17\x02\x12"](_loc14_,_loc15_,_loc33_);
                      }
                      break;
                   case "-3":
@@ -151,7 +151,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      var _loc36_ = this["\x1b\x03\x06"](_loc17_);
                      var _loc37_ = _loc36_.gfx;
                      this["\x1b\x06\x1c"](_loc37_[0],_loc34_);
-                     _loc31_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x13"](_loc14_,_loc15_,_loc34_);
+                     _loc31_ = this.api.kernel.CharactersManager["\x17\x02\x13"](_loc14_,_loc15_,_loc34_);
                      if(this.api.kernel.OptionsManager.getOption("ViewAllMonsterInGroup") == true)
                      {
                         var _loc38_ = _loc14_;
@@ -168,7 +168,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                               _loc34_.dir = random(4) * 2 + 1;
                               _loc34_.accessories = _loc10_[9 + 2 * _loc39_];
                               var _loc40_ = _loc14_ + "_" + _loc39_;
-                              var _loc41_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x13"](_loc40_,undefined,_loc34_);
+                              var _loc41_ = this.api.kernel.CharactersManager["\x17\x02\x13"](_loc40_,undefined,_loc34_);
                               var _loc42_ = _loc38_;
                               if(random(3) != 0 && _loc39_ != 1)
                               {
@@ -197,7 +197,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                   case "-4":
                      var _loc44_ = new Object();
                      _loc44_.spriteType = _loc23_;
-                     _loc44_["\x18\x02\x16"] = _loc21_;
+                     _loc44_.gfxID = _loc21_;
                      _loc44_.scaleX = _loc27_;
                      _loc44_.scaleY = _loc28_;
                      _loc44_.cell = _loc11_;
@@ -209,12 +209,12 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc44_.accessories = _loc10_[11];
                      _loc44_["\x17\x0e\x14"] = !(_loc10_[12] != undefined && !_global.isNaN(Number(_loc10_[12]))) ? -1 : Number(_loc10_[12]);
                      _loc44_.customArtwork = Number(_loc10_[13]);
-                     _loc31_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x16"](_loc14_,Number(_loc15_),_loc44_);
+                     _loc31_ = this.api.kernel.CharactersManager["\x17\x02\x16"](_loc14_,Number(_loc15_),_loc44_);
                      break;
                   case "-5":
                      var _loc45_ = new Object();
                      _loc45_.spriteType = _loc23_;
-                     _loc45_["\x18\x02\x16"] = _loc21_;
+                     _loc45_.gfxID = _loc21_;
                      _loc45_.scaleX = _loc27_;
                      _loc45_.scaleY = _loc28_;
                      _loc45_.cell = _loc11_;
@@ -227,12 +227,12 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc45_["\x17\f\x14"] = _loc10_[12];
                      _loc45_["\x19\x12\x1c"] = _loc10_[13];
                      _loc45_.characterID = _loc10_[14];
-                     _loc31_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x17"](_loc14_,_loc15_,_loc45_);
+                     _loc31_ = this.api.kernel.CharactersManager["\x17\x02\x17"](_loc14_,_loc15_,_loc45_);
                      break;
                   case "-6":
                      var _loc46_ = new Object();
                      _loc46_.spriteType = _loc23_;
-                     _loc46_["\x18\x02\x16"] = _loc21_;
+                     _loc46_.gfxID = _loc21_;
                      _loc46_.scaleX = _loc27_;
                      _loc46_.scaleY = _loc28_;
                      _loc46_.cell = _loc11_;
@@ -253,13 +253,13 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                         _loc46_["\x17\f\x14"] = _loc10_[9];
                         _loc46_["\x18\x0e\x1c"] = !!Number(_loc10_[10]);
                      }
-                     _loc31_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x1c"](_loc14_,_loc15_,_loc46_);
+                     _loc31_ = this.api.kernel.CharactersManager["\x17\x02\x1c"](_loc14_,_loc15_,_loc46_);
                      break;
                   case "-7":
                   case "-8":
                      var _loc47_ = new Object();
                      _loc47_.spriteType = _loc23_;
-                     _loc47_["\x18\x02\x16"] = _loc21_;
+                     _loc47_.gfxID = _loc21_;
                      _loc47_.scaleX = _loc27_;
                      _loc47_.scaleY = _loc28_;
                      _loc47_.cell = _loc11_;
@@ -294,12 +294,12 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                         _loc47_["\x1a\x1d\x1c"] = false;
                         _loc47_["\x18\x1d\x1a"] = _loc15_;
                      }
-                     _loc31_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x15"](_loc14_,_loc47_);
+                     _loc31_ = this.api.kernel.CharactersManager["\x17\x02\x15"](_loc14_,_loc47_);
                      break;
                   case "-9":
                      var _loc49_ = new Object();
                      _loc49_.spriteType = _loc23_;
-                     _loc49_["\x18\x02\x16"] = _loc21_;
+                     _loc49_.gfxID = _loc21_;
                      _loc49_.scaleX = _loc27_;
                      _loc49_.scaleY = _loc28_;
                      _loc49_.cell = _loc11_;
@@ -307,19 +307,19 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc49_["\x1a\x03\x06"] = _loc10_[7];
                      _loc49_.level = _loc10_[8];
                      _loc49_.modelID = _loc10_[9];
-                     _loc31_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x18"](_loc14_,_loc15_ == "" ? this.api.lang.getText("NO_NAME") : _loc15_,_loc49_);
+                     _loc31_ = this.api.kernel.CharactersManager["\x17\x02\x18"](_loc14_,_loc15_ == "" ? this.api.lang.getText("NO_NAME") : _loc15_,_loc49_);
                      break;
                   case "-10":
                      var _loc50_ = new Object();
                      _loc50_.spriteType = _loc23_;
-                     _loc50_["\x18\x02\x16"] = _loc21_;
+                     _loc50_.gfxID = _loc21_;
                      _loc50_.scaleX = _loc27_;
                      _loc50_.scaleY = _loc28_;
                      _loc50_.cell = _loc11_;
                      _loc50_.dir = _loc12_;
                      _loc50_.level = _loc10_[7];
                      _loc50_.alignment = new dofus.datacenter.["\x16\x02\x1b"](Number(_loc10_[9]),Number(_loc10_[8]));
-                     _loc31_ = this.api.kernel["\x16\x19\t"]["\x17\x02\x1b"](_loc14_,_loc15_,_loc50_);
+                     _loc31_ = this.api.kernel.CharactersManager["\x17\x02\x1b"](_loc14_,_loc15_,_loc50_);
                      break;
                   default:
                      var _loc52_ = new Object();
@@ -490,7 +490,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      var _loc75_ = _loc74_.gfx;
                      this["\x1b\x06\x1c"](_loc75_[0],_loc52_);
                      _loc52_.title = _loc25_;
-                     _loc31_ = this.api.kernel["\x16\x19\t"].createCharacter(_loc14_,_loc15_,_loc52_);
+                     _loc31_ = this.api.kernel.CharactersManager.createCharacter(_loc14_,_loc15_,_loc52_);
                      dofus.datacenter.["\x16\x19\x02"](_loc31_)["\x18\r\x04"] = false;
                      _loc31_["\x16\x03\x06"] = _loc19_;
                      var _loc76_ = _loc14_;
@@ -507,7 +507,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                            var _loc79_ = _loc14_ + "_" + _loc78_;
                            var _loc80_ = new Object();
                            this["\x1b\x06\x1c"](_loc75_[_loc78_],_loc80_);
-                           var _loc81_ = new ank.battlefield.datacenter..Sprite(_loc79_,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc80_["\x18\x02\x16"] + ".swf");
+                           var _loc81_ = new ank.battlefield.datacenter..Sprite(_loc79_,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc80_.gfxID + ".swf");
                            _loc81_.allDirections = false;
                            this.api.gfx["\x15\x1d\x19"](_loc79_,_loc76_,_loc77_,_loc81_);
                            if(!_global.isNaN(_loc80_.scaleX))
@@ -532,7 +532,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
             else
             {
                var _loc82_ = _loc6_.substr(1);
-               var _loc83_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc82_);
+               var _loc83_ = this.api.datacenter.Sprites.getItemAt(_loc82_);
                if(!this.api.datacenter.Game.isRunning && this.api.datacenter.Game["\x18\x0e\x19"])
                {
                   var _loc84_ = _loc83_.name;
@@ -689,14 +689,14 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
             _loc10_ = _loc10_ + 1;
          }
          var _loc15_ = new dofus.datacenter.["\x17\f\x02"](_loc12_,Number(_loc4_),Number(_loc6_),Number(_loc7_),Number(_loc8_),_loc9_,Number(_loc10_),Number(_loc11_));
-         var _loc16_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc14_);
+         var _loc16_ = this.api.datacenter.Sprites.getItemAt(_loc14_);
          _loc16_["\x17\f\t"]["\x15\x1d\b"](_loc15_);
          _loc13_ = _loc13_ + 1;
       }
    }
    function §\x19\x15\x14§(sExtraData)
    {
-      var _loc3_ = this.api.datacenter.["\x1b\x07\x0e"];
+      var _loc3_ = this.api.datacenter.Sprites;
       for(var a in _loc3_)
       {
          _loc3_[a]["\x17\f\t"]["\x1b\x0f\r"]();
@@ -744,7 +744,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_.shift());
-      var _loc5_ = dofus.datacenter.["\x1b\x0e\x15"](this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc4_));
+      var _loc5_ = dofus.datacenter.["\x1b\x0e\x15"](this.api.datacenter.Sprites.getItemAt(_loc4_));
       var _loc6_ = 0;
       while(_loc6_ < _loc3_.length)
       {
@@ -782,7 +782,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
    function §\x19\x17\x0e§(sExtraData)
    {
       var _loc3_ = _loc2_.substr(2);
-      var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc3_);
+      var _loc4_ = this.api.datacenter.Sprites.getItemAt(_loc3_);
       if(_loc4_ != undefined)
       {
          var _loc5_ = _loc2_.charAt(0) == "+";
@@ -814,7 +814,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
       this.api.ui.unloadUIComponent("SpriteInfos");
       this.aks.GameActions["\x19\x13\x18"](String(this.api.datacenter.Player.ID));
       this.api.datacenter.Player.reset();
-      this.api.datacenter.Player["\x18\r\x0f"] = false;
+      this.api.datacenter.Player.isDead = false;
       var _loc2_ = dofus.graphics.gapi.ui.FightChallenge(dofus.graphics.gapi.ui.FightChallenge(this.api.ui.getUIComponent("FightChallenge")));
       _loc2_["\x16\x1b\x12"]();
       this.aks.Game["\x17\x02\x04"]();
@@ -856,7 +856,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
       _loc4_["\x17\x10\x02"] = _loc9_;
       var _loc10_ = new ank.utils.ExtendedArray();
       var _loc11_ = 0;
-      this.api.datacenter.Player["\x18\r\x0f"] = false;
+      this.api.datacenter.Player.isDead = false;
       this["\x1a\x03\x1c"](_loc4_,3,_loc8_,_loc5_,_loc9_,_loc11_,_loc10_,false,false);
    }
    function §\x1a\x03\x1c§(§\x1a\x01\x19§, §\x19\x0e\x1b§, §\x19\x0e\x05§, §\x16\x06\x12§, §\x19\x07\x12§, §\x19\t\x02§, §\x17\x0b\x01§, bAlreadyParsed, bIsChest)
@@ -878,7 +878,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x15"]);
             }
          }
-         var _loc15_ = this.api.kernel["\x16\x19\t"]["\x17\x1c\x0f"](_loc12_[2]);
+         var _loc15_ = this.api.kernel.CharactersManager["\x17\x1c\x0f"](_loc12_[2]);
          _loc13_.name = _loc15_.name;
          _loc13_.type = _loc15_.type;
          _loc13_.level = Number(_loc12_[3]);
@@ -1072,7 +1072,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          this.aks.GameActions["\x19\x13\x18"](String(_loc2_));
       }
       this.api.datacenter.Game.isRunning = false;
-      var _loc10_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc2_).sequencer;
+      var _loc10_ = this.api.datacenter.Sprites.getItemAt(_loc2_).sequencer;
       this.aks.Game["\x18\f\x1c"] = false;
       if(_loc10_ != undefined)
       {
@@ -1108,7 +1108,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
    }
    function §\x19\x18\x03§()
    {
-      this.api.network["\x1b\x04\x0f"]();
+      this.api.network.softDisconnect();
       this.api.ui.loadUIComponent("GameOver","GameOver",undefined,{bAlwaysOnTop:true});
    }
    function §\x19\x1d\x04§(§\x16\b\x11§, §\x1a\x02\b§, §\x16\x01\x12§)
@@ -1224,7 +1224,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
             _loc6_ = _loc7_ = Number(_loc8_);
          }
       }
-      _loc3_["\x18\x02\x16"] = _loc5_;
+      _loc3_.gfxID = _loc5_;
       _loc3_.scaleX = _loc6_;
       _loc3_.scaleY = _loc7_;
    }

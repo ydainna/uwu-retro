@@ -24,7 +24,7 @@ class dofus.§\x17\x04\x19§.§\x15\x1b\x15§ extends Object
    }
    function §\x1e\x1b\x01§()
    {
-      return this.type + "_" + this["\x18\x02\x16"];
+      return this.type + "_" + this.gfxID;
    }
    function §\x1e\x1a\x18§()
    {

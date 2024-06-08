@@ -24,7 +24,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x17\x12\x13§.§\x17\x12\x14§ extends a
             this["\x1c\x1a\x07"].text = "";
          }
          this["\x1d\x0b\x0b"]._visible = _loc4_.state == "IN_MULTI";
-         this["\x1d\x05\r"].contentPath = dofus.Constants["\x18\x04\x16"] + _loc4_["\x18\x02\x16"] + ".swf";
+         this["\x1d\x05\r"].contentPath = dofus.Constants["\x18\x04\x16"] + _loc4_.gfxID + ".swf";
          if(_loc4_.alignement != -1)
          {
             this["\x1d\x05\x01"].contentPath = dofus.Constants["\x16\x02\x1c"] + _loc4_.alignement + ".swf";

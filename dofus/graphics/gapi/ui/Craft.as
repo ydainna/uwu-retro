@@ -160,7 +160,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Craft extends dofus.§\x18\x03\x10§.gapi.�
    function initTexts()
    {
       this["\x1e\x10\x11"].title = this.api.datacenter.Player.data.name;
-      this["\x1e\x10\x10"].title = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name;
+      this["\x1e\x10\x10"].title = this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Exchange["\x17\b\x1d"]).name;
       this._btnValidate.label = this.api.lang.getText("COMBINE");
       this["\x1c\t\x0f"].label = this.api.lang.getText("RECEIPTS");
       this["\x1c\n\x11"].label = this.api.lang.getText("QUANTITY_SMALL") + ": 1";

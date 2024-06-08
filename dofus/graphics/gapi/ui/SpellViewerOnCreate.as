@@ -157,7 +157,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellViewerOnCreate extends dofus.§\x18\x0
    function §\x1b\x01\x01§(§\x19\x0e\x17§, §\x19\t\x0f§)
    {
       this["\x1d\x1d\x07"] = _loc2_;
-      var _loc4_ = this.api.kernel["\x16\x19\t"]["\x18\x01\x05"](_loc2_ + "~" + _loc3_ + "~");
+      var _loc4_ = this.api.kernel.CharactersManager["\x18\x01\x05"](_loc2_ + "~" + _loc3_ + "~");
       if(!_loc4_["\x18\x10\n"])
       {
          if(_loc3_ != 1)
@@ -240,7 +240,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellViewerOnCreate extends dofus.§\x18\x0
          var _loc3_ = _loc2_.target.contentData.ID;
          if(_loc3_ != undefined)
          {
-            var _loc4_ = dofus.datacenter.["\x1b\x06\x06"](this.api.kernel["\x16\x19\t"]["\x18\x01\x05"](_loc3_ + "~1~"));
+            var _loc4_ = dofus.datacenter.["\x1b\x06\x06"](this.api.kernel.CharactersManager["\x18\x01\x05"](_loc3_ + "~1~"));
             this.gapi.showTooltip(_loc4_.name + ", " + this.api.lang.getText("REQUIRED_SPELL_LEVEL").toLowerCase() + ": " + _loc4_["\x18\x1d\x06"],_loc2_.target,-20);
          }
       }

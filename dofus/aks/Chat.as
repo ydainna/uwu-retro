@@ -411,7 +411,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
       var _loc5_ = Number(_loc3_[1]);
       if(!this.api.datacenter.Game.isFight && !this.api.datacenter.Game.isRunning)
       {
-         if(_loc4_ != this.api.datacenter.Player.ID && this.api.gfx.spriteHandler["\x18\x0f\f"] || this.api.kernel.ChatManager["\x18\f\x16"](this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc4_).name))
+         if(_loc4_ != this.api.datacenter.Player.ID && this.api.gfx.spriteHandler["\x18\x0f\f"] || this.api.kernel.ChatManager["\x18\f\x16"](this.api.datacenter.Sprites.getItemAt(_loc4_).name))
          {
             return undefined;
          }

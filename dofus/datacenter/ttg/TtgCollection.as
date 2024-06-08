@@ -149,7 +149,7 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollection
       while(_loc10_ < sHash.length)
       {
          var _loc11_ = sHash.charAt(_loc10_);
-         var _loc12_ = ank.utils.["\x16\x1e\t"]["\x17\x05\x1b"](_loc11_);
+         var _loc12_ = ank.utils.Compressor.decode64(_loc11_);
          var _loc13_ = 5;
          while(_loc13_ >= 0)
          {
