@@ -105,7 +105,7 @@ class dofus.§\x18\x18\x0b§.§\x17\f\t§ extends dofus.utils.§\x16\x04\x07§
       loop0:
       while(_loc8_ < _loc6_.length)
       {
-         _loc6_[_loc8_] = new ank.utils.ExtendedString(_loc6_[_loc8_])["\x1a\r\n"](["(",")"],["",""]);
+         _loc6_[_loc8_] = new ank.utils.ExtendedString(_loc6_[_loc8_]).replace(["(",")"],["",""]);
          var _loc9_ = _loc6_[_loc8_].split("|");
          var _loc10_ = 0;
          while(true)
@@ -155,7 +155,7 @@ class dofus.§\x18\x18\x0b§.§\x17\f\t§ extends dofus.utils.§\x16\x04\x07§
       var _loc7_ = 0;
       while(_loc7_ < _loc5_.length)
       {
-         _loc5_[_loc7_] = new ank.utils.ExtendedString(_loc5_[_loc7_])["\x1a\r\n"](["(",")"],["",""]);
+         _loc5_[_loc7_] = new ank.utils.ExtendedString(_loc5_[_loc7_]).replace(["(",")"],["",""]);
          var _loc8_ = _loc5_[_loc7_].split("|");
          var _loc9_ = 0;
          for(; _loc9_ < _loc8_.length; _loc9_ = _loc9_ + 1)
@@ -257,7 +257,7 @@ class dofus.§\x18\x18\x0b§.§\x17\f\t§ extends dofus.utils.§\x16\x04\x07§
                      _loc14_ = _loc17_.name;
                      break;
                }
-               _loc13_ = new ank.utils.ExtendedString(_loc13_)["\x1a\r\n"](["CS","Cs","CV","Cv","CA","Ca","CI","Ci","CW","Cw","CC","Cc","CA","PG","PJ","Pj","PM","PA","PN","PE","<NO>","PS","PR","PL","PK","Pg","Pr","Ps","Pa","PP","PZ","CM","FC","FS","Cm","Cp","Fz"],_loc3_.lang.getText("ITEM_CHARACTERISTICS").split(","));
+               _loc13_ = new ank.utils.ExtendedString(_loc13_).replace(["CS","Cs","CV","Cv","CA","Ca","CI","Ci","CW","Cw","CC","Cc","CA","PG","PJ","Pj","PM","PA","PN","PE","<NO>","PS","PR","PL","PK","Pg","Pr","Ps","Pa","PP","PZ","CM","FC","FS","Cm","Cp","Fz"],_loc3_.lang.getText("ITEM_CHARACTERISTICS").split(","));
                switch(_loc13_)
                {
                   case "BI":
@@ -280,7 +280,7 @@ class dofus.§\x18\x18\x0b§.§\x17\f\t§ extends dofus.utils.§\x16\x04\x07§
                      }
                      break;
                   default:
-                     _loc11_ = new ank.utils.ExtendedString(_loc11_)["\x1a\r\n"](["!"],[_loc3_.lang.getText("ITEM_NO")]);
+                     _loc11_ = new ank.utils.ExtendedString(_loc11_).replace(["!"],[_loc3_.lang.getText("ITEM_NO")]);
                      _loc6_.push((_loc9_ <= 0 ? "" : _loc3_.lang.getText("ITEM_OR") + " ") + _loc13_ + " " + _loc11_ + " " + _loc14_);
                }
             }

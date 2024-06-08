@@ -177,7 +177,7 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.§\x16\x04\x07§
             }
             break;
          case "ColorfulTactic":
-            if(this.api.datacenter.Game["\x18\r\x15"] && this.api.datacenter.Game["\x18\x10\x02"])
+            if(this.api.datacenter.Game.isFight && this.api.datacenter.Game["\x18\x10\x02"])
             {
                this.api.gfx["\x15\x1c\x19"](this.api,false);
                this.api.gfx["\x15\x1c\x19"](this.api,true);
@@ -215,10 +215,10 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.§\x16\x04\x07§
             this.api.kernel.setQuality(_loc3_);
             break;
          case "MovableBar":
-            this.api.ui.getUIComponent("Banner")["\x17\b\x0b"](_loc3_ && (this.api.datacenter.Game["\x18\r\x15"] || !this.getOption("HideSpellBar")));
+            this.api.ui.getUIComponent("Banner")["\x17\b\x0b"](_loc3_ && (this.api.datacenter.Game.isFight || !this.getOption("HideSpellBar")));
             break;
          case "HideSpellBar":
-            this.api.ui.getUIComponent("Banner")["\x17\b\x0b"](this.getOption("MovableBar") && (this.api.datacenter.Game["\x18\r\x15"] || !_loc3_));
+            this.api.ui.getUIComponent("Banner")["\x17\b\x0b"](this.getOption("MovableBar") && (this.api.datacenter.Game.isFight || !_loc3_));
             break;
          case "MovableBarSize":
             this.api.ui.getUIComponent("Banner")["\x1a\x18\x02"](_loc3_);

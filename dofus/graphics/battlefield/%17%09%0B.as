@@ -49,7 +49,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
       this["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\x0e"]);
       this["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\f"]);
       this["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\x16"]);
-      if(this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.datacenter.Game.isFight)
       {
          this["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\x0f"]);
       }
@@ -100,7 +100,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
          }
          this.api.datacenter.Basics.gfx_lastSubarea = _loc3_;
       }
-      if(this.api.kernel.OptionsManager.getOption("Grid") == true || this.api.datacenter.Game["\x18\x0f\x12"])
+      if(this.api.kernel.OptionsManager.getOption("Grid") == true || this.api.datacenter.Game.isRunning)
       {
          this.api.gfx["\x17\n\x04"]();
       }
@@ -113,7 +113,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
          this.updateCellIds();
       }
       this.api.ui.getUIComponent("Banner").circleXtra["\x1a\x15\x0f"]({currentCoords:[_loc2_.x,_loc2_.y]});
-      if(!this.api.datacenter.Game["\x18\x0f\x12"])
+      if(!this.api.datacenter.Game.isRunning)
       {
          if(Number(_loc2_.ambianceID) > 0)
          {
@@ -165,9 +165,9 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
             var _loc3_ = this.api.datacenter.Player.data;
             var _loc4_ = false;
             var _loc5_ = this.api.datacenter.Player.canMoveInAllDirections;
-            if(this.api.datacenter.Player["\x18\x0b\b"]["\x16\x15\b"](this["\x18\x18\x15"],_loc2_.num,true,this.api.datacenter.Game["\x18\r\x15"],false,_loc5_))
+            if(this.api.datacenter.Player["\x18\x0b\b"]["\x16\x15\b"](this["\x18\x18\x15"],_loc2_.num,true,this.api.datacenter.Game.isFight,false,_loc5_))
             {
-               if(this.api.datacenter.Game["\x18\r\x15"])
+               if(this.api.datacenter.Game.isFight)
                {
                   _loc4_ = true;
                }
@@ -176,9 +176,9 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
                   _loc4_ = this.api.datacenter.Basics.interactionsManager_path[this.api.datacenter.Basics.interactionsManager_path.length - 1].num == _loc2_.num;
                }
             }
-            if(!this.api.datacenter.Game["\x18\r\x15"] && !_loc4_)
+            if(!this.api.datacenter.Game.isFight && !_loc4_)
             {
-               if(this.api.datacenter.Player["\x18\x0b\b"]["\x16\x15\b"](this["\x18\x18\x15"],_loc2_.num,true,this.api.datacenter.Game["\x18\r\x15"],true,_loc5_))
+               if(this.api.datacenter.Player["\x18\x0b\b"]["\x16\x15\b"](this["\x18\x18\x15"],_loc2_.num,true,this.api.datacenter.Game.isFight,true,_loc5_))
                {
                   _loc4_ = true;
                }
@@ -196,7 +196,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
                   var _loc6_ = ank.battlefieldutils.["\x16\x1e\t"]["\x16\x1e\n"](this.api.datacenter.Basics.interactionsManager_path);
                   if(_loc6_ != undefined)
                   {
-                     if(this.api.datacenter.Game["\x18\r\x15"] && this.api.datacenter.Game["\x18\x0f\x12"])
+                     if(this.api.datacenter.Game.isFight && this.api.datacenter.Game.isRunning)
                      {
                         var _loc7_ = _loc3_.sequencer;
                         _loc7_.addAction(122,false,_loc3_["\x17\x13\x05"],_loc3_["\x17\x13\x05"]["\x1b\x11\n"],[1,[_loc6_]]);
@@ -265,7 +265,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
             this.api.datacenter.Game["\x1a\x17\t"]("move");
             break;
          case 6:
-            if(this.api.datacenter.Game["\x18\r\x15"])
+            if(this.api.datacenter.Game.isFight)
             {
                if(_loc2_.num != undefined)
                {
@@ -274,7 +274,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
                this.api.gfx["\x16\x1c\x0b"]();
                this.api.gfx["\x1b\x13\x1b"]("startPosition");
                this.api.ui.removeCursor();
-               if(this.api.datacenter.Game["\x18\x0f\x12"] && this.api.datacenter.Game["\x17\x03\x1a"] == this.api.datacenter.Player.ID)
+               if(this.api.datacenter.Game.isRunning && this.api.datacenter.Game["\x17\x03\x1a"] == this.api.datacenter.Player.ID)
                {
                   this.api.gfx["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\r"]);
                   this.api.datacenter.Game["\x1a\x17\t"]("move");
@@ -293,7 +293,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
          this.api.kernel.TutorialManager["\x19\x1e\x0f"]({code:"CELL_OVER",params:[_loc2_.num]});
          return undefined;
       }
-      if(this.api.datacenter.Game["\x18\x0f\x12"] && (!this.api.datacenter.Player.isCurrentPlayer && this.api.datacenter.Game["\x18\x0b\t"] != 6))
+      if(this.api.datacenter.Game.isRunning && (!this.api.datacenter.Player.isCurrentPlayer && this.api.datacenter.Game["\x18\x0b\t"] != 6))
       {
          return undefined;
       }
@@ -310,8 +310,8 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
             }
             if(ank.battlefieldutils.["\x1a\x04\b"]["\x16\x1a\x18"](this["\x18\x18\x15"],_loc4_.cellNum,_loc2_.num,false,0,_loc4_.MP,0))
             {
-               this.api.datacenter.Player["\x18\x0b\b"].setState(this.api.datacenter.Game["\x18\r\x15"]);
-               this.api.datacenter.Player["\x18\x0b\b"]["\x16\x15\b"](this["\x18\x18\x15"],_loc2_.num,false,this.api.datacenter.Game["\x18\r\x15"]);
+               this.api.datacenter.Player["\x18\x0b\b"].setState(this.api.datacenter.Game.isFight);
+               this.api.datacenter.Player["\x18\x0b\b"]["\x16\x15\b"](this["\x18\x18\x15"],_loc2_.num,false,this.api.datacenter.Game.isFight);
             }
             else
             {
@@ -352,7 +352,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
          this.api.kernel.TutorialManager["\x19\x1e\x0f"]({code:"CELL_OUT",params:[_loc2_.num]});
          return undefined;
       }
-      if(this.api.datacenter.Game["\x18\x0f\x12"] && (!this.api.datacenter.Player.isCurrentPlayer && this.api.datacenter.Game["\x18\x0b\t"] != 6))
+      if(this.api.datacenter.Game.isRunning && (!this.api.datacenter.Player.isCurrentPlayer && this.api.datacenter.Game["\x18\x0b\t"] != 6))
       {
          return undefined;
       }
@@ -399,7 +399,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
       {
          if(_loc4_ instanceof dofus.datacenter.["\x19\x02\x13"] && !_loc4_["\x1a\x1d\x1c"])
          {
-            if(!this.api.datacenter.Game["\x18\x0f\x12"])
+            if(!this.api.datacenter.Game.isRunning)
             {
                if(this.api.datacenter.Player.isMutant)
                {
@@ -411,7 +411,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
          }
          else if(_loc4_ instanceof dofus.datacenter.["\x16\x19\x02"] || _loc4_ instanceof dofus.datacenter.["\x19\x02\x13"] && _loc4_["\x1a\x1d\x1c"])
          {
-            if(this.api.datacenter.Game["\x18\r\x15"] && (this.api.datacenter.Game["\x18\x0f\x12"] && !(this.api.datacenter.Player.isAuthorized && (this.api.datacenter.Game["\x18\x0b\t"] == dofus.datacenter..Game["\x18\x0b\x19"] && this.api.datacenter.Player["\x17\x03\x1d"] == null))))
+            if(this.api.datacenter.Game.isFight && (this.api.datacenter.Game.isRunning && !(this.api.datacenter.Player.isAuthorized && (this.api.datacenter.Game["\x18\x0b\t"] == dofus.datacenter..Game["\x18\x0b\x19"] && this.api.datacenter.Player["\x17\x03\x1d"] == null))))
             {
                var _loc7_ = this["\x18\x18\x15"]["\x17\x14\x1d"](_loc4_.cellNum).mc;
                this["\x19\x15\x04"](_loc7_);
@@ -613,7 +613,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
             {
                var _loc36_ = this["\x18\x18\x15"]["\x17\x14\x1d"](_loc4_.cellNum);
                var _loc37_ = _loc36_.mc;
-               if(!Key.isDown(Key.SHIFT) && (!_loc3_ && (!this.api.datacenter.Game["\x18\r\x15"] && _loc4_ instanceof dofus.datacenter.["\x18\x1d\x19"])))
+               if(!Key.isDown(Key.SHIFT) && (!_loc3_ && (!this.api.datacenter.Game.isFight && _loc4_ instanceof dofus.datacenter.["\x18\x1d\x19"])))
                {
                   var _loc38_ = _loc36_["\x18\x10\x06"];
                   if(!_loc38_ && this.api.kernel.OptionsManager.getOption("ViewAllMonsterInGroup") == true)
@@ -689,7 +689,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
                {
                   return undefined;
                }
-               if(this.api.datacenter.Game["\x18\r\x15"])
+               if(this.api.datacenter.Game.isFight)
                {
                   var _loc44_ = this["\x18\x18\x15"]["\x17\x14\x1d"](_loc4_.cellNum).mc;
                   this["\x19\x15\x04"](_loc44_);
@@ -715,7 +715,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
          {
             if(!this.api.datacenter.Player.isMutant)
             {
-               if(this.api.datacenter.Game["\x18\r\x15"])
+               if(this.api.datacenter.Game.isFight)
                {
                   var _loc49_ = this["\x18\x18\x15"]["\x17\x14\x1d"](_loc4_.cellNum).mc;
                   this["\x19\x15\x04"](_loc49_);
@@ -779,7 +779,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
          this["\x19\x1d\x07"](_loc6_["\x18\x15\x0b"].mc,_loc3_);
          return undefined;
       }
-      if(this.api.datacenter.Game["\x18\x0f\x12"] || this.api.datacenter.Game["\x18\x0b\t"] == 5)
+      if(this.api.datacenter.Game.isRunning || this.api.datacenter.Game["\x18\x0b\t"] == 5)
       {
          var _loc9_ = this["\x18\x18\x15"]["\x17\x14\x1d"](_loc6_.cellNum).mc;
          if(_loc6_["\x18\x10\x0e"])
@@ -790,7 +790,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
       var _loc10_ = _loc6_.name;
       if(_loc6_ instanceof dofus.datacenter.["\x19\x02\x13"] && _loc6_["\x1a\x1d\x1c"])
       {
-         if(this.api.datacenter.Game["\x18\x0f\x12"])
+         if(this.api.datacenter.Game.isRunning)
          {
             if(this.api.kernel.OptionsManager.getOption("ViewHPAsBar"))
             {
@@ -811,7 +811,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
       else if(_loc6_ instanceof dofus.datacenter.["\x19\x02\x13"] || (_loc6_ instanceof dofus.datacenter..Creature || _loc6_ instanceof dofus.datacenter.["\x18\x1d\x18"]))
       {
          _loc7_ = dofus.Constants["\x19\f\x02"][_loc6_.alignment.index];
-         if(this.api.datacenter.Game["\x18\x0f\x12"])
+         if(this.api.datacenter.Game.isRunning)
          {
             if(this.api.kernel.OptionsManager.getOption("ViewHPAsBar"))
             {
@@ -853,7 +853,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
                _loc5_ = 20 + _loc6_.rank.value;
             }
          }
-         if(this.api.datacenter.Game["\x18\x0f\x12"])
+         if(this.api.datacenter.Game.isRunning)
          {
             this["\x15\x1e\x15"](_loc6_.id,"effects",dofus.graphics.battlefield["\x17\f\f"],[_loc6_]);
             if(this.api.kernel.OptionsManager.getOption("ViewHPAsBar"))
@@ -867,7 +867,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
             }
             this.showSpriteInfos(_loc6_);
          }
-         else if(this.api.datacenter.Game["\x18\r\x15"])
+         else if(this.api.datacenter.Game.isFight)
          {
             _loc10_ += " (" + _loc6_.Level + ")";
          }
@@ -880,7 +880,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
       }
       else if(_loc6_ instanceof dofus.datacenter.["\x1b\x0e\x04"])
       {
-         if(this.api.datacenter.Game["\x18\x0f\x12"])
+         if(this.api.datacenter.Game.isRunning)
          {
             if(this.api.kernel.OptionsManager.getOption("ViewHPAsBar"))
             {
@@ -893,7 +893,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
             }
             this.showSpriteInfos(_loc6_);
          }
-         else if(this.api.datacenter.Game["\x18\r\x15"])
+         else if(this.api.datacenter.Game.isFight)
          {
             _loc10_ += " (" + _loc6_.Level + ")";
          }
@@ -985,7 +985,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
          this["\x19\x1d\x06"](_loc4_["\x18\x15\x0b"].mc);
          return undefined;
       }
-      if(this.api.datacenter.Game["\x18\x0f\x12"] || this.api.datacenter.Game["\x18\x0b\t"] == 5)
+      if(this.api.datacenter.Game.isRunning || this.api.datacenter.Game["\x18\x0b\t"] == 5)
       {
          this["\x18\x06\x1d"]();
          var _loc5_ = this["\x18\x18\x15"]["\x17\x14\x1d"](_loc4_.cellNum).mc;

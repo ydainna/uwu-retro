@@ -349,7 +349,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                this.showMessage(undefined,_loc42_,"DEBUG_LOG");
                break;
             case "TACTIC":
-               if(this.api.datacenter.Player.isAuthorized || this.api.datacenter.Game["\x18\r\x15"])
+               if(this.api.datacenter.Player.isAuthorized || this.api.datacenter.Game.isFight)
                {
                   var _loc44_ = !this.api.datacenter.Game["\x18\x10\x02"];
                   this.api.datacenter.Game["\x18\x10\x02"] = _loc44_;

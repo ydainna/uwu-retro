@@ -135,7 +135,7 @@ class dofus.aks.Account extends dofus.aks.Handler
          sSecretAnswer = "";
       }
       var _loc4_ = new ank.utils.ExtendedString(_global.escape(sSecretAnswer));
-      this.aks.send("AD" + nCharacID + "|" + _loc4_["\x1a\r\n"](["|", "\r", "\n", String.fromCharCode(0)], ["", "", "", ""]), true, this.api.lang.getText("WAITING_MSG_DELETING"));
+      this.aks.send("AD" + nCharacID + "|" + _loc4_.replace(["|", "\r", "\n", String.fromCharCode(0)], ["", "", "", ""]), true, this.api.lang.getText("WAITING_MSG_DELETING"));
    }
 
    function resetCharacter(nCharacID)
@@ -156,9 +156,9 @@ class dofus.aks.Account extends dofus.aks.Handler
    function rescue(sTicket)
    {
       var _loc3_ = "";
-      if(this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.datacenter.Game.isFight)
       {
-         _loc3_ = !this.api.datacenter.Game["\x18\x0f\x12"] ? "|0" : "|1";
+         _loc3_ = !this.api.datacenter.Game.isRunning ? "|0" : "|1";
       }
       this.aks.send("Ar" + sTicket + _loc3_);
    }
@@ -953,14 +953,14 @@ class dofus.aks.Account extends dofus.aks.Handler
          {
             case 9:
                _loc15_[0].push({id:_loc17_,o:7,s:_loc18_,i:_loc19_,d:_loc20_,b:_loc21_,p:"Star"});
-               if(!this.api.datacenter.Game["\x18\x0f\x12"])
+               if(!this.api.datacenter.Game.isRunning)
                {
                   _loc4_.AP = _loc18_ + _loc19_ + _loc20_;
                }
                break;
             case 10:
                _loc15_[0].push({id:_loc17_,o:8,s:_loc18_,i:_loc19_,d:_loc20_,b:_loc21_,p:"IconMP"});
-               if(!this.api.datacenter.Game["\x18\x0f\x12"])
+               if(!this.api.datacenter.Game.isRunning)
                {
                   _loc4_.MP = _loc18_ + _loc19_ + _loc20_;
                }

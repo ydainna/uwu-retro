@@ -305,7 +305,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.§\x16\x04\x07
       var _loc2_ = this.api.datacenter.Basics.dofusPseudo;
       if(_loc2_ != undefined)
       {
-         var _loc3_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"]("#","_") + "_" + dofus.Constants["\x18\x03\b"];
+         var _loc3_ = new ank.utils.ExtendedString(_loc2_).replace("#","_") + "_" + dofus.Constants["\x18\x03\b"];
          this["\x1e\x0b\b"] = SharedObject.getLocal(_loc3_);
       }
       if(this["\x1d\x15\x01"] == undefined)
@@ -452,7 +452,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.§\x16\x04\x07
          return undefined;
       }
       this["\x1c\x07\r"][_loc2_] = true;
-      if(this.api.gfx["\x18\x18\x15"]["\x1a\x1d\x1a"] && !this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.gfx["\x18\x18\x15"]["\x1a\x1d\x1a"] && !this.api.datacenter.Game.isFight)
       {
          this.api.gfx["\x1b\x13\x18"](true);
          this.api.gfx["\x18\x18\x15"]["\x1a\x1d\x1a"] = false;
@@ -492,7 +492,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.§\x16\x04\x07
    }
    function onKeyUp()
    {
-      if(this.api.gfx["\x18\x18\x15"]["\x1a\x1d\x1a"] && !this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.gfx["\x18\x18\x15"]["\x1a\x1d\x1a"] && !this.api.datacenter.Game.isFight)
       {
          this.api.gfx["\x1b\x13\x18"](true);
          this.api.gfx["\x18\x18\x15"]["\x1a\x1d\x1a"] = false;
@@ -557,11 +557,11 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.§\x16\x04\x07
             _loc3_ = false;
             break;
          case "SHOWTRIGGERS":
-            if(this.api.datacenter.Game["\x18\r\x15"] || 7789 - this["\x1d\x18\t"] < dofus.Constants["\x16\x1c\x14"])
+            if(this.api.datacenter.Game.isFight || 7789 - this["\x1d\x18\t"] < dofus.Constants["\x16\x1c\x14"])
             {
                break;
             }
-            if(!this.api.datacenter.Game["\x18\r\x15"])
+            if(!this.api.datacenter.Game.isFight)
             {
                if(7929 - this["\x1d\x18\t"] >= dofus.Constants["\x16\x1c\x14"])
                {

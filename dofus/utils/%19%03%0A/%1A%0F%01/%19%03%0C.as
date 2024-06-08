@@ -67,7 +67,7 @@ class dofus.utils.§\x19\x03\n§.§\x1a\x0f\x01§.§\x19\x03\f§ extends dofus.u
       while(_loc3_ < dofus.Constants["\x18\x04\x19"].length)
       {
          var _loc4_ = new ank.utils.ExtendedString(this.api.lang.getClassText(dofus.Constants["\x18\x04\x19"][_loc3_]).sn);
-         var _loc5_ = _loc4_["\x1a\r\n"](["é","à","â"],["e","a","a"]).toUpperCase();
+         var _loc5_ = _loc4_.replace(["é","à","â"],["e","a","a"]).toUpperCase();
          if(_loc5_ == undefined)
          {
             return this["\x1a\x07\x17"];

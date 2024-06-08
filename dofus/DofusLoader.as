@@ -4,7 +4,7 @@
 };
 _loc1_["\x16\x01\x05"] = function(sText)
 {
-   this["\x1e\n\x1b"] += new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"]("&nbsp;"," ") + "\r\n";
+   this["\x1e\n\x1b"] += new ank.utils.ExtendedString(_loc2_).replace("&nbsp;"," ") + "\r\n";
 };
 _loc1_["\x18\x17\x15"] = function(sText)
 {
@@ -55,7 +55,7 @@ _loc1_.replaceText = function(sText, §\x16\x03\x1d§)
       _loc5_.push(_loc3_[_loc6_]);
       _loc6_ = _loc6_ + 1;
    }
-   return new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc4_,_loc5_);
+   return new ank.utils.ExtendedString(_loc2_).replace(_loc4_,_loc5_);
 };
 _loc1_["\x16\x1c\b"] = function()
 {

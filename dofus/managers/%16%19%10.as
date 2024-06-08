@@ -676,7 +676,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
       if(_loc2_.indexOf("[love]") != -1)
       {
          _loc2_ = _loc2_.split("[love]").join("");
-         if(!this.api.datacenter.Game["\x18\r\x15"])
+         if(!this.api.datacenter.Game.isFight)
          {
             this.api.network.GameActions["\x19\x13\x17"](";208;" + this.api.datacenter.Player.ID + ";" + this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Player.ID).cellNum + ",2914,11,8,1");
          }
@@ -684,7 +684,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
       if(_loc2_.indexOf("[rock]") != -1)
       {
          _loc2_ = _loc2_.split("[rock]").join("");
-         if(!this.api.datacenter.Game["\x18\r\x15"])
+         if(!this.api.datacenter.Game.isFight)
          {
             this.api.network.GameActions["\x19\x13\x17"](";208;" + this.api.datacenter.Player.ID + ";" + this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Player.ID).cellNum + ",2069,10,1,1");
             this.api.network.GameActions["\x19\x13\x17"](";208;" + this.api.datacenter.Player.ID + ";" + (this.api.datacenter.["\x1b\x07\x0e"].getItemAt(this.api.datacenter.Player.ID).cellNum + 1) + ",2904,11,8,3");

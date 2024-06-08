@@ -32,7 +32,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\b\x1a§.BannerCircleXtra
          return undefined;
       }
       this._banner["\x18\x1e\x18"](false);
-      if(!this.api.datacenter.Game["\x18\r\x15"] && this.api.kernel.OptionsManager.getOption("BannerGaugeMode") == "none")
+      if(!this.api.datacenter.Game.isFight && this.api.kernel.OptionsManager.getOption("BannerGaugeMode") == "none")
       {
          this["\x1a\x1b\b"](this._banner["\x1d\t\x1c"]);
       }
@@ -72,7 +72,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\b\x1a§.BannerCircleXtra
       {
          this["\x1a\x17\x1c"](dofus.graphics.gapi.controls.MiniMap["\x1a\x10\f"]);
       }
-      this._banner["\x17\b\x0b"](this.api.kernel.OptionsManager.getOption("MovableBar") && (!this.api.kernel.OptionsManager.getOption("HideSpellBar") || this.api.datacenter.Game["\x18\r\x15"]));
+      this._banner["\x17\b\x0b"](this.api.kernel.OptionsManager.getOption("MovableBar") && (!this.api.kernel.OptionsManager.getOption("HideSpellBar") || this.api.datacenter.Game.isFight));
    }
    function §\x1a\x1b\b§(§\x18\x1b\x1a§)
    {
@@ -186,7 +186,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\b\x1a§.BannerCircleXtra
          if(_loc4_.bMask)
          {
             this._banner["\x1e\t\x01"] = _loc4_.sMaskSize;
-            if(!this.api.datacenter.Game["\x18\r\x15"] && this.api.kernel.OptionsManager.getOption("BannerGaugeMode") == "none")
+            if(!this.api.datacenter.Game.isFight && this.api.kernel.OptionsManager.getOption("BannerGaugeMode") == "none")
             {
                this["\x1a\x1b\b"](this._banner["\x1d\t\x1c"]);
             }

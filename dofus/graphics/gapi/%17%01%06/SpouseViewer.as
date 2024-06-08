@@ -74,7 +74,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpouseViewer extends dofus.§
             this["\x1c\x1a\x07"].text = !_global.isNaN(this["\x1e\x05\x19"].level) ? this.api.lang.getText("LEVEL") + " " + this["\x1e\x05\x19"].level : "";
             this["\x1c\x12\x15"].text = this.api.kernel["\x18\x18\x18"]["\x17\x1b\x0b"](this["\x1e\x05\x19"].mapID);
             this["\x1c\x15\x12"].text = "";
-            this._btnJoin.enabled = !this.api.datacenter.Game["\x18\r\x15"];
+            this._btnJoin.enabled = !this.api.datacenter.Game.isFight;
             this["\x1c\t\f"].enabled = true;
          }
          else if(this["\x1c\x1a\x07"].text != undefined)
@@ -93,7 +93,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpouseViewer extends dofus.§
       switch(_loc2_.target)
       {
          case this._btnJoin:
-            if(!this.api.datacenter.Game["\x18\r\x15"])
+            if(!this.api.datacenter.Game.isFight)
             {
                this.api.network.Friends.join("S");
             }

@@ -121,7 +121,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
             this["\x1a\f\x07"]();
          }
       }
-      else if(!this["\x18\x03\x13"]["\x16\f\x10"] && (_loc2_.datacenter..Game["\x18\x0f\x12"] || _loc2_.kernel.OptionsManager.getOption("Grid") == true))
+      else if(!this["\x18\x03\x13"]["\x16\f\x10"] && (_loc2_.datacenter..Game.isRunning || _loc2_.kernel.OptionsManager.getOption("Grid") == true))
       {
          this["\x17\n\x04"]();
       }

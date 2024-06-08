@@ -140,7 +140,7 @@ class ank.battlefield.§\x1b\x07\t§
    }
    function §\x1a\f\x01§(§\x1a\x10\r§)
    {
-      if(!this.api.datacenter.Game["\x18\r\x15"] || _loc2_ == undefined)
+      if(!this.api.datacenter.Game.isFight || _loc2_ == undefined)
       {
          return undefined;
       }
@@ -322,7 +322,7 @@ class ank.battlefield.§\x1b\x07\t§
    }
    function hideSprites(§\x16\f\x12§, §\x19\x10\x06§)
    {
-      if(this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.datacenter.Game.isFight)
       {
          return undefined;
       }

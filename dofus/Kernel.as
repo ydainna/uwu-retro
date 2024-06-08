@@ -103,7 +103,7 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.§\x16\x04\x07§
    }
    function sendScreenInfo()
    {
-      if(!this.api.datacenter.Basics.inGame || (this.api.datacenter.Game["\x18\r\x15"] || this.api.datacenter.Game["\x18\x0f\x12"]))
+      if(!this.api.datacenter.Basics.inGame || (this.api.datacenter.Game.isFight || this.api.datacenter.Game.isRunning))
       {
          return undefined;
       }
@@ -434,7 +434,7 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.§\x16\x04\x07§
          _loc2_.onRelease = function()
          {
             this.stopDrag();
-            this.api.networkBasics.onAuthorizedCommand(true,"2|0|" + new ank.utils.ExtendedString(this._dropTarget)["\x1a\r\n"]("/","."));
+            this.api.networkBasics.onAuthorizedCommand(true,"2|0|" + new ank.utils.ExtendedString(this._dropTarget).replace("/","."));
             this.startDrag(true);
          };
          _loc2_.startDrag(true);

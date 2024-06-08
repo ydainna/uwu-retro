@@ -106,7 +106,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc33_.color2 = _loc10_[9];
                      _loc33_.color3 = _loc10_[10];
                      _loc33_.accessories = _loc10_[11];
-                     if(this.api.datacenter.Game["\x18\r\x15"])
+                     if(this.api.datacenter.Game.isFight)
                      {
                         _loc33_.LP = _loc10_[12];
                         _loc33_.AP = _loc10_[13];
@@ -238,7 +238,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc46_.cell = _loc11_;
                      _loc46_.dir = _loc12_;
                      _loc46_.level = _loc10_[7];
-                     if(this.api.datacenter.Game["\x18\r\x15"])
+                     if(this.api.datacenter.Game.isFight)
                      {
                         _loc46_.LP = _loc10_[8];
                         _loc46_.AP = _loc10_[9];
@@ -267,7 +267,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc47_["\x1a\x1b\f"] = _loc10_[7];
                      _loc47_["\x1a\x06\x15"] = _loc10_[8];
                      _loc47_.accessories = _loc10_[9];
-                     if(this.api.datacenter.Game["\x18\r\x15"])
+                     if(this.api.datacenter.Game.isFight)
                      {
                         _loc47_.LP = _loc10_[10];
                         _loc47_.AP = _loc10_[11];
@@ -329,7 +329,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc52_.scaleY = _loc28_;
                      _loc52_.dir = _loc12_;
                      _loc52_["\x1a\x1b\f"] = _loc10_[7];
-                     if(this.api.datacenter.Game["\x18\r\x15"])
+                     if(this.api.datacenter.Game.isFight)
                      {
                         _loc52_.level = _loc10_[8];
                         var _loc51_ = _loc10_[9];
@@ -475,7 +475,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                            _loc52_.pvpGain = _loc73_;
                         }
                      }
-                     if(!this.api.datacenter.Game["\x18\r\x15"] && (_global.parseInt(_loc14_,10) != this.api.datacenter.Player.ID && ((this.api.datacenter.Player.alignment.index == 1 || this.api.datacenter.Player.alignment.index == 2) && ((_loc52_.alignment.index == 1 || _loc52_.alignment.index == 2) && (_loc52_.alignment.index != this.api.datacenter.Player.alignment.index && (_loc52_.rank.value && this.api.datacenter.["\x18\x18\x0e"].bCanAttack))))))
+                     if(!this.api.datacenter.Game.isFight && (_global.parseInt(_loc14_,10) != this.api.datacenter.Player.ID && ((this.api.datacenter.Player.alignment.index == 1 || this.api.datacenter.Player.alignment.index == 2) && ((_loc52_.alignment.index == 1 || _loc52_.alignment.index == 2) && (_loc52_.alignment.index != this.api.datacenter.Player.alignment.index && (_loc52_.rank.value && this.api.datacenter.["\x18\x18\x0e"].bCanAttack))))))
                      {
                         if(this.api.datacenter.Player.rank.value > _loc52_.rank.value)
                         {
@@ -533,7 +533,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
             {
                var _loc82_ = _loc6_.substr(1);
                var _loc83_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc82_);
-               if(!this.api.datacenter.Game["\x18\x0f\x12"] && this.api.datacenter.Game["\x18\x0e\x19"])
+               if(!this.api.datacenter.Game.isRunning && this.api.datacenter.Game["\x18\x0e\x19"])
                {
                   var _loc84_ = _loc83_.name;
                   var _loc85_ = this["\x1b\x1d\x01"][_loc82_];
@@ -1071,7 +1071,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
       {
          this.aks.GameActions["\x19\x13\x18"](String(_loc2_));
       }
-      this.api.datacenter.Game["\x18\x0f\x12"] = false;
+      this.api.datacenter.Game.isRunning = false;
       var _loc10_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc2_).sequencer;
       this.aks.Game["\x18\f\x1c"] = false;
       if(_loc10_ != undefined)
@@ -1142,7 +1142,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                return undefined;
             }
          }
-         if(this.api.datacenter.Game["\x18\x0f\x12"])
+         if(this.api.datacenter.Game.isRunning)
          {
             this.api.gfx["\x15\x1e\x11"](_loc5_,dofus.Constants["\x16\x1b\r"],dofus.Constants["\x1b\x0f\x03"][_loc3_["\x1b\x0e\x15"]]);
          }
@@ -1164,7 +1164,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
             _loc3_.mc["\x1e\x07\n"](true);
          }
       }
-      else if(!this.api.datacenter.Game["\x18\x0f\x12"])
+      else if(!this.api.datacenter.Game.isRunning)
       {
          this.api.gfx["\x1a\f\x19"](_loc5_);
       }

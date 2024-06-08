@@ -34,7 +34,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x0b\b§ extends dofus.utils.§\x16\x04\x07§
       var _loc9_ = _loc2_["\x17\x14\x1d"](_loc3_);
       var _loc10_ = _loc9_["\x1b\x07\r"];
       var _loc11_ = !_loc6_ && _loc10_ != undefined;
-      if(_loc11_ && !this.api.datacenter.Game["\x18\r\x15"])
+      if(_loc11_ && !this.api.datacenter.Game.isFight)
       {
          var _loc12_ = dofus.graphics.gapi.ui.Party(this.api.ui.getUIComponent("Party"));
          var _loc13_ = false;

@@ -8,11 +8,11 @@ class ank.utils.§\x17\x0e\x0e§ extends String
    }
    function xmlUnescape()
    {
-      return this["\x1a\r\n"](["&lt;","&gt;","&quot;","&amp;","&apos;"],["<",">","\"","&","\'"]);
+      return this.replace(["&lt;","&gt;","&quot;","&amp;","&apos;"],["<",">","\"","&","\'"]);
    }
    function externalInterfaceEscape()
    {
-      return this["\x1a\r\n"](["&amp;","&lt;","&gt;","","\\"],["&ASamp;","&ASlt;","&ASgt;","|","\\\\"]);
+      return this.replace(["&amp;","&lt;","&gt;","","\\"],["&ASamp;","&ASlt;","&ASgt;","|","\\\\"]);
    }
    function §\x1a\r\n§(§\x1a\x04\x1a§, §\x1a\b\x03§)
    {

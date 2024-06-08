@@ -6,7 +6,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
    }
    function §\x1b\x16\x15§(§\x19\x06\x13§)
    {
-      if(this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.datacenter.Game.isFight)
       {
          return undefined;
       }
@@ -23,7 +23,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
    }
    function §\x19\x1e\f§(bSuccess, §\x1a\x1b\r§)
    {
-      if(this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.datacenter.Game.isFight)
       {
          return undefined;
       }
@@ -108,7 +108,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
    }
    function §\x19\x16\x12§(§\x1a\x1b\r§)
    {
-      if(this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.datacenter.Game.isFight)
       {
          return undefined;
       }

@@ -669,7 +669,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.
    }
    function doubleClick(oEvent)
    {
-      if(!this.api.datacenter.Game["\x18\r\x15"] && !this.isDungeonMapDisplayed)
+      if(!this.api.datacenter.Game.isFight && !this.isDungeonMapDisplayed)
       {
          var _loc3_ = _loc2_.coordinates.x;
          var _loc4_ = _loc2_.coordinates.y;

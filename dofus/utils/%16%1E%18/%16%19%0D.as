@@ -264,7 +264,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                break;
             case "LIST":
             case "PLAYERS":
-               if(!this.api.datacenter.Game["\x18\r\x15"])
+               if(!this.api.datacenter.Game.isFight)
                {
                   this.api.kernel.showMessage(undefined,this.api.lang.getText("CANT_DO_COMMAND_HERE",[_loc6_]),"ERROR_CHAT");
                   return undefined;
@@ -281,7 +281,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                this.api.kernel.showMessage(undefined,this.api.lang.getText("PLAYERS_LIST") + " :\n" + _loc32_.join("\n"),"COMMANDS_CHAT");
                break;
             case "KICK":
-               if(!this.api.datacenter.Game["\x18\r\x15"] || this.api.datacenter.Game["\x18\x0f\x12"])
+               if(!this.api.datacenter.Game.isFight || this.api.datacenter.Game.isRunning)
                {
                   this.api.kernel.showMessage(undefined,this.api.lang.getText("CANT_DO_COMMAND_HERE",[_loc6_]),"ERROR_CHAT");
                   return undefined;
@@ -307,7 +307,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                break;
             case "SPECTATOR":
             case "SPEC":
-               if(!this.api.datacenter.Game["\x18\x0f\x12"] || this.api.datacenter.Game["\x18\x0f\x1b"])
+               if(!this.api.datacenter.Game.isRunning || this.api.datacenter.Game["\x18\x0f\x1b"])
                {
                   this.api.kernel.showMessage(undefined,this.api.lang.getText("CANT_DO_COMMAND_HERE",[_loc6_]),"ERROR_CHAT");
                   return undefined;
@@ -440,7 +440,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                this.api.kernel.showMessage(undefined,"(°~°)","ERROR_BOX");
                break;
             case "TACTIC":
-               if(this.api.datacenter.Player.isAuthorized || this.api.datacenter.Game["\x18\r\x15"])
+               if(this.api.datacenter.Player.isAuthorized || this.api.datacenter.Game.isFight)
                {
                   var _loc40_ = !this.api.datacenter.Game["\x18\x10\x02"];
                   this.api.datacenter.Game["\x18\x10\x02"] = _loc40_;
@@ -562,35 +562,35 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
    {
       ank.utils.["\x17\x0e\x10"]["\x15\x1d\f"]();
       var _loc3_ = this.api.lang.getText("INLINE_VARIABLE_POSITION").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc3_,"[" + this.api.datacenter.["\x18\x18\x0e"].x + ", " + this.api.datacenter.["\x18\x18\x0e"].y + "]");
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc3_,"[" + this.api.datacenter.["\x18\x18\x0e"].x + ", " + this.api.datacenter.["\x18\x18\x0e"].y + "]");
       var _loc4_ = this.api.lang.getText("INLINE_VARIABLE_AREA").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc4_,this.api.lang["\x17\x1b\x06"](this.api.datacenter.["\x18\x18\x0e"].area).n);
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc4_,this.api.lang["\x17\x1b\x06"](this.api.datacenter.["\x18\x18\x0e"].area).n);
       var _loc5_ = this.api.lang.getText("INLINE_VARIABLE_SUBAREA").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc5_,this.api.lang["\x17\x1b\x0f"](this.api.datacenter.["\x18\x18\x0e"]["\x1b\x0b\x17"]).n);
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc5_,this.api.lang["\x17\x1b\x0f"](this.api.datacenter.["\x18\x18\x0e"]["\x1b\x0b\x17"]).n);
       var _loc6_ = this.api.lang.getText("INLINE_VARIABLE_MYSELF").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc6_,this.api.datacenter.Player.Name);
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc6_,this.api.datacenter.Player.Name);
       var _loc7_ = this.api.lang.getText("INLINE_VARIABLE_LEVEL").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc7_,String(this.api.datacenter.Player.Level));
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc7_,String(this.api.datacenter.Player.Level));
       var _loc8_ = this.api.lang.getText("INLINE_VARIABLE_GUILD").split(",");
       var _loc9_ = this.api.datacenter.Player.guildInfos.name;
       if(_loc9_ == undefined)
       {
          _loc9_ = this.api.lang.getText("INLINE_VARIABLE_GUILD_ERROR");
       }
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc8_,_loc9_);
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc8_,_loc9_);
       var _loc10_ = this.api.lang.getText("INLINE_VARIABLE_MAXLIFE").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc10_,String(this.api.datacenter.Player.LPmax));
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc10_,String(this.api.datacenter.Player.LPmax));
       var _loc11_ = this.api.lang.getText("INLINE_VARIABLE_LIFE").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc11_,String(this.api.datacenter.Player.LP));
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc11_,String(this.api.datacenter.Player.LP));
       var _loc12_ = this.api.lang.getText("INLINE_VARIABLE_LIFEPERCENT").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc12_,String(Math.round(this.api.datacenter.Player.LP / this.api.datacenter.Player.LPmax * 100)));
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc12_,String(Math.round(this.api.datacenter.Player.LP / this.api.datacenter.Player.LPmax * 100)));
       var _loc13_ = this.api.lang.getText("INLINE_VARIABLE_EXPERIENCE").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc13_,this.getCurrentPercent());
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc13_,this.getCurrentPercent());
       var _loc14_ = this.api.lang.getText("INLINE_VARIABLE_STATS").split(",");
-      if(new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc14_,"X").length != _loc2_.length)
+      if(new ank.utils.ExtendedString(_loc2_).replace(_loc14_,"X").length != _loc2_.length)
       {
          var _loc15_ = this.api.lang.getText("INLINE_VARIABLE_STATS_RESULT",[String(this.api.datacenter.Player.Vitality) + (this.api.datacenter.Player.VitalityXtra == 0 ? "" : " (" + ((this.api.datacenter.Player.VitalityXtra <= 0 ? "" : "+") + String(this.api.datacenter.Player.VitalityXtra)) + ")"),String(this.api.datacenter.Player.Wisdom) + (this.api.datacenter.Player.WisdomXtra == 0 ? "" : " (" + ((this.api.datacenter.Player.WisdomXtra <= 0 ? "" : "+") + String(this.api.datacenter.Player.WisdomXtra)) + ")"),String(this.api.datacenter.Player.Force) + (this.api.datacenter.Player.ForceXtra == 0 ? "" : " (" + ((this.api.datacenter.Player.ForceXtra <= 0 ? "" : "+") + String(this.api.datacenter.Player.ForceXtra)) + ")"),String(this.api.datacenter.Player.Intelligence) + (this.api.datacenter.Player.IntelligenceXtra == 0 ? "" : " (" + ((this.api.datacenter.Player.IntelligenceXtra <= 0 ? "" : "+") + String(this.api.datacenter.Player.IntelligenceXtra)) + ")"),String(this.api.datacenter.Player.Chance) + (this.api.datacenter.Player.ChanceXtra == 0 ? "" : " (" + ((this.api.datacenter.Player.ChanceXtra <= 0 ? "" : "+") + String(this.api.datacenter.Player.ChanceXtra)) + ")"),String(this.api.datacenter.Player.Agility) + (this.api.datacenter.Player.AgilityXtra == 0 ? "" : " (" + ((this.api.datacenter.Player.AgilityXtra <= 0 ? "" : "+") + String(this.api.datacenter.Player.AgilityXtra)) + ")"),String(this.api.datacenter.Player.Initiative),String(this.api.datacenter.Player.AP),String(this.api.datacenter.Player.MP)]);
-         _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](_loc14_,_loc15_);
+         _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc14_,_loc15_);
       }
       return _loc2_;
    }

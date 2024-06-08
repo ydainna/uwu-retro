@@ -722,7 +722,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MiniMap extends dofus.§\x18\
    function doubleClick(oEvent)
    {
       this["\x1d\x17\x1b"] = 8525;
-      if(!this.api.datacenter.Game["\x18\r\x15"] && !this._bIsInDungeon)
+      if(!this.api.datacenter.Game.isFight && !this._bIsInDungeon)
       {
          var _loc3_ = _loc2_.coordinates.x;
          var _loc4_ = _loc2_.coordinates.y;

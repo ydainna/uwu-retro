@@ -299,7 +299,7 @@ class ank.gapi.§\x17\x01\x06§.ComboBox extends ank.gapi.§\x17\x01\x0f§.§\x1
       else
       {
          var _loc3_ = new ank.utils.ExtendedString(String(this["\x1e\x0b\x01"]));
-         var _loc4_ = _loc3_["\x1a\r\n"]("this",String(this));
+         var _loc4_ = _loc3_.replace("this",String(this));
          _loc2_ = eval(String(_loc4_));
       }
       if(_loc2_ == undefined)

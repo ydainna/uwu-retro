@@ -54,7 +54,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.AskPrivateChat extends ank.gapi.ui.FlyWindo
             break;
          case "_btnSend":
             var _loc3_ = this._winBackground.content["\x1e\x0f\x12"].text;
-            _loc3_ = new ank.utils.ExtendedString(_loc3_)["\x1a\r\n"](String.fromCharCode(13)," ");
+            _loc3_ = new ank.utils.ExtendedString(_loc3_).replace(String.fromCharCode(13)," ");
             this["\x17\x07\x19"]({type:"send",message:_loc3_,params:this.params});
             this["\x1b\x13\x13"]();
             break;

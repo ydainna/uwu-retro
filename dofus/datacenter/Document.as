@@ -107,7 +107,7 @@ class dofus.§\x17\x04\x19§.Document extends Object
                         _loc13_ = "<br/><p class=\'chapter\'>" + _loc4_[_loc12_][0] + "</p><br/>";
                      }
                   }
-                  _loc9_[_loc12_] = ank.utils.["\x1a\x04\t"]["\x1a\r\n"](_loc9_[_loc12_],_loc11_);
+                  _loc9_[_loc12_] = ank.utils.["\x1a\x04\t"].replace(_loc9_[_loc12_],_loc11_);
                   _loc3_;
                   this["\x1b\x1e\n"].push({type:"text",num:_loc3_++,text:_loc13_ + _loc9_[_loc12_],cssFile:this["\x1e\b\x10"]});
                   _loc12_ = _loc12_ + 1;
@@ -119,7 +119,7 @@ class dofus.§\x17\x04\x19§.Document extends Object
          case "roadsignright":
             var _loc14_ = _loc2_.pages[0];
             var _loc15_ = this.api.kernel["\x17\t\x05"]["\x17\x16\x04"]() + "#1/#2.#1";
-            _loc14_ = ank.utils.["\x1a\x04\t"]["\x1a\r\n"](_loc14_,_loc15_);
+            _loc14_ = ank.utils.["\x1a\x04\t"].replace(_loc14_,_loc15_);
             this["\x1b\x1e\n"].push({text:_loc14_,cssFile:this["\x1e\b\x10"]});
       }
    }

@@ -193,7 +193,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
    }
    function §\x16\x1b\x18§(§\x16\x0e\x04§)
    {
-      if(_loc2_ && this.api.datacenter.Game["\x18\x0f\x12"])
+      if(_loc2_ && this.api.datacenter.Game.isRunning)
       {
          if(this.api.datacenter.Game["\x18\x0b\t"] == dofus.datacenter..Game["\x18\x0b\x1b"] || this.api.datacenter.Game["\x18\x0b\t"] == dofus.datacenter..Game["\x18\x0b\x17"])
          {
@@ -211,11 +211,11 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
       this.api.gfx["\x16\x1c\x0b"]();
       this.api.gfx["\x1b\x13\x18"](true);
       delete this.api.datacenter.Player["\x17\x03\x1d"];
-      if(!(this.api.datacenter.Game["\x18\r\x15"] && !this.api.datacenter.Game["\x18\x0f\x12"]))
+      if(!(this.api.datacenter.Game.isFight && !this.api.datacenter.Game.isRunning))
       {
          this.api.datacenter.Game["\x1a\x17\t"]("move");
       }
-      this.api.datacenter.Player["\x18\x0b\b"].setState(this.api.datacenter.Game["\x18\r\x15"]);
+      this.api.datacenter.Player["\x18\x0b\b"].setState(this.api.datacenter.Game.isFight);
    }
    function §\x1b\x0f\x0e§()
    {
@@ -279,7 +279,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
    }
    function §\x1b\r\b§(§\x19\x13\x07§)
    {
-      if(this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.datacenter.Game.isFight)
       {
          return undefined;
       }
@@ -294,7 +294,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
    }
    function §\x1b\r\x06§()
    {
-      if(!this.api.datacenter.Game["\x18\r\x15"])
+      if(!this.api.datacenter.Game.isFight)
       {
          return false;
       }
@@ -312,7 +312,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
    {
       if(_loc4_ != true)
       {
-         if(!this.api.datacenter.Game["\x18\x0f\x12"])
+         if(!this.api.datacenter.Game.isRunning)
          {
             return undefined;
          }
@@ -877,12 +877,12 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
       {
          return undefined;
       }
-      var _loc4_ = this.api.datacenter.Game["\x18\r\x15"];
+      var _loc4_ = this.api.datacenter.Game.isFight;
       var _loc5_ = _loc3_.id;
       var _loc6_ = _loc3_.name;
       var _loc7_ = this.api.ui["\x17\x02\x19"]();
       _loc7_["\x15\x1e\x18"](_loc6_);
-      if(_loc4_ && (!this.api.datacenter.Game["\x18\x0f\x12"] && (_loc3_["\x18\x12\x02"] || this.api.datacenter.Player.isAuthorized)))
+      if(_loc4_ && (!this.api.datacenter.Game.isRunning && (_loc3_["\x18\x12\x02"] || this.api.datacenter.Player.isAuthorized)))
       {
          _loc7_["\x15\x1d\x12"](this.api.lang.getText("KICK"),this.api.network.Game,this.api.network.Game["\x18\x13\x1d"],[_loc5_]);
       }
@@ -893,7 +893,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
    }
    function §\x16\x04\x0b§()
    {
-      if(!this.api.datacenter.Game["\x18\r\x15"] && this.api.gfx["\x18\r\b"])
+      if(!this.api.datacenter.Game.isFight && this.api.gfx["\x18\r\b"])
       {
          var _loc2_ = this.api.datacenter.Game["\x1a\x05\x10"];
          var _loc3_ = this.api.kernel.OptionsManager.getOption("CreaturesMode");
@@ -1000,7 +1000,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
             }
          }
       }
-      var _loc11_ = this.api.datacenter.Game["\x18\r\x15"];
+      var _loc11_ = this.api.datacenter.Game.isFight;
       var _loc12_ = _loc6_ != undefined ? _loc6_ : _loc8_.name;
       if(Key.isDown(Key.SHIFT) && _loc12_ != this.api.datacenter.Player.Name)
       {
@@ -1213,7 +1213,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
       {
          _loc4_ = _loc2_.hasTtgCollection;
       }
-      var _loc9_ = this.api.datacenter.Game["\x18\r\x15"];
+      var _loc9_ = this.api.datacenter.Game.isFight;
       if(!_global.isNaN(_loc3_.sPlayerID))
       {
          _loc3_.sPlayerID = String(_loc3_.sPlayerID);
@@ -1229,7 +1229,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
       }
       if(_loc9_)
       {
-         if(!this.api.datacenter.Game["\x18\x0f\x12"] && (!this.api.datacenter.Player.isMutant || this.api.datacenter.Player.canAttackDungeonMonstersWhenMutant))
+         if(!this.api.datacenter.Game.isRunning && (!this.api.datacenter.Player.isMutant || this.api.datacenter.Player.canAttackDungeonMonstersWhenMutant))
          {
             if(_loc2_ != null && _loc10_ != this.api.datacenter.Player.ID)
             {
@@ -1402,7 +1402,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
       }
       if(this["\x1d\x17\x19"] + _loc3_ < 3947)
       {
-         if(this.api.datacenter.Game["\x18\r\x15"] && (this.api.datacenter.Game["\x18\x0f\x12"] && this.api.datacenter.Player.isCurrentPlayer))
+         if(this.api.datacenter.Game.isFight && (this.api.datacenter.Game.isRunning && this.api.datacenter.Player.isCurrentPlayer))
          {
             if(this["\x16\b\x01"])
             {

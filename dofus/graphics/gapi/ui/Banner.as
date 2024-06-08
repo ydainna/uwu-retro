@@ -82,7 +82,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
       {
          this._btnFights.icon = "Eye2";
       }
-      var _loc2_ = this["\x1d\x16\x05"] != 0 && !this.api.datacenter.Game["\x18\r\x15"];
+      var _loc2_ = this["\x1d\x16\x05"] != 0 && !this.api.datacenter.Game.isFight;
       this._btnFights._visible = _loc2_;
    }
    function §\x1a\x19\x14§(§\x16\x12\x05§)
@@ -420,7 +420,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
       this.updatePvPButtonState();
       if(this.api.kernel.OptionsManager.getOption("MovableBar"))
       {
-         this["\x17\b\x0b"](this.api.kernel.OptionsManager.getOption("MovableBar") && (!this.api.kernel.OptionsManager.getOption("HideSpellBar") || this.api.datacenter.Game["\x18\r\x15"]));
+         this["\x17\b\x0b"](this.api.kernel.OptionsManager.getOption("MovableBar") && (!this.api.kernel.OptionsManager.getOption("HideSpellBar") || this.api.datacenter.Game.isFight));
       }
       this["\x1a\x15\r"]("",false);
    }
@@ -762,9 +762,9 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
             }
             break;
          case "NEXTTURN":
-            if(!this["\x18\r\x03"]() && this.api.datacenter.Game["\x18\r\x15"])
+            if(!this["\x18\r\x03"]() && this.api.datacenter.Game.isFight)
             {
-               if(!this.api.datacenter.Game["\x18\x0f\x12"])
+               if(!this.api.datacenter.Game.isRunning)
                {
                   var _loc7_ = dofus.graphics.gapi.ui.ChallengeMenu(this.gapi.getUIComponent("ChallengeMenu"));
                   if(_loc7_ != undefined)
@@ -1071,7 +1071,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
             this.gapi["\x18\x16\x19"]("Friends","Friends");
             break;
          case "_btnFights":
-            if(!this.api.datacenter.Game["\x18\r\x15"])
+            if(!this.api.datacenter.Game.isFight)
             {
                this.gapi.loadUIComponent("FightsInfos","FightsInfos",null,{bAlwaysOnTop:true});
             }
@@ -1081,13 +1081,13 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
             this.openChatPrefixMenu();
             break;
          case "_btnNextTurn":
-            if(this.api.datacenter.Game["\x18\r\x15"])
+            if(this.api.datacenter.Game.isFight)
             {
                this.api.network.Game["\x1a\x06\x19"]();
             }
             break;
          case "_btnGiveUp":
-            if(this.api.datacenter.Game["\x18\r\x15"])
+            if(this.api.datacenter.Game.isFight)
             {
                if(this.api.datacenter.Game["\x18\x0f\x1b"])
                {
@@ -1135,7 +1135,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
       var _loc4_ = this.api.ui["\x17\x02\x19"]();
       _loc4_["\x15\x1e\x18"](this.api.lang.getText("CHAT_PREFIX"));
       _loc4_["\x15\x1d\x12"](this.api.lang.getText("DEFAUT") + " (/s)",this,this["\x1a\x15\r"],["/s"]);
-      _loc4_["\x15\x1d\x12"](this.api.lang.getText("TEAM") + " (/t)",this,this["\x1a\x15\r"],["/t"],this.api.datacenter.Game["\x18\r\x15"]);
+      _loc4_["\x15\x1d\x12"](this.api.lang.getText("TEAM") + " (/t)",this,this["\x1a\x15\r"],["/t"],this.api.datacenter.Game.isFight);
       _loc4_["\x15\x1d\x12"](this.api.lang.getText("PARTY") + " (/p)",this,this["\x1a\x15\r"],["/p"],this.api.ui.getUIComponent("Party") != undefined);
       _loc4_["\x15\x1d\x12"](this.api.lang.getText("GUILD") + " (/g)",this,this["\x1a\x15\r"],["/g"],this.api.datacenter.Player.guildInfos != undefined);
       if(_loc3_[4])
@@ -1323,7 +1323,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
                case "clock":
                   this.gapi.showTooltip(this.api.kernel["\x19\b\x11"].time + "\n" + this.api.kernel["\x19\b\x11"]["\x17\x15\x1c"](),_loc2_.target,0,{bXLimit:true,bYLimit:false});
             }
-            if(!this.api.datacenter.Game["\x18\r\x15"])
+            if(!this.api.datacenter.Game.isFight)
             {
                this._circleXtra["\x1a\x1b\b"](this["\x1d\t\x1c"]);
                this["\x18\x1e\x18"](true);
@@ -1340,7 +1340,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
       if((_loc0_ = _loc2_.target._name) === "_mcXtra")
       {
          this["\x18\x1e\x18"](false);
-         if(!this.api.datacenter.Game["\x18\r\x15"] && this.api.kernel.OptionsManager.getOption("BannerGaugeMode") == "none")
+         if(!this.api.datacenter.Game.isFight && this.api.kernel.OptionsManager.getOption("BannerGaugeMode") == "none")
          {
             this._circleXtra["\x1a\x1b\b"](this["\x1d\t\x1c"]);
          }
@@ -1375,7 +1375,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
    function apChanged(oEvent)
    {
       this._pvAP.value = _loc2_.value;
-      if(!this.api.datacenter.Game["\x18\r\x15"])
+      if(!this.api.datacenter.Game.isFight)
       {
       }
       this._msShortcuts["\x1a\x19\x1b"]();
@@ -1477,7 +1477,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
             this.addToQueue({object:this.api.ui,method:this.api.ui.loadUIComponent,params:["AskLinkWarning","AskLinkWarning",{text:this.api.lang.getText(_loc4_[1])}]});
             break;
          case "highlightSprite":
-            if(!this.api.datacenter.Game["\x18\x0f\x12"])
+            if(!this.api.datacenter.Game.isRunning)
             {
                break;
             }

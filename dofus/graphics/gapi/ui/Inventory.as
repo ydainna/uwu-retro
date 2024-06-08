@@ -109,7 +109,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Inventory extends dofus.§\x18\x03\x10§.ga
    function destroy()
    {
       this.gapi.hideTooltip();
-      if(this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.datacenter.Game.isFight)
       {
          this.gapi.getUIComponent("Banner")["\x1a\x1c\x10"].setCurrentTab("Spells");
       }

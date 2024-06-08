@@ -28,7 +28,7 @@ class dofus.§\x17\x04\x19§.§\x1a\x05\t§ extends ank.battlefield.§\x17\x04\x
    function updateLP(§\x17\t\x01§)
    {
       this.LP += Number(_loc2_);
-      if(_loc2_ < 0 && this.api.datacenter.Game["\x18\r\x15"])
+      if(_loc2_ < 0 && this.api.datacenter.Game.isFight)
       {
          this.LPmax -= Math.floor((0 - _loc2_) * this.api.lang.getConfigText("PERMANENT_DAMAGE"));
          if(this.api.datacenter.Player.ID == this.id)
@@ -251,7 +251,7 @@ class dofus.§\x17\x04\x19§.§\x1a\x05\t§ extends ank.battlefield.§\x17\x04\x
       var _loc3_ = this.api.lang["\x17\x19\x1d"](_loc2_);
       if(_loc3_.an == undefined)
       {
-         if(this.api.datacenter.Game["\x18\r\x15"])
+         if(this.api.datacenter.Game.isFight)
          {
             return "anim0";
          }

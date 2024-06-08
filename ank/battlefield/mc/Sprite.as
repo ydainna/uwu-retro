@@ -415,7 +415,7 @@ class ank.battlefield.mc.§\x1b\x07\x04§ extends MovieClip
    }
    function §\x1a\x14\x1b§(§\x16\x03\x15§, §\x16\x0e\x13§, §\x16\x0b\x1c§)
    {
-      if(this.api.datacenter.Game["\x18\x0f\x12"])
+      if(this.api.datacenter.Game.isRunning)
       {
          var _loc5_ = this._oData.sequencer.getCurrentAction();
          if(_loc5_ != undefined && (_loc5_.object == this && (_loc5_.fn == this.setAnim && (_loc5_.waitEnd && (!_loc5_.forceTimeout && _loc5_.functionApplied)))))

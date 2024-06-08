@@ -20,7 +20,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
          this.api.kernel.showMessage(undefined,this.api.lang.getText("CANT_WISP_BLACKLISTED"),"ERROR_CHAT");
          return undefined;
       }
-      _loc2_ = new ank.utils.ExtendedString(_loc2_)["\x1a\r\n"](["|"],[""]);
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(["|"],[""]);
       var _loc5_ = this.api.kernel.ChatManager["\x16\x04\x11"](_loc2_);
       if(!_loc5_)
       {
@@ -245,7 +245,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
             _loc6_ = this.api.lang.getText("TO_DESTINATION") + " " + this["\x17\x1a\x1d"](_loc8_,_loc7_) + " : " + this["\x17\x1a\x1c"](_loc8_,_loc7_,_loc14_,_loc10_,_loc6_);
             break;
          case "#":
-            if(this.api.datacenter.Game["\x18\r\x15"])
+            if(this.api.datacenter.Game.isFight)
             {
                _loc12_ = "WHISP_CHAT";
                var _loc15_ = this.isLivingItemMessage(_loc6_);
@@ -315,7 +315,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
             var _loc25_ = this.isLivingItemMessage(_loc6_);
             if(this.api.lang.getConfigText("EMOTES_ENABLED") && (!_loc25_ && (_loc6_.charAt(0) == dofus.Constants["\x17\f\x1b"] && _loc6_.charAt(_loc6_.length - 1) == dofus.Constants["\x17\f\x1b"])))
             {
-               if(!this.api.datacenter.Game["\x18\x0f\x12"] && this.api.kernel.ChatManager["\x18\x10\b"](2))
+               if(!this.api.datacenter.Game.isRunning && this.api.kernel.ChatManager["\x18\x10\b"](2))
                {
                   var _loc26_ = !(_loc6_.charAt(_loc6_.length - 2) == "." && _loc6_.charAt(_loc6_.length - 3) != ".") ? _loc6_ : _loc6_.substr(0,_loc6_.length - 2) + dofus.Constants["\x17\f\x1b"];
                   _loc26_ = dofus.Constants["\x17\f\x1b"] + _loc26_.charAt(1).toUpperCase() + _loc26_.substr(2);
@@ -333,7 +333,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
             if(_loc6_.substr(0,7) == "!THINK!")
             {
                _loc6_ = _loc6_.substr(7);
-               if(!this.api.datacenter.Game["\x18\x0f\x12"] && this.api.kernel.ChatManager["\x18\x10\b"](2))
+               if(!this.api.datacenter.Game.isRunning && this.api.kernel.ChatManager["\x18\x10\b"](2))
                {
                   this.api.gfx["\x15\x1e\x10"](_loc8_,this.api.kernel.ChatManager["\x16\x04\r"](_loc6_),ank.battlefield["\x1b\x0f\x13"]["\x16\x13\x1c"]);
                }
@@ -348,7 +348,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
                _loc6_ = this.parseLivingItemMessage(_loc6_,_loc8_,_loc7_,_loc10_);
                break;
             }
-            if(!this.api.datacenter.Game["\x18\x0f\x12"] && this.api.kernel.ChatManager["\x18\x10\b"](2))
+            if(!this.api.datacenter.Game.isRunning && this.api.kernel.ChatManager["\x18\x10\b"](2))
             {
                this.api.gfx["\x15\x1e\x10"](_loc8_,this.api.kernel.ChatManager["\x16\x04\r"](_loc6_));
             }
@@ -409,7 +409,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
       var _loc5_ = Number(_loc3_[1]);
-      if(!this.api.datacenter.Game["\x18\r\x15"] && !this.api.datacenter.Game["\x18\x0f\x12"])
+      if(!this.api.datacenter.Game.isFight && !this.api.datacenter.Game.isRunning)
       {
          if(_loc4_ != this.api.datacenter.Player.ID && this.api.gfx.spriteHandler["\x18\x0f\f"] || this.api.kernel.ChatManager["\x18\f\x16"](this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc4_).name))
          {
@@ -432,7 +432,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
       if(_loc7_.m)
       {
          _loc2_ = _loc7_.m;
-         if(!this.api.datacenter.Game["\x18\x0f\x12"] && this.api.kernel.ChatManager["\x18\x10\b"](2))
+         if(!this.api.datacenter.Game.isRunning && this.api.kernel.ChatManager["\x18\x10\b"](2))
          {
             this.api.gfx["\x15\x1e\x10"](sFromID,this.api.kernel.ChatManager["\x16\x04\r"](_loc2_));
          }

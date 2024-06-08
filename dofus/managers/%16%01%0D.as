@@ -758,7 +758,7 @@ if(!dofus.managers["\x16\x01\r"])
    };
    _loc1_.move = function move(§\x19\x04\x12§, §\x16\b\x16§)
    {
-      this.api.datacenter.Player["\x18\x0b\b"]["\x16\x15\b"](this.api.gfx["\x18\x18\x15"],_loc2_,true,this.api.datacenter.Game["\x18\r\x15"],true,_loc3_);
+      this.api.datacenter.Player["\x18\x0b\b"]["\x16\x15\b"](this.api.gfx["\x18\x18\x15"],_loc2_,true,this.api.datacenter.Game.isFight,true,_loc3_);
       if(this.api.datacenter.Basics.interactionsManager_path.length != 0)
       {
          var _loc4_ = ank.battlefieldutils.["\x16\x1e\t"]["\x16\x1e\n"](this.api.datacenter.Basics.interactionsManager_path);
@@ -788,9 +788,9 @@ if(!dofus.managers["\x16\x01\r"])
    };
    _loc1_.replaceLabel = function replaceLabel(sText)
    {
-      return this["\x1a\r\n"](_loc2_,true);
+      return this.replace(_loc2_,true);
    };
-   _loc1_["\x1a\r\n"] = function §\x1a\r\n§(sText, bLabel)
+   _loc1_.replace = function §\x1a\r\n§(sText, bLabel)
    {
       var _loc4_ = new Array();
       _loc4_.push({f:"%et",t:this._aPreparedReplaceVars[2]});
@@ -848,7 +848,7 @@ if(!dofus.managers["\x16\x01\r"])
          }
          _loc4_ = _loc4_ + 1;
       }
-      return this["\x1a\r\n"](_loc2_);
+      return this.replace(_loc2_);
    };
    _loc1_["\x1a\r\x0f"] = function §\x1a\r\x0f§(sText, §\x1b\x0b\b§, §\x1b\x07\x1a§)
    {

@@ -5,7 +5,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\b\x1a§.§\x16\b\x1b§
    }
    static function §\x1a\x1d\x12§(§\x18\x1b\r§)
    {
-      if(_loc2_.api.datacenter.Player.XP == undefined || _loc2_.api.datacenter..Game["\x18\r\x15"])
+      if(_loc2_.api.datacenter.Player.XP == undefined || _loc2_.api.datacenter..Game.isFight)
       {
          return undefined;
       }

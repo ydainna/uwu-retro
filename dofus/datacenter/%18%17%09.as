@@ -804,7 +804,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.§\x16\x04\x07§
    }
    function checkCanMoveItem()
    {
-      var _loc2_ = this.api.datacenter.Game["\x18\x0f\x12"];
+      var _loc2_ = this.api.datacenter.Game.isRunning;
       var _loc3_ = this.api.datacenter.Exchange != undefined;
       var _loc4_ = this.api.datacenter.["\x18\x18\x0e"].bCanEquipItem;
       var _loc5_ = this.api.datacenter.["\x18\x18\x0e"].bCanUseItem;
@@ -995,7 +995,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.§\x16\x04\x07§
    }
    function §\x16\x15\x19§(nCharacID)
    {
-      if(this.api.datacenter.Game["\x18\x0f\x12"])
+      if(this.api.datacenter.Game.isRunning)
       {
          return false;
       }

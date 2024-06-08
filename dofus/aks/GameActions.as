@@ -46,7 +46,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
    }
    function joinChallengeAsSpectator(§\x19\x04\x16§, §\x1b\b\x10§)
    {
-      if(this.api.datacenter.Game["\x18\x0f\x12"] || this.api.datacenter.Exchange != undefined)
+      if(this.api.datacenter.Game.isRunning || this.api.datacenter.Exchange != undefined)
       {
          this.api.kernel.showMessage(undefined,this.api.lang.getText("CANT_BECAUSE_BUSY"),"ERROR_CHAT");
          return undefined;
@@ -98,7 +98,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
       }
       var _loc4_ = this.api.datacenter.Player.data;
       _loc4_["\x17\x13\x05"].m_bNextAction = true;
-      if(this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.datacenter.Game.isFight)
       {
          var _loc5_ = _loc4_.sequencer;
          _loc5_.execute();
@@ -116,7 +116,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
       var _loc6_ = this.api.datacenter.Player.data;
       var _loc7_ = _loc6_.sequencer;
       _loc6_["\x17\x13\x05"].m_bNextAction = false;
-      if(this.api.datacenter.Game["\x18\r\x15"])
+      if(this.api.datacenter.Game.isFight)
       {
          _loc7_.addAction(32,false,this.api.kernel.GameManager,this.api.kernel.GameManager["\x1a\x16\x0b"],[ank.battlefield.Constants["\x18\x0b\r"]]);
          if(_loc4_ != undefined)
@@ -155,7 +155,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          _loc6_ = this.api.datacenter.Player.ID;
       }
       var _loc9_ = this.api.datacenter.Game["\x17\x03\x1a"];
-      if(this.api.datacenter.Game["\x18\r\x15"] && _loc9_ != undefined)
+      if(this.api.datacenter.Game.isFight && _loc9_ != undefined)
       {
          var _loc8_ = _loc9_;
       }

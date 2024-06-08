@@ -22,7 +22,7 @@ class dofus.aks.extend.GameActionsEx
                getURL("JavaScript:WriteLog(\'Mouvement\')","_self");
                this.api.datacenter.Basics.first_movement = true;
             }
-            if(sSenderID == this.api.datacenter.Player.ID && (this.api.datacenter.Game["\x18\r\x15"] && this.api.datacenter.Game["\x18\x0f\x12"]))
+            if(sSenderID == this.api.datacenter.Player.ID && (this.api.datacenter.Game.isFight && this.api.datacenter.Game.isRunning))
             {
                _loc5_.addAction(35,false,this.api.gfx,this.api.gfx["\x1a\x17\x06"],[ank.battlefield.Constants["\x18\x0b\n"]]);
             }
@@ -36,8 +36,8 @@ class dofus.aks.extend.GameActionsEx
             }
             var _loc11_ = _loc9_["\x17\x12\b"];
             var _loc12_ = _loc9_["\x17\x12\n"];
-            var _loc13_ = !this.api.datacenter.Game["\x18\r\x15"] ? (!(_loc9_ instanceof dofus.datacenter.["\x16\x19\x02"]) ? 6 : 3) : 3;
-            if(this.api.datacenter.Game["\x18\x0f\x12"])
+            var _loc13_ = !this.api.datacenter.Game.isFight ? (!(_loc9_ instanceof dofus.datacenter.["\x16\x19\x02"]) ? 6 : 3) : 3;
+            if(this.api.datacenter.Game.isRunning)
             {
                _loc5_.addAction(37,false,this.api.gfx,this.api.gfx["\x1b\x13\x18"],[true]);
                _loc5_.addAction(175,false,this.api.gfx,this.api.gfx["\x19\x01\x0b"],[sSenderID,_loc10_,_loc5_,false,_loc11_,_loc12_,_loc13_]);

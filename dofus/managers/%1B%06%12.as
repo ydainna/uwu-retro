@@ -89,7 +89,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x06\x12§
    }
    function §\x16\x19\x1b§(§\x19\x0e\x17§, §\x19\x0e\x19§)
    {
-      if(!this.api.datacenter.Game["\x18\x0f\x12"] || (this.api.datacenter.Game["\x18\x0f\x1b"] || (!this.api.gfx.isOnBattlefield(this.api.datacenter.Player.ID) || this.api.datacenter.Player["\x18\r\x0f"])))
+      if(!this.api.datacenter.Game.isRunning || (this.api.datacenter.Game["\x18\x0f\x1b"] || (!this.api.gfx.isOnBattlefield(this.api.datacenter.Player.ID) || this.api.datacenter.Player["\x18\r\x0f"])))
       {
          return {can:false,type:"NOT_IN_FIGHT"};
       }
@@ -197,7 +197,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x06\x12§
       {
          return false;
       }
-      if(!this.api.datacenter.Game["\x18\r\x15"])
+      if(!this.api.datacenter.Game.isFight)
       {
          return false;
       }

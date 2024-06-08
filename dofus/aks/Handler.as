@@ -43,7 +43,7 @@ class dofus.aks.Handler extends dofus.utils.§\x16\x04\x07§
             }
             else
             {
-               var _loc6_ = new ank.utils.ExtendedString(_loc5_)["\x1a\r\n"](dofus.aks.Handler.CONSOLE_ARGS_SAFE_SPLIT,"");
+               var _loc6_ = new ank.utils.ExtendedString(_loc5_).replace(dofus.aks.Handler.CONSOLE_ARGS_SAFE_SPLIT,"");
                _loc3_.push(_loc6_);
             }
          }

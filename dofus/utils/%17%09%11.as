@@ -35,7 +35,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.§\x16\x04\x07§
       {
          return "!" + _loc2_ + "!";
       }
-      return new ank.utils.ExtendedString(_loc7_)["\x1a\r\n"](_loc4_,_loc5_);
+      return new ank.utils.ExtendedString(_loc7_).replace(_loc4_,_loc5_);
    }
    function §\x17\x15\x10§(sKey)
    {
@@ -44,7 +44,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.§\x16\x04\x07§
       {
          var _loc4_ = _loc3_;
          var _loc5_ = new ank.utils.ExtendedString(_loc4_);
-         return _loc5_["\x1a\r\n"](["%CMNT%","%CMNTT%"],[this.api.datacenter.Basics.aks_community_id,this.api.datacenter.Basics.aks_detected_country.toLowerCase()]);
+         return _loc5_.replace(["%CMNT%","%CMNTT%"],[this.api.datacenter.Basics.aks_community_id,this.api.datacenter.Basics.aks_detected_country.toLowerCase()]);
       }
       return _loc3_;
    }
@@ -754,7 +754,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.§\x16\x04\x07§
             this["\x17\x0f\x11"].push(_loc5_);
          }
       }
-      return _loc3_["\x1a\r\n"](this["\x17\x0f\x10"],this["\x17\x0f\x11"]);
+      return _loc3_.replace(this["\x17\x0f\x10"],this["\x17\x0f\x11"]);
    }
    function §\x16\x1c\f§()
    {

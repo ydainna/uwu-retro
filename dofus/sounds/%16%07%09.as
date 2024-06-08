@@ -205,7 +205,7 @@ class dofus..sounds.§\x16\x07\t§ extends dofus.utils.§\x16\x04\x07§
    function playSound(§\x1b\x04\x10§)
    {
       var _loc3_ = new ank.utils.ExtendedString(_loc2_);
-      var _loc4_ = _loc3_["\x1a\r\n"]([" ","é","à","-"],["_","e","a","_"]).toUpperCase();
+      var _loc4_ = _loc3_.replace([" ","é","à","-"],["_","e","a","_"]).toUpperCase();
       var _loc5_ = this.api.lang["\x17\x17\x03"](_loc4_);
       if(_loc5_ != undefined && !_global.isNaN(_loc5_))
       {

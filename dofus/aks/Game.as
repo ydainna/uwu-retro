@@ -301,7 +301,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.datacenter.Game["\x1a\x17\t"]("move");
       this.api.gfx["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\n"]);
       this.api.kernel.GameManager["\x1b\x01\x18"]();
-      this.api.datacenter.Game["\x18\x0f\x12"] = true;
+      this.api.datacenter.Game.isRunning = true;
       var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItems();
       for(var k in _loc4_)
       {
@@ -342,7 +342,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          {
             this.api.sounds["\x17\x0e\x06"]["\x19\x1e\t"]();
          }
-         if(this.api.kernel.GameManager["\x16\b\x01"] && this.api.datacenter.Game["\x18\r\x15"])
+         if(this.api.kernel.GameManager["\x16\b\x01"] && this.api.datacenter.Game.isFight)
          {
             this.api.network.Game["\x1b\x11\x16"]();
          }
@@ -408,7 +408,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    }
    function §\x19\x1e\x07§(§\x1a\x1b\r§)
    {
-      if(!this.api.datacenter.Game["\x18\x0f\x12"])
+      if(!this.api.datacenter.Game.isRunning)
       {
          ank.utils.Logger.err("[innerOnTurnMiddle] on est pas en combat");
          return undefined;
@@ -482,7 +482,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    }
    function §\x1a\x06\x19§()
    {
-      if(!this.api.datacenter.Game["\x18\x0f\x12"] || (!this.api.datacenter.Game["\x18\r\x15"] || !this.api.datacenter.Player.isCurrentPlayer))
+      if(!this.api.datacenter.Game.isRunning || (!this.api.datacenter.Game.isFight || !this.api.datacenter.Player.isCurrentPlayer))
       {
          return undefined;
       }
@@ -533,7 +533,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       {
          dofus["\x1a\x0f\x1a"].getInstance()["\x19\x07\x05"]();
       }
-      if(this.api.datacenter.Game["\x18\x0f\x12"] && this.api.datacenter.Game["\x18\x10\x02"])
+      if(this.api.datacenter.Game.isRunning && this.api.datacenter.Game["\x18\x10\x02"])
       {
          this.api.gfx["\x15\x1c\x19"](this.api,true);
       }
