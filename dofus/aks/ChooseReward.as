@@ -5,7 +5,7 @@ class dofus.aks.ChooseReward extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function onData(§\x1a\x1b\r§)
+   function onData(sExtraData)
    {
       if(_loc2_.length != 0)
       {

@@ -24,7 +24,7 @@ class dofus.aks.Enemies extends dofus.aks.Handler
       }
       this.aks.send("iD" + _loc2_);
    }
-   function §\x19\x13\x1c§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x13\x1c§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -53,7 +53,7 @@ class dofus.aks.Enemies extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x1b\x1d§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1b\x1d§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -69,7 +69,7 @@ class dofus.aks.Enemies extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x16\x1a§(§\x1a\x1b\r§)
+   function §\x19\x16\x1a§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       this.api.datacenter.Player.Enemies = new Array();

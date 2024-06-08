@@ -24,12 +24,12 @@ class dofus.aks.Tutorial extends dofus.aks.Handler
          this.aks.send("TV" + String(_loc2_) + "|" + String(_loc3_) + "|" + String(_loc4_),false);
       }
    }
-   function §\x19\x1c\x19§(§\x1a\x1b\r§)
+   function §\x19\x1c\x19§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](_loc3_);
    }
-   function §\x19\x16\x0b§(§\x1a\x1b\r§)
+   function §\x19\x16\x0b§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];

@@ -8,7 +8,7 @@ class dofus.aks.Job extends dofus.aks.Handler
    {
       this.aks.send("JO" + _loc2_ + "|" + _loc3_ + "|" + _loc4_);
    }
-   function §\x19\x1c\x1a§(§\x1a\x1b\r§)
+   function §\x19\x1c\x1a§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = this.api.datacenter.Player["\x18\x11\x0f"];
@@ -43,7 +43,7 @@ class dofus.aks.Job extends dofus.aks.Handler
          _loc5_ = _loc5_ + 1;
       }
    }
-   function §\x19\x1e\x16§(§\x1a\x1b\r§)
+   function §\x19\x1e\x16§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = this.api.datacenter.Player["\x18\x11\x0f"];
@@ -73,14 +73,14 @@ class dofus.aks.Job extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x19\x17§(§\x1a\x1b\r§)
+   function §\x19\x19\x17§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
       var _loc5_ = Number(_loc3_[1]);
       this.api.kernel.showMessage(this.api.lang.getText("INFORMATIONS"),this.api.lang.getText("NEW_JOB_LEVEL",[this.api.lang["\x17\x1a\x02"](_loc4_).n,_loc5_]),"ERROR_BOX",{name:"NewJobLevel"});
    }
-   function §\x19\x1b\x1c§(§\x1a\x1b\r§)
+   function §\x19\x1b\x1c§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       var _loc4_ = this.api.datacenter.Player["\x18\x11\x0f"];
@@ -91,7 +91,7 @@ class dofus.aks.Job extends dofus.aks.Handler
          _loc4_["\x1a\f\x0b"](_loc5_.index,1);
       }
    }
-   function §\x19\x1a\x1d§(§\x1a\x1b\r§)
+   function §\x19\x1a\x1d§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);

@@ -650,7 +650,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
 
 
 
-   function §\x19\x18\r§(§\x1a\x1b\r§)
+   function §\x19\x18\r§(sExtraData)
    {
       this.api.ui.loadUIComponent("WaitingMessage","WaitingMessage",{text:this.api.lang.getText("CONNECTING")},{bAlwaysOnTop:true,bForceLoad:true});
       if(this.api.datacenter.Basics.aks_rescue_count == -1)
@@ -663,7 +663,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
       this.api.datacenter.Basics.aks_rescue_count = -1;
    }
-   function onTelemetry(§\x1a\x1b\r§, bYolo)
+   function onTelemetry(sExtraData, bYolo)
    {
       if(!this.api.electron.enabled || bYolo)
       {
@@ -676,7 +676,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
          this.api.electron.getTelemetry(_loc2_);
       }
    }
-   function onCharacterSwitchTicket(§\x1a\x1b\r§)
+   function onCharacterSwitchTicket(sExtraData)
    {
       this.api.datacenter.Basics.characterSwitchTicket = _loc2_;
       this.disconnect(true,false,true);
@@ -693,7 +693,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
    function §\x19\x1b\x17§()
    {
    }
-   function §\x19\x1c\x11§(§\x1a\x1b\r§)
+   function §\x19\x1c\x11§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0);
       switch(_loc3_)

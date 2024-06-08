@@ -12,7 +12,7 @@ class dofus.aks.Evenemential extends dofus.aks.Handler
    {
       this.aks.send("Yd" + nDicesCount + "|" + nDiceMaxValue + "|" + sChatChannelSymbol);
    }
-   function onWorldUniqueDropsStates(§\x1a\x1b\r§)
+   function onWorldUniqueDropsStates(sExtraData)
    {
       var _loc3_ = new ank.utils.["\x17\x0e\r"]();
       var _loc4_ = _loc2_.split("|");
@@ -28,7 +28,7 @@ class dofus.aks.Evenemential extends dofus.aks.Handler
       }
       this.api.datacenter.Basics.worldUniqueDropsStates = _loc3_;
    }
-   function onDicesRollResult(§\x1a\x1b\r§)
+   function onDicesRollResult(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0] == "E";

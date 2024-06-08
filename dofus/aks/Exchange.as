@@ -163,7 +163,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
    {
       this.aks.send("EMr",false);
    }
-   function §\x19\x1c\x04§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1c\x04§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -247,7 +247,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x14\x06§(§\x1a\x1b\r§)
+   function §\x19\x14\x06§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -255,14 +255,14 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       var _loc6_ = Number(_loc3_[2]);
       this.api.kernel.GameManager["\x16\x06\x05"](_loc4_,_loc5_,_loc6_);
    }
-   function §\x19\x1b\x18§(§\x1a\x1b\r§)
+   function §\x19\x1b\x18§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "1";
       var _loc4_ = Number(_loc2_.substr(1));
       var _loc5_ = _loc4_ != this.api.datacenter.Player.ID ? 1 : 0;
       this.api.datacenter.Exchange["\x1a\n\x02"]["\x1b\x15\x05"](_loc5_,_loc3_);
    }
-   function §\x19\x19\x16§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x19\x16§(bSuccess, sExtraData)
    {
       delete this.api.datacenter.Basics.aks_exchange_echangeType;
       delete this.api.datacenter.Exchange;
@@ -301,7 +301,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          dofus["\x1a\x0f\x1a"].getInstance()["\x19\x07\x05"]();
       }
    }
-   function §\x19\x16\x0b§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x16\x0b§(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -487,13 +487,13 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             this.api.ui.loadUIComponent("MountStorage","MountStorage",{mounts:_loc21_,parkMounts:_loc22_});
       }
    }
-   function §\x19\x16\x07§(§\x1a\x1b\r§)
+   function §\x19\x16\x07§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = Number(_loc2_.substr(1));
       this.api.kernel.showMessage(undefined,this.api.lang.getText(!_loc3_ ? "CRAFTER_REFERENCE_REMOVE" : "CRAFTER_REFERENCE_ADD",[this.api.lang["\x17\x1a\x02"](_loc4_).n]),"INFO_CHAT");
    }
-   function §\x19\x16\x06§(§\x1a\x1b\r§)
+   function §\x19\x16\x06§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split(";");
@@ -537,7 +537,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          _loc5_["\x1a\f\x0b"](_loc8_.index,1);
       }
    }
-   function §\x19\x1a\r§(§\x1a\x1b\r§)
+   function §\x19\x1a\r§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0);
       var _loc4_ = false;
@@ -562,7 +562,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          case "E":
       }
    }
-   function §\x19\x1a\n§(§\x1a\x1b\r§)
+   function §\x19\x1a\n§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0);
       loop1:
@@ -591,7 +591,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          case "E":
       }
    }
-   function §\x19\x16\x05§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x16\x05§(bSuccess, sExtraData)
    {
       if(this.api.datacenter.Basics.aks_exchange_isForgemagus || !this.api.datacenter.Basics.isCraftLooping)
       {
@@ -658,12 +658,12 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          this.api.datacenter.Exchange["\x16\x1b\x1b"]();
       }
    }
-   function §\x19\x16\b§(§\x1a\x1b\r§)
+   function §\x19\x16\b§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       this.api.kernel.showMessage(undefined,this.api.lang.getText("CRAFT_LOOP_PROCESS",[this["\x1d\x17\r"] - _loc3_ + 1,this["\x1d\x17\r"] + 1]),"INFO_CHAT");
    }
-   function §\x19\x16\t§(§\x1a\x1b\r§)
+   function §\x19\x16\t§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       this.api.datacenter.Basics.isCraftLooping = false;
@@ -690,11 +690,11 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          this.api.datacenter.Exchange["\x16\x1c\x07"]();
       }
    }
-   function §\x19\x1a\x01§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1a\x01§(bSuccess, sExtraData)
    {
       this["\x18\x1d\x13"](_loc3_,this.api.datacenter.Exchange["\x18\x17\x06"],"localKama");
    }
-   function §\x19\x16\x13§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x16\x13§(bSuccess, sExtraData)
    {
       switch(this.api.datacenter.Basics.aks_exchange_echangeType)
       {
@@ -747,7 +747,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             }
       }
    }
-   function §\x19\x15\x1d§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x15\x1d§(bSuccess, sExtraData)
    {
       this.api.datacenter.Exchange["\x16\x1b\x1b"]();
       switch(this.api.datacenter.Basics.aks_exchange_echangeType)
@@ -759,7 +759,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             this["\x18\x1d\x12"](_loc3_,this.api.datacenter.Exchange["\x17\x01\x0b"],"distantKama",true);
       }
    }
-   function §\x19\x1b\x03§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1b\x03§(bSuccess, sExtraData)
    {
       var _loc4_ = Number(_loc3_.charAt(0));
       var _loc5_ = _loc4_ != 1 ? this.api.datacenter.Exchange["\x1a\x04\r"] : this.api.datacenter.Exchange["\x1a\x04\x0b"];
@@ -773,7 +773,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             this["\x18\x1d\x13"](_loc3_.substr(2),_loc5_,_loc6_);
       }
    }
-   function §\x18\x1d\x13§(§\x1a\x1b\r§, §\x17\n\x17§, §\x1b\x02\x05§)
+   function §\x18\x1d\x13§(sExtraData, §\x17\n\x17§, §\x1b\x02\x05§)
    {
       var _loc5_ = _loc2_.charAt(0);
       var _loc6_ = this.api.datacenter.Exchange;
@@ -827,7 +827,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             _loc6_[_loc4_] = _loc18_;
       }
    }
-   function §\x18\x1d\x12§(§\x1a\x1b\r§, §\x17\n\x17§, §\x1b\x02\x05§, §\x16\f\x03§)
+   function §\x18\x1d\x12§(sExtraData, §\x17\n\x17§, §\x1b\x02\x05§, §\x16\f\x03§)
    {
       var _loc6_ = _loc2_.charAt(0);
       var _loc7_ = this.api.datacenter.Exchange;
@@ -884,7 +884,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             _loc7_[_loc4_] = _loc18_;
       }
    }
-   function §\x19\x1d\x11§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1d\x11§(bSuccess, sExtraData)
    {
       var _loc4_ = _loc3_.charAt(0);
       var _loc5_ = this.api.datacenter.["\x1b\x0f\b"].Storage;
@@ -928,7 +928,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             _loc5_.Kama = _loc15_;
       }
    }
-   function §\x19\x1b\x05§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1b\x05§(bSuccess, sExtraData)
    {
       var _loc4_ = _loc3_.charAt(0) == "+";
       var _loc5_ = _loc3_.substr(1).split("|");
@@ -961,7 +961,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       }
       this.api.ui.getUIComponent("PlayerShopModifier")["\x1a\x0b\x07"]();
    }
-   function §\x19\x19\x1c§(§\x1a\x1b\r§)
+   function §\x19\x19\x1c§(sExtraData)
    {
       switch(this.api.datacenter.Basics.aks_exchange_echangeType)
       {
@@ -1116,12 +1116,12 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          this.api.kernel.showMessage(this.api.lang.getText("EXCHANGE"),this.api.lang.getText("CANT_BUY"),"ERROR_BOX",{name:"Buy"});
       }
    }
-   function §\x19\x1d\x10§(§\x1a\x1b\r§)
+   function §\x19\x1d\x10§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       this.api.datacenter.["\x1b\x0f\b"].Storage.Kama = _loc3_;
    }
-   function §\x19\x14\x17§(§\x1a\x1b\r§)
+   function §\x19\x14\x17§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -1148,7 +1148,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       this.api.datacenter.["\x1b\x0f\b"]["\x1a\x1c\x0e"]["\x18\f\n"] = _loc6_;
       this.api.ui.getUIComponent("BigStoreBuy")["\x1a\x1a\x1a"](_loc4_);
    }
-   function §\x19\x19\t§(§\x1a\x1b\r§)
+   function §\x19\x19\t§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -1156,7 +1156,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       this.api.ui.getUIComponent("BigStoreBuy")["\x1a\x17\x1b"](_loc4_,_loc5_);
       this.api.ui.getUIComponent("BigStoreSell")["\x1a\x17\x1b"](_loc4_,_loc5_);
    }
-   function §\x19\x14\x18§(§\x1a\x1b\r§)
+   function §\x19\x14\x18§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = Number(_loc2_.substr(1));
@@ -1183,7 +1183,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          ank.utils.Logger.err("[onBigStoreTypeItemsMovement] cet objet n\'existe pas unicID=" + _loc4_);
       }
    }
-   function §\x19\x14\x15§(§\x1a\x1b\r§)
+   function §\x19\x14\x15§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -1216,7 +1216,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       }
       this.api.datacenter.["\x1b\x0f\b"]["\x1a\x1c\x0e"]["\x18\f\x0b"] = _loc5_;
    }
-   function §\x19\x14\x16§(§\x1a\x1b\r§)
+   function §\x19\x14\x16§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split("|");
@@ -1259,11 +1259,11 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          ank.utils.Logger.err("[onBigStoreItemsMovement] cet objet n\'existe pas id=" + _loc5_);
       }
    }
-   function §\x19\x1c\x0b§(§\x1a\x1b\r§)
+   function §\x19\x1c\x0b§(sExtraData)
    {
       this.api.ui.getUIComponent("BigStoreBuy")["\x19\x1c\f"](_loc2_ == "K");
    }
-   function §\x19\x16\n§(§\x1a\x1b\r§)
+   function §\x19\x16\n§(sExtraData)
    {
       if(_loc2_.length == 1)
       {
@@ -1287,7 +1287,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x1a\f§(§\x1a\x1b\r§)
+   function §\x19\x1a\f§(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = Number(_loc3_[0]);

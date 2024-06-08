@@ -21,7 +21,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
    {
       this.aks.send("eD" + _loc2_,true);
    }
-   function §\x19\x1e\f§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1e\f§(bSuccess, sExtraData)
    {
       if(this.api.datacenter.Game.isFight)
       {
@@ -51,7 +51,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
          this.api.gfx["\x1a\x1a\x0b"](_loc5_,_loc8_,true,_loc7_);
       }
    }
-   function §\x19\x19\x1c§(§\x1a\x1b\r§)
+   function §\x19\x19\x1c§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -84,7 +84,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
       }
       this["\x1a\n\x15"]();
    }
-   function §\x19\x13\x1b§(§\x1a\x1b\r§)
+   function §\x19\x13\x1b§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -95,7 +95,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
       }
       this["\x1a\n\x15"]();
    }
-   function §\x19\x1b\x1c§(§\x1a\x1b\r§)
+   function §\x19\x1b\x1c§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -106,7 +106,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
       }
       this["\x1a\n\x15"]();
    }
-   function §\x19\x16\x12§(§\x1a\x1b\r§)
+   function §\x19\x16\x12§(sExtraData)
    {
       if(this.api.datacenter.Game.isFight)
       {

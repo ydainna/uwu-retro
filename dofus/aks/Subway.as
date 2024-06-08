@@ -20,7 +20,7 @@ class dofus.aks.Subway extends dofus.aks.Handler
    {
       this.aks.send("Wp" + mapID);
    }
-   function §\x19\x16\x0b§(§\x1a\x1b\r§)
+   function §\x19\x16\x0b§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -51,7 +51,7 @@ class dofus.aks.Subway extends dofus.aks.Handler
    {
       this.api.ui.unloadUIComponent("Subway");
    }
-   function §\x19\x1b\n§(§\x1a\x1b\r§)
+   function §\x19\x1b\n§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);

@@ -51,7 +51,7 @@ class dofus.aks.Conquest extends dofus.aks.Handler
    {
       this.aks.send("Cb",true);
    }
-   function §\x19\x14\x05§(§\x1a\x1b\r§)
+   function §\x19\x14\x05§(sExtraData)
    {
       var _loc3_ = String(_loc2_).split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -67,7 +67,7 @@ class dofus.aks.Conquest extends dofus.aks.Handler
          this.api.kernel.showMessage(undefined,"<b>" + this.api.lang.getText("AREA_ALIGNMENT_IS",[_loc6_,_loc7_]) + "</b>","PVP_CHAT");
       }
    }
-   function §\x19\x15\x1c§(§\x1a\x1b\r§)
+   function §\x19\x15\x1c§(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = String(_loc3_[0]).split(",");
@@ -89,13 +89,13 @@ class dofus.aks.Conquest extends dofus.aks.Handler
       this.api.datacenter.Conquest["\x1a\t\x18"] = _loc6_;
       this.api.datacenter.Conquest["\x16\x02\x1a"] = _loc7_;
    }
-   function §\x19\x15\x1b§(§\x1a\x1b\r§)
+   function §\x19\x15\x1b§(sExtraData)
    {
       var _loc3_ = dofus.graphics.gapi.ui.Conquest(this.api.ui.getUIComponent("Conquest"));
       var _loc4_ = _loc2_.split(";");
       _loc3_["\x1a\x15\x02"](Number(_loc4_[0]),Number(_loc4_[1]));
    }
-   function §\x19\x1e\x13§(§\x1a\x1b\r§)
+   function §\x19\x1e\x13§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = new dofus.datacenter.["\x16\x1e\x14"]();
@@ -132,7 +132,7 @@ class dofus.aks.Conquest extends dofus.aks.Handler
       _loc4_["\x1b\x17\x1a"].sortOn("areaName");
       this.api.datacenter.Conquest["\x1b\x19\x0f"] = _loc4_;
    }
-   function §\x19\x1b\x0f§(§\x1a\x1b\r§)
+   function §\x19\x1b\x0f§(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = Number(_loc3_[0]);
@@ -163,13 +163,13 @@ class dofus.aks.Conquest extends dofus.aks.Handler
          _loc5_["\x1a\x1c\t"](_loc10_);
       }
    }
-   function §\x19\x1b\x0e§(§\x1a\x1b\r§)
+   function §\x19\x1b\x0e§(sExtraData)
    {
       var _loc3_ = dofus.graphics.gapi.ui.Conquest(this.api.ui.getUIComponent("Conquest"));
       _loc3_["\x1a\x1c\t"]({noUnsubscribe:true});
       this.api.ui.unloadUIComponent("Conquest");
    }
-   function §\x19\x1b\t§(§\x1a\x1b\r§)
+   function §\x19\x1b\t§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -188,7 +188,7 @@ class dofus.aks.Conquest extends dofus.aks.Handler
          this.api.kernel.showMessage(undefined,this.api.lang.getText("PRISM_ATTACKED",[_loc9_,_loc7_]),"PVP_CHAT");
       }
    }
-   function §\x19\x1b\x11§(§\x1a\x1b\r§)
+   function §\x19\x1b\x11§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -199,7 +199,7 @@ class dofus.aks.Conquest extends dofus.aks.Handler
       var _loc9_ = String(this.api.lang["\x17\x1b\x0f"](_loc8_).n).substr(0,2) != "//" ? this.api.lang["\x17\x1b\x0f"](_loc8_).n : String(this.api.lang["\x17\x1b\x0f"](_loc8_).n).substr(2);
       this.api.kernel.showMessage(undefined,this.api.lang.getText("PRISM_ATTACKED_SUVIVED",[_loc9_,_loc7_]),"PVP_CHAT");
    }
-   function §\x19\x1b\x0b§(§\x1a\x1b\r§)
+   function §\x19\x1b\x0b§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -210,7 +210,7 @@ class dofus.aks.Conquest extends dofus.aks.Handler
       var _loc9_ = String(this.api.lang["\x17\x1b\x0f"](_loc8_).n).substr(0,2) != "//" ? this.api.lang["\x17\x1b\x0f"](_loc8_).n : String(this.api.lang["\x17\x1b\x0f"](_loc8_).n).substr(2);
       this.api.kernel.showMessage(undefined,this.api.lang.getText("PRISM_ATTACKED_DIED",[_loc9_,_loc7_]),"PVP_CHAT");
    }
-   function §\x19\x1b\r§(§\x1a\x1b\r§)
+   function §\x19\x1b\r§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split("|");
@@ -252,7 +252,7 @@ class dofus.aks.Conquest extends dofus.aks.Handler
          _loc6_ = _loc6_ + 1;
       }
    }
-   function §\x19\x1b\f§(§\x1a\x1b\r§)
+   function §\x19\x1b\f§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split("|");

@@ -4,7 +4,7 @@ class dofus.aks.Specialization extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function §\x19\x1c\x17§(§\x1a\x1b\r§)
+   function §\x19\x1c\x17§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       if(_global.isNaN(_loc3_) || (_loc2_.length == 0 || _loc3_ == 0))
@@ -17,7 +17,7 @@ class dofus.aks.Specialization extends dofus.aks.Handler
          this.api.datacenter.Player.specialization = _loc4_;
       }
    }
-   function §\x19\x15\b§(§\x1a\x1b\r§)
+   function §\x19\x15\b§(sExtraData)
    {
       this["\x19\x1c\x17"](_loc2_);
       var _loc3_ = this.api.datacenter.Player.specialization;

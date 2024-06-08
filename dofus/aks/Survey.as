@@ -12,7 +12,7 @@ class dofus.aks.Survey extends dofus.aks.Handler
    {
       this.aks.send("zs" + _loc2_);
    }
-   function onSurveyInfo(§\x1a\x1b\r§)
+   function onSurveyInfo(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_.shift().split(";");
@@ -45,7 +45,7 @@ class dofus.aks.Survey extends dofus.aks.Handler
       _loc15_.questions = _loc10_;
       this.api.ui.loadUIComponent("Survey","Survey",undefined,{bAlwaysOnTop:true});
    }
-   function onSurveyNotify(§\x1a\x1b\r§)
+   function onSurveyNotify(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       if(_loc3_ == 1)

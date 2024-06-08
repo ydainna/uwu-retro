@@ -57,7 +57,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
          _loc4_.onUpdatedData();
       }
    }
-   function onCardsRecyclerLoots(§\x1a\x1b\r§)
+   function onCardsRecyclerLoots(sExtraData)
    {
       var _loc3_ = dofus.graphics.gapi.ui.CardsRecycler(this.api.ui.getUIComponent("CardsRecycler"));
       if(_loc3_ == undefined)
@@ -100,7 +100,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
       }
       this.api.ui.loadUIComponent("CardsRecycler","CardsRecycler",{skillId:_loc2_});
    }
-   function §\x19\x13\x1b§(§\x1a\x1b\r§)
+   function §\x19\x13\x1b§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       var _loc4_ = this.api.datacenter.Player.ttgCollection.getTtgCard(_loc3_);
@@ -131,7 +131,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x19\x1c§(§\x1a\x1b\r§)
+   function §\x19\x19\x1c§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -157,7 +157,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
          }
       }
    }
-   function onDates(§\x1a\x1b\r§)
+   function onDates(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -216,7 +216,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
          _loc5_.onUpdatedData();
       }
    }
-   function §\x19\x16\x0b§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x16\x0b§(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {

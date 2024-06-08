@@ -5,7 +5,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function §\x19\x1a\x0f§(§\x1a\x1b\r§, §\x16\r\x1a§)
+   function §\x19\x1a\x0f§(sExtraData, §\x16\r\x1a§)
    {
       var _loc4_ = _loc2_.split("|");
       var _loc5_ = _loc4_.length - 1;
@@ -548,7 +548,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x15\x02§(§\x1a\x1b\r§)
+   function §\x19\x15\x02§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = 0;
@@ -563,7 +563,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          _loc4_ = _loc4_ + 1;
       }
    }
-   function §\x19\x1e\x17§(§\x1a\x1b\r§)
+   function §\x19\x1e\x17§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = 0;
@@ -587,7 +587,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          _loc4_ = _loc4_ + 1;
       }
    }
-   function §\x19\x15\x03§(§\x1a\x1b\r§)
+   function §\x19\x15\x03§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split("|");
@@ -631,7 +631,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          _loc5_ = _loc5_ + 1;
       }
    }
-   function §\x19\x17\x16§(§\x1a\x1b\r§)
+   function §\x19\x17\x16§(sExtraData)
    {
       var _loc3_ = ank.gapi.controls.PopupMenu["\x17\x03\x1b"];
       var _loc4_ = _loc2_.split("|");
@@ -655,7 +655,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          _loc5_ = _loc5_ + 1;
       }
    }
-   function §\x19\x17\x17§(§\x1a\x1b\r§)
+   function §\x19\x17\x17§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = 0;
@@ -668,7 +668,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          _loc4_ = _loc4_ + 1;
       }
    }
-   function §\x19\x16\x16§(§\x1a\x1b\r§)
+   function §\x19\x16\x16§(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = _loc3_[0];
@@ -694,7 +694,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          _loc13_ = _loc13_ + 1;
       }
    }
-   function §\x19\x15\x14§(§\x1a\x1b\r§)
+   function §\x19\x15\x14§(sExtraData)
    {
       var _loc3_ = this.api.datacenter.["\x1b\x07\x0e"];
       for(var a in _loc3_)
@@ -702,7 +702,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          _loc3_[a]["\x17\f\t"]["\x1b\x0f\r"]();
       }
    }
-   function §\x19\x15\x07§(§\x1a\x1b\r§)
+   function §\x19\x15\x07§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split("|");
@@ -740,7 +740,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          this.api.datacenter.["\x16\x18\x10"]["\x1a\f\n"](_loc6_);
       }
    }
-   function §\x19\x1d\x19§(§\x1a\x1b\r§)
+   function §\x19\x1d\x19§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_.shift());
@@ -779,7 +779,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
       }
       _loc5_.refreshSwordSprite();
    }
-   function §\x19\x17\x0e§(§\x1a\x1b\r§)
+   function §\x19\x17\x0e§(sExtraData)
    {
       var _loc3_ = _loc2_.substr(2);
       var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc3_);
@@ -819,7 +819,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
       _loc2_["\x16\x1b\x12"]();
       this.aks.Game["\x17\x02\x04"]();
    }
-   function §\x19\x16\x19§(§\x1a\x1b\r§)
+   function §\x19\x16\x19§(sExtraData)
    {
       if(this.api.kernel["\x18\x18\x18"]["\x18\f\x1b"])
       {
@@ -1086,7 +1086,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
       }
       this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\r"]);
    }
-   function §\x19\x17\x07§(§\x1a\x1b\r§)
+   function §\x19\x17\x07§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];

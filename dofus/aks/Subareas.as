@@ -4,7 +4,7 @@ class dofus.aks.Subareas extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function §\x19\x19\x1c§(§\x1a\x1b\r§)
+   function §\x19\x19\x1c§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       this.api.datacenter..Subareas["\x1a\x0b\x16"]();
@@ -19,7 +19,7 @@ class dofus.aks.Subareas extends dofus.aks.Handler
          _loc4_ = _loc4_ + 1;
       }
    }
-   function §\x19\x14\x02§(§\x1a\x1b\r§)
+   function §\x19\x14\x02§(sExtraData)
    {
       var _loc3_ = String(_loc2_).split("|");
       var _loc4_ = Number(_loc3_[0]);

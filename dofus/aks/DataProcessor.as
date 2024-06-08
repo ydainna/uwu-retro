@@ -184,97 +184,97 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   }
                   break;
                case "c":
-                  this.aks.Account["\x19\x15\x17"](_loc5_.substr(2));
+                  this.aks.Account.["\x19\x15\x17"](_loc5_.substr(2));
                   break;
                case "d":
-                  this.aks.Account["\x19\x16\x14"](_loc5_.substr(2));
+                  this.aks.Account.["\x19\x16\x14"](_loc5_.substr(2));
                   break;
                case "l":
                   this.aks.Account.onLogin(!_loc4_,_loc5_.substr(3));
                   break;
                case "L":
-                  this.aks.Account["\x19\x15\x10"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.["\x19\x15\x10"](!_loc4_,_loc5_.substr(3));
                   break;
                case "x":
-                  this.aks.Account["\x19\x1c\x14"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.["\x19\x1c\x14"](!_loc4_,_loc5_.substr(3));
                   break;
                case "A":
-                  this.aks.Account["\x19\x15\n"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.["\x19\x15\n"](!_loc4_,_loc5_.substr(3));
                   break;
                case "T":
-                  this.aks.Account["\x19\x1d\x1a"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.["\x19\x1d\x1a"](!_loc4_,_loc5_.substr(3));
                   break;
                case "X":
-                  this.aks.Account["\x19\x1c\x0e"](!_loc4_,true,_loc5_.substr(3));
+                  this.aks.Account.["\x19\x1c\x0e"](!_loc4_,true,_loc5_.substr(3));
                   break;
                case "Y":
-                  this.aks.Account["\x19\x1c\x0e"](!_loc4_,false,_loc5_.substr(3));
+                  this.aks.Account.["\x19\x1c\x0e"](!_loc4_,false,_loc5_.substr(3));
                   break;
                case "Z":
-                  this.aks.Account["\x19\x1c\x0f"](_loc5_.substr(3));
+                  this.aks.Account.["\x19\x1c\x0f"](_loc5_.substr(3));
                   break;
                case "S":
-                  this.aks.Account["\x19\x15\x0f"](!_loc4_,_loc5_.substr(4));
+                  this.aks.Account.["\x19\x15\x0f"](!_loc4_,_loc5_.substr(4));
                   break;
                case "s":
-                  this.aks.Account["\x19\x1d\x0b"](_loc5_.substr(2));
+                  this.aks.Account.["\x19\x1d\x0b"](_loc5_.substr(2));
                   break;
                case "N":
-                  this.aks.Account["\x19\x1a\x13"](_loc5_.substr(2));
+                  this.aks.Account.["\x19\x1a\x13"](_loc5_.substr(2));
                   break;
                case "R":
-                  this.aks.Account["\x19\x1c\b"](_loc5_.substr(2));
+                  this.aks.Account.["\x19\x1c\b"](_loc5_.substr(2));
                   break;
                case "H":
-                  this.aks.Account["\x19\x18\x0f"](_loc5_.substr(2));
+                  this.aks.Account.["\x19\x18\x0f"](_loc5_.substr(2));
                   break;
                case "r":
-                  this.aks.Account["\x19\x1c\x07"](!_loc4_);
+                  this.aks.Account.["\x19\x1c\x07"](!_loc4_);
                   break;
                case "g":
-                  this.aks.Account["\x19\x18\x07"](_loc5_.substr(2));
+                  this.aks.Account.["\x19\x18\x07"](_loc5_.substr(2));
                   break;
                case "G":
-                  this.aks.Account["\x19\x18\b"](!_loc4_);
+                  this.aks.Account.["\x19\x18\b"](!_loc4_);
                   break;
                case "q":
-                  this.aks.Account["\x19\x1b\x16"](_loc5_.substr(2));
+                  this.aks.Account.["\x19\x1b\x16"](_loc5_.substr(2));
                   break;
                case "f":
-                  this.aks.Account["\x19\x1a\x15"](_loc5_.substr(2));
+                  this.aks.Account.["\x19\x1a\x15"](_loc5_.substr(2));
                   break;
                case "V":
-                  this.aks.Account["\x19\x1b\x1b"](_loc5_.substr(2));
+                  this.aks.Account.onRegionalVersion(_loc5_.substr(2));
                   break;
                case "P":
-                  this.aks.Account["\x19\x15\x0e"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.["\x19\x15\x0e"](!_loc4_,_loc5_.substr(3));
                   break;
                case "K":
-                  this.aks.Account["\x19\x19\x12"](_loc5_.substr(2));
+                  this.aks.Account.onKey(_loc5_.substr(2));
                   break;
                case "Q":
-                  this.aks.Account["\x19\x1c\r"](_loc5_.substr(2));
+                  this.aks.Account.onSecretQuestion(_loc5_.substr(2));
                   break;
                case "D":
-                  this.aks.Account["\x19\x15\r"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.onCharacterDelete(!_loc4_,_loc5_.substr(3));
                   break;
                case "M":
                   if((_loc0_ = _loc5_.charAt(2)) !== "?")
                   {
-                     this.aks.Account["\x19\x15\x10"](!_loc4_,_loc5_.substr(3),true);
+                     this.aks.Account.["\x19\x15\x10"](!_loc4_,_loc5_.substr(3),true);
                   }
                   else
                   {
-                     this.aks.Account["\x19\x15\x11"](_loc5_.substr(3));
+                     this.aks.Account.["\x19\x15\x11"](_loc5_.substr(3));
                   }
                   break;
                case "F":
-                  this.aks.Account["\x19\x17\x18"](_loc5_.substr(2));
+                  this.aks.Account.["\x19\x17\x18"](_loc5_.substr(2));
                   break;
                case "m":
                   if(!_global.CONFIG.isStreaming)
                   {
-                     this.aks.Account["\x19\x1a\t"]();
+                     this.aks.Account.["\x19\x1a\t"]();
                      break;
                   }
                   var _loc10_ = _global.parseInt(_loc5_.charAt(2),10);
@@ -650,7 +650,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Key["\x19\x16\x0b"](_loc5_.substr(3));
                   break;
                case "K":
-                  this.aks.Key["\x19\x19\x12"](!_loc4_);
+                  this.aks.KeyonKey(!_loc4_);
                   break;
                case "V":
                   this.aks.Key["\x19\x19\x16"]();

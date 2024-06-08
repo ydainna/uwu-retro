@@ -36,7 +36,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
    {
       this.aks.send("hG" + _loc2_,true);
    }
-   function §\x19\x1b\x12§(§\x1a\x1b\r§)
+   function §\x19\x1b\x12§(sExtraData)
    {
       var _loc3_ = new ank.utils.["\x17\x0e\r"]();
       var _loc4_ = _loc2_.split("|");
@@ -69,7 +69,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
       }
       this.api.datacenter.Houses["\x15\x1d\x13"](_loc5_,_loc3_);
    }
-   function §\x19\x1a\x02§(§\x1a\x1b\r§)
+   function §\x19\x1a\x02§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -78,7 +78,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
       var _loc7_ = this.api.kernel.HouseManager.getHouseByInstance(_loc4_,_loc5_);
       _loc7_["\x18\x0e\x17"] = _loc6_;
    }
-   function §\x19\x16\x0b§(§\x1a\x1b\r§)
+   function §\x19\x16\x0b§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -88,7 +88,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
       _loc7_.price = _loc6_;
       this.api.ui.loadUIComponent("HouseSale","HouseSale",{house:_loc7_});
    }
-   function §\x19\x1c\x10§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1c\x10§(bSuccess, sExtraData)
    {
       var _loc4_ = _loc3_.split("|");
       var _loc5_ = Number(_loc4_[0]);
@@ -115,7 +115,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
          this.api.kernel.showMessage(this.api.lang.getText("INFORMATIONS"),this.api.lang.getText("HOUSE_NOSELL",[_loc8_.name]),"ERROR_BOX",{name:"NoSellHouse"});
       }
    }
-   function §\x19\x15\x01§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x15\x01§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -142,7 +142,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
    {
       this.api.ui.unloadUIComponent("HouseSale");
    }
-   function §\x19\x18\n§(§\x1a\x1b\r§)
+   function §\x19\x18\n§(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = Number(_loc3_[0]);
@@ -157,7 +157,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
       _loc10_["\x18\x04\x01"] = _loc7_;
       _loc10_["\x18\x04\t"] = _loc8_;
    }
-   function onInformations(§\x1a\x1b\r§)
+   function onInformations(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = Number(_loc3_[0]);

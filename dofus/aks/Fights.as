@@ -28,7 +28,7 @@ class dofus.aks.Fights extends dofus.aks.Handler
    {
       this.aks.send("fH");
    }
-   function onFightsOpenAndAutoSelect(§\x1a\x1b\r§)
+   function onFightsOpenAndAutoSelect(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       if(this.api.ui.getUIComponent("FightsInfos") == undefined)
@@ -36,7 +36,7 @@ class dofus.aks.Fights extends dofus.aks.Handler
          this.api.ui.loadUIComponent("FightsInfos","FightsInfos",{autoSelectFightID:_loc3_},{bAlwaysOnTop:true});
       }
    }
-   function §\x19\x16\x03§(§\x1a\x1b\r§)
+   function §\x19\x16\x03§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       if(_global.isNaN(_loc3_) || (_loc2_.length == 0 || _loc3_ == 0))
@@ -55,7 +55,7 @@ class dofus.aks.Fights extends dofus.aks.Handler
          this.api.ui.getUIComponent("Banner")["\x17\x0f\x1b"] = _loc3_;
       }
    }
-   function §\x19\x19\x1c§(§\x1a\x1b\r§)
+   function §\x19\x19\x1c§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = new Array();
@@ -96,7 +96,7 @@ class dofus.aks.Fights extends dofus.aks.Handler
       }
       _loc19_.doAutoSelectFightIDRow();
    }
-   function §\x19\x16\x11§(§\x1a\x1b\r§)
+   function §\x19\x16\x11§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);

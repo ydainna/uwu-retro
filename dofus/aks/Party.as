@@ -36,7 +36,7 @@ class dofus.aks.Party extends dofus.aks.Handler
    {
       this.aks.send("PG" + (!_loc2_ ? "+" : "-") + _loc3_);
    }
-   function §\x19\x19\x07§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x19\x07§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -81,7 +81,7 @@ class dofus.aks.Party extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x19\x15§(§\x1a\x1b\r§)
+   function §\x19\x19\x15§(sExtraData)
    {
       var _loc3_ = _loc2_;
       var _loc4_ = this.api.ui.getUIComponent("Party");
@@ -92,17 +92,17 @@ class dofus.aks.Party extends dofus.aks.Handler
          this.api.kernel.showMessage(undefined,this.api.lang.getText("NEW_GROUP_LEADER",[_loc5_]),"INFO_CHAT");
       }
    }
-   function §\x19\x1b\x1a§(§\x1a\x1b\r§)
+   function §\x19\x1b\x1a§(sExtraData)
    {
       this.api.ui.unloadUIComponent("AskYesNoIgnoreParty");
       this.api.ui.unloadUIComponent("AskCancelParty");
    }
-   function §\x19\x13\x15§(§\x1a\x1b\r§)
+   function §\x19\x13\x15§(sExtraData)
    {
       this.api.ui.unloadUIComponent("AskYesNoIgnoreParty");
       this.api.ui.unloadUIComponent("AskCancelParty");
    }
-   function §\x19\x16\x0b§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x16\x0b§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -127,7 +127,7 @@ class dofus.aks.Party extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x19\x16§(§\x1a\x1b\r§)
+   function §\x19\x19\x16§(sExtraData)
    {
       var _loc3_ = this.api.ui.getUIComponent("Party");
       if(_loc3_["\x17\x11\x1b"] != undefined)
@@ -149,7 +149,7 @@ class dofus.aks.Party extends dofus.aks.Handler
       this.api.datacenter.Player.inParty = false;
       this.api.datacenter.Basics["\x16\x02\x10"](2);
    }
-   function §\x19\x17\x15§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x17\x15§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -162,7 +162,7 @@ class dofus.aks.Party extends dofus.aks.Handler
          this.api.kernel.showMessage(undefined,this.api.lang.getText("PARTY_NOT_IN_IN_GROUP"),"ERROR_BOX",{name:"PartyError"});
       }
    }
-   function §\x19\x1a\x0f§(§\x1a\x1b\r§)
+   function §\x19\x1a\x0f§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = dofus.graphics.gapi.ui.Party(this.api.ui.getUIComponent("Party"));

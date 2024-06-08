@@ -20,7 +20,7 @@ class dofus.aks.Spells extends dofus.aks.Handler
    {
       this.aks.send("SR" + _loc2_);
    }
-   function §\x19\x1e\x0b§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1e\x0b§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -32,7 +32,7 @@ class dofus.aks.Spells extends dofus.aks.Handler
          this.api.kernel.showMessage(undefined,this.api.lang.getText("CANT_BOOST_SPELL"),"ERROR_BOX");
       }
    }
-   function §\x19\x19\x1c§(§\x1a\x1b\r§)
+   function §\x19\x19\x1c§(sExtraData)
    {
       var _loc3_ = this.api.datacenter.Player;
       _loc3_.Spells["\x1a\f\x0b"](1,_loc3_.Spells.length);
@@ -60,11 +60,11 @@ class dofus.aks.Spells extends dofus.aks.Handler
       }
       _loc3_.Spells["\x1a\r\x0b"](1,_loc5_);
    }
-   function §\x19\x15\t§(§\x1a\x1b\r§)
+   function §\x19\x15\t§(sExtraData)
    {
       this.api.datacenter.Basics.canUseSeeAllSpell = _loc2_.charAt(0) == "+";
    }
-   function §\x19\x1c\x1d§(§\x1a\x1b\r§)
+   function §\x19\x1c\x1d§(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = _loc3_[1].toLowerCase();
@@ -104,7 +104,7 @@ class dofus.aks.Spells extends dofus.aks.Handler
          _loc8_ = _loc8_ + 1;
       }
    }
-   function §\x19\x1d\x01§(§\x1a\x1b\r§)
+   function §\x19\x1d\x01§(sExtraData)
    {
       if(_loc2_ == "+")
       {
@@ -115,7 +115,7 @@ class dofus.aks.Spells extends dofus.aks.Handler
          this.api.ui.unloadUIComponent("SpellForget");
       }
    }
-   function onSpellMove(§\x1a\x1b\r§)
+   function onSpellMove(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -123,13 +123,13 @@ class dofus.aks.Spells extends dofus.aks.Handler
       this.api.ui.getUIComponent("Banner")["\x1a\x1c\x10"].spellMove(_loc4_,_loc5_);
       this.api.ui.getUIComponent("SpellsCollection").spellMove(_loc4_,_loc5_);
    }
-   function onSpellRemove(§\x1a\x1b\r§)
+   function onSpellRemove(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       this.api.ui.getUIComponent("Banner")["\x1a\x1c\x10"].spellRemove(_loc3_);
       this.api.ui.getUIComponent("SpellsCollection").spellRemove(_loc3_);
    }
-   function onSpellCooldown(§\x1a\x1b\r§)
+   function onSpellCooldown(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = Number(_loc3_[0]);

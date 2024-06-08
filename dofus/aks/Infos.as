@@ -27,11 +27,11 @@ class dofus.aks.Infos extends dofus.aks.Handler
       this.aks.send("Ir" + Stage.width + ";" + Stage.height + ";" + _loc3_);
       Stage.scaleMode = _loc2_;
    }
-   function §\x19\x18\x15§(§\x1a\x1b\r§)
+   function §\x19\x18\x15§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
    }
-   function §\x19\x18\x13§(§\x1a\x1b\r§)
+   function §\x19\x18\x13§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -50,7 +50,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
          this.api.kernel.GameManager.updateCompass(_loc4_,_loc5_,true);
       }
    }
-   function §\x19\x18\x14§(§\x1a\x1b\r§)
+   function §\x19\x18\x14§(sExtraData)
    {
       var _loc3_ = new Array();
       if(_loc2_.length <= 0)
@@ -79,7 +79,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
       }
       this.api.datacenter.Basics["\x16\x02\x0f"] = _loc3_;
    }
-   function §\x19\x1a\b§(§\x1a\x1b\r§)
+   function §\x19\x1a\b§(sExtraData)
    {
       var _loc3_ = new Array();
       var _loc4_ = _loc2_.charAt(0);
@@ -309,7 +309,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
          this.api.kernel.showMessage(undefined,_loc33_,_loc6_);
       }
    }
-   function §\x19\x1b\x14§(§\x1a\x1b\r§)
+   function §\x19\x1b\x14§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -318,7 +318,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
       var _loc7_ = (!_loc6_ ? " " : "+") + String(_loc5_);
       this.api.gfx["\x15\x1e\x16"](_loc4_,_loc7_,dofus.Constants.CLIP_POINT_TYPE_QUANTITY);
    }
-   function §\x19\x1a\x19§(§\x1a\x1b\r§)
+   function §\x19\x1a\x19§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -334,7 +334,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
          this.api.gfx["\x15\x1e\x15"](_loc4_,"craft",dofus.graphics.battlefield["\x17\x01\x1c"],[_loc5_,_loc7_],2000);
       }
    }
-   function §\x19\x19\x1a§(§\x1a\x1b\r§)
+   function §\x19\x19\x1a§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       _global.clearInterval(this.api.datacenter.Basics.aks_infos_lifeRestoreInterval);
@@ -344,7 +344,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
          this.api.datacenter.Basics.aks_infos_lifeRestoreInterval = _global.setInterval(_loc4_,"updateLP",_loc3_,1);
       }
    }
-   function §\x19\x19\x19§(§\x1a\x1b\r§)
+   function §\x19\x19\x19§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       _global.clearInterval(this.api.datacenter.Basics.aks_infos_lifeRestoreInterval);

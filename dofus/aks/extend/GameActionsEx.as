@@ -5,7 +5,7 @@ class dofus.aks.extend.GameActionsEx
       this.api = oAPI;
       this._parent = parent;
    }
-   function onActionEx(§\x1a\x1b\r§, §\x19\x03\x04§, sSenderID, §\x1a\x01\x1d§, §\x1b\x05\x03§, oContext)
+   function onActionEx(sExtraData, §\x19\x03\x04§, sSenderID, §\x1a\x01\x1d§, §\x1b\x05\x03§, oContext)
    {
       var _loc8_ = true;
       switch(_loc3_)

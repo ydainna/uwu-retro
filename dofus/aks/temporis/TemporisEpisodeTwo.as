@@ -37,7 +37,7 @@ class dofus.aks.temporis.TemporisEpisodeTwo
          }
       }
    }
-   function onSpellsQuickCache(§\x1a\x1b\r§)
+   function onSpellsQuickCache(sExtraData)
    {
       var _loc3_ = _loc2_.split("~");
       var _loc4_ = _loc3_[0].split("|");
@@ -82,7 +82,7 @@ class dofus.aks.temporis.TemporisEpisodeTwo
       _loc3_.flags = _loc7_;
       return _loc3_;
    }
-   function onSpellsQuickRemove(§\x1a\x1b\r§)
+   function onSpellsQuickRemove(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -95,7 +95,7 @@ class dofus.aks.temporis.TemporisEpisodeTwo
       var _loc7_ = _loc6_.eoSpells;
       _loc7_["\x1a\f\n"](_loc5_);
    }
-   function onSpellsQuickAddOrMove(§\x1a\x1b\r§)
+   function onSpellsQuickAddOrMove(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -121,7 +121,7 @@ class dofus.aks.temporis.TemporisEpisodeTwo
       _loc10_.flags = _loc5_.flags;
       _loc7_["\x15\x1d\x13"](_loc5_.position,_loc10_);
    }
-   function onSpellsQuickEditResult(§\x1a\x1b\r§)
+   function onSpellsQuickEditResult(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0);
       _loc2_ = _loc2_.substring(1);

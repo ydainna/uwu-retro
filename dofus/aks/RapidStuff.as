@@ -20,7 +20,7 @@ class dofus.aks.RapidStuff extends dofus.aks.Handler
    {
       this.aks.send("xL" + nRapidStuffID);
    }
-   function onRapidStuffCache(§\x1a\x1b\r§)
+   function onRapidStuffCache(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);

@@ -20,7 +20,7 @@ class dofus.aks.Dialog extends dofus.aks.Handler
    {
       this.aks.send("DR" + _loc2_ + "|" + _loc3_,true);
    }
-   function §\x19\x16\r§(§\x1a\x1b\r§)
+   function §\x19\x16\r§(sExtraData)
    {
       var _loc0_ = null;
       if((_loc0_ = _loc2_) === "1")
@@ -28,7 +28,7 @@ class dofus.aks.Dialog extends dofus.aks.Handler
          getURL("javascript:DownloadOs()","_self");
       }
    }
-   function §\x19\x16\x0b§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x16\x0b§(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -47,7 +47,7 @@ class dofus.aks.Dialog extends dofus.aks.Handler
       _loc6_[3] = _loc5_.color3 != undefined ? _loc5_.color3 : -1;
       this.api.ui.loadUIComponent("NpcDialog","NpcDialog",{name:_loc7_,gfx:_loc5_["\x18\x02\x16"],id:_loc4_,customArtwork:_loc5_.customArtwork,colors:_loc6_});
    }
-   function §\x19\x1b\x15§(§\x1a\x1b\r§)
+   function §\x19\x1b\x15§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0].split(";");

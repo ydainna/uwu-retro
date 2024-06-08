@@ -123,7 +123,7 @@ if(!dofus.aks.Items)
       this.api.network.Items.movement(params.ID,_loc6_);
       return true;
    };
-   _loc1_["\x19\x13\x16"] = function §\x19\x13\x16§(§\x1a\x1b\r§)
+   _loc1_["\x19\x13\x16"] = function §\x19\x13\x16§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -164,7 +164,7 @@ if(!dofus.aks.Items)
          this.api.datacenter.Player["\x1b\x14\x0f"]();
       }
    };
-   _loc1_["\x19\x16\x15"] = function §\x19\x16\x15§(bSuccess, §\x1a\x1b\r§)
+   _loc1_["\x19\x16\x15"] = function §\x19\x16\x15§(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -178,7 +178,7 @@ if(!dofus.aks.Items)
          }
       }
    };
-   _loc1_["\x19\x13\x1b"] = function §\x19\x13\x1b§(bSuccess, §\x1a\x1b\r§)
+   _loc1_["\x19\x13\x1b"] = function §\x19\x13\x1b§(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -247,7 +247,7 @@ if(!dofus.aks.Items)
          }
       }
    };
-   _loc1_["\x19\x15\b"] = function §\x19\x15\b§(§\x1a\x1b\r§)
+   _loc1_["\x19\x15\b"] = function §\x19\x15\b§(sExtraData)
    {
       var _loc3_ = _loc2_.split("*");
       var _loc4_ = 0;
@@ -268,26 +268,26 @@ if(!dofus.aks.Items)
          _loc4_ = _loc4_ + 1;
       }
    };
-   _loc1_["\x19\x1b\x1c"] = function §\x19\x1b\x1c§(§\x1a\x1b\r§)
+   _loc1_["\x19\x1b\x1c"] = function §\x19\x1b\x1c§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       this.api.datacenter.Player.dropItem(_loc3_);
    };
-   _loc1_["\x19\x1b\x14"] = function §\x19\x1b\x14§(§\x1a\x1b\r§)
+   _loc1_["\x19\x1b\x14"] = function §\x19\x1b\x14§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
       var _loc5_ = Number(_loc3_[1]);
       this.api.datacenter.Player["\x1b\x15\b"](_loc4_,_loc5_);
    };
-   _loc1_["\x19\x1a\x0f"] = function §\x19\x1a\x0f§(§\x1a\x1b\r§)
+   _loc1_["\x19\x1a\x0f"] = function §\x19\x1a\x0f§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
       var _loc5_ = !_global.isNaN(Number(_loc3_[1])) ? Number(_loc3_[1]) : -1;
       this.api.datacenter.Player["\x1b\x15\x07"](_loc4_,_loc5_);
    };
-   _loc1_["\x19\x1d\x1c"] = function §\x19\x1d\x1c§(§\x1a\x1b\r§)
+   _loc1_["\x19\x1d\x1c"] = function §\x19\x1d\x1c§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       if(_global.isNaN(_loc3_))
@@ -299,7 +299,7 @@ if(!dofus.aks.Items)
          this.api.datacenter.Player.currentJobID = _loc3_;
       }
    };
-   _loc1_.onDeletion = function onDeletion(§\x1a\x1b\r§)
+   _loc1_.onDeletion = function onDeletion(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0);
       if(_loc3_ == "E")
@@ -307,7 +307,7 @@ if(!dofus.aks.Items)
          this.api.kernel.showMessage(undefined,this.api.lang.getText("CANNOT_DELETE_THIS_OBJECT"),"ERROR_CHAT");
       }
    };
-   _loc1_["\x19\x1e\x11"] = function §\x19\x1e\x11§(§\x1a\x1b\r§)
+   _loc1_["\x19\x1e\x11"] = function §\x19\x1e\x11§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -317,7 +317,7 @@ if(!dofus.aks.Items)
       this.api.datacenter.Player.currentWeight = _loc4_;
       this.api.datacenter.Player.maxOverWeight = _loc6_;
    };
-   _loc1_["\x19\x19\f"] = function §\x19\x19\f§(§\x1a\x1b\r§)
+   _loc1_["\x19\x19\f"] = function §\x19\x19\f§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split("|");
@@ -334,7 +334,7 @@ if(!dofus.aks.Items)
          this.api.datacenter.Player["\x18\x10\x1d"]["\x1a\f\n"](_loc5_);
       }
    };
-   _loc1_["\x19\x19\r"] = function §\x19\x19\r§(§\x1a\x1b\r§)
+   _loc1_["\x19\x19\r"] = function §\x19\x19\r§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0);
       switch(_loc3_)
@@ -362,7 +362,7 @@ if(!dofus.aks.Items)
             this.api.kernel.showMessage(undefined,this.api.lang.getText("ITEM_USE_CONFIRMATION",[_loc16_.name]),"CAUTION_YESNO",_loc15_);
       }
    };
-   _loc1_["\x19\x19\b"] = function §\x19\x19\b§(§\x1a\x1b\r§)
+   _loc1_["\x19\x19\b"] = function §\x19\x19\b§(sExtraData)
    {
       var _loc3_ = _loc2_[undefined](undefined);
       var _loc4_ = !eval(undefined)[undefined](Number(_loc3_[0])) ? Number(_loc3_[0]) : 0;

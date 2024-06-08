@@ -129,7 +129,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
       this.api.datacenter.Basics.aks_chat_lastActionTime = 3089;
       this.aks.send("BS" + _loc2_,true);
    }
-   function §\x19\x1d\x13§(§\x1a\x1b\r§)
+   function §\x19\x1d\x13§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split("");
@@ -183,7 +183,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
          this.api.datacenter.Basics["\x16\x19\x14"][_loc6_] = _loc3_;
       }
    }
-   function §\x19\x1a\b§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1a\b§(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -397,14 +397,14 @@ class dofus.aks.Chat extends dofus.aks.Handler
       }
       return _loc5_ + "<a href=\"asfunction:onHref,ShowPlayerPopupMenu," + sPlayerID + "," + _loc3_ + "\">" + _loc3_ + "</a>" + _loc6_;
    }
-   function §\x19\x1c\x11§(§\x1a\x1b\r§)
+   function §\x19\x1c\x11§(sExtraData)
    {
       if(_loc2_ != undefined)
       {
          this.api.kernel.showMessage(undefined,_loc2_,"INFO_CHAT");
       }
    }
-   function §\x19\x1c\x1b§(§\x1a\x1b\r§)
+   function §\x19\x1c\x1b§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];

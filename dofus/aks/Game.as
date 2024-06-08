@@ -98,7 +98,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    {
       this.aks.send("Gdi" + _loc2_,false);
    }
-   function §\x19\x16\x0b§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x16\x0b§(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -132,7 +132,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.gfx["\x16\x1b\x14"](1);
       this["\x19\x16\f"]();
    }
-   function §\x19\x19\x0e§(§\x1a\x1b\r§)
+   function §\x19\x19\x0e§(sExtraData)
    {
       this.api.datacenter.Player.guildInfos["\x17\x06\x11"] = undefined;
       if(this.api.gfx.spriteHandler["\x18\x0f\f"])
@@ -187,7 +187,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.ui.unloadUIComponent("GameResult");
       this.api.ui.unloadUIComponent("GameResultLight");
    }
-   function §\x19\x1b\b§(§\x1a\x1b\r§)
+   function §\x19\x1b\b§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -234,7 +234,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       }
       this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x0f"]);
    }
-   function §\x19\x1b\x04§(§\x1a\x1b\r§)
+   function §\x19\x1b\x04§(sExtraData)
    {
       if(_loc2_ != "e")
       {
@@ -254,7 +254,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          this.api.sounds["\x17\x0e\x06"]["\x19\x16\x1d"]();
       }
    }
-   function §\x19\x1b\x18§(§\x1a\x1b\r§)
+   function §\x19\x1b\x18§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "1";
       var _loc4_ = _loc2_.substr(1);
@@ -312,7 +312,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          this.api.gfx["\x15\x1c\x19"](this.api,true);
       }
    }
-   function §\x19\x1e\t§(§\x1a\x1b\r§)
+   function §\x19\x1e\t§(sExtraData)
    {
       if(this.api.datacenter.Game["\x18\r\x18"])
       {
@@ -384,7 +384,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       ank.utils.Timer.setTimer(this.api.network.Ping,"GameDecoDetect",this.api.network,this.api.network["\x1a\t\x0b"],_loc6_ * 1000);
       this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x10"]);
    }
-   function §\x19\x1e\x05§(§\x1a\x1b\r§)
+   function §\x19\x1e\x05§(sExtraData)
    {
       var _loc3_ = _loc2_;
       var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc3_);
@@ -400,13 +400,13 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.ui.getUIComponent("Timeline")["\x1b\n\x1c"]();
       this.api.kernel.GameManager["\x16\x1b\x18"](true);
    }
-   function §\x19\x1e\x06§(§\x1a\x1b\r§)
+   function §\x19\x1e\x06§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       this.api.datacenter.Game["\x1b\x11\x19"] = _loc3_;
       this.api.ui.getUIComponent("Timeline").update();
    }
-   function §\x19\x1e\x07§(§\x1a\x1b\r§)
+   function §\x19\x1e\x07§(sExtraData)
    {
       if(!this.api.datacenter.Game.isRunning)
       {
@@ -494,7 +494,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       _loc2_.addAction(24,false,this,this["\x1b\x11\x16"],[]);
       _loc2_.execute();
    }
-   function §\x19\x1e\b§(§\x1a\x1b\r§)
+   function §\x19\x1e\b§(sExtraData)
    {
       var _loc3_ = _loc2_;
       var _loc4_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_loc3_);
@@ -510,7 +510,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          this["\x1b\x11\x18"]();
       }
    }
-   function §\x19\x1a\x05§(§\x1a\x1b\r§)
+   function §\x19\x1a\x05§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -563,7 +563,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       }
       this.api.gfx["\x16\x1b\x14"](2);
    }
-   function §\x19\x1b\x13§(§\x1a\x1b\r§, §\x16\x0b\t§)
+   function §\x19\x1b\x13§(sExtraData, §\x16\x0b\t§)
    {
       if(!_loc3_)
       {
@@ -575,7 +575,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          this.api.kernel.showMessage(undefined,this.api.lang.getText("ASK_ENABLED_PVP"),"CAUTION_YESNO",{name:"EnabledPVP",listener:this});
       }
    }
-   function onHuntInfos(§\x1a\x1b\r§)
+   function onHuntInfos(sExtraData)
    {
       var _loc3_ = _loc2_.substring(1);
       var _loc4_ = _loc3_.split("|");
@@ -661,7 +661,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    {
       this.aks.send("Ghu");
    }
-   function §\x19\x17\x14§(§\x1a\x1b\r§)
+   function §\x19\x17\x14§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -674,7 +674,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.kernel.showMessage(undefined,this.api.lang.getText("PLAYER_SET_FLAG",[_loc6_.name,_loc5_]),"INFO_CHAT");
       this.api.gfx["\x1b\x07\x0b"](_loc4_,_loc7_,_loc5_,11,undefined,undefined,undefined,true);
    }
-   function §\x19\x17\x0b§(§\x1a\x1b\r§)
+   function §\x19\x17\x0b§(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       if(!this.api.ui.getUIComponent("FightChallenge"))
@@ -684,7 +684,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       var _loc4_ = new dofus.datacenter.["\x17\x0f\x15"](_global.parseInt(_loc3_[0]),_loc3_[1] == "1",_global.parseInt(_loc3_[2]),_global.parseInt(_loc3_[3]),_global.parseInt(_loc3_[4]),_global.parseInt(_loc3_[5]),_global.parseInt(_loc3_[6]));
       dofus.graphics.gapi.ui.FightChallenge(dofus.graphics.gapi.ui.FightChallenge(this.api.ui.getUIComponent("FightChallenge")))["\x15\x1d\x04"](_loc4_);
    }
-   function §\x19\x17\f§(§\x1a\x1b\r§, §\x1b\f\x07§)
+   function §\x19\x17\f§(sExtraData, §\x1b\f\x07§)
    {
       var _loc4_ = _global.parseInt(_loc2_);
       dofus.graphics.gapi.ui.FightChallenge(dofus.graphics.gapi.ui.FightChallenge(this.api.ui.getUIComponent("FightChallenge")))["\x1b\x14\n"](_loc4_,_loc3_);

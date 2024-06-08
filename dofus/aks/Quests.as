@@ -13,7 +13,7 @@ class dofus.aks.Quests extends dofus.aks.Handler
    {
       this.aks.send("QS" + _loc2_ + (_loc3_ == undefined ? "" : "|" + (_loc3_ <= 0 ? _loc3_ : "+" + _loc3_)));
    }
-   function §\x19\x19\x1c§(§\x1a\x1b\r§)
+   function §\x19\x19\x1c§(sExtraData)
    {
       var _loc3_ = _loc2_;
       var _loc4_ = 0;
@@ -43,7 +43,7 @@ class dofus.aks.Quests extends dofus.aks.Handler
       this.api.ui.getUIComponent("Quests")["\x1a\x18\x16"](_loc4_);
       this.api.ui.getUIComponent("Temporis").setQuests(_loc5_);
    }
-   function §\x19\x1d\r§(§\x1a\x1b\r§)
+   function §\x19\x1d\r§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0].split(";");

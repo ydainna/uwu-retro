@@ -32,15 +32,15 @@ class dofus.aks.ModReport extends dofus.aks.Handler
    {
       this.aks.send("mD");
    }
-   function onCreationSuccess(§\x1a\x1b\r§)
+   function onCreationSuccess(sExtraData)
    {
       this.api.kernel.showMessage(undefined,this.api.lang.getText("REPORT_TO_MODERATION_CREATION_SUCCESS"),"INFO_CHAT");
    }
-   function onCreationError(§\x1a\x1b\r§)
+   function onCreationError(sExtraData)
    {
       this.api.kernel.showMessage(undefined,this.api.lang.getText("REPORT_TO_MODERATION_CREATION_ERROR_" + _loc2_),"ERROR_CHAT");
    }
-   function onCasesList(§\x1a\x1b\r§)
+   function onCasesList(sExtraData)
    {
       var _loc3_ = new Array();
       var _loc4_ = _loc2_.split(dofus.aks.Handler.CONSOLE_ARGS_SAFE_SPLIT);
@@ -97,7 +97,7 @@ class dofus.aks.ModReport extends dofus.aks.Handler
          }
       }
    }
-   function onInfos(§\x1a\x1b\r§)
+   function onInfos(sExtraData)
    {
       this.api.ui.unloadUIComponent("ReportPlayerToModeration");
       var _loc3_ = this.api.datacenter.Player.modReportSessionData;

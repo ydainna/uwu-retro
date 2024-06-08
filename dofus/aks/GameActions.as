@@ -89,7 +89,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
    {
       this["\x1a\x13\x14"](920,[]);
    }
-   function §\x19\x13\x19§(§\x1a\x1b\r§)
+   function §\x19\x13\x19§(sExtraData)
    {
       var _loc3_ = _loc2_;
       if(_loc3_ != this.api.datacenter.Player.ID)
@@ -104,7 +104,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          _loc5_.execute();
       }
    }
-   function §\x19\x13\x18§(§\x1a\x1b\r§)
+   function §\x19\x13\x18§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -132,7 +132,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x13\x17§(§\x1a\x1b\r§)
+   function §\x19\x13\x17§(sExtraData)
    {
       var _loc3_ = _loc2_.indexOf(";");
       var _loc4_ = Number(_loc2_.substring(0,_loc3_));

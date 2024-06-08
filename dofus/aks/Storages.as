@@ -4,7 +4,7 @@ class dofus.aks.§\x1b\x0b\x06§ extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function onInformations(§\x1a\x1b\r§)
+   function onInformations(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = 0;
@@ -24,7 +24,7 @@ class dofus.aks.§\x1b\x0b\x06§ extends dofus.aks.Handler
          _loc4_ = _loc4_ + 1;
       }
    }
-   function onLockedStorage(§\x1a\x1b\r§)
+   function onLockedStorage(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];

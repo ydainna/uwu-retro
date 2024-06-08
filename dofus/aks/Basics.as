@@ -72,7 +72,7 @@ if(!dofus.aks.Basics)
    {
       this.aks.send("Br" + _loc2_ + "|" + _loc3_ + "|" + (!_loc4_ ? "0" : "1"),false,undefined,true);
    };
-   _loc1_["\x19\x1c\x03"] = function §\x19\x1c\x03§(§\x1a\x1b\r§)
+   _loc1_["\x19\x1c\x03"] = function §\x19\x1c\x03§(sExtraData)
    {
       var _loc3_ = this.api.datacenter.["\x1b\x0f\b"].Report;
       if(_loc3_ != undefined)
@@ -136,7 +136,7 @@ if(!dofus.aks.Basics)
       }
       return undefined;
    };
-   _loc1_["\x19\x1b\x07"] = function §\x19\x1b\x07§(§\x1a\x1b\r§)
+   _loc1_["\x19\x1b\x07"] = function §\x19\x1b\x07§(sExtraData)
    {
       var _loc3_ = _loc2_;
       if(_loc3_ != undefined && _loc3_[undefined] > 0)
@@ -144,12 +144,12 @@ if(!dofus.aks.Basics)
          this[undefined][undefined][undefined](undefined,_loc3_,undefined);
       }
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       this[undefined][undefined][undefined](this[undefined][undefined][undefined](undefined),this[undefined][undefined][undefined](undefined,[_loc2_]),undefined);
       this[undefined][undefined][undefined][undefined] = true;
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       this[undefined][undefined][undefined](undefined);
       this[undefined][undefined][undefined](this[undefined][undefined][undefined](undefined),this[undefined][undefined][undefined](undefined,[_loc2_]),undefined);
@@ -218,7 +218,7 @@ if(!dofus.aks.Basics)
       _loc3_[undefined] = _loc9_;
       return _loc3_;
    };
-   _loc1_[undefined] = function §undefined§(bSuccess, §\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -392,7 +392,7 @@ if(!dofus.aks.Basics)
          this[undefined][undefined][undefined](undefined,this[undefined][undefined][undefined](undefined,[undefined]),undefined);
       }
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       if(_loc2_ == undefined || _loc2_[undefined] == 0)
       {
@@ -406,11 +406,11 @@ if(!dofus.aks.Basics)
    {
       this[undefined][undefined][undefined](undefined)[undefined]();
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       this[undefined][undefined][undefined][undefined] = _loc2_[undefined](undefined);
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       var _loc3_ = _loc2_[undefined](undefined);
       var _loc4_ = Number(_loc3_[0]);
@@ -433,18 +433,18 @@ if(!dofus.aks.Basics)
          this[undefined][undefined][undefined](undefined)[undefined]();
       }
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       this[undefined] = _loc3_;
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       this[undefined][undefined][undefined][undefined] = 2285;
       var _loc3_ = _loc2_[undefined](undefined);
       this[undefined][undefined][undefined][undefined](Number(_loc3_[0]),Number(_loc3_[1]),Number(_loc3_[2]));
    };
-   _loc1_[undefined] = function §undefined§(bSuccess, §\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -485,7 +485,7 @@ if(!dofus.aks.Basics)
          this[undefined][undefined][undefined](undefined,this[undefined][undefined][undefined](undefined,[_loc3_]),undefined);
       }
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = Number(_loc3_[0]);
@@ -501,7 +501,7 @@ if(!dofus.aks.Basics)
          dofus.utils.["\x16\x04\x06"].getInstance()["\x16\x1a\b"](_loc5_,_loc4_);
       }
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       var _loc3_ = _loc2_[undefined](undefined);
       var _loc4_ = Number(_loc3_[0]);
@@ -521,11 +521,11 @@ if(!dofus.aks.Basics)
          this[undefined][undefined][undefined](_loc6_,_loc7_,undefined);
       }
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       this[undefined]();
    };
-   _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)
+   _loc1_[undefined] = function §undefined§(sExtraData)
    {
       var _loc3_ = _loc2_[undefined](0) == undefined;
       if(_loc3_)

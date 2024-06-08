@@ -121,7 +121,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
    {
       this.api.ui.loadUIComponent("CreateGuild","CreateGuild");
    }
-   function §\x19\x16\x0b§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x16\x0b§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -144,7 +144,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          this.api.ui.getUIComponent("CreateGuild").enabled = true;
       }
    }
-   function §\x19\x1d\x0b§(§\x1a\x1b\r§)
+   function §\x19\x1d\x0b§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -162,7 +162,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          this.api.datacenter.Player.guildInfos.initialize(true,_loc4_,_loc5_,_loc6_,_loc7_,_loc8_,_loc9_);
       }
    }
-   function §\x19\x18\x17§(§\x1a\x1b\r§)
+   function §\x19\x18\x17§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0] == "1";
@@ -176,7 +176,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
       var _loc11_ = _loc3_[7];
       this.api.datacenter.Player.guildInfos.setNote(_loc11_,_loc10_,_loc9_);
    }
-   function §\x19\x18\x19§(§\x1a\x1b\r§)
+   function §\x19\x18\x19§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split("|");
@@ -239,7 +239,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
       }
       _loc5_["\x1a\x17\x1a"]();
    }
-   function §\x19\x18\x16§(§\x1a\x1b\r§)
+   function §\x19\x18\x16§(sExtraData)
    {
       if(_loc2_.length == 0)
       {
@@ -275,7 +275,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          this.api.datacenter.Player.guildInfos["\x1a\x15\x03"](_loc4_,_loc5_,_loc6_,_loc7_,_loc8_,_loc9_,_loc10_,_loc12_);
       }
    }
-   function §\x19\x18\x1a§(§\x1a\x1b\r§)
+   function §\x19\x18\x1a§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -313,7 +313,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
       }
       this.api.datacenter.Player.guildInfos["\x1a\x18\x01"](_loc4_,_loc5_);
    }
-   function §\x19\x18\x1c§(§\x1a\x1b\r§)
+   function §\x19\x18\x1c§(sExtraData)
    {
       if(_loc2_.length == 0)
       {
@@ -416,7 +416,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          _loc5_["\x1a\x1a\x12"]();
       }
    }
-   function §\x19\x18\x1d§(§\x1a\x1b\r§)
+   function §\x19\x18\x1d§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split("|");
@@ -476,7 +476,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          ank.utils.Logger.err("[gITP] impossible de trouver le percepteur");
       }
    }
-   function §\x19\x18\x1b§(§\x1a\x1b\r§)
+   function §\x19\x18\x1b§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       var _loc4_ = _loc2_.substr(1).split("|");
@@ -523,7 +523,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          ank.utils.Logger.err("[gITp] impossible de trouver le percepteur");
       }
    }
-   function §\x19\x18\x18§(§\x1a\x1b\r§)
+   function §\x19\x18\x18§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0) == "+";
       if(_loc2_.length <= 1)
@@ -571,11 +571,11 @@ class dofus.aks.Guild extends dofus.aks.Handler
       var _loc6_ = _loc3_[2];
       this.api.datacenter.Player.guildInfos.setInformations(_loc6_,_loc5_,_loc4_);
    }
-   function §\x19\x1c\x06§(§\x1a\x1b\r§)
+   function §\x19\x1c\x06§(sExtraData)
    {
       this.api.kernel.showMessage(this.api.lang.getText("GUILD"),this.api.lang.getText("YOU_INVIT_B_IN_GUILD",[_loc2_]),"INFO_CANCEL",{name:"Guild",listener:this,params:{spriteID:this.api.datacenter.Player.ID}});
    }
-   function §\x19\x1c\x05§(§\x1a\x1b\r§)
+   function §\x19\x1c\x05§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -590,7 +590,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
       this.api.kernel.showMessage(undefined,this.api.lang.getText("CHAT_A_INVIT_YOU_IN_GUILD",[this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc4_,_loc5_),_loc6_]),"INFO_CHAT");
       this.api.kernel.showMessage(this.api.lang.getText("GUILD"),this.api.lang.getText("A_INVIT_YOU_IN_GUILD",[_loc5_,_loc6_]),"CAUTION_YESNOIGNORE",{name:"Guild",player:_loc5_,listener:this,params:{spriteID:_loc4_,player:_loc5_}});
    }
-   function §\x19\x19\x10§(§\x1a\x1b\r§)
+   function §\x19\x19\x10§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0);
       switch(_loc3_)
@@ -617,7 +617,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
             this.api.ui.unloadUIComponent("AskYesNoIgnoreGuild");
       }
    }
-   function §\x19\x19\x11§(§\x1a\x1b\r§)
+   function §\x19\x19\x11§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0);
       switch(_loc3_)
@@ -638,7 +638,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
    {
       this.api.ui.unloadUIComponent("CreateGuild");
    }
-   function §\x19\x14\x0f§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x14\x0f§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -679,7 +679,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x18\x0e§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x18\x0e§(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -713,7 +713,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          this["\x17\x19\b"]();
       }
    }
-   function §\x19\x1d\x17§(§\x1a\x1b\r§)
+   function §\x19\x1d\x17§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0].charAt(0);
@@ -736,7 +736,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
             this.api.kernel.showMessage(undefined,this.api.lang.getText("TAX_ATTACKED_DIED",[_loc5_,_loc9_]),"GUILD_CHAT");
       }
    }
-   function §\x19\x1d\x18§(§\x1a\x1b\r§)
+   function §\x19\x1d\x18§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0].charAt(0);
@@ -771,7 +771,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
             this.api.kernel.showMessage(undefined,this.api.lang.getText("TAXCOLLECTOR_RECOLTED",[_loc5_,_loc9_,_loc10_,_loc13_]),"GUILD_CHAT");
       }
    }
-   function §\x19\x1e\x0e§(§\x1a\x1b\r§)
+   function §\x19\x1e\x0e§(sExtraData)
    {
       switch(_loc2_)
       {

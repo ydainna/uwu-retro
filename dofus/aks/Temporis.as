@@ -13,7 +13,7 @@ class dofus.aks.Temporis extends dofus.aks.Handler
    {
       this.aks.send("YT" + nEpisode + "|" + sPacket);
    }
-   function onTemporisPacketReceived(§\x1a\x1b\r§)
+   function onTemporisPacketReceived(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -25,7 +25,7 @@ class dofus.aks.Temporis extends dofus.aks.Handler
          this._temporisEpisodeTwo.onTemporisEpisode2PacketReceived(_loc5_);
       }
    }
-   function onTemporisInfos(§\x1a\x1b\r§)
+   function onTemporisInfos(sExtraData)
    {
       var _loc3_ = 1000;
       if(this.api.datacenter.Player.temporisInfos == undefined)
@@ -37,7 +37,7 @@ class dofus.aks.Temporis extends dofus.aks.Handler
          this.api.datacenter.Player.temporisInfos.initialize(true,_loc3_);
       }
    }
-   function onTemporisConfig(§\x1a\x1b\r§)
+   function onTemporisConfig(sExtraData)
    {
       var _loc3_ = this.api.kernel.TemporisConfigManager;
       _loc3_.initialize();

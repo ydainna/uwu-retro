@@ -40,7 +40,7 @@ class dofus.aks.Friends extends dofus.aks.Handler
    {
       this.aks.send("FO" + (!_loc2_ ? "-" : "+"));
    }
-   function §\x19\x13\x1d§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x13\x1d§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -69,7 +69,7 @@ class dofus.aks.Friends extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x1c\x01§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x1c\x01§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -85,7 +85,7 @@ class dofus.aks.Friends extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x17\x19§(§\x1a\x1b\r§)
+   function §\x19\x17\x19§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       this.api.datacenter.Player.Friends = new Array();
@@ -129,7 +129,7 @@ class dofus.aks.Friends extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x1d\x03§(§\x1a\x1b\r§)
+   function §\x19\x1d\x03§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -153,7 +153,7 @@ class dofus.aks.Friends extends dofus.aks.Handler
       var _loc6_ = this.api.ui.getUIComponent("Friends");
       _loc6_.spouse = _loc5_;
    }
-   function §\x19\x1a\x18§(§\x1a\x1b\r§)
+   function §\x19\x1a\x18§(sExtraData)
    {
       this.api.datacenter.Basics.aks_notify_on_friend_connexion = _loc2_ == "+";
       var _loc3_ = dofus.graphics.gapi.ui.Friends(this.api.ui.getUIComponent("Friends"));

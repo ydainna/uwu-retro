@@ -48,7 +48,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
    {
       this.aks.send("Rc");
    }
-   function §\x19\x16\x1c§(§\x1a\x1b\r§)
+   function §\x19\x16\x1c§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0);
       switch(_loc3_)
@@ -63,7 +63,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
             this["\x17\r\x16"](_loc2_.charAt(1));
       }
    }
-   function §\x19\x1e\x16§(§\x1a\x1b\r§)
+   function §\x19\x1e\x16§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       if(!_global.isNaN(_loc3_))
@@ -71,16 +71,16 @@ class dofus.aks.Mount extends dofus.aks.Handler
          this.api.datacenter.Player.mountXPPercent = _loc3_;
       }
    }
-   function §\x19\x1a\x10§(§\x1a\x1b\r§)
+   function §\x19\x1a\x10§(sExtraData)
    {
       this.api.datacenter.Player.mount.name = _loc2_;
    }
-   function onData(§\x1a\x1b\r§)
+   function onData(sExtraData)
    {
       var _loc3_ = this["\x17\x02\x14"](_loc2_);
       this.api.ui.loadUIComponent("MountViewer","MountViewer",{mount:_loc3_});
    }
-   function §\x19\x1a\n§(§\x1a\x1b\r§)
+   function §\x19\x1a\n§(sExtraData)
    {
       this.api.datacenter.["\x18\x18\x0e"].resetMountPark();
       var _loc3_ = _loc2_.split("|");
@@ -102,7 +102,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
          _loc5_ = _loc5_ + 1;
       }
    }
-   function §\x19\x1c\n§(§\x1a\x1b\r§)
+   function §\x19\x1c\n§(sExtraData)
    {
       var _loc3_ = _loc2_.charAt(0);
       switch(_loc3_)
@@ -114,7 +114,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
             this.api.datacenter.Player.isRiding = false;
       }
    }
-   function §\x19\x1a\x0b§(§\x1a\x1b\r§)
+   function §\x19\x1a\x0b§(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       this.api.ui.loadUIComponent("MountParkSale","MountParkSale",{defaultPrice:Number(_loc3_[1]),§\x18\x0b\x01§:Number(_loc3_[2])});

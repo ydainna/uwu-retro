@@ -8,7 +8,7 @@ class dofus.aks.Documents extends dofus.aks.Handler
    {
       this.aks.send("dV");
    }
-   function §\x19\x16\x0b§(bSuccess, §\x1a\x1b\r§)
+   function §\x19\x16\x0b§(bSuccess, sExtraData)
    {
       if(_loc2_)
       {

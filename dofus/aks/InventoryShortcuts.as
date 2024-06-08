@@ -16,7 +16,7 @@ class dofus.aks.InventoryShortcuts extends dofus.aks.Handler
    {
       this.aks.send("OrR" + _loc2_);
    }
-   function onInventoryShortcutAdded(§\x1a\x1b\r§)
+   function onInventoryShortcutAdded(sExtraData)
    {
       var _loc3_ = _loc2_.split(";");
       var _loc4_ = Number(_loc3_[0]);
@@ -26,7 +26,7 @@ class dofus.aks.InventoryShortcuts extends dofus.aks.Handler
       var _loc8_ = this.api.datacenter.Player.InventoryShortcuts;
       _loc8_["\x15\x1d\x13"](_loc4_,_loc7_);
    }
-   function onInventoryShortcutRemoved(§\x1a\x1b\r§)
+   function onInventoryShortcutRemoved(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
       var _loc4_ = this.api.datacenter.Player.InventoryShortcuts;
