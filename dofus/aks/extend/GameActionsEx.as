@@ -249,11 +249,11 @@ class dofus.aks.extend.GameActionsEx
             {
                this.api.electron.makeNotification(this.api.lang.getText("A_ATTACK_B",[_loc41_,_loc42_]));
                this.api.ui.loadUIComponent("CenterText","CenterText",{text:this.api.lang.getText("YOU_ARE_ATTAC"),background:true,timer:2000},{bForceLoad:true});
-               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x0b"]);
+               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x0b"]);
             }
             else
             {
-               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\n"]);
+               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\n"]);
             }
             break;
          case 909:
@@ -337,7 +337,7 @@ class dofus.aks.extend.GameActionsEx
             }
             if(sSenderID == this.api.datacenter.Player.ID)
             {
-               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x0e"]);
+               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x0e"]);
             }
             else
             {
@@ -345,11 +345,11 @@ class dofus.aks.extend.GameActionsEx
                var _loc78_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_global.parseInt(sSenderID))["\x1b\x0e\x15"];
                if(_loc77_ == _loc78_)
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\f"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\f"]);
                }
                else
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\r"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\r"]);
                }
             }
             break;
@@ -362,7 +362,7 @@ class dofus.aks.extend.GameActionsEx
             _loc5_.addAction(95,false,this.api.gfx,this.api.gfx["\x15\x1e\x10"],[sSenderID,this.api.lang.getText("CRITICAL_MISS")]);
             if(sSenderID == this.api.datacenter.Player.ID)
             {
-               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x13"]);
+               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x13"]);
             }
             else
             {
@@ -370,11 +370,11 @@ class dofus.aks.extend.GameActionsEx
                var _loc82_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_global.parseInt(sSenderID))["\x1b\x0e\x15"];
                if(_loc81_ == _loc82_)
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x11"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x11"]);
                }
                else
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x12"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x12"]);
                }
             }
             break;
@@ -408,7 +408,7 @@ class dofus.aks.extend.GameActionsEx
             }
             if(sSenderID == this.api.datacenter.Player.ID)
             {
-               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x0e"]);
+               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x0e"]);
             }
             else
             {
@@ -416,11 +416,11 @@ class dofus.aks.extend.GameActionsEx
                var _loc97_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_global.parseInt(sSenderID))["\x1b\x0e\x15"];
                if(_loc96_ == _loc97_)
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\f"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\f"]);
                }
                else
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\r"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\r"]);
                }
             }
             break;
@@ -434,7 +434,7 @@ class dofus.aks.extend.GameActionsEx
             _loc5_.addAction(105,false,this.api.gfx,this.api.gfx["\x15\x1e\x10"],[sSenderID,this.api.lang.getText("CRITICAL_MISS")]);
             if(sSenderID == this.api.datacenter.Player.ID)
             {
-               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x13"]);
+               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x13"]);
             }
             else
             {
@@ -442,11 +442,11 @@ class dofus.aks.extend.GameActionsEx
                var _loc102_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_global.parseInt(sSenderID))["\x1b\x0e\x15"];
                if(_loc101_ == _loc102_)
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x11"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x11"]);
                }
                else
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x12"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x12"]);
                }
             }
             break;

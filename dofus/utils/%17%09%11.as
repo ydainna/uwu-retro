@@ -519,7 +519,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.§\x16\x04\x07§
    {
       return this["\x18\x02\t"]("SRVT");
    }
-   function §\x17\x1e\x10§(§\x19\x0f\x16§, §\x19\x0e\x06§)
+   function §\x17\x1e\x10§(§\x19\x0f\x16§, nServerID)
    {
       return this["\x18\x02\t"]("SRVC")[_loc2_ + "|" + _loc3_];
    }

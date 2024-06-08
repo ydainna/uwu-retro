@@ -120,11 +120,11 @@ class dofus.§\x18\x03\x10§.gapi.ui.GuildHouseRights extends dofus.§\x18\x03\x
    }
    function guild(oEvent)
    {
-      this["\x1b\x14\x01"]();
+      this.update();
    }
    function shared(oEvent)
    {
-      this["\x1b\x14\x01"]();
+      this.update();
    }
    function click(oEvent)
    {

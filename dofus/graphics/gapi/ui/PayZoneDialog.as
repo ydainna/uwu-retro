@@ -16,7 +16,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.PayZoneDialog extends dofus.§\x18\x03\x10�
       this["\x1d\x1a\x11"] = _loc2_;
       return this["\x1e\x1c\x05"]();
    }
-   function §\x19\f§(§\x1b\x03\x1d§)
+   function §\x19\f§(sName)
    {
       this["\x1e\x0b\x06"] = _loc2_;
       return this["\x04\x1b"]();

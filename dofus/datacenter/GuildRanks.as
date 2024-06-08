@@ -5,7 +5,7 @@ class dofus.§\x17\x04\x19§.GuildRanks
       this._oNameList = new Object();
       this.api = _global.api;
    }
-   function setRankCustomName(§\x19\b\x0b§, §\x1b\x03\x1d§)
+   function setRankCustomName(§\x19\b\x0b§, sName)
    {
       this._oNameList[_loc2_] = _loc3_;
    }

@@ -85,7 +85,7 @@ class ank.gapi.§\x17\x13\n§ extends ank.utils.§\x1a\t\t§
    {
       this.pmPopupMenu.removeMovieClip();
    }
-   function §\x1a\x1d\x0f§(sText, §\x1b\x1a\x05§, §\x1b\x1a\x14§, §\x19\x1e\x1d§, §\x1b\x03\x1d§)
+   function §\x1a\x1d\x0f§(sText, §\x1b\x1a\x05§, §\x1b\x1a\x14§, §\x19\x1e\x1d§, sName)
    {
       if(_loc2_ == undefined)
       {

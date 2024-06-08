@@ -18,7 +18,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MakeReport extends dofus.§\x18\x03\x10§.g
          _loc2_.kernel.showMessage(undefined,"MakeReport UI not found","COMMANDS_CHAT");
          return undefined;
       }
-      _loc5_["\x1b\x14\x01"](true);
+      _loc5_.update(true);
    }
    function §\x1e\x1c\x17§()
    {

@@ -14,9 +14,9 @@ class dofus.§\x17\x04\x19§.§\x1a\x05\t§ extends ank.battlefield.§\x17\x04\x
       super.initialize(sID,_loc4_,_loc5_,_loc6_,_loc7_);
       this.api = _global.api;
       this["\x1c\x11\x02"] = _loc8_;
-      this["\x17\x13\x05"] = new dofus["\x18\x18\x0b"]["\x17\x13\x05"](this,this.api);
-      this["\x16\x19\x06"] = new dofus["\x18\x18\x0b"]["\x16\x19\x06"](this,this.api);
-      this["\x17\f\t"] = new dofus["\x18\x18\x0b"]["\x17\f\t"](this,this.api);
+      this["\x17\x13\x05"] = new dofus.managers["\x17\x13\x05"](this,this.api);
+      this["\x16\x19\x06"] = new dofus.managers["\x16\x19\x06"](this,this.api);
+      this["\x17\f\t"] = new dofus.managers["\x17\f\t"](this,this.api);
       if(sID == this.api.datacenter.Player.ID)
       {
          this["\x1b\x1e\t"] = this.api.datacenter.Player.AP;

@@ -14,7 +14,7 @@ class dofus.§\x17\x04\x19§.§\x1a\x1c\x0e§ extends Object
    {
       return this["\x1e\n\x06"];
    }
-   function §\x19\f§(§\x1b\x03\x1d§)
+   function §\x19\f§(sName)
    {
       this["\x1e\x0b\x06"] = _loc2_;
       return this["\x04\x1b"]();

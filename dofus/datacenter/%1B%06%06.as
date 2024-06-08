@@ -117,7 +117,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
    }
    function §\x1e\x12\x04§()
    {
-      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\n"],this["\x1d\x17\x01"]);
+      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\n"],this["\x1d\x17\x01"]);
       var _loc3_ = this["\x18\x01\x03"](2);
       if(_loc2_ > -1)
       {
@@ -137,12 +137,12 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
    function §\x07\x04§()
    {
       var _loc2_ = this["\x18\x01\x03"](4);
-      var _loc3_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"].ACTION_BOOST_SPELL_RANGE_NO_RANGEABLE_TRIGGER,this["\x1d\x17\x01"]);
+      var _loc3_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"].ACTION_BOOST_SPELL_RANGE_NO_RANGEABLE_TRIGGER,this["\x1d\x17\x01"]);
       if(_loc3_ > -1)
       {
          _loc2_ += _loc3_;
       }
-      var _loc4_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x13"],this["\x1d\x17\x01"]);
+      var _loc4_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x13"],this["\x1d\x17\x01"]);
       if(_loc4_ > -1)
       {
          _loc2_ += _loc4_;
@@ -159,7 +159,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
    }
    function §\x1e\x17\t§()
    {
-      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\r"],this["\x1d\x17\x01"]);
+      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\r"],this["\x1d\x17\x01"]);
       var _loc3_ = this["\x18\x01\x03"](5);
       if(_loc2_ > -1)
       {
@@ -177,7 +177,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
    }
    function §\x02\t§()
    {
-      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x0b"],this["\x1d\x17\x01"]);
+      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x0b"],this["\x1d\x17\x01"]);
       var _loc3_ = this["\x18\x01\x03"](7);
       if(_loc2_ > 0)
       {
@@ -187,7 +187,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
    }
    function §\x02\b§()
    {
-      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x12"],this["\x1d\x17\x01"]);
+      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x12"],this["\x1d\x17\x01"]);
       var _loc3_ = this["\x18\x01\x03"](8);
       if(_loc2_ > 0)
       {
@@ -201,7 +201,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
    }
    function §\x1e\x13\x1c§()
    {
-      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x14"],this["\x1d\x17\x01"]);
+      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x14"],this["\x1d\x17\x01"]);
       var _loc3_ = this["\x18\x01\x03"](10);
       if(_loc2_ > 0)
       {
@@ -215,7 +215,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
    }
    function §\x02\x03§()
    {
-      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x11"],this["\x1d\x17\x01"]);
+      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x11"],this["\x1d\x17\x01"]);
       var _loc3_ = this["\x18\x01\x03"](12);
       if(_loc3_ == undefined)
       {
@@ -229,7 +229,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
    }
    function §\x02\x02§()
    {
-      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x10"],this["\x1d\x17\x01"]);
+      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x10"],this["\x1d\x17\x01"]);
       var _loc3_ = this["\x18\x01\x03"](13);
       if(_loc3_ == undefined)
       {
@@ -243,8 +243,8 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
    }
    function §\x1e\x18\x0b§()
    {
-      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\f"],this["\x1d\x17\x01"]);
-      var _loc3_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x15"],this["\x1d\x17\x01"]);
+      var _loc2_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\f"],this["\x1d\x17\x01"]);
+      var _loc3_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x15"],this["\x1d\x17\x01"]);
       var _loc4_ = _loc3_ <= -1 ? this["\x18\x01\x03"](14) : _loc3_;
       if(_loc4_ == undefined)
       {

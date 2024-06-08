@@ -2,7 +2,7 @@ class dofus.utils.§\x19\x03\n§.§\x19\x03\x0b§
 {
    static var §\x1b\x18\f§ = ["A","E","I","O","U","Y"];
    static var §\x16\x1e\x1a§ = ["B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Z"];
-   function §\x19\x03\x0b§(§\x1b\x03\x1d§)
+   function §\x19\x03\x0b§(sName)
    {
       this.name = _loc2_;
       this["\x1b\x16\x0f"] = _loc2_.toUpperCase();

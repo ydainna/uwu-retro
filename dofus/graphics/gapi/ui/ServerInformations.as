@@ -24,7 +24,7 @@ if(!dofus.graphics.gapi.ui.ServerInformations)
    {
       super();
    }.prototype;
-   _loc1_["\x1c\f"] = function §\x1c\f§(§\x19\x0e\x06§)
+   _loc1_["\x1c\f"] = function §\x1c\f§(nServerID)
    {
       this["\x1d\x1c\x17"] = _loc2_;
       this["\x1e\f\x11"] = _global.api.datacenter.Basics["\x16\x02\x12"].findFirstItem("id",_loc2_).item;

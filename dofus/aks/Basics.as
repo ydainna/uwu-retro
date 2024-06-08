@@ -36,7 +36,7 @@ if(!dofus.aks.Basics)
    {
       this["\x1b\x19\t"]("");
    };
-   _loc1_["\x1b\x19\t"] = function §\x1b\x19\t§(§\x1b\x03\x1d§)
+   _loc1_["\x1b\x19\t"] = function §\x1b\x19\t§(sName)
    {
       this.aks.send("BW" + _loc2_);
    };
@@ -130,7 +130,7 @@ if(!dofus.aks.Basics)
                   }
                   break;
                }
-               _loc7_["\x1b\x14\x01"](true);
+               _loc7_.update(true);
                break;
          }
       }

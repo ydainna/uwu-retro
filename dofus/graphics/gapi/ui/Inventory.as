@@ -517,7 +517,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Inventory extends dofus.§\x18\x03\x10§.ga
       var _loc3_ = this.gapi.loadUIComponent("AskYesNo","AskYesNoReinitialize",{title:this.api.lang.getText("QUESTION"),text:this.api.lang.getText("RESET_PET_CONFIRM"),params:{item:_loc2_}});
       _loc3_.addEventListener("yes",this);
    }
-   function §\x16\x05\x1b§(§\x19\x13\x07§, §\x19\f\x16§)
+   function §\x16\x05\x1b§(§\x19\x13\x07§, nQuantity)
    {
       if(_loc2_.Quantity == 1)
       {

@@ -232,7 +232,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       {
          this.api.ui.loadUIComponent("FightOptionButtons","FightOptionButtons");
       }
-      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus["\x18\x18\x0b"]["\x1b\x10\x0b"]["\x1b\x10\x0f"]);
+      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x0f"]);
    }
    function §\x19\x1b\x04§(§\x1a\x1b\r§)
    {
@@ -382,7 +382,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       }
       this.api.kernel.GameManager["\x16\x1b\x18"](true);
       ank.utils.Timer.setTimer(this.api.network["\x1a\x04\x1c"],"GameDecoDetect",this.api.network,this.api.network["\x1a\t\x0b"],_loc6_ * 1000);
-      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus["\x18\x18\x0b"]["\x1b\x10\x0b"]["\x1b\x10\x10"]);
+      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x10"]);
    }
    function §\x19\x1e\x05§(§\x1a\x1b\r§)
    {
@@ -404,7 +404,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    {
       var _loc3_ = _loc2_.split("|");
       this.api.datacenter.Game["\x1b\x11\x19"] = _loc3_;
-      this.api.ui.getUIComponent("Timeline")["\x1b\x14\x01"]();
+      this.api.ui.getUIComponent("Timeline").update();
    }
    function §\x19\x1e\x07§(§\x1a\x1b\r§)
    {

@@ -10,7 +10,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseServer extends dofus.§\x18\x03\x10§
       this["\x1c\x10\x0b"] = _loc2_;
       return this["\b\x1a"]();
    }
-   function §\x1c\r§(§\x19\x0e\x06§)
+   function §\x1c\r§(nServerID)
    {
       this["\x1d\x1c\x17"] = _loc2_;
       return this["\b\x19"]();
@@ -173,7 +173,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseServer extends dofus.§\x18\x03\x10§
          this.api.datacenter.Basics.hasForcedManualSelection = false;
       }
    }
-   function §\x1a\x13\r§(§\x19\x0e\x06§)
+   function §\x1a\x13\r§(nServerID)
    {
       if(_global.isNaN(_loc2_))
       {

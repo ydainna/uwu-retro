@@ -323,7 +323,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
                }
                _loc12_ = "EMOTE_CHAT";
                _loc6_ = _loc6_.substr(1,_loc6_.length - 2);
-               if(!dofus["\x18\x18\x0b"].ChatManager["\x18\x0f\r"](_loc6_.charAt(_loc6_.length - 1)))
+               if(!dofus.managers.ChatManager["\x18\x0f\r"](_loc6_.charAt(_loc6_.length - 1)))
                {
                   _loc6_ += ".";
                }

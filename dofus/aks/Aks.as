@@ -205,7 +205,7 @@ class dofus.aks.Aks extends dofus.utils.§\x16\x04\x07§
    {
       this["\x1e\x03\t"].process(_loc2_);
    }
-   function §\x1b\t\x14§(§\x19\t\x06§)
+   function §\x1b\t\x14§(nKeyID)
    {
       this["\x1d\x14\x16"] = _loc2_;
    }
@@ -332,7 +332,7 @@ class dofus.aks.Aks extends dofus.utils.§\x16\x04\x07§
       _loc5_ = _global.unescape(_loc5_);
       return _loc5_;
    }
-   function §\x15\x1d\x16§(§\x19\t\x06§, sKey)
+   function §\x15\x1d\x16§(nKeyID, sKey)
    {
       if(this["\x1b\x1d\r"] == undefined)
       {

@@ -4,7 +4,7 @@ class dofus.§\x18\x18\x0b§.§\x19\b\x11§
    static var §\x1e\f\x10§ = null;
    function §\x19\b\x11§(§\x19\x11\x11§)
    {
-      dofus["\x18\x18\x0b"]["\x19\b\x11"]["\x1e\f\x10"] = this;
+      dofus.managers["\x19\b\x11"]["\x1e\f\x10"] = this;
       this["\x1e\x02\b"] = _loc2_;
    }
    function §\x0b\x1a§()
@@ -75,7 +75,7 @@ class dofus.§\x18\x18\x0b§.§\x19\b\x11§
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"]["\x19\b\x11"]["\x1e\f\x10"];
+      return dofus.managers["\x19\b\x11"]["\x1e\f\x10"];
    }
    function setState()
    {

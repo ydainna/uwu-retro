@@ -107,7 +107,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsRecycler extends dofus.§\x18\x03\x10�
       if(eaRewards.length == 0)
       {
          this.api.kernel.showMessage(this.api.lang.getText("CRAFT"),this.api.lang.getText("CRAFT_FAILED"),"ERROR_BOX",{name:"CraftFailed"});
-         this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x0f"]);
+         this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x0f"]);
          this.setCraftMode();
       }
       else
@@ -217,7 +217,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsRecycler extends dofus.§\x18\x03\x10�
          _loc5_ = _loc5_ + 1;
       }
    }
-   function §\x18\x1e\x19§(§\x19\x13\x07§, bAddToWorkshop, §\x19\f\x16§)
+   function §\x18\x1e\x19§(§\x19\x13\x07§, bAddToWorkshop, nQuantity)
    {
       if(this._bRecyclingInProgress)
       {

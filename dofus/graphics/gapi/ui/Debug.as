@@ -337,7 +337,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Debug extends dofus.§\x18\x03\x10§.gapi.�
             {
                _loc8_.penal += "\n" + _loc9_;
             }
-            _loc7_["\x1b\x14\x01"](true);
+            _loc7_.update(true);
             break;
          case "AppendReportDescription":
             var _loc10_ = dofus.graphics.gapi.ui.MakeReport(_loc3_.ui.getUIComponent("MakeReport"));
@@ -356,7 +356,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Debug extends dofus.§\x18\x03\x10§.gapi.�
             {
                _loc11_.description += "\n" + _loc12_;
             }
-            _loc10_["\x1b\x14\x01"](true);
+            _loc10_.update(true);
             break;
          case "AppendReportComplementary":
             var _loc13_ = dofus.graphics.gapi.ui.MakeReport(_loc3_.ui.getUIComponent("MakeReport"));
@@ -375,7 +375,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Debug extends dofus.§\x18\x03\x10§.gapi.�
             {
                _loc14_.complementary += "\n" + _loc15_;
             }
-            _loc13_["\x1b\x14\x01"](true);
+            _loc13_.update(true);
             break;
          case "ShowPlayerPopupMenu":
             if(!_loc3_.datacenter.Basics.inGame)

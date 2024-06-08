@@ -78,7 +78,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.GridInventoryViewer extends d
       this.modelChanged();
       this.kamaChanged({value:this["\x1e\x04\x02"].Kama});
    }
-   function validateDrop(§\x1b\r\x1b§, §\x19\x13\x07§, §\x19\f\x16§)
+   function validateDrop(§\x1b\r\x1b§, §\x19\x13\x07§, nQuantity)
    {
       _loc4_ = Number(_loc4_);
       if(_loc4_ < 1 || _global.isNaN(_loc4_))
@@ -91,7 +91,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.GridInventoryViewer extends d
       }
       this["\x17\x07\x19"]({type:"dropItem",item:_loc3_,quantity:_loc4_,owner:this});
    }
-   function §\x1b\x17\x11§(§\x19\f\x16§)
+   function §\x1b\x17\x11§(nQuantity)
    {
       _loc2_ = Number(_loc2_);
       if(_loc2_ < 1 || _global.isNaN(_loc2_))

@@ -34,7 +34,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
    function §\x16\x19\x10§(oAPI)
    {
       super();
-      dofus["\x18\x18\x0b"].ChatManager["\x1e\f\x10"] = this;
+      dofus.managers.ChatManager["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
    function get feMessagesBuffer()
@@ -56,14 +56,14 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"].ChatManager["\x1e\f\x10"];
+      return dofus.managers.ChatManager["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {
       super.initialize(oAPI);
       this["\x1b\x1d\x0b"] = new Array();
       this["\x1b\x1e\x11"] = new Array();
-      this._feMessagesBuffer = new dofus["\x18\x18\x0b"]["\x16\x19\x0b"].FightEventsMessagesBuffer(oAPI);
+      this._feMessagesBuffer = new dofus.managers["\x16\x19\x0b"].FightEventsMessagesBuffer(oAPI);
       this["\x1d\x17\f"] = 0;
       this["\x1b\x1b\x17"] = new Array();
       this["\x1b\x15\x1a"]();
@@ -77,7 +77,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
       _loc6_.messageType = _loc3_;
       _loc6_.timestamp = _loc5_;
       _loc6_.rawFullMessage = _loc4_;
-      if(this["\x1b\x1e\x11"].length > dofus["\x18\x18\x0b"].ChatManager["\x18\x1b\x02"])
+      if(this["\x1b\x1e\x11"].length > dofus.managers.ChatManager["\x18\x1b\x02"])
       {
          this["\x1b\x1e\x11"].shift();
       }
@@ -105,8 +105,8 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
    {
       if(this.api.datacenter.Player.isAuthorized)
       {
-         dofus["\x18\x18\x0b"].ChatManager["\x18\x1a\x06"] *= dofus["\x18\x18\x0b"].ChatManager["\x16\x01\x0f"];
-         dofus["\x18\x18\x0b"].ChatManager["\x18\x1a\x11"] *= dofus["\x18\x18\x0b"].ChatManager["\x16\x01\x0f"];
+         dofus.managers.ChatManager["\x18\x1a\x06"] *= dofus.managers.ChatManager["\x16\x01\x0f"];
+         dofus.managers.ChatManager["\x18\x1a\x11"] *= dofus.managers.ChatManager["\x16\x01\x0f"];
       }
    }
    function clear()
@@ -276,7 +276,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
             var _loc7_ = new String();
             do
             {
-               _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x16\x18\n"][Math.floor(Math.random() * dofus["\x18\x18\x0b"].ChatManager["\x16\x18\n"].length)];
+               _loc7_ = dofus.managers.ChatManager["\x16\x18\n"][Math.floor(Math.random() * dofus.managers.ChatManager["\x16\x18\n"].length)];
             }
             while(_loc7_ == _loc4_);
             
@@ -304,9 +304,9 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
       {
          var _loc7_ = false;
          var _loc8_ = 0;
-         while(_loc8_ < dofus["\x18\x18\x0b"].ChatManager["\x18\x15\x0e"].length)
+         while(_loc8_ < dofus.managers.ChatManager["\x18\x15\x0e"].length)
          {
-            if(_loc4_[_loc6_].indexOf(dofus["\x18\x18\x0b"].ChatManager["\x18\x15\x0e"][_loc8_]) > -1)
+            if(_loc4_[_loc6_].indexOf(dofus.managers.ChatManager["\x18\x15\x0e"][_loc8_]) > -1)
             {
                _loc7_ = true;
                break;
@@ -316,9 +316,9 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
          if(_loc7_)
          {
             var _loc9_ = 0;
-            while(_loc9_ < dofus["\x18\x18\x0b"].ChatManager["\x1b\x19\x07"].length)
+            while(_loc9_ < dofus.managers.ChatManager["\x1b\x19\x07"].length)
             {
-               if(_loc4_[_loc6_].indexOf(dofus["\x18\x18\x0b"].ChatManager["\x1b\x19\x07"][_loc9_]) > -1)
+               if(_loc4_[_loc6_].indexOf(dofus.managers.ChatManager["\x1b\x19\x07"][_loc9_]) > -1)
                {
                   _loc7_ = false;
                   break;
@@ -350,23 +350,23 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
       switch(_loc3_)
       {
          case dofus.Constants["\x19\x02\x03"]:
-            var _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x18"];
+            var _loc7_ = dofus.managers.ChatManager["\x1b\x12\x18"];
             _loc9_ = true;
             var _loc8_ = true;
             break;
          case dofus.Constants["\x17\f\x1c"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x18"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x18"];
             _loc9_ = true;
             _loc8_ = true;
             break;
          case dofus.Constants["\x1b\x0f\x1c"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x18"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x18"];
             _loc9_ = true;
             _loc8_ = true;
             break;
          case dofus.Constants["\x18\x03\x1c"]:
          case dofus.Constants["\x19\x02\x02"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x13\x01"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x13\x01"];
             _loc9_ = true;
             _loc8_ = true;
             if(_loc4_)
@@ -375,12 +375,12 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
             }
             break;
          case dofus.Constants["\x18\t\x01"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x16"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x16"];
             this["\x1d\x19\x1c"]++;
             _loc8_ = false;
             break;
          case dofus.Constants["\x17\r\x1d"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x12"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x12"];
             _loc8_ = true;
             if(_loc4_)
             {
@@ -395,7 +395,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
             }
             break;
          case dofus.Constants["\x18\x04\x18"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x14"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x14"];
             _loc9_ = true;
             _loc8_ = true;
             if(_loc4_ && this.api.kernel.OptionsManager.getOption("GuildMessageSound"))
@@ -404,22 +404,22 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
             }
             break;
          case dofus.Constants["\x1a\b\x10"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x19"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x19"];
             _loc9_ = true;
             _loc8_ = true;
             break;
          case dofus.Constants["\x1b\x11\b"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x1c"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x1c"];
             _loc9_ = true;
             _loc8_ = true;
             break;
          case dofus.Constants["\x1a\n\x0f"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x1a"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x1a"];
             _loc9_ = true;
             _loc8_ = true;
             break;
          case dofus.Constants["\x18\x1c\x11"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x17"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x17"];
             _loc9_ = true;
             _loc8_ = true;
             break;
@@ -428,7 +428,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
             var _loc11_ = _loc10_[0];
             _loc10_.shift();
             _loc2_ = "(" + this.api.lang.getText("GAME_EVENTS_CHANNEL") + ") : " + this.api.lang.getText(_loc11_,_loc10_);
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager.TYPE_GAME_EVENTS;
+            _loc7_ = dofus.managers.ChatManager.TYPE_GAME_EVENTS;
             _loc9_ = false;
             _loc8_ = true;
             _loc2_ = this.api.kernel["\x17\x05\x16"]["\x17\x17\x1c"](_loc2_,";");
@@ -439,7 +439,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
             }
             break;
          case dofus.Constants.GAME_HUNT_CHAT:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x12"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x12"];
             this.api.electron.makeNotification(_loc2_);
             if(_loc5_ == "START_CONFIRMATION" && _loc4_)
             {
@@ -448,7 +448,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
             break;
          case dofus.Constants["\x16\x01\x10"]:
          case dofus.Constants["\x16\x1d\x19"]:
-            _loc7_ = dofus["\x18\x18\x0b"].ChatManager["\x1b\x12\x0f"];
+            _loc7_ = dofus.managers.ChatManager["\x1b\x12\x0f"];
             _loc8_ = true;
             break;
          default:
@@ -481,7 +481,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
       var _loc13_ = "\n<font color=\"#" + _loc3_ + "\">";
       var _loc14_ = "</font>";
       this["\x1b\x1d\x1c"].push({textStyleLeft:_loc13_,text:_loc2_,textStyleRight:_loc14_,type:_loc7_,uniqId:_loc5_,timestamp:_loc6_,lf:false});
-      if(this["\x1b\x1d\x1c"].length > dofus["\x18\x18\x0b"].ChatManager["\x18\x1a\x06"])
+      if(this["\x1b\x1d\x1c"].length > dofus.managers.ChatManager["\x18\x1a\x06"])
       {
          this["\x1b\x1d\x1c"].shift();
       }
@@ -506,7 +506,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
          return undefined;
       }
       var _loc6_ = _loc3_ - 1;
-      while(_loc5_ < dofus["\x18\x18\x0b"].ChatManager["\x18\x1b\t"] && _loc6_ >= 0)
+      while(_loc5_ < dofus.managers.ChatManager["\x18\x1b\t"] && _loc6_ >= 0)
       {
          var _loc7_ = this["\x1b\x1d\x1c"][_loc6_];
          if(this["\x1c\x01\x13"][_loc7_.type] == true)
@@ -514,7 +514,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
             _loc5_ = _loc5_ + 1;
             if(!_loc7_.htmlSyntaxChecked)
             {
-               var _loc8_ = dofus["\x18\x18\x0b"].ChatManager["\x1a\x0f\n"](_loc7_.text);
+               var _loc8_ = dofus.managers.ChatManager["\x1a\x0f\n"](_loc7_.text);
                _loc7_.lf = _loc7_.lf;
                _loc7_.text = _loc8_.t;
                _loc7_.htmlSyntaxChecked = true;
@@ -541,7 +541,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
       var _loc7_ = 0;
       var _loc9_ = 0;
       var _loc8_ = null;
-      while((_loc8_ = _loc6_.indexOf("<")) > -1 && _loc7_++ < dofus["\x18\x18\x0b"].ChatManager["\x18\x07\x15"])
+      while((_loc8_ = _loc6_.indexOf("<")) > -1 && _loc7_++ < dofus.managers.ChatManager["\x18\x07\x15"])
       {
          var _loc10_ = _loc6_.indexOf(">",_loc8_) + 1;
          var _loc11_ = _loc6_.substring(_loc8_,_loc10_);
@@ -559,7 +559,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
          _loc6_ = _loc6_.substring(_loc10_);
          _loc9_ = _loc9_ + 1;
       }
-      if(_loc7_ >= dofus["\x18\x18\x0b"].ChatManager["\x18\x07\x15"])
+      if(_loc7_ >= dofus.managers.ChatManager["\x18\x07\x15"])
       {
          _loc3_ = false;
       }
@@ -634,7 +634,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
       var _loc4_ = 0;
       var _loc6_ = 0;
       var _loc7_ = 0;
-      while(_loc3_.indexOf("[") > -1 && (_loc4_++ < dofus["\x18\x18\x0b"].ChatManager["\x18\x07\x15"] && _loc6_ < dofus["\x18\x18\x0b"].ChatManager["\x18\x1b\x01"]))
+      while(_loc3_.indexOf("[") > -1 && (_loc4_++ < dofus.managers.ChatManager["\x18\x07\x15"] && _loc6_ < dofus.managers.ChatManager["\x18\x1b\x01"]))
       {
          var _loc8_ = _loc3_.indexOf("[");
          var _loc9_ = _loc3_.indexOf("]",_loc8_) + 1;
@@ -654,7 +654,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
                {
                   var _loc5_ = _loc2_.split(_loc3_.substring(_loc8_,_loc9_));
                   _loc6_ += _loc5_.length;
-                  if(_loc6_ > dofus["\x18\x18\x0b"].ChatManager["\x18\x1b\x01"])
+                  if(_loc6_ > dofus.managers.ChatManager["\x18\x1b\x01"])
                   {
                      break;
                   }
@@ -729,7 +729,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
       {
          this["\x1b\x1d\x0b"] = new Array();
       }
-      if(this["\x1b\x1d\x0b"].length > dofus["\x18\x18\x0b"].ChatManager["\x18\x1a\x11"])
+      if(this["\x1b\x1d\x0b"].length > dofus.managers.ChatManager["\x18\x1a\x11"])
       {
          this["\x1b\x1d\x0b"].shift();
       }
@@ -752,9 +752,9 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
    static function §\x18\x0f\r§(§\x1a\x10\x0f§)
    {
       var _loc3_ = 0;
-      while(_loc3_ < dofus["\x18\x18\x0b"].ChatManager["\x1a\x06\x0e"].length)
+      while(_loc3_ < dofus.managers.ChatManager["\x1a\x06\x0e"].length)
       {
-         if(dofus["\x18\x18\x0b"].ChatManager["\x1a\x06\x0e"][_loc3_] == _loc2_)
+         if(dofus.managers.ChatManager["\x1a\x06\x0e"][_loc3_] == _loc2_)
          {
             return true;
          }
@@ -762,14 +762,14 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
       }
       return false;
    }
-   function §\x16\x01\x03§(§\x1b\x03\x1d§, §\x19\x05\x04§)
+   function §\x16\x01\x03§(sName, nClass)
    {
       if(_loc2_ != this.api.datacenter.Player.Name && !this["\x18\f\x16"](_loc2_))
       {
          this["\x1b\x1b\x17"].push({sName:_loc2_,nClass:_loc3_});
       }
    }
-   function §\x1a\r\x04§(§\x1b\x03\x1d§)
+   function §\x1a\r\x04§(sName)
    {
       for(var i in this["\x1b\x1b\x17"])
       {
@@ -786,7 +786,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.§\x16\x04\x07
    {
       return this["\x1b\x1b\x17"];
    }
-   function §\x18\f\x16§(§\x1b\x03\x1d§)
+   function §\x18\f\x16§(sName)
    {
       for(var i in this["\x1b\x1b\x17"])
       {

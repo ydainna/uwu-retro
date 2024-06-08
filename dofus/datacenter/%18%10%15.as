@@ -27,7 +27,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    static var TYPE_FULL_SOUL_STONE_BOSS = 124;
    static var TYPE_FULL_SOUL_STONE_ARCHI = 125;
    static var TYPE_PET = 18;
-   function §\x18\x10\x15§(§\x19\b\x0b§, §\x19\x10\n§, §\x19\f\x16§, §\x19\f\r§, §\x1a\x12\x0f§, §\x19\f\x10§, §\x19\x0e\r§, §\x19\n\x16§)
+   function §\x18\x10\x15§(§\x19\b\x0b§, §\x19\x10\n§, nQuantity, §\x19\f\r§, §\x1a\x12\x0f§, §\x19\f\x10§, §\x19\x0e\r§, §\x19\n\x16§)
    {
       super();
       this.initialize(_loc3_,_loc4_,_loc5_,_loc6_,_loc7_,_loc8_,_loc9_,_loc10_);
@@ -438,7 +438,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\x1e\x12\x04§()
    {
-      var _loc2_ = dofus.datacenter.["\x18\x10\x15"].api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"].ACTION_BOOST_ITEM_AP_COST,dofus.datacenter.["\x18\x10\x15"].CLOSE_COMBAT_AS_ITEM_SPELL_ID);
+      var _loc2_ = dofus.datacenter.["\x18\x10\x15"].api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"].ACTION_BOOST_ITEM_AP_COST,dofus.datacenter.["\x18\x10\x15"].CLOSE_COMBAT_AS_ITEM_SPELL_ID);
       var _loc3_ = this["\x17\x19\x12"](1);
       if(_loc2_ > -1)
       {
@@ -490,10 +490,10 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\x1e\x16\x0e§()
    {
-      var _loc2_ = dofus["\x18\x18\x0b"]["\x17\f\t"].parseConditionsString(this["\x1e\x06\x06"].c);
+      var _loc2_ = dofus.managers["\x17\f\t"].parseConditionsString(this["\x1e\x06\x06"].c);
       if(this["\x1d\x1b\x17"] != undefined && dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).c != undefined)
       {
-         _loc2_ = _loc2_.concat(dofus.datacenter.["\x18\x10\x15"].api.lang.getText("INHERITED_FROM",[dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).n]) + " :",dofus["\x18\x18\x0b"]["\x17\f\t"].parseConditionsString(dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).c));
+         _loc2_ = _loc2_.concat(dofus.datacenter.["\x18\x10\x15"].api.lang.getText("INHERITED_FROM",[dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).n]) + " :",dofus.managers["\x17\f\t"].parseConditionsString(dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).c));
       }
       return _loc2_;
    }
@@ -645,7 +645,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    {
       return this._skinDurabilityMax;
    }
-   function initialize(§\x19\b\x0b§, §\x19\x10\n§, §\x19\f\x16§, §\x19\f\r§, §\x1a\x12\x0f§, §\x19\f\x10§, §\x19\x0e\r§, §\x19\n\x16§)
+   function initialize(§\x19\b\x0b§, §\x19\x10\n§, nQuantity, §\x19\f\r§, §\x1a\x12\x0f§, §\x19\f\x10§, §\x19\x0e\r§, §\x19\n\x16§)
    {
       dofus.datacenter.["\x18\x10\x15"].api = _global.api;
       this._itemDateId = dofus.datacenter.["\x18\x10\x15"]["\x17\x05\x05"]--;

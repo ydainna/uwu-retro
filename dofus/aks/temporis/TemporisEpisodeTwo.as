@@ -143,7 +143,7 @@ class dofus.aks.temporis.TemporisEpisodeTwo
          this.api.kernel.showMessage(undefined,"Une erreur est survenue durant le renommage du deck ! Le nom ne convient pas et ne sera pas réutilisé au redémarrage de l\'interface.","ERROR_CHAT");
       }
    }
-   function sendSpellsQuickEditName(nDeckID, §\x1b\x03\x1d§)
+   function sendSpellsQuickEditName(nDeckID, sName)
    {
       this._aksTemporis.sendTemporisPacket(dofus.aks.temporis.TemporisEpisodeTwo.TEMPORIS_EPISODE,"sqe" + nDeckID + "|" + _loc3_);
    }

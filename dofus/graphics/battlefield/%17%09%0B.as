@@ -61,7 +61,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
       this.api.network.Game["\x17\x17\x14"]();
       this.api.ui["\x1b\x13\x12"]();
       this.api.ui["\x1a\f\x15"]();
-      this.api.ui.getUIComponent("MapInfos")["\x1b\x14\x01"]();
+      this.api.ui.getUIComponent("MapInfos").update();
       var _loc3_ = _loc2_["\x1b\x0b\x17"];
       if(_loc3_ != this.api.datacenter.Basics.gfx_lastSubarea)
       {

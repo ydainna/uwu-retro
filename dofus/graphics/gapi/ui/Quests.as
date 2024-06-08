@@ -69,7 +69,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Quests extends dofus.§\x18\x03\x10§.gapi.
    {
       if(_loc2_)
       {
-         this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus["\x18\x18\x0b"]["\x1b\x10\x0b"]["\x1b\x10\x13"]);
+         this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x13"]);
       }
       this._btnCloseStep._visible = _loc2_;
       this["\x1e\x10\x0b"]._visible = _loc2_;

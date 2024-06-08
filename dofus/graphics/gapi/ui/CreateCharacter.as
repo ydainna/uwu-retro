@@ -213,7 +213,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CreateCharacter extends dofus.§\x18\x03\x1
       this["\x1a\x15\x10"](_loc2_,this["\x1d\x1c\x1a"]);
       this._bLoaded = true;
    }
-   function §\x1a\x15\x10§(§\x19\x05\x05§, §\x19\x0e\b§)
+   function §\x1a\x15\x10§(§\x19\x05\x05§, nSex)
    {
       this["\x1c\r\x17"].breed = _loc2_;
       this["\x1c\r\x17"]["\x1a\x1b\f"] = _loc3_;

@@ -9,7 +9,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.§\x16\x04\x07
    function §\x18\x11\x1c§(oAPI)
    {
       super();
-      dofus["\x18\x18\x0b"].KeyManager["\x1e\f\x10"] = this;
+      dofus.managers.KeyManager["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
    function §\x1e\x13\t§()
@@ -23,7 +23,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.§\x16\x04\x07
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"].KeyManager["\x1e\f\x10"];
+      return dofus.managers.KeyManager["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {

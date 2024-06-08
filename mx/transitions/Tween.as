@@ -32,7 +32,7 @@ class §\x19\x02\x19§.transitions.Tween
          if(this.looping)
          {
             this.rewind(_loc2_ - this._duration);
-            this["\x1b\x14\x01"]();
+            this.update();
             this.broadcastMessage("onMotionLooped",this);
          }
          else
@@ -40,7 +40,7 @@ class §\x19\x02\x19§.transitions.Tween
             if(this.useSeconds)
             {
                this._time = this._duration;
-               this["\x1b\x14\x01"]();
+               this.update();
             }
             this.stop();
             this.broadcastMessage("onMotionFinished",this);
@@ -49,12 +49,12 @@ class §\x19\x02\x19§.transitions.Tween
       else if(_loc2_ < 0)
       {
          this.rewind();
-         this["\x1b\x14\x01"]();
+         this.update();
       }
       else
       {
          this._time = _loc2_;
-         this["\x1b\x14\x01"]();
+         this.update();
       }
       return this["\x0b\x1a"]();
    }
@@ -175,7 +175,7 @@ class §\x19\x02\x19§.transitions.Tween
    {
       this._time = _loc2_ != undefined ? _loc2_ : 0;
       this.fixTime();
-      this["\x1b\x14\x01"]();
+      this.update();
    }
    function fforward()
    {

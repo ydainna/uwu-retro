@@ -9,12 +9,12 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.§\x16\x04\x07§
    function §\x1a\x01\t§(oAPI)
    {
       super();
-      dofus["\x18\x18\x0b"].OptionsManager["\x1e\f\x10"] = this;
+      dofus.managers.OptionsManager["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"].OptionsManager["\x1e\f\x10"];
+      return dofus.managers.OptionsManager["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {
@@ -25,11 +25,11 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.§\x16\x04\x07§
       {
          this["\x1e\x0b\b"].clear();
       }
-      for(var k in dofus["\x18\x18\x0b"].OptionsManager["\x17\x06\x10"])
+      for(var k in dofus.managers.OptionsManager["\x17\x06\x10"])
       {
          if(this["\x1e\x0b\b"].data[k] == undefined)
          {
-            this["\x1e\x0b\b"].data[k] = dofus["\x18\x18\x0b"].OptionsManager["\x17\x06\x10"][k];
+            this["\x1e\x0b\b"].data[k] = dofus.managers.OptionsManager["\x17\x06\x10"][k];
          }
       }
       this["\x1e\x0b\b"].flush();
@@ -38,7 +38,7 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.§\x16\x04\x07§
    {
       var _loc2_ = this["\x1e\x0b\b"].data.language;
       this["\x1e\x0b\b"].clear();
-      for(var k in dofus["\x18\x18\x0b"].OptionsManager["\x17\x06\x10"])
+      for(var k in dofus.managers.OptionsManager["\x17\x06\x10"])
       {
          if(k == "ShortcutSetDefault")
          {
@@ -46,7 +46,7 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.§\x16\x04\x07§
          }
          else
          {
-            this.setOption(k,dofus["\x18\x18\x0b"].OptionsManager["\x17\x06\x10"][k]);
+            this.setOption(k,dofus.managers.OptionsManager["\x17\x06\x10"][k]);
          }
       }
       this["\x1e\x0b\b"].data.language = _loc2_;

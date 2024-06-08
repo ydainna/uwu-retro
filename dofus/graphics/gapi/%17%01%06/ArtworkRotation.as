@@ -19,7 +19,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ArtworkRotation extends ank.g
    {
       this._i = 2.02;
    }
-   function §\x1a\x18\x18§(§\x19\x0e\b§)
+   function §\x1a\x18\x18§(nSex)
    {
       if(this["\x1d\x15\x02"] == _loc2_)
       {
@@ -46,7 +46,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ArtworkRotation extends ank.g
       this["\x1b\x1e\x16"]._xscale = 100 - _loc4_;
       this["\x1b\x1e\x16"]._yscale = 100 - _loc4_;
    }
-   function rotate(§\x19\x0e\b§)
+   function rotate(nSex)
    {
       if(this["\x1d\x15\x02"] == _loc2_)
       {

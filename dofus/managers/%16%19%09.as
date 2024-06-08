@@ -3,14 +3,14 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.§\x16\x04\x07§
    static var §\x1e\f\x10§ = null;
    function §\x16\x19\t§(oAPI)
    {
-      dofus["\x18\x18\x0b"]["\x16\x19\t"]["\x1e\f\x10"] = this;
+      dofus.managers["\x16\x19\t"]["\x1e\f\x10"] = this;
       super.initialize(oAPI);
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"]["\x16\x19\t"]["\x1e\f\x10"];
+      return dofus.managers["\x16\x19\t"]["\x1e\f\x10"];
    }
-   function §\x1a\x17\x16§(§\x19\b\x0b§, §\x1b\x03\x1d§, §\x19\x12\x10§)
+   function §\x1a\x17\x16§(§\x19\b\x0b§, sName, §\x19\x12\x10§)
    {
       var _loc5_ = this.api.datacenter.Player;
       _loc5_["\x16\x1b\x11"]();
@@ -62,7 +62,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.§\x16\x04\x07§
          this.api.ui.getUIComponent("Inventory")["\x1a\x0b\t"]();
       }
    }
-   function §\x17\x02\n§(sID, §\x1b\x03\x1d§, §\x19\x12\x10§)
+   function §\x17\x02\n§(sID, sName, §\x19\x12\x10§)
    {
       if(this.api.datacenter.Player.isAuthorized && _loc4_["\x18\x02\x16"] == ank.battlefield.datacenter..Sprite.ANGELS_OF_THE_WORLD_SPRITE_ID)
       {
@@ -157,7 +157,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.§\x16\x04\x07§
       }
       return _loc5_;
    }
-   function §\x17\x02\r§(sID, §\x1b\x03\x1d§, §\x19\x12\x10§)
+   function §\x17\x02\r§(sID, sName, §\x19\x12\x10§)
    {
       var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
       if(_loc5_ == undefined)
@@ -211,7 +211,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.§\x16\x04\x07§
       _loc5_["\x1b\x0e\x15"] = _loc4_["\x1b\x0e\x14"] != undefined ? _loc4_["\x1b\x0e\x14"] : null;
       return _loc5_;
    }
-   function §\x17\x02\x12§(sID, §\x1b\x03\x1d§, §\x19\x12\x10§)
+   function §\x17\x02\x12§(sID, sName, §\x19\x12\x10§)
    {
       var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
       if(_loc5_ == undefined)
@@ -261,7 +261,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.§\x16\x04\x07§
       _loc5_["\x1b\x0e\x15"] = _loc4_["\x1b\x0e\x14"] != undefined ? _loc4_["\x1b\x0e\x14"] : null;
       return _loc5_;
    }
-   function §\x17\x02\x13§(sID, §\x1b\x03\x1d§, §\x19\x12\x10§)
+   function §\x17\x02\x13§(sID, sName, §\x19\x12\x10§)
    {
       var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
       if(_loc5_ == undefined)
@@ -305,7 +305,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.§\x16\x04\x07§
       }
       return _loc5_;
    }
-   function §\x17\x02\x17§(sID, §\x1b\x03\x1d§, §\x19\x12\x10§)
+   function §\x17\x02\x17§(sID, sName, §\x19\x12\x10§)
    {
       var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
       if(_loc5_ == undefined)
@@ -331,7 +331,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.§\x16\x04\x07§
       _loc5_.characterID = _loc4_.characterID;
       return _loc5_;
    }
-   function §\x17\x02\x1c§(sID, §\x1b\x03\x1d§, §\x19\x12\x10§)
+   function §\x17\x02\x1c§(sID, sName, §\x19\x12\x10§)
    {
       var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
       if(_loc5_ == undefined)
@@ -382,7 +382,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.§\x16\x04\x07§
       _loc5_["\x1b\x0e\x15"] = _loc4_["\x1b\x0e\x14"] != undefined ? _loc4_["\x1b\x0e\x14"] : null;
       return _loc5_;
    }
-   function §\x17\x02\x1b§(sID, §\x1b\x03\x1d§, §\x19\x12\x10§)
+   function §\x17\x02\x1b§(sID, sName, §\x19\x12\x10§)
    {
       var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
       if(_loc5_ == undefined)
@@ -399,7 +399,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\t§ extends dofus.utils.§\x16\x04\x07§
       _loc5_.alignment = _loc4_.alignment;
       return _loc5_;
    }
-   function §\x17\x02\x18§(sID, §\x1b\x03\x1d§, §\x19\x12\x10§)
+   function §\x17\x02\x18§(sID, sName, §\x19\x12\x10§)
    {
       var _loc5_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(sID);
       if(_loc5_ == undefined)

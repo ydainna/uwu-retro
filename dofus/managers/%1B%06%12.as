@@ -163,7 +163,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x06\x12§
       }
       if(_loc9_["\x1b\f\f"])
       {
-         var _loc16_ = this.api.datacenter.Player.data["\x16\x19\x06"]["\x17\x1c\x03"](dofus["\x18\x18\x0b"]["\x16\x19\x06"]["\x18\x1b\x07"]) + this.api.datacenter.Player.MaxSummonedCreatures;
+         var _loc16_ = this.api.datacenter.Player.data["\x16\x19\x06"]["\x17\x1c\x03"](dofus.managers["\x16\x19\x06"]["\x18\x1b\x07"]) + this.api.datacenter.Player.MaxSummonedCreatures;
          if(this.api.datacenter.Player.SummonedCreatures >= _loc16_ && !_loc9_.hasInvocationConditionnedEffect)
          {
             return {can:false,type:"CANT_SUMMON_MORE_CREATURE",params:[_loc16_]};

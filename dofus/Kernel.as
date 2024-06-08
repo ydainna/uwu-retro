@@ -12,93 +12,93 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.§\x16\x04\x07§
          dofus.sounds.AudioManager.initialize(_root.createEmptyMovieClip("\x1b\x04\x16",99999),oAPI);
          this.AudioManager = dofus.sounds.AudioManager.getInstance();
       }
-      if((this["\x16\x19\t"] = dofus["\x18\x18\x0b"]["\x16\x19\t"].getInstance()) == null)
+      if((this["\x16\x19\t"] = dofus.managers["\x16\x19\t"].getInstance()) == null)
       {
-         this["\x16\x19\t"] = new dofus["\x18\x18\x0b"]["\x16\x19\t"](oAPI);
+         this["\x16\x19\t"] = new dofus.managers["\x16\x19\t"](oAPI);
       }
-      if((this.ChatManager = dofus["\x18\x18\x0b"].ChatManager.getInstance()) == null)
+      if((this.ChatManager = dofus.managers.ChatManager.getInstance()) == null)
       {
-         this.ChatManager = new dofus["\x18\x18\x0b"].ChatManager(oAPI);
+         this.ChatManager = new dofus.managers.ChatManager(oAPI);
       }
-      if((this["\x18\x18\x18"] = dofus["\x18\x18\x0b"]["\x18\x18\x18"].getInstance()) == null)
+      if((this["\x18\x18\x18"] = dofus.managers["\x18\x18\x18"].getInstance()) == null)
       {
-         this["\x18\x18\x18"] = new dofus["\x18\x18\x0b"]["\x18\x18\x18"]();
+         this["\x18\x18\x18"] = new dofus.managers["\x18\x18\x18"]();
       }
-      if((this["\x17\t\x05"] = dofus["\x18\x18\x0b"]["\x17\t\x05"].getInstance()) == null)
+      if((this["\x17\t\x05"] = dofus.managers["\x17\t\x05"].getInstance()) == null)
       {
-         this["\x17\t\x05"] = new dofus["\x18\x18\x0b"]["\x17\t\x05"]();
+         this["\x17\t\x05"] = new dofus.managers["\x17\t\x05"]();
       }
-      if((this["\x1b\x12\x02"] = dofus["\x18\x18\x0b"]["\x1b\x12\x02"].getInstance()) == null)
+      if((this["\x1b\x12\x02"] = dofus.managers["\x1b\x12\x02"].getInstance()) == null)
       {
-         this["\x1b\x12\x02"] = new dofus["\x18\x18\x0b"]["\x1b\x12\x02"]();
+         this["\x1b\x12\x02"] = new dofus.managers["\x1b\x12\x02"]();
       }
-      if((this.GameManager = dofus["\x18\x18\x0b"].GameManager.getInstance()) == null)
+      if((this.GameManager = dofus.managers.GameManager.getInstance()) == null)
       {
-         this.GameManager = new dofus["\x18\x18\x0b"].GameManager(oAPI);
+         this.GameManager = new dofus.managers.GameManager(oAPI);
       }
       else
       {
          this.GameManager.initialize(oAPI);
       }
-      if((this.KeyManager = dofus["\x18\x18\x0b"].KeyManager.getInstance()) == null)
+      if((this.KeyManager = dofus.managers.KeyManager.getInstance()) == null)
       {
-         this.KeyManager = new dofus["\x18\x18\x0b"].KeyManager(oAPI);
+         this.KeyManager = new dofus.managers.KeyManager(oAPI);
       }
-      if((this["\x19\b\x11"] = dofus["\x18\x18\x0b"]["\x19\b\x11"].getInstance()) == null)
+      if((this["\x19\b\x11"] = dofus.managers["\x19\b\x11"].getInstance()) == null)
       {
-         this["\x19\b\x11"] = new dofus["\x18\x18\x0b"]["\x19\b\x11"](oAPI);
+         this["\x19\b\x11"] = new dofus.managers["\x19\b\x11"](oAPI);
       }
-      if((this["\x16\x05\x01"] = dofus["\x18\x18\x0b"]["\x16\x05\x01"].getInstance()) == null)
+      if((this["\x16\x05\x01"] = dofus.managers["\x16\x05\x01"].getInstance()) == null)
       {
-         this["\x16\x05\x01"] = new dofus["\x18\x18\x0b"]["\x16\x05\x01"]();
+         this["\x16\x05\x01"] = new dofus.managers["\x16\x05\x01"]();
       }
-      if((this.TutorialManager = dofus["\x18\x18\x0b"].TutorialManager.getInstance()) == null)
+      if((this.TutorialManager = dofus.managers.TutorialManager.getInstance()) == null)
       {
-         this.TutorialManager = new dofus["\x18\x18\x0b"].TutorialManager(oAPI);
+         this.TutorialManager = new dofus.managers.TutorialManager(oAPI);
       }
       this.Console = new dofusutils.["\x16\x1e\x18"]["\x16\x19\r"](oAPI);
       this.DebugConsole = new dofusutils.["\x16\x1e\x18"]["\x17\x05\x14"](oAPI);
-      if((this.OptionsManager = dofus["\x18\x18\x0b"].OptionsManager.getInstance()) == null)
+      if((this.OptionsManager = dofus.managers.OptionsManager.getInstance()) == null)
       {
-         this.OptionsManager = new dofus["\x18\x18\x0b"].OptionsManager(oAPI);
+         this.OptionsManager = new dofus.managers.OptionsManager(oAPI);
       }
-      if((this["\x16\x01\r"] = dofus["\x18\x18\x0b"]["\x16\x01\r"].getInstance()) == null)
+      if((this["\x16\x01\r"] = dofus.managers["\x16\x01\r"].getInstance()) == null)
       {
-         this["\x16\x01\r"] = new dofus["\x18\x18\x0b"]["\x16\x01\r"](oAPI);
+         this["\x16\x01\r"] = new dofus.managers["\x16\x01\r"](oAPI);
       }
-      if((this["\x17\x05\x16"] = dofus["\x18\x18\x0b"]["\x17\x05\x16"].getInstance()) == null)
+      if((this["\x17\x05\x16"] = dofus.managers["\x17\x05\x16"].getInstance()) == null)
       {
-         this["\x17\x05\x16"] = new dofus["\x18\x18\x0b"]["\x17\x05\x16"](oAPI);
+         this["\x17\x05\x16"] = new dofus.managers["\x17\x05\x16"](oAPI);
       }
-      if((this["\x1b\x10\x0b"] = dofus["\x18\x18\x0b"]["\x1b\x10\x0b"].getInstance()) == null)
+      if((this["\x1b\x10\x0b"] = dofus.managers["\x1b\x10\x0b"].getInstance()) == null)
       {
-         this["\x1b\x10\x0b"] = new dofus["\x18\x18\x0b"]["\x1b\x10\x0b"](oAPI);
+         this["\x1b\x10\x0b"] = new dofus.managers["\x1b\x10\x0b"](oAPI);
       }
-      if((this["\x1b\x06\x10"] = dofus["\x18\x18\x0b"]["\x1b\x06\x10"].getInstance()) == null)
+      if((this["\x1b\x06\x10"] = dofus.managers["\x1b\x06\x10"].getInstance()) == null)
       {
-         this["\x1b\x06\x10"] = new dofus["\x18\x18\x0b"]["\x1b\x06\x10"](oAPI);
+         this["\x1b\x06\x10"] = new dofus.managers["\x1b\x06\x10"](oAPI);
       }
-      if((this.SpeakingItemsManager = dofus["\x18\x18\x0b"].SpeakingItemsManager.getInstance()) == null)
+      if((this.SpeakingItemsManager = dofus.managers.SpeakingItemsManager.getInstance()) == null)
       {
-         this.SpeakingItemsManager = new dofus["\x18\x18\x0b"].SpeakingItemsManager(oAPI);
+         this.SpeakingItemsManager = new dofus.managers.SpeakingItemsManager(oAPI);
       }
-      if((this["\x1b\x0b\f"] = dofus["\x18\x18\x0b"]["\x1b\x0b\f"].getInstance()) == null)
+      if((this["\x1b\x0b\f"] = dofus.managers["\x1b\x0b\f"].getInstance()) == null)
       {
-         this["\x1b\x0b\f"] = new dofus["\x18\x18\x0b"]["\x1b\x0b\f"](oAPI);
+         this["\x1b\x0b\f"] = new dofus.managers["\x1b\x0b\f"](oAPI);
       }
       if(this.TemporisConfigManager == undefined)
       {
-         this.TemporisConfigManager = new dofus["\x18\x18\x0b"].TemporisConfigManager(oAPI);
+         this.TemporisConfigManager = new dofus.managers.TemporisConfigManager(oAPI);
       }
-      if((this.HouseManager = dofus["\x18\x18\x0b"].HousesManager.getInstance()) == null)
+      if((this.HouseManager = dofus.managers.HousesManager.getInstance()) == null)
       {
-         this.HouseManager = new dofus["\x18\x18\x0b"].HousesManager(oAPI);
+         this.HouseManager = new dofus.managers.HousesManager(oAPI);
       }
-      if((this.MountParkManager = dofus["\x18\x18\x0b"].MountParksManager.getInstance()) == null)
+      if((this.MountParkManager = dofus.managers.MountParksManager.getInstance()) == null)
       {
-         this.MountParkManager = new dofus["\x18\x18\x0b"].MountParksManager(oAPI);
+         this.MountParkManager = new dofus.managers.MountParksManager(oAPI);
       }
-      dofus["\x18\x18\x0b"]["\x1b\x13\x06"].getInstance()["\x1b\x14\x01"]();
+      dofus.managers.UIdManager.getInstance().update();
       this["\x1e\t\f"] = _global.setInterval(this,"sendScreenInfo",1000);
    }
    function sendScreenInfo()
@@ -128,8 +128,8 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.§\x16\x04\x07§
       }
       else if(this.OptionsManager.getOption("EnableWidescreenPanels") && this.api.electron.enabled)
       {
-         this.OptionsManager.setOption("DisplayStyle",dofus["\x18\x18\x0b"].OptionsManager.DISPLAY_STYLE_WIDESCREEN_PANELS);
-         this["\x1a\x16\x05"](dofus["\x18\x18\x0b"].OptionsManager.DISPLAY_STYLE_WIDESCREEN_PANELS,true);
+         this.OptionsManager.setOption("DisplayStyle",dofus.managers.OptionsManager.DISPLAY_STYLE_WIDESCREEN_PANELS);
+         this["\x1a\x16\x05"](dofus.managers.OptionsManager.DISPLAY_STYLE_WIDESCREEN_PANELS,true);
       }
       else
       {
@@ -190,7 +190,7 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.§\x16\x04\x07§
    {
       if(this.api.electron.enabled)
       {
-         var _loc4_ = _loc2_ == dofus["\x18\x18\x0b"].OptionsManager.DISPLAY_STYLE_WIDESCREEN_PANELS;
+         var _loc4_ = _loc2_ == dofus.managers.OptionsManager.DISPLAY_STYLE_WIDESCREEN_PANELS;
          this.OptionsManager.setOption("EnableWidescreenPanels",_loc4_);
          return undefined;
       }
@@ -469,8 +469,8 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.§\x16\x04\x07§
       this["\x19\b\x11"].initialize(_loc2_.tz.slice(),_loc2_.m.slice(),_loc2_.z,this.api.gfx);
       this.api.kernel.KeyManager["\x19\x1c\x18"](this.api.kernel.OptionsManager.getOption("ShortcutSet"));
       this["\x1b\x1a\x11"] = true;
-      this.api.network.Account["\x1a\x13\x17"]();
-      this.api.network.Account["\x1a\x13\x18"]();
+      this.api.network.Account.sendConfiguredPort();
+      this.api.network.Account.sendIdentity();
       this.api.network.Account.getServersList();
    }
    function onScreenResolutionError(oEvent)

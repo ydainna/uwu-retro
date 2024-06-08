@@ -32,7 +32,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.AskGameBegin extends dofus.§\x18\x03\x10§
       var _loc0_ = null;
       if((_loc0_ = _loc2_.target._name) === "_btnOk")
       {
-         this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus["\x18\x18\x0b"]["\x1b\x10\x0b"]["\x1b\x10\x14"]);
+         this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x14"]);
          this["\x17\x07\x19"]({type:"ok",params:this.params});
          this["\x1b\x13\x13"]();
       }

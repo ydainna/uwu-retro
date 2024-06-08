@@ -10,7 +10,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x05\x0f§.ArtworkRotat
       super();
       this["\x1d\x07\x17"]._visible = false;
    }
-   function §\x1c\x11§(§\x19\x0e\b§)
+   function §\x1c\x11§(nSex)
    {
       this["\x1d\x1c\x1a"] = Number(_loc2_);
       return this["\b\x1c"]();

@@ -13,7 +13,7 @@ class dofus.aks.Account extends dofus.aks.Handler
    {
       if(this.api.datacenter.Basics.connexionKey == undefined)
       {
-         this.onLogin(false,"n");
+         this.onLogin(false, "n");
          return undefined;
       }
       if(sLogin == undefined)
@@ -35,7 +35,7 @@ class dofus.aks.Account extends dofus.aks.Handler
       var _loc6_ = dofus.Constants.VERSION + "." + dofus.Constants.SUBVERSION + "." + dofus.Constants.SUBSUBVERSION + (dofus.Constants.BETAVERSION <= 0 ? "" : "." + dofus.Constants.BETAVERSION) + (!this.api.electron.enabled ? "" : "e") + (!this.api.config.isStreaming ? "" : "s");
       var _loc7_ = _loc6_;
       _loc7_ += "|" + this.api.config.language;
-      this.aks.send(_loc7_,true,this.api.lang.getText("CONNECTING"));
+      this.aks.send(_loc7_,true, this.api.lang.getText("CONNECTING"));
       if(bCharacterSwitch)
       {
          this.aks.send(sLogin + "\n" + sPassword);
@@ -52,7 +52,7 @@ class dofus.aks.Account extends dofus.aks.Handler
       }
       else
       {
-         this.aks.send(sLogin + "\n" + ank.utils.Crypt.cryptPassword(sPassword,this.api.datacenter.Basics.connexionKey));
+         this.aks.send(sLogin + "\n" + ank.utils.Crypt.cryptPassword(sPassword, this.api.datacenter.Basics.connexionKey));
       }
    }
 
@@ -63,7 +63,7 @@ class dofus.aks.Account extends dofus.aks.Handler
       var _loc4_ = dofus.Constants.VERSION + "." + dofus.Constants.SUBVERSION + "." + dofus.Constants.SUBSUBVERSION + (dofus.Constants.BETAVERSION <= 0 ? "" : "." + dofus.Constants.BETAVERSION) + (!this.api.electron.enabled ? "" : "e") + (!this.api.config.isStreaming ? "" : "s");
       var _loc5_ = _loc4_;
       _loc5_ += "|" + this.api.config.language;
-      this.aks.send(_loc5_,true,this.api.lang.getText("CONNECTING"));
+      this.aks.send(_loc5_, true, this.api.lang.getText("CONNECTING"));
       this.aks.send(_loc3_ + "\n" + sCharacterSwitchTicket);
    }
 
@@ -87,80 +87,80 @@ class dofus.aks.Account extends dofus.aks.Handler
       this.aks.send("Ax", true, this.api.lang.getText("WAITING_MSG_LOADING"));
    }
 
-   function setServer(§\x19\x0e\x06§)
+   function setServer(nServerID)
    {
-      if(_loc2_ == undefined)
+      if(nServerID == undefined)
       {
          return undefined;
       }
-      this.api.datacenter.Basics.aks_incoming_server_id = _loc2_;
-      this.aks.send("AX" + _loc2_,true,this.api.lang.getText("WAITING_MSG_LOADING"));
+      this.api.datacenter.Basics.aks_incoming_server_id = nServerID;
+      this.aks.send("AX" + nServerID, true, this.api.lang.getText("WAITING_MSG_LOADING"));
    }
 
-   function searchForFriend(§\x1b\x04\b§)
+   function searchForFriend(sNick)
    {
-      this.aks.send("AF" + _loc2_);
+      this.aks.send("AF" + sNick);
    }
 
-   function setCharacter(§\x1a\x10\x11§)
+   function setCharacter(sCharacID)
    {
-      this.aks.send("AS" + _loc2_,true,this.api.lang.getText("WAITING_MSG_LOADING"));
+      this.aks.send("AS" + sCharacID, true, this.api.lang.getText("WAITING_MSG_LOADING"));
       this.api.ui.unloadUIComponent("ChooseCharacter");
       this.getQueuePosition();
    }
 
-   function §\x17\f\x01§(§\x1b\x03\x1d§)
+   function editCharacterName(sName)
    {
-      this.aks.send("AEn" + _loc2_,true);
+      this.aks.send("AEn" + sName, true);
    }
 
-   function §\x17\x0b\x1d§(§\x19\x05\x07§, §\x19\x05\b§, §\x19\x05\t§)
+   function editCharacterColors(nColor1, nColor2, nColor3)
    {
-      this.aks.send("AEc" + _loc2_ + "|" + _loc3_ + "|" + _loc4_,true);
+      this.aks.send("AEc" + nColor1 + "|" + nColor2 + "|" + nColor3, true);
    }
 
-   function addCharacter(§\x1b\x03\x1d§, §\x19\x05\x04§, §\x19\x05\x07§, §\x19\x05\b§, §\x19\x05\t§, §\x19\x0e\b§)
+   function addCharacter(sName, nClass, nColor1, nColor2, nColor3, nSex)
    {
-      this.aks.send("AA" + _loc2_ + "|" + _loc3_ + "|" + _loc7_ + "|" + _loc4_ + "|" + _loc5_ + "|" + _loc6_,true,this.api.lang.getText("WAITING_MSG_RECORDING"));
+      this.aks.send("AA" + sName + "|" + nClass + "|" + nSex + "|" + nColor1 + "|" + nColor2 + "|" + nColor3, true, this.api.lang.getText("WAITING_MSG_RECORDING"));
    }
 
-   function deleteCharacter(§\x19\x04\x1a§, §\x1b\b\x05§)
+   function deleteCharacter(nCharacID, sSecretAnswer)
    {
-      if(_loc2_ == undefined)
+      if(nCharacID == undefined)
       {
          return undefined;
       }
-      if(_loc3_ == undefined)
+      if(sSecretAnswer == undefined)
       {
-         _loc3_ = "";
+         sSecretAnswer = "";
       }
-      var _loc4_ = new ank.utils.ExtendedString(_global.escape(_loc3_));
-      this.aks.send("AD" + _loc2_ + "|" + _loc4_["\x1a\r\n"](["|","\r","\n",String.fromCharCode(0)],["","","",""]),true,this.api.lang.getText("WAITING_MSG_DELETING"));
+      var _loc4_ = new ank.utils.ExtendedString(_global.escape(sSecretAnswer));
+      this.aks.send("AD" + nCharacID + "|" + _loc4_["\x1a\r\n"](["|", "\r", "\n", String.fromCharCode(0)], ["", "", "", ""]), true, this.api.lang.getText("WAITING_MSG_DELETING"));
    }
 
-   function resetCharacter(§\x19\x04\x1a§)
+   function resetCharacter(nCharacID)
    {
-      this.aks.send("AR" + _loc2_);
+      this.aks.send("AR" + nCharacID);
    }
 
-   function boost(§\x19\x04\x02§, §\x19\f\x16§)
+   function boost(nBonusID, nQuantity)
    {
-      this.aks.send("AB" + _loc2_ + "|" + _loc3_);
+      this.aks.send("AB" + nBonusID + "|" + nQuantity);
    }
 
-   function sendTicket(§\x1b\n\x15§)
+   function sendTicket(sTicket)
    {
-      this.aks.send("AT" + _loc2_);
+      this.aks.send("AT" + sTicket);
    }
 
-   function rescue(§\x1b\n\x15§)
+   function rescue(sTicket)
    {
       var _loc3_ = "";
       if(this.api.datacenter.Game["\x18\r\x15"])
       {
          _loc3_ = !this.api.datacenter.Game["\x18\x0f\x12"] ? "|0" : "|1";
       }
-      this.aks.send("Ar" + _loc2_ + _loc3_);
+      this.aks.send("Ar" + sTicket + _loc3_);
    }
 
    function getGifts()
@@ -168,15 +168,15 @@ class dofus.aks.Account extends dofus.aks.Handler
       this.aks.send("Ag" + this.api.config.language);
    }
 
-   function attributeGiftToCharacter(§\x19\b\x02§, §\x19\x04\x1d§)
+   function attributeGiftToCharacter(nGiftID, nCharacterID)
    {
-      this.aks.send("AG" + _loc2_ + "|" + _loc3_);
+      this.aks.send("AG" + nGiftID + "|" + nCharacterID);
    }
 
    function getQueuePosition()
    {
-      this.aks.send("Af",false);
-      ank.utils.Timer.setTimer(this.WaitQueueTimer,"WaitQueue",this,this.getQueuePosition,Number(this.api.lang.getConfigText("DELAY_WAIT_QUEUE_REFRESH")));
+      this.aks.send("Af", false);
+      ank.utils.Timer.setTimer(this.WaitQueueTimer, "WaitQueue", this, this.getQueuePosition, Number(this.api.lang.getConfigText("DELAY_WAIT_QUEUE_REFRESH")));
    }
 
    function getRandomCharacterName()
@@ -184,22 +184,22 @@ class dofus.aks.Account extends dofus.aks.Handler
       this.aks.send("AP",false);
    }
 
-   function useKey(§\x19\t\x06§)
+   function useKey(nKeyID)
    {
-      this.aks.send("Ak" + dofus.aks.Aks.HEX_CHARS[_loc2_],false);
+      this.aks.send("Ak" + dofus.aks.Aks.HEX_CHARS[nKeyID], false);
    }
    
    function requestRegionalVersion()
    {
-      this.aks.send("AV",true,this.api.lang.getText("WAITING_MSG_LOADING"));
+      this.aks.send("AV", true, this.api.lang.getText("WAITING_MSG_LOADING"));
    }
 
-   function §\x1a\x13\x17§()
+   function sendConfiguredPort()
    {
       this.aks.send("Ap" + this.api.datacenter.Basics.aks_connection_server_port,false);
    }
    
-   function §\x1a\x13\x18§()
+   function sendIdentity()
    {
       if(this.api.electron.enabled)
       {
@@ -207,11 +207,11 @@ class dofus.aks.Account extends dofus.aks.Handler
       }
       else
       {
-         dofus["\x18\x18\x0b"]["\x1b\x13\x06"].getInstance()["\x1b\x14\x01"]();
-         var _loc3_ = SharedObject.getLocal(dofus.Constants["\x18\x03\x04"]);
+         dofus.managers.UIdManager.getInstance().update();
+         var _loc3_ = SharedObject.getLocal(dofus.Constants.GLOBAL_SO_IDENTITY_NAME);
          var _loc4_ = _loc3_.data.identityVersion;
          _loc2_ = _loc3_.data.identity;
-         if(!this.api.network["\x18\x10\r"](_loc2_,_loc4_))
+         if(!this.api.network.isValidNetworkKey(_loc2_, _loc4_))
          {
             _loc4_ = dofus.aks.Aks.CURRENT_IDENTITY_VERSION;
             _loc2_ = this.api.network.getRandomNetworkKey();
@@ -225,20 +225,24 @@ class dofus.aks.Account extends dofus.aks.Handler
       {
          this.api.datacenter.Basics.aks_identity = _loc2_;
       }
-      this.aks.send("Ai" + this.api.datacenter.Basics.aks_identity,false,undefined,true);
+      this.aks.send("Ai" + this.api.datacenter.Basics.aks_identity, false, undefined, true);
    }
-   function §\x1b\x17\x14§(§\x19\x04\x1d§, §\x1b\x03\x1d§)
+   
+   function validCharacterMigration(nCharacterID, sName)
    {
-      this.aks.send("AM" + _loc2_ + ";" + _loc3_,false);
+      this.aks.send("AM" + nCharacterID + ";" + sName, false);
    }
-   function §\x17\x06\x1d§(§\x19\x04\x1d§)
+
+   function deleteCharacterMigration(nCharacterID)
    {
-      this.aks.send("AM-" + _loc2_,false);
+      this.aks.send("AM-" + nCharacterID, false);
    }
-   function §\x16\x05\x18§(§\x19\x04\x1d§, §\x1b\x03\x1d§)
+
+   function askCharacterMigration(nCharacterID, sName)
    {
-      this.aks.send("AM?" + _loc2_ + ";" + _loc3_,false);
+      this.aks.send("AM?" + nCharacterID + ";" + sName, false);
    }
+
    function §\x19\x1b\x1b§(§\x1a\x1b\r§)
    {
       var _loc3_ = this.api.lang.getConfigText("MAXIMUM_ALLOWED_VERSION");
@@ -1108,7 +1112,7 @@ class dofus.aks.Account extends dofus.aks.Handler
       this.api.kernel.showMessage(this.api.lang.getText("INFORMATIONS"),this.api.lang.getText("NEW_LEVEL",[_loc3_]),"ERROR_BOX",{name:"NewLevel"});
       this.api.datacenter.Player.Level = _loc3_;
       this.api.datacenter.Player.data.Level = _loc3_;
-      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus["\x18\x18\x0b"]["\x1b\x10\x0b"]["\x1b\x10\x12"]);
+      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x12"]);
    }
    function §\x19\x1c\b§(§\x1a\x1b\r§)
    {
@@ -1272,7 +1276,7 @@ class dofus.aks.Account extends dofus.aks.Handler
             this.api.kernel.clearCache();
             break;
          case "AskYesNoConfirmMigration":
-            this["\x1b\x17\x14"](_loc2_.target.params.nCharacterID,_loc2_.target.params.sName);
+            this.validCharacterMigration(_loc2_.target.params.nCharacterID,_loc2_.target.params.sName);
       }
    }
    function no(oEvent)

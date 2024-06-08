@@ -276,7 +276,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.KnownledgeBase extends dofus.§\x18\x03\x10
       }
       this._lstSearch.dataProvider = _loc5_;
    }
-   function §\x1a\x12\x0b§(§\x16\b\x07§, §\x1b\x03\x1d§, §\x19\n\f§)
+   function §\x1a\x12\x0b§(§\x16\b\x07§, sName, §\x19\n\f§)
    {
       var _loc5_ = 0;
       var _loc6_ = _loc2_.length;

@@ -36,13 +36,13 @@ class dofus.§\x18\x03\x10§.battlefield.SpellFullIcon extends ank.utils.§\x1a\
       var _loc2_ = this.api.kernel.OptionsManager.getOption("RemasteredSpellIconsPack");
       switch(_loc2_)
       {
-         case dofus["\x18\x18\x0b"].OptionsManager.OPTION_SPELL_PACK_REMASTERED:
+         case dofus.managers.OptionsManager.OPTION_SPELL_PACK_REMASTERED:
             var _loc3_ = 0;
             break;
-         case dofus["\x18\x18\x0b"].OptionsManager.OPTION_SPELL_PACK_CONTRAST:
+         case dofus.managers.OptionsManager.OPTION_SPELL_PACK_CONTRAST:
             _loc3_ = 1;
             break;
-         case dofus["\x18\x18\x0b"].OptionsManager.OPTION_SPELL_PACK_CLASSIC:
+         case dofus.managers.OptionsManager.OPTION_SPELL_PACK_CLASSIC:
             if(this._nBreedID == undefined)
             {
                _loc3_ = 2;

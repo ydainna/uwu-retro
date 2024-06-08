@@ -131,7 +131,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Chat extends dofus.§\x18\x03
    }
    function §\x1b\x16\x04§()
    {
-      this._sSmileys["\x1b\x14\x01"]();
+      this._sSmileys.update();
    }
    function §\x18\x06\x1a§(§\x16\f\x12§)
    {

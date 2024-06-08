@@ -93,7 +93,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.JoinFriend extends dofus.§\x18\x03\x10§.g
       }
       return _loc7_[Math.round(Math.random() * (_loc7_.length - 1))].id;
    }
-   function §\x1a\x13\r§(§\x19\x0e\x06§)
+   function §\x1a\x13\r§(nServerID)
    {
       this.gapi.loadUIComponent("ServerInformations","ServerInformations",{server:_loc2_});
       this.gapi.getUIComponent("ServerInformations").addEventListener("serverSelected",this);

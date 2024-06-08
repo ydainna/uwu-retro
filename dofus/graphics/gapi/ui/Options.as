@@ -16,7 +16,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
       if(_loc4_)
       {
          this["\x1c\x0f\x07"].push({label:this.api.lang.getText("DISPLAYSTYLE_CLASSIC"),style:"normal"});
-         this["\x1c\x0f\x07"].push({label:this.api.lang.getText("DISPLAYSTYLE_WIDESCREENCHATPANEL"),style:dofus["\x18\x18\x0b"].OptionsManager.DISPLAY_STYLE_WIDESCREEN_PANELS});
+         this["\x1c\x0f\x07"].push({label:this.api.lang.getText("DISPLAYSTYLE_WIDESCREENCHATPANEL"),style:dofus.managers.OptionsManager.DISPLAY_STYLE_WIDESCREEN_PANELS});
       }
       else
       {
@@ -33,9 +33,9 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
       this["\x1c\x0f\r"].push({label:this.api.lang.getText("QUALITY_HIGH"),quality:"high"});
       this["\x1c\x0f\r"].push({label:this.api.lang.getText("QUALITY_BEST"),quality:"best"});
       this["\x1c\x10\x0e"] = new ank.utils.ExtendedArray();
-      this["\x1c\x10\x0e"].push({label:this.api.lang.getText("UI_OPTION_SPELLCOLOR_CLASSIC"),frame:dofus["\x18\x18\x0b"].OptionsManager.OPTION_SPELL_PACK_CLASSIC});
-      this["\x1c\x10\x0e"].push({label:this.api.lang.getText("UI_OPTION_SPELLCOLOR_REMASTERED"),frame:dofus["\x18\x18\x0b"].OptionsManager.OPTION_SPELL_PACK_REMASTERED});
-      this["\x1c\x10\x0e"].push({label:this.api.lang.getText("UI_OPTION_SPELLCOLOR_CONTRAST"),frame:dofus["\x18\x18\x0b"].OptionsManager.OPTION_SPELL_PACK_CONTRAST});
+      this["\x1c\x10\x0e"].push({label:this.api.lang.getText("UI_OPTION_SPELLCOLOR_CLASSIC"),frame:dofus.managers.OptionsManager.OPTION_SPELL_PACK_CLASSIC});
+      this["\x1c\x10\x0e"].push({label:this.api.lang.getText("UI_OPTION_SPELLCOLOR_REMASTERED"),frame:dofus.managers.OptionsManager.OPTION_SPELL_PACK_REMASTERED});
+      this["\x1c\x10\x0e"].push({label:this.api.lang.getText("UI_OPTION_SPELLCOLOR_CONTRAST"),frame:dofus.managers.OptionsManager.OPTION_SPELL_PACK_CONTRAST});
       this._eaStylePoints = new ank.utils.ExtendedArray();
       this._eaStylePoints.push({label:this.api.lang.getText("PACK_STYLE_POINT_0"),value:0});
       this._eaStylePoints.push({label:this.api.lang.getText("PACK_STYLE_POINT_1"),value:1});
@@ -729,7 +729,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
             this.api.kernel.OptionsManager.setOption("DisplayStyle",_loc2_.target.params.style);
             break;
          case "AskYesNoResetTips":
-            dofus["\x18\x18\x0b"]["\x1b\x10\x0b"].getInstance()["\x1a\r\x1a"]();
+            dofus.managers["\x1b\x10\x0b"].getInstance()["\x1a\r\x1a"]();
             break;
          case "AskYesNoQuality":
             this.api.kernel.OptionsManager.setOption("DefaultQuality",_loc2_.target.params.quality);

@@ -26,8 +26,8 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.§\x16\x04\x07§
    }
    function §\x16\x1b\x11§()
    {
-      this["\x1b\x06\x12"] = new dofus["\x18\x18\x0b"]["\x1b\x06\x12"](this);
-      this["\x18\x0b\b"] = new dofus["\x18\x18\x0b"]["\x18\x0b\b"](this,this.api);
+      this["\x1b\x06\x12"] = new dofus.managers["\x1b\x06\x12"](this);
+      this["\x18\x0b\b"] = new dofus.managers["\x18\x0b\b"](this,this.api);
       this.Inventory = new ank.utils.ExtendedArray();
       this.InventoryByItemPositions = new ank.utils.["\x17\x0e\r"]();
       this.InventoryShortcuts = new ank.utils.["\x17\x0e\r"]();
@@ -822,11 +822,11 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.§\x16\x04\x07§
       {
          if(!_loc4_["\x18\x0e\x11"] && _loc2_["\x18\x0e\x11"])
          {
-            this.api.kernel.SpeakingItemsManager["\x1b\x11\x10"](dofus["\x18\x18\x0b"].SpeakingItemsManager.SPEAK_TRIGGER_ASSOCIATE);
+            this.api.kernel.SpeakingItemsManager["\x1b\x11\x10"](dofus.managers.SpeakingItemsManager.SPEAK_TRIGGER_ASSOCIATE);
          }
          if(_loc4_["\x18\x0e\x11"] && _loc2_["\x18\x0e\x11"])
          {
-            this.api.kernel.SpeakingItemsManager["\x1b\x11\x10"](dofus["\x18\x18\x0b"].SpeakingItemsManager.SPEAK_TRIGGER_LEVEL_UP);
+            this.api.kernel.SpeakingItemsManager["\x1b\x11\x10"](dofus.managers.SpeakingItemsManager.SPEAK_TRIGGER_LEVEL_UP);
          }
       }
       if(_loc4_ != undefined && _loc4_.isEquiped)
@@ -840,7 +840,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.§\x16\x04\x07§
          this.InventoryByItemPositions["\x15\x1d\x13"](_loc2_.position,_loc2_);
       }
    }
-   function §\x1b\x15\b§(§\x19\b\x1a§, §\x19\f\x16§)
+   function §\x1b\x15\b§(§\x19\b\x1a§, nQuantity)
    {
       var _loc4_ = this.Inventory.findFirstItem("ID",_loc2_);
       var _loc5_ = _loc4_.item;
@@ -993,7 +993,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.§\x16\x04\x07§
          this.Spells["\x1a\f\x0b"](_loc3_.index,1);
       }
    }
-   function §\x16\x15\x19§(§\x19\x04\x1a§)
+   function §\x16\x15\x19§(nCharacID)
    {
       if(this.api.datacenter.Game["\x18\x0f\x12"])
       {
@@ -1006,7 +1006,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.§\x16\x04\x07§
       }
       return false;
    }
-   function getCharacValueByID(§\x19\x04\x1a§)
+   function getCharacValueByID(nCharacID)
    {
       var _loc3_ = 0;
       switch(_loc2_)
@@ -1031,7 +1031,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.§\x16\x04\x07§
       }
       return _loc3_;
    }
-   function §\x17\x14\x16§(§\x19\x04\x1a§)
+   function §\x17\x14\x16§(nCharacID)
    {
       var _loc3_ = this.api.lang.getClassText(this["\x1d\x16\x16"])["b" + _loc2_];
       var _loc4_ = 1;

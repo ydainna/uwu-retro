@@ -26,7 +26,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.FightChallengeIcon extends do
    {
       new org.flashdevelop.utils.FlashConnect.trace(this.challenge.id + " : " + this.challenge["\x18\b\t"],"dofus.graphics.gapi.controls.FightChallengeIcon::initCpt","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/graphics/gapi/controls/FightChallengeIcon.as",66);
       this._ldr.contentPath = this.challenge["\x18\b\t"];
-      this["\x1b\x14\x01"]();
+      this.update();
    }
    function addListeners()
    {

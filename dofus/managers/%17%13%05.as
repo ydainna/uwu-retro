@@ -18,7 +18,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x05§ extends dofus.utils.§\x16\x04\x07
    {
       this["\x1c\x11\x06"] = undefined;
       this["\x1c\x06\x1d"] = false;
-      this["\x1e\r\x03"] = dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\n\b"];
+      this["\x1e\r\x03"] = dofus.managers["\x17\x13\x05"]["\x1b\n\b"];
       this["\x1c\x0e\b"] = null;
    }
    function §\x1b\x11\n§(§\x1b\x12\t§, §\x1a\x03\x11§)
@@ -27,7 +27,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x05§ extends dofus.utils.§\x16\x04\x07
       {
          this.api.datacenter.Game["\x19\x10\x05"] |= dofus.datacenter..Game["\x1b\n\x05"];
          this.api.network.GameActions["\x1a\x13\x14"](_loc2_,_loc3_);
-         this["\x1e\r\x03"] = dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\n\n"];
+         this["\x1e\r\x03"] = dofus.managers["\x17\x13\x05"]["\x1b\n\n"];
          this["\x1c\x0e\b"] = _loc2_;
       }
       else if(this.canCancel(_loc2_))
@@ -49,7 +49,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x05§ extends dofus.utils.§\x16\x04\x07
       if(!this["\x18\x10\x10"]())
       {
          this.api.network.GameActions["\x1a\x13\x14"](_loc2_,_loc3_);
-         this["\x1e\r\x03"] = dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\n\n"];
+         this["\x1e\r\x03"] = dofus.managers["\x17\x13\x05"]["\x1b\n\n"];
          this["\x1c\x0e\b"] = _loc2_;
       }
       else
@@ -61,7 +61,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x05§ extends dofus.utils.§\x16\x04\x07
    {
       var _loc3_ = this["\x1e\r\x03"];
       this["\x1c\x11\x06"] = _loc2_;
-      this["\x1e\r\x03"] = dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\t\x1d"];
+      this["\x1e\r\x03"] = dofus.managers["\x17\x13\x05"]["\x1b\t\x1d"];
       return _loc3_;
    }
    function cancel(§\x1a\x03\x11§, §\x16\f\b§)
@@ -88,7 +88,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x05§ extends dofus.utils.§\x16\x04\x07
       }
       else
       {
-         this["\x1e\r\x03"] = dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\n\n"];
+         this["\x1e\r\x03"] = dofus.managers["\x17\x13\x05"]["\x1b\n\n"];
          this["\x1c\x11\x06"] = undefined;
       }
    }
@@ -101,10 +101,10 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x05§ extends dofus.utils.§\x16\x04\x07
    {
       switch(this["\x1e\r\x03"])
       {
-         case dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\n\b"]:
+         case dofus.managers["\x17\x13\x05"]["\x1b\n\b"]:
             return false;
-         case dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\n\n"]:
-         case dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\t\x1d"]:
+         case dofus.managers["\x17\x13\x05"]["\x1b\n\n"]:
+         case dofus.managers["\x17\x13\x05"]["\x1b\t\x1d"]:
             return true;
          default:
             return false;
@@ -122,10 +122,10 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x05§ extends dofus.utils.§\x16\x04\x07
       }
       switch(this["\x1e\r\x03"])
       {
-         case dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\n\n"]:
+         case dofus.managers["\x17\x13\x05"]["\x1b\n\n"]:
             return false;
-         case dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\n\b"]:
-         case dofus["\x18\x18\x0b"]["\x17\x13\x05"]["\x1b\t\x1d"]:
+         case dofus.managers["\x17\x13\x05"]["\x1b\n\b"]:
+         case dofus.managers["\x17\x13\x05"]["\x1b\t\x1d"]:
             return true;
          default:
             return false;

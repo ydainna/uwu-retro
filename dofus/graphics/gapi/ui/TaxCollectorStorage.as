@@ -106,7 +106,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.TaxCollectorStorage extends dofus.§\x18\x0
    {
       this._mcBuyArrow._visible = _loc2_;
    }
-   function §\x16\x06\b§(§\x19\f\x16§, §\x19\x1e\x1d§)
+   function §\x16\x06\b§(nQuantity, §\x19\x1e\x1d§)
    {
       var _loc4_ = this.gapi.loadUIComponent("PopupQuantity","PopupQuantity",{value:_loc2_,max:_loc2_,params:_loc3_});
       _loc4_.addEventListener("validate",this);
@@ -125,7 +125,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.TaxCollectorStorage extends dofus.§\x18\x0
       this["\x18\x06\x0f"](true);
       this["\x1a\x16\x1c"](false);
    }
-   function §\x1b\x17\x0f§(§\x19\f\x16§)
+   function §\x1b\x17\x0f§(nQuantity)
    {
       if(_loc2_ <= 0)
       {

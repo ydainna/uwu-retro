@@ -78,7 +78,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Friends extends dofus.§\x18\x03\x10§.gapi
       this._svSpouse.swapDepths(this["\x1d\x10\r"]);
       return this.spouse;
    }
-   function §\x1a\f\x05§(§\x1b\x03\x1d§)
+   function §\x1a\f\x05§(sName)
    {
       switch(this["\x1e\b\x19"])
       {

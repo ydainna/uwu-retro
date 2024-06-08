@@ -17,7 +17,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
    function §\x17\x13\x06§(oAPI)
    {
       super();
-      dofus["\x18\x18\x0b"].GameManager["\x1e\f\x10"] = this;
+      dofus.managers.GameManager["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
    function §\x1e\x1d\x13§()
@@ -45,7 +45,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"].GameManager["\x1e\f\x10"];
+      return dofus.managers.GameManager["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {
@@ -60,7 +60,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
    }
    function §\x18\x02\x1d§()
    {
-      if(this.api.datacenter.Game["\x17\x10\x02"] == dofus["\x18\x18\x0b"].GameManager["\x17\x10\x05"] || this.api.datacenter.Basics.aks_current_server["\x1b\x12\n"] != dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x10"])
+      if(this.api.datacenter.Game["\x17\x10\x02"] == dofus.managers.GameManager["\x17\x10\x05"] || this.api.datacenter.Basics.aks_current_server["\x1b\x12\n"] != dofus.datacenter.["\x1a\x14\x05"]["\x1a\x14\x10"])
       {
          this.api.kernel.showMessage(undefined,this.api.lang.getText("DO_U_GIVEUP"),"CAUTION_YESNO",{name:"GiveUp",listener:this});
       }
@@ -516,11 +516,11 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
             {
                if(this.api.kernel["\x1b\x06\x10"]["\x18\f\x18"](_loc8_))
                {
-                  _loc9_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x0f"],_loc3_);
+                  _loc9_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x0f"],_loc3_);
                }
                else if(this.api.kernel["\x1b\x06\x10"]["\x18\f\x17"](_loc8_))
                {
-                  _loc9_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x0e"],_loc3_);
+                  _loc9_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x0e"],_loc3_);
                }
             }
             var _loc10_ = new dofus.datacenter.["\x17\f\x02"](undefined,_loc8_,_loc7_[1],_loc7_[2],_loc7_[3],_loc7_[7],_loc7_[4],undefined,_loc9_,_loc7_[6]);
@@ -1122,7 +1122,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.§\x16\x04\x07
       }
       return Math.floor(Math.max(_loc2_,2));
    }
-   function §\x1a\r\x12§(§\x1b\x03\x1d§, sID, §\x1b\f\x0e§, §\x19\x12\x10§)
+   function §\x1a\r\x12§(sName, sID, §\x1b\f\x0e§, §\x19\x12\x10§)
    {
       if(_loc4_ != undefined && (_loc4_.length > 0 && _loc4_ != ""))
       {

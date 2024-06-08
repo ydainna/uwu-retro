@@ -540,7 +540,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                   this.showMessage(undefined,"This feature is not compatible on a Flash Projector","ERROR_CHAT");
                   return undefined;
                }
-               if(!dofus["\x18\x18\x0b"]["\x16\x01\r"].getInstance()["\x18\r\x13"])
+               if(!dofus.managers["\x16\x01\r"].getInstance()["\x18\r\x13"])
                {
                   this.showMessage(undefined,"You can\'t do this out of a batch execution.","ERROR_CHAT");
                   return undefined;

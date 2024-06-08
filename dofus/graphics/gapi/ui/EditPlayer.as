@@ -233,11 +233,11 @@ class dofus.§\x18\x03\x10§.gapi.ui.EditPlayer extends dofus.§\x18\x03\x10§.g
             return undefined;
          }
       }
-      this.api.network.Account["\x17\f\x01"](_loc2_);
+      this.api.network.Account.editCharacterName(_loc2_);
    }
    function §\x1b\x17\f§()
    {
-      this.api.network.Account["\x17\x0b\x1d"](this["\x1e\x02\x16"].color1,this["\x1e\x02\x16"].color2,this["\x1e\x02\x16"].color3);
+      this.api.network.Account.editCharacterColors(this["\x1e\x02\x16"].color1,this["\x1e\x02\x16"].color2,this["\x1e\x02\x16"].color3);
    }
    function setColors(§\x19\x12\t§)
    {

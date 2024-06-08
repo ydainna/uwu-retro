@@ -71,7 +71,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.LivingItemsViewer extends dof
             this.api.ui.loadUIComponent("ChooseFeed","ChooseFeed",{itemsType:[this["\x1e\x03\x19"].type],item:this["\x1e\x03\x19"]});
             break;
          case this["\x1c\t\x15"]:
-            this.api.kernel.SpeakingItemsManager["\x1b\x11\x10"](dofus["\x18\x18\x0b"].SpeakingItemsManager.SPEAK_TRIGGER_DISSOCIATE);
+            this.api.kernel.SpeakingItemsManager["\x1b\x11\x10"](dofus.managers.SpeakingItemsManager.SPEAK_TRIGGER_DISSOCIATE);
             this.api.network.Items["\x17\b\x19"](this["\x1e\x03\x19"].ID,this["\x1e\x03\x19"].position);
       }
    }

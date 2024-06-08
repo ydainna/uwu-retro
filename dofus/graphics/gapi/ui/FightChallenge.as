@@ -36,8 +36,8 @@ class dofus.§\x18\x03\x10§.gapi.ui.FightChallenge extends dofus.§\x18\x03\x10
          if(dofus.graphics.gapi.controls.FightChallengeIcon(this["\x1b\x1b\x1a"][_loc4_]).challenge.id == _loc2_)
          {
             dofus.graphics.gapi.controls.FightChallengeIcon(this["\x1b\x1b\x1a"][_loc4_]).challenge.state = !_loc3_ ? 2 : 1;
-            dofus.graphics.gapi.controls.FightChallengeIcon(this["\x1b\x1b\x1a"][_loc4_])["\x1b\x14\x01"]();
-            this.FightChallengeViewer["\x1b\x14\x01"]();
+            dofus.graphics.gapi.controls.FightChallengeIcon(this["\x1b\x1b\x1a"][_loc4_]).update();
+            this.FightChallengeViewer.update();
          }
          _loc4_ = _loc4_ + 1;
       }

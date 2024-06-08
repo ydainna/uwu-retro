@@ -20,7 +20,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ColorSelector extends dofus.�
       this["\x1d\x13\r"] = _loc2_;
       return this["\x1e\x13\x07"]();
    }
-   function §\x1c\x11§(§\x19\x0e\b§)
+   function §\x1c\x11§(nSex)
    {
       this["\x1d\x1c\x1a"] = _loc2_;
       return this["\b\x1c"]();

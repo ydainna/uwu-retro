@@ -21,7 +21,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CharactersMigration extends dofus.§\x18\x0
       this["\x1d\x13\x19"] = _loc2_;
       return this.characterCount;
    }
-   function §\x1c\x0f§(§\x1b\x03\x1d§)
+   function §\x1c\x0f§(sName)
    {
       this["\x1d\x0e\x19"]._itCharacterName.text = _loc2_;
       return this.setNewName;
@@ -125,7 +125,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CharactersMigration extends dofus.§\x18\x0
          _loc2_.attachMovie("staticR","mcAnim",10);
       }
    }
-   function §\x16\x1a\x12§(§\x1b\x03\x1d§)
+   function §\x16\x1a\x12§(sName)
    {
       return Math.random() * 2 > 1;
    }
@@ -160,7 +160,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CharactersMigration extends dofus.§\x18\x0
       {
          if(this["\x1b\x1c\x07"][_loc3_] != undefined)
          {
-            this.api.network.Account["\x1b\x17\x14"](_loc3_,_loc2_);
+            this.api.network.Account.validCharacterMigration(_loc3_,_loc2_);
          }
          else
          {
@@ -170,7 +170,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CharactersMigration extends dofus.§\x18\x0
       }
       else
       {
-         this.api.network.Account["\x16\x05\x18"](_loc3_,_loc2_);
+         this.api.network.Account.askCharacterMigration(_loc3_,_loc2_);
       }
    }
    function §\x16\x15\n§()
@@ -213,11 +213,11 @@ class dofus.§\x18\x03\x10§.gapi.ui.CharactersMigration extends dofus.§\x18\x0
       switch(_loc2_.target._name)
       {
          case "AskYesNoConfirmDelete":
-            this.api.network.Account["\x17\x06\x1d"](this["\x1d\x06\x10"].selectedItem.playerID);
+            this.api.network.Account.deleteCharacterMigration(this["\x1d\x06\x10"].selectedItem.playerID);
             break;
          case "AskYesNoConfirmMigration":
             this["\x1b\x1c\x07"][_loc2_.params.nCharacterId] = true;
-            this.api.network.Account["\x1b\x17\x14"](_loc2_.params.nCharacterId,_loc2_.params.sCharacterName);
+            this.api.network.Account.validCharacterMigration(_loc2_.params.nCharacterId,_loc2_.params.sCharacterName);
       }
    }
 }

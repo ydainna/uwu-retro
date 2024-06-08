@@ -128,7 +128,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          _loc7_.execute();
          if(_loc4_ == 2)
          {
-            this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus["\x18\x18\x0b"]["\x1b\x10\x0b"]["\x1b\x10\x0e"]);
+            this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x0e"]);
          }
       }
    }
@@ -318,7 +318,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             {
                if(_loc6_ == this.api.datacenter.Player.ID)
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x19"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x19"]);
                }
                else
                {
@@ -326,11 +326,11 @@ class dofus.aks.GameActions extends dofus.aks.Handler
                   var _loc55_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_global.parseInt(_loc6_))["\x1b\x0e\x15"];
                   if(_loc54_ == _loc55_)
                   {
-                     this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x17"]);
+                     this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x17"]);
                   }
                   else
                   {
-                     this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x18"]);
+                     this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x18"]);
                   }
                }
                this.api.datacenter.Player["\x18\r\x0f"] = true;
@@ -343,11 +343,11 @@ class dofus.aks.GameActions extends dofus.aks.Handler
                var _loc57_ = this.api.datacenter.["\x1b\x07\x0e"].getItemAt(_global.parseInt(_loc49_))["\x1b\x0e\x15"];
                if(_loc56_ == _loc57_)
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x1a"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x1a"]);
                }
                else
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x1b"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x1b"]);
                }
             }
             break;

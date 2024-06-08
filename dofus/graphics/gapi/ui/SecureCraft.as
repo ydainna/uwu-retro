@@ -646,7 +646,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
          }
       }
    }
-   function §\x1b\x17\x11§(§\x19\f\x16§)
+   function §\x1b\x17\x11§(nQuantity)
    {
       if(_loc2_ > this.api.datacenter.Player.Kama)
       {

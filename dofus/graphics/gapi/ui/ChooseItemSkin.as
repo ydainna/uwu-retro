@@ -57,7 +57,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseItemSkin extends dofus.§\x18\x03\x10
       {
          return undefined;
       }
-      this.api.kernel.SpeakingItemsManager["\x1b\x11\x10"](dofus["\x18\x18\x0b"].SpeakingItemsManager.SPEAK_TRIGGER_CHANGE_SKIN);
+      this.api.kernel.SpeakingItemsManager["\x1b\x11\x10"](dofus.managers.SpeakingItemsManager.SPEAK_TRIGGER_CHANGE_SKIN);
       this.api.network.Items["\x1a\x19\x19"](this["\x1e\x03\x18"].ID,this["\x1e\x03\x18"].position,_loc2_["\x1b\x02\f"] + 1);
       this["\x16\x15\n"]();
    }

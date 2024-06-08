@@ -4,7 +4,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function §\x17\x02\x04§(§\x19\x03\x1a§, §\x19\x03\x16§, §\x19\x0f\n§, §\x19\x0f\t§, §\x1b\x03\x1d§)
+   function §\x17\x02\x04§(§\x19\x03\x1a§, §\x19\x03\x16§, §\x19\x0f\n§, §\x19\x0f\t§, sName)
    {
       this.aks.send("gC" + _loc2_ + "|" + _loc3_ + "|" + _loc4_ + "|" + _loc5_ + "|" + _loc6_);
    }

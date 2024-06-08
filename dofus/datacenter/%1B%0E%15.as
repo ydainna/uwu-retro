@@ -4,12 +4,12 @@ class dofus.§\x17\x04\x19§.§\x1b\x0e\x15§ extends ank.battlefield.§\x17\x04
    static var §\x1a\x01\x0e§ = "BlockSpectator";
    static var §\x1a\x01\r§ = "BlockJoinerExceptPartyMember";
    static var §\x1a\x01\x0f§ = "NeedHelp";
-   function §\x1b\x0e\x15§(sID, §\x17\x0f\x0b§, §\x1a\x1b\x1b§, §\x19\x04\x12§, §\x19\x05\x07§, §\x19\x10\x06§, §\x19\x03\x05§)
+   function §\x1b\x0e\x15§(sID, §\x17\x0f\x0b§, §\x1a\x1b\x1b§, §\x19\x04\x12§, nColor1, §\x19\x10\x06§, §\x19\x03\x05§)
    {
       super();
       this.initialize(sID,_loc4_,_loc5_,_loc6_,_loc7_,_loc8_,_loc9_);
    }
-   function initialize(sID, §\x17\x0f\x0b§, §\x1a\x1b\x1b§, §\x19\x04\x12§, §\x19\x05\x07§, §\x19\x10\x06§, §\x19\x03\x05§)
+   function initialize(sID, §\x17\x0f\x0b§, §\x1a\x1b\x1b§, §\x19\x04\x12§, nColor1, §\x19\x10\x06§, §\x19\x03\x05§)
    {
       super.initialize(sID,_loc4_,_loc5_,_loc6_);
       this.color1 = _loc7_;

@@ -9,7 +9,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x18\x18§ extends dofus.§\x18\x18\x0b§.§\
    function §\x18\x18\x18§()
    {
       super();
-      dofus["\x18\x18\x0b"]["\x18\x18\x18"]["\x1e\f\x10"] = this;
+      dofus.managers["\x18\x18\x18"]["\x1e\f\x10"] = this;
    }
    function §\x1e\x1c\x1b§()
    {
@@ -22,7 +22,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x18\x18§ extends dofus.§\x18\x18\x0b§.§\
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"]["\x18\x18\x18"]["\x1e\f\x10"];
+      return dofus.managers["\x18\x18\x18"]["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {

@@ -211,21 +211,21 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
          case 2137:
             _loc4_[2] = this.api.lang["\x18\x01\x0e"](this._nParam3);
             break;
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\n"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x13"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x14"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"].ACTION_BOOST_SPELL_RANGE_NO_RANGEABLE_TRIGGER:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x0e"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x0f"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\n"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\f"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x15"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\r"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x0b"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x12"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x11"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x15\x1c\x10"]:
-         case dofus["\x18\x18\x0b"]["\x1b\x06\x10"].ACTION_BOOST_SPELL_DMG_PERCENT:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\n"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\x13"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\x14"]:
+         case dofus.managers["\x1b\x06\x10"].ACTION_BOOST_SPELL_RANGE_NO_RANGEABLE_TRIGGER:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\x0e"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\x0f"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\n"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\f"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\x15"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\r"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\x0b"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\x12"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\x11"]:
+         case dofus.managers["\x1b\x06\x10"]["\x15\x1c\x10"]:
+         case dofus.managers["\x1b\x06\x10"].ACTION_BOOST_SPELL_DMG_PERCENT:
             _loc4_[0] = this.api.lang["\x18\x01\x07"](Number(_loc4_[0])).n;
             break;
          case 939:
@@ -328,12 +328,12 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
    }
    function get hasInvocationConditions()
    {
-      var _loc2_ = dofus["\x18\x18\x0b"]["\x17\f\t"].getConditionalElementFromString("FZ",this._sConditions);
+      var _loc2_ = dofus.managers["\x17\f\t"].getConditionalElementFromString("FZ",this._sConditions);
       if(_loc2_ != undefined)
       {
          return true;
       }
-      _loc2_ = dofus["\x18\x18\x0b"]["\x17\f\t"].getConditionalElementFromString("Fz",this._sConditions);
+      _loc2_ = dofus.managers["\x17\f\t"].getConditionalElementFromString("Fz",this._sConditions);
       if(_loc2_ != undefined)
       {
          return true;
@@ -342,16 +342,16 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
    }
    function §\x1e\x16\x0e§()
    {
-      return dofus["\x18\x18\x0b"]["\x17\f\t"].parseConditionsString(this._sConditions);
+      return dofus.managers["\x17\f\t"].parseConditionsString(this._sConditions);
    }
    function get conditionalStateID()
    {
-      var _loc2_ = dofus["\x18\x18\x0b"]["\x17\f\t"].getConditionalElementFromString("FS",this._sConditions);
+      var _loc2_ = dofus.managers["\x17\f\t"].getConditionalElementFromString("FS",this._sConditions);
       return _loc2_ == undefined ? undefined : Number(_loc2_);
    }
    function get conditionalAlignmentID()
    {
-      var _loc2_ = dofus["\x18\x18\x0b"]["\x17\f\t"].getConditionalElementFromString("Ps",this._sConditions);
+      var _loc2_ = dofus.managers["\x17\f\t"].getConditionalElementFromString("Ps",this._sConditions);
       return _loc2_ == undefined ? undefined : Number(_loc2_);
    }
    function set isOver(§\x16\x10\x11§)

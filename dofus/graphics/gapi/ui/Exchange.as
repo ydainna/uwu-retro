@@ -257,7 +257,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Exchange extends dofus.§\x18\x03\x10§.gap
             this.api.network.Exchange["\x19\x01\x01"](true,_loc3_,_loc4_);
       }
    }
-   function §\x1b\x17\x11§(§\x19\f\x16§)
+   function §\x1b\x17\x11§(nQuantity)
    {
       if(_loc2_ > this.api.datacenter.Player.Kama)
       {

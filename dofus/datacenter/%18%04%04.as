@@ -1,6 +1,6 @@
 class dofus.§\x17\x04\x19§.§\x18\x04\x04§ extends Object
 {
-   function §\x18\x04\x04§(§\x1b\x03\x1d§, §\x19\x03\x18§, §\x19\x03\x17§, §\x19\x10\x0e§, §\x19\x10\r§, §\x19\f\t§)
+   function §\x18\x04\x04§(sName, §\x19\x03\x18§, §\x19\x03\x17§, §\x19\x10\x0e§, §\x19\x10\r§, §\x19\f\t§)
    {
       super();
       this.api = _global.api;
@@ -161,7 +161,7 @@ class dofus.§\x17\x04\x19§.§\x18\x04\x04§ extends Object
       var _loc2_ = new Date(this._nInfosLastModification);
       return this["\x17\x12\r"](_loc2_);
    }
-   function initialize(§\x16\x14\x05§, §\x1b\x03\x1d§, §\x19\x03\x18§, §\x19\x03\x17§, §\x19\x10\x0e§, §\x19\x10\r§, §\x19\f\t§)
+   function initialize(§\x16\x14\x05§, sName, §\x19\x03\x18§, §\x19\x03\x17§, §\x19\x10\x0e§, §\x19\x10\r§, §\x19\f\t§)
    {
       this["\x1e\x0b\x06"] = _loc3_;
       this["\x1d\x13\x05"] = _loc4_;

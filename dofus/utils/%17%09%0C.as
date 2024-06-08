@@ -163,7 +163,7 @@ class dofus.utils.§\x17\t\f§
    {
       return this["\x1c\x06\x03"];
    }
-   function §\x1d\x17§(§\x1b\x03\x1d§)
+   function §\x1d\x17§(sName)
    {
       this["\x1e\f\x1b"] = _loc2_;
       return this["\n\f"]();
@@ -184,7 +184,7 @@ class dofus.utils.§\x17\t\f§
    {
       return String(System.capabilities.version).indexOf("MAC") > -1;
    }
-   function §\x17\x16\b§(§\x19\x0e\x06§)
+   function §\x17\x16\b§(nServerID)
    {
       return this.customServersIP[_loc2_];
    }

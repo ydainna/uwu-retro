@@ -32,12 +32,12 @@ class dofus.§\x18\x18\x0b§.SpeakingItemsManager extends dofus.utils.§\x16\x04
    function SpeakingItemsManager(oAPI)
    {
       super();
-      dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1e\f\x10"] = this;
+      dofus.managers.SpeakingItemsManager["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1e\f\x10"];
+      return dofus.managers.SpeakingItemsManager["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {
@@ -55,10 +55,10 @@ class dofus.§\x18\x18\x0b§.SpeakingItemsManager extends dofus.utils.§\x16\x04
    }
    function §\x1b\x11\x0e§(§\x19\x06\x18§)
    {
-      if(_loc2_ == dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x06\x02"])
+      if(_loc2_ == dofus.managers.SpeakingItemsManager["\x1b\x06\x02"])
       {
-         ank.utils.Timer.removeTimer(this,"SpeakingItemsManager",dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1d\x1e\r"]);
-         ank.utils.Timer.setTimer(this,"SpeakingItemsManager",this,this["\x1b\x11\x0e"],dofus["\x18\x18\x0b"].SpeakingItemsManager["\x18\x1d\n"],[dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x1c"]],true);
+         ank.utils.Timer.removeTimer(this,"SpeakingItemsManager",dofus.managers.SpeakingItemsManager["\x1d\x1e\r"]);
+         ank.utils.Timer.setTimer(this,"SpeakingItemsManager",this,this["\x1b\x11\x0e"],dofus.managers.SpeakingItemsManager["\x18\x1d\n"],[dofus.managers.SpeakingItemsManager["\x1b\x05\x1c"]],true);
       }
       if(!this.api.kernel.OptionsManager.getOption("UseSpeakingItems"))
       {

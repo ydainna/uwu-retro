@@ -112,7 +112,7 @@ if(!dofus.graphics.gapi.ui.ChooseFeed)
          this.api.kernel.showMessage(undefined,this.api.lang.getText("CONFIRM_FOOD_LIVING_ITEM"),"CAUTION_YESNO",{name:"Confirm",params:{oItem:_loc2_},listener:this});
          return undefined;
       }
-      this.api.kernel.SpeakingItemsManager["\x1b\x11\x10"](dofus["\x18\x18\x0b"].SpeakingItemsManager.SPEAK_TRIGGER_FEED);
+      this.api.kernel.SpeakingItemsManager["\x1b\x11\x10"](dofus.managers.SpeakingItemsManager.SPEAK_TRIGGER_FEED);
       this.api.network.Items["\x17\x0f\x0f"](this["\x1e\x03\x18"].ID,this["\x1e\x03\x18"].position,_loc2_.ID);
       this["\x16\x15\n"]();
    };

@@ -8,7 +8,7 @@ class dofus.aks.Friends extends dofus.aks.Handler
    {
       this.aks.send("FL",true);
    }
-   function §\x15\x1d\x10§(§\x1b\x03\x1d§)
+   function §\x15\x1d\x10§(sName)
    {
       if(_loc2_ == undefined || (_loc2_.length == 0 || _loc2_ == "*"))
       {
@@ -16,7 +16,7 @@ class dofus.aks.Friends extends dofus.aks.Handler
       }
       this.aks.send("FA" + _loc2_);
    }
-   function §\x1a\f\x05§(§\x1b\x03\x1d§)
+   function §\x1a\f\x05§(sName)
    {
       if(_loc2_ == undefined || (_loc2_.length == 0 || _loc2_ == "*"))
       {
@@ -28,7 +28,7 @@ class dofus.aks.Friends extends dofus.aks.Handler
    {
       this.aks.send("FJ" + _loc2_);
    }
-   function §\x18\x11\x13§(§\x1b\x03\x1d§)
+   function §\x18\x11\x13§(sName)
    {
       this.aks.send("FJF" + _loc2_);
    }

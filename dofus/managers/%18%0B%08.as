@@ -16,12 +16,12 @@ class dofus.§\x18\x18\x0b§.§\x18\x0b\b§ extends dofus.utils.§\x16\x04\x07§
    {
       if(_loc2_)
       {
-         this["\x1e\r\x03"] = dofus["\x18\x18\x0b"]["\x18\x0b\b"]["\x1b\n\t"];
+         this["\x1e\r\x03"] = dofus.managers["\x18\x0b\b"]["\x1b\n\t"];
          this["\x1e\x06\x1b"].lastClickedCell = null;
       }
       else
       {
-         this["\x1e\r\x03"] = dofus["\x18\x18\x0b"]["\x18\x0b\b"]["\x1b\n\x06"];
+         this["\x1e\r\x03"] = dofus.managers["\x18\x0b\b"]["\x1b\n\x06"];
       }
    }
    function §\x16\x15\b§(§\x18\x18\x15§, §\x16\x17\x12§, §\x16\x11\x05§, §\x16\r\x14§, §\x16\f\x19§, §\x16\b\x15§)
@@ -68,7 +68,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x0b\b§ extends dofus.utils.§\x16\x04\x07§
       }
       switch(this["\x1e\r\x03"])
       {
-         case dofus["\x18\x18\x0b"]["\x18\x0b\b"]["\x1b\n\x06"]:
+         case dofus.managers["\x18\x0b\b"]["\x1b\n\x06"]:
             this.api.datacenter.Basics.interactionsManager_path = ank.battlefieldutils.["\x1a\x04\b"]["\x1a\x04\x07"](this.api,_loc2_,_loc8_,_loc3_,{bAllDirections:_loc7_,bIgnoreSprites:_loc6_});
             if(this.api.datacenter.Basics.interactionsManager_path != null)
             {
@@ -76,7 +76,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x0b\b§ extends dofus.utils.§\x16\x04\x07§
             }
             return false;
             break;
-         case dofus["\x18\x18\x0b"]["\x18\x0b\b"]["\x1b\n\t"]:
+         case dofus.managers["\x18\x0b\b"]["\x1b\n\t"]:
             if(_loc4_)
             {
                this.api.gfx.select(this["\x17\x01\t"](this.api.datacenter.Basics.interactionsManager_path),dofus.Constants["\x16\x18\x05"]);

@@ -16,7 +16,7 @@ if(!dofus.aks.Items)
    {
       super.initialize(_loc3_,oAPI);
    }.prototype;
-   _loc1_.movement = function §\x18\x1e\x1d§(§\x19\b\x0b§, §\x19\f\r§, §\x19\f\x16§)
+   _loc1_.movement = function §\x18\x1e\x1d§(§\x19\b\x0b§, §\x19\f\r§, nQuantity)
    {
       if(_loc3_ > 0)
       {
@@ -24,7 +24,7 @@ if(!dofus.aks.Items)
       }
       this.aks.send("OM" + _loc2_ + "|" + _loc3_ + (!_global.isNaN(_loc4_) ? "|" + _loc4_ : ""),true);
    };
-   _loc1_.drop = function drop(§\x19\b\x0b§, §\x19\f\x16§)
+   _loc1_.drop = function drop(§\x19\b\x0b§, nQuantity)
    {
       this.aks.send("OD" + _loc2_ + "|" + _loc3_,false);
    };
@@ -40,7 +40,7 @@ if(!dofus.aks.Items)
    {
       this.aks.send("wc" + _loc2_,false);
    };
-   _loc1_.destroy = function destroy(§\x19\b\x0b§, §\x19\f\x16§)
+   _loc1_.destroy = function destroy(§\x19\b\x0b§, nQuantity)
    {
       this.aks.send("Od" + _loc2_ + "|" + _loc3_,false);
    };
@@ -48,7 +48,7 @@ if(!dofus.aks.Items)
    {
       this.aks.send("OR" + _loc2_,false);
    };
-   _loc1_.use = function §\x1b\x16\x11§(§\x19\b\x0b§, §\x1b\b\x10§, §\x19\x04\x12§, §\x16\n\x06§, §\x19\f\x16§)
+   _loc1_.use = function §\x1b\x16\x11§(§\x19\b\x0b§, §\x1b\b\x10§, §\x19\x04\x12§, §\x16\n\x06§, nQuantity)
    {
       if(_loc6_ == undefined)
       {

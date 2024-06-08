@@ -10,7 +10,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseServerSprite extends do
       this["\x1c\x1c\x04"]._visible = false;
       this["\x1d\x0e\x05"]._visible = false;
    }
-   function §\x1c\r§(§\x19\x0e\x06§)
+   function §\x1c\r§(nServerID)
    {
       this["\x1d\x1c\x17"] = _loc2_;
       if(this["\x18\t\x1c"])

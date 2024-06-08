@@ -15,7 +15,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Timeline extends dofus.§\x18\x03\x10§.gap
    }
    function §\x1b\x14\x01§()
    {
-      this["\x1e\x0e\x1b"]["\x1b\x14\x01"]();
+      this["\x1e\x0e\x1b"].update();
    }
    function nextTurn(§\x18\b\f§, §\x16\x15\x02§)
    {

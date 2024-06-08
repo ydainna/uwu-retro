@@ -5,7 +5,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x0e\x04§ extends dofus.§\x17\x04\x19§.§\
       super();
       this.initialize(sID,_loc4_,_loc5_,_loc6_,_loc7_,_loc8_,isMine);
    }
-   function §\x19\f§(§\x1b\x03\x1d§)
+   function §\x19\f§(sName)
    {
       this["\x1e\x0b\x06"] = _loc2_;
       return this["\x04\x1b"]();

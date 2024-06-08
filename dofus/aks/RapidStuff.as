@@ -4,7 +4,7 @@ class dofus.aks.RapidStuff extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function editRapidStuff(nRapidStuffID, nIconID, §\x1b\x03\x1d§)
+   function editRapidStuff(nRapidStuffID, nIconID, sName)
    {
       this.aks.send("xE" + nRapidStuffID + "|" + nIconID + "|" + _loc4_);
    }

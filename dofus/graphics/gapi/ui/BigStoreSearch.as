@@ -147,7 +147,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreSearch extends dofus.§\x18\x03\x10
       this["\x1c\x1e\x1a"].text = _loc4_.length == 0 ? this.api.lang.getText("NO_BIGSTORE_SEARCH_RESULT") : _loc4_.length + " " + ank.utils.["\x1a\x04\t"]["\x16\x1d\x15"](this.api.lang.getText(!this._bIsMonster ? "OBJECTS" : "MONSTER"),"m",_loc4_ < 2);
       this._btnView.enabled = false;
    }
-   function §\x1a\x12\x0b§(§\x16\b\x07§, §\x1b\x03\x1d§)
+   function §\x1a\x12\x0b§(§\x16\b\x07§, sName)
    {
       var _loc4_ = _loc2_.length - 1;
       while(_loc4_ >= 0)

@@ -222,7 +222,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseCharacterSprite extends
          this._mcStateBack._visible = false;
       }
    }
-   function §\x1b\x16\x02§(§\x19\x0e\x06§)
+   function §\x1b\x16\x02§(nServerID)
    {
       if(_loc2_ != undefined)
       {

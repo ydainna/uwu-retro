@@ -4,7 +4,7 @@ class dofus.§\x18\x18\x0b§.MountParksManager extends dofus.utils.§\x16\x04\x0
    function MountParksManager()
    {
       super();
-      dofus["\x18\x18\x0b"].MountParksManager["\x1e\f\x10"] = this;
+      dofus.managers.MountParksManager["\x1e\f\x10"] = this;
    }
    function initialize(oAPI)
    {
@@ -12,7 +12,7 @@ class dofus.§\x18\x18\x0b§.MountParksManager extends dofus.utils.§\x16\x04\x0
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"].MountParksManager["\x1e\f\x10"];
+      return dofus.managers.MountParksManager["\x1e\f\x10"];
    }
    function openMountParkMenu(sObject2Name, §\x16\x06\x01§, §\x18\x1b\x10§, oMountPark)
    {

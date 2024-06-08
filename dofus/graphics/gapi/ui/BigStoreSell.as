@@ -104,7 +104,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreSell extends dofus.§\x18\x03\x10§
       this["\x1e\x10\x11"].title = this.api.datacenter.Player.data.name;
       this["\x1e\x10\x12"].title = this.api.lang.getText("SHOP_STOCK");
    }
-   function §\x1a\x06\x0f§(§\x19\f\x16§)
+   function §\x1a\x06\x0f§(nQuantity)
    {
       var _loc3_ = new ank.utils.ExtendedArray();
       if(_loc2_ >= this._oData.quantity1)

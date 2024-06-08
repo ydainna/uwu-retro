@@ -25,7 +25,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
    {
       this.aks.send("EK",true);
    }
-   function §\x19\x01\x01§(§\x16\b\x11§, §\x19\x13\x07§, §\x19\f\x16§, §\x19\f\x10§)
+   function §\x19\x01\x01§(§\x16\b\x11§, §\x19\x13\x07§, nQuantity, §\x19\f\x10§)
    {
       if(this["\x1c\x11\x1b"] == _loc3_.ID && _loc2_ == this["\x1c\x11\x1a"])
       {
@@ -57,15 +57,15 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       }
       this.aks.send("EMO" + _loc3_,true,undefined,true);
    }
-   function §\x19\x01\x04§(§\x19\x07\x1b§, §\x16\b\x11§, §\x19\b\x0b§, §\x19\f\x16§, §\x19\f\x10§)
+   function §\x19\x01\x04§(§\x19\x07\x1b§, §\x16\b\x11§, §\x19\b\x0b§, nQuantity, §\x19\f\x10§)
    {
       this.aks.send("EP" + _loc2_ + "O" + (!_loc3_ ? "-" : "+") + _loc4_ + "|" + _loc5_ + (_loc6_ != undefined ? "|" + _loc6_ : ""),true);
    }
-   function §\x19\x01\x03§(§\x19\f\x16§)
+   function §\x19\x01\x03§(nQuantity)
    {
       this.aks.send("EMG" + _loc2_,true);
    }
-   function §\x19\x01\x05§(§\x19\x07\x1b§, §\x19\f\x16§)
+   function §\x19\x01\x05§(§\x19\x07\x1b§, nQuantity)
    {
       this.aks.send("EP" + _loc2_ + "G" + _loc3_,true);
    }
@@ -73,7 +73,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
    {
       this.aks.send("ES" + _loc2_ + "|" + _loc3_,true);
    }
-   function buy(§\x19\b\x0b§, §\x19\f\x16§)
+   function buy(§\x19\b\x0b§, nQuantity)
    {
       this.aks.send("EB" + _loc2_ + "|" + _loc3_,true);
    }
@@ -623,7 +623,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             {
                this.api.kernel.showMessage(this.api.lang.getText("CRAFT"),this.api.lang.getText("CRAFT_FAILED"),"ERROR_BOX",{name:"CraftFailed"});
             }
-            this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x0f"]);
+            this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x0f"]);
             break;
          case ";":
             if(_loc2_)
@@ -633,7 +633,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
                {
                   var _loc8_ = new dofus.datacenter.["\x18\x10\x15"](0,Number(_loc7_[0]),undefined,undefined,undefined);
                   this.api.kernel.showMessage(undefined,this.api.lang.getText("CRAFT_SUCCESS_SELF",[_loc8_.name]),"INFO_CHAT");
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x0f"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x0f"]);
                   break;
                }
                var _loc9_ = _loc7_[1].substr(0,1);

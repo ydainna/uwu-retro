@@ -4,7 +4,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function §\x1a\r\x05§(§\x1b\x03\x1d§)
+   function §\x1a\r\x05§(sName)
    {
       this.aks.send("Rn" + _loc2_,true);
    }

@@ -15,7 +15,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ClassCustomize extends dofus.
       this.addToQueue({object:this,method:this["\x18\x13\x14"]});
       return this["\x1e\x15\x1a"]();
    }
-   function §\x1c\x11§(§\x19\x0e\b§)
+   function §\x1c\x11§(nSex)
    {
       this["\x1d\x1c\x1a"] = _loc2_;
       this.addToQueue({object:this,method:this["\x18\x13\x14"]});

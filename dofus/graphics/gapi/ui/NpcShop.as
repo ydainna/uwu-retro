@@ -157,7 +157,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.NpcShop extends dofus.§\x18\x03\x10§.gapi
       var _loc11_ = this.gapi.loadUIComponent("PopupQuantityWithDescription","PopupQuantity",{descriptionLangKey:_loc9_,descriptionLangKeyParams:_loc10_,value:1,max:_loc5_,min:1,isMaxButtonValidationEnabled:_loc2_ == "sell",params:{type:_loc2_}});
       _loc11_.addEventListener("validate",this);
    }
-   function §\x1b\x17\x0b§(§\x19\f\x16§)
+   function §\x1b\x17\x0b§(nQuantity)
    {
       if(_loc2_ <= 0)
       {
@@ -171,7 +171,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.NpcShop extends dofus.§\x18\x03\x10§.gapi
       }
       this.api.network.Exchange.buy(this["\x1e\x05\t"].unicID,_loc2_);
    }
-   function §\x1b\x17\x13§(§\x19\f\x16§)
+   function §\x1b\x17\x13§(nQuantity)
    {
       if(_loc2_ <= 0)
       {

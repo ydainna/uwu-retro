@@ -1,6 +1,6 @@
 class dofus.§\x17\x04\x19§.§\x17\x01\x16§ extends Object
 {
-   function §\x17\x01\x16§(sId, §\x1b\x03\x1d§)
+   function §\x17\x01\x16§(sId, sName)
    {
       super();
       this.api = _global.api;
@@ -11,7 +11,7 @@ class dofus.§\x17\x04\x19§.§\x17\x01\x16§ extends Object
    {
       return this["\x1e\x0b\x06"];
    }
-   function §\x19\f§(§\x1b\x03\x1d§)
+   function §\x19\f§(sName)
    {
       this["\x1e\x0b\x06"] = _loc2_;
       return this["\x04\x1b"]();

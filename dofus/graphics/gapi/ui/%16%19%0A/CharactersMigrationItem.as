@@ -10,7 +10,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x19\n§.CharactersMigrationItem exte
       this["\x1d\r\t"] = _loc2_;
       return this.list;
    }
-   function §\x1b\x15\x15§(§\x1b\x03\x1d§)
+   function §\x1b\x15\x15§(sName)
    {
       this["\x1c\x1b\x0f"].text = _loc2_;
    }

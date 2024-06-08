@@ -5,7 +5,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.StringCourse extends dofus.§\x18\x03\x10§
    {
       super();
    }
-   function §\x19\f§(§\x1b\x03\x1d§)
+   function §\x19\f§(sName)
    {
       this["\x1e\x0b\x06"] = _loc2_;
       return this["\x04\x1b"]();

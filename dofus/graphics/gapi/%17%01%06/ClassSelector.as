@@ -294,7 +294,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ClassSelector extends dofus.�
    function §\x1a\x18\x18§(§\x19\x03\x01§)
    {
       this["\x1d\x14\x1a"] = _loc2_;
-      this["\x1b\x14\x01"]();
+      this.update();
    }
    function §\x17\x0b\x12§(§\x1b\r\x11§, §\x16\b\b§, c, §\x17\x04\x0e§)
    {
@@ -333,7 +333,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ClassSelector extends dofus.�
             this.addToQueue({object:this,method:this["\x1b\x14\x10"],params:[_loc3_,this["\x1c\x01\x0f"][_loc3_]]});
             _loc3_ = _loc3_ + 1;
          }
-         this["\x1b\x14\x01"]();
+         this.update();
       }
    }
 }

@@ -10,15 +10,15 @@ class dofus.§\x18\x18\x0b§.FightPointAnimManager
    }
    function addLifePointAnim(§\x18\b\f§, §\x19\x10\x10§)
    {
-      this.addPointAnim(_loc2_,_loc3_,dofus["\x18\x18\x0b"].FightPointAnimManager.LIFE_POINT);
+      this.addPointAnim(_loc2_,_loc3_,dofus.managers.FightPointAnimManager.LIFE_POINT);
    }
    function addActionPointAnim(§\x18\b\f§, §\x19\x10\x10§)
    {
-      this.addPointAnim(_loc2_,_loc3_,dofus["\x18\x18\x0b"].FightPointAnimManager.ACTION_POINT);
+      this.addPointAnim(_loc2_,_loc3_,dofus.managers.FightPointAnimManager.ACTION_POINT);
    }
    function addMovePointAnim(§\x18\b\f§, §\x19\x10\x10§)
    {
-      this.addPointAnim(_loc2_,_loc3_,dofus["\x18\x18\x0b"].FightPointAnimManager.MOVEMENT_POINT);
+      this.addPointAnim(_loc2_,_loc3_,dofus.managers.FightPointAnimManager.MOVEMENT_POINT);
    }
    function playPointAnim(§\x18\b\f§, §\x19\x10\x10§, §\x19\x10\x06§)
    {
@@ -35,16 +35,16 @@ class dofus.§\x18\x18\x0b§.FightPointAnimManager
    {
       switch(_loc3_)
       {
-         case dofus["\x18\x18\x0b"].FightPointAnimManager.LIFE_POINT:
+         case dofus.managers.FightPointAnimManager.LIFE_POINT:
             if(bPositive)
             {
                return dofus.Constants.CLIP_POINT_TYPE_HEALTH;
             }
             return dofus.Constants.CLIP_POINT_TYPE_DAMAGE;
             break;
-         case dofus["\x18\x18\x0b"].FightPointAnimManager.ACTION_POINT:
+         case dofus.managers.FightPointAnimManager.ACTION_POINT:
             return dofus.Constants.CLIP_POINT_TYPE_ACTION;
-         case dofus["\x18\x18\x0b"].FightPointAnimManager.MOVEMENT_POINT:
+         case dofus.managers.FightPointAnimManager.MOVEMENT_POINT:
             return dofus.Constants.CLIP_POINT_TYPE_MOVEMENT;
          default:
       }
@@ -84,8 +84,8 @@ class dofus.§\x18\x18\x0b§.FightPointAnimManager
       for(var sId in this._oPlayersBuffer)
       {
          var _loc2_ = this._oPlayersBuffer[sId];
-         var _loc3_ = dofus["\x18\x18\x0b"].FightPointAnimManager.LIFE_POINT;
-         while(_loc3_ <= dofus["\x18\x18\x0b"].FightPointAnimManager.MOVEMENT_POINT)
+         var _loc3_ = dofus.managers.FightPointAnimManager.LIFE_POINT;
+         while(_loc3_ <= dofus.managers.FightPointAnimManager.MOVEMENT_POINT)
          {
             if(_loc2_[_loc3_] != undefined && _loc2_[_loc3_] != 0)
             {

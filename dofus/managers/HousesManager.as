@@ -4,7 +4,7 @@ class dofus.§\x18\x18\x0b§.HousesManager extends dofus.utils.§\x16\x04\x07§
    function HousesManager()
    {
       super();
-      dofus["\x18\x18\x0b"].HousesManager["\x1e\f\x10"] = this;
+      dofus.managers.HousesManager["\x1e\f\x10"] = this;
    }
    function initialize(oAPI)
    {
@@ -12,7 +12,7 @@ class dofus.§\x18\x18\x0b§.HousesManager extends dofus.utils.§\x16\x04\x07§
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"].HousesManager["\x1e\f\x10"];
+      return dofus.managers.HousesManager["\x1e\f\x10"];
    }
    function getHouseInstances(§\x19\b\x06§)
    {

@@ -19,12 +19,12 @@ class dofus.§\x18\x18\x0b§.§\x1b\x06\x10§ extends dofus.utils.§\x16\x04\x07
    function §\x1b\x06\x10§(oAPI)
    {
       super();
-      dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x1e\f\x10"] = this;
+      dofus.managers["\x1b\x06\x10"]["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"]["\x1b\x06\x10"]["\x1e\f\x10"];
+      return dofus.managers["\x1b\x06\x10"]["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {
@@ -34,9 +34,9 @@ class dofus.§\x18\x18\x0b§.§\x1b\x06\x10§ extends dofus.utils.§\x16\x04\x07
    function clear()
    {
       this["\x1e\x05\x17"] = new Object();
-      delete dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aBoostedEffects;
-      delete dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aDamagingEffects;
-      delete dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aHealingEffects;
+      delete dofus.managers["\x1b\x06\x10"]._aBoostedEffects;
+      delete dofus.managers["\x1b\x06\x10"]._aDamagingEffects;
+      delete dofus.managers["\x1b\x06\x10"]._aHealingEffects;
    }
    function §\x18\x01\x04§(§\x15\x1c\t§, §\x1b\x06\r§)
    {
@@ -56,14 +56,14 @@ class dofus.§\x18\x18\x0b§.§\x1b\x06\x10§ extends dofus.utils.§\x16\x04\x07
    }
    function §\x18\f\x17§(§\x17\f\x03§)
    {
-      if(dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aDamagingEffects == undefined)
+      if(dofus.managers["\x1b\x06\x10"]._aDamagingEffects == undefined)
       {
          this["\x16\x1e\x0b"]();
       }
       var _loc3_ = 0;
-      while(_loc3_ < dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aDamagingEffects.length)
+      while(_loc3_ < dofus.managers["\x1b\x06\x10"]._aDamagingEffects.length)
       {
-         if(dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aDamagingEffects[_loc3_] == _loc2_)
+         if(dofus.managers["\x1b\x06\x10"]._aDamagingEffects[_loc3_] == _loc2_)
          {
             return true;
          }
@@ -73,14 +73,14 @@ class dofus.§\x18\x18\x0b§.§\x1b\x06\x10§ extends dofus.utils.§\x16\x04\x07
    }
    function §\x18\f\x18§(§\x17\f\x03§)
    {
-      if(dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aHealingEffects == undefined)
+      if(dofus.managers["\x1b\x06\x10"]._aHealingEffects == undefined)
       {
          this["\x16\x1e\x0b"]();
       }
       var _loc3_ = 0;
-      while(_loc3_ < dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aHealingEffects.length)
+      while(_loc3_ < dofus.managers["\x1b\x06\x10"]._aHealingEffects.length)
       {
-         if(dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aHealingEffects[_loc3_] == _loc2_)
+         if(dofus.managers["\x1b\x06\x10"]._aHealingEffects[_loc3_] == _loc2_)
          {
             return true;
          }
@@ -90,14 +90,14 @@ class dofus.§\x18\x18\x0b§.§\x1b\x06\x10§ extends dofus.utils.§\x16\x04\x07
    }
    function §\x18\f\x19§(§\x17\f\x03§)
    {
-      if(dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aBoostedEffects == undefined)
+      if(dofus.managers["\x1b\x06\x10"]._aBoostedEffects == undefined)
       {
          this["\x16\x1e\x0b"]();
       }
       var _loc3_ = 0;
-      while(_loc3_ < dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aBoostedEffects.length)
+      while(_loc3_ < dofus.managers["\x1b\x06\x10"]._aBoostedEffects.length)
       {
-         if(dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aBoostedEffects[_loc3_] == _loc2_)
+         if(dofus.managers["\x1b\x06\x10"]._aBoostedEffects[_loc3_] == _loc2_)
          {
             return true;
          }
@@ -107,19 +107,19 @@ class dofus.§\x18\x18\x0b§.§\x1b\x06\x10§ extends dofus.utils.§\x16\x04\x07
    }
    function §\x16\x1e\x0b§()
    {
-      dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aBoostedEffects = new Array();
-      dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aDamagingEffects = this.api.lang["\x17\x14\x17"]();
-      dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aHealingEffects = this.api.lang["\x17\x14\x18"]();
+      dofus.managers["\x1b\x06\x10"]._aBoostedEffects = new Array();
+      dofus.managers["\x1b\x06\x10"]._aDamagingEffects = this.api.lang["\x17\x14\x17"]();
+      dofus.managers["\x1b\x06\x10"]._aHealingEffects = this.api.lang["\x17\x14\x18"]();
       var _loc2_ = 0;
-      while(_loc2_ < dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aDamagingEffects.length)
+      while(_loc2_ < dofus.managers["\x1b\x06\x10"]._aDamagingEffects.length)
       {
-         dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aBoostedEffects.push(dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aDamagingEffects[_loc2_]);
+         dofus.managers["\x1b\x06\x10"]._aBoostedEffects.push(dofus.managers["\x1b\x06\x10"]._aDamagingEffects[_loc2_]);
          _loc2_ = _loc2_ + 1;
       }
       var _loc3_ = 0;
-      while(_loc3_ < dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aHealingEffects.length)
+      while(_loc3_ < dofus.managers["\x1b\x06\x10"]._aHealingEffects.length)
       {
-         dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aBoostedEffects.push(dofus["\x18\x18\x0b"]["\x1b\x06\x10"]._aHealingEffects[_loc3_]);
+         dofus.managers["\x1b\x06\x10"]._aBoostedEffects.push(dofus.managers["\x1b\x06\x10"]._aHealingEffects[_loc3_]);
          _loc3_ = _loc3_ + 1;
       }
    }

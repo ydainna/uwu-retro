@@ -81,7 +81,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       this["\x16\x06\x16"](ank.battlefield.mc.Container,"_mcMainContainer",10,[this,this["\x1e\x03\b"],_loc4_]);
       this["\x1c\x06\x10"] = false;
       this["\x18\x16\n"] = new ank.battlefield["\x18\x16\x0b"](this.createEmptyMovieClip("\x18\x16\x0b",this.getNextHighestDepth()));
-      this.fightPointAnimManager = new dofus["\x18\x18\x0b"].FightPointAnimManager(_loc6_);
+      this.fightPointAnimManager = new dofus.managers.FightPointAnimManager(_loc6_);
    }
    function §\x1a\x1a\r§(§\x1b\n\x10§, §\x19\x11\x17§, §\x18\x03\x19§)
    {
@@ -89,7 +89,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       ank.battlefield.Constants["\x1b\x0b\x10"] = _loc3_;
       ank.battlefield.Constants["\x1b\x0b\x0e"] = _loc4_;
    }
-   function §\x1a\x1a\x0e§(§\x1b\x03\x1d§)
+   function §\x1a\x1a\x0e§(sName)
    {
       ank.battlefield.Constants["\x1b\x0b\x0f"] = _loc2_;
    }
@@ -214,7 +214,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       this["\x1c\x06\x10"] = true;
       this["\x19\x1a\x07"]();
    }
-   function §\x16\x14\x02§(§\x19\b\x0b§, §\x1b\x03\x1d§, §\x19\x10\x18§, §\x19\b\x03§, §\x19\x03\x1a§, §\x1a\x11\x02§, §\x19\x13\x10§, §\x16\t\x15§)
+   function §\x16\x14\x02§(§\x19\b\x0b§, sName, §\x19\x10\x18§, §\x19\b\x03§, §\x19\x03\x1a§, §\x1a\x11\x02§, §\x19\x13\x10§, §\x16\t\x15§)
    {
       if(_loc8_ == undefined)
       {

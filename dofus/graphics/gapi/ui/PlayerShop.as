@@ -122,7 +122,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.PlayerShop extends dofus.§\x18\x03\x10§.g
       var _loc5_ = this.gapi.loadUIComponent("PopupQuantity","PopupQuantity",{value:1,max:_loc4_,min:1,isMaxButtonValidationEnabled:false});
       _loc5_.addEventListener("validate",this);
    }
-   function §\x1b\x17\x0b§(§\x19\f\x16§)
+   function §\x1b\x17\x0b§(nQuantity)
    {
       if(_loc2_ <= 0)
       {

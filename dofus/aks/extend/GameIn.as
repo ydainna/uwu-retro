@@ -479,11 +479,11 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      {
                         if(this.api.datacenter.Player.rank.value > _loc52_.rank.value)
                         {
-                           this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x06\x01"]);
+                           this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x06\x01"]);
                         }
                         if(this.api.datacenter.Player.rank.value < _loc52_.rank.value)
                         {
-                           this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x1d"]);
+                           this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x1d"]);
                         }
                      }
                      var _loc74_ = this["\x1b\x03\x06"](_loc17_);
@@ -871,11 +871,11 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          {
             if(Number(_loc12_[0]) == 0)
             {
-               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x14"]);
+               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x14"]);
             }
             else
             {
-               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x15"]);
+               this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x15"]);
             }
          }
          var _loc15_ = this.api.kernel["\x16\x19\t"]["\x17\x1c\x0f"](_loc12_[2]);
@@ -896,7 +896,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                var _loc14_ = _loc12_[12].split(",");
                if(_loc13_.id == this.api.datacenter.Player.ID && _loc14_.length > 10)
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x16"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x16"]);
                }
                _loc13_.kama = _loc12_[13];
                break;
@@ -914,7 +914,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                _loc14_ = _loc12_[14].split(",");
                if(_loc13_.id == this.api.datacenter.Player.ID && _loc14_.length > 10)
                {
-                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus["\x18\x18\x0b"].SpeakingItemsManager["\x1b\x05\x16"]);
+                  this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x16"]);
                }
                _loc13_.kama = _loc12_[15];
                _loc13_.minxp = Number(_loc12_[16]);
@@ -1084,7 +1084,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          ank.utils.Logger.err("[AKS.Game.onEnd] Impossible de trouver le sequencer");
          ank.utils.Timer.setTimer(this,"game",this.api.kernel.GameManager,this.api.kernel.GameManager["\x1b\x0f\x0e"],500);
       }
-      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus["\x18\x18\x0b"]["\x1b\x10\x0b"]["\x1b\x10\r"]);
+      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\r"]);
    }
    function §\x19\x17\x07§(§\x1a\x1b\r§)
    {

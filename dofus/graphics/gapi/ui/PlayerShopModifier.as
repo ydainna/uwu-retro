@@ -140,7 +140,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.PlayerShopModifier extends dofus.§\x18\x03
       this["\x1e\x0f\x15"].tabIndex = undefined;
       this["\x1e\x03\x0b"] = this._btnModify;
    }
-   function §\x16\x01\x06§(§\x19\x13\x07§, §\x19\f\x16§, §\x19\f\x10§)
+   function §\x16\x01\x06§(§\x19\x13\x07§, nQuantity, §\x19\f\x10§)
    {
       this.api.network.Exchange["\x19\x01\x01"](true,_loc2_,_loc3_,_loc4_);
    }

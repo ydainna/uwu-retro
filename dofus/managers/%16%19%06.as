@@ -78,13 +78,13 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x06§ extends dofus.utils.§\x16\x04\x07
    {
       switch(_loc2_)
       {
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"]["\x19\x06\x17"]:
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"]["\x17\x0b\x11"]:
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"]["\x17\x11\f"]:
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"]["\x1b\x18\x16"]:
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"]["\x16\x02\x04"]:
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"]["\x17\t\x07"]:
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"]["\x17\t\b"]:
+         case dofus.managers["\x16\x19\x06"]["\x19\x06\x17"]:
+         case dofus.managers["\x16\x19\x06"]["\x17\x0b\x11"]:
+         case dofus.managers["\x16\x19\x06"]["\x17\x11\f"]:
+         case dofus.managers["\x16\x19\x06"]["\x1b\x18\x16"]:
+         case dofus.managers["\x16\x19\x06"]["\x16\x02\x04"]:
+         case dofus.managers["\x16\x19\x06"]["\x17\t\x07"]:
+         case dofus.managers["\x16\x19\x06"]["\x17\t\b"]:
             return true;
          default:
             return false;
@@ -136,7 +136,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x06§ extends dofus.utils.§\x16\x04\x07
       var _loc3_ = _loc2_["\x16\x19\x04"];
       switch(_loc3_)
       {
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"].GFX:
+         case dofus.managers["\x16\x19\x06"].GFX:
             if(this["\x1e\x05\x1a"].mount != undefined)
             {
                this["\x1e\x05\x1a"].mount["\x16\x1b\x03"] = _loc2_["\x1a\x03\x0e"];
@@ -156,7 +156,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x06§ extends dofus.utils.§\x16\x04\x07
                this["\x1e\x05\x1a"].mc["\x1a\x19\r"](this["\x1e\x05\x1a"].scaleX,this["\x1e\x05\x1a"].scaleY);
             }
             break;
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"].INVISIBILITY:
+         case dofus.managers["\x16\x19\x06"].INVISIBILITY:
             if(this["\x1e\x05\x1a"].id == this.api.datacenter.Player.ID)
             {
                this["\x1e\x05\x1a"].mc["\x1a\x14\x1a"](40);
@@ -175,7 +175,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x06§ extends dofus.utils.§\x16\x04\x07
    {
       switch(_loc2_["\x16\x19\x04"])
       {
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"].GFX:
+         case dofus.managers["\x16\x19\x06"].GFX:
             if(this["\x1e\x05\x1a"].mount != undefined)
             {
                this["\x1e\x05\x1a"].mount["\x16\x1b\x03"] = _loc2_["\x1a\x03\r"];
@@ -195,7 +195,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x06§ extends dofus.utils.§\x16\x04\x07
                this["\x1e\x05\x1a"].mc["\x1a\x19\r"](this["\x1e\x05\x1a"].scaleX,this["\x1e\x05\x1a"].scaleY);
             }
             break;
-         case dofus["\x18\x18\x0b"]["\x16\x19\x06"].INVISIBILITY:
+         case dofus.managers["\x16\x19\x06"].INVISIBILITY:
             if(this["\x1e\x05\x1a"].id == this.api.datacenter.Player.ID)
             {
                this["\x1e\x05\x1a"].mc["\x1a\x14\x1a"](100);

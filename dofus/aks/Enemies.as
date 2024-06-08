@@ -8,7 +8,7 @@ class dofus.aks.Enemies extends dofus.aks.Handler
    {
       this.aks.send("iL",true);
    }
-   function §\x15\x1d\n§(§\x1b\x03\x1d§)
+   function §\x15\x1d\n§(sName)
    {
       if(_loc2_ == undefined || (_loc2_.length == 0 || _loc2_ == "*"))
       {
@@ -16,7 +16,7 @@ class dofus.aks.Enemies extends dofus.aks.Handler
       }
       this.aks.send("iA" + _loc2_);
    }
-   function §\x1a\f\x02§(§\x1b\x03\x1d§)
+   function §\x1a\f\x02§(sName)
    {
       if(_loc2_ == undefined || (_loc2_.length == 0 || _loc2_ == "*"))
       {

@@ -12,7 +12,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.FightChallengeViewer extends 
    function createChildren()
    {
       this._btnView._visible = this.challenge["\x1b\x01\n"];
-      this["\x1b\x14\x01"]();
+      this.update();
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this["\x18\n\x14"]});
    }

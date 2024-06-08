@@ -4,11 +4,11 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x02§ extends dofus.§\x18\x18\x0b§.§\
    function §\x1b\x12\x02§()
    {
       super();
-      dofus["\x18\x18\x0b"]["\x1b\x12\x02"]["\x1e\f\x10"] = this;
+      dofus.managers["\x1b\x12\x02"]["\x1e\f\x10"] = this;
    }
    static function §\x17\x19\t§()
    {
-      return dofus["\x18\x18\x0b"]["\x1b\x12\x02"]["\x1e\f\x10"];
+      return dofus.managers["\x1b\x12\x02"]["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {

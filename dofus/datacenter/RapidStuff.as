@@ -1,6 +1,6 @@
 class dofus.§\x17\x04\x19§.RapidStuff extends Object
 {
-   function RapidStuff(nIcon, §\x19\b\x0b§, §\x1b\x03\x1d§)
+   function RapidStuff(nIcon, §\x19\b\x0b§, sName)
    {
       super();
       this._nIcon = nIcon;
