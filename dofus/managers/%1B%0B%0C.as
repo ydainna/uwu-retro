@@ -1,4 +1,4 @@
-class dofus.§\x18\x18\x0b§.§\x1b\x0b\f§ extends dofus.utils.§\x16\x04\x07§
+class dofus.§\x18\x18\x0b§.§\x1b\x0b\f§ extends dofus.utils.ApiElement
 {
    static var §\x17\x06\b§ = 19;
    static var §\x17\t\x15§ = [21,22,23,24,25];

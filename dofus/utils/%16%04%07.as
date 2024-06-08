@@ -1,7 +1,7 @@
-class dofus.utils.§\x16\x04\x07§ extends Object
+class dofus.utils.ApiElement extends Object
 {
    static var §\x1b\x1e\x10§ = new Array();
-   function §\x16\x04\x07§()
+   function ApiElement()
    {
       super();
    }
@@ -20,7 +20,7 @@ class dofus.utils.§\x16\x04\x07§ extends Object
    }
    function §\x16\x01\x04§(§\x19\x12\x03§)
    {
-      dofusutils.["\x16\x04\x07"]["\x1b\x1e\x10"].push(_loc2_);
+      dofus.utils.ApiElement["\x1b\x1e\x10"].push(_loc2_);
       if(_root.onEnterFrame == undefined)
       {
          _root.onEnterFrame = this["\x1a\x0f\x04"];
@@ -28,9 +28,9 @@ class dofus.utils.§\x16\x04\x07§ extends Object
    }
    function §\x1a\x0f\x04§()
    {
-      var _loc2_ = dofusutils.["\x16\x04\x07"]["\x1b\x1e\x10"].shift();
+      var _loc2_ = dofus.utils.ApiElement["\x1b\x1e\x10"].shift();
       _loc2_.method.apply(_loc2_.object,_loc2_.params);
-      if(dofusutils.["\x16\x04\x07"]["\x1b\x1e\x10"].length == 0)
+      if(dofus.utils.ApiElement["\x1b\x1e\x10"].length == 0)
       {
          delete _root.onEnterFrame;
       }

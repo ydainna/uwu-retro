@@ -224,8 +224,8 @@ class dofus.§\x18\x03\x10§.gapi.ui.EditPlayer extends dofus.§\x18\x03\x10§.g
       }
       if(this.api.lang.getConfigText("CHAR_NAME_FILTER") && !this.api.datacenter.Player.isAuthorized)
       {
-         var _loc3_ = new dofusutils.["\x19\x03\n"]["\x19\x03\x0b"](_loc2_);
-         var _loc4_ = new dofusutils.["\x19\x03\n"]["\x1a\x0f\x01"]["\x19\x03\f"]();
+         var _loc3_ = new dofus.utils.["\x19\x03\n"]["\x19\x03\x0b"](_loc2_);
+         var _loc4_ = new dofus.utils.["\x19\x03\n"]["\x1a\x0f\x01"]["\x19\x03\f"]();
          var _loc5_ = _loc3_["\x18\x10\f"](_loc4_);
          if(!_loc5_.IS_SUCCESS)
          {

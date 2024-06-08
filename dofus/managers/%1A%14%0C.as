@@ -1,4 +1,4 @@
-class dofus.§\x18\x18\x0b§.§\x1a\x14\f§ extends dofus.utils.§\x16\x04\x07§
+class dofus.§\x18\x18\x0b§.§\x1a\x14\f§ extends dofus.utils.ApiElement
 {
    function §\x1a\x14\f§()
    {
@@ -21,7 +21,7 @@ class dofus.§\x18\x18\x0b§.§\x1a\x14\f§ extends dofus.utils.§\x16\x04\x07§
       this["\x16\x1c\x0f"]();
       this["\x1d\f\x19"].unloadClip(this._mc);
       this.api.ui.loadUIComponent("Waiting","Waiting");
-      this["\x1b\x1e\x1b"] = _root._loader.copyAndOrganizeDataServersForDataBank(dofusutils.["\x17\t\x11"].STANDARD_DATA_BANK);
+      this["\x1b\x1e\x1b"] = _root._loader.copyAndOrganizeDataServersForDataBank(dofus.utils.["\x17\t\x11"].STANDARD_DATA_BANK);
       this["\x1e\x10\x04"] = -1;
       this["\x18\x16\x1c"]();
    }

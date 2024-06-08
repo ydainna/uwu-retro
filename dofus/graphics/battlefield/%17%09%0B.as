@@ -131,7 +131,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
          var _loc10_ = _loc8_[_loc9_][0];
          var _loc11_ = _loc8_[_loc9_][1];
          var _loc12_ = _loc8_[_loc9_][2];
-         if(!dofusutils.["\x17\x03\x04"]["\x17\x03\x03"]["\x17\x10\x10"](_loc12_))
+         if(!dofus.utils.["\x17\x03\x04"]["\x17\x03\x03"]["\x17\x10\x10"](_loc12_))
          {
             var _loc13_ = this.api.gfx["\x18\x18\x15"]["\x17\x14\x1d"](_loc11_);
             var _loc14_ = 0;

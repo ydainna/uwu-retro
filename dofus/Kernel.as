@@ -1,4 +1,4 @@
-class dofus.§\x18\x11\x1a§ extends dofus.utils.§\x16\x04\x07§
+class dofus.§\x18\x11\x1a§ extends dofus.utils.ApiElement
 {
    var §\x1b\x1a\x11§ = false;
    static var §\x17\x0f\b§ = undefined;
@@ -56,8 +56,8 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.§\x16\x04\x07§
       {
          this.TutorialManager = new dofus.managers.TutorialManager(oAPI);
       }
-      this.Console = new dofusutils.["\x16\x1e\x18"]["\x16\x19\r"](oAPI);
-      this.DebugConsole = new dofusutils.["\x16\x1e\x18"]["\x17\x05\x14"](oAPI);
+      this.Console = new dofus.utils.["\x16\x1e\x18"]["\x16\x19\r"](oAPI);
+      this.DebugConsole = new dofus.utils.["\x16\x1e\x18"]["\x17\x05\x14"](oAPI);
       if((this.OptionsManager = dofus.managers.OptionsManager.getInstance()) == null)
       {
          this.OptionsManager = new dofus.managers.OptionsManager(oAPI);

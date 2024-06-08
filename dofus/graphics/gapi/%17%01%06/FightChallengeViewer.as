@@ -18,7 +18,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.FightChallengeViewer extends 
    }
    function §\x18\n\x14§()
    {
-      var _loc2_ = dofusutils.["\x16\x04\x06"](this.api);
+      var _loc2_ = dofus.utils.["\x16\x04\x06"](this.api);
       var _loc3_ = _loc2_.lang["\x17\x17\x15"](this.challenge.id);
       this["\x1e\x10\t"].title = _loc2_.lang.getText("CURRENT_FIGHT_CHALLENGE");
       if(this.challenge["\x1b\r\x1c"])
@@ -74,7 +74,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.FightChallengeViewer extends 
             if(6756 - this["\x1c\x11\x1c"] >= 1000)
             {
                this.unloadMovie();
-               dofusutils.["\x16\x04\x06"](this.api).network.Game["\x1a\x1d\x0e"](this.challenge.id);
+               dofus.utils.["\x16\x04\x06"](this.api).network.Game["\x1a\x1d\x0e"](this.challenge.id);
                this["\x1c\x11\x1c"] = 3484;
                break;
             }

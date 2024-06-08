@@ -1,4 +1,4 @@
-class dofus.utils.§\x17\t\x11§ extends dofus.utils.§\x16\x04\x07§
+class dofus.utils.§\x17\t\x11§ extends dofus.utils.ApiElement
 {
    static var STANDARD_DATA_BANK = 0;
    static var TEMPORIS_DATA_BANK = 1;
@@ -493,7 +493,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.§\x16\x04\x07§
    }
    function §\x17\x1e\f§(§\x19\b\x0b§)
    {
-      return this["\x18\x02\t"]("SR",dofusutils.["\x17\t\x11"].STANDARD_DATA_BANK)[_loc2_];
+      return this["\x18\x02\t"]("SR",dofus.utils.["\x17\t\x11"].STANDARD_DATA_BANK)[_loc2_];
    }
    function §\x17\x1e\r§(§\x19\b\x0b§)
    {
@@ -765,9 +765,9 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.§\x16\x04\x07§
       var _loc2_ = this.api.datacenter.Basics.aks_current_server;
       if(_loc2_ == undefined)
       {
-         return dofusutils.["\x17\t\x11"].STANDARD_DATA_BANK;
+         return dofus.utils.["\x17\t\x11"].STANDARD_DATA_BANK;
       }
-      return !_loc2_.isTemporis() ? dofusutils.["\x17\t\x11"].STANDARD_DATA_BANK : dofusutils.["\x17\t\x11"].TEMPORIS_DATA_BANK;
+      return !_loc2_.isTemporis() ? dofus.utils.["\x17\t\x11"].STANDARD_DATA_BANK : dofus.utils.["\x17\t\x11"].TEMPORIS_DATA_BANK;
    }
    function §\x18\x02\b§(sKey)
    {

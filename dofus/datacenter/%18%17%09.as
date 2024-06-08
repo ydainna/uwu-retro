@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.§\x16\x04\x07§
+class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
 {
    var §\x18\f\x15§ = false;
    var §\x18\x0f\x17§ = false;

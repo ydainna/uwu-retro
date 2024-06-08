@@ -3,11 +3,11 @@ class dofus.utils.§\x16\x04\x06§ extends Object
    function §\x16\x04\x06§()
    {
       super();
-      dofusutils.["\x16\x04\x06"]._oLastInstance = this;
+      dofus.utils.["\x16\x04\x06"]._oLastInstance = this;
    }
    static function §\x17\x19\t§()
    {
-      return dofusutils.["\x16\x04\x06"]._oLastInstance;
+      return dofus.utils.["\x16\x04\x06"]._oLastInstance;
    }
    function §\x1e\x16\x0f§()
    {
@@ -56,7 +56,7 @@ class dofus.utils.§\x16\x04\x06§ extends Object
    function initialize()
    {
       this["\x1e\x02\x17"] = _global.CONFIG;
-      this["\x1e\x04\x04"] = new dofusutils.["\x17\t\x11"]();
+      this["\x1e\x04\x04"] = new dofus.utils.["\x17\t\x11"]();
       var _loc2_ = dofus["\x17\t\r"]["\x17\x15\f"]();
       this["\x1e\x06\x04"] = _loc2_.GAPI;
       this["\x1e\x06\x04"].api = this;

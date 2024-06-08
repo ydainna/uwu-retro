@@ -1,4 +1,4 @@
-class dofus.aks.Handler extends dofus.utils.§\x16\x04\x07§
+class dofus.aks.Handler extends dofus.utils.ApiElement
 {
    static var CONSOLE_ARGS_SAFE_SPLIT = "";
    static var CONSOLE_DEPTH_ONE_ARGS_SAFE_SPLIT = "";

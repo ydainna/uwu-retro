@@ -59,11 +59,11 @@ class dofus.utils.§\x19\x03\n§.§\x19\x03\x0b§
       {
          return false;
       }
-      if(!this["\x16\x1a\x04"](_loc2_["\x17\x1c\x01"](),dofusutils.["\x19\x03\n"]["\x19\x03\x0b"]["\x1b\x18\f"]))
+      if(!this["\x16\x1a\x04"](_loc2_["\x17\x1c\x01"](),dofus.utils.["\x19\x03\n"]["\x19\x03\x0b"]["\x1b\x18\f"]))
       {
          return false;
       }
-      if(!this["\x16\x1a\x04"](_loc2_["\x17\x1b\x1d"](),dofusutils.["\x19\x03\n"]["\x19\x03\x0b"]["\x16\x1e\x1a"]))
+      if(!this["\x16\x1a\x04"](_loc2_["\x17\x1b\x1d"](),dofus.utils.["\x19\x03\n"]["\x19\x03\x0b"]["\x16\x1e\x1a"]))
       {
          return false;
       }
@@ -75,7 +75,7 @@ class dofus.utils.§\x19\x03\n§.§\x19\x03\x0b§
    }
    function §\x18\x10\f§(§\x1a\x0f\x01§)
    {
-      var _loc3_ = new dofusutils.["\x19\x03\n"]["\x16\x1a\x19"]();
+      var _loc3_ = new dofus.utils.["\x19\x03\n"]["\x16\x1a\x19"]();
       _loc3_.IS_SUCCESS = true;
       if(!this["\x16\x1a\x0e"](_loc2_["\x17\x1c\x02"](),_loc2_["\x17\x1b\x13"]()))
       {
@@ -144,12 +144,12 @@ class dofus.utils.§\x19\x03\n§.§\x19\x03\x0b§
          _loc3_.FAILED_ON_ENDING_WITH_PROHIBED_WORDS_CHECK = true;
          _loc3_.IS_SUCCESS = false;
       }
-      if(!this["\x16\x1a\x04"](_loc2_["\x17\x1c\x01"](),dofusutils.["\x19\x03\n"]["\x19\x03\x0b"]["\x1b\x18\f"]))
+      if(!this["\x16\x1a\x04"](_loc2_["\x17\x1c\x01"](),dofus.utils.["\x19\x03\n"]["\x19\x03\x0b"]["\x1b\x18\f"]))
       {
          _loc3_.FAILED_ON_VOWELS_COUNT_CHECK = true;
          _loc3_.IS_SUCCESS = false;
       }
-      if(!this["\x16\x1a\x04"](_loc2_["\x17\x1b\x1d"](),dofusutils.["\x19\x03\n"]["\x19\x03\x0b"]["\x16\x1e\x1a"]))
+      if(!this["\x16\x1a\x04"](_loc2_["\x17\x1b\x1d"](),dofus.utils.["\x19\x03\n"]["\x19\x03\x0b"]["\x16\x1e\x1a"]))
       {
          _loc3_.FAILED_ON_CONSONANTS_COUNT_CHECK = true;
          _loc3_.IS_SUCCESS = false;

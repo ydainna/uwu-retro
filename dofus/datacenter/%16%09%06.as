@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.§\x16\x04\x07§
+class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.ApiElement
 {
    var §\x16\x02\x0b§ = Number.POSITIVE_INFINITY;
    var currentSessionFightCount = -1;

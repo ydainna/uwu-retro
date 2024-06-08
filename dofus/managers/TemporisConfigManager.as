@@ -1,4 +1,4 @@
-class dofus.§\x18\x18\x0b§.TemporisConfigManager extends dofus.utils.§\x16\x04\x07§
+class dofus.§\x18\x18\x0b§.TemporisConfigManager extends dofus.utils.ApiElement
 {
    function TemporisConfigManager()
    {

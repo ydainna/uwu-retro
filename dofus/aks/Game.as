@@ -381,7 +381,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          !this.bSubareaHasWhiteFloor ? this.api.gfx["\x15\x1e\x11"](_loc5_,dofus.Constants.HIGHLIGHT_FILE,undefined,true) : this.api.gfx["\x15\x1e\x11"](_loc5_,dofus.Constants.HIGHLIGHT_FILE,0,true);
       }
       this.api.kernel.GameManager["\x16\x1b\x18"](true);
-      ank.utils.Timer.setTimer(this.api.network["\x1a\x04\x1c"],"GameDecoDetect",this.api.network,this.api.network["\x1a\t\x0b"],_loc6_ * 1000);
+      ank.utils.Timer.setTimer(this.api.network.Ping,"GameDecoDetect",this.api.network,this.api.network["\x1a\t\x0b"],_loc6_ * 1000);
       this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x10"]);
    }
    function §\x19\x1e\x05§(§\x1a\x1b\r§)

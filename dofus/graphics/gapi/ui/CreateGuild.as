@@ -173,8 +173,8 @@ class dofus.§\x18\x03\x10§.gapi.ui.CreateGuild extends dofus.§\x18\x03\x10§.
             }
             if(this.api.lang.getConfigText("GUILD_NAME_FILTER"))
             {
-               var _loc4_ = new dofusutils.["\x19\x03\n"]["\x19\x03\x0b"](_loc3_);
-               var _loc5_ = new dofusutils.["\x19\x03\n"]["\x1a\x0f\x01"]["\x19\x03\r"]();
+               var _loc4_ = new dofus.utils.["\x19\x03\n"]["\x19\x03\x0b"](_loc3_);
+               var _loc5_ = new dofus.utils.["\x19\x03\n"]["\x1a\x0f\x01"]["\x19\x03\r"]();
                var _loc6_ = _loc4_["\x18\x10\f"](_loc5_);
                if(!_loc6_.IS_SUCCESS)
                {

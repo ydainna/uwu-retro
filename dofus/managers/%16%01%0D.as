@@ -12,7 +12,7 @@ if(!dofus.managers["\x16\x01\r"])
    {
       super();
       dofus.managers["\x16\x01\r"]["\x1e\f\x10"] = this;
-   } extends dofusutils.["\x16\x04\x07"];
+   } extends dofus.utils.ApiElement;
    var _loc1_ = dofus.managers["\x16\x01\r"] = function()
    {
       super();

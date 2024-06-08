@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x16\x1e\x15§ extends dofus.utils.§\x16\x04\x07§
+class dofus.§\x17\x04\x19§.§\x16\x1e\x15§ extends dofus.utils.ApiElement
 {
    function §\x16\x1e\x15§(§\x18\b\f§, alignment, fighting, prism, attackable)
    {

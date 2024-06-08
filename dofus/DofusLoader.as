@@ -32,7 +32,7 @@ _loc1_.getText = function(§\x18\x11\x1b§, §\x16\x03\x1d§)
    var _loc4_ = this["\x18\x12\x16"][_loc2_][_global.CONFIG.language];
    if(_loc4_ == undefined || _loc4_.length == 0)
    {
-      _loc4_ = _global[dofus.Constants["\x18\x03\x05"] + "_" + dofusutils.["\x17\t\x11"].STANDARD_DATA_BANK].data[_loc2_];
+      _loc4_ = _global[dofus.Constants["\x18\x03\x05"] + "_" + dofus.utils.["\x17\t\x11"].STANDARD_DATA_BANK].data[_loc2_];
    }
    if(_loc4_ == undefined || _loc4_.length == 0)
    {
@@ -685,7 +685,7 @@ _loc1_["\x19\x15\x19"] = function(bSuccess, §\x1b\x19\x19§)
                            _loc19_.flush();
                            break;
                         case "dataserver":
-                           var _loc20_ = dofusutils.["\x17\t\x11"].STANDARD_DATA_BANK;
+                           var _loc20_ = dofus.utils.["\x17\t\x11"].STANDARD_DATA_BANK;
                            var _loc21_ = _loc11_[_loc20_];
                            if(_loc21_ == undefined)
                            {
@@ -718,7 +718,7 @@ _loc1_["\x19\x15\x19"] = function(bSuccess, §\x1b\x19\x19§)
                      }
                      _loc12_ = _loc12_.nextSibling;
                   }
-                  if(_loc11_[dofusutils.["\x17\t\x11"].STANDARD_DATA_BANK].length > 0)
+                  if(_loc11_[dofus.utils.["\x17\t\x11"].STANDARD_DATA_BANK].length > 0)
                   {
                      _loc5_.push({label:_loc9_.name,data:_loc9_});
                   }
@@ -1020,7 +1020,7 @@ _loc1_["\x1b\x15\f"] = function(§\x19\x07\x13§, nDataBank)
 {
    this["\x1c\x0b\x17"] = true;
    this["\x1b\x01\x12"](true);
-   var _loc4_ = new dofusutils.["\x18\x12\x10"]();
+   var _loc4_ = new dofus.utils.["\x18\x12\x10"]();
    _loc4_.addListener(this);
    var _loc5_ = dofus.Constants["\x18\x12\x15"] + "_" + nDataBank;
    var _loc6_ = this.copyAndOrganizeDataServersForDataBank(nDataBank);
@@ -1104,7 +1104,7 @@ _loc1_["\x18\x16\b"] = function()
 };
 _loc1_["\x16\x1a\x0f"] = function(sFiles)
 {
-   var _loc2_ = this._aCurrentDataBanks[dofusutils.["\x17\t\x11"].STANDARD_DATA_BANK];
+   var _loc2_ = this._aCurrentDataBanks[dofus.utils.["\x17\t\x11"].STANDARD_DATA_BANK];
    if(_loc2_.length < 1)
    {
       this["\x19\x0b\x06"]("CHECK_LAST_VERSION_FAILED",this["\x1b\r\x12"] + this["\x1b\r\x12"],true);
@@ -1158,7 +1158,7 @@ _loc1_["\x18\x17\x02"] = function()
    this.log(this["\x1b\r\x12"] + this.getText("CHECK_LAST_VERSION"));
    this["\x1e\f\x1a"] = "XTRA";
    this["\x19\x01\b"](-60);
-   var _loc2_ = dofusutils.["\x16\x04\x06"].getInstance();
+   var _loc2_ = dofus.utils.["\x16\x04\x06"].getInstance();
    if(_loc2_ != undefined)
    {
       _loc2_.lang["\x16\x1c\f"]();
@@ -1272,7 +1272,7 @@ _loc1_["\x1b\x15\x12"] = function(nDataBank)
       _loc5_[3] = _loc5_[0] + "_" + _loc5_[1] + "_" + _loc5_[2];
       this.log(this["\x1b\r\x12"] + this.getDataBankLogHeader(nDataBank) + this.getText("UPDATE_FILE",[_loc6_]));
       this["\x1b\x01\x12"](true);
-      var _loc10_ = new dofusutils.["\x18\x12\x10"]();
+      var _loc10_ = new dofus.utils.["\x18\x12\x10"]();
       _loc10_.addListener(this);
       if(dofus.Constants.USE_JS_LOG && _global.CONFIG.isNewAccount)
       {
@@ -1342,7 +1342,7 @@ _loc1_["\x16\x19\x18"] = function()
       this["\x17\x14\x19"]().flush(100);
       return false;
    }
-   var _loc4_ = _global[dofus.Constants["\x18\x03\x05"] + "_" + dofusutils.["\x17\t\x11"].STANDARD_DATA_BANK];
+   var _loc4_ = _global[dofus.Constants["\x18\x03\x05"] + "_" + dofus.utils.["\x17\t\x11"].STANDARD_DATA_BANK];
    if(_loc4_ && (_loc4_.data.C.CLEAR_DATE && _loc4_.data.C.ENABLED_AUTO_CLEARCACHE))
    {
       if(this["\x17\x14\x19"]().data.clearDate < _loc4_.data.C.CLEAR_DATE)

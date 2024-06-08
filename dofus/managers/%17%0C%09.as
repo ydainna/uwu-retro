@@ -1,4 +1,4 @@
-class dofus.§\x18\x18\x0b§.§\x17\f\t§ extends dofus.utils.§\x16\x04\x07§
+class dofus.§\x18\x18\x0b§.§\x17\f\t§ extends dofus.utils.ApiElement
 {
    function §\x17\f\t§(§\x1a\x02\b§, oAPI)
    {

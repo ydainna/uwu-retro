@@ -1,4 +1,4 @@
-class dofus..sounds.§\x16\x07\t§ extends dofus.utils.§\x16\x04\x07§
+class dofus..sounds.§\x16\x07\t§ extends dofus.utils.ApiElement
 {
    static var §\x19\x02\x11§ = 1000;
    static var §\x18\x1a\x17§ = 1010;

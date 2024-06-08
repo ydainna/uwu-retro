@@ -498,7 +498,7 @@ if(!dofus.aks.Basics)
       }
       else
       {
-         dofusutils.["\x16\x04\x06"].getInstance()["\x16\x1a\b"](_loc5_,_loc4_);
+         dofus.utils.["\x16\x04\x06"].getInstance()["\x16\x1a\b"](_loc5_,_loc4_);
       }
    };
    _loc1_[undefined] = function §undefined§(§\x1a\x1b\r§)

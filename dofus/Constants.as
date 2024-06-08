@@ -241,7 +241,7 @@ class dofus.§\x16\x1e\x1b§ extends Object
    }
    static function §\x0e\x04§()
    {
-      return dofusutils.["\x16\x04\x06"].getInstance().lang.getConfigText("ZONE_COLOR");
+      return dofus.utils.["\x16\x04\x06"].getInstance().lang.getConfigText("ZONE_COLOR");
    }
    static function §\x18\x0e\f§(§\x19\x0f\x07§)
    {

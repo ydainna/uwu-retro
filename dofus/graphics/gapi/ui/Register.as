@@ -14,7 +14,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Register extends dofus.§\x18\x03\x10§.gap
    function §\x18\t\x04§()
    {
       super.init(false,dofus.graphics.gapi.ui.Register.CLASS_NAME);
-      this["\x1e\x04\x0b"] = new LoadVars();
+      this._oLoader = new LoadVars();
       var ref = this;
       this["\x1d\x07\r"] = new LoadVars();
       this["\x1d\x07\r"].onLoad = function(bSuccess)
@@ -411,32 +411,32 @@ class dofus.§\x18\x03\x10§.gapi.ui.Register extends dofus.§\x18\x03\x10§.gap
    }
    function §\x1b\x17\x0e§()
    {
-      this["\x1e\x04\x0b"].registerFrom = "game_dofus";
-      this["\x1e\x04\x0b"].lang = this.api.config.language;
-      this["\x1e\x04\x0b"].validRegister1 = true;
-      this["\x1e\x04\x0b"].loginAG = this.sLogin.text;
-      this["\x1e\x04\x0b"].passAG = this["\x1e\x0e\x14"].text;
-      this["\x1e\x04\x0b"].passAG2 = this["\x1e\x0e\x15"].text;
-      this["\x1e\x04\x0b"].email = this["\x1e\x0e\t"].text;
-      this["\x1e\x04\x0b"].lastname = this["\x1e\x0e\f"].text;
-      this["\x1e\x04\x0b"].firstname = this["\x1e\x0e\n"].text;
-      this["\x1e\x04\x0b"].datenaiss_d = this["\x1c\f\x0f"].selectedItem.data;
-      this["\x1e\x04\x0b"].datenaiss_m = this["\x1c\f\x16"].selectedItem.data;
-      this["\x1e\x04\x0b"].datenaiss_y = this["\x1c\f\x1c"].selectedItem.data;
-      this["\x1e\x04\x0b"].sexe = !this["\x1c\t\x19"].selected ? "M" : "F";
-      this["\x1e\x04\x0b"].knowgameid = this["\x1c\f\x15"].selectedItem.data;
+      this._oLoader.registerFrom = "game_dofus";
+      this._oLoader.lang = this.api.config.language;
+      this._oLoader.validRegister1 = true;
+      this._oLoader.loginAG = this.sLogin.text;
+      this._oLoader.passAG = this["\x1e\x0e\x14"].text;
+      this._oLoader.passAG2 = this["\x1e\x0e\x15"].text;
+      this._oLoader.email = this["\x1e\x0e\t"].text;
+      this._oLoader.lastname = this["\x1e\x0e\f"].text;
+      this._oLoader.firstname = this["\x1e\x0e\n"].text;
+      this._oLoader.datenaiss_d = this["\x1c\f\x0f"].selectedItem.data;
+      this._oLoader.datenaiss_m = this["\x1c\f\x16"].selectedItem.data;
+      this._oLoader.datenaiss_y = this["\x1c\f\x1c"].selectedItem.data;
+      this._oLoader.sexe = !this["\x1c\t\x19"].selected ? "M" : "F";
+      this._oLoader.knowgameid = this["\x1c\f\x15"].selectedItem.data;
       if(this["\x1c\n\n"].selected)
       {
-         this["\x1e\x04\x0b"].valid_newsletter = true;
+         this._oLoader.valid_newsletter = true;
       }
-      this["\x1e\x04\x0b"].question = this["\x1e\x0e\x18"].text;
-      this["\x1e\x04\x0b"].answer = this["\x1e\x0e\x06"].text;
-      this["\x1e\x04\x0b"].verifCode = this["\x1e\x0e\b"].text;
-      this["\x1e\x04\x0b"].pays = this["\x1c\f\f"].selectedItem.data;
-      this["\x1e\x04\x0b"].community_id = this["\x1c\f\x0b"].selectedItem.data;
+      this._oLoader.question = this["\x1e\x0e\x18"].text;
+      this._oLoader.answer = this["\x1e\x0e\x06"].text;
+      this._oLoader.verifCode = this["\x1e\x0e\b"].text;
+      this._oLoader.pays = this["\x1c\f\f"].selectedItem.data;
+      this._oLoader.community_id = this["\x1c\f\x0b"].selectedItem.data;
       if(this["\x1c\t\t"].selected)
       {
-         this["\x1e\x04\x0b"].valid_cgu = true;
+         this._oLoader.valid_cgu = true;
       }
       this["\x1e\x05\x06"] = new LoadVars();
       this["\x1e\x05\x06"].owner = this;
@@ -444,7 +444,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Register extends dofus.§\x18\x03\x10§.gap
       {
          this.owner["\x19\x1c\t"](_loc2_);
       };
-      this["\x1e\x04\x0b"].sendAndLoad(this.api.lang.getConfigText("REGISTER_LINK"),this["\x1e\x05\x06"],"POST");
+      this._oLoader.sendAndLoad(this.api.lang.getConfigText("REGISTER_LINK"),this["\x1e\x05\x06"],"POST");
       this["\x1c\x1b\x15"].text = this.api.lang.getText("LOADING");
       this["\x1c\x03\x05"] = true;
       this.api.ui.loadUIComponent("CenterText","CenterText",{text:this.api.lang.getText("WAITING_MSG_RECORDING"),timer:0,background:true},{bForceLoad:true});

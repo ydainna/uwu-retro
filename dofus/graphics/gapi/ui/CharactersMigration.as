@@ -147,8 +147,8 @@ class dofus.§\x18\x03\x10§.gapi.ui.CharactersMigration extends dofus.§\x18\x0
       }
       if(this.api.lang.getConfigText("CHAR_NAME_FILTER") && !this.api.datacenter.Player.isAuthorized)
       {
-         var _loc4_ = new dofusutils.["\x19\x03\n"]["\x19\x03\x0b"](_loc2_);
-         var _loc5_ = new dofusutils.["\x19\x03\n"]["\x1a\x0f\x01"]["\x19\x03\f"]();
+         var _loc4_ = new dofus.utils.["\x19\x03\n"]["\x19\x03\x0b"](_loc2_);
+         var _loc5_ = new dofus.utils.["\x19\x03\n"]["\x1a\x0f\x01"]["\x19\x03\f"]();
          var _loc6_ = _loc4_["\x18\x10\f"](_loc5_);
          if(!_loc6_.IS_SUCCESS)
          {

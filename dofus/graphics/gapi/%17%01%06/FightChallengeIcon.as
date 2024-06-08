@@ -58,7 +58,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.FightChallengeIcon extends do
       var _loc4_ = "<b>" + _loc3_.n + "</b>\n";
       if(1752 - this["\x1c\x11\x1c"] >= 2400 && (this.challenge["\x1b\x01\n"] && this.challenge.state == 0))
       {
-         dofusutils.["\x16\x04\x06"](this.api).network.Game["\x1a\x1d\x0e"](this.challenge.id);
+         dofus.utils.["\x16\x04\x06"](this.api).network.Game["\x1a\x1d\x0e"](this.challenge.id);
          this["\x1c\x11\x1c"] = 2382;
       }
       _loc4_ += this.challenge.description + "\n";
