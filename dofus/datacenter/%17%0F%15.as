@@ -18,7 +18,7 @@ class dofus.§\x17\x04\x19§.§\x17\x0f\x15§ extends Object
       this["\x1b\x0f\x04"] = teamXpBonus;
       this["\x16\t\x03"] = basicDropBonus;
       this["\x1b\x0f\x01"] = teamDropBonus;
-      var _loc11_ = dofus.utils.["\x16\x04\x06"](_global.api);
+      var _loc11_ = dofus.utils.getInstance(_global.api);
       var _loc12_ = _loc11_.datacenter.Sprites.getItemAt(targetId).name + " (" + _loc11_.lang.getText("LEVEL_SMALL") + " " + _loc11_.datacenter.Sprites.getItemAt(targetId).mc.data.Level + ")";
       this.description = _loc11_.lang["\x17\x17\x15"](_loc3_).d.split("%1").join(_loc12_);
       this["\x18\b\t"] = dofus.Constants["\x17\x10\x03"] + _loc11_.lang["\x17\x17\x15"](_loc3_).g + ".swf";

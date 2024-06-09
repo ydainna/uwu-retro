@@ -532,7 +532,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       }
       this.api.ui.getUIComponent("Banner")["\x1a\x15\x0e"](_loc4_);
    }
-   static function §\x1a\x0f\n§(§\x1a\x0f\x06§)
+   static function §\x1a\x0f\n§(s)
    {
       var _loc3_ = true;
       var _loc4_ = new Array();

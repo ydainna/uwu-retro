@@ -11,7 +11,7 @@ class ank.battlefield.§\x18\x18\x16§
    var §\x1d\x19\x13§ = 1;
    var §\x1c\b\t§ = false;
    var §\x1c\b\x14§ = false;
-   function §\x18\x18\x16§(§\x16\b\b§, c, §\x17\x04\x0e§)
+   function §\x18\x18\x16§(§\x16\b\b§, c, d)
    {
       if(_loc2_ != undefined)
       {
@@ -36,7 +36,7 @@ class ank.battlefield.§\x18\x18\x16§
    {
       return this["\x1e\x03\b"]["\x18\x18\x0e"].validCells;
    }
-   function initialize(§\x16\b\b§, c, §\x17\x04\x0e§)
+   function initialize(§\x16\b\b§, c, d)
    {
       this["\x1d\b\x12"] = _loc2_;
       this["\x1e\x03\b"] = _loc4_;

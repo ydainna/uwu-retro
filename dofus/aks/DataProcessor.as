@@ -33,7 +33,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks["\x19\x18\f"](_loc5_.substr(2));
                   break;
                case "G":
-                  this.aks["\x19\x18\r"](_loc5_.substr(2));
+                  this.aks.onHelloGameServer(_loc5_.substr(2));
                   break;
                case "S":
                   this.aks.onCharacterSwitchTicket(_loc5_.substr(2));
@@ -43,16 +43,16 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             }
             break;
          case "p":
-            this.aks["\x19\x1b\x06"]();
+            this.aks.onPong();
             break;
          case "q":
-            this.aks["\x19\x1b\x17"]();
+            this.aks.onQuickPong();
             break;
          case "r":
             this.aks.send("rpong" + _loc5_.substr(5),false);
             break;
          case "M":
-            this.aks["\x19\x1c\x11"](_loc5_.substr(1));
+            this.aks.onServerMessage(_loc5_.substr(1));
             break;
          case "m":
             switch(_loc3_)
@@ -75,7 +75,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             }
             break;
          case "k":
-            this.aks["\x19\x1c\x16"]();
+            this.aksonServerWillDisconnect();
             break;
          case "x":
             if((_loc0_ = _loc3_) === "C")
@@ -442,7 +442,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Chat["\x19\x1a\b"](!_loc4_,_loc5_.substr(3));
                   break;
                case "s":
-                  this.aks.Chat["\x19\x1c\x11"](_loc5_.substr(2));
+                  this.aks.Chat.onServerMessage(_loc5_.substr(2));
                   break;
                case "S":
                   this.aks.Chat["\x19\x1c\x1b"](_loc5_.substr(2));

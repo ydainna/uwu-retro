@@ -28,7 +28,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.FightChallenge extends dofus.§\x18\x03\x10
       this.FightChallengeViewer.unloadMovie();
       this._visible = false;
    }
-   function §\x1b\x14\n§(§\x18\b\f§, §\x1b\f\x07§)
+   function §\x1b\x14\n§(§\x18\b\f§, success)
    {
       var _loc4_ = 0;
       while(_loc4_ < this["\x1b\x1b\x1a"].length)

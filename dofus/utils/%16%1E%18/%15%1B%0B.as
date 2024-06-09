@@ -18,7 +18,7 @@ class dofus.utils.consoleParsers.§\x15\x1b\x0b§
       this["\x1b\x1c\b"] = new Array();
       this["\x1d\x14\x06"] = 0;
    }
-   function process(§\x1a\x10\x19§, oParams)
+   function process(sCmd, oParams)
    {
       this["\x1a\b\x05"]({value:_loc2_,params:_loc3_});
    }
@@ -53,7 +53,7 @@ class dofus.utils.consoleParsers.§\x15\x1b\x0b§
       var _loc2_ = this["\x1b\x1c\b"][this["\x1d\x14\x06"]];
       return _loc2_;
    }
-   function §\x16\x07\x12§(§\x16\x03\x03§, §\x1a\x10\x19§)
+   function §\x16\x07\x12§(§\x16\x03\x03§, sCmd)
    {
       return ank.utils.["\x16\x1e\x19"]["\x16\x07\x12"](_loc2_,_loc3_);
    }

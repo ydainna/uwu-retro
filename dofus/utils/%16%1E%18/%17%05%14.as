@@ -21,7 +21,7 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
          _loc5_ = _loc5_ + 1;
       }
    }
-   function processOneAdminCommand(§\x1a\x10\x19§)
+   function processOneAdminCommand(sCmd)
    {
       if(_loc2_.charAt(0) == "/")
       {
@@ -436,7 +436,7 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
                         this.api.network.send(_loc3_.join(" "));
                         break;
                      case "<":
-                        this.api.network["\x1a\x07\x10"](_loc3_.join(" "));
+                        this.api.network.processCommand(_loc3_.join(" "));
                   }
                }
                break;
@@ -451,7 +451,7 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
                         this.api.network.send(_loc3_.join(" "),false,undefined,false,true);
                         break;
                      case "<":
-                        this.api.network["\x1a\x07\x10"](_loc3_.join(" "));
+                        this.api.network.processCommand(_loc3_.join(" "));
                   }
                }
                break;
@@ -934,7 +934,7 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
          this.showMessage(undefined,this.api.lang.getText("UNKNOW_COMMAND",[_loc2_]),"DEBUG_ERROR");
       }
    }
-   function analyseCmd(§\x1a\x10\x19§)
+   function analyseCmd(sCmd)
    {
       var _loc3_ = _loc2_.split(" ");
       var _loc4_ = _loc3_.length <= 0 ? "" : String(_loc3_[0]).toLowerCase();

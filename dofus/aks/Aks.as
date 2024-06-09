@@ -82,7 +82,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
          aks.onData(oAPI);
       };
       this._oLoader = new LoadVars();
-      this._oLoader.onLoad = function(§\x1b\f\x07§)
+      this._oLoader.onLoad = function(success)
       {
          aks.onLoad(oAPI);
       };
@@ -209,96 +209,104 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
    }
 
-   function §\x1a\x07\x10§(§\x1a\x10\x19§)
+   function processCommand(sCmd)
    {
-      this._oDataProcessor.process(_loc2_);
+      this._oDataProcessor.process(sCmd);
    }
-   function §\x1b\t\x14§(nKeyID)
+
+   function startUsingKey(nKeyID)
    {
-      this["\x1d\x14\x16"] = _loc2_;
+      this._nCurrentKey = nKeyID;
    }
-   function §\x1a\r\x1d§()
+
+   function resetKeys()
    {
-      this["\x1d\x14\x16"] = 0;
-      this["\x1b\x1d\r"] = new Array();
+      this._nCurrentKey = 0;
+      this._aKeys = new Array();
    }
-   function §\x1b\x13\x17§(§\x1a\x0f\x06§)
+
+   function unprepareData(s)
    {
-      if(this["\x1d\x14\x16"] == 0 || (this["\x1d\x14\x16"] == undefined || _global.isNaN(this["\x1d\x14\x16"])))
+      if(this._nCurrentKey == 0 || (this._nCurrentKey == undefined || _global.isNaN(this._nCurrentKey)))
       {
-         return _loc2_;
+         return s;
       }
-      var _loc3_ = this["\x1b\x1d\r"][_global.parseInt(_loc2_.substr(0,1),16)];
+      var _loc3_ = this._aKeys[_global.parseInt(s.substr(0,1),16)];
       if(_loc3_ == undefined)
       {
          new org.flashdevelop.utils.FlashConnect.trace("[?!!] Le serveur a demandé une clé que je n\'ai pas...","dofus.aks.Aks::unprepareData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",348);
-         return _loc2_;
+         return s;
       }
-      var _loc4_ = _loc2_.substr(1,1).toUpperCase();
-      var _loc5_ = dofus.aks.Aks["\x17\x06\x02"](_loc2_.substr(2),_loc3_,_global.parseInt(_loc4_,16) * 2);
-      if(dofus.aks.Aks["\x16\x1a\x1a"](_loc5_) != _loc4_)
+      var _loc4_ = s.substr(1,1).toUpperCase();
+      var _loc5_ = dofus.aks.Aks.decypherData(s.substr(2),_loc3_,_global.parseInt(_loc4_,16) * 2);
+      if(dofus.aks.Aks.checksum(_loc5_) != _loc4_)
       {
-         new org.flashdevelop.utils.FlashConnect.trace("[?!!] Checksum invalide! (Reçu : " + _loc2_.substr(1,1) + ", Calculé : " + dofus.aks.Aks["\x16\x1a\x1a"](_loc5_) + ")","dofus.aks.Aks::unprepareData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",361);
+         new org.flashdevelop.utils.FlashConnect.trace("[?!!] Checksum invalide! (Reçu : " + s.substr(1,1) + ", Calculé : " + dofus.aks.Aks.checksum(_loc5_) + ")","dofus.aks.Aks::unprepareData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",361);
          new org.flashdevelop.utils.FlashConnect.trace("[?!!] Données interpretées : " + _loc5_,"dofus.aks.Aks::unprepareData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",362);
-         return _loc2_;
+         return s;
       }
       return _loc5_;
    }
-   function prepareData(§\x1a\x0f\x06§)
+
+   function prepareData(s)
    {
-      if(this["\x1d\x14\x16"] == 0 || (this["\x1d\x14\x16"] == undefined || _global.isNaN(this["\x1d\x14\x16"])))
+      if(this._nCurrentKey == 0 || (this._nCurrentKey == undefined || _global.isNaN(this._nCurrentKey)))
       {
-         return _loc2_;
+         return s;
       }
-      if(this["\x1b\x1d\r"][this["\x1d\x14\x16"]] == undefined)
+      if(this._aKeys[this._nCurrentKey] == undefined)
       {
-         new org.flashdevelop.utils.FlashConnect.trace("[?!!] La clé " + this["\x1d\x14\x16"] + " définie en clé actuelle n\'existe pas dans le buffer...","dofus.aks.Aks::prepareData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",378);
-         return _loc2_;
+         new org.flashdevelop.utils.FlashConnect.trace("[?!!] La clé " + this._nCurrentKey + " définie en clé actuelle n\'existe pas dans le buffer...","dofus.aks.Aks::prepareData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",378);
+         return s;
       }
-      var _loc3_ = dofus.aks.Aks.HEX_CHARS[this["\x1d\x14\x16"]];
-      var _loc4_ = dofus.aks.Aks["\x16\x1a\x1a"](_loc2_);
+      var _loc3_ = dofus.aks.Aks.HEX_CHARS[this._nCurrentKey];
+      var _loc4_ = dofus.aks.Aks.checksum(s);
       _loc3_ += _loc4_;
-      return _loc3_ + dofus.aks.Aks["\x17\x04\r"](_loc2_,this["\x1b\x1d\r"][this["\x1d\x14\x16"]],_global.parseInt(_loc4_,16) * 2);
+      return _loc3_ + dofus.aks.Aks.cypherData(s,this._aKeys[this._nCurrentKey],_global.parseInt(_loc4_,16) * 2);
    }
-   static function §\x1a\x06\x18§(§\x17\x04\x0e§)
+
+   static function prepareKey(d)
    {
       var _loc3_ = new String();
       var _loc4_ = 0;
-      while(_loc4_ < _loc2_.length)
+      while(_loc4_ < d.length)
       {
-         _loc3_ += String.fromCharCode(_global.parseInt(_loc2_.substr(_loc4_,2),16));
+         _loc3_ += String.fromCharCode(_global.parseInt(d.substr(_loc4_,2),16));
          _loc4_ += 2;
       }
       _loc3_ = _global.unescape(_loc3_);
       return _loc3_;
    }
-   static function §\x16\x1a\x1a§(§\x1a\x0f\x06§)
+
+   static function checksum(s)
    {
       var _loc3_ = 0;
       var _loc4_ = 0;
-      while(_loc4_ < _loc2_.length)
+      while(_loc4_ < s.length)
       {
-         _loc3_ += _loc2_.charCodeAt(_loc4_) % 16;
+         _loc3_ += s.charCodeAt(_loc4_) % 16;
          _loc4_ = _loc4_ + 1;
       }
       return dofus.aks.Aks.HEX_CHARS[_loc3_ % 16];
    }
-   static function d2h(§\x17\x04\x0e§)
+
+   static function d2h(d)
    {
-      if(_loc2_ > 255)
+      if(d > 255)
       {
-         _loc2_ = 255;
+         d = 255;
       }
-      return dofus.aks.Aks.HEX_CHARS[Math.floor(_loc2_ / 16)] + dofus.aks.Aks.HEX_CHARS[_loc2_ % 16];
+      return dofus.aks.Aks.HEX_CHARS[Math.floor(d / 16)] + dofus.aks.Aks.HEX_CHARS[d % 16];
    }
-   static function §\x1a\x06\x16§(§\x1a\x0f\x06§)
+
+   static function preEscape(s)
    {
       var _loc3_ = new String();
       var _loc4_ = 0;
-      while(_loc4_ < _loc2_.length)
+      while(_loc4_ < s.length)
       {
-         var _loc5_ = _loc2_.charAt(_loc4_);
-         var _loc6_ = _loc2_.charCodeAt(_loc4_);
+         var _loc5_ = s.charAt(_loc4_);
+         var _loc6_ = s.charCodeAt(_loc4_);
          if(_loc6_ < 32 || (_loc6_ > 127 || (_loc5_ == "%" || _loc5_ == "+")))
          {
             _loc3_ += _global.escape(_loc5_);
@@ -311,20 +319,22 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
       return _loc3_;
    }
-   static function §\x17\x04\r§(§\x17\x04\x0e§, §\x18\x11\x15§, c)
+   
+   static function cypherData(d, k, c)
    {
       var _loc5_ = new String();
-      var _loc6_ = _loc3_.length;
-      _loc2_ = dofus.aks.Aks["\x1a\x06\x16"](_loc2_);
+      var _loc6_ = k.length;
+      d = dofus.aks.Aks.preEscape(d);
       var _loc7_ = 0;
-      while(_loc7_ < _loc2_.length)
+      while(_loc7_ < d.length)
       {
-         _loc5_ += dofus.aks.Aks.d2h(_loc2_.charCodeAt(_loc7_) ^ _loc3_.charCodeAt((_loc7_ + c) % _loc6_));
+         _loc5_ += dofus.aks.Aks.d2h(d.charCodeAt(_loc7_) ^ k.charCodeAt((_loc7_ + c) % _loc6_));
          _loc7_ = _loc7_ + 1;
       }
       return _loc5_;
    }
-   static function §\x17\x06\x02§(§\x17\x04\x0e§, §\x18\x11\x15§, c)
+
+   static function decypherData(d, k, c)
    {
       var _loc5_ = new String();
       var _loc6_ = _loc3_.length;
@@ -334,30 +344,34 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       while(_loc9_ < _loc2_.length)
       {
          _loc7_;
-         _loc5_ += String.fromCharCode(_global.parseInt(_loc2_.substr(_loc9_,2),16) ^ _loc3_.charCodeAt((_loc7_++ + c) % _loc6_));
+         _loc5_ += String.fromCharCode(_global.parseInt(d.substr(_loc9_,2),16) ^ k.charCodeAt((_loc7_++ + c) % _loc6_));
          _loc9_ += 2;
       }
       _loc5_ = _global.unescape(_loc5_);
       return _loc5_;
    }
-   function §\x15\x1d\x16§(nKeyID, sKey)
+
+   function addKeyToCollection(nKeyID, sKey)
    {
-      if(this["\x1b\x1d\r"] == undefined)
+      if(this._aKeys == undefined)
       {
-         this["\x1b\x1d\r"] = new Array();
+         this._aKeys = new Array();
       }
-      this["\x1b\x1d\r"][_loc2_] = dofus.aks.Aks["\x1a\x06\x18"](_loc3_);
+      this._aKeys[nKeyID] = dofus.aks.Aks.prepareKey(sKey);
    }
+
    function ping()
    {
       this.api.datacenter.Basics.lastPingTimer = 9785;
       this.send("ping");
    }
-   function §\x1a\t\x0b§()
+
+   function quickPing()
    {
       this.send("qping");
    }
-   function §\x17\x14\x10§()
+
+   function getAveragePing()
    {
       var _loc2_ = 0;
       var _loc3_ = 0;
@@ -368,14 +382,17 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
       return Math.round(_loc2_ / this._aLastPings.length);
    }
-   function §\x17\x14\x12§()
+
+   function getAveragePingPacketsCount()
    {
       return this._aLastPings.length;
    }
-   function §\x17\x14\x11§()
+
+   function getAveragePingBufferSize()
    {
       return dofus.aks.Aks.EVALUATE_AVERAGE_PING_ON_COMMANDS;
    }
+
    function getRandomNetworkKey()
    {
       if(this.api.electron.enabled)
@@ -389,30 +406,34 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
          var _loc4_ = 0;
          while(_loc4_ < _loc3_)
          {
-            _loc2_ += this["\x17\x1d\x16"]();
+            _loc2_ += this.getRandomChar();
             _loc4_ = _loc4_ + 1;
          }
       }
-      var _loc5_ = dofus.aks.Aks["\x16\x1a\x1a"](_loc2_) + _loc2_;
-      return _loc5_ + dofus.aks.Aks["\x16\x1a\x1a"](_loc5_);
+      var _loc5_ = dofus.aks.Aks.checksum(_loc2_) + _loc2_;
+      return _loc5_ + dofus.aks.Aks.checksum(_loc5_);
    }
-   function §\x18\x10\r§(sKey, §\x19\b\x0e§)
+
+   //TODO : check parameter (_loc3_)
+   function isValidNetworkKey(sKey, §\x19\b\x0e§)
    {
       if(_loc3_ == undefined || _loc3_ != dofus.aks.Aks.CURRENT_IDENTITY_VERSION)
       {
          return false;
       }
-      if(_loc2_ == undefined || (_loc2_.length == 0 || (_loc2_ == "" || (dofus.aks.Aks["\x16\x1a\x1a"](_loc2_.substr(0,_loc2_.length - 1)) != _loc2_.substr(_loc2_.length - 1) || dofus.aks.Aks["\x16\x1a\x1a"](_loc2_.substr(1,_loc2_.length - 2)) != _loc2_.substr(0,1)))))
+      if(sKey == undefined || (sKey.length == 0 || (sKey == "" || (dofus.aks.Aks.checksum(sKey.substr(0,sKey.length - 1)) != sKey.substr(sKey.length - 1) || dofus.aks.Aks.checksum(sKey.substr(1,sKey.length - 2)) != sKey.substr(0,1)))))
       {
          return false;
       }
       return true;
    }
+
    function defaultProcessAction(sType, sAction, bError, sData)
    {
       this.api.network.send(String(_loc5_.substr(0,2) + dofus.aks.Aks.EVALUATE_AVERAGE_PING_ON_COMMANDS),false);
    }
-   function §\x17\x1d\x16§()
+
+   function getRandomChar()
    {
       var _loc2_ = Math.ceil(Math.random() * 100);
       if(_loc2_ <= 40)
@@ -425,16 +446,18 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
       return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
    }
+
    function onLag()
    {
       this._bLag = true;
       this.api.ui.loadUIComponent("WaitingMessage","WaitingMessage",{text:this.api.lang.getText("WAIT_FOR_SERVER")},{bAlwaysOnTop:true,bForceLoad:true});
       if(this._bAutoReco)
       {
-         ank.utils.Timer.setTimer(this.Deco,"deco",this,this["\x19\x16\x10"],Number(this.api.lang.getConfigText("DELAY_RECO_START")));
+         ank.utils.Timer.setTimer(this.Deco,"deco",this,this.onDeco,Number(this.api.lang.getConfigText("DELAY_RECO_START")));
       }
    }
-   function §\x19\x16\x10§()
+
+   function onDeco()
    {
       if(this._bConnected)
       {
@@ -444,6 +467,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
       this.onClose(true,false,false);
    }
+
    function onConnect(bSuccess)
    {
       this._bConnecting = false;
@@ -485,24 +509,25 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
          this._bConnected = true;
       }
    }
+
    function onData(sData)
    {
       ank.utils.Timer.removeTimer(this.Lag,"lag");
       if(this._bLag)
       {
-         dofus.utils.["\x16\x04\x06"].getInstance().ui.unloadUIComponent("WaitingMessage");
+         dofus.utils.getInstance.getInstance().ui.unloadUIComponent("WaitingMessage");
          ank.utils.Timer.removeTimer(this.Deco,"deco");
          this._bLag = false;
       }
       if(dofus.Constants.DEBUG_DATAS && dofus.Constants.DEBUG_ENCRYPTION)
       {
-         new org.flashdevelop.utils.FlashConnect.trace("RCV (C) " + _loc2_,com.ankamagames.tools.Logger.LEVEL_NETWORK,"dofus.aks.Aks::onData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",678);
+         new org.flashdevelop.utils.FlashConnect.trace("RCV (C) " + sData,com.ankamagames.tools.Logger.LEVEL_NETWORK,"dofus.aks.Aks::onData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",678);
       }
-      _loc2_ = this["\x1b\x13\x17"](_loc2_);
-      this.api.electron.onPacketReceived(_loc2_);
+      sData = this.unprepareData(sData);
+      this.api.electron.onPacketReceived(sData);
       if(dofus.Constants.DEBUG_DATAS)
       {
-         this.api.electron.debugRequest(false,_loc2_);
+         this.api.electron.debugRequest(false,sData);
       }
       if(this._isWaitingForData)
       {
@@ -519,16 +544,18 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
             this._aLastPings.shift();
          }
       }
-      this._oDataProcessor.process(_loc2_);
+      this._oDataProcessor.process(sData);
    }
-   function onLoad(§\x1b\f\x07§)
+
+   function onLoad(success)
    {
-      if(!_loc2_)
+      if(!success)
       {
          this.sendNextDisconnectionState();
       }
    }
-   function §\x1a\x13\x1b§()
+
+   function sendNextDisconnectionState()
    {
       if(this._aDisconnectionUrl.length <= 0)
       {
@@ -537,7 +564,6 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       var _loc2_ = this._aDisconnectionUrl.shift() + this._sDisconnectionParams;
       this._oLoader.load(_loc2_);
    }
-
 
    function onClose(bReconnect, bShowMessage, bManual)
    {
@@ -640,7 +666,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
 
    function onHelloConnectionServer(sKey)
    {
-      this.api.datacenter.Basics.connexionKey = _loc2_;
+      this.api.datacenter.Basics.connexionKey = sKey;
       var _loc3_ = this.api.datacenter.Basics.characterSwitchTicket != undefined;
       if(_loc3_)
       {
@@ -656,9 +682,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       this.api.network.Account.getQueuePosition();
    }
 
-
-
-   function §\x19\x18\r§(sExtraData)
+   function onHelloGameServer(sExtraData)
    {
       this.api.ui.loadUIComponent("WaitingMessage","WaitingMessage",{text:this.api.lang.getText("CONNECTING")},{bAlwaysOnTop:true,bForceLoad:true});
       if(this.api.datacenter.Basics.aks_rescue_count == -1)
@@ -671,6 +695,8 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
       this.api.datacenter.Basics.aks_rescue_count = -1;
    }
+   
+   //TODO : check this function (ff desobfuscate monkey)
    function onTelemetry(sExtraData, bYolo)
    {
       if(!this.api.electron.enabled || bYolo)
@@ -681,40 +707,45 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
       else
       {
-         this.api.electron.getTelemetry(_loc2_);
+         this.api.electron.getTelemetry(sExtraData);
       }
    }
+
    function onCharacterSwitchTicket(sExtraData)
    {
-      this.api.datacenter.Basics.characterSwitchTicket = _loc2_;
+      this.api.datacenter.Basics.characterSwitchTicket = sExtraData;
       this.disconnect(true,false,true);
    }
+
    function askCharacterSwitchTicket()
    {
       this.send("HS");
    }
-   function §\x19\x1b\x06§()
+
+   function onPong()
    {
       var _loc2_ = 5181 - this.api.datacenter.Basics.lastPingTimer;
       this.api.kernel.showMessage(undefined,"Ping : " + _loc2_ + "ms",this.api.ui.getUIComponent("Debug") != undefined ? "DEBUG_LOG" : "INFO_CHAT");
    }
-   function §\x19\x1b\x17§()
+
+   function onQuickPong()
    {
    }
-   function §\x19\x1c\x11§(sExtraData)
+
+   function onServerMessage(sExtraData)
    {
-      var _loc3_ = _loc2_.charAt(0);
+      var _loc3_ = sExtraData.charAt(0);
       switch(_loc3_)
       {
          case "0":
-            var _loc4_ = _loc2_.substr(1).split("|");
+            var _loc4_ = sExtraData.substr(1).split("|");
             var _loc5_ = Number(_loc4_[0]);
             var _loc6_ = _loc4_[1].split(";");
             this.api.datacenter.Basics.serverMessageID = _loc5_;
             this.api.datacenter.Basics.serverMessageParams = _loc6_;
             break;
          case "1":
-            var _loc7_ = _loc2_.substr(1).split("|");
+            var _loc7_ = sExtraData.substr(1).split("|");
             var _loc8_ = _loc7_[0];
             var _loc9_ = _loc7_[1].split(";");
             var _loc10_ = String(_loc7_[2]).length <= 0 ? undefined : _loc7_[2];
@@ -722,7 +753,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
             {
                case 23:
                   var _loc11_ = Number(_loc9_[0]);
-                  _loc9_[0] = this.api.lang["\x18\x01\x07"](_loc11_).n;
+                  _loc9_[0] = this.api.lang.getSpellText(_loc11_).n;
                   break;
                default:
                   break;
@@ -734,34 +765,37 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
             this.api.kernel.showMessage(this.api.lang.getText("INFORMATIONS"),this.api.lang.getText("SRV_MSG_" + _loc8_,_loc9_),"ERROR_BOX",{name:_loc10_});
       }
    }
-   function §\x19\x14\x0e§()
+
+   function onBadVersion()
    {
       this.api.kernel.quit(false);
    }
-   function §\x19\x1c\x16§()
+
+   function onServerWillDisconnect()
    {
       this.api.datacenter.Basics.aks_server_will_disconnect = true;
    }
+
    function yes(oEvent)
    {
       var _loc0_ = null;
-      if((_loc0_ = _loc2_.target._name) !== "AskYesNoOnClose")
+      if((_loc0_ = oEvent.target._name) !== "AskYesNoOnClose")
       {
-         this.api.network.Game["\x17\x12\x12"]();
+         this.api.network.Game.freeMySoul();
       }
       else
       {
          var _loc3_ = dofus.graphics.gapi.ui.Login(this.api.ui.getUIComponent("Login"));
          if(_loc3_ != undefined)
          {
-            var _loc4_ = _loc2_.params.login;
+            var _loc4_ = oEvent.params.login;
             if(_loc4_ == dofus.aks.Account.ACTION_LOGIN_WITH_ZAAP_TOKEN)
             {
                _loc3_.zaapAutoLogin(false);
             }
             else
             {
-               var _loc5_ = _loc2_.params.pass;
+               var _loc5_ = oEvent.params.pass;
                _loc3_.autoLogin(_loc4_,_loc5_);
             }
          }

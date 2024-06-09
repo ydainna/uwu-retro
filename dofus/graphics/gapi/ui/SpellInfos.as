@@ -11,7 +11,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellInfos extends dofus.§\x18\x03\x10§.g
       {
          return undefined;
       }
-      this.addToQueue({object:this,method:function(§\x1a\x0f\x06§)
+      this.addToQueue({object:this,method:function(s)
       {
          this["\x1e\x05\x14"] = _loc2_;
          if(this["\x18\t\x1c"])

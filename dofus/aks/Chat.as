@@ -397,7 +397,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
       }
       return _loc5_ + "<a href=\"asfunction:onHref,ShowPlayerPopupMenu," + sPlayerID + "," + _loc3_ + "\">" + _loc3_ + "</a>" + _loc6_;
    }
-   function §\x19\x1c\x11§(sExtraData)
+   function onServerMessage(sExtraData)
    {
       if(_loc2_ != undefined)
       {

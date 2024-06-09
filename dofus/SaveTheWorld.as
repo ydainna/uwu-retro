@@ -21,7 +21,7 @@ class dofus.§\x1a\x0f\x1a§ extends dofus.utils.ApiElement
       this["\x1e\f\r"] = this.api.datacenter.Basics.aks_current_server.id;
       this._xSocket = new XMLSocket();
       var ref = this;
-      this._xSocket.onConnect = function(§\x1b\f\x07§)
+      this._xSocket.onConnect = function(success)
       {
          ref.onConnect(_loc2_);
       };
@@ -115,7 +115,7 @@ class dofus.§\x1a\x0f\x1a§ extends dofus.utils.ApiElement
          this["\x19\x07\x05"]();
       }
    }
-   function onConnect(§\x1b\f\x07§)
+   function onConnect(success)
    {
       new org.flashdevelop.utils.FlashConnect.trace("Socket connexion result : " + (!_loc2_ ? "Failed! :((((((" : "OK! :)))))"),"dofus.SaveTheWorld::onConnect","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/SaveTheWorld.as",177);
       if(_loc2_)

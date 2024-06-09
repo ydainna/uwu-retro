@@ -6,7 +6,7 @@ class ank.battlefield.mc.§\x1b\x07\x04§ extends MovieClip
    static var WALK_SPEEDS = [0.07,0.06,0.06,0.06,0.07,0.06,0.06,0.06];
    static var §\x18\x1e\x0f§ = [0.23,0.2,0.2,0.2,0.23,0.2,0.2,0.2];
    static var §\x1a\x0f\x05§ = [0.17,0.15,0.15,0.15,0.17,0.15,0.15,0.15];
-   function §\x1b\x07\x04§(§\x16\b\b§, §\x1a\x11\x1b§, §\x17\x04\x0e§)
+   function §\x1b\x07\x04§(§\x16\b\b§, §\x1a\x11\x1b§, d)
    {
       super();
       eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
@@ -44,7 +44,7 @@ class ank.battlefield.mc.§\x1b\x07\x04§ extends MovieClip
    {
       return this["\x1c\x04\x1a"];
    }
-   function initialize(§\x16\b\b§, §\x1a\x11\x1b§, §\x17\x04\x0e§)
+   function initialize(§\x16\b\b§, §\x1a\x11\x1b§, d)
    {
       _global.GAC.addSprite(this,_loc4_);
       this["\x1d\b\x12"] = _loc2_;

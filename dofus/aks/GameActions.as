@@ -404,7 +404,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          case 151:
             var _loc80_ = Number(_loc7_);
             var _loc81_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
-            var _loc82_ = _loc80_ != -1 ? this.api.lang.getText("INVISIBLE_OBSTACLE",[_loc81_.name,this.api.lang["\x18\x01\x07"](_loc80_).n]) : this.api.lang.getText("CANT_DO_INVISIBLE_OBSTACLE");
+            var _loc82_ = _loc80_ != -1 ? this.api.lang.getText("INVISIBLE_OBSTACLE",[_loc81_.name,this.api.lang.getSpellText(_loc80_).n]) : this.api.lang.getText("CANT_DO_INVISIBLE_OBSTACLE");
             _loc11_.addAction(72,false,this.api.kernel,this.api.kernel.showMessage,[undefined,_loc82_,"ERROR_CHAT"]);
             break;
          case 166:
@@ -640,7 +640,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             this.api.ui.loadUIComponent("Cinematic","Cinematic",{file:dofus.Constants["\x16\x1b\f"] + _loc146_ + ".swf",background:_loc147_,§\x16\b\x1a§:_loc148_,npc:_loc149_,frameToStart:_loc150_,canCancel:_loc151_,monster:_loc152_});
             break;
          case 999:
-            _loc11_.addAction(116,false,this.aks,this.aks["\x1a\x07\x10"],[_loc7_]);
+            _loc11_.addAction(116,false,this.aks,this.aks.processCommand,[_loc7_]);
       }
       if(!_global.isNaN(_loc4_) && _loc6_ == this.api.datacenter.Player.ID)
       {

@@ -3,7 +3,7 @@ class ank.utils.§\x16\x1e\x19§
    function §\x16\x1e\x19§()
    {
    }
-   static function §\x16\x07\x12§(§\x16\x03\x03§, §\x1a\x10\x19§)
+   static function §\x16\x07\x12§(§\x16\x03\x03§, sCmd)
    {
       var _loc4_ = ank.utils.["\x16\x1e\x19"]["\x1a\x0b\x19"](_loc3_);
       var _loc5_ = _loc4_.lastWord;
@@ -35,7 +35,7 @@ class ank.utils.§\x16\x1e\x19§
       }
       return {result:_loc3_ + _loc5_,list:_loc6_,isFull:false};
    }
-   static function §\x1a\x0b\x19§(§\x1a\x10\x19§)
+   static function §\x1a\x0b\x19§(sCmd)
    {
       var _loc3_ = _loc2_.split(" ");
       if(_loc3_.length == 0)

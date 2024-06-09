@@ -133,7 +133,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ColorSelector extends dofus.�
       }
       this["\x1a\x15\x12"](_loc2_);
    }
-   static function d2h(§\x17\x04\x0e§)
+   static function d2h(d)
    {
       if(_loc2_ > 255)
       {
@@ -203,7 +203,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ColorSelector extends dofus.�
       }
       return this["\x18\x07\x14"](_loc4_,_loc3_.s,_loc3_.l);
    }
-   function §\x18\x07\x14§(§\x18\x04\x1a§, §\x1a\x0f\x06§, §\x18\x12\t§)
+   function §\x18\x07\x14§(§\x18\x04\x1a§, s, §\x18\x12\t§)
    {
       if(_loc3_ == 0)
       {

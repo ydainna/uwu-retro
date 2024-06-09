@@ -3,12 +3,12 @@ class dofus.§\x18\x18\x0b§.GameActionsManager extends dofus.utils.ApiElement
    static var §\x1b\n\n§ = 2;
    static var §\x1b\t\x1d§ = 1;
    static var §\x1b\n\b§ = 0;
-   function GameActionsManager(§\x17\x04\x0e§, oAPI)
+   function GameActionsManager(d, oAPI)
    {
       super();
       this.initialize(_loc3_,oAPI);
    }
-   function initialize(§\x17\x04\x0e§, oAPI)
+   function initialize(d, oAPI)
    {
       super.initialize(oAPI);
       this["\x1c\x0e\n"] = _loc3_;

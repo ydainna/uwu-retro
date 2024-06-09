@@ -1,6 +1,6 @@
 class ank.battlefield.mc.Container extends MovieClip
 {
-   function Container(§\x16\b\b§, §\x17\x04\x0e§, §\x19\x13\x01§)
+   function Container(§\x16\b\b§, d, §\x19\x13\x01§)
    {
       super();
       if(_loc3_ != undefined)
@@ -8,7 +8,7 @@ class ank.battlefield.mc.Container extends MovieClip
          this.initialize(_loc3_,_loc4_,_loc5_);
       }
    }
-   function initialize(§\x16\b\b§, §\x17\x04\x0e§, §\x19\x13\x01§)
+   function initialize(§\x16\b\b§, d, §\x19\x13\x01§)
    {
       if(_loc3_ == undefined)
       {

@@ -11,7 +11,7 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
       this["\x1c\x01\x14"] = new Array();
       this["\x1e\x01\x0b"] = 0;
    }
-   function process(§\x1a\x10\x19§, oParams)
+   function process(sCmd, oParams)
    {
       if(!this.api.datacenter.Basics.inGame)
       {
@@ -245,7 +245,7 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
                this.api.kernel.showMessage(undefined,"God : <u>" + _loc31_.pseudo + "</u> (<b>" + _loc31_.godtype + "</b>)","COMMANDS_CHAT");
                break;
             case "APING":
-               this.api.kernel.showMessage(undefined,"Average ping : " + this.api.network["\x17\x14\x10"]() + "ms (on " + this.api.network["\x17\x14\x12"]() + " packets)","COMMANDS_CHAT");
+               this.api.kernel.showMessage(undefined,"Average ping : " + this.api.network.getAveragePing() + "ms (on " + this.api.network.getAveragePingPacketsCount() + " packets)","COMMANDS_CHAT");
                break;
             case "MAPID":
                this.api.kernel.showMessage(undefined,"MAP ID : " + this.api.datacenter.["\x18\x18\x0e"].id,"COMMANDS_CHAT");
@@ -394,7 +394,7 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
             case "RELEASE":
                if(this.api.datacenter.Player.data["\x18\x10\x05"])
                {
-                  this.api.network.Game["\x17\x12\x12"]();
+                  this.api.network.Game.freeMySoul();
                }
                else if(this.api.datacenter.Player.data["\x18\x0f\x19"])
                {
@@ -515,7 +515,7 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
          this.api.network.Chat.send(_loc3_,"*",_loc4_);
       }
    }
-   function §\x1a\b\x07§(§\x1a\x10\x19§)
+   function §\x1a\b\x07§(sCmd)
    {
       var _loc3_ = this["\x1c\x01\x14"].slice(-1);
       if(_loc3_[0] != _loc2_)
@@ -558,7 +558,7 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
       super["\x18\n\x02"]();
       this["\x1e\x01\x0b"] = this["\x1c\x01\x14"].length;
    }
-   function §\x1a\x04\x01§(§\x1a\x0f\x06§)
+   function §\x1a\x04\x01§(s)
    {
       ank.utils.["\x17\x0e\x10"]["\x15\x1d\f"]();
       var _loc3_ = this.api.lang.getText("INLINE_VARIABLE_POSITION").split(",");

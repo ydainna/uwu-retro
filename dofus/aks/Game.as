@@ -86,7 +86,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    {
       this.aks.send("GP" + (!_loc2_ ? "-" : "+"),false);
    }
-   function §\x17\x12\x12§()
+   function freeMySoul()
    {
       this.aks.send("GF",false);
    }
@@ -381,7 +381,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          !this.bSubareaHasWhiteFloor ? this.api.gfx["\x15\x1e\x11"](_loc5_,dofus.Constants.HIGHLIGHT_FILE,undefined,true) : this.api.gfx["\x15\x1e\x11"](_loc5_,dofus.Constants.HIGHLIGHT_FILE,0,true);
       }
       this.api.kernel.GameManager["\x16\x1b\x18"](true);
-      ank.utils.Timer.setTimer(this.api.network.Ping,"GameDecoDetect",this.api.network,this.api.network["\x1a\t\x0b"],_loc6_ * 1000);
+      ank.utils.Timer.setTimer(this.api.network.Ping,"GameDecoDetect",this.api.network,this.api.network.quickPing,_loc6_ * 1000);
       this.api.kernel.TipsManager.showNewTip(dofus.managers.TipsManager["\x1b\x10\x10"]);
    }
    function §\x19\x1e\x05§(sExtraData)
@@ -684,7 +684,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       var _loc4_ = new dofus.datacenter.["\x17\x0f\x15"](_global.parseInt(_loc3_[0]),_loc3_[1] == "1",_global.parseInt(_loc3_[2]),_global.parseInt(_loc3_[3]),_global.parseInt(_loc3_[4]),_global.parseInt(_loc3_[5]),_global.parseInt(_loc3_[6]));
       dofus.graphics.gapi.ui.FightChallenge(dofus.graphics.gapi.ui.FightChallenge(this.api.ui.getUIComponent("FightChallenge")))["\x15\x1d\x04"](_loc4_);
    }
-   function §\x19\x17\f§(sExtraData, §\x1b\f\x07§)
+   function §\x19\x17\f§(sExtraData, success)
    {
       var _loc4_ = _global.parseInt(_loc2_);
       dofus.graphics.gapi.ui.FightChallenge(dofus.graphics.gapi.ui.FightChallenge(this.api.ui.getUIComponent("FightChallenge")))["\x1b\x14\n"](_loc4_,_loc3_);

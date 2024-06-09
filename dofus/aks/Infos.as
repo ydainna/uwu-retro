@@ -113,7 +113,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                         break;
                      case 3:
                      case 212:
-                        _loc11_ = [this.api.lang["\x18\x01\x07"](Number(_loc11_[0])).n];
+                        _loc11_ = [this.api.lang.getSpellText(Number(_loc11_[0])).n];
                         break;
                      case 54:
                      case 55:
@@ -213,7 +213,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                         break;
                      case 7:
                      case 264:
-                        _loc11_ = [this.api.lang["\x18\x01\x07"](_loc11_[0]).n];
+                        _loc11_ = [this.api.lang.getSpellText(_loc11_[0]).n];
                         break;
                      case 89:
                         if(this.api.config.isStreaming)
@@ -236,7 +236,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                         _loc11_ = [_loc27_.description];
                         break;
                      case 267:
-                        _loc11_ = [this.api.lang["\x18\x01\x07"](Number(_loc11_[0])).n];
+                        _loc11_ = [this.api.lang.getSpellText(Number(_loc11_[0])).n];
                         break;
                      case 282:
                         _loc11_ = [(Number(_loc11_[0]) < 10 ? "0" : "") + _loc11_[0],(Number(_loc11_[1]) < 10 ? "0" : "") + _loc11_[1],_loc11_[2]];

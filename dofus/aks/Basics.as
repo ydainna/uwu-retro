@@ -66,7 +66,7 @@ if(!dofus.aks.Basics)
    };
    _loc1_["\x16\b\x03"] = function §\x16\b\x03§()
    {
-      this.aks.send("Bp" + this.api.network["\x17\x14\x10"]() + "|" + this.api.network["\x17\x14\x12"]() + "|" + this.api.network["\x17\x14\x11"](),false);
+      this.aks.send("Bp" + this.api.network.getAveragePing() + "|" + this.api.network.getAveragePingPacketsCount() + "|" + this.api.network.getAveragePingBufferSize(),false);
    };
    _loc1_["\x16\x06\n"] = function §\x16\x06\n§(§\x19\x0f\x02§, §\x1b\t\x04§, §\x16\b\x14§)
    {
@@ -498,7 +498,7 @@ if(!dofus.aks.Basics)
       }
       else
       {
-         dofus.utils.["\x16\x04\x06"].getInstance()["\x16\x1a\b"](_loc5_,_loc4_);
+         dofus.utils.getInstance.getInstance()["\x16\x1a\b"](_loc5_,_loc4_);
       }
    };
    _loc1_[undefined] = function §undefined§(sExtraData)

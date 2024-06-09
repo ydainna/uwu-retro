@@ -38,7 +38,7 @@ class §\x1a\x01\x1a§.flashdevelop.utils.FlashConnect
       {
          eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.onReturnData(_loc2_);
       };
-      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.socket.onConnect = function(§\x1b\f\x07§)
+      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.socket.onConnect = function(success)
       {
          if(_loc2_)
          {

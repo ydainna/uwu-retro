@@ -108,7 +108,7 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
          case 293:
          case 294:
          case 787:
-            _loc4_[0] = this.api.lang["\x18\x01\x07"](this._nParam1).n;
+            _loc4_[0] = this.api.lang.getSpellText(this._nParam1).n;
             break;
          case 601:
             var _loc5_ = this.api.lang["\x17\x1b\x11"](this._nParam2);
@@ -121,7 +121,7 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
             break;
          case 604:
             var _loc6_ = this.api.datacenter.Player.getSpellIDFromLevelID(this._nParam3);
-            _loc4_[2] = this.api.lang["\x18\x01\x07"](_loc6_).n;
+            _loc4_[2] = this.api.lang.getSpellText(_loc6_).n;
             break;
          case 614:
             _loc4_[0] = this._nParam3;
@@ -132,7 +132,7 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
             break;
          case 616:
          case 624:
-            _loc4_[2] = this.api.lang["\x18\x01\x07"](this._nParam3).n;
+            _loc4_[2] = this.api.lang.getSpellText(this._nParam3).n;
             break;
          case 699:
             _loc4_[0] = this.api.lang["\x17\x1a\x02"](this._nParam1).n;
@@ -226,7 +226,7 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
          case dofus.managers.SpellsBoostsManager["\x15\x1c\x11"]:
          case dofus.managers.SpellsBoostsManager["\x15\x1c\x10"]:
          case dofus.managers.SpellsBoostsManager.ACTION_BOOST_SPELL_DMG_PERCENT:
-            _loc4_[0] = this.api.lang["\x18\x01\x07"](Number(_loc4_[0])).n;
+            _loc4_[0] = this.api.lang.getSpellText(Number(_loc4_[0])).n;
             break;
          case 939:
          case 940:
@@ -312,11 +312,11 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
    }
    function §\t\x1b§()
    {
-      return this.api.lang["\x18\x01\x07"](this["\x1d\x1d\x07"]).n;
+      return this.api.lang.getSpellText(this["\x1d\x1d\x07"]).n;
    }
    function §\t\x18§()
    {
-      return this.api.lang["\x18\x01\x07"](this["\x1d\x1d\x07"]).d;
+      return this.api.lang.getSpellText(this["\x1d\x1d\x07"]).d;
    }
    function §\t\x05§()
    {

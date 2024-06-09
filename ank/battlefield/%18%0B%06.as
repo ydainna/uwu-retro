@@ -1,10 +1,10 @@
 class ank.battlefield.§\x18\x0b\x06§
 {
-   function §\x18\x0b\x06§(c, §\x17\x04\x0e§)
+   function §\x18\x0b\x06§(c, d)
    {
       this.initialize(c,_loc3_);
    }
-   function initialize(c, §\x17\x04\x0e§)
+   function initialize(c, d)
    {
       this["\x1d\n\x06"] = c;
       this["\x1e\x03\b"] = _loc3_;

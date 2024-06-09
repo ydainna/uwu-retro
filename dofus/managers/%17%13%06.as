@@ -1247,7 +1247,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          }
          if(this.api.datacenter.Player.data["\x18\x10\x05"])
          {
-            _loc12_["\x15\x1d\x12"](this.api.lang.getText("FREE_MY_SOUL"),this.api.network.Game,this.api.network.Game["\x17\x12\x12"]);
+            _loc12_["\x15\x1d\x12"](this.api.lang.getText("FREE_MY_SOUL"),this.api.network.Game,this.api.network.Game.freeMySoul);
          }
          else if(!_loc9_)
          {

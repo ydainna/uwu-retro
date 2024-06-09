@@ -52,7 +52,7 @@ class dofus.§\x17\x04\x19§.§\x16\x1c\x1d§ extends Object
    }
    function §\x04\x1b§()
    {
-      return this["\x1e\x03\x18"].name != undefined ? this["\x1e\x03\x18"].name : this.api.lang["\x18\x01\x07"](0).n;
+      return this["\x1e\x03\x18"].name != undefined ? this["\x1e\x03\x18"].name : this.api.lang.getSpellText(0).n;
    }
    function §\x1e\x12\x04§()
    {

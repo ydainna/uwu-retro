@@ -3,15 +3,15 @@ class §\x19\x02\x19§.transitions.easing.Strong
    function Strong()
    {
    }
-   static function easeIn(§\x1b\r\x11§, §\x16\b\b§, c, §\x17\x04\x0e§)
+   static function easeIn(§\x1b\r\x11§, §\x16\b\b§, c, d)
    {
       return c * (_loc2_ /= _loc5_) * _loc2_ * _loc2_ * _loc2_ * _loc2_ + _loc3_;
    }
-   static function easeOut(§\x1b\r\x11§, §\x16\b\b§, c, §\x17\x04\x0e§)
+   static function easeOut(§\x1b\r\x11§, §\x16\b\b§, c, d)
    {
       return c * ((_loc2_ = _loc2_ / _loc5_ - 1) * _loc2_ * _loc2_ * _loc2_ * _loc2_ + 1) + _loc3_;
    }
-   static function easeInOut(§\x1b\r\x11§, §\x16\b\b§, c, §\x17\x04\x0e§)
+   static function easeInOut(§\x1b\r\x11§, §\x16\b\b§, c, d)
    {
       if((_loc2_ /= _loc5_ / 2) < 1)
       {

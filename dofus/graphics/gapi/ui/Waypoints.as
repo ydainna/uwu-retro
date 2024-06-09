@@ -7,7 +7,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Waypoints extends dofus.§\x18\x03\x10§.ga
    }
    function §\x11\x19§(§\x17\n\x1b§)
    {
-      this.addToQueue({object:this,method:function(§\x17\x04\x0e§)
+      this.addToQueue({object:this,method:function(d)
       {
          this["\x1c\x0f\x05"] = _loc2_;
          if(this["\x18\t\x1c"])

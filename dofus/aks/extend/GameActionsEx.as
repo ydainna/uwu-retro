@@ -311,7 +311,7 @@ class dofus.aks.extend.GameActionsEx
             _loc72_.level = _loc67_;
             _loc72_.bInFrontOfSprite = _loc71_;
             _loc72_.params = new dofus.datacenter.["\x1b\x06\x06"](_loc64_,_loc67_)["\x17\f\x13"];
-            _loc5_.addAction(88,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_LAUNCH_SPELL",[_loc63_.name,this.api.lang["\x18\x01\x07"](_loc64_).n]),"INFO_FIGHT_CHAT"]);
+            _loc5_.addAction(88,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_LAUNCH_SPELL",[_loc63_.name,this.api.lang.getSpellText(_loc64_).n]),"INFO_FIGHT_CHAT"]);
             if(_loc69_ != undefined || _loc70_)
             {
                if(!this.api.datacenter.Player.isSkippingFightAnimations)
@@ -357,7 +357,7 @@ class dofus.aks.extend.GameActionsEx
             var _loc79_ = Number(_loc6_);
             var _loc80_ = this.api.datacenter.Sprites.getItemAt(sSenderID);
             _loc5_.addAction(92,false,this.api.sounds["\x17\x0e\x06"],this.api.sounds["\x17\x0e\x06"]["\x19\x17\x1d"],[]);
-            _loc5_.addAction(93,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_LAUNCH_SPELL",[_loc80_.name,this.api.lang["\x18\x01\x07"](_loc79_).n]),"INFO_FIGHT_CHAT"]);
+            _loc5_.addAction(93,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_LAUNCH_SPELL",[_loc80_.name,this.api.lang.getSpellText(_loc79_).n]),"INFO_FIGHT_CHAT"]);
             _loc5_.addAction(94,false,this.api.kernel,this.api.kernel.showMessage,[undefined,"(" + this.api.lang.getText("CRITICAL_MISS") + ")","INFO_FIGHT_CHAT"]);
             _loc5_.addAction(95,false,this.api.gfx,this.api.gfx["\x15\x1e\x10"],[sSenderID,this.api.lang.getText("CRITICAL_MISS")]);
             if(sSenderID == this.api.datacenter.Player.ID)
@@ -389,7 +389,7 @@ class dofus.aks.extend.GameActionsEx
             var _loc90_ = Number(_loc84_[2]);
             var _loc91_ = _loc84_[3] != "1" ? false : true;
             var _loc92_ = new dofus.datacenter.["\x16\x1c\x1d"](new dofus.datacenter.["\x18\x10\x15"](undefined,_loc83_[1]),_loc85_.Guild);
-            _loc5_.addAction(96,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_ATTACK_CC_NAME",[_loc85_.name,_loc83_[1] != 0 ? _loc92_.name : this.api.lang["\x18\x01\x07"](0).n]),"INFO_FIGHT_CHAT"]);
+            _loc5_.addAction(96,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_ATTACK_CC_NAME",[_loc85_.name,_loc83_[1] != 0 ? _loc92_.name : this.api.lang.getSpellText(0).n]),"INFO_FIGHT_CHAT"]);
             var _loc93_ = new ank.battlefield.datacenter.["\x1b\x18\x04"]();
             _loc93_.file = dofus.Constants["\x1b\x06\x15"] + _loc89_ + ".swf";
             _loc93_.level = 1;
@@ -427,7 +427,7 @@ class dofus.aks.extend.GameActionsEx
          case 305:
             var _loc98_ = _loc6_.split(";");
             var _loc99_ = this.api.datacenter.Sprites.getItemAt(sSenderID);
-            var _loc100_ = _loc98_[0] != 0 ? new dofus.datacenter.["\x16\x1c\x1d"](new dofus.datacenter.["\x18\x10\x15"](undefined,_loc98_[0]),_loc99_.Guild) : this.api.lang["\x18\x01\x07"](0).n;
+            var _loc100_ = _loc98_[0] != 0 ? new dofus.datacenter.["\x16\x1c\x1d"](new dofus.datacenter.["\x18\x10\x15"](undefined,_loc98_[0]),_loc99_.Guild) : this.api.lang.getSpellText(0).n;
             _loc5_.addAction(102,false,this.api.sounds["\x17\x0e\x06"],this.api.sounds["\x17\x0e\x06"]["\x19\x17\x1d"],[]);
             _loc5_.addAction(103,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_ATTACK_CC_NAME",[_loc99_.name,_loc100_.name]),"INFO_FIGHT_CHAT"]);
             _loc5_.addAction(104,false,this.api.kernel,this.api.kernel.showMessage,[undefined,"(" + this.api.lang.getText("CRITICAL_MISS") + ")","INFO_FIGHT_CHAT"]);
@@ -465,7 +465,7 @@ class dofus.aks.extend.GameActionsEx
             _loc112_.file = dofus.Constants["\x1b\x06\x15"] + _loc106_ + ".swf";
             _loc112_.level = _loc107_;
             _loc112_.bInFrontOfSprite = _loc108_;
-            _loc5_.addAction(106,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_START_TRAP",[_loc110_.name,this.api.lang["\x18\x01\x07"](_loc112_.id).n,_loc111_.name]),"INFO_FIGHT_CHAT"]);
+            _loc5_.addAction(106,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_START_TRAP",[_loc110_.name,this.api.lang.getSpellText(_loc112_.id).n,_loc111_.name]),"INFO_FIGHT_CHAT"]);
             _loc5_.addAction(107,false,this.api.gfx,this.api.gfx["\x16\x01\b"],[_loc109_,_loc112_,_loc105_,11],1000);
             break;
          case 307:

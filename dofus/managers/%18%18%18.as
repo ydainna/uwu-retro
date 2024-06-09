@@ -2,7 +2,7 @@ class dofus.§\x18\x18\x0b§.MapsServersManager extends dofus.§\x18\x18\x0b§.�
 {
    static var §\x1e\f\x10§ = null;
    var §\x1c\x11\x19§ = undefined;
-   var §\x1b\x1d\r§ = new Array();
+   var _aKeys = new Array();
    var §\x1c\x02\f§ = false;
    var §\x1c\x03\x07§ = false;
    var §\x1c\x07\f§ = false;
@@ -35,14 +35,14 @@ class dofus.§\x18\x18\x0b§.MapsServersManager extends dofus.§\x18\x18\x0b§.�
       {
          if(_loc4_ != undefined && _loc4_.length > 0)
          {
-            this["\x1b\x1d\r"][Number(sID)] = dofus.aks.Aks["\x1a\x06\x18"](_loc4_);
+            this._aKeys[Number(sID)] = dofus.aks.Aks.prepareKey(_loc4_);
          }
          else
          {
-            delete this["\x1b\x1d\r"][Number(sID)];
+            delete this._aKeys[Number(sID)];
          }
       }
-      this["\x18\x15\x18"](sID + "_" + _loc3_ + (this["\x1b\x1d\r"][Number(sID)] == undefined ? "" : "X") + ".swf");
+      this["\x18\x15\x18"](sID + "_" + _loc3_ + (this._aKeys[Number(sID)] == undefined ? "" : "X") + ".swf");
    }
    function §\x17\x1b\x0b§(§\x19\t\x14§)
    {
@@ -127,7 +127,7 @@ class dofus.§\x18\x18\x0b§.MapsServersManager extends dofus.§\x18\x18\x0b§.�
       var _loc10_ = Number(_loc2_.width);
       var _loc11_ = Number(_loc2_.height);
       var _loc12_ = Number(_loc2_.backgroundNum);
-      var _loc13_ = this["\x1b\x1d\r"][_loc3_] == undefined ? _loc2_.mapData : dofus.aks.Aks["\x17\x06\x02"](_loc2_.mapData,this["\x1b\x1d\r"][_loc3_],_global.parseInt(dofus.aks.Aks["\x16\x1a\x1a"](this["\x1b\x1d\r"][_loc3_]),16) * 2);
+      var _loc13_ = this._aKeys[_loc3_] == undefined ? _loc2_.mapData : dofus.aks.Aks.decypherData(_loc2_.mapData,this._aKeys[_loc3_],_global.parseInt(dofus.aks.Aks.checksum(this._aKeys[_loc3_]),16) * 2);
       var _loc14_ = _loc2_.ambianceId;
       var _loc15_ = _loc2_.musicId;
       var _loc16_ = _loc2_.bOutdoor != 1 ? false : true;

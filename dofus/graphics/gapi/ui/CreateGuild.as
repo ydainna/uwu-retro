@@ -117,7 +117,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CreateGuild extends dofus.§\x18\x03\x10§.
       this._btnClose.enabled = this._bEnabled;
       this._btnCreate.enabled = this._bEnabled;
    }
-   static function d2h(§\x17\x04\x0e§)
+   static function d2h(d)
    {
       if(_loc2_ > 255)
       {

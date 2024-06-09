@@ -55,7 +55,7 @@ class com.ankamagames.tools.§\x18\x17\x0b§
    {
       this["\x1e\x0b\f"] = new XMLSocket();
       this["\x1c\r\x12"] = false;
-      this["\x1e\x0b\f"].onConnect = function(§\x1b\f\x07§)
+      this["\x1e\x0b\f"].onConnect = function(success)
       {
          var _loc3_ = arguments.callee.tracer;
          _loc3_["\x19\x15\x1a"](_loc2_);
@@ -90,7 +90,7 @@ class com.ankamagames.tools.§\x18\x17\x0b§
          this["\x1d\x14\x1c"]++;
       }
    }
-   function §\x19\x15\x1a§(§\x1b\f\x07§)
+   function §\x19\x15\x1a§(success)
    {
       var _loc3_ = 0;
       while(_loc3_ < com.ankamagames.tools.Logger["\x18\x14\n"].length)

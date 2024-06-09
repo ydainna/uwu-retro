@@ -189,7 +189,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.ApiElement
    {
       return this["\x18\x02\t"]("DU")[_loc2_];
    }
-   function §\x18\x01\x07§(§\x19\x0e\x17§)
+   function getSpellText(§\x19\x0e\x17§)
    {
       return this["\x18\x02\t"]("S")[_loc2_];
    }
@@ -734,7 +734,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.ApiElement
       }
       return _loc8_;
    }
-   function §\x17\x0f\x12§(§\x1a\x0f\x06§)
+   function §\x17\x0f\x12§(s)
    {
       var _loc3_ = new ank.utils.ExtendedString(_loc2_);
       if(this["\x17\x0f\x10"] == undefined || (this["\x17\x0f\x11"] == undefined || this["\x1d\x18\x06"] != this.api.datacenter.Basics.aks_current_server.id))

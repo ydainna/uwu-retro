@@ -1,10 +1,10 @@
 class dofus.§\x18\x18\x0b§.§\x1b\x06\x12§
 {
-   function §\x1b\x06\x12§(§\x17\x04\x0e§)
+   function §\x1b\x06\x12§(d)
    {
       this.initialize(_loc2_);
    }
-   function initialize(§\x17\x04\x0e§)
+   function initialize(d)
    {
       this["\x1d\x06\b"] = _loc2_;
       this.api = _loc2_.api;

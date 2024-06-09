@@ -1158,7 +1158,7 @@ _loc1_loadXtra = function()
    this.log(this["\x1b\r\x12"] + this.getText("CHECK_LAST_VERSION"));
    this["\x1e\f\x1a"] = "XTRA";
    this["\x19\x01\b"](-60);
-   var _loc2_ = dofus.utils.["\x16\x04\x06"].getInstance();
+   var _loc2_ = dofus.utils.getInstance.getInstance();
    if(_loc2_ != undefined)
    {
       _loc2_.lang["\x16\x1c\f"]();

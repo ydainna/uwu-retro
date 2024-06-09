@@ -3,11 +3,11 @@ class dofus.utils.§\x16\x04\x06§ extends Object
    function §\x16\x04\x06§()
    {
       super();
-      dofus.utils.["\x16\x04\x06"]._oLastInstance = this;
+      dofus.utils.getInstance._oLastInstance = this;
    }
    static function §\x17\x19\t§()
    {
-      return dofus.utils.["\x16\x04\x06"]._oLastInstance;
+      return dofus.utils.getInstance._oLastInstance;
    }
    function §\x1e\x16\x0f§()
    {

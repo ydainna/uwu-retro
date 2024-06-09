@@ -267,7 +267,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MovableContainerBar extends dofus.§\x18\x0
       this._y = _loc3_;
       this["\x1b\x04\x02"]();
    }
-   function §\x1a\x18\x13§(§\x18\x18\x02§, §\x1a\x0f\x06§, §\x16\b\b§, §\x1b\x01\x14§, c)
+   function §\x1a\x18\x13§(§\x18\x18\x02§, s, §\x16\b\b§, §\x1b\x01\x14§, c)
    {
       this["\x1d\x19\x0b"] = _loc2_;
       this["\x1d\x1d\x05"] = _loc3_;

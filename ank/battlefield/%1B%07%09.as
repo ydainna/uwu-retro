@@ -3,7 +3,7 @@ class ank.battlefield.§\x1b\x07\t§
    static var §\x17\x06\r§ = 6;
    static var §\x1c\x07\n§ = false;
    static var §\x1c\b\r§ = false;
-   function §\x1b\x07\t§(§\x16\b\b§, c, §\x17\x04\x0e§)
+   function §\x1b\x07\t§(§\x16\b\b§, c, d)
    {
       this.initialize(_loc2_,c,_loc4_);
    }
@@ -15,7 +15,7 @@ class ank.battlefield.§\x1b\x07\t§
    {
       return ank.battlefield.SpriteHandler["\x1c\x07\n"];
    }
-   function initialize(§\x16\b\b§, c, §\x17\x04\x0e§)
+   function initialize(§\x16\b\b§, c, d)
    {
       this["\x1d\b\x12"] = _loc2_;
       this["\x1e\x05\x1c"] = _loc4_;

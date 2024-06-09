@@ -2,11 +2,11 @@ class ank.battlefield.§\x1b\x0f\x13§
 {
    static var §\x16\x13\x1b§ = 1;
    static var §\x16\x13\x1c§ = 2;
-   function §\x1b\x0f\x13§(§\x16\b\b§, c, §\x17\x04\x0e§)
+   function §\x1b\x0f\x13§(§\x16\b\b§, c, d)
    {
       this.initialize(_loc2_,c,_loc4_);
    }
-   function initialize(§\x16\b\b§, c, §\x17\x04\x0e§)
+   function initialize(§\x16\b\b§, c, d)
    {
       this["\x1d\b\x12"] = _loc2_;
       this["\x1d\n\x06"] = c;

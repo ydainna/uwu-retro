@@ -40,7 +40,7 @@ class dofus.§\x17\t\r§ extends ank.utils.§\x1a\t\t§
    function §\x18\t\t§()
    {
       new org.flashdevelop.utils.FlashConnect.trace("Etape 3","dofus.DofusCore::initApi","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/DofusCore.as",102);
-      _global.api = new dofus.utils.["\x16\x04\x06"]();
+      _global.api = new dofus.utils.getInstance();
       _global.api.initialize();
       this.addToQueue({object:this,method:this["\x16\x1a\x15"]});
    }

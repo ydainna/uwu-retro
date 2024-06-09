@@ -296,7 +296,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ClassSelector extends dofus.�
       this["\x1d\x14\x1a"] = _loc2_;
       this.update();
    }
-   function §\x17\x0b\x12§(§\x1b\r\x11§, §\x16\b\b§, c, §\x17\x04\x0e§)
+   function §\x17\x0b\x12§(§\x1b\r\x11§, §\x16\b\b§, c, d)
    {
       return c * _loc2_ / _loc5_ + _loc3_;
    }

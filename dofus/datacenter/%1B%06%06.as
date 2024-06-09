@@ -459,7 +459,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
       {
          _loc5_ = null;
       }
-      this["\x1e\x05\x18"] = this.api.lang["\x18\x01\x07"](_loc2_);
+      this["\x1e\x05\x18"] = this.api.lang.getSpellText(_loc2_);
       if(this.isPassive)
       {
          this["\x1d\x1b\x05"] = undefined;

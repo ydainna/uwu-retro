@@ -62,7 +62,7 @@ class §\x19\x02\x19§.transitions.Tween
    {
       return this._time;
    }
-   function set duration(§\x17\x04\x0e§)
+   function set duration(d)
    {
       this._duration = !(_loc2_ == null || _loc2_ <= 0) ? _loc2_ : _global.Infinity;
    }
@@ -219,7 +219,7 @@ class §\x19\x02\x19§.transitions.Tween
    {
       this.position = this.getPosition(this._time);
    }
-   function func(§\x1b\r\x11§, §\x16\b\b§, c, §\x17\x04\x0e§)
+   function func(§\x1b\r\x11§, §\x16\b\b§, c, d)
    {
       return c * _loc2_ / _loc5_ + _loc3_;
    }
