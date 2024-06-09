@@ -1,4 +1,4 @@
-class dofus.§\x18\x18\x0b§.§\x18\x18\x18§ extends dofus.§\x18\x18\x0b§.§\x1a\x14\f§
+class dofus.§\x18\x18\x0b§.MapsServersManager extends dofus.§\x18\x18\x0b§.§\x1a\x14\f§
 {
    static var §\x1e\f\x10§ = null;
    var §\x1c\x11\x19§ = undefined;
@@ -6,10 +6,10 @@ class dofus.§\x18\x18\x0b§.§\x18\x18\x18§ extends dofus.§\x18\x18\x0b§.§\
    var §\x1c\x02\f§ = false;
    var §\x1c\x03\x07§ = false;
    var §\x1c\x07\f§ = false;
-   function §\x18\x18\x18§()
+   function MapsServersManager()
    {
       super();
-      dofus.managers["\x18\x18\x18"]["\x1e\f\x10"] = this;
+      dofus.managers.MapsServersManager["\x1e\f\x10"] = this;
    }
    function §\x1e\x1c\x1b§()
    {
@@ -22,7 +22,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x18\x18§ extends dofus.§\x18\x18\x0b§.§\
    }
    static function §\x17\x19\t§()
    {
-      return dofus.managers["\x18\x18\x18"]["\x1e\f\x10"];
+      return dofus.managers.MapsServersManager["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {
@@ -65,7 +65,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x18\x18§ extends dofus.§\x18\x18\x0b§.§\
          return undefined;
       }
       var _loc3_ = Number(_loc2_.id);
-      if(this.api.config.isStreaming && this.api.config["\x1b\x0b\r"] == "compact")
+      if(this.api.config.isStreaming && this.api.config.update == "compact")
       {
          var _loc4_ = this.api.lang.getConfigText("INCARNAM_CLASS_MAP");
          var _loc5_ = false;
@@ -142,7 +142,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x18\x18§ extends dofus.§\x18\x18\x0b§.§\
       new org.flashdevelop.utils.FlashConnect.trace("[MapServiceManager] (parseMap) Map " + _loc3_ + " : " + _loc18_,"dofus.managers.MapsServersManager::parseMap","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/MapsServersManager.as",191);
       this.api.datacenter.Basics.aks_current_map_id = _loc3_;
       this.api.kernel.TipsManager["\x19\x1a\x14"](_loc3_);
-      this.api.kernel["\x1b\x0b\f"]["\x19\x1a\x14"](_loc3_);
+      this.api.kernel.StreamingDisplayManager["\x19\x1a\x14"](_loc3_);
       var _loc25_ = new dofus.datacenter.["\x17\t\x0f"](_loc3_);
       _loc25_.bCanChallenge = _loc17_;
       _loc25_.bCanAttack = _loc18_;
@@ -158,7 +158,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x18\x18§ extends dofus.§\x18\x18\x0b§.§\
       this.api.gfx["\x16\x14\x02"](_loc3_,_loc9_,_loc10_,_loc11_,_loc12_,_loc13_,_loc25_);
       if(this.api.network.Basics.lastReceivedReferenceTime != undefined)
       {
-         this.api.kernel["\x19\b\x11"]["\x1a\x19\t"](this.api.network.Basics.lastReceivedReferenceTime,this.api.kernel.OptionsManager.getOption("NightMode"),_loc25_);
+         this.api.kernel.NightManager["\x1a\x19\t"](this.api.network.Basics.lastReceivedReferenceTime,this.api.kernel.OptionsManager.getOption("NightMode"),_loc25_);
       }
       this["\x1c\x02\f"] = false;
       new org.flashdevelop.utils.FlashConnect.trace("===== Map Built =====","dofus.managers.MapsServersManager::parseMap","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/MapsServersManager.as",227);

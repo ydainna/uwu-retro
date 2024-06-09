@@ -118,7 +118,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
    function §\x1a\x1a\x1b§(§\x16\x07\x04§)
    {
       this["\x1c\x01\x13"] = _loc2_;
-      this["\x1a\n\x15"](true);
+      this.aks_a_logs(true);
    }
    function §\x18\x10\b§(§\x19\x10\x06§)
    {
@@ -128,7 +128,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
    {
       this["\x1c\x01\x13"][_loc2_] = _loc3_;
       this.api.electron.retroChatRefresh(this["\x1c\x01\x13"]);
-      this["\x1a\n\x15"](true);
+      this.aks_a_logs(true);
    }
    function §\x18\t\f§()
    {
@@ -339,7 +339,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       }
       return _loc2_;
    }
-   function §\x16\x01\x01§(sText, §\x1a\x10\x1a§, §\x16\x12\x17§, §\x1b\f\x0e§)
+   function addText(sText, §\x1a\x10\x1a§, §\x16\x12\x17§, sUniqId)
    {
       if(_loc4_ == undefined)
       {
@@ -349,23 +349,23 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       var _loc9_ = false;
       switch(_loc3_)
       {
-         case dofus.Constants["\x19\x02\x03"]:
+         case dofus.Constants.MSG_CHAT_COLOR:
             var _loc7_ = dofus.managers.ChatManager["\x1b\x12\x18"];
             _loc9_ = true;
             var _loc8_ = true;
             break;
-         case dofus.Constants["\x17\f\x1c"]:
+         case dofus.Constants.EMOTE_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x12\x18"];
             _loc9_ = true;
             _loc8_ = true;
             break;
-         case dofus.Constants["\x1b\x0f\x1c"]:
+         case dofus.Constants.THINK_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x12\x18"];
             _loc9_ = true;
             _loc8_ = true;
             break;
-         case dofus.Constants["\x18\x03\x1c"]:
-         case dofus.Constants["\x19\x02\x02"]:
+         case dofus.Constants.GROUP_CHAT_COLOR:
+         case dofus.Constants.MSGCHUCHOTE_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x13\x01"];
             _loc9_ = true;
             _loc8_ = true;
@@ -374,12 +374,12 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
                this.api.sounds["\x17\x0e\x06"]["\x19\x15\x12"]();
             }
             break;
-         case dofus.Constants["\x18\t\x01"]:
+         case dofus.Constants.INFO_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x12\x16"];
             this["\x1d\x19\x1c"]++;
             _loc8_ = false;
             break;
-         case dofus.Constants["\x17\r\x1d"]:
+         case dofus.Constants.ERROR_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x12\x12"];
             _loc8_ = true;
             if(_loc4_)
@@ -394,7 +394,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
                }
             }
             break;
-         case dofus.Constants["\x18\x04\x18"]:
+         case dofus.Constants.GUILD_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x12\x14"];
             _loc9_ = true;
             _loc8_ = true;
@@ -403,22 +403,22 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
                this.api.sounds["\x17\x0e\x06"]["\x19\x15\x12"]();
             }
             break;
-         case dofus.Constants["\x1a\b\x10"]:
+         case dofus.Constants.PVP_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x12\x19"];
             _loc9_ = true;
             _loc8_ = true;
             break;
-         case dofus.Constants["\x1b\x11\b"]:
+         case dofus.Constants.TRADE_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x12\x1c"];
             _loc9_ = true;
             _loc8_ = true;
             break;
-         case dofus.Constants["\x1a\n\x0f"]:
+         case dofus.Constants.RECRUITMENT_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x12\x1a"];
             _loc9_ = true;
             _loc8_ = true;
             break;
-         case dofus.Constants["\x18\x1c\x11"]:
+         case dofus.Constants.MEETIC_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x12\x17"];
             _loc9_ = true;
             _loc8_ = true;
@@ -431,7 +431,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
             _loc7_ = dofus.managers.ChatManager.TYPE_GAME_EVENTS;
             _loc9_ = false;
             _loc8_ = true;
-            _loc2_ = this.api.kernel["\x17\x05\x16"]["\x17\x17\x1c"](_loc2_,";");
+            _loc2_ = this.api.kernel.DebugManager["\x17\x17\x1c"](_loc2_,";");
             if(this["\x1c\x01\x13"][_loc7_] == true)
             {
                this.api.sounds["\x17\x0e\x06"].onChatGameEvent();
@@ -446,8 +446,8 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
                this.api.sounds["\x17\x0e\x06"].onStartHunt();
             }
             break;
-         case dofus.Constants["\x16\x01\x10"]:
-         case dofus.Constants["\x16\x1d\x19"]:
+         case dofus.Constants.ADMIN_CHAT_COLOR:
+         case dofus.Constants.COMMANDS_CHAT_COLOR:
             _loc7_ = dofus.managers.ChatManager["\x1b\x12\x0f"];
             _loc8_ = true;
             break;
@@ -461,9 +461,9 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
          _loc2_ = this["\x15\x1d\x1a"](_loc2_);
          _loc2_ = this["\x16\x04\r"](_loc2_.substring(0,_loc2_.length - 4)) + _loc2_.substring(_loc2_.length - 4);
       }
-      if(_loc8_ && this.api.kernel["\x19\b\x11"].time.length)
+      if(_loc8_ && this.api.kernel.NightManager.time.length)
       {
-         _loc6_ = "[" + this.api.kernel["\x19\b\x11"].time + "] ";
+         _loc6_ = "[" + this.api.kernel.NightManager.time + "] ";
       }
       this.api.electron.chatPrint(_loc2_,_loc3_,_loc5_,_loc7_,_loc6_);
       if(this["\x1d\x16\b"] > 0)
@@ -485,7 +485,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       {
          this["\x1b\x1d\x1c"].shift();
       }
-      this["\x1a\n\x15"]();
+      this.aks_a_logs();
    }
    function §\x1a\n\x15§(§\x16\f\x05§)
    {
@@ -628,7 +628,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       }
       return _loc2_;
    }
-   function §\x1a\x03\x1a§(§\x1b\x03\x10§)
+   function parseInlinePos(§\x1b\x03\x10§)
    {
       var _loc3_ = _loc2_;
       var _loc4_ = 0;
@@ -797,7 +797,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       }
       return false;
    }
-   function §\x17\x1b\x1b§(§\x1b\f\x0e§)
+   function §\x17\x1b\x1b§(sUniqId)
    {
       for(var i in this["\x1b\x1d\x1c"])
       {

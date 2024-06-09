@@ -106,7 +106,7 @@ class ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§ extends ank.utils.§\x1a\t\t§
    {
       return this["\x0e\x06"];
    }
-   function §\x1a\x03§(§\x19\x1e\x1d§)
+   function §\x1a\x03§(oParams)
    {
       this["\x1e\x04\x1c"] = _loc2_;
       return this["\x06\x02"]();

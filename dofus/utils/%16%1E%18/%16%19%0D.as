@@ -1,6 +1,6 @@
-class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e\x18§.§\x15\x1b\x0b§
+class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consoleParsers.§\x15\x1b\x0b§
 {
-   function §\x16\x19\r§(oAPI)
+   function ChatConsoleParser(oAPI)
    {
       super();
       this.initialize(oAPI);
@@ -11,7 +11,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
       this["\x1c\x01\x14"] = new Array();
       this["\x1e\x01\x0b"] = 0;
    }
-   function process(§\x1a\x10\x19§, §\x19\x1e\x1d§)
+   function process(§\x1a\x10\x19§, oParams)
    {
       if(!this.api.datacenter.Basics.inGame)
       {
@@ -260,7 +260,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                this.api.kernel.showMessage(undefined,"CELL ID : " + this.api.datacenter.Player.data.cellNum,"COMMANDS_CHAT");
                break;
             case "TIME":
-               this.api.kernel.showMessage(undefined,this.api.kernel["\x19\b\x11"].date + " - " + this.api.kernel["\x19\b\x11"].time,"COMMANDS_CHAT");
+               this.api.kernel.showMessage(undefined,this.api.kernel.NightManager.date + " - " + this.api.kernel.NightManager.time,"COMMANDS_CHAT");
                break;
             case "LIST":
             case "PLAYERS":
@@ -341,7 +341,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
             case "DEBUG":
                if(this.api.datacenter.Player.isAuthorized)
                {
-                  this.api.kernel["\x17\x05\x16"]["\x1b\x10\x19"]();
+                  this.api.kernel.DebugManager["\x1b\x10\x19"]();
                }
                break;
             case "CHANGECHARACTER":
@@ -490,7 +490,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
             case "CLEAR":
                this.api.electron.retroChatClear();
                this.api.kernel.ChatManager.clear();
-               this.api.kernel.ChatManager["\x1a\n\x15"](true);
+               this.api.kernel.ChatManager.aks_a_logs(true);
                break;
             case "SPEAKINGITEM":
                if(this.api.datacenter.Player.isAuthorized)

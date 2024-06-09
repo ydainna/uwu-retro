@@ -539,7 +539,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                   var _loc85_ = this["\x1b\x1d\x01"][_loc82_];
                   if(!_global.isNaN(_loc85_) && 7935 - _loc85_ < 300)
                   {
-                     this.api.kernel.showMessage(undefined,this.api.kernel["\x17\x05\x16"]["\x18\x01\x17"]() + " (Map) " + this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc82_,_loc84_) + " s\'est déconnecté (" + _loc82_ + ")","ADMIN_CHAT");
+                     this.api.kernel.showMessage(undefined,this.api.kernel.DebugManager["\x18\x01\x17"]() + " (Map) " + this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc82_,_loc84_) + " s\'est déconnecté (" + _loc82_ + ")","ADMIN_CHAT");
                   }
                   this["\x1b\x1d\x01"][_loc82_] = 1787;
                }
@@ -821,14 +821,14 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
    }
    function §\x19\x16\x19§(sExtraData)
    {
-      if(this.api.kernel["\x18\x18\x18"]["\x18\f\x1b"])
+      if(this.api.kernel.MapsServersManager["\x18\f\x1b"])
       {
          this.addToQueue({object:this,method:this["\x19\x16\x19"],params:[_loc2_]});
          return undefined;
       }
       this.aks.Game["\x18\f\x1c"] = true;
       var _loc3_ = dofus.graphics.gapi.ui.FightChallenge(dofus.graphics.gapi.ui.FightChallenge(this.api.ui.getUIComponent("FightChallenge")));
-      this.api.kernel["\x1b\x0b\f"]["\x19\x17\r"]();
+      this.api.kernel.StreamingDisplayManager["\x19\x17\r"]();
       var _loc4_ = {winners:[],loosers:[],collectors:[],challenges:_loc3_.challenges.deepClone(),currentTableTurn:this.api.datacenter.Game.currentTableTurn,currentPlayerInfos:[],currentPlayerInfosWithChest:[]};
       this.api.datacenter.Game["\x1a\x0e\t"] = _loc4_;
       if(!this.api.datacenter.Game["\x18\x0f\x1b"])

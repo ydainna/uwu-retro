@@ -67,7 +67,7 @@ class dofus.aks.Fights extends dofus.aks.Handler
             var _loc6_ = _loc3_[_loc5_].split(";");
             var _loc7_ = Number(_loc6_[0]);
             var _loc8_ = Number(_loc6_[1]);
-            var _loc9_ = _loc8_ != -1 ? this.api.kernel["\x19\b\x11"]["\x17\x16\x14"](_loc8_) : -1;
+            var _loc9_ = _loc8_ != -1 ? this.api.kernel.NightManager["\x17\x16\x14"](_loc8_) : -1;
             var _loc10_ = new dofus.datacenter.["\x17\x0f\x16"](_loc7_,_loc9_);
             var _loc11_ = String(_loc6_[2]).split(",");
             var _loc12_ = Number(_loc11_[0]);

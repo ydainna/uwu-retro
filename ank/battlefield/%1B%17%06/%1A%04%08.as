@@ -11,7 +11,7 @@ class ank.battlefield.utils.§\x1a\x04\b§
    function §\x1a\x04\b§()
    {
    }
-   static function §\x1a\x04\x07§(§\x16\x04\x05§, §\x18\x18\x15§, §\x19\x04\x0f§, §\x19\x04\x10§, §\x19\x1e\x1d§)
+   static function §\x1a\x04\x07§(§\x16\x04\x05§, §\x18\x18\x15§, §\x19\x04\x0f§, §\x19\x04\x10§, oParams)
    {
       var _loc7_ = _loc2_.datacenter..Game.isFight;
       if(_loc4_ == undefined)

@@ -74,7 +74,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseNickName extends dofus.§\x18\x03\x10
       this._btnOk.addEventListener("click",this);
       this._btnCancel.addEventListener("click",this);
       this.api.kernel.KeyManager.addShortcutsListener("onShortcut",this);
-      this.api.kernel["\x1b\x0b\f"]["\x19\x1a\x17"]();
+      this.api.kernel.StreamingDisplayManager["\x19\x1a\x17"]();
    }
    function §\x18\n\x05§()
    {

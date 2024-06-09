@@ -82,7 +82,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
          }
          _loc8_ = _loc8_ + 1;
       }
-      this["\x1a\n\x15"]();
+      this.aks_a_logs();
    }
    function §\x19\x13\x1b§(sExtraData)
    {
@@ -93,7 +93,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
       {
          this.api.kernel.showMessage(undefined,this.api.lang.getText("NEW_EMOTE",[this.api.lang["\x17\x17\x0b"](_loc4_).n]),"INFO_CHAT");
       }
-      this["\x1a\n\x15"]();
+      this.aks_a_logs();
    }
    function §\x19\x1b\x1c§(sExtraData)
    {
@@ -104,7 +104,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
       {
          this.api.kernel.showMessage(undefined,this.api.lang.getText("REMOVE_EMOTE",[this.api.lang["\x17\x17\x0b"](_loc4_).n]),"INFO_CHAT");
       }
-      this["\x1a\n\x15"]();
+      this.aks_a_logs();
    }
    function §\x19\x16\x12§(sExtraData)
    {

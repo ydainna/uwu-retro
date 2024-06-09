@@ -1,4 +1,4 @@
-class dofus.utils.§\x16\x1e\x18§.§\x15\x1b\x0b§
+class dofus.utils.consoleParsers.§\x15\x1b\x0b§
 {
    function §\x15\x1b\x0b§()
    {
@@ -18,7 +18,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x15\x1b\x0b§
       this["\x1b\x1c\b"] = new Array();
       this["\x1d\x14\x06"] = 0;
    }
-   function process(§\x1a\x10\x19§, §\x19\x1e\x1d§)
+   function process(§\x1a\x10\x19§, oParams)
    {
       this["\x1a\b\x05"]({value:_loc2_,params:_loc3_});
    }

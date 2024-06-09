@@ -1,14 +1,14 @@
-class dofus.§\x18\x18\x0b§.§\x1b\x12\x02§ extends dofus.§\x18\x18\x0b§.§\x1a\x14\f§
+class dofus.§\x18\x18\x0b§.TutorialServersManager extends dofus.§\x18\x18\x0b§.§\x1a\x14\f§
 {
    static var §\x1e\f\x10§ = null;
-   function §\x1b\x12\x02§()
+   function TutorialServersManager()
    {
       super();
-      dofus.managers["\x1b\x12\x02"]["\x1e\f\x10"] = this;
+      dofus.managers.TutorialServersManager["\x1e\f\x10"] = this;
    }
    static function §\x17\x19\t§()
    {
-      return dofus.managers["\x1b\x12\x02"]["\x1e\f\x10"];
+      return dofus.managers.TutorialServersManager["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {

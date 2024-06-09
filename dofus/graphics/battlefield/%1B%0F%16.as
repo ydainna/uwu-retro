@@ -4,7 +4,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x1b\x0f\x16§ extends dofus.§\x18\x
    static var §\x1b\t\b§ = 10;
    static var §\x1b\t\x07§ = 2;
    static var §\x1b\t\x05§ = [-1,16777011,16750848,39168,39372,6697728,2236962,16711680,65280,16777215,16711935];
-   function §\x1b\x0f\x16§(sText, §\x1a\x1b\x0f§, §\x19\x05\x06§, §\x19\x07\x19§, §\x1b\n\x18§, §\x19\x05\n§, nStarsValue)
+   function §\x1b\x0f\x16§(sText, §\x1a\x1b\x0f§, §\x19\x05\x06§, §\x19\x07\x19§, sTitle, §\x19\x05\n§, nStarsValue)
    {
       super();
       this.initialize(nStarsValue);
@@ -24,7 +24,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x1b\x0f\x16§ extends dofus.§\x18\x
       this._txtTitle.embedFonts = true;
       this["\x1c\x01\x07"] = new Array();
    }
-   function drawClip(sText, §\x1a\x1b\x0f§, §\x19\x05\x06§, §\x19\x07\x19§, §\x1b\n\x18§, §\x19\x05\n§)
+   function drawClip(sText, §\x1a\x1b\x0f§, §\x19\x05\x06§, §\x19\x07\x19§, sTitle, §\x19\x05\n§)
    {
       var _loc8_ = _loc3_ != undefined && _loc5_ != undefined;
       this._txtText.autoSize = "center";

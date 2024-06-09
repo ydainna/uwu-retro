@@ -128,7 +128,7 @@ class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.ApiElement
       this.first_movement = false;
       this.canUseSeeAllSpell = true;
       this.api.ui.isComponentHiddingSprites = false;
-      _global.api.kernel["\x1b\x06\x10"].clear();
+      _global.api.kernel.SpellsBoostsManager.clear();
       eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function §\x16\x02\x10§(§\x19\x07\x18§)

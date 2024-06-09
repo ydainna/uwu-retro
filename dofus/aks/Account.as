@@ -508,11 +508,11 @@ class dofus.aks.Account extends dofus.aks.Handler
                this.api.network.Account.setServer(_loc17_.id);
                return undefined;
             }
-            this.api.kernel.onFastServerSwitchSuccess("You do not have any character on server " + _loc16_);
+            this.api.kernel.onFastServerSwitchFail("You do not have any character on server " + _loc16_);
          }
          else
          {
-            this.api.kernel.onFastServerSwitchSuccess("Server " + _loc16_ + " is not available now.");
+            this.api.kernel.onFastServerSwitchFail("Server " + _loc16_ + " is not available now.");
          }
       }
       if(!this.api.datacenter.Basics.forceAutomaticServerSelection && (_loc9_ > 0 || (this.api.config.isStreaming || this.api.datacenter.Basics.forceManualServerSelection)))
@@ -662,7 +662,7 @@ class dofus.aks.Account extends dofus.aks.Handler
             }
             _loc21_ = _loc21_ + 1;
          }
-         this.api.kernel.onFastServerSwitchSuccess("Could not find " + _loc20_ + " on this characters list !");
+         this.api.kernel.onFastServerSwitchFail("Could not find " + _loc20_ + " on this characters list !");
       }
       this.api.datacenter.Basics.oldCharList = _loc9_;
       new org.flashdevelop.utils.FlashConnect.trace("ignoreMigration 2 : " + this.api.datacenter.Basics.ignoreMigration,"dofus.aks.Account::onCharactersList","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Account.as",886);

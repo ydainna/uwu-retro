@@ -131,7 +131,7 @@ class ank.external.ExternalConnector extends LocalConnection
    {
       this["\x17\x07\x19"]({type:"\x19\x14\x1d",file:_loc2_});
    }
-   function §\x19\x18\x11§(§\x1b\x03\x1c§, §\x19\x01\x1a§)
+   function §\x19\x18\x11§(sMsg, §\x19\x01\x1a§)
    {
       this["\x17\x07\x19"]({type:"\x19\x18\x11",msg:_loc2_,params:_loc3_});
    }

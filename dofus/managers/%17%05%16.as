@@ -1,15 +1,15 @@
-class dofus.§\x18\x18\x0b§.§\x17\x05\x16§ extends dofus.utils.ApiElement
+class dofus.§\x18\x18\x0b§.DebugManager extends dofus.utils.ApiElement
 {
    static var §\x1e\f\x10§ = null;
-   function §\x17\x05\x16§(oAPI)
+   function DebugManager(oAPI)
    {
       super();
-      dofus.managers["\x17\x05\x16"]["\x1e\f\x10"] = this;
+      dofus.managers.DebugManager["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
    static function §\x17\x19\t§()
    {
-      return dofus.managers["\x17\x05\x16"]["\x1e\f\x10"];
+      return dofus.managers.DebugManager["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {
@@ -25,7 +25,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x05\x16§ extends dofus.utils.ApiElement
    {
       this["\x1a\x16\x01"](!this["\x1c\x03\n"]);
    }
-   function print(§\x1b\x03\x1c§, §\x19\t\x0f§, §\x16\x0b\f§)
+   function print(sMsg, §\x19\t\x0f§, §\x16\x0b\f§)
    {
       if(!_loc4_ && !this["\x1c\x03\n"])
       {
@@ -54,7 +54,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x05\x16§ extends dofus.utils.ApiElement
       new org.flashdevelop.utils.FlashConnect.trace("[" + _loc6_ + "] " + _loc5_,"dofus.managers.DebugManager::print","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/DebugManager.as",96);
       this.api.kernel.showMessage(undefined,_loc5_,_loc6_);
    }
-   function §\x17\x17\x1c§(§\x1b\x03\x1c§, sCommandsDelimiter)
+   function §\x17\x17\x1c§(sMsg, sCommandsDelimiter)
    {
       var _loc4_ = "";
       var _loc6_ = new Array();

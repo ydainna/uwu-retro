@@ -79,7 +79,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\b\x1a§.BannerCircleXtra
       this._banner["\x1d\n\x10"] = _loc2_;
       this._banner._mcXtra.setMask(_loc2_);
    }
-   function §\x1a\x15\x0f§(§\x19\x1e\x1d§)
+   function §\x1a\x15\x0f§(oParams)
    {
       for(var k in _loc2_)
       {
@@ -103,7 +103,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\b\x1a§.BannerCircleXtra
          }
       }
    }
-   function §\x1a\x1c\x1d§(§\x1b\r\x0f§, bShow, §\x19\x1e\x1d§, §\x19\x12\x0b§)
+   function §\x1a\x1c\x1d§(§\x1b\r\x0f§, bShow, oParams, §\x19\x12\x0b§)
    {
       if(_loc2_ == undefined)
       {
@@ -148,7 +148,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\b\x1a§.BannerCircleXtra
             break;
          case "clock":
             _loc6_ = "Clock";
-            _loc8_ = {_x:this._banner._mcCircleXtraPlacer._x,_y:this._banner._mcCircleXtraPlacer._y,_width:this._banner._mcCircleXtraPlacer._width,_height:this._banner._mcCircleXtraPlacer._height,arrowHours:"UI_BannerClockArrowHours",arrowMinutes:"UI_BannerClockArrowMinutes",background:"UI_BannerClockBack",updateFunction:{object:this.api.kernel["\x19\b\x11"],method:this.api.kernel["\x19\b\x11"]["\x17\x16\x06"]}};
+            _loc8_ = {_x:this._banner._mcCircleXtraPlacer._x,_y:this._banner._mcCircleXtraPlacer._y,_width:this._banner._mcCircleXtraPlacer._width,_height:this._banner._mcCircleXtraPlacer._height,arrowHours:"UI_BannerClockArrowHours",arrowMinutes:"UI_BannerClockArrowMinutes",background:"UI_BannerClockBack",updateFunction:{object:this.api.kernel.NightManager,method:this.api.kernel.NightManager["\x17\x16\x06"]}};
             _loc9_ = ["click","over","out"];
             break;
          case "helper":

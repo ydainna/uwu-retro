@@ -1,14 +1,14 @@
-class dofus.§\x18\x18\x0b§.§\x17\t\x05§ extends dofus.§\x18\x18\x0b§.§\x1a\x14\f§
+class dofus.§\x18\x18\x0b§.DocumentsServersManager extends dofus.§\x18\x18\x0b§.§\x1a\x14\f§
 {
    static var §\x1e\f\x10§ = null;
-   function §\x17\t\x05§()
+   function DocumentsServersManager()
    {
       super();
-      dofus.managers["\x17\t\x05"]["\x1e\f\x10"] = this;
+      dofus.managers.DocumentsServersManager["\x1e\f\x10"] = this;
    }
    static function §\x17\x19\t§()
    {
-      return dofus.managers["\x17\t\x05"]["\x1e\f\x10"];
+      return dofus.managers.DocumentsServersManager["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {

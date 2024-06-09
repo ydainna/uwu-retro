@@ -481,7 +481,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          {
             var _loc8_ = _loc2_[_loc7_];
             var _loc9_ = _loc8_[0];
-            var _loc10_ = !(_loc4_ > 0 && this.api.kernel["\x1b\x06\x10"]["\x18\f\x19"](_loc9_)) ? -1 : this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](_loc9_,_loc4_);
+            var _loc10_ = !(_loc4_ > 0 && this.api.kernel.SpellsBoostsManager["\x18\f\x19"](_loc9_)) ? -1 : this.api.kernel.SpellsBoostsManager["\x18\x01\x04"](_loc9_,_loc4_);
             var _loc11_ = new dofus.datacenter.["\x17\f\x02"](undefined,_loc9_,_loc8_[1],_loc8_[2],_loc8_[3],undefined,_loc8_[4],undefined,_loc10_,_loc8_[6]);
             if(_loc3_ == true)
             {
@@ -514,13 +514,13 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
             var _loc9_ = -1;
             if(_loc3_ > 0)
             {
-               if(this.api.kernel["\x1b\x06\x10"]["\x18\f\x18"](_loc8_))
+               if(this.api.kernel.SpellsBoostsManager["\x18\f\x18"](_loc8_))
                {
-                  _loc9_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x0f"],_loc3_);
+                  _loc9_ = this.api.kernel.SpellsBoostsManager["\x18\x01\x04"](dofus.managers.SpellsBoostsManager["\x15\x1c\x0f"],_loc3_);
                }
-               else if(this.api.kernel["\x1b\x06\x10"]["\x18\f\x17"](_loc8_))
+               else if(this.api.kernel.SpellsBoostsManager["\x18\f\x17"](_loc8_))
                {
-                  _loc9_ = this.api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"]["\x15\x1c\x0e"],_loc3_);
+                  _loc9_ = this.api.kernel.SpellsBoostsManager["\x18\x01\x04"](dofus.managers.SpellsBoostsManager["\x15\x1c\x0e"],_loc3_);
                }
             }
             var _loc10_ = new dofus.datacenter.["\x17\f\x02"](undefined,_loc8_,_loc7_[1],_loc7_[2],_loc7_[3],_loc7_[7],_loc7_[4],undefined,_loc9_,_loc7_[6]);
@@ -956,7 +956,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          _loc6_.show(_root._xmouse,_root._ymouse,true);
       }
    }
-   function §\x1a\x1e\x14§(§\x1a\x02\t§, §\x19\x1e\x1d§)
+   function §\x1a\x1e\x14§(§\x1a\x02\t§, oParams)
    {
       var _loc4_ = _loc3_.bKeepSavedMessage;
       var _loc5_ = _loc3_.bForceNonAdminPopup;
@@ -1122,7 +1122,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       }
       return Math.floor(Math.max(_loc2_,2));
    }
-   function §\x1a\r\x12§(sName, sID, §\x1b\f\x0e§, §\x19\x12\x10§)
+   function §\x1a\r\x12§(sName, sID, sUniqId, §\x19\x12\x10§)
    {
       if(_loc4_ != undefined && (_loc4_.length > 0 && _loc4_ != ""))
       {
@@ -1178,12 +1178,12 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    function §\x1b\t\x11§()
    {
       this["\x1b\x0b\x01"]();
-      this["\x1b\x01\x17"]();
+      this.signalActivity();
       this["\x1d\x17\x02"] = _global.setInterval(this,"inactivityCheck",1000);
       this["\x1c\x03\x1d"] = false;
       Mouse.addListener(this);
    }
-   function §\x1b\x01\x17§()
+   function signalActivity()
    {
       this["\x1d\x17\x19"] = 9031;
    }
@@ -1202,7 +1202,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          this.api.kernel.showMessage(undefined," - " + this.api.lang.getText("INFOS_" + _loc2_,[new ank.utils.ExtendedString(nResultValue)["\x15\x1e\x01"](this.api.lang.getConfigText("THOUSAND_SEPARATOR"),3)]),"INFO_CHAT");
       }
    }
-   function §\x17\x1d\x05§(§\x1b\x07\x06§, §\x19\x1e\x1d§)
+   function §\x17\x1d\x05§(§\x1b\x07\x06§, oParams)
    {
       var _loc4_ = _loc3_.bShowViewTtgCollection;
       var _loc5_ = _loc3_.bNoFriendsInvite;

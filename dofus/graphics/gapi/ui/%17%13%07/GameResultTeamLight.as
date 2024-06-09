@@ -5,7 +5,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x17\x13\x07§.GameResultTeamLight extend
    {
       super();
    }
-   function §\x1e\r§(§\x1b\n\x18§)
+   function §\x1e\r§(sTitle)
    {
       this["\x1e\r\b"] = _loc2_;
       return this["\f\x02"]();

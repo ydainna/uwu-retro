@@ -1,20 +1,20 @@
-class dofus.§\x18\x18\x0b§.§\x1b\x0b\f§ extends dofus.utils.ApiElement
+class dofus.§\x18\x18\x0b§.StreamingDisplayManager extends dofus.utils.ApiElement
 {
    static var §\x17\x06\b§ = 19;
    static var §\x17\t\x15§ = [21,22,23,24,25];
    static var §\x1b\x11\x0f§ = new Array();
-   function §\x1b\x0b\f§()
+   function StreamingDisplayManager()
    {
       super();
       this["\x18\t\x10"]();
    }
    static function §\x17\x19\t§()
    {
-      if(dofus.managers["\x1b\x0b\f"]._self == null)
+      if(dofus.managers.StreamingDisplayManager._self == null)
       {
-         dofus.managers["\x1b\x0b\f"]._self = new dofus.managers["\x1b\x0b\f"]();
+         dofus.managers.StreamingDisplayManager._self = new dofus.managers.StreamingDisplayManager();
       }
-      return dofus.managers["\x1b\x0b\f"]._self;
+      return dofus.managers.StreamingDisplayManager._self;
    }
    function §\x17\b\x02§(§\x18\b\f§)
    {
@@ -40,13 +40,13 @@ class dofus.§\x18\x18\x0b§.§\x1b\x0b\f§ extends dofus.utils.ApiElement
    }
    function §\x17\x1b\b§(§\x18\b\f§)
    {
-      if(dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][_loc2_] != undefined)
+      if(dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][_loc2_] != undefined)
       {
-         if(this["\x17\x16\x1a"]().data["display" + dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][_loc2_]] == 1)
+         if(this["\x17\x16\x1a"]().data["display" + dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][_loc2_]] == 1)
          {
             return this["\x17\x16\f"](this["\x17\x1d\x06"]());
          }
-         return dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][_loc2_];
+         return dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][_loc2_];
       }
       return this["\x17\x16\f"](this["\x17\x1d\x06"]());
    }
@@ -58,51 +58,51 @@ class dofus.§\x18\x18\x0b§.§\x1b\x0b\f§ extends dofus.utils.ApiElement
    {
       if(_loc2_ < 1200)
       {
-         return dofus.managers["\x1b\x0b\f"]["\x17\x06\b"];
+         return dofus.managers.StreamingDisplayManager["\x17\x06\b"];
       }
-      return dofus.managers["\x1b\x0b\f"]["\x17\t\x15"][Math.floor((_loc2_ - 1200) / 300) % dofus.managers["\x1b\x0b\f"]["\x17\t\x15"].length];
+      return dofus.managers.StreamingDisplayManager["\x17\t\x15"][Math.floor((_loc2_ - 1200) / 300) % dofus.managers.StreamingDisplayManager["\x17\t\x15"].length];
    }
    function §\x18\t\x10§()
    {
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10300] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10284] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10299] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10285] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10298] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10276] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10283] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10294] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10292] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10279] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10296] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10289] = 1;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10305] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10321] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10322] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10323] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10324] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10325] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10326] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10327] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10328] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10329] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10330] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10331] = 2;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10273] = 4;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10337] = 3;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10258] = 3;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10295] = 5;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10288] = 6;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10290] = 6;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10287] = 6;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10345] = 6;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10346] = 6;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10344] = 6;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10297] = 14;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10349] = 14;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10317] = 14;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10304] = 14;
-      dofus.managers["\x1b\x0b\f"]["\x1b\x11\x0f"][10318] = 26;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10300] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10284] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10299] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10285] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10298] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10276] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10283] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10294] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10292] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10279] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10296] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10289] = 1;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10305] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10321] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10322] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10323] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10324] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10325] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10326] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10327] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10328] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10329] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10330] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10331] = 2;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10273] = 4;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10337] = 3;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10258] = 3;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10295] = 5;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10288] = 6;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10290] = 6;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10287] = 6;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10345] = 6;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10346] = 6;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10344] = 6;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10297] = 14;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10349] = 14;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10317] = 14;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10304] = 14;
+      dofus.managers.StreamingDisplayManager["\x1b\x11\x0f"][10318] = 26;
    }
    function §\x17\x16\x1a§()
    {

@@ -196,7 +196,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.datacenter.Basics.aks_current_team = _loc6_;
       this.api.datacenter.Basics["\x16\x02\x14"] = new Array();
       this.api.datacenter.Basics["\x16\x02\x15"] = new Array();
-      this.api.kernel["\x1b\x0b\f"]["\x19\x17\x0f"]();
+      this.api.kernel.StreamingDisplayManager["\x19\x17\x0f"]();
       this.api.gfx["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\n"]);
       this.api.datacenter.Game["\x1a\x17\t"]("place");
       if(_loc6_ == undefined)
@@ -272,7 +272,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.ui.getUIComponent("Banner").stopTimer();
       this.aks.GameActions["\x19\x13\x18"](this.api.datacenter.Player.ID);
       this.api.sounds["\x17\x0e\x06"]["\x19\x18\x05"](this.api.datacenter.["\x18\x18\x0e"].musics);
-      this.api.kernel["\x1b\x0b\f"]["\x19\x17\x10"]();
+      this.api.kernel.StreamingDisplayManager["\x19\x17\x10"]();
       var _loc2_ = this.api.ui.getUIComponent("Banner");
       _loc2_.showGiveUpButton(true);
       if(!this.api.datacenter.Game["\x18\x0f\x1b"])
@@ -523,7 +523,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       }
       this.api.gfx["\x1a\x1d\x05"](false);
       this["\x19\t\f"] = _global.parseInt(_loc4_,10);
-      this.api.kernel["\x18\x18\x18"]["\x18\x16\f"](_loc4_,_loc5_,_loc6_);
+      this.api.kernel.MapsServersManager["\x18\x16\f"](_loc4_,_loc5_,_loc6_);
    }
    function §\x19\x1a\x07§()
    {

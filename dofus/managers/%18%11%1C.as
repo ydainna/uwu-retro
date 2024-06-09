@@ -431,7 +431,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.ApiElement
       }
       return _loc6_;
    }
-   function §\x19\x1c\x18§(§\x19\x0e\x07§)
+   function onSetChange(§\x19\x0e\x07§)
    {
       this["\x1d\x15\x01"] = _loc2_;
       this["\x18\x16\x12"]();

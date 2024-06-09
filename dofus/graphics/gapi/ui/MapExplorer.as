@@ -625,8 +625,8 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.
    {
       if(!this.isDungeonMapDisplayed)
       {
-         var _loc3_ = this.api.kernel["\x16\x05\x01"]["\x17\x14\f"](_loc2_.coordinates.x,_loc2_.coordinates.y,this["\x1c\x0e\x18"].superarea);
-         var _loc4_ = this.api.kernel["\x16\x05\x01"]["\x18\x01\x12"](_loc2_.coordinates.x,_loc2_.coordinates.y,this["\x1c\x0e\x18"].superarea);
+         var _loc3_ = this.api.kernel.AreasManager["\x17\x14\f"](_loc2_.coordinates.x,_loc2_.coordinates.y,this["\x1c\x0e\x18"].superarea);
+         var _loc4_ = this.api.kernel.AreasManager["\x18\x01\x12"](_loc2_.coordinates.x,_loc2_.coordinates.y,this["\x1c\x0e\x18"].superarea);
          if(_loc4_ != undefined)
          {
             var _loc5_ = this.api.lang["\x17\x1b\x0f"](_loc4_).n;

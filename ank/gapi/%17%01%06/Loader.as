@@ -52,7 +52,7 @@ class ank.gapi.§\x17\x01\x06§.Loader extends ank.gapi.§\x17\x01\x0f§.§\x1b\
    {
       return this["\x1c\x02\x13"];
    }
-   function §\x11\x07§(§\x19\x1e\x1d§)
+   function §\x11\x07§(oParams)
    {
       this["\x1e\x04\x1c"] = _loc2_;
       if(this["\x1e\x04\x1c"].frame)

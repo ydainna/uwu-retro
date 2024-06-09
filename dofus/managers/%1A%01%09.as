@@ -132,12 +132,12 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.ApiElement
             var _loc4_ = this.api.datacenter.["\x18\x18\x0e"];
             if(_loc3_ && (_loc4_ && _loc4_.bOutdoor))
             {
-               this.api.kernel["\x19\b\x11"].clear();
-               this.api.kernel["\x19\b\x11"].setState();
+               this.api.kernel.NightManager.clear();
+               this.api.kernel.NightManager.setState();
             }
             else
             {
-               this.api.kernel["\x19\b\x11"]["\x19\x0b\x02"]();
+               this.api.kernel.NightManager["\x19\x0b\x02"]();
             }
             break;
          case "Transparency":
@@ -209,7 +209,7 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.ApiElement
             }
             break;
          case "DisplayStyle":
-            this.api.kernel["\x1a\x16\x05"](_loc3_);
+            this.api.kernel.setDisplayStyle(_loc3_);
             break;
          case "DefaultQuality":
             this.api.kernel.setQuality(_loc3_);
@@ -224,7 +224,7 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.ApiElement
             this.api.ui.getUIComponent("Banner")["\x1a\x18\x02"](_loc3_);
             break;
          case "ShortcutSet":
-            this.api.kernel.KeyManager["\x19\x1c\x18"](_loc3_);
+            this.api.kernel.KeyManager.onSetChange(_loc3_);
             break;
          case "CharacterPreview":
             this.api.ui.getUIComponent("Inventory")["\x1a\x1c\x1c"](_loc3_);
@@ -249,7 +249,7 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.ApiElement
             break;
          case "TimestampInChat":
             this.api.electron.retroChatRefresh(undefined,_loc3_);
-            this.api.kernel.ChatManager["\x1a\n\x15"]();
+            this.api.kernel.ChatManager.aks_a_logs();
             break;
          case "EnableWidescreenPanels":
             this.api.electron.setWidescreenEnabled(_loc3_);

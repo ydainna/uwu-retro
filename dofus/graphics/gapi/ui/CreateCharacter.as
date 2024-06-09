@@ -33,7 +33,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CreateCharacter extends dofus.§\x18\x03\x1
       this.addToQueue({object:this,method:this["\x18\t\x0e"]});
       this.addToQueue({object:this,method:this["\x1a\x13\x0b"]});
       this.addToQueue({object:this,method:this.switchUiTemporis});
-      this.api.kernel["\x1b\x0b\f"]["\x19\x15\f"]();
+      this.api.kernel.StreamingDisplayManager["\x19\x15\f"]();
       if(dofus.Constants.USE_JS_LOG && _global.CONFIG.isNewAccount)
       {
          this.getURL("JavaScript:WriteLog(\'CreateCharacter\')");

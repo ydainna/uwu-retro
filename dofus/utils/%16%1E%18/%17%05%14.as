@@ -1,6 +1,6 @@
-class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x1e\x18§.§\x15\x1b\x0b§
+class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleParsers.§\x15\x1b\x0b§
 {
-   function §\x17\x05\x14§(oAPI)
+   function DebugConsoleParser(oAPI)
    {
       super();
       this.initialize(oAPI);
@@ -722,10 +722,10 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                this.showMessage(undefined,"cellule : " + this.api.datacenter.Player.data.cellNum,"DEBUG_LOG");
                break;
             case "TIME":
-               this.showMessage(undefined,"Heure : " + this.api.kernel["\x19\b\x11"].time,"DEBUG_LOG");
+               this.showMessage(undefined,"Heure : " + this.api.kernel.NightManager.time,"DEBUG_LOG");
                break;
             case "CACHE":
-               this.api.kernel["\x16\x05\x19"]();
+               this.api.kernel.askClearCache();
                break;
             case "REBOOT":
                this.api.kernel.reboot();
@@ -761,7 +761,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                this.api.ui.loadUIComponent("AskOk","AskOkContent",{title:"AskOKDebug",text:_loc83_});
                break;
             case "MOVIECLIP":
-               this.api.kernel["\x17\x11\x0b"]();
+               this.api.kernel.findMovieClipPath();
                break;
             case "TOGGLESPRITES":
                this.api.datacenter.Basics.gfx_isSpritesHidden = !this.api.datacenter.Basics.gfx_isSpritesHidden;
@@ -949,7 +949,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
       }
       return _loc2_;
    }
-   function §\x1a\x1e\x0b§(§\x1b\n\x18§, §\x1b\x03\x1c§, sType)
+   function showMessage(sTitle, sMsg, sType)
    {
       var _loc5_ = dofus.graphics.gapi.ui.Debug.FILE_OUTPUT_STATE;
       if(this.api.electron.enabled)

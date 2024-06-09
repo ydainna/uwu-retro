@@ -2,7 +2,7 @@ class ank.utils.§\x1a\x1c\b§ extends Object
 {
    static var §\x1e\x04\r§ = new Object();
    static var §\x1e\x05\x05§ = new Object();
-   function §\x1a\x1c\b§(§\x19\x1e\x1d§)
+   function §\x1a\x1c\b§(oParams)
    {
       super();
       this["\x1e\x0b\b"] = !!_loc3_.persistence ? SharedObject["\x17\x1e\x02"](_loc3_.name,_loc3_.remotePath,_loc3_.persistence,_loc3_.secure) : SharedObject.getLocal(_loc3_.name,_loc3_.localPath,_loc3_.secure);

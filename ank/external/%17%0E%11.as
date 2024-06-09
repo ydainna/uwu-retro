@@ -9,11 +9,11 @@ class ank.external.§\x17\x0e\x11§
    {
       return this["\x1e\x04\x1c"];
    }
-   function §\x1a\x18\x14§(§\x19\x1e\x1d§)
+   function §\x1a\x18\x14§(oParams)
    {
       this["\x1e\x04\x1c"] = _loc2_;
    }
-   function §\x1a\f\x0f§()
+   function removeListeners()
    {
       ank..external.ExternalConnector.getInstance().removeEventListener("onExternalConnectionFaild",this);
    }

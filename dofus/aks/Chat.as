@@ -4,7 +4,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function send(§\x1b\x03\x10§, §\x1a\x12\x02§, §\x19\x1e\x1d§)
+   function send(§\x1b\x03\x10§, §\x1a\x12\x02§, oParams)
    {
       if(this.api.datacenter.Game["\x18\x0f\x1b"] && _loc3_ == "*")
       {
@@ -71,9 +71,9 @@ class dofus.aks.Chat extends dofus.aks.Handler
       {
          _loc16_ = _loc16_.substring(0,dofus.Constants["\x18\x1a\x0b"] - 1);
       }
-      if(_loc2_.length > dofus.Constants["\x18\x1a\x15"] && !(dofus.Constants.ALPHA && this.api.datacenter.Player.isAuthorized))
+      if(_loc2_.length > dofus.Constants.MAX_MESSAGE_LENGTH && !(dofus.Constants.ALPHA && this.api.datacenter.Player.isAuthorized))
       {
-         _loc2_ = _loc2_.substring(0,dofus.Constants["\x18\x1a\x15"]);
+         _loc2_ = _loc2_.substring(0,dofus.Constants.MAX_MESSAGE_LENGTH);
       }
       this.aks.send("BM" + _loc3_ + "|" + _loc2_ + "|" + _loc16_,true,undefined,true);
    }
@@ -223,7 +223,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
             _loc6_ = this.api.kernel.ChatManager["\x1a\x03\x19"](_loc6_,_loc11_,true);
             _loc10_ = this.api.kernel.ChatManager["\x1a\x03\x19"](_loc10_,_loc11_,false);
          }
-         _loc6_ = this.api.kernel.ChatManager["\x1a\x03\x1a"](_loc6_);
+         _loc6_ = this.api.kernel.ChatManager.parseInlinePos(_loc6_);
       }
       switch(_loc4_)
       {
@@ -357,7 +357,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
             _loc6_ = this["\x17\x1a\x1d"](_loc8_,_loc7_) + " : " + this["\x17\x1a\x1c"](_loc8_,_loc7_,_loc28_,_loc10_,_loc6_);
             if(this.api.datacenter.Player.isAuthorized)
             {
-               var _loc29_ = this.api.kernel["\x17\x05\x16"]["\x18\x01\x17"]();
+               var _loc29_ = this.api.kernel.DebugManager["\x18\x01\x17"]();
                this.api.kernel.ChatManager["\x15\x1e\n"](this.api.datacenter.["\x18\x18\x0e"].id,_loc12_,this["\x17\x1d\x1c"](_loc28_,_loc10_),_loc29_);
             }
             break;
@@ -370,7 +370,7 @@ class dofus.aks.Chat extends dofus.aks.Handler
    }
    function §\x17\x1a\x1c§(sPlayerID, §\x1b\x06\x1b§, §\x1b\x07\x02§, §\x1b\x07\x18§, §\x1b\x03\x10§)
    {
-      var _loc7_ = this.api.kernel["\x17\x05\x16"]["\x18\x01\x17"]() + " ";
+      var _loc7_ = this.api.kernel.DebugManager["\x18\x01\x17"]() + " ";
       _loc6_ = this.api.kernel.ChatManager["\x16\x04\r"](_loc6_);
       return "<a href=\"asfunction:onHref,ShowMessagePopupMenu," + sPlayerID + "," + _loc3_ + "," + _global.escape(_loc7_ + _loc4_ + _loc5_) + "\">" + _loc6_ + "</a>";
    }

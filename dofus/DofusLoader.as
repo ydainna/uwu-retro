@@ -495,14 +495,14 @@ _loc1_.onKeyUp = function()
       getURL("FSCommand:" add "quit","");
    }
 };
-_loc1_["\x1a\x16\x05"] = function(§\x1b\b\x17§)
+_loc1_.setDisplayStyle = function(§\x1b\b\x17§)
 {
    if(System.capabilities.playerType == "PlugIn" && (!_global.CONFIG.isStreaming && _root.electron == undefined))
    {
       this.getURL("javascript:setFlashStyle(\'flashid\', \'" + _loc2_ + "\');");
    }
 };
-_loc1_["\x16\x1c\x1c"] = function()
+_loc1_.closeBrowserWindow = function()
 {
    if(System.capabilities.playerType == "PlugIn")
    {
@@ -619,11 +619,11 @@ _loc1_["\x19\x15\x19"] = function(bSuccess, §\x1b\x19\x19§)
                _global.CONFIG.isStreaming = true;
                if(_loc4_.attributes.method)
                {
-                  _global.CONFIG["\x1b\x0b\r"] = _loc4_.attributes.method;
+                  _global.CONFIG.update = _loc4_.attributes.method;
                }
                else
                {
-                  _global.CONFIG["\x1b\x0b\r"] = "compact";
+                  _global.CONFIG.update = "compact";
                }
                _root["\x1d\x12\t"].attachMovie("UI_Misc","miniClip",_root["\x1d\x12\t"].getNextHighestDepth());
                break;
@@ -862,7 +862,7 @@ _loc1_["\x16\x1b\x06"] = function(§\x19\x12\f§, §\x1a\x02\x02§, §\x16\x0e\x
    }
    if(_loc2_.debugRequests)
    {
-      dofus.Constants["\x17\x05\x17"] = true;
+      dofus.Constants.DEBUG_DATAS = true;
    }
    if(_loc2_.logRequests)
    {
@@ -1325,7 +1325,7 @@ _loc1_["\x19\x0b\x05"] = function()
 _loc1_["\x18\t\x06"] = function()
 {
    this["\x1a\x1e\b"](false);
-   _global.api.kernel["\x19\x19\x01"]();
+   _global.api.kernel.onInitAndLoginFinished();
    this["\x1c\x07\x04"] = false;
    this["\x1c\x0b\x17"] = false;
    this["\x18\x13\x02"](false);
@@ -1508,7 +1508,7 @@ _loc1_.onAllLoadFailed = function(§\x18\x1b\f§)
          this["\x1b\x15\x12"]();
    }
 };
-_loc1_["\x19\x16\x01"] = function()
+_loc1_.onCoreDisplayed = function()
 {
    this["\x18\x13\x02"](false);
    this["\x1a\x1c\x16"](false);

@@ -35,7 +35,7 @@ class dofus.aks.Tutorial extends dofus.aks.Handler
       var _loc4_ = _loc3_[0];
       var _loc5_ = _loc3_[1];
       var _loc6_ = this.api.config.language;
-      this.api.kernel["\x1b\x12\x02"]["\x18\x16\x18"](_loc4_ + "_" + _loc5_);
+      this.api.kernel.TutorialServersManager["\x18\x16\x18"](_loc4_ + "_" + _loc5_);
    }
    function §\x19\x17\x1b§()
    {

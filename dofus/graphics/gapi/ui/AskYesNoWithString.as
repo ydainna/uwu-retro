@@ -9,7 +9,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.AskYesNoWithString extends ank.gapi.ui.FlyW
    {
       return this["\x1e\x04\x1c"];
    }
-   function §\x1a\x03§(§\x19\x1e\x1d§)
+   function §\x1a\x03§(oParams)
    {
       this["\x1e\x04\x1c"] = _loc2_;
       return this["\x06\x02"]();

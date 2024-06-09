@@ -179,7 +179,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Chat extends dofus.§\x18\x03
          _loc2_.target = this;
          eval("\x16\x19\x0b").replacementPanelsManager.click(_loc2_);
       };
-      this.api.kernel.ChatManager["\x1a\n\x15"]();
+      this.api.kernel.ChatManager.aks_a_logs();
    }
    function filterChanged(oEvent)
    {

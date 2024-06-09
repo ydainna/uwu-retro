@@ -77,7 +77,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseCharacter extends dofus.§\x18\x03\x1
       {
          ref.out({target:this});
       };
-      this.api.kernel["\x1b\x0b\f"]["\x19\x15\x0b"]();
+      this.api.kernel.StreamingDisplayManager["\x19\x15\x0b"]();
    }
    function §\x1b\x14\r§()
    {

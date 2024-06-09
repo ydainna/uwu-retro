@@ -222,7 +222,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                         }
                         if(dofus.kernel.FAST_SWITCHING_SERVER_REQUEST != undefined)
                         {
-                           this.addToQueue({object:this.api.kernel,method:this.api.kernel["\x19\x17\n"]});
+                           this.addToQueue({object:this.api.kernel,method:this.api.kernel.onFastServerSwitchSuccess});
                         }
                         break;
                      case 43:
@@ -292,7 +292,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                      var _loc29_ = Number(_loc11_[1]);
                      var _loc30_ = this.api.lang["\x17\x1b\x11"](_loc29_).x;
                      var _loc31_ = this.api.lang["\x17\x1b\x11"](_loc29_).y;
-                     _loc11_[1] = this.api.kernel["\x18\x18\x18"]["\x17\x1b\x0b"](_loc29_) + " [" + _loc30_ + ", " + _loc31_ + "]";
+                     _loc11_[1] = this.api.kernel.MapsServersManager["\x17\x1b\x0b"](_loc29_) + " [" + _loc30_ + ", " + _loc31_ + "]";
                }
                var _loc32_ = this.api.lang.getText("GUILD_" + _loc10_,_loc11_);
                if(_loc32_ != undefined)

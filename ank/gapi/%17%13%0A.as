@@ -85,7 +85,7 @@ class ank.gapi.§\x17\x13\n§ extends ank.utils.§\x1a\t\t§
    {
       this.pmPopupMenu.removeMovieClip();
    }
-   function §\x1a\x1d\x0f§(sText, §\x1b\x1a\x05§, §\x1b\x1a\x14§, §\x19\x1e\x1d§, sName)
+   function §\x1a\x1d\x0f§(sText, §\x1b\x1a\x05§, §\x1b\x1a\x14§, oParams, sName)
    {
       if(_loc2_ == undefined)
       {
@@ -116,7 +116,7 @@ class ank.gapi.§\x17\x13\n§ extends ank.utils.§\x1a\t\t§
          this["\x1d\f\x1d"].attachMovie("ToolTip","_mcToolTip" + _loc6_,this["\x1d\f\x1d"].getNextHighestDepth(),{text:_loc2_,x:_loc7_,y:_loc4_,params:_loc5_,gapi:this});
       }
    }
-   function §\x1b\x01\x0e§(sText, §\x1b\x1a\x05§, §\x1b\x1a\x14§, §\x19\x1e\x1d§, §\x1b\b\x17§)
+   function §\x1b\x01\x0e§(sText, §\x1b\x1a\x05§, §\x1b\x1a\x14§, oParams, §\x1b\b\x17§)
    {
       if(_loc2_ == undefined)
       {

@@ -89,7 +89,7 @@ class dofus.§\x17\x04\x19§.Document extends Object
             {
                _loc3_;
                this["\x1b\x1e\n"].push({type:"blank",num:_loc3_++});
-               var _loc11_ = this.api.kernel["\x17\t\x05"]["\x17\x16\x04"]() + "#1/#2.#1";
+               var _loc11_ = this.api.kernel.DocumentsServersManager["\x17\x16\x04"]() + "#1/#2.#1";
                var _loc12_ = 0;
                while(_loc12_ < _loc10_)
                {
@@ -118,7 +118,7 @@ class dofus.§\x17\x04\x19§.Document extends Object
          case "roadsignleft":
          case "roadsignright":
             var _loc14_ = _loc2_.pages[0];
-            var _loc15_ = this.api.kernel["\x17\t\x05"]["\x17\x16\x04"]() + "#1/#2.#1";
+            var _loc15_ = this.api.kernel.DocumentsServersManager["\x17\x16\x04"]() + "#1/#2.#1";
             _loc14_ = ank.utils.PatternDecoder.replace(_loc14_,_loc15_);
             this["\x1b\x1e\n"].push({text:_loc14_,cssFile:this["\x1e\b\x10"]});
       }

@@ -97,7 +97,7 @@ class ank.utils.§\x1a\x04\t§
       }
       return _loc2_;
    }
-   static function §\x17\x05\x1c§(§\x16\x06\x0f§, §\x19\x1e\x1d§)
+   static function §\x17\x05\x1c§(§\x16\x06\x0f§, oParams)
    {
       var _loc4_ = 0;
       var _loc5_ = new String();

@@ -801,7 +801,7 @@ if(!dofus.managers.AdminManager)
       _loc4_.push({f:"%n",t:this.api.datacenter.Player.Name});
       _loc4_.push({f:"%d",t:this._aPreparedReplaceVars[0]});
       _loc4_.push({f:"%h",t:this._aPreparedReplaceVars[1]});
-      _loc4_.push({f:"%t",t:this.api.kernel["\x19\b\x11"].time});
+      _loc4_.push({f:"%t",t:this.api.kernel.NightManager.time});
       _loc4_.push({f:"%s",t:this.api.datacenter.Basics.aks_a_prompt});
       _loc4_.push({f:"%m",t:this.api.datacenter.["\x18\x18\x0e"].id});
       _loc4_.push({f:"%v",t:dofus.Constants.VERSION + "." + dofus.Constants.SUBVERSION + "." + dofus.Constants.SUBSUBVERSION + " (" + dofus.Constants.VERSIONDATE + ")"});

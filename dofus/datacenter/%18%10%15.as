@@ -438,7 +438,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\x1e\x12\x04§()
    {
-      var _loc2_ = dofus.datacenter.["\x18\x10\x15"].api.kernel["\x1b\x06\x10"]["\x18\x01\x04"](dofus.managers["\x1b\x06\x10"].ACTION_BOOST_ITEM_AP_COST,dofus.datacenter.["\x18\x10\x15"].CLOSE_COMBAT_AS_ITEM_SPELL_ID);
+      var _loc2_ = dofus.datacenter.["\x18\x10\x15"].api.kernel.SpellsBoostsManager["\x18\x01\x04"](dofus.managers.SpellsBoostsManager.ACTION_BOOST_ITEM_AP_COST,dofus.datacenter.["\x18\x10\x15"].CLOSE_COMBAT_AS_ITEM_SPELL_ID);
       var _loc3_ = this["\x17\x19\x12"](1);
       if(_loc2_ > -1)
       {
@@ -727,7 +727,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    {
       return this.unicID == _loc2_.unicID;
    }
-   function §\x1b\x01\b§(§\x18\x1b\f§, §\x1b\b\x16§)
+   function §\x1b\x01\b§(§\x18\x1b\f§, sStyle)
    {
       var _loc4_ = "<b>" + this.name + "</b>" + " - " + dofus.datacenter.["\x18\x10\x15"].api.lang.getText("LEVEL_SMALL") + " " + this.level;
       var _loc5_ = "";

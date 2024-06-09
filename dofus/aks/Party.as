@@ -235,7 +235,7 @@ class dofus.aks.Party extends dofus.aks.Handler
          }
          _loc6_ = _loc6_ + 1;
       }
-      _loc4_["\x1a\n\x15"]();
+      _loc4_.aks_a_logs();
    }
    function cancel(oEvent)
    {

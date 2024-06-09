@@ -10,7 +10,7 @@ class ank.utils.ExtendedDate extends Date
    }
    function getDofusFullYear(§\x16\x04\x05§)
    {
-      return super.getFullYear() + _loc3_.lang["\x18\x01\x18"]().z;
+      return super.getFullYear() + _loc3_.lang.getTimeZoneText().z;
    }
    function getDatePadded()
    {

@@ -21,7 +21,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.AskPrivateChat extends ank.gapi.ui.FlyWindo
    function §\x18\n\x16§()
    {
       var _loc2_ = this._winBackground.content;
-      _loc2_["\x1e\x0f\x12"].maxChars = dofus.Constants["\x18\x1a\x15"];
+      _loc2_["\x1e\x0f\x12"].maxChars = dofus.Constants.MAX_MESSAGE_LENGTH;
       _loc2_._btnCancel.label = this.api.lang.getText("CANCEL_SMALL");
       _loc2_._btnAddFriend.label = this.api.lang.getText("ADD_TO_FRIENDS");
       _loc2_._btnSend.label = this.api.lang.getText("SEND");

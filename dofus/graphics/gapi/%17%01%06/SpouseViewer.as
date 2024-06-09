@@ -72,7 +72,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpouseViewer extends dofus.§
          {
             this["\x1d\f\t"]._visible = this["\x1e\x05\x19"].isInFight;
             this["\x1c\x1a\x07"].text = !_global.isNaN(this["\x1e\x05\x19"].level) ? this.api.lang.getText("LEVEL") + " " + this["\x1e\x05\x19"].level : "";
-            this["\x1c\x12\x15"].text = this.api.kernel["\x18\x18\x18"]["\x17\x1b\x0b"](this["\x1e\x05\x19"].mapID);
+            this["\x1c\x12\x15"].text = this.api.kernel.MapsServersManager["\x17\x1b\x0b"](this["\x1e\x05\x19"].mapID);
             this["\x1c\x15\x12"].text = "";
             this._btnJoin.enabled = !this.api.datacenter.Game.isFight;
             this["\x1c\t\f"].enabled = true;

@@ -5,7 +5,7 @@ class dofus.§\x16\x1e\x1b§ extends Object
    static var §\x18\x19\x02§ = [1030,1029,4088];
    static var §\x18\x19\x03§ = [7020];
    static var DEBUG = false;
-   static var §\x17\x05\x17§ = false;
+   static var DEBUG_DATAS = false;
    static var DEBUG_ENCRYPTION = false;
    static var §\x17\x05\x18§ = false;
    static var TEST = false;
@@ -42,8 +42,8 @@ class dofus.§\x16\x1e\x1b§ extends Object
    static var EVENEMENTIALS_TEMPORIS_2_TOWER_PATH = dofus.Constants.EVENEMENTIALS_TEMPORIS_2_PATH + "tower/";
    static var EVENEMENTIALS_TEMPORIS_2_TOWER_ILLUS_PATH = dofus.Constants.EVENEMENTIALS_TEMPORIS_2_TOWER_PATH + "illus/";
    static var §\x18\x02\x19§ = dofus.Constants["\x16\x1c\x19"] + "gfx/";
-   static var §\x18\x02\x18§ = dofus.Constants["\x18\x02\x19"] + "objects/";
-   static var §\x18\x02\x17§ = dofus.Constants["\x18\x02\x19"] + "grounds/";
+   static var GFX_OBJECTS_PATH = dofus.Constants["\x18\x02\x19"] + "objects/";
+   static var GFX_GROUNDS_PATH = dofus.Constants["\x18\x02\x19"] + "grounds/";
    static var §\x16\x1c\x1a§ = dofus.Constants["\x16\x1c\x19"] + "sprites/";
    static var §\x15\x1b\x14§ = dofus.Constants["\x16\x1c\x1a"] + "accessories/";
    static var §\x16\x1b\x04§ = dofus.Constants["\x16\x1c\x1a"] + "chevauchor/";
@@ -143,7 +143,7 @@ class dofus.§\x16\x1e\x1b§ extends Object
    static var §\x16\x1c\x14§ = 800;
    static var §\x1a\x14\x03§ = 10000;
    static var §\x18\x1a\x0b§ = 1000;
-   static var §\x18\x1a\x15§ = 200;
+   static var MAX_MESSAGE_LENGTH = 200;
    static var §\x18\x1a\x16§ = 50;
    static var §\x19\x12\x04§ = 9000;
    static var §\x18\x1a\x19§ = 10000;
@@ -154,20 +154,20 @@ class dofus.§\x16\x1e\x1b§ extends Object
    static var §\x16\x11\x02§ = [[0,15648155,0,15854274,0,16446963,14129488,0,0,9656642,16634268,0],[0,15516310,0,16701093,0,16640204,15648155,0,0,10247750,16764573,0]];
    static var §\x1b\x03\x17§ = 3000;
    static var §\x17\f\x1b§ = "*";
-   static var §\x18\t\x01§ = "009900";
-   static var §\x19\x02\x03§ = "111111";
-   static var §\x17\f\x1c§ = "222222";
-   static var §\x1b\x0f\x1c§ = "232323";
-   static var §\x19\x02\x02§ = "0066FF";
-   static var §\x18\x03\x1c§ = "006699";
-   static var §\x17\r\x1d§ = "C10000";
-   static var §\x18\x04\x18§ = "663399";
-   static var §\x1a\b\x10§ = "DD7700";
-   static var §\x1a\n\x0f§ = "737373";
-   static var §\x1b\x11\b§ = "663300";
-   static var §\x18\x1c\x11§ = "0000CC";
-   static var §\x16\x01\x10§ = "FF00FF";
-   static var §\x16\x1d\x19§ = "E4287C";
+   static var INFO_CHAT_COLOR = "009900";
+   static var MSG_CHAT_COLOR = "111111";
+   static var EMOTE_CHAT_COLOR = "222222";
+   static var THINK_CHAT_COLOR = "232323";
+   static var MSGCHUCHOTE_CHAT_COLOR = "0066FF";
+   static var GROUP_CHAT_COLOR = "006699";
+   static var ERROR_CHAT_COLOR = "C10000";
+   static var GUILD_CHAT_COLOR = "663399";
+   static var PVP_CHAT_COLOR = "DD7700";
+   static var RECRUITMENT_CHAT_COLOR = "737373";
+   static var TRADE_CHAT_COLOR = "663300";
+   static var MEETIC_CHAT_COLOR = "0000CC";
+   static var ADMIN_CHAT_COLOR = "FF00FF";
+   static var COMMANDS_CHAT_COLOR = "E4287C";
    static var GAME_EVENTS_CHAT = "A3005A";
    static var GAME_HUNT_CHAT = "EB420C";
    static var §\x16\x18\x03§ = 16737792;
@@ -324,7 +324,7 @@ class dofus.§\x16\x1e\x1b§ extends Object
       switch(_loc2_)
       {
          case -1:
-            return dofus.Constants["\x18\t\x01"];
+            return dofus.Constants.INFO_CHAT_COLOR;
          case 0:
             return "7D7D7D";
          case 1:

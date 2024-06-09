@@ -20,7 +20,7 @@ class dofus.§\x17\x04\x19§.Gift extends Object
    {
       return this["\x1e\r\b"];
    }
-   function §\x1e\r§(§\x1b\n\x18§)
+   function §\x1e\r§(sTitle)
    {
       this["\x1e\r\b"] = _loc2_;
       return this["\f\x02"]();

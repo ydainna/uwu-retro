@@ -1,10 +1,11 @@
 class dofus.aks.Aks extends dofus.utils.ApiElement
 {
    static var EVALUATE_AVERAGE_PING_ON_COMMANDS = 50;
-   var _bConnected = false;
-   var _bConnecting = false;
    static var HEX_CHARS = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"];
    static var CURRENT_IDENTITY_VERSION = 10;
+
+   var _bConnected = false;
+   var _bConnecting = false;
    var unknown = false;
    
    function Aks(oAPI)
@@ -12,10 +13,12 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       super();
       this.initialize(oAPI);
    }
-   function §\x1e\x1d\x04§()
+
+   function get isConnected()
    {
       return this._bConnected;
    }
+
    function initialize(oAPI)
    {
       super.initialize(oAPI);
@@ -72,24 +75,25 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       };
       this._xSocket.onConnect = function(bSuccess)
       {
-         aks.onConnect(_loc2_);
+         aks.onConnect(oAPI);
       };
       this._xSocket.onData = function(sData)
       {
-         aks.onData(_loc2_);
+         aks.onData(oAPI);
       };
       this._oLoader = new LoadVars();
       this._oLoader.onLoad = function(§\x1b\f\x07§)
       {
-         aks.onLoad(_loc2_);
+         aks.onLoad(oAPI);
       };
    }
-   function connect(§\x1a\x1c\x12§, §\x19\f\f§, §\x16\x11\x1b§)
+
+   function connect(sHost, nPort, bSaveHost)
    {
-      new org.flashdevelop.utils.FlashConnect.trace("connect " + _loc2_ + ":" + _loc3_,"dofus.aks.Aks::connect","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",185);
-      if(_loc4_ == undefined)
+      new org.flashdevelop.utils.FlashConnect.trace("connect " + sHost + ":" + nPort,"dofus.aks.Aks::connect","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",185);
+      if(bSaveHost == undefined)
       {
-         _loc4_ = true;
+         bSaveHost = true;
       }
       if(this._bConnected)
       {
@@ -100,28 +104,29 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
          return null;
       }
       this.api.ui.loadUIComponent("Waiting","Waiting",undefined,{bStayIfPresent:true});
-      if(_loc2_ == undefined)
+      if(sHost == undefined)
       {
-         _loc2_ = this.api.datacenter.Basics.serverHost;
+         sHost = this.api.datacenter.Basics.serverHost;
       }
-      else if(_loc4_)
+      else if(bSaveHost)
       {
-         this.api.datacenter.Basics.serverHost = _loc2_;
+         this.api.datacenter.Basics.serverHost = sHost;
       }
-      if(_loc3_ == undefined)
+      if(nPort == undefined)
       {
-         _loc3_ = this.api.datacenter.Basics.serverPort;
+         nPort = this.api.datacenter.Basics.serverPort;
       }
-      else if(_loc4_)
+      else if(bSaveHost)
       {
-         this.api.datacenter.Basics.serverPort = _loc3_;
+         this.api.datacenter.Basics.serverPort = nPort;
       }
       this._bConnecting = true;
       this._aLastPings = new Array();
-      var _loc5_ = this._xSocket.connect(_loc2_,_loc3_);
+      var _loc5_ = this._xSocket.connect(sHost,nPort);
       return _loc5_;
    }
-   function §softDisconnect§()
+
+   function softDisconnect()
    {
       if(this._bConnected)
       {
@@ -137,70 +142,73 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       this.resetKeys();
       this._bConnected = false;
    }
-   function disconnect(§\x16\x10\x1a§, bShowMessage, §\x16\x10\x1b§)
+
+   function disconnect(bReconnect, bShowMessage, bRecoTempo)
    {
       this.softDisconnect();
-      if(!_loc4_)
+      if(!bRecoTempo)
       {
-         this.onClose(_loc2_,_loc3_,true);
+         this.onClose(bReconnect,bShowMessage,true);
       }
       else
       {
-         ank.utils.Timer.setTimer(this.Deco,"disconnect",this,this.onClose,1000,[_loc2_,_loc3_,true]);
+         ank.utils.Timer.setTimer(this.Deco,"disconnect",this,this.onClose,1000,[bReconnect,bShowMessage,true]);
       }
    }
-   function send(sData, §\x16\x14\x1a§, §\x1b\f\x17§, §\x16\x0f\x0f§, §\x16\x0f\t§)
+
+   function send(sData, bWaiting, sWaitingMessage, bNoLimit, bNoCyphering)
    {
-      if(_loc2_ == undefined || _loc2_.length == 0)
+      if(sData == undefined || sData.length == 0)
       {
          return undefined;
       }
-      if(_loc5_ != true && _loc2_.length > dofus.Constants["\x18\x1a\x15"])
+      if(bNoLimit != true && sData.length > dofus.Constants.MAX_MESSAGE_LENGTH)
       {
-         _loc2_ = _loc2_.substring(0,dofus.Constants["\x18\x1a\x15"] - 1);
+         sData = sData.substring(0,dofus.Constants.MAX_MESSAGE_LENGTH - 1);
       }
-      this.api.kernel.GameManager["\x1b\x01\x17"]();
-      if(_loc3_ || _loc3_ == undefined)
+      this.api.kernel.GameManager.signalActivity();
+      if(bWaiting || bWaiting == undefined)
       {
-         if(_loc4_ != undefined)
+         if(sWaitingMessage != undefined)
          {
-            this.api.ui.loadUIComponent("WaitingMessage","WaitingMessage",{text:_loc4_},{bAlwaysOnTop:true,bForceLoad:true});
+            this.api.ui.loadUIComponent("WaitingMessage","WaitingMessage",{text:sWaitingMessage},{bAlwaysOnTop:true,bForceLoad:true});
          }
-         this["\x1e\b\x1c"] = _loc2_;
+         this._sDebug = sData;
          this.api.ui.loadUIComponent("Waiting","Waiting");
-         this["\x1c\x11\r"] = true;
+         this._isWaitingForData = true;
          if(this.api.datacenter.Basics.inGame && this._bAutoReco)
          {
-            ank.utils.Timer.setTimer(this.Lag,"lag",this,this["\x19\x19\x14"],Number(this.api.lang.getConfigText("DELAY_RECO_MESSAGE")));
+            ank.utils.Timer.setTimer(this.Lag,"lag",this,this.onLag,Number(this.api.lang.getConfigText("DELAY_RECO_MESSAGE")));
          }
       }
-      this.api.electron.onPacketSent(_loc2_);
+      this.api.electron.onPacketSent(sData);
       if(this.api.datacenter.Basics.inGame)
       {
-         _loc2_ = this.api.electron.applyPacketToSendPostProcessing(_loc2_);
+         sData = this.api.electron.applyPacketToSendPostProcessing(sData);
       }
-      if(dofus.Constants["\x17\x05\x17"])
+      if(dofus.Constants.DEBUG_DATAS)
       {
-         this.api.electron.debugRequest(true,_loc2_);
+         this.api.electron.debugRequest(true,sData);
       }
-      if(!_loc6_)
+      if(!bNoCyphering)
       {
-         _loc2_ = this["\x1a\x06\x17"](_loc2_);
+         sData = this.prepareData(sData);
       }
-      if(_loc2_.charAt(_loc2_.length - 1) != "\n")
+      if(sData.charAt(sData.length - 1) != "\n")
       {
-         _loc2_ += "\n";
+         sData += "\n";
       }
-      this._xSocket.send(_loc2_);
-      if(_loc3_ || _loc3_ == undefined)
+      this._xSocket.send(sData);
+      if(bWaiting || bWaiting == undefined)
       {
          this._nLastWaitingSend = 2363;
       }
-      if(dofus.Constants["\x17\x05\x17"] && dofus.Constants["\x17\x05\x18"])
+      if(dofus.Constants.DEBUG_DATAS && dofus.Constants.DEBUG_ENCRYPTION)
       {
-         new org.flashdevelop.utils.FlashConnect.trace("SND (C) " + _loc2_,com.ankamagames["\x1b\x10\x1d"].Logger["\x18\x14\x10"],"dofus.aks.Aks::send","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",313);
+         new org.flashdevelop.utils.FlashConnect.trace("SND (C) " + sData,com.ankamagames.tools.Logger.LEVEL_NETWORK,"dofus.aks.Aks::send","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",313);
       }
    }
+
    function §\x1a\x07\x10§(§\x1a\x10\x19§)
    {
       this._oDataProcessor.process(_loc2_);
@@ -236,7 +244,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
       return _loc5_;
    }
-   function §\x1a\x06\x17§(§\x1a\x0f\x06§)
+   function prepareData(§\x1a\x0f\x06§)
    {
       if(this["\x1d\x14\x16"] == 0 || (this["\x1d\x14\x16"] == undefined || _global.isNaN(this["\x1d\x14\x16"])))
       {
@@ -417,7 +425,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
       return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
    }
-   function §\x19\x19\x14§()
+   function onLag()
    {
       this._bLag = true;
       this.api.ui.loadUIComponent("WaitingMessage","WaitingMessage",{text:this.api.lang.getText("WAIT_FOR_SERVER")},{bAlwaysOnTop:true,bForceLoad:true});
@@ -486,24 +494,24 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
          ank.utils.Timer.removeTimer(this.Deco,"deco");
          this._bLag = false;
       }
-      if(dofus.Constants["\x17\x05\x17"] && dofus.Constants["\x17\x05\x18"])
+      if(dofus.Constants.DEBUG_DATAS && dofus.Constants.DEBUG_ENCRYPTION)
       {
-         new org.flashdevelop.utils.FlashConnect.trace("RCV (C) " + _loc2_,com.ankamagames["\x1b\x10\x1d"].Logger["\x18\x14\x10"],"dofus.aks.Aks::onData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",678);
+         new org.flashdevelop.utils.FlashConnect.trace("RCV (C) " + _loc2_,com.ankamagames.tools.Logger.LEVEL_NETWORK,"dofus.aks.Aks::onData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",678);
       }
       _loc2_ = this["\x1b\x13\x17"](_loc2_);
       this.api.electron.onPacketReceived(_loc2_);
-      if(dofus.Constants["\x17\x05\x17"])
+      if(dofus.Constants.DEBUG_DATAS)
       {
          this.api.electron.debugRequest(false,_loc2_);
       }
-      if(this["\x1c\x11\r"])
+      if(this._isWaitingForData)
       {
-         this["\x1c\x11\r"] = false;
+         this._isWaitingForData = false;
          this.api.ui.unloadUIComponent("Waiting");
          var _loc3_ = 8327 - this._nLastWaitingSend;
          if(_loc3_ > 100)
          {
-            new org.flashdevelop.utils.FlashConnect.trace("[Aks] (onData) " + this["\x1e\b\x1c"] + " (since " + _loc3_ + "ms)","dofus.aks.Aks::onData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",695);
+            new org.flashdevelop.utils.FlashConnect.trace("[Aks] (onData) " + this._sDebug + " (since " + _loc3_ + "ms)","dofus.aks.Aks::onData","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/aks/Aks.as",695);
          }
          this._aLastPings.push(_loc3_);
          if(this._aLastPings.length > dofus.aks.Aks.EVALUATE_AVERAGE_PING_ON_COMMANDS)
@@ -570,7 +578,7 @@ class dofus.aks.Aks extends dofus.utils.ApiElement
       }
       if(!bReconnect && dofus.kernel.FAST_SWITCHING_SERVER_REQUEST != undefined) //TODO: create variable in kernel
       {
-         this.api.kernel.onFastServerSwitchSuccess(); //TODO: create function in kernel
+         this.api.kernel.onFastServerSwitchFail(); //TODO: create function in kernel
       }
       if(this.api.datacenter.Basics.isLogged)
       {

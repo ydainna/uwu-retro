@@ -23,7 +23,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.AskCustomShortcut extends ank.gapi.ui.FlyWi
    }
    function destroy()
    {
-      this.api.ui.getUIComponent("Shortcuts")["\x1a\n\x15"]();
+      this.api.ui.getUIComponent("Shortcuts").aks_a_logs();
       this.api.kernel.KeyManager["\x16\x11\n"] = true;
    }
    function §\x18\n\x16§()

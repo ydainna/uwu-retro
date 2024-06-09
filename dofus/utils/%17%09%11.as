@@ -277,7 +277,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.ApiElement
    {
       return this["\x18\x02\t"]("MSR");
    }
-   function §\x18\x01\x18§()
+   function getTimeZoneText()
    {
       return this["\x18\x02\t"]("T");
    }

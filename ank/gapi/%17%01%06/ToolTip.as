@@ -6,7 +6,7 @@ class ank.gapi.§\x17\x01\x06§.ToolTip extends ank.gapi.§\x17\x01\x0f§.§\x1b
    {
       super();
    }
-   function §\x1a\x03§(§\x19\x1e\x1d§)
+   function §\x1a\x03§(oParams)
    {
       this["\x1e\x04\x1c"] = _loc2_;
       return this["\x06\x02"]();

@@ -96,7 +96,7 @@ class ank.battlefield.mc.§\x1a\x02\x19§ extends MovieClip
       }
       this["\x1e\x04\x07"][_loc2_] = _loc6_;
       this["\x1d\x14\x14"]++;
-      this["\x1a\n\x15"]();
+      this.aks_a_logs();
    }
    function remove(§\x1b\x18\n§)
    {
@@ -123,7 +123,7 @@ class ank.battlefield.mc.§\x1a\x02\x19§ extends MovieClip
    function §\x1a\f\r§(§\x18\x13\f§)
    {
       delete this["\x1e\x04\x07"][_loc2_];
-      this["\x1a\n\x15"]();
+      this.aks_a_logs();
    }
    function §\x1a\f\t§(§\x19\b\x18§)
    {
@@ -132,7 +132,7 @@ class ank.battlefield.mc.§\x1a\x02\x19§ extends MovieClip
          if(this["\x1e\x04\x07"][_loc3_].id == _loc2_)
          {
             delete this["\x1e\x04\x07"][_loc3_];
-            this["\x1a\n\x15"]();
+            this.aks_a_logs();
             break;
          }
       }

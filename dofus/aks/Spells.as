@@ -98,7 +98,7 @@ class dofus.aks.Spells extends dofus.aks.Handler
          while(_loc14_ < _loc10_.length)
          {
             var _loc15_ = _loc10_[_loc14_];
-            this.api.kernel["\x1b\x06\x10"]["\x1a\x19\x1a"](_loc6_,_loc15_,_loc7_);
+            this.api.kernel.SpellsBoostsManager["\x1a\x19\x1a"](_loc6_,_loc15_,_loc7_);
             _loc14_ = _loc14_ + 1;
          }
          _loc8_ = _loc8_ + 1;

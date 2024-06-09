@@ -163,7 +163,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
    {
       this._cChat["\x1a\x1a\x13"](_loc2_);
    }
-   function §\x1a\x1e\x17§(§\x1b\x05\x02§, §\x19\x1e\x1d§, §\x16\x12\x18§, §\x16\x0f\x01§)
+   function §\x1a\x1e\x17§(§\x1b\x05\x02§, oParams, §\x16\x12\x18§, §\x16\x0f\x01§)
    {
       if(this.api.datacenter.Game["\x18\x0f\x1b"] && this._mcRightPanel.bMouseSpriteRollover == true)
       {
@@ -275,7 +275,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
       {
          this._parent.onKillFocus();
       };
-      this._txtConsole.maxChars = dofus.Constants["\x18\x1a\x15"] + dofus.Constants["\x18\x1a\x16"];
+      this._txtConsole.maxChars = dofus.Constants.MAX_MESSAGE_LENGTH + dofus.Constants["\x18\x1a\x16"];
       ank.battlefield["\x16\t\t"].useCacheAsBitmapOnStaticAnim = this.api.lang.getConfigText("USE_CACHEASBITMAP_ON_STATICANIM");
       var _loc2_ = this.api.datacenter.Basics.forceFlashChat || (!this.api.kernel.OptionsManager.getOption("EnableWidescreenPanels") || !this.api.electron.isShowingWidescreenPanel);
       this.addToQueue({object:this,method:this.configureUseFlashChat,params:[_loc2_]});
@@ -415,7 +415,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
       this.drawBar();
       this.lpMaxChanged({value:this._oData.LPmax});
       this.lpChanged({value:this._oData.LP});
-      this.api.kernel.ChatManager["\x1a\n\x15"]();
+      this.api.kernel.ChatManager.aks_a_logs();
       dofus.graphics.gapi.ui["\x16\b\x1a"]["\x16\b\x1b"]["\x1a\x16\x1a"](this,this.api.kernel.OptionsManager.getOption("BannerGaugeMode"));
       this.updatePvPButtonState();
       if(this.api.kernel.OptionsManager.getOption("MovableBar"))
@@ -446,7 +446,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
          return undefined;
       }
       Selection.setFocus(this._txtConsole);
-      Selection.setSelection(this._txtConsole.text.length,dofus.Constants["\x18\x1a\x15"] + dofus.Constants["\x18\x1a\x16"]);
+      Selection.setSelection(this._txtConsole.text.length,dofus.Constants.MAX_MESSAGE_LENGTH + dofus.Constants["\x18\x1a\x16"]);
    }
    function §\x1a\x15\f§()
    {
@@ -1321,7 +1321,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
                   }
                   break;
                case "clock":
-                  this.gapi.showTooltip(this.api.kernel["\x19\b\x11"].time + "\n" + this.api.kernel["\x19\b\x11"]["\x17\x15\x1c"](),_loc2_.target,0,{bXLimit:true,bYLimit:false});
+                  this.gapi.showTooltip(this.api.kernel.NightManager.time + "\n" + this.api.kernel.NightManager["\x17\x15\x1c"](),_loc2_.target,0,{bXLimit:true,bYLimit:false});
             }
             if(!this.api.datacenter.Game.isFight)
             {

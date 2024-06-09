@@ -83,13 +83,13 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       this["\x18\x16\n"] = new ank.battlefield["\x18\x16\x0b"](this.createEmptyMovieClip("\x18\x16\x0b",this.getNextHighestDepth()));
       this.fightPointAnimManager = new dofus.managers.FightPointAnimManager(_loc6_);
    }
-   function §\x1a\x1a\r§(§\x1b\n\x10§, §\x19\x11\x17§, §\x18\x03\x19§)
+   function streamingMethod(§\x1b\n\x10§, §\x19\x11\x17§, §\x18\x03\x19§)
    {
       ank.battlefield.Constants["\x1b\x17\x02"] = _loc2_;
       ank.battlefield.Constants["\x1b\x0b\x10"] = _loc3_;
       ank.battlefield.Constants["\x1b\x0b\x0e"] = _loc4_;
    }
-   function §\x1a\x1a\x0e§(sName)
+   function setStreaming(sName)
    {
       ank.battlefield.Constants["\x1b\x0b\x0f"] = _loc2_;
    }

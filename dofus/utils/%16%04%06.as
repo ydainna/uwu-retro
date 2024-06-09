@@ -68,7 +68,7 @@ class dofus.utils.§\x16\x04\x06§ extends Object
       this["\x1e\x03\b"] = new dofus.datacenter.["\x17\x04\x1a"](this);
       this["\x1e\x04\x14"] = new dofus.aks.Aks(this);
       this["\x1e\x03\x13"] = _loc2_.BATTLEFIELD;
-      if(this["\x1e\x02\x17"].isStreaming && this["\x1e\x02\x17"]["\x1b\x0b\r"] == "explod")
+      if(this["\x1e\x02\x17"].isStreaming && this["\x1e\x02\x17"].update == "explod")
       {
          this["\x1e\x03\x13"].initialize(this["\x1e\x03\b"],dofus.Constants["\x19\x11\x19"],dofus.Constants["\x19\x11\x19"],dofus.Constants["\x15\x1b\x14"],this);
       }

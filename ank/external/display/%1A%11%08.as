@@ -1,14 +1,14 @@
-class ank.external.display.§\x1a\x11\b§ extends ank.external.§\x17\x0e\x11§
+class ank.external.display.ScreenResolution extends ank.external.§\x17\x0e\x11§
 {
-   function §\x1a\x11\b§()
+   function ScreenResolution()
    {
       super();
       ank..external.ExternalConnector.getInstance().addEventListener("onScreenResolutionError",this);
       ank..external.ExternalConnector.getInstance().addEventListener("onScreenResolutionSuccess",this);
    }
-   function §\x1a\f\x0f§()
+   function removeListeners()
    {
-      super["\x1a\f\x0f"]();
+      super.removeListeners();
       ank..external.ExternalConnector.getInstance().removeEventListener("onScreenResolutionError",this);
       ank..external.ExternalConnector.getInstance().removeEventListener("onScreenResolutionSuccess",this);
    }

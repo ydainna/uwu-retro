@@ -212,7 +212,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
    }
    function initData()
    {
-      this._mcTabViewer._btnShortcuts.enabled = this.api.kernel["\x1b\x1a\x11"];
+      this._mcTabViewer._btnShortcuts.enabled = this.api.kernel.XTRA_LANG_FILES_LOADED;
       var _loc2_ = this.api.kernel.OptionsManager;
       this._mcTabViewer._vsMusic.value = _loc2_.getOption("AudioMusicVol");
       this._mcTabViewer._vsSounds.value = _loc2_.getOption("AudioEffectVol");
@@ -393,7 +393,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
             this["\x16\x15\n"]();
             break;
          case "_btnClearCache":
-            this.api.kernel["\x16\x05\x19"]();
+            this.api.kernel.askClearCache();
             break;
          case "_btnGrid":
             this.api.kernel.OptionsManager.setOption("Grid",_loc2_.target.selected);
@@ -488,7 +488,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
             break;
          case "_btnChatTimestamp":
             this.api.kernel.OptionsManager.setOption("TimestampInChat",_loc2_.target.selected);
-            this.api.kernel.ChatManager["\x1a\n\x15"]();
+            this.api.kernel.ChatManager.aks_a_logs();
             break;
          case "_btnViewDicesDammages":
             this.api.kernel.OptionsManager.setOption("ViewDicesDammages",_loc2_.target.selected);
@@ -645,7 +645,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
             break;
          case "TimestampInChat":
             this._mcTabViewer._btnChatTimestamp.selected = _loc2_.value;
-            this.api.kernel.ChatManager["\x1a\n\x15"]();
+            this.api.kernel.ChatManager.aks_a_logs();
             break;
          case "AudioMusicMute":
             this._mcTabViewer._btnMuteMusic.selected = _loc2_.value;
