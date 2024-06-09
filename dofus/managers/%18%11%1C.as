@@ -21,7 +21,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.ApiElement
       this["\x1c\x05\x14"] = _loc2_;
       return this["\x1e\x13\t"]();
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.KeyManager["\x1e\f\x10"];
    }

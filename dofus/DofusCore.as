@@ -1,15 +1,16 @@
-class dofus.§\x17\t\r§ extends ank.utils.§\x1a\t\t§
+class dofus.DofusCore extends ank.utils.§\x1a\t\t§
 {
-   function §\x17\t\r§(§\x18\x1c\x01§)
+   function DofusCore(mcRoot)
    {
       super();
       System.security.allowDomain("*");
       getURL("FSCommand:" add "trapallkeys","true");
-      dofus["\x17\t\r"]._mcCore = _loc3_;
-      dofus["\x17\t\r"]._cCore = this;
-      _global["\x1b\f\x01"] = trace;
+      dofus.DofusCore._mcCore = mcRoot;
+      dofus.DofusCore._cCore = this;
+      _global.subtrace = trace;
    }
-   static function §\x17\x15\f§()
+
+   static function getClip()
    {
       if(_root.CORECONTAINER == undefined)
       {
@@ -17,45 +18,51 @@ class dofus.§\x17\t\r§ extends ank.utils.§\x1a\t\t§
       }
       return _root.CORECONTAINER;
    }
-   static function §\x17\x19\t§()
+
+   static function getInstance()
    {
-      return dofus["\x17\t\r"]._cCore;
+      return dofus.DofusCore._cCore;
    }
-   function §\x18\n\x11§()
+
+   function initStart()
    {
-      this["\x1a\x0b\x0f"]();
-      ank.utils.["\x17\x0e\x10"]["\x15\x1d\f"]();
-      this.addToQueue({object:this,method:this["\x15\x1e\x02"]});
+      this.registerAllClasses();
+      ank.utils.Extensions.addExtensions();
+      this.addToQueue({object:this,method:this.addNodes});
    }
-   function §\x15\x1e\x02§()
+
+   function addNodes()
    {
-      var _loc2_ = dofus["\x17\t\r"]["\x17\x15\f"]();
-      this["\x1d\x10\x1d"] = _loc2_.createEmptyMovieClip("\x1b\x0f\t",_loc2_.getNextHighestDepth());
-      this["\x1d\x10\x1d"]._visible = false;
+      var _loc2_ = dofus.DofusCore.getClip();
+      this._mcTMCC = _loc2_.createEmptyMovieClip("\x1b\x0f\t",_loc2_.getNextHighestDepth());
+      this._mcTMCC._visible = false;
       _loc2_.attachMovie("BATTLEFIELD","BATTLEFIELD",_loc2_.getNextHighestDepth());
       _loc2_.attachMovie("GAPIMain","GAPI",_loc2_.getNextHighestDepth());
       _loc2_.attachMovie("mask","MASK",_loc2_.getNextHighestDepth());
-      this.addToQueue({object:this,method:this["\x18\t\t"]});
+      this.addToQueue({object:this,method:this.initApi});
    }
-   function §\x18\t\t§()
+
+   function initApi()
    {
       new org.flashdevelop.utils.FlashConnect.trace("Etape 3","dofus.DofusCore::initApi","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/DofusCore.as",102);
       _global.api = new dofus.utils.getInstance();
       _global.api.initialize();
-      this.addToQueue({object:this,method:this["\x16\x1a\x15"]});
+      this.addToQueue({object:this,method:this.checkNodesAndContinue});
    }
-   function §\x16\x1a\x15§()
+
+   function checkNodesAndContinue()
    {
-      if(this["\x16\x1a\x14"]())
+      if(this.checkNodes())
       {
-         this["\x1b\t\x10"]();
+         this.startGame();
       }
       else
       {
-         this.addToQueue({object:this,method:this["\x16\x1a\x15"]});
+         this.addToQueue({object:this,method:this.checkNodesAndContinue});
       }
    }
-   function §\x16\x1a\x14§()
+
+   function checkNodes()
    {
       if(_global.api.gfx.initialize == undefined)
       {
@@ -71,21 +78,25 @@ class dofus.§\x17\t\r§ extends ank.utils.§\x1a\t\t§
       }
       return true;
    }
-   function §\x1b\t\x10§()
+
+   function startGame()
    {
       new org.flashdevelop.utils.FlashConnect.trace("Etape 5, fin","dofus.DofusCore::startGame","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/DofusCore.as",157);
       _global.api.kernel.start();
    }
-   function §\x17\x12\x06§()
+
+   function forceMouseOver()
    {
-      var _loc2_ = dofus["\x17\t\r"]["\x17\x15\f"]();
+      var _loc2_ = dofus.DofusCore.getClip();
       _loc2_.attachMovie("clipForceOver","_mcForceOver",1000,{_x:_loc2_._xmouse,_y:_loc2_._ymouse});
    }
-   function §\x18\x01\x15§()
+
+   function getTemporaryContainer()
    {
-      return this["\x1d\x10\x1d"];
+      return this._mcTMCC;
    }
-   function §\x1a\x0b\x0f§()
+
+   function registerAllClasses()
    {
       Object.registerClass("GAPILoader",ank.gapi.controls.Loader);
       Object.registerClass("UI_AskYesNoWithString",dofus.graphics.gapi.ui.AskYesNoWithString);

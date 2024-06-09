@@ -6,7 +6,7 @@ class dofus.§\x18\x03\x10§.battlefield.EffectIcon extends MovieClip
    function EffectIcon()
    {
       super();
-      _global["\x1b\f\x01"]("yahoo");
+      _global.subtrace("yahoo");
       this.initialize(this["\x1e\x0b\x11"],this["\x1d\x1b\x10"]);
    }
    function §\x19\x16§(§\x1b\x04\x11§)

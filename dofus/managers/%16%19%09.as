@@ -6,7 +6,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       dofus.managers.CharactersManager["\x1e\f\x10"] = this;
       super.initialize(oAPI);
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.CharactersManager["\x1e\f\x10"];
    }

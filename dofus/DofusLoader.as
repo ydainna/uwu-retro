@@ -518,7 +518,7 @@ _loc1_.reboot = function()
       this["\x1d\r\n"].unloadClip(_global["MODULE_" + dofus.Constants["\x18\x1d\x14"][_loc2_][4]]);
       _loc2_ = _loc2_ + 1;
    }
-   dofus["\x17\t\r"]["\x17\x15\f"]().removeMovieClip();
+   dofus.DofusCore.getClip().removeMovieClip();
    this["\x18\n\x07"](_root);
 };
 _loc1_.clearCache = function()
@@ -1083,15 +1083,15 @@ _loc1_["\x18\t\x11"] = function(§\x18\x1b\x14§)
 {
    Key.removeListener(this);
    var _loc3_ = null;
-   if((_loc3_ = dofus["\x17\t\r"].getInstance()) == undefined)
+   if((_loc3_ = dofus.DofusCore.getInstance()) == undefined)
    {
-      _loc3_ = new dofus["\x17\t\r"](_loc2_);
+      _loc3_ = new dofus.DofusCore(_loc2_);
       if(Key.isDown(Key.SHIFT))
       {
          Stage.scaleMode = "exactFit";
       }
    }
-   _loc3_["\x18\n\x11"]();
+   _loc3_.initStart();
    this["\x1c\x07\x04"] = false;
    this["\x1c\x0b\x17"] = false;
 };

@@ -21,7 +21,7 @@ class dofus.§\x18\x18\x0b§..TipsManager extends ank.utils.§\x1a\t\t§
       dofus.managers.TipsManager["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.TipsManager["\x1e\f\x10"];
    }

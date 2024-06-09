@@ -6,7 +6,7 @@ class dofus.§\x18\x18\x0b§.AreasManager extends dofus.utils.ApiElement
       super();
       dofus.managers.AreasManager["\x1e\f\x10"] = this;
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.AreasManager["\x1e\f\x10"];
    }

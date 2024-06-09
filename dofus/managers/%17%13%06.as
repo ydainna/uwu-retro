@@ -43,7 +43,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       this["\x1d\x18\x07"] = _loc2_;
       return this.lastSpellLaunch;
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.GameManager["\x1e\f\x10"];
    }
@@ -290,7 +290,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       this.api.gfx["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\r"]);
       this.api.ui["\x1a\x15\x19"](_loc2_,{width:25,height:25,x:15,y:15});
       this.api.datacenter.Basics.gfx_canLaunch = false;
-      dofus["\x17\t\r"].getInstance()["\x17\x12\x06"]();
+      dofus.DofusCore.getInstance().forceMouseOver();
    }
    function §\x1b\r\x06§()
    {
@@ -305,7 +305,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       this.api.gfx["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\r"]);
       this.api.ui.removeCursor();
       this.api.datacenter.Basics.gfx_canLaunch = false;
-      dofus["\x17\t\r"].getInstance()["\x17\x12\x06"]();
+      dofus.DofusCore.getInstance().forceMouseOver();
       return true;
    }
    function §\x1b\r\n§(§\x1a\x02\x06§, §\x16\x12\x1a§, §\x16\x0b\x1c§)
@@ -412,7 +412,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       else
       {
          this.api.datacenter.Basics.gfx_canLaunch = false;
-         dofus["\x17\t\r"].getInstance()["\x17\x12\x06"]();
+         dofus.DofusCore.getInstance().forceMouseOver();
       }
       this.api.ui["\x1a\x15\x1a"](!this.api.datacenter.Basics.gfx_canLaunch,dofus.Constants["\x17\x12\x04"]);
    }

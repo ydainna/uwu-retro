@@ -7,7 +7,7 @@ class dofus.§\x18\x18\x0b§.DebugManager extends dofus.utils.ApiElement
       dofus.managers.DebugManager["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.DebugManager["\x1e\f\x10"];
    }

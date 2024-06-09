@@ -5,7 +5,7 @@ class dofus.utils.§\x16\x04\x06§ extends Object
       super();
       dofus.utils.getInstance._oLastInstance = this;
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.utils.getInstance._oLastInstance;
    }
@@ -57,7 +57,7 @@ class dofus.utils.§\x16\x04\x06§ extends Object
    {
       this["\x1e\x02\x17"] = _global.CONFIG;
       this["\x1e\x04\x04"] = new dofus.utils.["\x17\t\x11"]();
-      var _loc2_ = dofus["\x17\t\r"]["\x17\x15\f"]();
+      var _loc2_ = dofus.DofusCore.getClip();
       this["\x1e\x06\x04"] = _loc2_.GAPI;
       this["\x1e\x06\x04"].api = this;
       new org.flashdevelop.utils.FlashConnect.trace("[Api] (initializa) " + this["\x1e\x06\x04"].api,"dofus.utils.Api::initialize","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/utils/Api.as",144);
@@ -147,7 +147,7 @@ class dofus.utils.§\x16\x04\x06§ extends Object
          ref["\x19\x17\x12"](true,_loc5_,nCheckID);
          _loc2_.removeMovieClip();
       };
-      var _loc6_ = dofus["\x17\t\r"].getInstance()["\x18\x01\x15"]();
+      var _loc6_ = dofus.DofusCore.getInstance().getTemporaryContainer();
       var _loc7_ = _loc6_.createEmptyMovieClip("FC" + nCheckID,_loc6_.getNextHighestDepth());
       var _loc8_ = new MovieClipLoader();
       _loc8_.addListener(_loc5_);

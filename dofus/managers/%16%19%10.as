@@ -54,7 +54,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       this["\x1d\x16\b"] = _loc2_;
       return this["\x1e\x1a\r"]();
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.ChatManager["\x1e\f\x10"];
    }

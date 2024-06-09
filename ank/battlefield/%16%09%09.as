@@ -72,7 +72,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
          ank.utils.Logger.err("BattleField -> Init datacenter impossible");
          this["\x19\x19\x02"]();
       }
-      ank.utils.["\x17\x0e\x10"]["\x15\x1d\f"]();
+      ank.utils.Extensions.addExtensions();
       if(_global.GAC == undefined)
       {
          _global.GAC = new ank.battlefield["\x18\x03\x01"]();

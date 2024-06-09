@@ -73,7 +73,7 @@ class dofus.§\x18\x18\x0b§.NightManager
    {
       return this["\x1c\r\x01"]["\x17\x16\x14"](_loc2_);
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.NightManager["\x1e\f\x10"];
    }

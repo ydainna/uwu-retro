@@ -5,14 +5,14 @@ class ank.utils.§\x1a\x04\t§
    }
    static function §\x17\x16\x10§(sText, §\x16\x03\x1d§)
    {
-      ank.utils.["\x17\x0e\x10"]["\x15\x1d\f"]();
+      ank.utils.Extensions.addExtensions();
       var _loc4_ = _loc2_.split("");
       var _loc5_ = ank.utils.PatternDecoder["\x17\x05\x1d"](_loc4_,_loc3_).join("");
       return _loc5_;
    }
    static function §\x16\x1d\x15§(§\x1b\x0b\t§, §\x17\x13\f§, §\x1b\x01\x1c§)
    {
-      ank.utils.["\x17\x0e\x10"]["\x15\x1d\f"]();
+      ank.utils.Extensions.addExtensions();
       var _loc5_ = _loc2_.split("");
       var _loc6_ = new Object();
       _loc6_.m = _loc3_ == "m";

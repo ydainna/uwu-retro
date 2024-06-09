@@ -7,7 +7,7 @@ class ank.utils.§\x17\x04\f§ extends Object
    {
       super();
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return ank.utils.["\x17\x04\f"]["\x1c\x11\t"];
    }

@@ -15,7 +15,7 @@ class ank.external.ExternalConnector extends LocalConnection
       this.connect(this["\x1e\b\r"]);
       ank.utils.Timer.setTimer(this,"externalconnector",this,this.initialize,100);
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       if(ank..external.ExternalConnector._oInstance == undefined)
       {

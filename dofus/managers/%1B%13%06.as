@@ -14,7 +14,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x13\x06§
    {
       return _global.api;
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       if(!dofus.managers.UIdManager._self)
       {

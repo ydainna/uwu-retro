@@ -3,7 +3,7 @@ class dofus..sounds.§\x16\x07\b§
    function §\x16\x07\b§()
    {
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       if(dofus.sounds["\x16\x07\b"].instance == null)
       {

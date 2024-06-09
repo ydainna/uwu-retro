@@ -21,7 +21,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
       }
       return _loc2_;
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.TutorialManager["\x1e\f\x10"];
    }

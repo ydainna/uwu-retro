@@ -22,7 +22,7 @@ class dofus.§\x18\x18\x0b§.SpellsBoostsManager extends dofus.utils.ApiElement
       dofus.managers.SpellsBoostsManager["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.SpellsBoostsManager["\x1e\f\x10"];
    }

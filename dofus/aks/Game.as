@@ -355,7 +355,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          this.api.kernel.GameManager["\x1b\t\x11"]();
          if(this.api.gfx["\x1a\x0e\x16"] == undefined)
          {
-            dofus["\x17\t\r"].getInstance()["\x17\x12\x06"]();
+            dofus.DofusCore.getInstance().forceMouseOver();
          }
          this.api.gfx["\x18\x18\x15"]["\x1a\r\x1b"]();
       }

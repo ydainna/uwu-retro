@@ -10,7 +10,7 @@ class dofus.§\x18\x18\x0b§.MountParksManager extends dofus.utils.ApiElement
    {
       super.initialize(oAPI);
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.MountParksManager["\x1e\f\x10"];
    }

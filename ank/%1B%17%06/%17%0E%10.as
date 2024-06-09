@@ -1,12 +1,12 @@
-class ank.utils.§\x17\x0e\x10§
+class ank.utils.Extensions
 {
    static var §\x16\x0b\x0f§ = false;
-   function §\x17\x0e\x10§()
+   function Extensions()
    {
    }
-   static function §\x15\x1d\f§()
+   static function addExtensions()
    {
-      if(ank.utils.["\x17\x0e\x10"]["\x16\x0b\x0f"] == true)
+      if(ank.utils.Extensions["\x16\x0b\x0f"] == true)
       {
          return true;
       }
@@ -39,7 +39,7 @@ class ank.utils.§\x17\x0e\x10§
       _loc4_.end = _loc3_.end;
       _loc4_["\x1a\x05\n"] = _loc3_["\x1a\x05\n"];
       _loc4_["\x1b\n\x1a"] = _loc3_["\x1b\n\x1a"];
-      ank.utils.["\x17\x0e\x10"]["\x16\x0b\x0f"] = true;
+      ank.utils.Extensions["\x16\x0b\x0f"] = true;
       return true;
    }
 }

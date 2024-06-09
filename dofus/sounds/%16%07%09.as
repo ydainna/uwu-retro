@@ -177,11 +177,11 @@ class dofus..sounds.§\x16\x07\t§ extends dofus.utils.ApiElement
       }
       dofus.sounds.AudioManager["\x1c\x05\x07"] = true;
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       if(!dofus.sounds.AudioManager["\x1c\x05\x07"])
       {
-         new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.InvalidOperationException(null,"\x16\x07\t","\x17\x19\t","Can\'t request an AudioManager\'s instance before initializing it."),"dofus.sounds.AudioManager::getInstance","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/sounds/AudioManager.as",238);
+         new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.InvalidOperationException(null,"\x16\x07\t",".getInstance","Can\'t request an AudioManager\'s instance before initializing it."),"dofus.sounds.AudioManager::getInstance","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/sounds/AudioManager.as",238);
          return null;
       }
       if(dofus.sounds.AudioManager.instance == null)

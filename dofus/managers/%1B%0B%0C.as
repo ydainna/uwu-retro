@@ -8,7 +8,7 @@ class dofus.§\x18\x18\x0b§.StreamingDisplayManager extends dofus.utils.ApiElem
       super();
       this["\x18\t\x10"]();
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       if(dofus.managers.StreamingDisplayManager._self == null)
       {

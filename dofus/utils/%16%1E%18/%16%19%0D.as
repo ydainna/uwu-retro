@@ -560,7 +560,7 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
    }
    function §\x1a\x04\x01§(s)
    {
-      ank.utils.["\x17\x0e\x10"]["\x15\x1d\f"]();
+      ank.utils.Extensions.addExtensions();
       var _loc3_ = this.api.lang.getText("INLINE_VARIABLE_POSITION").split(",");
       _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc3_,"[" + this.api.datacenter.["\x18\x18\x0e"].x + ", " + this.api.datacenter.["\x18\x18\x0e"].y + "]");
       var _loc4_ = this.api.lang.getText("INLINE_VARIABLE_AREA").split(",");

@@ -47,7 +47,7 @@ class dofus.§\x1a\x0f\x1a§ extends dofus.utils.ApiElement
    {
       dofus["\x1a\x0f\x1a"]["\x1a\t\b"] = new Array();
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus["\x1a\x0f\x1a"]["\x19\x02\x1a"];
    }

@@ -20,7 +20,7 @@ class dofus.§\x18\x18\x0b§.MapsServersManager extends dofus.§\x18\x18\x0b§.�
       this["\x1c\x02\f"] = _loc2_;
       return this["\x1e\x1c\x1b"]();
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return dofus.managers.MapsServersManager["\x1e\f\x10"];
    }

@@ -69,7 +69,7 @@ class ank.utils.§\x1b\x10\x05§ extends Object
       delete _loc2_.__ANKTIMERID__;
       delete ank.utils.Timer["\x1e\x03\x17"][_loc3_][_loc4_];
    }
-   static function §\x17\x19\t§()
+   static function getInstance()
    {
       return ank.utils.Timer["\x1e\x0e\x1d"];
    }

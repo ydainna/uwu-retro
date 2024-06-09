@@ -22,7 +22,7 @@ if(!dofus.managers.AdminManager)
    {
       super();
       dofus.managers.AdminManager["\x1e\f\x10"] = this;
-   }.getInstance = function §\x17\x19\t§()
+   }.getInstance = function getInstance()
    {
       return dofus.managers.AdminManager["\x1e\f\x10"];
    };
