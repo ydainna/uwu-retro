@@ -8,7 +8,7 @@ class ank.utils.§\x17\x0e\r§ extends Object
    function initialize(§\x1b\x18\n§)
    {
       this.clear();
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function clear(§\x1b\x18\n§)
    {

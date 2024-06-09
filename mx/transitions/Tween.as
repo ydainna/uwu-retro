@@ -1,10 +1,10 @@
-class §\x19\x02\x19§.transitions.Tween
+class mx.transitions.Tween
 {
-   static var __initBeacon = eval("\x19\x02\x19").transitions.OnEnterFrameBeacon.init();
-   static var __initBroadcaster = eval("\x19\x02\x19").transitions.BroadcasterMX.initialize(eval("\x19\x02\x19").transitions.Tween.prototype,true);
+   static var __initBeacon = mx.transitions.OnEnterFrameBeacon.init();
+   static var __initBroadcaster = mx.transitions.BroadcasterMX.initialize(mx.transitions.Tween.prototype,true);
    function Tween(§\x19\x11\x13§, §\x1a\x07\x1b§, func, begin, finish, §\x17\n\x14§, useSeconds)
    {
-      eval("\x19\x02\x19").transitions.OnEnterFrameBeacon.init();
+      mx.transitions.OnEnterFrameBeacon.init();
       if(!arguments.length)
       {
          return undefined;

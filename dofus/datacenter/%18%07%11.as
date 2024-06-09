@@ -171,7 +171,7 @@ class dofus.§\x17\x04\x19§.§\x18\x07\x11§ extends Object
    function initialize(§\x19\b\x0b§)
    {
       this.api = _global.api;
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this["\x1d\x17\x01"] = _loc2_;
       var _loc3_ = this.api.lang["\x17\x18\x1a"](_loc2_);
       this["\x1e\x0b\x06"] = _loc3_.n;

@@ -12,7 +12,7 @@ class dofus.§\x18\x18\x0b§.§\x17\f\t§ extends dofus.utils.ApiElement
       this["\x1e\x05\x1a"] = _loc3_;
       this._eaEffects = new ank.utils.ExtendedArray();
       this._eaEffects.addEventListener("modelChanged",this);
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function §\x17\x17\x04§()
    {

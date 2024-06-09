@@ -94,7 +94,7 @@ class dofus.§\x17\x04\x19§.Job extends Object
    }
    function initialize(§\x19\b\x0b§, §\x17\x0b\x14§, §\x1a\x01\b§)
    {
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this.api = _global.api;
       this["\x1d\x17\x01"] = _loc2_;
       this["\x1c\x10\r"] = _loc3_;

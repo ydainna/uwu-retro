@@ -1,4 +1,4 @@
-class §\x19\x02\x19§.transitions.easing.Strong
+class mx.transitions.easing.Strong
 {
    function Strong()
    {

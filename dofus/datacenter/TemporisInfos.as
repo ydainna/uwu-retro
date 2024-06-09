@@ -4,7 +4,7 @@ class dofus.§\x17\x04\x19§.TemporisInfos extends Object
    {
       super();
       this.api = _global.api;
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this.initialize(false,nMaxTempokens);
    }
    function get temporisName()

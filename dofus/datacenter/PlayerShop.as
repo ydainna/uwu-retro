@@ -17,6 +17,6 @@ class dofus.§\x17\x04\x19§.PlayerShop extends Object
    }
    function initialize()
    {
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
 }

@@ -1,4 +1,4 @@
-class §\x19\x02\x19§.transitions.BroadcasterMX
+class mx.transitions.BroadcasterMX
 {
    function BroadcasterMX()
    {
@@ -9,8 +9,8 @@ class §\x19\x02\x19§.transitions.BroadcasterMX
       {
          delete _loc2_.broadcastMessage;
       }
-      _loc2_.addListener = eval("\x19\x02\x19").transitions.BroadcasterMX.prototype.addListener;
-      _loc2_.removeListener = eval("\x19\x02\x19").transitions.BroadcasterMX.prototype.removeListener;
+      _loc2_.addListener = mx.transitions.BroadcasterMX.prototype.addListener;
+      _loc2_.removeListener = mx.transitions.BroadcasterMX.prototype.removeListener;
       if(!dontCreateArray)
       {
          _loc2_._listeners = new Array();
@@ -21,7 +21,7 @@ class §\x19\x02\x19§.transitions.BroadcasterMX
       this.removeListener(_loc2_);
       if(this.broadcastMessage == undefined)
       {
-         this.broadcastMessage = eval("\x19\x02\x19").transitions.BroadcasterMX.prototype.broadcastMessage;
+         this.broadcastMessage = mx.transitions.BroadcasterMX.prototype.broadcastMessage;
       }
       return this._listeners.push(_loc2_);
    }

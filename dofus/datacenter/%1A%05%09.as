@@ -23,7 +23,7 @@ class dofus.§\x17\x04\x19§.§\x1a\x05\t§ extends ank.battlefield.§\x17\x04\x
          this["\x1d\x12\x0e"] = this.api.datacenter.Player.MP;
       }
       AsBroadcaster.initialize(this);
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function updateLP(§\x17\t\x01§)
    {

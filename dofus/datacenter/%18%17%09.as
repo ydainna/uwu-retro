@@ -20,9 +20,9 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
    function initialize(oAPI)
    {
       super.initialize(oAPI);
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this["\x16\x1b\x11"]();
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function §\x16\x1b\x11§()
    {

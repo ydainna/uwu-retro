@@ -432,7 +432,7 @@ class ank.gapi.§\x17\x13\n§ extends ank.utils.§\x1a\t\t§
    {
       this.clear();
       ank.gapi.styles["\x1b\x0b\x14"]["\x18\x16\x14"](ank.gapi.styles["\x17\x06\x05"]);
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function §\x15\x1d\x07§()
    {

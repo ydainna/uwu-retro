@@ -1,4 +1,4 @@
-class §\x19\x02\x19§.transitions.easing.Back
+class mx.transitions.easing.Back
 {
    function Back()
    {

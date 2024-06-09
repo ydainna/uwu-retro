@@ -195,7 +195,7 @@ class dofus.§\x17\x04\x19§.Game extends Object
    }
    function initialize()
    {
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this.api = _global.api;
       this["\x1c\x07\x17"] = false;
       this["\x1d\x1b\x02"] = 0;

@@ -89,7 +89,7 @@ class ank.battlefield.§\x1a\x12\x1d§
             _loc12_._alpha = _loc6_ == undefined ? 100 : _loc6_;
             if(bAnimate)
             {
-               ank.utils.TweenAnimation.scale(_loc12_,eval("\x19\x02\x19").transitions.easing.Back.easeOut,30,100,0.1,true);
+               ank.utils.TweenAnimation.scale(_loc12_,mx.transitions.easing.Back.easeOut,30,100,0.1,true);
             }
          }
          else if(_loc10_)

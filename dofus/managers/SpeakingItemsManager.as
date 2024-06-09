@@ -42,7 +42,7 @@ class dofus.§\x18\x18\x0b§.SpeakingItemsManager extends dofus.utils.ApiElement
    function initialize(oAPI)
    {
       super.initialize(oAPI);
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this["\x17\x13\x12"](true);
    }
    function §\x05\x05§()

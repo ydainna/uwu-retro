@@ -19,7 +19,7 @@ class ank.utils.ExtendedArray extends Array
    }
    function initialize(§\x1b\x18\n§)
    {
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function §\x18\x0e\t§()
    {

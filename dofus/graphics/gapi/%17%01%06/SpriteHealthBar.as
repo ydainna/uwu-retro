@@ -71,7 +71,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpriteHealthBar extends dofus
    }
    function animHealthBar(§\x18\x1b\f§, nCurrentValue, nNewValue)
    {
-      ank.utils.TweenAnimation.width(_loc2_,eval("\x19\x02\x19").transitions.easing.Strong.easeIn,nCurrentValue,nNewValue,0.5,true);
+      ank.utils.TweenAnimation.width(_loc2_,mx.transitions.easing.Strong.easeIn,nCurrentValue,nNewValue,0.5,true);
    }
    function setWholeBarWidth()
    {

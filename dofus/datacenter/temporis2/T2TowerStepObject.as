@@ -8,7 +8,7 @@ class dofus.§\x17\x04\x19§.temporis2.T2TowerStepObject
       this._bIsKeyFound = bIsKeyFound;
       this._bIsCompletedByPlayer = bIsCompletedByPlayer;
       this._bIsHintVisible = bIsHintVisible;
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function §\x1e\x1c\x05§()
    {

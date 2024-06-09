@@ -12,6 +12,6 @@ class dofus.§\x17\x04\x19§.§\x18\x1e\b§
    {
       this["\x1e\t\x1b"] = _loc2_;
       this["\x1d\x16\x15"] = _loc3_;
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
 }

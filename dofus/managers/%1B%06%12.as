@@ -10,7 +10,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x06\x12§
       this.api = _loc2_.api;
       this.clear();
       this["\x1e\x05\x17"] = new Object();
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function clear()
    {

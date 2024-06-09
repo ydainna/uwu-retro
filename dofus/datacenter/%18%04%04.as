@@ -4,7 +4,7 @@ class dofus.§\x17\x04\x19§.§\x18\x04\x04§ extends Object
    {
       super();
       this.api = _global.api;
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this.initialize(false,_loc3_,_loc4_,_loc5_,_loc6_,_loc7_,_loc8_);
       this["\x1c\x0f\x18"] = new ank.utils.ExtendedArray();
       this["\x1c\x10\x10"] = new ank.utils.ExtendedArray();

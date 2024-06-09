@@ -58,7 +58,7 @@ class dofus.§\x17\x04\x19§.Exchange extends Object
    }
    function initialize(§\x19\x06\n§)
    {
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this["\x1d\x15\x18"] = _loc2_;
       this["\x1c\x0f\x17"] = new ank.utils.ExtendedArray();
       this["\x1c\x0f\t"] = new ank.utils.ExtendedArray();

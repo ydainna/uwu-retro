@@ -9,7 +9,7 @@ class ank.battlefield.mc.§\x1b\x07\x04§ extends MovieClip
    function §\x1b\x07\x04§(§\x16\b\b§, §\x1a\x11\x1b§, d)
    {
       super();
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this.initialize(_loc3_,_loc4_,_loc5_);
    }
    function set forcedXScale(nForcedXScale)

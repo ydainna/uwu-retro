@@ -24,7 +24,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
    function initialize(§\x19\x12\x11§, §\x1a\x1c\x01§, §\x1b\x04\f§, §\x1a\x0f\b§, oAPI)
    {
       super.initialize(_loc3_,_loc4_,_loc5_,_loc6_,oAPI);
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this["\x1e\x02\t"] = oAPI;
    }
    function §\x15\x1e\x16§(sID, §\x1b\f\x15§, nTypePoint)

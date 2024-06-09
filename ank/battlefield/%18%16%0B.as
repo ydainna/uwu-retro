@@ -57,7 +57,7 @@ class ank.battlefield.§\x18\x16\x0b§ extends MovieClip
    }
    function initialize(§\x18\x1b\f§)
    {
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       ank.battlefield["\x18\x16\x0b"]._aMovieClipLoader = new Array();
       this._mcMainContainer = _loc2_;
    }

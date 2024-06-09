@@ -36,7 +36,7 @@ class ank.battlefield.§\x17\x04\x19§.§\x1b\x07\x04§ extends Object
       this["\x1c\f\x07"] = true;
       this["\x1c\x02\x19"] = false;
       this["\x1c\x10\x17"] = new ank.utils.["\x17\x0e\r"]();
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this["\x1e\r\x04"] = new Object();
       this._nCreationInstant = 4382;
    }

@@ -166,7 +166,7 @@ class ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§ extends ank.utils.§\x1a\t\t§
          this.boundingBox_mc._visible = false;
          this.boundingBox_mc._width = this.boundingBox_mc._height = 0;
       }
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function getStyle()
    {

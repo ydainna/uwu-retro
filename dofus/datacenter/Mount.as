@@ -4,7 +4,7 @@ class dofus.§\x17\x04\x19§.Mount extends Object
    function Mount(nModelID, nChevauchorGfxID, bNewBorn)
    {
       super();
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this["\x19\x06\x19"] = bNewBorn;
       this.modelID = nModelID;
       this["\x1c\x11\x16"] = _global.api.lang["\x17\x1c\x0b"](this.modelID);

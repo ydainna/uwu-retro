@@ -21,7 +21,7 @@ class dofus.§\x17\x04\x19§.ServerInformations extends Object
    function initialize()
    {
       this.api = _global.api;
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
    }
    function §\x1a\x04\x02§(§\x1b\x19\x1b§)
    {

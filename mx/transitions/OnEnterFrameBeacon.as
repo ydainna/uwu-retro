@@ -1,4 +1,4 @@
-class §\x19\x02\x19§.transitions.OnEnterFrameBeacon
+class mx.transitions.OnEnterFrameBeacon
 {
    function OnEnterFrameBeacon()
    {
@@ -8,7 +8,7 @@ class §\x19\x02\x19§.transitions.OnEnterFrameBeacon
       var _loc2_ = _global.MovieClip;
       if(!_root.__OnEnterFrameBeacon)
       {
-         eval("\x19\x02\x19").transitions.BroadcasterMX.initialize(_loc2_);
+         mx.transitions.BroadcasterMX.initialize(_loc2_);
          var _loc3_ = _root.createEmptyMovieClip("__OnEnterFrameBeacon",9876);
          _loc3_.onEnterFrame = function()
          {

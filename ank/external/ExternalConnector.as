@@ -10,7 +10,7 @@ class ank.external.ExternalConnector extends LocalConnection
    function ExternalConnector()
    {
       super();
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this["\x1e\b\r"] = ank..external.ExternalConnector["\x16\x1e\x0f"] + new Date().getTime() + random(100000);
       this.connect(this["\x1e\b\r"]);
       ank.utils.Timer.setTimer(this,"externalconnector",this,this.initialize,100);

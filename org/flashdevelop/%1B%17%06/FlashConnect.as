@@ -9,16 +9,16 @@ class §\x1a\x01\x1a§.flashdevelop.utils.FlashConnect
    }
    static function send(§\x18\x1c\x17§)
    {
-      if(eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.messages == null)
+      if(org.flashdevelop.utils.FlashConnect.messages == null)
       {
-         eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.initialize();
+         org.flashdevelop.utils.FlashConnect.initialize();
       }
-      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.messages.push(_loc2_);
+      org.flashdevelop.utils.FlashConnect.messages.push(_loc2_);
    }
    static function trace(§\x1b\x17\x16§, level)
    {
-      var _loc4_ = eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.createMsgNode(_loc2_.toString(),level);
-      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.send(_loc4_);
+      var _loc4_ = org.flashdevelop.utils.FlashConnect.createMsgNode(_loc2_.toString(),level);
+      org.flashdevelop.utils.FlashConnect.send(_loc4_);
    }
    static function mtrace(§\x1b\x17\x16§, method, §\x1a\x04\x06§, line)
    {
@@ -27,37 +27,37 @@ class §\x1a\x01\x1a§.flashdevelop.utils.FlashConnect
          _loc4_ = "~/" + _loc4_;
       }
       var _loc6_ = _loc4_ + ":" + line + ":" + _loc2_;
-      new org.flashdevelop.utils.FlashConnect.trace(_loc6_,eval("\x1a\x01\x1a").flashdeveloputils..TraceLevel.DEBUG);
+      new org.flashdevelop.utils.FlashConnect.trace(_loc6_,org.flashdevelop.utils.TraceLevel.DEBUG);
    }
    static function initialize()
    {
-      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.counter = 0;
-      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.messages = new Array();
-      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.socket = new XMLSocket();
-      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.socket.onData = function(§\x17\x04\x18§)
+      org.flashdevelop.utils.FlashConnect.counter = 0;
+      org.flashdevelop.utils.FlashConnect.messages = new Array();
+      org.flashdevelop.utils.FlashConnect.socket = new XMLSocket();
+      org.flashdevelop.utils.FlashConnect.socket.onData = function(§\x17\x04\x18§)
       {
-         eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.onReturnData(_loc2_);
+         org.flashdevelop.utils.FlashConnect.onReturnData(_loc2_);
       };
-      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.socket.onConnect = function(success)
+      org.flashdevelop.utils.FlashConnect.socket.onConnect = function(success)
       {
          if(_loc2_)
          {
-            eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.status = 1;
+            org.flashdevelop.utils.FlashConnect.status = 1;
          }
          else
          {
-            eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.status = -1;
+            org.flashdevelop.utils.FlashConnect.status = -1;
          }
-         eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.onConnection();
+         org.flashdevelop.utils.FlashConnect.onConnection();
       };
-      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect["\x18\f\x05"] = _global.setInterval(eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.sendStack,50);
-      eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.socket.connect(eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.host,eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.port);
+      org.flashdevelop.utils.FlashConnect["\x18\f\x05"] = _global.setInterval(org.flashdevelop.utils.FlashConnect.sendStack,50);
+      org.flashdevelop.utils.FlashConnect.socket.connect(org.flashdevelop.utils.FlashConnect.host,org.flashdevelop.utils.FlashConnect.port);
    }
    static function createMsgNode(§\x18\x1c\x17§, level)
    {
       if(_global.isNaN(level))
       {
-         level = eval("\x1a\x01\x1a").flashdeveloputils..TraceLevel.DEBUG;
+         level = org.flashdevelop.utils.TraceLevel.DEBUG;
       }
       var _loc4_ = new XMLNode(1,null);
       var _loc5_ = new XMLNode(3,_global.escape(_loc2_));
@@ -69,28 +69,28 @@ class §\x1a\x01\x1a§.flashdevelop.utils.FlashConnect
    }
    static function sendStack()
    {
-      if(eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.messages.length > 0 && eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.status == 1)
+      if(org.flashdevelop.utils.FlashConnect.messages.length > 0 && org.flashdevelop.utils.FlashConnect.status == 1)
       {
          var _loc2_ = new XML();
          var _loc3_ = _loc2_.createElement("flashconnect");
-         while(eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.messages.length != 0)
+         while(org.flashdevelop.utils.FlashConnect.messages.length != 0)
          {
-            eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.counter++;
-            if(eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.counter > eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.limit)
+            org.flashdevelop.utils.FlashConnect.counter++;
+            if(org.flashdevelop.utils.FlashConnect.counter > org.flashdevelop.utils.FlashConnect.limit)
             {
-               _global.clearInterval(eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect["\x18\f\x05"]);
+               _global.clearInterval(org.flashdevelop.utils.FlashConnect["\x18\f\x05"]);
                var _loc4_ = new String("FlashConnect aborted. You have reached the limit of maximum messages.");
-               var _loc5_ = eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.createMsgNode(_loc4_,eval("\x1a\x01\x1a").flashdeveloputils..TraceLevel.ERROR);
+               var _loc5_ = org.flashdevelop.utils.FlashConnect.createMsgNode(_loc4_,org.flashdevelop.utils.TraceLevel.ERROR);
                _loc3_.appendChild(_loc5_);
-               eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.messages = new Array();
+               org.flashdevelop.utils.FlashConnect.messages = new Array();
                break;
             }
-            var _loc6_ = XMLNode(eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.messages.shift());
+            var _loc6_ = XMLNode(org.flashdevelop.utils.FlashConnect.messages.shift());
             _loc3_.appendChild(_loc6_);
          }
          _loc2_.appendChild(_loc3_);
-         eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.socket.send(_loc2_);
-         eval("\x1a\x01\x1a").flashdeveloputils..FlashConnect.counter = 0;
+         org.flashdevelop.utils.FlashConnect.socket.send(_loc2_);
+         org.flashdevelop.utils.FlashConnect.counter = 0;
       }
    }
 }

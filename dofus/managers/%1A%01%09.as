@@ -19,7 +19,7 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.ApiElement
    function initialize(oAPI)
    {
       super.initialize(oAPI);
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this["\x1e\x0b\b"] = _global[dofus.Constants.GLOBAL_SO_OPTIONS_NAME];
       if(this["\x1e\x0b\b"].data.loaded == undefined)
       {

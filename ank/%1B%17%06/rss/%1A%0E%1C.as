@@ -3,7 +3,7 @@ class ank.utils.rss.RSSLoader extends XML
    function RSSLoader()
    {
       super();
-      eval("\x19\x02\x19")["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
+      mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this.ignoreWhite = true;
       this.initialize();
    }
