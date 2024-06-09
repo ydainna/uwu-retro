@@ -53,7 +53,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.GridInventoryViewer extends d
       this["\x1e\x03\n"] = this._cgGrid;
       this.addToQueue({object:this,method:this.addListeners});
       super.createChildren();
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
    }
    function addListeners()
@@ -73,7 +73,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.GridInventoryViewer extends d
    function initTexts()
    {
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.modelChanged();
       this.kamaChanged({value:this["\x1e\x04\x02"].Kama});

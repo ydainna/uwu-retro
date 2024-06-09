@@ -25,7 +25,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.GameOver extends dofus.§\x18\x03\x10§.gap
       var ref = this;
       this["\x1c\n\x15"].onRelease = function()
       {
-         ref.api.kernel["\x16\x18\x1b"](true);
+         ref.api.kernel.changeServer(true);
       };
    }
    function §\x18\t\n§()

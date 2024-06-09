@@ -51,7 +51,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Storage extends dofus.§\x18\x03\x10§.gapi
          this["\x1e\x06\x13"]._visible = false;
       }
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this["\x18\x06\x0f"](true);
    }
@@ -87,7 +87,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Storage extends dofus.§\x18\x03\x10§.gapi
          this["\x1e\x10\x12"].title = this.api.lang.getText("MY_MOUNT");
       }
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this["\x1c\x06\x14"] == true)
       {

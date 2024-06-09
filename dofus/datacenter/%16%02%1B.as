@@ -1,7 +1,7 @@
-class dofus.§\x17\x04\x19§.§\x16\x02\x1b§ implements com.ankamagames.§\x18\f\x03§.§\x18\b\x07§
+class dofus.§\x17\x04\x19§.Alignment implements com.ankamagames.§\x18\f\x03§.§\x18\b\x07§
 {
    var §\x17\x0f\x05§ = false;
-   function §\x16\x02\x1b§(§\x19\b\x14§, §\x19\x10\x10§)
+   function Alignment(§\x19\b\x14§, §\x19\x10\x10§)
    {
       this.api = _global.api;
       this.initialize(_loc2_,_loc3_);
@@ -61,13 +61,13 @@ class dofus.§\x17\x04\x19§.§\x16\x02\x1b§ implements com.ankamagames.§\x18\
       this["\x1d\x17\x03"] = !(_global.isNaN(_loc2_) || _loc2_ == undefined) ? _loc2_ : 0;
       this["\x1e\x01\x03"] = !(_global.isNaN(_loc3_) || _loc3_ == undefined) ? _loc3_ : 0;
    }
-   function §\x16\x1c\x1b§()
+   function clone()
    {
-      return new dofus.datacenter.["\x16\x02\x1b"](this["\x1d\x17\x03"],this["\x1e\x01\x03"]);
+      return new dofus.datacenter.Alignment(this["\x1d\x17\x03"],this["\x1e\x01\x03"]);
    }
    function §\x16\x1e\x01§(§\x19\x11\x13§)
    {
-      var _loc3_ = dofus.datacenter.["\x16\x02\x1b"](_loc2_);
+      var _loc3_ = dofus.datacenter.Alignment(_loc2_);
       if(_loc3_.index == this["\x1d\x17\x03"])
       {
          return 0;

@@ -125,7 +125,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.EditPlayer extends dofus.§\x18\x03\x10§.g
          this["\x1c\x14\x1b"]._visible = false;
          this["\x1c\r\x17"]._visible = false;
       }
-      this["\x16\x19\x07"] = this.api.datacenter.Player.Name;
+      this.characterName = this.api.datacenter.Player.Name;
       this["\x1a\x1e\x0f"]();
       this._btnValidate.label = this.api.lang.getText("VALIDATE");
    }
@@ -165,7 +165,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.EditPlayer extends dofus.§\x18\x03\x10§.g
       var _loc8_ = this.api.datacenter.Player.Guild;
       var _loc9_ = this.api.datacenter.Player.Sex;
       this["\x1c\r\x17"].breed = _loc8_;
-      this["\x1c\r\x17"]["\x1a\x1b\f"] = _loc9_;
+      this["\x1c\r\x17"].sex = _loc9_;
       this["\x1c\r\x17"].colors = [_loc5_,_loc6_,_loc7_];
       var _loc10_ = _loc8_ + "" + _loc9_;
       var _loc11_ = new ank.battlefield.datacenter..Sprite("viewer",ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc10_ + ".swf",undefined,5);
@@ -244,7 +244,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.EditPlayer extends dofus.§\x18\x03\x10§.g
       this["\x1e\x02\x16"] = _loc2_;
       this["\x1e\r\x0f"].setColors(this["\x1e\x02\x16"]);
    }
-   function §\x18\x06\n§()
+   function hideGenerateRandomName()
    {
       this["\x1d\x0f\f"]._visible = false;
    }

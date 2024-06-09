@@ -127,12 +127,12 @@ class ank.utils.ExtendedArray extends Array
       var _loc3_ = 0;
       while(_loc3_ < this.length)
       {
-         _loc2_.push(this[_loc3_]["\x16\x1c\x1b"]());
+         _loc2_.push(this[_loc3_].clone());
          _loc3_ = _loc3_ + 1;
       }
       return _loc2_;
    }
-   function §\x16\x1c\x1b§()
+   function clone()
    {
       var _loc2_ = new ank.utils.ExtendedArray();
       var _loc3_ = 0;
@@ -145,7 +145,7 @@ class ank.utils.ExtendedArray extends Array
    }
    function §\x1b\x01\x13§()
    {
-      var _loc2_ = this["\x16\x1c\x1b"]();
+      var _loc2_ = this.clone();
       var _loc3_ = 0;
       while(_loc3_ < _loc2_.length)
       {

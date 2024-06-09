@@ -53,7 +53,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Debug extends dofus.§\x18\x03\x10§.gapi.�
    }
    function realRefresh()
    {
-      this["\x18\t\x14"](true);
+      this.initData(true);
    }
    function clear()
    {
@@ -87,7 +87,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Debug extends dofus.§\x18\x03\x10§.gapi.�
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this["\x16\x04\x12"]});
       this.addToQueue({object:this,method:this["\x18\t\r"]});
       this.addToQueue({object:this,method:this["\x18\x15\x0f"]});
@@ -112,7 +112,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Debug extends dofus.§\x18\x03\x10§.gapi.�
    {
       this._tiCommandLine.setFocus();
    }
-   function §\x18\t\x14§(§\x16\x11\x04§)
+   function initData(§\x16\x11\x04§)
    {
       if(_loc2_ == undefined)
       {
@@ -389,10 +389,10 @@ class dofus.§\x18\x03\x10§.gapi.ui.Debug extends dofus.§\x18\x03\x10§.gapi.�
             var _loc17_ = _global.unescape(_loc5_.join(","));
             if(_loc16_)
             {
-               _loc3_.kernel["\x16\x01\r"].sendCommand(_loc17_);
+               _loc3_.kernel.AdminManager.sendCommand(_loc17_);
                break;
             }
-            _loc3_.kernel["\x16\x01\r"].prepareCommand(_loc17_);
+            _loc3_.kernel.AdminManager.prepareCommand(_loc17_);
             break;
       }
    }

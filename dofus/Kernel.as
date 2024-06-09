@@ -62,17 +62,17 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.ApiElement
       {
          this.OptionsManager = new dofus.managers.OptionsManager(oAPI);
       }
-      if((this["\x16\x01\r"] = dofus.managers["\x16\x01\r"].getInstance()) == null)
+      if((this.AdminManager = dofus.managers.AdminManager.getInstance()) == null)
       {
-         this["\x16\x01\r"] = new dofus.managers["\x16\x01\r"](oAPI);
+         this.AdminManager = new dofus.managers.AdminManager(oAPI);
       }
       if((this["\x17\x05\x16"] = dofus.managers["\x17\x05\x16"].getInstance()) == null)
       {
          this["\x17\x05\x16"] = new dofus.managers["\x17\x05\x16"](oAPI);
       }
-      if((this["\x1b\x10\x0b"] = dofus.managers["\x1b\x10\x0b"].getInstance()) == null)
+      if((this.TipsManager = dofus.managers.TipsManager.getInstance()) == null)
       {
-         this["\x1b\x10\x0b"] = new dofus.managers["\x1b\x10\x0b"](oAPI);
+         this.TipsManager = new dofus.managers.TipsManager(oAPI);
       }
       if((this["\x1b\x06\x10"] = dofus.managers["\x1b\x06\x10"].getInstance()) == null)
       {
@@ -240,7 +240,7 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.ApiElement
       dofus.kernel.FAST_SWITCHING_SERVER_REQUEST = undefined;
       this.api.kernel.showMessage(undefined,"<b>(Fast server switch)</b> : Welcome on <b>" + this.api.datacenter.Basics.aks_current_server.label + "</b>","COMMANDS_CHAT");
    }
-   function §\x16\x18\x1b§(§\x16\x0f\x13§)
+   function changeServer(§\x16\x0f\x13§)
    {
       if(_loc2_ == true)
       {
@@ -452,7 +452,7 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.ApiElement
             this.api.network.disconnect(false,false);
             break;
          case "AskYesNoChangeCharacter":
-            this["\x16\x18\x1b"](true);
+            this.changeServer(true);
             break;
          case "AskYesNoClearCache":
             this.clearCache();
@@ -464,7 +464,7 @@ class dofus.§\x18\x11\x1a§ extends dofus.utils.ApiElement
       this["\x17\t\x05"].initialize(this.api);
       this["\x1b\x12\x02"].initialize(this.api);
       this["\x16\x05\x01"].initialize(this.api);
-      this["\x16\x01\r"].initialize(this.api);
+      this.AdminManager.initialize(this.api);
       var _loc2_ = this.api.lang["\x18\x01\x18"]();
       this["\x19\b\x11"].initialize(_loc2_.tz.slice(),_loc2_.m.slice(),_loc2_.z,this.api.gfx);
       this.api.kernel.KeyManager["\x19\x1c\x18"](this.api.kernel.OptionsManager.getOption("ShortcutSet"));

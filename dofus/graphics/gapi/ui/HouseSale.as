@@ -22,7 +22,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.HouseSale extends dofus.§\x18\x03\x10§.ga
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this._btnCancel._visible = false;
       this._txtPrice.tabIndex = 0;
@@ -43,7 +43,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.HouseSale extends dofus.§\x18\x03\x10§.ga
       this._btnClose.addEventListener("click",this);
       this.api.kernel.KeyManager.addShortcutsListener("onShortcut",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this["\x1e\x03\x16"] == undefined)
       {

@@ -180,7 +180,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ClassCustomize extends dofus.
       _loc2_.attachMovie(dofus.graphics.gapi.controls.ClassCustomize["\x1b\x07\x0f"][this["\x1d\x1d\b"]],"mcAnim",10);
       _loc2_._xscale = _loc2_._yscale = 200;
    }
-   function §\x18\x06\n§()
+   function hideGenerateRandomName()
    {
       this._mcRegenerateNickName._visible = false;
    }

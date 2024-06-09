@@ -26,7 +26,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.GameResult extends dofus.§\x18\x03\x10§.g
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.gapi["\x1b\x13\x12"]();
    }
    function initTexts()
@@ -50,7 +50,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.GameResult extends dofus.§\x18\x03\x10§.g
       this._btnMinimize.addEventListener("click",this);
       this._btnCross.addEventListener("click",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this._oData.winners.length;
       var _loc3_ = this._oData.loosers.length;

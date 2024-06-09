@@ -21,7 +21,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MountWeight extends dofus.§\
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -29,7 +29,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MountWeight extends dofus.§\
       this["\x1e\x06\x18"].addEventListener("out",this);
       this.api.datacenter.Player.mount.addEventListener("podsChanged",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this["\x1e\f\x1c"] != undefined)
       {

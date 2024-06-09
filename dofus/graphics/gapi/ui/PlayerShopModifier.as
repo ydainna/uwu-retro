@@ -39,7 +39,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.PlayerShopModifier extends dofus.§\x18\x03
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this["\x18\x06\x0f"](true);
       this["\x1a\x14\x19"](false);
@@ -97,7 +97,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.PlayerShopModifier extends dofus.§\x18\x03
       this["\x1e\x10\x11"].title = this.api.datacenter.Player.data.name;
       this["\x1e\x10\x12"].title = this.api.lang.getText("SHOP_STOCK");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this._livInventory.dataProvider = this.api.datacenter.Player.Inventory;
       this._livInventory["\x18\x11\x17"] = this.api.datacenter.Player;

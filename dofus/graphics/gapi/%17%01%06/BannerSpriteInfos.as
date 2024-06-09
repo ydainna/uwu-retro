@@ -20,14 +20,14 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.BannerSpriteInfos extends dof
       this.removeSpriteListeners();
       this.data = _loc2_;
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this["\x15\x1e\x13"]});
    }
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -96,7 +96,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.BannerSpriteInfos extends dof
       this["\x1c\x1e\t"].text = this.api.lang.getText("RESISTANCES");
       this._lblStates.text = this.api.lang.getText("STATES");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1c\x1b\x0f"].text = this["\x1e\x05\x1a"].name;
       this["\x1c\x1a\x07"].text = this.api.lang.getText("LEVEL") + " " + this["\x1e\x05\x1a"].Level;

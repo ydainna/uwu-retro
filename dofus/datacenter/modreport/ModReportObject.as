@@ -130,6 +130,6 @@ class dofus.§\x17\x04\x19§.modreport.ModReportObject
    }
    function get dataGridObject()
    {
-      return {UUID:this._sUUID,reporterName:this.reporterPlayerEntityInfos["\x16\x19\x07"],score:this.score,hasCustomNote:this._sReporterCustomNote.length > 0,hasChatConversation:this._sChatConversation.length > 0,currentState:this.lastStateChange.state};
+      return {UUID:this._sUUID,reporterName:this.reporterPlayerEntityInfos.characterName,score:this.score,hasCustomNote:this._sReporterCustomNote.length > 0,hasChatConversation:this._sChatConversation.length > 0,currentState:this.lastStateChange.state};
    }
 }

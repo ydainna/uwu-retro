@@ -52,7 +52,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ListInventoryViewer extends d
       this["\x1a\x1e\x04"](this["\x1c\x03\x0f"]);
       this.addToQueue({object:this,method:this.addListeners});
       super.createChildren();
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
    }
    function addListeners()
@@ -66,7 +66,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ListInventoryViewer extends d
    function initTexts()
    {
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.kamaChanged({value:this["\x1e\x04\x02"].Kama});
    }

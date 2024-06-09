@@ -58,6 +58,6 @@ class dofus.§\x17\x04\x19§.Creature extends dofus.§\x17\x04\x19§.§\x1a\x05\
    }
    function §\x1e\x11\x19§()
    {
-      return new dofus.datacenter.["\x16\x02\x1b"](this.api.lang["\x17\x1c\t"](this["\x1d\x1a\f"]).a,0);
+      return new dofus.datacenter.Alignment(this.api.lang["\x17\x1c\t"](this["\x1d\x1a\f"]).a,0);
    }
 }

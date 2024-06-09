@@ -256,7 +256,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
       this._btnFights._visible = false;
       this.addToQueue({object:this,method:this["\x18\x06\t"]});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.showPoints(false);
       this.showNextTurnButton(false);
       this.showGiveUpButton(false);
@@ -392,7 +392,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
          eval("\x16\b\x1a").click(_loc2_);
       };
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this.api.kernel.OptionsManager.getOption("BannerIllustrationMode");
       switch(_loc2_)
@@ -1103,9 +1103,9 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
          case "\x1d\t\x1c":
             if(!this.api.datacenter.Player.isAuthorized || this.api.datacenter.Player.isAuthorized && Key.isDown(Key.SHIFT))
             {
-               if(this["\x1e\b\x11"] == "helper" && dofus.managers["\x1b\x10\x0b"].getInstance()["\x18\x05\x0b"]())
+               if(this["\x1e\b\x11"] == "helper" && dofus.managers.TipsManager.getInstance()["\x18\x05\x0b"]())
                {
-                  dofus.managers["\x1b\x10\x0b"].getInstance()["\x17\b\f"]();
+                  dofus.managers.TipsManager.getInstance()["\x17\b\f"]();
                   break;
                }
                var _loc4_ = this.api.ui["\x17\x02\x19"]();
@@ -1194,7 +1194,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
    }
    function beforeFinalCountDown(oEvent)
    {
-      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x11"]);
+      this.api.kernel.TipsManager.showNewTip(dofus.managers.TipsManager["\x1b\x10\x11"]);
    }
    function finalCountDown(oEvent)
    {

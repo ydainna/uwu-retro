@@ -235,7 +235,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MountViewer extends dofus.§\
       this["\x1c\x1b\x0f"].text = this.api.lang.getText("NAME_BIG");
       this["\x1c\x1b\x10"].text = this["\x1e\x04\x11"].name;
       this["\x1d\x01\r"].text = this.api.lang.getText("CREATE_SEX");
-      this["\x1d\x01\x0e"].text = !this["\x1e\x04\x11"]["\x1a\x1b\f"] ? this.api.lang.getText("ANIMAL_MEN") : this.api.lang.getText("ANIMAL_WOMEN");
+      this["\x1d\x01\x0e"].text = !this["\x1e\x04\x11"].sex ? this.api.lang.getText("ANIMAL_MEN") : this.api.lang.getText("ANIMAL_WOMEN");
       this["\x1c\x1b\x03"].text = this.api.lang.getText("MOUNTABLE");
       this["\x1c\x1b\x04"].text = !this["\x1e\x04\x11"].mountable ? this.api.lang.getText("NO") : this.api.lang.getText("YES");
       this["\x1d\x04\x0e"].text = this.api.lang.getText("WILD");

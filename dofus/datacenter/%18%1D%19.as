@@ -80,6 +80,6 @@ class dofus.§\x17\x04\x19§.§\x18\x1d\x19§ extends ank.battlefield.§\x17\x04
    }
    function §\x1e\x11\x19§()
    {
-      return new dofus.datacenter.["\x16\x02\x1b"](this["\x1d\x12\x18"],0);
+      return new dofus.datacenter.Alignment(this["\x1d\x12\x18"],0);
    }
 }

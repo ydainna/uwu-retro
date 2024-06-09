@@ -92,10 +92,10 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Card extends dofus.§\x18\x03
    }
    function createChildren()
    {
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this._bIsCardUnlocked)
       {

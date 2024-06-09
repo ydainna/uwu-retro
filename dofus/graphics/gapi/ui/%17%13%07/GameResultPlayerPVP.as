@@ -52,8 +52,8 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x17\x13\x07§.GameResultPlayerPVP extend
                      this["\x1e\x06\r"]["\x18\x1d\x03"] = _loc0_;
                      this["\x1e\x06\r"].uberMaximum = _loc0_ = _loc4_.maxdisgrace;
                      this["\x1e\x06\r"]["\x18\x19\x12"] = _loc0_;
-                     this["\x1e\x06\r"].value = _loc4_["\x17\x07\x17"];
-                     this["\x1e\x06\r"].uberValue = _loc4_["\x17\x07\x17"] - (!_global.isNaN(_loc4_.windisgrace) ? _loc4_.windisgrace : 0);
+                     this["\x1e\x06\r"].value = _loc4_.disgrace;
+                     this["\x1e\x06\r"].uberValue = _loc4_.disgrace - (!_global.isNaN(_loc4_.windisgrace) ? _loc4_.windisgrace : 0);
                   }
                   this["\x1e\x06\x10"].uberMinimum = _loc0_ = _loc4_.minhonour;
                   this["\x1e\x06\x10"]["\x18\x1d\x03"] = _loc0_;
@@ -194,7 +194,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x17\x13\x07§.GameResultPlayerPVP extend
             this["\x1d\r\t"].gapi.showTooltip(this["\x1e\x03\x1a"]["\x18\x07\r"] + " / " + this["\x1e\x03\x1a"].maxhonour,_loc2_.target,20);
             break;
          case this["\x1e\x06\r"]:
-            this["\x1d\r\t"].gapi.showTooltip(this["\x1e\x03\x1a"]["\x17\x07\x17"] + " / " + this["\x1e\x03\x1a"].maxdisgrace,_loc2_.target,20);
+            this["\x1d\r\t"].gapi.showTooltip(this["\x1e\x03\x1a"].disgrace + " / " + this["\x1e\x03\x1a"].maxdisgrace,_loc2_.target,20);
             break;
          default:
             var _loc7_ = _loc2_.target.contentData;

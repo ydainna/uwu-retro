@@ -18,7 +18,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Shortcuts extends dofus.§\x18\x03\x10§.ga
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
@@ -36,7 +36,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Shortcuts extends dofus.§\x18\x03\x10§.ga
       this["\x1c\f\x1a"].addEventListener("itemSelected",this);
       this._btnApplyDefault.addEventListener("click",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = new ank.utils.ExtendedArray();
       var _loc3_ = this.api.lang["\x17\x1a\x06"]();
@@ -103,10 +103,10 @@ class dofus.§\x18\x03\x10§.gapi.ui.Shortcuts extends dofus.§\x18\x03\x10§.ga
    {
       this.api.kernel.KeyManager["\x16\x1b\x1c"]();
       this.api.kernel.OptionsManager.setOption("ShortcutSet",this["\x1c\f\x1a"].selectedItem.id);
-      this["\x18\t\x14"]();
+      this.initData();
    }
    function §\x1a\n\x15§()
    {
-      this["\x18\t\x14"]();
+      this.initData();
    }
 }

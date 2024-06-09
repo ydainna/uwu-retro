@@ -23,7 +23,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.AlignmentViewer extends dofus
       this["\x1c\x12\x0b"]._visible = false;
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
@@ -34,7 +34,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.AlignmentViewer extends dofus
    {
       this.api.datacenter.Player.addEventListener("alignmentChanged",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1e\b\x19"] = "Specialization";
       this.alignmentChanged({alignment:this.api.datacenter.Player.alignment});

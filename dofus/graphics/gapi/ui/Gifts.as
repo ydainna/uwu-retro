@@ -10,7 +10,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
    }
    function get firstGiftInStack()
    {
-      var _loc2_ = this.api.datacenter.Basics["\x16\x02\x0e"];
+      var _loc2_ = this.api.datacenter.Basics.aks_gifts_stack;
       return _loc2_[0];
    }
    function §\x1d\x11§(§\x16\x06\r§)
@@ -22,7 +22,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
    {
       return this._bAttributingGifts;
    }
-   function §\x16\x1a\x13§()
+   function checkNextGift()
    {
       if(!this._bAttributingGifts && (this._nCurrentGiftsToAttributeCount > 1 && this._nCurrentGiftsToAttributeCount == this._nTotalGiftsToAttributeCount))
       {
@@ -33,7 +33,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
       {
          var _loc3_ = _global.setTimeout(this,"\x16\x07\x02",200,this._nLastAttributionCharacterID);
       }
-      else if(this.api.datacenter.Basics["\x16\x02\x0e"].length != 0)
+      else if(this.api.datacenter.Basics.aks_gifts_stack.length != 0)
       {
          this.api.ui.unloadUIComponent("WaitingMessage");
          this.gapi.loadUIComponent("Gifts","Gifts",{spriteList:this["\x1c\x01\x06"]},{bForceLoad:true});
@@ -71,7 +71,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
       this.showViewPendingGifts(false);
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -128,13 +128,13 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
          _loc3_ = _loc3_ + 1;
       }
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this.firstGiftInStack;
       var _loc0_ = null;
       if((_loc0_ = _loc2_.type) !== 1)
       {
-         this["\x16\x1a\x13"]();
+         this.checkNextGift();
       }
       else
       {
@@ -167,7 +167,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
       _loc3_.indexOnGiftsStack = -1;
       _loc3_.addEventListener("giftAttributionStateChanged",this);
       _loc2_.push(_loc3_);
-      var _loc4_ = this.api.datacenter.Basics["\x16\x02\x0e"];
+      var _loc4_ = this.api.datacenter.Basics.aks_gifts_stack;
       var _loc5_ = false;
       var _loc6_ = false;
       var _loc7_ = false;
@@ -255,7 +255,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
    }
    function autoSelectUnselectAllGifts()
    {
-      var _loc2_ = this.api.datacenter.Basics["\x16\x02\x0e"];
+      var _loc2_ = this.api.datacenter.Basics.aks_gifts_stack;
       if(this._aPendingAttributionGifts.length == _loc2_.length)
       {
          var _loc3_ = 1;
@@ -389,7 +389,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
    }
    function §\x16\x07\x02§(nCharID)
    {
-      var _loc3_ = dofus.datacenter..Gift(this.api.datacenter.Basics["\x16\x02\x0e"].shift());
+      var _loc3_ = dofus.datacenter..Gift(this.api.datacenter.Basics.aks_gifts_stack.shift());
       if(!this._bAttributingGifts)
       {
          this._bAttributingGifts = true;

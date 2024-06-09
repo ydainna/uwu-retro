@@ -27,7 +27,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemUtility extends dofus.§\x18\x03\x10§.
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this["\x18\x06\x06"](true);
       this["\x18\x06\x15"](true);
    }
@@ -45,7 +45,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemUtility extends dofus.§\x18\x03\x10§.
       this["\x1c\x16\x07"].text = this.api.lang.getText("ITEM_UTILITY_CRAFTS");
       this["\x1c\x1d\x1d"].text = this.api.lang.getText("ITEM_UTILITY_RECEIPT");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this["\x1e\x03\x18"] != undefined)
       {

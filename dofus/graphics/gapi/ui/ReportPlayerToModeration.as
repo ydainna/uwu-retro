@@ -43,7 +43,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ReportPlayerToModeration extends dofus.§\x
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -70,7 +70,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ReportPlayerToModeration extends dofus.§\x
       this._btnOk.label = this.api.lang.getText("VALIDATE");
       this._btnCancel.label = this.api.lang.getText("CANCEL_SMALL");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this._sTargetID == undefined || (this._sTargetName == undefined || this._bTargetIsOffline == undefined))
       {

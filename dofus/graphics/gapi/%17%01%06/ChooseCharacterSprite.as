@@ -122,7 +122,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseCharacterSprite extends
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this["\x1c\t\x10"]._visible = false;
       this._btnReset._visible = false;
    }
@@ -142,7 +142,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseCharacterSprite extends
       this.api.datacenter.Basics.aks_servers.addEventListener("modelChanged",this);
       Key.addListener(this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1b\x14\x14"]();
    }

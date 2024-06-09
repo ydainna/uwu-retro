@@ -183,7 +183,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CreateGuild extends dofus.§\x18\x03\x10§.
                }
             }
             this.enabled = false;
-            this.api.network.Guild["\x17\x02\x04"](this["\x1d\x13\b"],this["\x1d\x13\x03"],this["\x1e\x01\x02"],this["\x1d\x1e\x1c"],_loc3_);
+            this.api.network.Guild.create(this["\x1d\x13\b"],this["\x1d\x13\x03"],this["\x1e\x01\x02"],this["\x1d\x1e\x1c"],_loc3_);
             break;
          case "_btnTabBack":
             this.setCurrentTab("Back");

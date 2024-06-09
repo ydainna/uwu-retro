@@ -128,7 +128,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
          _loc7_.execute();
          if(_loc4_ == 2)
          {
-            this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x0e"]);
+            this.api.kernel.TipsManager.showNewTip(dofus.managers.TipsManager["\x1b\x10\x0e"]);
          }
       }
    }
@@ -289,7 +289,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
                return undefined;
             }
             _loc50_["\x18\x0f\x0b"] = true;
-            var _loc52_ = _loc50_["\x1a\x1b\f"] != 1 ? "m" : "f";
+            var _loc52_ = _loc50_.sex != 1 ? "m" : "f";
             _loc11_.addAction(57,false,this.api.kernel.ChatManager.feMessagesBuffer,this.api.kernel.ChatManager.feMessagesBuffer.addFightEventMessage,[_loc5_,["DIE"],_loc52_,_loc50_.id,_loc50_.name]);
             var _loc53_ = this.api.ui.getUIComponent("Timeline");
             _loc11_.addAction(58,false,_loc53_,_loc53_["\x18\x06\r"],[_loc49_]);

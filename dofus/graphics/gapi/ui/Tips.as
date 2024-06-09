@@ -24,7 +24,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Tips extends dofus.§\x18\x03\x10§.gapi.§
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this["\x1b\x01\r"]});
    }
    function initTexts()
@@ -43,7 +43,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Tips extends dofus.§\x18\x03\x10§.gapi.§
       this["\x1c\x0b\t"].addEventListener("over",this);
       this["\x1c\x0b\t"].addEventListener("out",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = SharedObject.getLocal(dofus.Constants.OPTIONS_SHAREDOBJECT_NAME);
       _loc2_._parentRef = this;

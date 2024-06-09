@@ -23,7 +23,7 @@ class dofus.§\x17\x04\x19§.§\x17\x0f\x15§ extends Object
       this.description = _loc11_.lang["\x17\x17\x15"](_loc3_).d.split("%1").join(_loc12_);
       this["\x18\b\t"] = dofus.Constants["\x17\x10\x03"] + _loc11_.lang["\x17\x17\x15"](_loc3_).g + ".swf";
    }
-   function §\x16\x1c\x1b§()
+   function clone()
    {
       return new dofus.datacenter.["\x17\x0f\x15"](this.id,this["\x1b\x01\n"],this["\x1b\r\x1c"],this["\x16\t\x07"],this["\x1b\x0f\x04"],this["\x16\t\x03"],this["\x1b\x0f\x01"],this.state);
    }

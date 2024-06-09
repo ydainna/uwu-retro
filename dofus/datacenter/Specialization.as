@@ -29,7 +29,7 @@ class dofus.§\x17\x04\x19§.Specialization extends Object
    }
    function §\x1e\x11\x19§()
    {
-      return new dofus.datacenter.["\x16\x02\x1b"](this.order.alignment.index,this["\x1e\x05\x13"].av);
+      return new dofus.datacenter.Alignment(this.order.alignment.index,this["\x1e\x05\x13"].av);
    }
    function §\x1e\x1a\x07§()
    {

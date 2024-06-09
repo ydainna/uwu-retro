@@ -30,7 +30,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Spells extends dofus.§\x18\x03\x10§.gapi.
       this["\x1d\x1c\x14"] = 0;
       this["\x1d\x10\f"]._visible = false;
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this["\x18\x06\x1b"](true);
    }
@@ -45,7 +45,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Spells extends dofus.§\x18\x03\x10§.gapi.
       this.api.datacenter.Player.addEventListener("bonusSpellsChanged",this);
       this.api.datacenter.Player.Spells.addEventListener("modelChanged",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1b\x14\x06"]();
    }

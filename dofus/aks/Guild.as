@@ -4,7 +4,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function §\x17\x02\x04§(§\x19\x03\x1a§, §\x19\x03\x16§, §\x19\x0f\n§, §\x19\x0f\t§, sName)
+   function create(§\x19\x03\x1a§, §\x19\x03\x16§, §\x19\x0f\n§, §\x19\x0f\t§, sName)
    {
       this.aks.send("gC" + _loc2_ + "|" + _loc3_ + "|" + _loc4_ + "|" + _loc5_ + "|" + _loc6_);
    }
@@ -144,7 +144,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          this.api.ui.getUIComponent("CreateGuild").enabled = true;
       }
    }
-   function §\x19\x1d\x0b§(sExtraData)
+   function onStats(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
@@ -300,7 +300,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
                var _loc16_ = new dofus.datacenter..Mount(Number(_loc14_[_loc15_]));
                _loc16_.name = _loc14_[_loc15_ + 1] != "" ? _loc14_[_loc15_ + 1] : this.api.lang.getText("NO_NAME");
                _loc16_["\x1a\x03\x06"] = _loc14_[_loc15_ + 2];
-               _loc16_["\x1a\x1b\f"] = Number(_loc14_[_loc15_ + 3]);
+               _loc16_.sex = Number(_loc14_[_loc15_ + 3]);
                _loc13_.mounts.push(_loc16_);
                _loc15_ += 4;
             }

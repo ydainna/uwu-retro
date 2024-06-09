@@ -22,7 +22,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
    {
       switch(_loc2_)
       {
-         case "H":
+         case "H": //Ask packet (aks.Aks)
             switch(_loc3_)
             {
                case "T":
@@ -83,7 +83,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                this.aks.RapidStuff.onRapidStuffCache(_loc5_.substr(2));
             }
             break;
-         case "B":
+         case "B": //Basics packet (ask.basics)
             switch(_loc3_)
             {
                case "N":
@@ -154,7 +154,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.defaultProcessAction(_loc2_,_loc3_,_loc4_,_loc5_);
             }
             break;
-         case "A":
+         case "A": //Account packet (aks.Account)
             switch(_loc3_)
             {
                case "E":
@@ -202,7 +202,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Account.onCharacterAdd(!_loc4_,_loc5_.substr(3));
                   break;
                case "T":
-                  this.aks.Account.["\x19\x1d\x1a"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.onTicketResponse(!_loc4_,_loc5_.substr(3));
                   break;
                case "X":
                   this.aks.Account.onSelectServer(!_loc4_,true,_loc5_.substr(3));
@@ -211,19 +211,19 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Account.onSelectServer(!_loc4_,false,_loc5_.substr(3));
                   break;
                case "Z":
-                  this.aks.Account.["\x19\x1c\x0f"](_loc5_.substr(3));
+                  this.aks.Account.onSelectServerMinimal(_loc5_.substr(3));
                   break;
                case "S":
-                  this.aks.Account.["\x19\x15\x0f"](!_loc4_,_loc5_.substr(4));
+                  this.aks.Account.onCharacterSelected(!_loc4_,_loc5_.substr(4));
                   break;
                case "s":
-                  this.aks.Account.["\x19\x1d\x0b"](_loc5_.substr(2));
+                  this.aks.Account.onStats(_loc5_.substr(2));
                   break;
                case "N":
-                  this.aks.Account.["\x19\x1a\x13"](_loc5_.substr(2));
+                  this.aks.Account.onNewLevel(_loc5_.substr(2));
                   break;
                case "R":
-                  this.aks.Account.["\x19\x1c\b"](_loc5_.substr(2));
+                  this.aks.Account.onRestrictions(_loc5_.substr(2));
                   break;
                case "H":
                   this.aks.Account.onHosts(_loc5_.substr(2));
@@ -232,22 +232,22 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Account.onRescue(!_loc4_);
                   break;
                case "g":
-                  this.aks.Account.["\x19\x18\x07"](_loc5_.substr(2));
+                  this.aks.Account.onGiftsList(_loc5_.substr(2));
                   break;
                case "G":
-                  this.aks.Account.["\x19\x18\b"](!_loc4_);
+                  this.aks.Account.onGiftStored(!_loc4_);
                   break;
                case "q":
-                  this.aks.Account.["\x19\x1b\x16"](_loc5_.substr(2));
+                  this.aks.Account.onQueue(_loc5_.substr(2));
                   break;
                case "f":
-                  this.aks.Account.["\x19\x1a\x15"](_loc5_.substr(2));
+                  this.aks.Account.onNewQueue(_loc5_.substr(2));
                   break;
                case "V":
                   this.aks.Account.onRegionalVersion(_loc5_.substr(2));
                   break;
                case "P":
-                  this.aks.Account.["\x19\x15\x0e"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Account.onCharacterNameGenerated(!_loc4_,_loc5_.substr(3));
                   break;
                case "K":
                   this.aks.Account.onKey(_loc5_.substr(2));
@@ -265,11 +265,11 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   }
                   else
                   {
-                     this.aks.Account.["\x19\x15\x11"](_loc5_.substr(3));
+                     this.aks.Account.onCharactersMigrationAskConfirm(_loc5_.substr(3));
                   }
                   break;
                case "F":
-                  this.aks.Account.["\x19\x17\x18"](_loc5_.substr(2));
+                  this.aks.Account.onFriendServerList(_loc5_.substr(2));
                   break;
                case "m":
                   if(!_global.CONFIG.isStreaming)
@@ -881,7 +881,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Guild["\x19\x16\x0b"](!_loc4_,_loc5_.substr(3));
                   break;
                case "S":
-                  this.aks.Guild["\x19\x1d\x0b"](_loc5_.substr(2));
+                  this.aks.GuildonStats(_loc5_.substr(2));
                   break;
                case "I":
                   switch(_loc5_.charAt(2))

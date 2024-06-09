@@ -43,7 +43,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x17\x13\x07§.GameResultPlayerLightPVP e
                }
                this["\x1c\x1d\x10"].text = !_global.isNaN(_loc4_.rank) ? _loc4_.rank : "";
                this["\x1c\x19\x1c"].text = !_global.isNaN(_loc4_.kama) ? new ank.utils.ExtendedString(_loc4_.kama)["\x15\x1e\x01"](_loc5_.lang.getConfigText("THOUSAND_SEPARATOR"),3) : "0";
-               this._sDisgrace = !_global.isNaN(_loc4_["\x17\x07\x17"]) ? new ank.utils.ExtendedString(_loc4_["\x17\x07\x17"])["\x15\x1e\x01"](_loc5_.lang.getConfigText("THOUSAND_SEPARATOR"),3) : "";
+               this._sDisgrace = !_global.isNaN(_loc4_.disgrace) ? new ank.utils.ExtendedString(_loc4_.disgrace)["\x15\x1e\x01"](_loc5_.lang.getConfigText("THOUSAND_SEPARATOR"),3) : "";
                this._sHonour = !_global.isNaN(_loc4_["\x18\x07\r"]) ? new ank.utils.ExtendedString(_loc4_["\x18\x07\r"])["\x15\x1e\x01"](_loc5_.lang.getConfigText("THOUSAND_SEPARATOR"),3) : "";
                var _loc7_ = _loc4_.alignment;
                if(this["\x1c\x1d\x10"]._visible && _loc7_ > 0)

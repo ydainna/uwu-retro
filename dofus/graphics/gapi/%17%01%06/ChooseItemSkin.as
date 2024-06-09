@@ -25,7 +25,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseItemSkin extends dofus.
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -33,7 +33,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseItemSkin extends dofus.
       this._cgGrid.addEventListener("selectItem",this);
       this._cgGrid["\x19\x02\n"] = false;
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(!this["\x1e\x03\x18"].hasUnknownSkinsCount)
       {

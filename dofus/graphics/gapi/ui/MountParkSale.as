@@ -22,7 +22,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MountParkSale extends dofus.§\x18\x03\x10�
    {
       this["\x1e\x04\x12"] = this.api.datacenter.["\x18\x18\x0e"].getMountPark(this.instance);
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this._btnCancel._visible = false;
       this._txtPrice.tabIndex = 0;
@@ -43,7 +43,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MountParkSale extends dofus.§\x18\x03\x10�
       this._btnClose.addEventListener("click",this);
       this.api.kernel.KeyManager.addShortcutsListener("onShortcut",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1e\x0f\n"].text = this.api.lang.getText("MOUNTPARK_DESCRIPTION",[this["\x1e\x04\x12"].size,this["\x1e\x04\x12"].maxItems]);
       if(this["\x18\x0e\x1c"])

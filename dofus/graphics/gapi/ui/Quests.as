@@ -38,7 +38,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Quests extends dofus.§\x18\x03\x10§.gapi.
    function createChildren()
    {
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.addListeners});
       this["\x1b\x01\t"](false);
    }
@@ -61,7 +61,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Quests extends dofus.§\x18\x03\x10§.gapi.
       this._dgQuests.addEventListener("itemSelected",this);
       this.api.datacenter.Player.questBook["\x1a\t\x02"].addEventListener("modelChanged",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.api.network.Quests["\x17\x1b\x01"]();
    }
@@ -69,7 +69,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Quests extends dofus.§\x18\x03\x10§.gapi.
    {
       if(_loc2_)
       {
-         this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x13"]);
+         this.api.kernel.TipsManager.showNewTip(dofus.managers.TipsManager["\x1b\x10\x13"]);
       }
       this._btnCloseStep._visible = _loc2_;
       this["\x1e\x10\x0b"]._visible = _loc2_;
@@ -149,7 +149,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Quests extends dofus.§\x18\x03\x10§.gapi.
       var _loc3_ = this.api.datacenter.Player.questBook["\x1a\t\x02"];
       if(this._btnFinished.selected)
       {
-         var _loc4_ = _loc3_["\x16\x1c\x1b"]();
+         var _loc4_ = _loc3_.clone();
       }
       else
       {

@@ -18,7 +18,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.customset.CustomSet extends dofus.§\x18\x0
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -72,7 +72,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.customset.CustomSet extends dofus.§\x18\x0
       this["\x1c\x19\f"].text = this.api.lang.getText("INTEL");
       this._lblCustomSet.text = this.api.lang.getText("CUSTOM_SET_CHOOSE_SET");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this._btnLoad.enabled = false;
       this._btnSave.enabled = false;

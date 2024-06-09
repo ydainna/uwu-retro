@@ -60,7 +60,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreSell extends dofus.§\x18\x03\x10§
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this["\x1a\x06\x0f"]});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this["\x1a\x14\x19"],params:[false]});
       this.addToQueue({object:this,method:this["\x1a\x19\n"],params:[false]});
       this["\x18\x06\x0f"](true);
@@ -121,7 +121,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreSell extends dofus.§\x18\x03\x10§
       }
       this["\x1c\f\x17"].dataProvider = _loc3_;
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x17\r\x06"](this.api.kernel.OptionsManager.getOption("BigStoreSellFilter"));
       this._livInventory.dataProvider = this.api.datacenter.Player.Inventory;

@@ -26,7 +26,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.KnownledgeBase extends dofus.§\x18\x03\x10
    {
       this.addToQueue({object:this,method:this["\x18\n\x14"]});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this["\x1a\n\x0e"]});
    }
    function §\x16\x15\n§()
@@ -63,7 +63,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.KnownledgeBase extends dofus.§\x18\x03\x10
       this._tiSearch.addEventListener("change",this);
       this.api.kernel.KeyManager.addShortcutsListener("onShortcut",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this.api.lang["\x17\x1a\x0b"]();
       _loc2_.sortOn("o",Array.NUMERIC | Array.DESCENDING);
@@ -416,7 +416,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.KnownledgeBase extends dofus.§\x18\x03\x10
    }
    function href(oEvent)
    {
-      this.api.kernel["\x1b\x10\x0b"]["\x19\x19\x1b"](_loc2_);
+      this.api.kernel.TipsManager["\x19\x19\x1b"](_loc2_);
    }
    function onShortcut(sShortcut)
    {

@@ -38,7 +38,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MouseShortcuts extends dofus.
    }
    function createChildren()
    {
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
    }
@@ -87,7 +87,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MouseShortcuts extends dofus.
       this["\x17\x15\x12"](_loc2_).contentData = undefined;
       this.addToQueue({object:this,method:this["\x1a\x19\x1b"]});
    }
-   function §\x18\t\x14§()
+   function initData()
    {
    }
    function initTexts()

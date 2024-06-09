@@ -22,13 +22,13 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x17\x13\x07§.GameResultTeamLight extend
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this["\x1d\x06\x19"]._visible = false;
    }
    function addListeners()
    {
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this["\x1c\x0f\x06"].length;
       this["\x1d\x06\x19"].dataProvider = this["\x1c\x0f\x06"];

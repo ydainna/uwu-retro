@@ -21,7 +21,7 @@ class dofus.§\x17\x04\x19§.§\x1a\x01\x15§ extends Object
    }
    function §\x1e\x11\x19§()
    {
-      return new dofus.datacenter.["\x16\x02\x1b"](this["\x1e\x04\x19"].a);
+      return new dofus.datacenter.Alignment(this["\x1e\x04\x19"].a);
    }
    function §\x1e\x1c\x03§()
    {

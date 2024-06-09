@@ -216,7 +216,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CreateCharacter extends dofus.§\x18\x03\x1
    function §\x1a\x15\x10§(§\x19\x05\x05§, nSex)
    {
       this["\x1c\r\x17"].breed = _loc2_;
-      this["\x1c\r\x17"]["\x1a\x1b\f"] = _loc3_;
+      this["\x1c\r\x17"].sex = _loc3_;
       if(this["\x1d\x13\r"] == _loc2_ && this["\x1d\x1c\x1a"] == _loc3_)
       {
          return undefined;
@@ -363,7 +363,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CreateCharacter extends dofus.§\x18\x03\x1
          this._ldrClassPassive._visible = false;
       }
    }
-   function §\x18\x06\n§()
+   function hideGenerateRandomName()
    {
       this["\x1d\x0f\f"]._visible = false;
    }
@@ -396,7 +396,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CreateCharacter extends dofus.§\x18\x03\x1
          case this._btnBack:
             if(this.api.datacenter.Basics.createCharacter)
             {
-               this.api.kernel["\x16\x18\x1b"](true);
+               this.api.kernel.changeServer(true);
             }
             else
             {

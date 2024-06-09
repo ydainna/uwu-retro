@@ -29,7 +29,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Temporis extends dofus.§\x18\x03\x10§.gap
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTabs});
       this.addToQueue({object:this,method:this.initSprite});
       this.addToQueue({object:this.api.network.Guild,method:this.api.network.Guild["\x17\x19\x04"]});
@@ -47,7 +47,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Temporis extends dofus.§\x18\x03\x10§.gap
    {
       this._btnClose.addEventListener("click",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this.api.datacenter.Player.temporisInfos == undefined)
       {

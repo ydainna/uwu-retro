@@ -19,7 +19,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       this["\x1c\x05\x15"] = bIsBusy;
       return this["\x1e\x1c\x1c"]();
    }
-   function §\x17\x02\x04§()
+   function create()
    {
       this.aks.send("GC" + dofus.aks.Game["\x1b\x12\x1b"]);
    }
@@ -232,7 +232,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       {
          this.api.ui.loadUIComponent("FightOptionButtons","FightOptionButtons");
       }
-      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x0f"]);
+      this.api.kernel.TipsManager.showNewTip(dofus.managers.TipsManager["\x1b\x10\x0f"]);
    }
    function §\x19\x1b\x04§(sExtraData)
    {
@@ -382,7 +382,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       }
       this.api.kernel.GameManager["\x16\x1b\x18"](true);
       ank.utils.Timer.setTimer(this.api.network.Ping,"GameDecoDetect",this.api.network,this.api.network["\x1a\t\x0b"],_loc6_ * 1000);
-      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\x10"]);
+      this.api.kernel.TipsManager.showNewTip(dofus.managers.TipsManager["\x1b\x10\x10"]);
    }
    function §\x19\x1e\x05§(sExtraData)
    {

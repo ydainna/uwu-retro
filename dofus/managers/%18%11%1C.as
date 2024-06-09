@@ -465,11 +465,11 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.ApiElement
       {
          this.api.gfx.spriteHandler.hideSprites(false,1);
       }
-      if(this.api.kernel["\x16\x01\r"]["\x1b\x15\x1d"](_loc3_,_loc2_))
+      if(this.api.kernel.AdminManager["\x1b\x15\x1d"](_loc3_,_loc2_))
       {
          return undefined;
       }
-      if(this.api.datacenter.Player.isAuthorized && this.api.kernel["\x16\x01\r"].getBatchNodeByKey(_loc3_) != undefined)
+      if(this.api.datacenter.Player.isAuthorized && this.api.kernel.AdminManager.getBatchNodeByKey(_loc3_) != undefined)
       {
          return undefined;
       }

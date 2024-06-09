@@ -202,7 +202,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc44_.scaleY = _loc28_;
                      _loc44_.cell = _loc11_;
                      _loc44_.dir = _loc12_;
-                     _loc44_["\x1a\x1b\f"] = _loc10_[7];
+                     _loc44_.sex = _loc10_[7];
                      _loc44_.color1 = _loc10_[8];
                      _loc44_.color2 = _loc10_[9];
                      _loc44_.color3 = _loc10_[10];
@@ -264,7 +264,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc47_.scaleY = _loc28_;
                      _loc47_.cell = _loc11_;
                      _loc47_.dir = _loc12_;
-                     _loc47_["\x1a\x1b\f"] = _loc10_[7];
+                     _loc47_.sex = _loc10_[7];
                      _loc47_["\x1a\x06\x15"] = _loc10_[8];
                      _loc47_.accessories = _loc10_[9];
                      if(this.api.datacenter.Game.isFight)
@@ -318,7 +318,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc50_.cell = _loc11_;
                      _loc50_.dir = _loc12_;
                      _loc50_.level = _loc10_[7];
-                     _loc50_.alignment = new dofus.datacenter.["\x16\x02\x1b"](Number(_loc10_[9]),Number(_loc10_[8]));
+                     _loc50_.alignment = new dofus.datacenter.Alignment(Number(_loc10_[9]),Number(_loc10_[8]));
                      _loc31_ = this.api.kernel.CharactersManager["\x17\x02\x1b"](_loc14_,_loc15_,_loc50_);
                      break;
                   default:
@@ -328,7 +328,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      _loc52_.scaleX = _loc27_;
                      _loc52_.scaleY = _loc28_;
                      _loc52_.dir = _loc12_;
-                     _loc52_["\x1a\x1b\f"] = _loc10_[7];
+                     _loc52_.sex = _loc10_[7];
                      if(this.api.datacenter.Game.isFight)
                      {
                         _loc52_.level = _loc10_[8];
@@ -443,7 +443,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                         var _loc32_ = [_loc14_,this["\x17\x02\x1d"](),_loc11_,10];
                      }
                      var _loc67_ = _loc51_.split(",");
-                     _loc52_.alignment = new dofus.datacenter.["\x16\x02\x1b"](Number(_loc67_[0]),Number(_loc67_[1]));
+                     _loc52_.alignment = new dofus.datacenter.Alignment(Number(_loc67_[0]),Number(_loc67_[1]));
                      _loc52_.rank = new dofus.datacenter..Rank(Number(_loc67_[2]));
                      _loc52_.alignment["\x17\x0f\x05"] = _loc67_[4] == 1;
                      if(_loc67_.length > 3 && _loc14_ != this.api.datacenter.Player.ID)
@@ -817,7 +817,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
       this.api.datacenter.Player.isDead = false;
       var _loc2_ = dofus.graphics.gapi.ui.FightChallenge(dofus.graphics.gapi.ui.FightChallenge(this.api.ui.getUIComponent("FightChallenge")));
       _loc2_["\x16\x1b\x12"]();
-      this.aks.Game["\x17\x02\x04"]();
+      this.aks.Game.create();
    }
    function §\x19\x16\x19§(sExtraData)
    {
@@ -906,7 +906,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                _loc13_.maxhonour = Number(_loc12_[8]);
                _loc13_.winhonour = Number(_loc12_[9]);
                _loc13_.rank = Number(_loc12_[10]);
-               _loc13_["\x17\x07\x17"] = Number(_loc12_[11]);
+               _loc13_.disgrace = Number(_loc12_[11]);
                _loc13_.windisgrace = Number(_loc12_[12]);
                _loc13_.maxdisgrace = this.api.lang["\x17\x1b\x12"]();
                _loc13_.mindisgrace = 0;
@@ -1084,7 +1084,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          ank.utils.Logger.err("[AKS.Game.onEnd] Impossible de trouver le sequencer");
          ank.utils.Timer.setTimer(this,"game",this.api.kernel.GameManager,this.api.kernel.GameManager["\x1b\x0f\x0e"],500);
       }
-      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](dofus.managers["\x1b\x10\x0b"]["\x1b\x10\r"]);
+      this.api.kernel.TipsManager.showNewTip(dofus.managers.TipsManager["\x1b\x10\r"]);
    }
    function §\x19\x17\x07§(sExtraData)
    {

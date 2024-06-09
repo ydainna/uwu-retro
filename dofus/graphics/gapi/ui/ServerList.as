@@ -169,7 +169,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ServerList extends dofus.§\x18\x03\x10§.g
       this["\x1d\x18\x05"] = 1083;
       this.api.network.AccountsearchForFriend(this._tiSearch.text);
    }
-   function §\x1a\x19\x13§(§\x16\x05\b§)
+   function setSearchResult(§\x16\x05\b§)
    {
       this["\x1c\x10\x0b"] = new ank.utils.ExtendedArray();
       var _loc3_ = 0;

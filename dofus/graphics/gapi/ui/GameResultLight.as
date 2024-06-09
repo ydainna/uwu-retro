@@ -24,7 +24,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.GameResultLight extends dofus.§\x18\x03\x1
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.gapi["\x1b\x13\x12"]();
    }
    function initTexts()
@@ -53,7 +53,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.GameResultLight extends dofus.§\x18\x03\x1
          this._parent.out({target:this});
       };
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc3_ = this._oData.currentPlayerInfosWithChest.length > 0;
       var _loc4_ = this._oData.collectors[0].items.length > 0;

@@ -55,7 +55,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Conquest extends dofus.§\x18\x03\x10§.gap
       this["\x1d\x0f\x06"]._visible = false;
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.setCurrentTab,params:[this["\x1e\b\x19"]]});
    }
    function addListeners()
@@ -87,7 +87,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Conquest extends dofus.§\x18\x03\x10§.gap
       this._btnTabZones.label = this.api.lang.getText("ZONES_WORD");
       this._btnTabJoin.label = this.api.lang.getText("DEFEND");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.rankChanged({rank:this.api.datacenter.Player.rank});
       this.alignmentChanged({alignment:this.api.datacenter.Player.alignment});

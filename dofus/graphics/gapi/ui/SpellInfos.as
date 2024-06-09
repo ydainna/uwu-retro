@@ -16,7 +16,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellInfos extends dofus.§\x18\x03\x10§.g
          this["\x1e\x05\x14"] = _loc2_;
          if(this["\x18\t\x1c"])
          {
-            this["\x18\t\x14"]();
+            this.initData();
          }
       },params:[_loc2_]});
       return this["\t\x17"]();
@@ -33,14 +33,14 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellInfos extends dofus.§\x18\x03\x10§.g
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
       this["\x1c\x04\x12"].addEventListener("click",this);
       this._sfivSpellFullInfosViewer.addEventListener("close",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this["\x1e\x05\x14"] != undefined)
       {

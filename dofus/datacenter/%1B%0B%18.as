@@ -30,6 +30,6 @@ class dofus.§\x17\x04\x19§.§\x1b\x0b\x18§ extends Object
    function initialize(§\x19\b\x0b§, §\x19\x03\x05§)
    {
       this["\x1d\x17\x01"] = _loc2_;
-      this["\x1e\x02\x07"] = new dofus.datacenter.["\x16\x02\x1b"](_loc3_);
+      this["\x1e\x02\x07"] = new dofus.datacenter.Alignment(_loc3_);
    }
 }

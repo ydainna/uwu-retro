@@ -50,11 +50,11 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.CardFamily extends dofus.§\x
    }
    function createChildren()
    {
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this._ldrFamilyIcon.contentPath = dofus.Constants.FAMILY_CLIP_FOLDER + this.familyID + ".swf";
       this._mcFamilyCardBackground._visible = true;

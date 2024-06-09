@@ -16,7 +16,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x19\x0b§.FighterEffec
    }
    function createChildren()
    {
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
    }
@@ -24,9 +24,9 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x19\x0b§.FighterEffec
    {
       this.api.ui.hideTooltip();
       this["\x1e\x05\x1b"] = _loc2_;
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1d\x06\x14"].scrollFromEverywhere = true;
       if(this["\x1e\x05\x1b"] == undefined)

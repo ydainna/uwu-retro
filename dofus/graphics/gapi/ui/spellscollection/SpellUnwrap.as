@@ -48,14 +48,14 @@ class dofus.§\x18\x03\x10§.gapi.ui.spellscollection.SpellUnwrap extends ank.ga
    {
       this.onEnterFrame = function()
       {
-         this["\x18\t\x14"]();
+         this.initData();
          if(this._currentframe == nEndFrame)
          {
             delete this.onEnterFrame;
          }
       };
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this._parent.api;
       this["\x1c\x1b\x0f"].text = this["\x1e\x05\x14"].name;

@@ -10,7 +10,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
    {
       return dofus.managers.CharactersManager["\x1e\f\x10"];
    }
-   function §\x1a\x17\x16§(§\x19\b\x0b§, sName, §\x19\x12\x10§)
+   function setLocalPlayerData(§\x19\b\x0b§, sName, §\x19\x12\x10§)
    {
       var _loc5_ = this.api.datacenter.Player;
       _loc5_["\x16\x1b\x11"]();
@@ -18,7 +18,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       _loc5_.Name = _loc3_;
       _loc5_.Guild = _loc4_.guild;
       _loc5_.Level = _loc4_.level;
-      _loc5_.Sex = _loc4_["\x1a\x1b\f"];
+      _loc5_.Sex = _loc4_.sex;
       _loc5_.color1 = _loc4_.color1 != -1 ? Number("0x" + _loc4_.color1) : _loc4_.color1;
       _loc5_.color2 = _loc4_.color2 != -1 ? Number("0x" + _loc4_.color2) : _loc4_.color2;
       _loc5_.color3 = _loc4_.color3 != -1 ? Number("0x" + _loc4_.color3) : _loc4_.color3;
@@ -29,7 +29,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
          var _loc8_ = _loc6_[_loc7_];
          if(_loc8_.length != 0)
          {
-            var _loc9_ = this["\x17\x19\x15"](_loc8_);
+            var _loc9_ = this.getItemObjectFromData(_loc8_);
             if(_loc9_ != undefined)
             {
                _loc5_["\x15\x1d\x12"](_loc9_);
@@ -81,7 +81,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       _loc5_.name = _loc3_;
       _loc5_.Guild = Number(_loc4_.spriteType);
       _loc5_.Level = Number(_loc4_.level);
-      _loc5_.Sex = _loc4_["\x1a\x1b\f"] == undefined ? 1 : _loc4_["\x1a\x1b\f"];
+      _loc5_.Sex = _loc4_.sex == undefined ? 1 : _loc4_.sex;
       _loc5_.color1 = _loc4_.color1 != -1 ? Number("0x" + _loc4_.color1) : _loc4_.color1;
       _loc5_.color2 = _loc4_.color2 != -1 ? Number("0x" + _loc4_.color2) : _loc4_.color2;
       _loc5_.color3 = _loc4_.color3 != -1 ? Number("0x" + _loc4_.color3) : _loc4_.color3;
@@ -150,9 +150,9 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       if(sID == this.api.datacenter.Player.ID)
       {
          this["\x1b\x15\x10"](_loc5_);
-         if(!this.api.datacenter.Player["\x18\x05\x12"])
+         if(!this.api.datacenter.Player.haveFakeAlignment)
          {
-            this.api.datacenter.Player.alignment = _loc5_.alignment["\x16\x1c\x1b"]();
+            this.api.datacenter.Player.alignment = _loc5_.alignment.clone();
          }
       }
       return _loc5_;
@@ -430,7 +430,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       _loc4_.cellNum = Number(_loc3_.cell);
       _loc4_.Guild = Number(_loc3_.spriteType);
       _loc4_["\x1a\x06\x15"] = Number(_loc3_["\x1a\x06\x15"]);
-      _loc4_.Sex = _loc3_["\x1a\x1b\f"] == undefined ? 1 : _loc3_["\x1a\x1b\f"];
+      _loc4_.Sex = _loc3_.sex == undefined ? 1 : _loc3_.sex;
       _loc4_["\x1a\x1d\x1c"] = _loc3_["\x1a\x1d\x1c"];
       _loc4_["\x18\x1d\x1a"] = _loc3_["\x18\x1d\x1a"];
       _loc4_.playerName = _loc3_.playerName;
@@ -475,7 +475,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       }
       return _loc4_;
    }
-   function §\x17\x19\x15§(sData)
+   function getItemObjectFromData(sData)
    {
       if(_loc2_.length == 0)
       {

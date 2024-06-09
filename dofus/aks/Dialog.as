@@ -8,7 +8,7 @@ class dofus.aks.Dialog extends dofus.aks.Handler
    {
       this.aks.send("DB" + _loc2_,true);
    }
-   function §\x17\x02\x04§(§\x1b\x04\x0b§)
+   function create(§\x1b\x04\x0b§)
    {
       this.aks.send("DC" + _loc2_,true);
    }

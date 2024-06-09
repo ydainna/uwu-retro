@@ -10,7 +10,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpellBoostViewer extends dofu
       this["\x1e\x05\x14"] = _loc2_;
       if(this["\x18\t\x1c"])
       {
-         this["\x18\t\x14"]();
+         this.initData();
       }
       return this["\t\x17"]();
    }
@@ -20,10 +20,10 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpellBoostViewer extends dofu
    }
    function createChildren()
    {
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1b\x14\x14"]();
    }

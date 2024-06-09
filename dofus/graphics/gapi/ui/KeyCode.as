@@ -53,7 +53,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.KeyCode extends dofus.§\x18\x03\x10§.gapi
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this["\x17\t\x1d"]();
       this.resetKeyCode();
@@ -93,7 +93,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.KeyCode extends dofus.§\x18\x03\x10§.gapi
             this["\x1e\x0f\n"].text = this.api.lang.getText("LOCK_INFOS");
       }
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = 0;
       while(_loc2_ < 10)

@@ -345,7 +345,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x16\x19\r§ extends dofus.utils.§\x16\x1e
                }
                break;
             case "CHANGECHARACTER":
-               this.api.kernel["\x16\x18\x1b"]();
+               this.api.kernel.changeServer();
                break;
             case "LOGOUT":
                this.api.kernel.disconnect();

@@ -10,7 +10,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
       this["\x1e\x05\x11"] = _loc2_;
       if(this["\x18\t\x1c"])
       {
-         this["\x18\t\x14"]();
+         this.initData();
       }
       return this["\t\x14"]();
    }
@@ -21,13 +21,13 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
    function createChildren()
    {
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
       this["\x1c\x19\t"].text = this.api.lang.getText("PLAYER_SPECIALIZATION");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this["\x1e\x05\x11"] != undefined)
       {

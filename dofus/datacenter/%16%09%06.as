@@ -75,7 +75,7 @@ class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.ApiElement
       delete this.gfx_lastArea;
       this.lastDateUpdate = -1000000;
       this.aks_server_will_disconnect = false;
-      this["\x16\x02\x0e"] = new Array();
+      this.aks_gifts_stack = new Array();
       delete this.aks_chat_lastActionTime;
       this["\x16\x19\x14"] = new Object();
       delete this.aks_emote_lastActionTime;

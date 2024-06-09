@@ -13,7 +13,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellForget extends dofus.§\x18\x03\x10§.
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -31,7 +31,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellForget extends dofus.§\x18\x03\x10§.
       this._btnValidate.label = this.api.lang.getText("VALIDATE");
       this._btnCancel.label = this.api.lang.getText("CANCEL_SMALL");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this.api.datacenter.Player.Spells;
       var _loc3_ = new ank.utils.ExtendedArray();

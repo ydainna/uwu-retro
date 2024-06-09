@@ -518,7 +518,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          _loc18_["\x18\x18\x17"] = _loc11_;
          _loc18_.inWorkshop = _loc12_;
          _loc18_.breedId = _loc13_;
-         _loc18_["\x1a\x1b\f"] = _loc14_;
+         _loc18_.sex = _loc14_;
          _loc18_.color1 = _loc15_[0];
          _loc18_.color2 = _loc15_[1];
          _loc18_.color3 = _loc15_[2];
@@ -1036,7 +1036,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
                switch(_loc21_)
                {
                   case "O":
-                     var _loc23_ = this.api.kernel.CharactersManager["\x17\x19\x15"](_loc22_);
+                     var _loc23_ = this.api.kernel.CharactersManager.getItemObjectFromData(_loc22_);
                      _loc19_.push(_loc23_);
                      break;
                   case "G":

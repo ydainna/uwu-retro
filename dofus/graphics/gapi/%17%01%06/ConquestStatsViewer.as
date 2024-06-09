@@ -13,7 +13,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestStatsViewer extends d
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -80,7 +80,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestStatsViewer extends d
          this._lblBadLevel.text = this.api.lang.getText("LEVEL_NEED_TO_BOOST",[dofus.Constants.HUNT_LEVEL]);
       }
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.api.network.Conquest["\x17\x13\x18"]();
       this.rankChanged({rank:this.api.datacenter.Player.rank});
@@ -135,10 +135,10 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestStatsViewer extends d
          this._parent.gapi.hideTooltip();
       };
       this["\x1e\x06\x0e"]["\x18\x19\x12"] = this.api.lang["\x17\x1b\x12"]();
-      this["\x1e\x06\x0e"].value = this["\x1e\x05\x04"]["\x17\x07\x17"];
+      this["\x1e\x06\x0e"].value = this["\x1e\x05\x04"].disgrace;
       this["\x1d\n\x17"].onRollOver = function()
       {
-         this._parent.gapi.showTooltip(new ank.utils.ExtendedString(this._parent["\x1e\x05\x04"]["\x17\x07\x17"])["\x15\x1e\x01"](this._parent.api.lang.getConfigText("THOUSAND_SEPARATOR"),3) + " / " + new ank.utils.ExtendedString(this._parent["\x1e\x06\x0e"]["\x18\x19\x12"])["\x15\x1e\x01"](this._parent.api.lang.getConfigText("THOUSAND_SEPARATOR"),3),this,-10);
+         this._parent.gapi.showTooltip(new ank.utils.ExtendedString(this._parent["\x1e\x05\x04"].disgrace)["\x15\x1e\x01"](this._parent.api.lang.getConfigText("THOUSAND_SEPARATOR"),3) + " / " + new ank.utils.ExtendedString(this._parent["\x1e\x06\x0e"]["\x18\x19\x12"])["\x15\x1e\x01"](this._parent.api.lang.getConfigText("THOUSAND_SEPARATOR"),3),this,-10);
       };
       this["\x1d\n\x17"].onRollOut = function()
       {
@@ -153,7 +153,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestStatsViewer extends d
       {
          this["\x1c\x0b\x0b"].label = this.api.lang.getText("ENABLE_PVP_SHORT");
       }
-      this._btnDisgraceSanction._visible = this.api.datacenter.Player.rank["\x17\x07\x17"] > 0;
+      this._btnDisgraceSanction._visible = this.api.datacenter.Player.rank.disgrace > 0;
    }
    function click(oEvent)
    {
@@ -172,7 +172,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestStatsViewer extends d
             this.api.network.Game.toggleHunterMatchmakingRegister();
             break;
          case this._btnDisgraceSanction:
-            this.api.kernel.GameManager["\x1a\x1d\x0b"]();
+            this.api.kernel.GameManager.showDisgraceSanction();
             break;
          case this["\x1c\x0b\x0b"]:
             if(this.api.datacenter.Player.rank.enable)

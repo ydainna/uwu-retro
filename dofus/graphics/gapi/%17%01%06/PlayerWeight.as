@@ -21,7 +21,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.PlayerWeight extends dofus.§
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -31,7 +31,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.PlayerWeight extends dofus.§
       this.api.datacenter.Player.addEventListener("maxOverWeightChanged",this);
       this.api.datacenter.Player.addEventListener("currentWeightChanged",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this["\x1e\f\x1c"] != undefined)
       {

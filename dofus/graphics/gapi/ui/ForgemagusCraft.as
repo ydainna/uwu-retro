@@ -96,7 +96,7 @@ if(!dofus.graphics.gapi.ui.ForgemagusCraft)
       this["\x1d\x0e\x12"]._visible = false;
       this.addToQueue({object:this,method:this.addListeners});
       this["\x1c\n\x18"] = this._btnFilterRunes;
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this["\x18\x06\x0f"](true);
       this.addToQueue({object:this,method:this.initTexts});
    };
@@ -173,7 +173,7 @@ if(!dofus.graphics.gapi.ui.ForgemagusCraft)
       this["\x1c\n\x0b"].label = this.api.lang.getText("APPLY_ONE_RUNE");
       this["\x1c\n\x03"].label = this.api.lang.getText("APPLY_MULTIPLE_RUNES");
    };
-   _loc1_["\x18\t\x14"] = function §\x18\t\x14§()
+   _loc1_.initData = function initData()
    {
       this.dataProvider = this.api.datacenter.Exchange["\x18\f\n"];
       this["\x18\x17\x05"] = this.api.datacenter.Exchange["\x18\x17\x06"];

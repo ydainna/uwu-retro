@@ -719,7 +719,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
          _loc4_ = _loc4_ + 1;
       }
    }
-   function §\x16\x1c\x1b§()
+   function clone()
    {
       return new dofus.datacenter.["\x18\x10\x15"](this["\x1d\x17\x01"],this["\x1d\x1e\x1a"],this._nQuantity,this["\x1d\x1b\x05"],this["\x1e\t\x0b"]);
    }

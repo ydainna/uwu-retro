@@ -209,7 +209,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x1e\x16§.ConquestZone
       switch(_loc2_.target)
       {
          case this["\x1d\x07\x16"]:
-            this.api.ui.showTooltip(this.api.lang.getText("ALIGNMENT") + ": " + (this["\x1e\x03\x18"].alignment <= 0 ? (this["\x1e\x03\x18"].alignment != -1 ? this.api.lang.getText("NEUTRAL_WORD") : this.api.lang.getText("NON_ALIGNED")) : new dofus.datacenter.["\x16\x02\x1b"](this["\x1e\x03\x18"].alignment,1).name),_root._xmouse,_root._ymouse - 20);
+            this.api.ui.showTooltip(this.api.lang.getText("ALIGNMENT") + ": " + (this["\x1e\x03\x18"].alignment <= 0 ? (this["\x1e\x03\x18"].alignment != -1 ? this.api.lang.getText("NEUTRAL_WORD") : this.api.lang.getText("NON_ALIGNED")) : new dofus.datacenter.Alignment(this["\x1e\x03\x18"].alignment,1).name),_root._xmouse,_root._ymouse - 20);
             break;
          case this["\x1d\x0b\r"]:
             this.api.ui.showTooltip(this.api.lang.getText("FIGHTING_PRISM"),_root._xmouse,_root._ymouse - 20);

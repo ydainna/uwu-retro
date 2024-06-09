@@ -1,7 +1,7 @@
-class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
+class dofus.§\x18\x18\x0b§..TipsManager extends ank.utils.§\x1a\t\t§
 {
    static var §\x1b\x10\x14§ = 3;
-   static var §\x1b\x10\x12§ = 19;
+   static var TIP_GAIN_LEVEL = 19;
    static var §\x1b\x10\x0f§ = 5;
    static var §\x1b\x10\x10§ = 7;
    static var §\x1b\x10\x0e§ = 8;
@@ -15,15 +15,15 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
    static var §\x1e\f\x10§ = null;
    var §\x1b\x1d\b§ = new Array();
    var §\x1d\x17\x04§ = 0;
-   function §\x1b\x10\x0b§(oAPI)
+   function .TipsManager(oAPI)
    {
       super();
-      dofus.managers["\x1b\x10\x0b"]["\x1e\f\x10"] = this;
+      dofus.managers.TipsManager["\x1e\f\x10"] = this;
       this.initialize(oAPI);
    }
    static function §\x17\x19\t§()
    {
-      return dofus.managers["\x1b\x10\x0b"]["\x1e\f\x10"];
+      return dofus.managers.TipsManager["\x1e\f\x10"];
    }
    function initialize(oAPI)
    {
@@ -31,7 +31,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
       this["\x1c\x01\t"] = new Array();
       this.addToQueue({object:this,method:this["\x18\x16\x17"]});
    }
-   function §\x1a\x1e\x10§(§\x19\x0f\x1d§)
+   function .showNewTip(§\x19\x0f\x1d§)
    {
       if(!this["\x17\x19\x0e"]())
       {
@@ -104,7 +104,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
       _loc12_ = _loc13_.y;
       var _loc14_ = Math.sqrt(Math.pow(_loc9_,2) + Math.pow(_loc10_,2)) / 2;
       this.api.ui.loadUIComponent("Indicator","Indicator" + this["\x1d\x17\x04"],{coordinates:[_loc11_,_loc12_],offset:_loc14_},{bAlwaysOnTop:true});
-      this["\x1b\x1d\b"][this["\x1d\x17\x04"]] = _global.setInterval(this,"onIndicatorHide",dofus.managers["\x1b\x10\x0b"]["\x18\b\x1a"] * 1000,this["\x1d\x17\x04"]++);
+      this["\x1b\x1d\b"][this["\x1d\x17\x04"]] = _global.setInterval(this,"onIndicatorHide",dofus.managers.TipsManager["\x18\b\x1a"] * 1000,this["\x1d\x17\x04"]++);
    }
    function §\x1a\x06\x03§(§\x19\t\x14§, §\x19\x04\x11§, §\x19\x0b\x03§)
    {
@@ -113,7 +113,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
          var _loc5_ = this.api.gfx["\x18\x18\x15"]["\x17\x14\x1d"](_loc3_).mc;
          if(_loc5_ == undefined)
          {
-            new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.NullPointerException(this,"\x1b\x10\x0b","\x1a\x06\x03","mcCell"),"dofus.managers.TipsManager::pointCell","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/TipsManager.as",238);
+            new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.NullPointerException(this,"TipsManager","\x1a\x06\x03","mcCell"),"dofus.managers.TipsManager::pointCell","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/TipsManager.as",238);
             return undefined;
          }
          var _loc6_ = {x:_loc5_._x,y:_loc5_._y};
@@ -121,9 +121,9 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
          var _loc7_ = _loc6_.x;
          var _loc8_ = _loc6_.y;
          this.api.ui.loadUIComponent("Indicator","Indicator" + this["\x1d\x17\x04"],{coordinates:[_loc7_,_loc8_],offset:_loc4_,rotate:false},{bAlwaysOnTop:true});
-         this["\x1b\x1d\b"][this["\x1d\x17\x04"]] = _global.setInterval(this,"onIndicatorHide",dofus.managers["\x1b\x10\x0b"]["\x18\b\x1a"] * 1000,this["\x1d\x17\x04"]++);
+         this["\x1b\x1d\b"][this["\x1d\x17\x04"]] = _global.setInterval(this,"onIndicatorHide",dofus.managers.TipsManager["\x18\b\x1a"] * 1000,this["\x1d\x17\x04"]++);
       }
-      new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.InvalidOperationException(this,"\x1b\x10\x0b","\x1a\x06\x03","We are no more on the right map."),"dofus.managers.TipsManager::pointCell","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/TipsManager.as",258);
+      new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.InvalidOperationException(this,"TipsManager","\x1a\x06\x03","We are no more on the right map."),"dofus.managers.TipsManager::pointCell","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/TipsManager.as",258);
       return undefined;
    }
    function §\x1a\x06\r§(§\x19\t\x14§, §\x19\b\x01§)
@@ -141,11 +141,11 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
                var _loc7_ = _loc5_.y;
                var _loc8_ = _loc4_[k].mc._height;
                this.api.ui.loadUIComponent("Indicator","Indicator" + this["\x1d\x17\x04"],{coordinates:[_loc6_,_loc7_],offset:_loc8_,rotate:false},{bAlwaysOnTop:true});
-               this["\x1b\x1d\b"][this["\x1d\x17\x04"]] = _global.setInterval(this,"onIndicatorHide",dofus.managers["\x1b\x10\x0b"]["\x18\b\x1a"] * 1000,this["\x1d\x17\x04"]++);
+               this["\x1b\x1d\b"][this["\x1d\x17\x04"]] = _global.setInterval(this,"onIndicatorHide",dofus.managers.TipsManager["\x18\b\x1a"] * 1000,this["\x1d\x17\x04"]++);
             }
          }
       }
-      new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.InvalidOperationException(this,"\x1b\x10\x0b","\x1a\x06\x03","We are no more on the right map."),"dofus.managers.TipsManager::pointSprite","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/TipsManager.as",298);
+      new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.InvalidOperationException(this,"TipsManager","\x1a\x06\x03","We are no more on the right map."),"dofus.managers.TipsManager::pointSprite","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/TipsManager.as",298);
       return undefined;
    }
    function §\x1a\x06\t§(§\x19\t\x14§, §\x19\f\x06§)
@@ -171,7 +171,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
             }
          }
       }
-      new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.InvalidOperationException(this,"\x1b\x10\x0b","\x1a\x06\x03","We are no more on the right map."),"dofus.managers.TipsManager::pointPicto","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/TipsManager.as",329);
+      new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.InvalidOperationException(this,"TipsManager","\x1a\x06\x03","We are no more on the right map."),"dofus.managers.TipsManager::pointPicto","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/TipsManager.as",329);
       return undefined;
    }
    function §\x18\x01\x1c§()
@@ -276,7 +276,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
       var _loc3_ = 0;
       while(_loc3_ < _loc2_.length)
       {
-         if(_loc2_[_loc3_].t == dofus.managers["\x1b\x10\x0b"]["\x1b\x11\x11"])
+         if(_loc2_[_loc3_].t == dofus.managers.TipsManager["\x1b\x11\x11"])
          {
             this["\x1b\x1d\t"]["GUI" + _loc2_[_loc3_].v] = _loc2_[_loc3_].d;
          }
@@ -299,7 +299,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
       var _loc3_ = 0;
       while(_loc3_ < _loc2_.length)
       {
-         if(_loc2_[_loc3_].t == dofus.managers["\x1b\x10\x0b"]["\x1b\x11\x12"])
+         if(_loc2_[_loc3_].t == dofus.managers.TipsManager["\x1b\x11\x12"])
          {
             var _loc4_ = _loc2_[_loc3_].v;
             var _loc5_ = 0;
@@ -336,7 +336,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
          {
             if(_loc4_[_loc5_] != undefined && !_global.isNaN(_loc4_[_loc5_]))
             {
-               this["\x1a\x1e\x10"](Number(_loc4_[_loc5_]));
+               this.showNewTip(Number(_loc4_[_loc5_]));
             }
             _loc5_ = _loc5_ + 1;
          }
@@ -347,7 +347,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x10\x0b§ extends ank.utils.§\x1a\t\t§
       var _loc3_ = this["\x17\x19\f"]()["GUI" + _loc2_];
       if(_loc3_ != undefined && !_global.isNaN(_loc3_))
       {
-         this["\x1a\x1e\x10"](_loc3_);
+         this.showNewTip(_loc3_);
       }
    }
    function §\x19\x19\x1b§(oEvent)

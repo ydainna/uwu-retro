@@ -38,7 +38,7 @@ if(!dofus.graphics.gapi.ui.ServerInformations)
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this["\x18\n\x14"]});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    };
    _loc1_.addListeners = function addListeners()
    {
@@ -81,7 +81,7 @@ if(!dofus.graphics.gapi.ui.ServerInformations)
       this["\x1c\x13\x06"].text = this.api.lang.getText("BACK");
       this["\x1d\x06\x01"].contentPath = dofus.Constants["\x1a\x14\x17"] + this["\x1e\f\x11"].id + ".swf";
    };
-   _loc1_["\x18\t\x14"] = function §\x18\t\x14§()
+   _loc1_.initData = function initData()
    {
       this["\x1d\x01\x07"].text = this["\x1e\f\x11"].label;
       this["\x1d\x02\n"].text = this["\x1e\f\x11"]["\x1b\t\x18"];

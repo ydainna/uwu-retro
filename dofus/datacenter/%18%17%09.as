@@ -5,7 +5,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
    var §\x18\x0f\x18§ = false;
    static var MAX_RAPID_STUFFS_COUNT = 10;
    static var MAX_SPELLS_DECKS_COUNT = 10;
-   var §\x18\x05\x12§ = false;
+   var haveFakeAlignment = false;
    var currentSpellsDeckID = 0;
    var §\x1d\x1d\x12§ = 0;
    var §\x1c\x06\x01§ = false;

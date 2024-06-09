@@ -99,7 +99,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MakeReport extends dofus.§\x18\x03\x10§.g
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -132,7 +132,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MakeReport extends dofus.§\x18\x03\x10§.g
       this["\x1c\x17\x1b"].text = "Find Accounts :";
       this["\x1c\x1c\x15"].text = "Penal :";
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1d\x02\x15"].text = this["\x1e\r\x01"];
       this["\x1e\r\x15"].text = this["\x1e\t\x05"];

@@ -13,7 +13,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.FightOptionButtons extends dofus.§\x18\x03
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this["\x18\n\r"]});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -39,7 +39,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.FightOptionButtons extends dofus.§\x18\x03
       this["\x1c\x0b\f"].addEventListener("over",this);
       this["\x1c\x0b\f"].addEventListener("out",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(!this.api.datacenter.Game["\x18\x0f\x1b"])
       {

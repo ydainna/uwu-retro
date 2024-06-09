@@ -36,7 +36,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                   this.showMessage(undefined,"Syntax : /adminselect [pseudos]","DEBUG_LOG");
                   return undefined;
                }
-               var _loc5_ = this.api.kernel["\x16\x01\r"]["\x17\x13\x17"](_loc3_[0],false);
+               var _loc5_ = this.api.kernel.AdminManager["\x17\x13\x17"](_loc3_[0],false);
                _loc5_.show(_root._xmouse,_root._ymouse,true);
                break;
             case "CONSOLEMAXSIZE":
@@ -96,7 +96,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                this.showMessage(undefined,_loc3_[1] + " lang file size : " + this.api.lang["\x17\x1a\x0f"](_loc11_,_loc3_[1]) + " octets","DEBUG_LOG");
                break;
             case "POINTSPRITE":
-               this.api.kernel["\x1b\x10\x0b"]["\x1a\x06\r"](-1,Number(_loc3_[0]));
+               this.api.kernel.TipsManager["\x1a\x06\r"](-1,Number(_loc3_[0]));
                break;
             case "VIEWFIGHTRESULT":
                var _loc12_ = Number(_loc2_.substr(_loc4_.length + 2));
@@ -141,7 +141,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                }
                break;
             case "POINTPICTO":
-               this.api.kernel["\x1b\x10\x0b"]["\x1a\x06\t"](-1,Number(_loc3_[0]));
+               this.api.kernel.TipsManager["\x1a\x06\t"](-1,Number(_loc3_[0]));
                break;
             case "SAVETHEWORLD":
                if(dofus.Constants["\x1a\x10\x01"])
@@ -540,7 +540,7 @@ class dofus.utils.§\x16\x1e\x18§.§\x17\x05\x14§ extends dofus.utils.§\x16\x
                   this.showMessage(undefined,"This feature is not compatible on a Flash Projector","ERROR_CHAT");
                   return undefined;
                }
-               if(!dofus.managers["\x16\x01\r"].getInstance()["\x18\r\x13"])
+               if(!dofus.managers.AdminManager.getInstance()["\x18\r\x13"])
                {
                   this.showMessage(undefined,"You can\'t do this out of a batch execution.","ERROR_CHAT");
                   return undefined;

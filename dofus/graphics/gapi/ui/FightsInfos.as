@@ -39,7 +39,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.FightsInfos extends dofus.§\x18\x03\x10§.
       this["\x1b\x01\f"](false);
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this.api.network.Fights,method:this.api.network.Fights["\x17\x1b\x01"]});
       this["\x1a\x18\x03"](this["\x1d\x10\x11"],dofus.Constants["\x1b\x0f\x03"][0]);
       this["\x1a\x18\x03"](this["\x1d\x10\x12"],dofus.Constants["\x1b\x0f\x03"][1]);
@@ -70,7 +70,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.FightsInfos extends dofus.§\x18\x03\x10§.
       this["\x1d\x07\x07"].addEventListener("itemSelected",this);
       this["\x1d\x07\b"].addEventListener("itemSelected",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this._dgFights.dataProvider = this["\x1c\x0f\f"];
    }

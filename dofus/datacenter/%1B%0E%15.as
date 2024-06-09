@@ -14,7 +14,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x0e\x15§ extends ank.battlefield.§\x17\x04
       super.initialize(sID,_loc4_,_loc5_,_loc6_);
       this.color1 = _loc7_;
       this["\x1d\x1e\x18"] = Number(_loc8_);
-      this["\x1e\x02\x07"] = new dofus.datacenter.["\x16\x02\x1b"](Number(_loc9_));
+      this["\x1e\x02\x07"] = new dofus.datacenter.Alignment(Number(_loc9_));
       this["\x1b\x1e\x0e"] = new Object();
       this["\x1a\x01\b"] = new Object();
    }

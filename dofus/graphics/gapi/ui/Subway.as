@@ -16,7 +16,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Subway extends dofus.§\x18\x03\x10§.gapi.
          this["\x1c\x0f\x05"] = _loc2_;
          if(this["\x18\t\x1c"])
          {
-            this["\x18\t\x14"]();
+            this.initData();
          }
       },params:[_loc2_]});
       return this["\x1e\x18\x01"]();
@@ -46,7 +46,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Subway extends dofus.§\x18\x03\x10§.gapi.
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
@@ -99,7 +99,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Subway extends dofus.§\x18\x03\x10§.gapi.
       this._btnClose2.addEventListener("click",this);
       this["\x1d\x07\x06"].addEventListener("itemSelected",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this["\x1d\x1e\x18"] != dofus.graphics.gapi.ui.Subway["\x1b\f\x06"])
       {

@@ -21,7 +21,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpouseViewer extends dofus.§
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this["\x1d\f\t"]._visible = false;
    }
@@ -42,7 +42,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpouseViewer extends dofus.§
          this._parent.click({target:this});
       };
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1b\x14\x14"]();
    }
@@ -63,8 +63,8 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpouseViewer extends dofus.§
    {
       if(this["\x1e\x05\x19"] != undefined)
       {
-         this["\x1e\x10\t"].title = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("SPOUSE"),this["\x1e\x05\x19"]["\x1a\x1b\f"],true);
-         this._lblSpouse.text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("SPOUSE"),this["\x1e\x05\x19"]["\x1a\x1b\f"],true);
+         this["\x1e\x10\t"].title = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("SPOUSE"),this["\x1e\x05\x19"].sex,true);
+         this._lblSpouse.text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("SPOUSE"),this["\x1e\x05\x19"].sex,true);
          this["\x1c\x1b\x0f"].text = this["\x1e\x05\x19"].name;
          this.api.colors.addSprite(this._ldrArtwork,this["\x1e\x05\x19"]);
          this._ldrArtwork.contentPath = dofus.Constants["\x18\x04\x15"] + this["\x1e\x05\x19"].gfx + ".swf";
@@ -81,7 +81,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpouseViewer extends dofus.§
          {
             this["\x1d\f\t"]._visible = false;
             this["\x1c\x1a\x07"].text = "";
-            this["\x1c\x12\x15"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("SPOUSE_NOT_CONNECTED"),this["\x1e\x05\x19"]["\x1a\x1b\f"],true);
+            this["\x1c\x12\x15"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("SPOUSE_NOT_CONNECTED"),this["\x1e\x05\x19"].sex,true);
             this["\x1c\x15\x12"].text = "";
             this._btnJoin.enabled = false;
             this["\x1c\t\f"].enabled = false;

@@ -121,7 +121,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
       this.addToQueue({object:this,method:this.addListeners});
       this["\x1c\n\x18"] = this._btnFilterRessoureces;
       this.addToQueue({object:this,method:this["\x1a\x0f\x18"]});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this["\x18\x06\x0f"](true);
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this["\x18\t\x1a"]});
@@ -227,7 +227,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
       this["\x1c\x1c\x11"].text = this.api.lang.getText("PAY");
       this["\x1c\x1c\x12"].text = this.api.lang.getText("GRANT_IF_SUCCESS");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.dataProvider = this.api.datacenter.Exchange["\x18\f\n"];
       this["\x18\x17\x05"] = this.api.datacenter.Exchange["\x18\x17\x06"];

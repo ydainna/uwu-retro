@@ -19,7 +19,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x18\x1e\r§.MountStorageMountItem extend
             this["\x1d\x05\x19"].contentPath = "";
          }
          this._ldrIcon.contentPath = _loc4_.iconFile;
-         this["\x1d\x0f\x1b"]._visible = !_loc4_["\x1a\x1b\f"];
+         this["\x1d\x0f\x1b"]._visible = !_loc4_.sex;
          this["\x1d\x0f\x1c"]._visible = !this["\x1d\x0f\x1b"]._visible;
       }
       else if(this._lbl.text != undefined)

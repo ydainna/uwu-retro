@@ -31,7 +31,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseServer extends dofus.§\x18\x03\x10§
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
    }
    function addListeners()
@@ -59,7 +59,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseServer extends dofus.§\x18\x03\x10§
          this["\x1c\x1a\x10"].text = this.api.lang.getText("POPUP_GAME_BEGINNING_TITLE");
       }
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.api.datacenter.Basics.createCharacter = false;
       this["\x1d\x1c\x19"] = 0;

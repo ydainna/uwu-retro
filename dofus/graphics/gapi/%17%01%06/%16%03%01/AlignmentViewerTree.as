@@ -13,7 +13,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
@@ -26,7 +26,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
       this["\x1d\x07\t"].addEventListener("itemRollOut",this);
       this["\x1d\x07\t"].addEventListener("itemSelected",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this.api.datacenter.Player.specialization;
       var _loc3_ = _loc2_.alignment.index;
@@ -110,7 +110,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
       {
          this["\x17\x07\x19"]({type:"orderSelected",order:_loc2_.row.item.data});
       }
-      else if(_loc2_.row.item.data instanceof dofus.datacenter.["\x16\x02\x1b"])
+      else if(_loc2_.row.item.data instanceof dofus.datacenter.Alignment)
       {
          this["\x17\x07\x19"]({type:"alignementSelected",alignement:_loc2_.row.item.data});
       }

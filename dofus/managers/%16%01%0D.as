@@ -1,4 +1,4 @@
-if(!dofus.managers["\x16\x01\r"])
+if(!dofus.managers.AdminManager)
 {
    if(!dofus)
    {
@@ -8,23 +8,23 @@ if(!dofus.managers["\x16\x01\r"])
    {
       _global.dofus.managers = new Object();
    }
-   dofus.managers["\x16\x01\r"] = function()
+   dofus.managers.AdminManager = function()
    {
       super();
-      dofus.managers["\x16\x01\r"]["\x1e\f\x10"] = this;
+      dofus.managers.AdminManager["\x1e\f\x10"] = this;
    } extends dofus.utils.ApiElement;
-   var _loc1_ = dofus.managers["\x16\x01\r"] = function()
+   var _loc1_ = dofus.managers.AdminManager = function()
    {
       super();
-      dofus.managers["\x16\x01\r"]["\x1e\f\x10"] = this;
+      dofus.managers.AdminManager["\x1e\f\x10"] = this;
    }.prototype;
-   dofus.managers["\x16\x01\r"] = function()
+   dofus.managers.AdminManager = function()
    {
       super();
-      dofus.managers["\x16\x01\r"]["\x1e\f\x10"] = this;
+      dofus.managers.AdminManager["\x1e\f\x10"] = this;
    }.getInstance = function §\x17\x19\t§()
    {
-      return dofus.managers["\x16\x01\r"]["\x1e\f\x10"];
+      return dofus.managers.AdminManager["\x1e\f\x10"];
    };
    _loc1_["\x1e\x1d\x0b"] = function §\x1e\x1d\x0b§()
    {
@@ -125,7 +125,7 @@ if(!dofus.managers["\x16\x01\r"])
             {
                _global.clearTimeout(this["\x1d\x1c\x0e"]);
             }
-            this["\x1d\x1c\x0e"] = _global.setTimeout(this,"refreshVisually",dofus.managers["\x16\x01\r"]["\x17\x06\x17"]);
+            this["\x1d\x1c\x0e"] = _global.setTimeout(this,"refreshVisually",dofus.managers.AdminManager["\x17\x06\x17"]);
             return true;
          case 127:
          case 27:
@@ -139,7 +139,7 @@ if(!dofus.managers["\x16\x01\r"])
             {
                _global.clearTimeout(this["\x1d\x1c\x0e"]);
             }
-            this["\x1d\x1c\x0e"] = _global.setTimeout(this,"refreshVisually",dofus.managers["\x16\x01\r"]["\x17\x06\x17"]);
+            this["\x1d\x1c\x0e"] = _global.setTimeout(this,"refreshVisually",dofus.managers.AdminManager["\x17\x06\x17"]);
             return true;
             break;
          case 13:
@@ -155,7 +155,7 @@ if(!dofus.managers["\x16\x01\r"])
             {
                _global.clearTimeout(this["\x1d\x1c\x0e"]);
             }
-            this["\x1d\x1c\x0e"] = _global.setTimeout(this,"refreshVisually",dofus.managers["\x16\x01\r"]["\x17\x06\x17"]);
+            this["\x1d\x1c\x0e"] = _global.setTimeout(this,"refreshVisually",dofus.managers.AdminManager["\x17\x06\x17"]);
             return true;
       }
    };
@@ -861,7 +861,7 @@ if(!dofus.managers["\x16\x01\r"])
    _loc1_.cancel = function cancel(oEvent)
    {
    };
-   _loc1_["\x16\x19\b"] = function §\x16\x19\b§()
+   _loc1_.characterEnteringGame = function characterEnteringGame()
    {
       if(this["\x1e\x07\x01"] == null || this["\x1e\x07\x01"] == undefined)
       {
@@ -871,7 +871,7 @@ if(!dofus.managers["\x16\x01\r"])
       this.playerName = dofus.datacenter.["\x18\x17\t"](this["\x1a\x05\x14"]).Name;
       this.batch(this["\x1e\x07\x01"].firstChild);
    };
-   _loc1_["\x16\x19\x03"] = function §\x16\x19\x03§()
+   _loc1_.characterEnteringGame = function characterEnteringGame()
    {
       if(this["\x1e\r\x02"] == null || this["\x1e\r\x02"] == undefined)
       {
@@ -917,14 +917,14 @@ if(!dofus.managers["\x16\x01\r"])
    }
    );
    "\x1c{invalid_utf8=150}\x02"(_loc1_,null,1);
-   dofus.managers["\x16\x01\r"] = function()
+   dofus.managers.AdminManager = function()
    {
       super();
-      dofus.managers["\x16\x01\r"]["\x1e\f\x10"] = this;
+      dofus.managers.AdminManager["\x1e\f\x10"] = this;
    }["\r\n"] = null;
-   dofus.managers["\x16\x01\r"] = function()
+   dofus.managers.AdminManager = function()
    {
       super();
-      dofus.managers["\x16\x01\r"]["\x1e\f\x10"] = this;
+      dofus.managers.AdminManager["\x1e\f\x10"] = this;
    }["\x04\x06\b\x1cN{invalid_utf8=150}\x02"] = 100;
 }

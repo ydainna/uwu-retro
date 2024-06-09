@@ -53,7 +53,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MountStorage extends dofus.§\x18\x03\x10§
       this["\x18\x07\x05"]();
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.gapi["\x1b\x13\x12"]();
    }
    function addListeners()
@@ -98,7 +98,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MountStorage extends dofus.§\x18\x03\x10§
       this["\x17\x10\x11"](this["\x1c\f\x13"],this.mounts.concat(this.parkMounts));
       this["\x17\x10\x11"](this["\x1c\f\x12"],this.mounts.concat(this.parkMounts));
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.modelChanged({target:this["\x1c\x0f\x19"]});
       this.modelChanged({target:this["\x1c\x0f\x1c"]});
@@ -253,7 +253,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MountStorage extends dofus.§\x18\x03\x10§
          case 1:
             for(var i in _loc2_)
             {
-               if(!_loc2_[i]["\x1a\x1b\f"])
+               if(!_loc2_[i].sex)
                {
                   _loc4_.push(_loc2_[i]);
                }
@@ -262,7 +262,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MountStorage extends dofus.§\x18\x03\x10§
          case 2:
             for(var i in _loc2_)
             {
-               if(_loc2_[i]["\x1a\x1b\f"])
+               if(_loc2_[i].sex)
                {
                   _loc4_.push(_loc2_[i]);
                }

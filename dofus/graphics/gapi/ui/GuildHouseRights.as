@@ -18,7 +18,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.GuildHouseRights extends dofus.§\x18\x03\x
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function §\x16\x15\n§()
    {
@@ -62,7 +62,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.GuildHouseRights extends dofus.§\x18\x03\x
       this["\x1c\x11\x05"].addEventListener("shared",this);
       this["\x1c\x11\x05"].addEventListener("guild",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.api.network.Houses.state();
    }

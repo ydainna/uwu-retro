@@ -19,7 +19,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSelector extends dofus.§\x18\x03\x10§
       this["\x18\x06\x0f"](true);
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
@@ -40,7 +40,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSelector extends dofus.§\x18\x03\x10§
       this["\x1c\f\x1b"].addEventListener("itemSelected",this);
       this["\x1d\x06\x0b"].addEventListener("itemSelected",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1c\x0f\x13"] = new ank.utils.ExtendedArray();
       this["\x1e\x0e\x17"].restrict = "0-9";

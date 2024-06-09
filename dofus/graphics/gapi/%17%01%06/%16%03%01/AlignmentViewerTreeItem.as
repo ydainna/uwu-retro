@@ -10,7 +10,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
       if(_loc2_)
       {
          var _loc5_ = dofus.graphics.gapi.controls["\x16\x03\x01"].AlignmentViewerTreeItem["\x17\x07\x05"] * _loc4_.depth;
-         if(_loc4_.data instanceof dofus.datacenter.["\x16\x02\x1b"])
+         if(_loc4_.data instanceof dofus.datacenter.Alignment)
          {
             this._ldrIcon._x = this["\x1d\x18\x0f"] + _loc5_;
             this["\x1c\x1b\x0f"]._x = this["\x1d\x18\x0f"] + _loc5_;

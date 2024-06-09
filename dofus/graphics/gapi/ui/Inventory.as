@@ -77,7 +77,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Inventory extends dofus.§\x18\x03\x10§.ga
       else
       {
          this["\x18\x06\x0f"](false);
-         var _loc3_ = _loc2_["\x16\x1c\x1b"]();
+         var _loc3_ = _loc2_.clone();
          if(_loc3_["\x1a\n\x05"])
          {
             _loc3_.gfx = _loc3_["\x1a\n\x05"];
@@ -136,7 +136,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Inventory extends dofus.§\x18\x03\x10§.ga
       this.addToQueue({object:this,method:this["\x18\x06\t"]});
       this.addToQueue({object:this,method:this["\x18\t\x18"]});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this["\x18\x06\x0f"](true);
       this["\x18\x06\x0e"](true);
       this["\x1c\x0e\x04"] = this._ctr15;
@@ -318,7 +318,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Inventory extends dofus.§\x18\x03\x10§.ga
          this.showCustomSet(false);
       }
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1e\r\x10"].zoom = 250;
       this["\x1a\x0b\t"]();

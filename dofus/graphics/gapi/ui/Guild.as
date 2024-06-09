@@ -36,7 +36,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Guild extends dofus.§\x18\x03\x10§.gapi.�
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this.api.network.Guild,method:this.api.network.Guild["\x17\x19\x04"]});
       this.addToQueue({object:this,method:this.setCurrentTab,params:[this["\x1e\b\x19"]]});
       this["\x1d\x0e\x12"]._visible = false;
@@ -70,7 +70,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Guild extends dofus.§\x18\x03\x10§.gapi.�
       this.toggleInfosEditor(false);
       this._btnEdit.enabled = this.api.datacenter.Player.guildInfos["\x1a\x05\x15"].canEditGuildNotes || this.api.datacenter.Player.guildInfos["\x1a\x05\x15"]["\x18\f\x1a"];
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this.api.datacenter.Player.guildInfos;
       var _loc3_ = _loc2_["\x17\f\x14"];
@@ -234,7 +234,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Guild extends dofus.§\x18\x03\x10§.gapi.�
       switch(_loc2_.eventName)
       {
          case "infosUpdate":
-            this["\x18\t\x14"]();
+            this.initData();
             break;
          case "general":
             var _loc3_ = this.api.datacenter.Player.guildInfos;

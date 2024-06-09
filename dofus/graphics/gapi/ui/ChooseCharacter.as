@@ -10,7 +10,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseCharacter extends dofus.§\x18\x03\x1
       this["\x1c\x01\x06"] = _loc2_;
       if(this["\x18\t\x1c"])
       {
-         this["\x18\t\x14"]();
+         this.initData();
       }
       return this.spriteList;
    }
@@ -40,7 +40,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseCharacter extends dofus.§\x18\x03\x1
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this._btnPlay._visible = false;
    }
@@ -95,7 +95,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseCharacter extends dofus.§\x18\x03\x1
          _loc2_ = _loc2_ + 1;
       }
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.api.datacenter.Basics.inGame = false;
       this["\x1c\b\x1d"]._visible = this["\x1c\t\x01"]._visible = this["\x1c\x01\x06"].length > 5;
@@ -156,7 +156,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseCharacter extends dofus.§\x18\x03\x1
       }
       this["\x1c\b\x1d"].onRelease();
       this._btnBack._visible = !this.api.config.isStreaming;
-      var _loc2_ = this.api.datacenter.Basics["\x16\x02\x0e"];
+      var _loc2_ = this.api.datacenter.Basics.aks_gifts_stack;
       this._btnViewAllGifts._visible = this["\x1c\x01\x06"].length > 0 && _loc2_.length > 0;
       this._mcGiftsWarning._visible = _loc2_.length > 0 && _loc2_[0].date != "";
    }
@@ -249,7 +249,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseCharacter extends dofus.§\x18\x03\x1
             this.api.ui.loadUIComponent("Gifts","Gifts",{spriteList:this["\x1c\x01\x06"]},{bForceLoad:true});
             break;
          case "_btnBack":
-            this.api.kernel["\x16\x18\x1b"](true);
+            this.api.kernel.changeServer(true);
             break;
          case "_btnChangeServer":
       }
@@ -262,7 +262,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChooseCharacter extends dofus.§\x18\x03\x1
             this.api.ui.showTooltip(this.api.lang.getText("GIFTS_TITLE"),_loc2_.target,-10);
             break;
          case this._mcGiftsWarning:
-            this.api.ui.showTooltip(this.api.lang.getText("EXPIRATION_GIFTS",[this.api.datacenter.Basics["\x16\x02\x0e"][0].date]),_loc2_.target,-20);
+            this.api.ui.showTooltip(this.api.lang.getText("EXPIRATION_GIFTS",[this.api.datacenter.Basics.aks_gifts_stack[0].date]),_loc2_.target,-20);
       }
    }
    function out(oEvent)

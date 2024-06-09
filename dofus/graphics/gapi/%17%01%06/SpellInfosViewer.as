@@ -28,10 +28,10 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpellInfosViewer extends dofu
    }
    function createChildren()
    {
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1b\x14\x14"]();
    }

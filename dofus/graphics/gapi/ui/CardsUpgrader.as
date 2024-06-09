@@ -18,7 +18,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsUpgrader extends dofus.§\x18\x03\x10�
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
    }
    function addListeners()
@@ -50,7 +50,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsUpgrader extends dofus.§\x18\x03\x10�
       this._btnReset.label = this.api.lang.getText("REINIT_WORD");
       this["\x1d\x01\x14"].text = this.api.lang.getText("SKILL") + " : " + this.api.lang["\x17\x1e\x15"](this["\x1d\x1c\x1c"]).d;
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this._ivInventoryViewer.hideNonCardsFilters();
       this._ivInventoryViewer["\x1a\x1e\x04"] = false;

@@ -38,7 +38,7 @@ class dofus.§\x17\x04\x19§.§\x19\x02\x13§ extends dofus.§\x17\x04\x19§.§\
    }
    function §\x1e\x11\x19§()
    {
-      return new dofus.datacenter.["\x16\x02\x1b"]();
+      return new dofus.datacenter.Alignment();
    }
    function §\x1a\x13§(§\x19\f\x0e§)
    {

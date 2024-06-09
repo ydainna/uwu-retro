@@ -34,7 +34,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Register extends dofus.§\x18\x03\x10§.gap
       this.addToQueue({object:this,method:this["\x1b\r\r"],params:[1]});
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this["\x18\t\x13"]});
       this.addToQueue({object:this,method:this["\x1a\x12\x15"],params:[this.api.datacenter.Basics.aks_detected_country]});
    }
@@ -113,7 +113,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Register extends dofus.§\x18\x03\x10§.gap
       this["\x1c\f\f"].addEventListener("itemSelected",this);
       this.api.kernel.KeyManager.addShortcutsListener("onShortcut",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1e\x0e\x14"].password = true;
       this["\x1e\x0e\x15"].password = true;

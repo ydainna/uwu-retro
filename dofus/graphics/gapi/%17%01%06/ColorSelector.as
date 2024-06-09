@@ -31,10 +31,10 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ColorSelector extends dofus.�
    }
    function createChildren()
    {
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.addListeners});
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1e\x02\x16"] = {color1:-1,color2:-1,color3:-1};
       this["\x1e\x02\x0b"] = {color1:-1,color2:-1,color3:-1};

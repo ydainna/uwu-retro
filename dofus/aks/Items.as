@@ -214,7 +214,7 @@ if(!dofus.aks.Items)
                   var _loc9_ = 0;
                   while(_loc9_ < _loc8_.length)
                   {
-                     var _loc10_ = this.api.kernel.CharactersManager["\x17\x19\x15"](_loc8_[_loc9_]);
+                     var _loc10_ = this.api.kernel.CharactersManager.getItemObjectFromData(_loc8_[_loc9_]);
                      if(this.api.datacenter.Basics.aks_exchange_echangeType == 0)
                      {
                         var _loc11_ = this.api.datacenter.["\x1b\x0f\b"]["\x1a\x1c\x0e"]["\x18\f\n"];
@@ -258,7 +258,7 @@ if(!dofus.aks.Items)
          var _loc7_ = 0;
          while(_loc7_ < _loc6_.length)
          {
-            var _loc8_ = this.api.kernel.CharactersManager["\x17\x19\x15"](_loc6_[_loc7_]);
+            var _loc8_ = this.api.kernel.CharactersManager.getItemObjectFromData(_loc6_[_loc7_]);
             if(_loc8_ != undefined)
             {
                this.api.datacenter.Player["\x1b\x15\x05"](_loc8_);

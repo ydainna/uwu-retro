@@ -70,7 +70,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function addListeners()
    {
@@ -123,7 +123,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
       this._btnExitReportView.label = this.api.lang.getText("NMR_ADMIN_EXIT_REPORT_VIEW");
       this._btnAddReportToMakeReport.label = this.api.lang.getText("NMR_ADMIN_ADD_TO_MOD_REPORT");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this._aCases == undefined || this._aCases.length == 0)
       {
@@ -142,7 +142,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
    {
       var _loc2_ = this.currentTargetCase;
       var _loc3_ = this.currentTargetCase.targetPlayerEntityInfos;
-      this._winBackground.title = "N.M.R Admin - " + _loc3_["\x16\x19\x07"] + " (" + this.casesBookCurrentPageID + "/" + this.casesBookLastPageID + ")";
+      this._winBackground.title = "N.M.R Admin - " + _loc3_.characterName + " (" + this.casesBookCurrentPageID + "/" + this.casesBookLastPageID + ")";
       var _loc4_ = new ank.utils.ExtendedArray();
       var _loc5_ = new ank.utils.["\x17\x0e\r"]();
       var _loc6_ = _loc2_.reports;
@@ -339,7 +339,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
             break;
          case this._btnActionOpenPlayerPopupMenu:
             var _loc3_ = this.currentTargetCase.targetPlayerEntityInfos;
-            this.api.kernel.GameManager["\x1a\x1e\x14"](undefined,{sPlayerID:_loc3_.characterID,sPlayerName:_loc3_["\x16\x19\x07"]});
+            this.api.kernel.GameManager["\x1a\x1e\x14"](undefined,{sPlayerID:_loc3_.characterID,sPlayerName:_loc3_.characterName});
             break;
          case this._btnExitReportView:
             this._selectedModReportObject = undefined;
@@ -349,7 +349,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
             if(this._selectedModReportObject != undefined)
             {
                var _loc4_ = this._selectedModReportObject.reporterPlayerEntityInfos;
-               this.api.kernel.GameManager["\x1a\x1e\x14"](undefined,{sPlayerID:_loc4_.characterID,sPlayerName:_loc4_["\x16\x19\x07"]});
+               this.api.kernel.GameManager["\x1a\x1e\x14"](undefined,{sPlayerID:_loc4_.characterID,sPlayerName:_loc4_.characterName});
             }
             break;
          case this._btnNext:
@@ -365,7 +365,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
                while(_loc7_ < this._aCases.length)
                {
                   _loc5_ = this._aCases[_loc7_];
-                  _loc6_["\x15\x1d\x12"](_loc5_.targetPlayerEntityInfos["\x16\x19\x07"] + " (" + (_loc7_ + 1) + "/" + this.casesBookLastPageID + ")",this,this.selectCaseAtIndex,[_loc7_]);
+                  _loc6_["\x15\x1d\x12"](_loc5_.targetPlayerEntityInfos.characterName + " (" + (_loc7_ + 1) + "/" + this.casesBookLastPageID + ")",this,this.selectCaseAtIndex,[_loc7_]);
                   _loc7_ = _loc7_ + 1;
                }
                _loc6_.show(_root._xmouse,_root._ymouse);
@@ -388,7 +388,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
                while(_loc10_ >= 0)
                {
                   _loc8_ = this._aCases[_loc10_];
-                  _loc9_["\x15\x1d\x12"](_loc8_.targetPlayerEntityInfos["\x16\x19\x07"] + " (" + (_loc10_ + 1) + "/" + this.casesBookLastPageID + ")",this,this.selectCaseAtIndex,[_loc10_]);
+                  _loc9_["\x15\x1d\x12"](_loc8_.targetPlayerEntityInfos.characterName + " (" + (_loc10_ + 1) + "/" + this.casesBookLastPageID + ")",this,this.selectCaseAtIndex,[_loc10_]);
                   _loc10_ = _loc10_ - 1;
                }
                _loc9_.show(_root._xmouse,_root._ymouse);
@@ -466,7 +466,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
             {
                break;
             }
-            _loc3_ += this.api.lang.getText("NMR_ADMIN_NEXT_CASE") + " : " + _loc5_.targetPlayerEntityInfos["\x16\x19\x07"];
+            _loc3_ += this.api.lang.getText("NMR_ADMIN_NEXT_CASE") + " : " + _loc5_.targetPlayerEntityInfos.characterName;
             break;
          case this._btnPrevious:
             var _loc6_ = this.previousTargetCase;
@@ -474,17 +474,17 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
             {
                break;
             }
-            _loc3_ += this.api.lang.getText("NMR_ADMIN_PREVIOUS_CASE") + " : " + _loc6_.targetPlayerEntityInfos["\x16\x19\x07"];
+            _loc3_ += this.api.lang.getText("NMR_ADMIN_PREVIOUS_CASE") + " : " + _loc6_.targetPlayerEntityInfos.characterName;
             break;
          case this._btnActionOpenPlayerPopupMenu:
             var _loc7_ = this.currentTargetCase.targetPlayerEntityInfos;
-            _loc3_ += this.api.lang.getText("NMR_ADMIN_ADMIN_MENU_ON") + " : " + _loc7_["\x16\x19\x07"];
+            _loc3_ += this.api.lang.getText("NMR_ADMIN_ADMIN_MENU_ON") + " : " + _loc7_.characterName;
             break;
          case this._btnOpenReporterPopupMenu:
             if(this._selectedModReportObject != undefined)
             {
                var _loc8_ = this._selectedModReportObject.reporterPlayerEntityInfos;
-               _loc3_ += this.api.lang.getText("NMR_ADMIN_ADMIN_MENU_ON") + " : " + _loc8_["\x16\x19\x07"];
+               _loc3_ += this.api.lang.getText("NMR_ADMIN_ADMIN_MENU_ON") + " : " + _loc8_.characterName;
                break;
             }
       }

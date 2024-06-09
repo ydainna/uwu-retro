@@ -40,7 +40,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsCollection extends dofus.§\x18\x03\x1
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
@@ -130,7 +130,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsCollection extends dofus.§\x18\x03\x1
       };
       Selection.addListener(_loc5_);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.setPlayerTtgCollection(this._sPlayerID,this._ttgCollection);
       this.selectShowAllFilter();

@@ -87,7 +87,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestJoinViewer extends do
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       var _loc2_ = 0;
       while(_loc2_ < dofus.graphics.gapi.controls.ConquestJoinViewer["\x1b\x0f\x05"])
       {
@@ -136,7 +136,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestJoinViewer extends do
       this["\x1c\x19\x1a"].text = this.api.lang.getText("CONQUEST_JOIN_FIGHT");
       this["\x1c\x12\x1d"].text = this.api.lang.getText("ATTACKERS");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1c\x12\x1c"].text = String(this.api.datacenter.Conquest["\x16\x06\x1b"].length);
       this["\x1b\x15\x16"]();

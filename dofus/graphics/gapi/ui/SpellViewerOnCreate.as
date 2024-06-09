@@ -24,7 +24,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellViewerOnCreate extends dofus.§\x18\x0
    {
       this.addToQueue({object:this,method:this["\x18\n\x14"]});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function §\x18\n\x14§()
    {
@@ -124,7 +124,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellViewerOnCreate extends dofus.§\x18\x0
       }
       return _loc3_;
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this.api.datacenter.Basics.aks_current_server.isTemporis())
       {

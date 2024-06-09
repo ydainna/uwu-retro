@@ -49,7 +49,7 @@ class dofus.§\x17\x04\x19§.Rank extends Object
       this["\x1d\x15\x13"] = !(_global.isNaN(_loc4_) || _loc4_ == undefined) ? _loc4_ : 0;
       this._bEnabled = _loc5_ != undefined ? _loc5_ : false;
    }
-   function §\x16\x1c\x1b§()
+   function clone()
    {
       return new dofus.datacenter..Rank(this["\x1e\x01\x03"],this["\x1d\x16\x19"],this["\x1d\x15\x13"],this._bEnabled);
    }

@@ -124,7 +124,7 @@ class dofus.§\x17\x04\x19§.Mount extends Object
       var _loc2_ = this.modelName;
       _loc2_ += "\n" + _global.api.lang.getText("NAME_BIG") + " : " + this.name;
       _loc2_ += "\n" + _global.api.lang.getText("LEVEL") + " : " + this.level;
-      _loc2_ += "\n" + _global.api.lang.getText("CREATE_SEX") + " : " + (!this["\x1a\x1b\f"] ? _global.api.lang.getText("ANIMAL_MEN") : _global.api.lang.getText("ANIMAL_WOMEN"));
+      _loc2_ += "\n" + _global.api.lang.getText("CREATE_SEX") + " : " + (!this.sex ? _global.api.lang.getText("ANIMAL_MEN") : _global.api.lang.getText("ANIMAL_WOMEN"));
       _loc2_ += "\n" + _global.api.lang.getText("MOUNTABLE") + " : " + (!this.mountable ? _global.api.lang.getText("NO") : _global.api.lang.getText("YES"));
       _loc2_ += "\n" + _global.api.lang.getText("WILD") + " : " + (!this.wild ? _global.api.lang.getText("NO") : _global.api.lang.getText("YES"));
       if(this.fecondation > 0)

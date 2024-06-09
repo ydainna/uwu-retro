@@ -27,7 +27,7 @@ class dofus.aks.Tutorial extends dofus.aks.Handler
    function §\x19\x1c\x19§(sExtraData)
    {
       var _loc3_ = Number(_loc2_);
-      this.api.kernel["\x1b\x10\x0b"]["\x1a\x1e\x10"](_loc3_);
+      this.api.kernel.TipsManager.showNewTip(_loc3_);
    }
    function §\x19\x16\x0b§(sExtraData)
    {

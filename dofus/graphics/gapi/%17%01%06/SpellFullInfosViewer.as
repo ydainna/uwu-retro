@@ -41,7 +41,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpellFullInfosViewer extends 
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this["\x18\x05\x1d"]();
       this._btnTabCreature._visible = false;
@@ -77,7 +77,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpellFullInfosViewer extends 
       }
       return _loc3_;
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1b\x14\x14"]();
    }

@@ -650,7 +650,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
                   var _loc41_ = _loc4_.name;
                   if(this.api.datacenter.Player.isAuthorized)
                   {
-                     var _loc40_ = this.api.kernel["\x16\x01\r"]["\x17\x13\x17"](_loc41_,false);
+                     var _loc40_ = this.api.kernel.AdminManager["\x17\x13\x17"](_loc41_,false);
                   }
                   else
                   {
@@ -696,7 +696,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
                }
                else if(Key.isDown(Key.SHIFT) || _loc3_)
                {
-                  this.api.network.Dialog["\x17\x02\x04"](_loc5_);
+                  this.api.network.Dialog.create(_loc5_);
                }
                else
                {
@@ -704,7 +704,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
                   var _loc46_ = _loc4_["\x18\x04\x07"] == this.api.datacenter.Player.guildInfos.name;
                   var _loc47_ = _loc45_["\x16\x15\x1d"] || _loc4_["\x18\x0e\x1c"] && _loc45_.canCollectOwnTaxCollector;
                   var _loc48_ = this.api.ui["\x17\x02\x19"]();
-                  _loc48_["\x15\x1d\x12"](this.api.lang.getText("SPEAK"),this.api.network.Dialog,this.api.network.Dialog["\x17\x02\x04"],[_loc5_]);
+                  _loc48_["\x15\x1d\x12"](this.api.lang.getText("SPEAK"),this.api.network.Dialog,this.api.network.Dialog.create,[_loc5_]);
                   _loc48_["\x15\x1d\x12"](this.api.lang.getText("COLLECT_TAX"),this.api.kernel.GameManager,this.api.kernel.GameManager["\x1b\t\x0f"],[8,_loc5_],_loc46_ && _loc47_);
                   _loc48_["\x15\x1d\x12"](this.api.lang.getText("ATTACK"),this.api.network.GameActions,this.api.network.GameActions["\x16\x07\x01"],[[_loc5_]],!_loc46_);
                   _loc48_.show(_root._xmouse,_root._ymouse);
@@ -837,7 +837,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
          {
             _loc4_ = dofus.Constants["\x17\x0f\x06"];
          }
-         var _loc11_ = !_loc6_.haveFakeAlignement ? _loc6_.alignment.index : _loc6_["\x17\x0f\x04"].index;
+         var _loc11_ = !_loc6_.haveFakeAlignement ? _loc6_.alignment.index : _loc6_.fakeAlignment.index;
          if(_loc6_.rank.value > 0)
          {
             if(_loc11_ == 1)

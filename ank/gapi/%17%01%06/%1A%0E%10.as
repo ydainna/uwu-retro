@@ -57,7 +57,7 @@ class ank.gapi.§\x17\x01\x06§.§\x1a\x0e\x10§ extends ContextMenu
       }
       if(_loc2_.datacenter.Basics.inGame && _loc2_.datacenter.Player.isAuthorized)
       {
-         var _loc8_ = _loc2_.kernel["\x16\x01\r"]["\x17\x13\x17"](_loc2_.datacenter.Player.Name,true);
+         var _loc8_ = _loc2_.kernel.AdminManager["\x17\x13\x17"](_loc2_.datacenter.Player.Name,true);
          _loc8_["\x15\x1d\x12"]("Client v" + dofus.Constants.VERSION + "." + dofus.Constants.SUBVERSION + "." + dofus.Constants.SUBSUBVERSION + " >>",this,this["\x1a\x07\x03"],[_loc2_]);
          _loc8_.items.unshift(_loc8_.items.pop());
          _loc8_.show(_root._xmouse,_root._ymouse,true);

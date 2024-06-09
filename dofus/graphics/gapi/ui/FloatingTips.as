@@ -160,6 +160,6 @@ class dofus.§\x18\x03\x10§.gapi.ui.FloatingTips extends dofus.§\x18\x03\x10§
    }
    function href(oEvent)
    {
-      this.api.kernel["\x1b\x10\x0b"]["\x19\x19\x1b"](_loc2_);
+      this.api.kernel.TipsManager["\x19\x19\x1b"](_loc2_);
    }
 }

@@ -30,6 +30,6 @@ class dofus.§\x17\x04\x19§.modreport.ModReportPlayerEntityInfos
    }
    function toString()
    {
-      return "Character Name : " + this["\x16\x19\x07"] + ", Account Pseudo : " + this.accountPseudo + ", Character ID : " + this.characterID;
+      return "Character Name : " + this.characterName + ", Account Pseudo : " + this.accountPseudo + ", Character ID : " + this.characterID;
    }
 }

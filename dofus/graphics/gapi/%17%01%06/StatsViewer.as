@@ -13,7 +13,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.StatsViewer extends dofus.§\
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
@@ -24,9 +24,9 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.StatsViewer extends dofus.§\
    {
       this.api.datacenter.Player.addEventListener("fullStatsChanged",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
-      var _loc2_ = this.api.datacenter.Player["\x17\x13\x01"];
+      var _loc2_ = this.api.datacenter.Player.FullStats;
       var _loc3_ = new ank.utils.ExtendedArray();
       for(var k in _loc2_)
       {
@@ -48,6 +48,6 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.StatsViewer extends dofus.§\
    function fullStatsChanged(oEvent)
    {
       new org.flashdevelop.utils.FlashConnect.trace("fullStatsChanged!","dofus.graphics.gapi.controls.StatsViewer::fullStatsChanged","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/graphics/gapi/controls/StatsViewer.as",103);
-      this["\x18\t\x14"]();
+      this.initData();
    }
 }

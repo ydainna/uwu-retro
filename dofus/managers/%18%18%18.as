@@ -141,7 +141,7 @@ class dofus.§\x18\x18\x0b§.§\x18\x18\x18§ extends dofus.§\x18\x18\x0b§.§\
       var _loc24_ = _loc2_.canChangeCharac != 1 ? false : true;
       new org.flashdevelop.utils.FlashConnect.trace("[MapServiceManager] (parseMap) Map " + _loc3_ + " : " + _loc18_,"dofus.managers.MapsServersManager::parseMap","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/MapsServersManager.as",191);
       this.api.datacenter.Basics.aks_current_map_id = _loc3_;
-      this.api.kernel["\x1b\x10\x0b"]["\x19\x1a\x14"](_loc3_);
+      this.api.kernel.TipsManager["\x19\x1a\x14"](_loc3_);
       this.api.kernel["\x1b\x0b\f"]["\x19\x1a\x14"](_loc3_);
       var _loc25_ = new dofus.datacenter.["\x17\t\x0f"](_loc3_);
       _loc25_.bCanChallenge = _loc17_;

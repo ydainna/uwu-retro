@@ -28,7 +28,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.WaitingQueue extends dofus.§\x18\x03\x10§
       this._btnSubscribe._visible = false;
       this._btnLeaveQueue._visible = false;
       this.addToQueue({object:this,method:this["\x18\t\x0b"]});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function §\x18\t\x0b§()
    {
@@ -37,7 +37,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.WaitingQueue extends dofus.§\x18\x03\x10§
       this._btnSubscribe.label = this.api.lang.getText("SUBSCRIPTION");
       this._btnLeaveQueue.label = this.api.lang.getText("WAIT_QUEUE_LEAVE");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this.api.lang.getServerInfos(this["\x1e\x05\x03"].queueId).n;
       if(_loc2_ != undefined)
@@ -76,7 +76,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.WaitingQueue extends dofus.§\x18\x03\x10§
             _root.getURL(this.api.lang.getConfigText("PAY_LINK"),"_blank");
             break;
          case "_btnLeaveQueue":
-            this.api.kernel["\x16\x18\x1b"]();
+            this.api.kernel.changeServer();
       }
    }
 }

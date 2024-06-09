@@ -28,7 +28,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.temporis2.Temporis2TowerStepItem extends do
       this._mcStepDone._visible = false;
       this._mcKey._visible = false;
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
    }
    function addListeners()
@@ -75,7 +75,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.temporis2.Temporis2TowerStepItem extends do
          ref.out({target:this});
       };
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1d\x05\x11"].contentPath = this._oStepObject.challengeIlluFile;
       if(this._oStepObject.isCompletedByPlayer)

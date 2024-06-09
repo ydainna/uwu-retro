@@ -40,7 +40,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
       this._nSpellFullInfosPlacerX = this["\x1d\x10\f"]._x;
       this._nMcElementFilterSelectedY = this._mcElementFilterSelected._y;
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this["\x1d\x10\f"]._visible = false;
    }
@@ -374,7 +374,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
             this.applySpellFilters();
       }
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this._cbProgressFire.value = 0;
       this._ldrBreed.contentPath = dofus.Constants["\x16\x10\x1c"] + this.api.datacenter.Player.Guild + ".swf";

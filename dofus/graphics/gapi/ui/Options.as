@@ -61,7 +61,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.setCurrentTab,params:["General"]});
    }
    function initTexts()
@@ -210,7 +210,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
       this._mcTabViewer._btnMuteEnvironment.addEventListener("click",this);
       this._sbOptions.addEventListener("scroll",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this._mcTabViewer._btnShortcuts.enabled = this.api.kernel["\x1b\x1a\x11"];
       var _loc2_ = this.api.kernel.OptionsManager;
@@ -342,7 +342,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
       {
          this._sbOptions._visible = false;
       }
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this["\x18\n\x13"]});
       this.addToQueue({object:this,method:this["\x15\x1e\x1b"]});
    }
@@ -713,7 +713,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
             var _loc12_ = dofus.graphics.gapi.ui.SpellsCollection(this.gapi.getUIComponent("SpellsCollection"));
             if(_loc12_ != undefined)
             {
-               _loc12_["\x18\t\x14"]();
+               _loc12_.initData();
             }
             break;
          case "_cbStylePoints":
@@ -729,7 +729,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi
             this.api.kernel.OptionsManager.setOption("DisplayStyle",_loc2_.target.params.style);
             break;
          case "AskYesNoResetTips":
-            dofus.managers["\x1b\x10\x0b"].getInstance()["\x1a\r\x1a"]();
+            dofus.managers.TipsManager.getInstance()["\x1a\r\x1a"]();
             break;
          case "AskYesNoQuality":
             this.api.kernel.OptionsManager.setOption("DefaultQuality",_loc2_.target.params.quality);

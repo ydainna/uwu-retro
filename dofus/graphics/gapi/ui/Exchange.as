@@ -68,7 +68,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Exchange extends dofus.§\x18\x03\x10§.gap
    {
       this.addToQueue({object:this,method:this.addListeners});
       this["\x1c\n\x18"] = this._btnFilterEquipement;
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this["\x18\x06\x0f"](true);
       this.addToQueue({object:this,method:this.initTexts});
       this._btnPrivateChat._visible = this.api.datacenter.Exchange["\x17\b\x1d"] > 0;
@@ -134,7 +134,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Exchange extends dofus.§\x18\x03\x10§.gap
       this["\x1c\x19\x1c"].text = new ank.utils.ExtendedString(this.api.datacenter.Player.Kama)["\x15\x1e\x01"](this.api.lang.getConfigText("THOUSAND_SEPARATOR"),3);
       this._btnPrivateChat.label = this.api.lang.getText("WISPER_MESSAGE");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.dataProvider = this.api.datacenter.Exchange["\x18\f\n"];
       this["\x18\x17\x05"] = this.api.datacenter.Exchange["\x18\x17\x06"];

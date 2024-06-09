@@ -17,7 +17,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestZonesViewer extends d
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
@@ -82,7 +82,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestZonesViewer extends d
       }
       this["\x1d\x06\f"].dataProvider = _loc4_;
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this.api.datacenter.Conquest["\x1b\x19\x0f"];
       this["\x1c\x18\n"].text = ank.utils.PatternDecoder["\x16\x1d\x15"](this.api.lang.getText("CONQUEST_POSSESSED_WORD"),"f",false) + " : " + _loc2_["\x1a\x03\x04"] + " / " + _loc2_["\x1a\x06\x13"] + " / " + _loc2_["\x1b\x11\x03"];
@@ -123,7 +123,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ConquestZonesViewer extends d
    }
    function worldDataChanged(§\x17\x0e\x03§)
    {
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function itemSelected(§\x17\x0e\x03§)
    {

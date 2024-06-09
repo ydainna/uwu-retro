@@ -23,7 +23,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x17\x13\x07§.GameResultTeam extends dof
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this["\x1d\x06\x19"]._visible = false;
    }
    function addListeners()
@@ -40,7 +40,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x17\x13\x07§.GameResultTeam extends dof
       this["\x1c\x18\x12"].text = this.api.lang.getText("XP_GUILD");
       this._lblItems.text = this.api.lang.getText("WIN_ITEMS");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this["\x1c\x0f\x06"].length;
       this["\x1d\x06\x19"].dataProvider = this["\x1c\x0f\x06"];

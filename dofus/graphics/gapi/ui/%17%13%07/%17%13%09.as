@@ -23,7 +23,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x17\x13\x07§.§\x17\x13\t§ extends dof
    {
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initTexts});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this["\x1d\x06\x19"]._visible = false;
    }
    function addListeners()
@@ -47,7 +47,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x17\x13\x07§.§\x17\x13\t§ extends dof
          this["\x1c\x16\x1c"].text = this.api.lang.getText("WIN_XP");
       }
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this.api.datacenter.Basics.aks_current_server["\x18\x0e\x03"]())
       {

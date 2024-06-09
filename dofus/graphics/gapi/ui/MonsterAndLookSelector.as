@@ -93,7 +93,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MonsterAndLookSelector extends dofus.§\x18
       }
       this["\x1c\f\n"].dataProvider = _loc3_;
    }
-   function §\x18\t\x14§(§\x17\x0b\x1b§)
+   function initData(§\x17\x0b\x1b§)
    {
       this._cciSprite["\x17\x06\x1b"] = false;
       this["\x1c\x10\x14"] = _loc2_;
@@ -131,7 +131,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MonsterAndLookSelector extends dofus.§\x18
             _loc5_ = _loc5_.nextSibling;
          }
          _loc3_.push({label:"-- ALL --",data:_loc4_});
-         ui["\x18\t\x14"](_loc3_);
+         ui.initData(_loc3_);
       };
       _loc2_.load(dofus.Constants["\x1b\x1a\x03"]);
    }
@@ -165,7 +165,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MonsterAndLookSelector extends dofus.§\x18
          _loc10_.data.push(_loc14_);
       }
       _loc5_.push({label:"-- ALL --",data:_loc6_});
-      this["\x18\t\x14"](_loc5_);
+      this.initData(_loc5_);
    }
    function select(oEvent)
    {

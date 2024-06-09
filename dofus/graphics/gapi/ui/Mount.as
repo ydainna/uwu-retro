@@ -21,7 +21,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Mount extends dofus.§\x18\x03\x10§.gapi.�
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.mountChanged,params:[{mount:this.api.datacenter.Player.mount}]});
    }
@@ -47,7 +47,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Mount extends dofus.§\x18\x03\x10§.gapi.�
       this.api.datacenter.Player.addEventListener("mountChanged",this);
       this._btnClose.addEventListener("click",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.mountChanged();
    }

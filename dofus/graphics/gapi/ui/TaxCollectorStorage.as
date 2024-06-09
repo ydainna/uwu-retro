@@ -38,7 +38,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.TaxCollectorStorage extends dofus.§\x18\x0
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this["\x18\x06\x0f"](true);
       this["\x1a\x16\x1c"](false);
@@ -67,7 +67,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.TaxCollectorStorage extends dofus.§\x18\x0
       this["\x1e\x10\x11"].title = this.api.datacenter.Player.data.name;
       this["\x1e\x10\x12"].title = this._oData.name;
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this._livInventory.dataProvider = this.api.datacenter.Player.Inventory;
       this._ldrArtwork.contentPath = dofus.Constants["\x16\x05\x10"] + this._oData.gfx + ".swf";

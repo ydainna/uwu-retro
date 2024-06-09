@@ -133,7 +133,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Friends extends dofus.§\x18\x03\x10§.gapi
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this["\x1a\x1a\x15"]});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.setCurrentTab,params:[this["\x1e\b\x19"]]});
       this["\x1d\x10\r"]._visible = false;
    }
@@ -199,7 +199,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Friends extends dofus.§\x18\x03\x10§.gapi
       this["\x1c\x0e\x12"].addEventListener("itemRollOut",this);
       this.api.kernel.KeyManager.addShortcutsListener("onShortcut",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1c\n\x1d"].selected = this.api.datacenter.Basics.aks_notify_on_friend_connexion;
    }

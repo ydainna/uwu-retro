@@ -162,7 +162,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
          _loc8_ = _loc8_ + 1;
       }
       _loc6_.name = _loc4_[4] != "" ? _loc4_[4] : this.api.lang.getText("NO_NAME");
-      _loc6_["\x1a\x1b\f"] = Number(_loc4_[5]);
+      _loc6_.sex = Number(_loc4_[5]);
       var _loc10_ = _loc4_[6].split(",");
       _loc6_.xp = Number(_loc10_[0]);
       _loc6_["\x1b\x1a\x0b"] = Number(_loc10_[1]);

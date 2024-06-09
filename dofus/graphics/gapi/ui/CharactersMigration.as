@@ -12,7 +12,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CharactersMigration extends dofus.§\x18\x0
       this["\x1c\x01\x06"] = _loc2_;
       if(this["\x18\t\x1c"])
       {
-         this["\x18\t\x14"]();
+         this.initData();
       }
       return this.spriteList;
    }
@@ -26,7 +26,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CharactersMigration extends dofus.§\x18\x0
       this["\x1d\x0e\x19"]._itCharacterName.text = _loc2_;
       return this.setNewName;
    }
-   function §\x18\x06\n§()
+   function hideGenerateRandomName()
    {
       this["\x1d\x0e\x19"]["\x1d\x0f\f"]._visible = false;
    }
@@ -99,7 +99,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CharactersMigration extends dofus.§\x18\x0
       _loc4_.row.item = this["\x1d\x06\x10"].selectedItem;
       this.itemSelected(_loc4_);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.api.datacenter.Basics.inGame = false;
       this["\x1b\x1c\x07"] = new Array();

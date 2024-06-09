@@ -111,7 +111,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.
       this.gapi.removeCursor(true);
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this["\x18\x13\x14"]});
       this.api.gfx._visible = false;
    }
@@ -213,7 +213,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.
       this["\x1e\x10\x07"].addEventListener("change",this);
       this.api.datacenter.Conquest.addEventListener("worldDataChanged",this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       if(this["\x1c\x0e\x18"] == undefined)
       {

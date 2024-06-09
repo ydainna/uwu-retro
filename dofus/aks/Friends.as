@@ -147,7 +147,7 @@ class dofus.aks.Friends extends dofus.aks.Handler
       _loc5_.isConnected = !_global.isNaN(_loc5_.mapID);
       _loc5_.level = Number(_loc3_[6]);
       _loc5_.isInFight = _loc3_[7] != "1" ? false : true;
-      _loc5_["\x1a\x1b\f"] = this.api.datacenter.Player.Sex != 0 ? "m" : "f";
+      _loc5_.sex = this.api.datacenter.Player.Sex != 0 ? "m" : "f";
       _loc5_.isFollow = _loc3_[8] != "1" ? false : true;
       _loc5_.id = Number(_loc3_[9]);
       var _loc6_ = this.api.ui.getUIComponent("Friends");
@@ -185,7 +185,7 @@ class dofus.aks.Friends extends dofus.aks.Handler
          _loc4_.sortLevel = _loc4_.level != "?" ? Number(_loc4_.level) : -1;
          _loc4_.alignement = Number(_loc3_[4]);
          _loc4_.guild = _loc3_[5];
-         _loc4_["\x1a\x1b\f"] = _loc3_[6];
+         _loc4_.sex = _loc3_[6];
          _loc4_.gfxID = _loc3_[7];
          _loc4_.hasTtgCollection = _loc3_[8] == "1";
          _loc4_.id = _loc3_[9];

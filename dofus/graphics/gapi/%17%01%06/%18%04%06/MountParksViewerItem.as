@@ -98,7 +98,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x18\x04\x06§.MountParksVi
             break;
          default:
             var _loc4_ = _loc2_.target.contentData;
-            _loc3_.ui.showTooltip(_loc4_ == undefined ? _loc3_.lang.getText("CUSTOM_SET_EMPTY_SLOT") : "<b>" + _loc4_.modelName + "</b> " + "<i>(" + _loc4_.name + ")</i> " + (_loc4_["\x1a\x1b\f"] != 0 ? "♀" : "♂") + "\n" + _loc3_.lang.getText("OWNER_WORD") + " : " + "<b>" + _loc4_["\x1a\x03\x06"] + "</b>",_loc2_.target,-30,{bXLimit:true,bYLimit:true});
+            _loc3_.ui.showTooltip(_loc4_ == undefined ? _loc3_.lang.getText("CUSTOM_SET_EMPTY_SLOT") : "<b>" + _loc4_.modelName + "</b> " + "<i>(" + _loc4_.name + ")</i> " + (_loc4_.sex != 0 ? "♀" : "♂") + "\n" + _loc3_.lang.getText("OWNER_WORD") + " : " + "<b>" + _loc4_["\x1a\x03\x06"] + "</b>",_loc2_.target,-30,{bXLimit:true,bYLimit:true});
       }
    }
    function click(oEvent)

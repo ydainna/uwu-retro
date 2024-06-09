@@ -25,7 +25,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.StatsJob extends dofus.§\x18\x03\x10§.gap
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
       this["\x1d\x11\x19"]._visible = false;
       this._btnClosePanel._visible = false;
@@ -103,7 +103,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.StatsJob extends dofus.§\x18\x03\x10§.gap
          this._parent.click({target:this});
       };
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this.api.datacenter.Player;
       this.levelChanged({value:_loc2_.Level});

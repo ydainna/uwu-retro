@@ -100,7 +100,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Craft extends dofus.§\x18\x03\x10§.gapi.�
       this.addToQueue({object:this,method:this.addListeners});
       this["\x1c\n\x18"] = this._btnFilterRessoureces;
       this.addToQueue({object:this,method:this["\x1a\x0f\x18"]});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this["\x18\x06\x0f"](true);
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this["\x18\t\x1a"]});
@@ -170,7 +170,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Craft extends dofus.§\x18\x03\x10§.gapi.�
       this["\x1e\x10\x0f"].title = this.api.lang.getText("RECEIPTS_FROM_JOB");
       this["\x1d\x01\x14"].text = this.api.lang.getText("SKILL") + " : " + this.api.lang["\x17\x1e\x15"](this["\x1d\x1c\x1c"]).d;
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this.dataProvider = this.api.datacenter.Exchange["\x18\f\n"];
       this["\x18\x17\x05"] = this.api.datacenter.Exchange["\x18\x17\x06"];

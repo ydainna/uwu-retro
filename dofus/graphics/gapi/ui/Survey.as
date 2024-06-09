@@ -20,7 +20,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Survey extends dofus.§\x18\x03\x10§.gapi.
    {
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
@@ -37,7 +37,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Survey extends dofus.§\x18\x03\x10§.gapi.
       this._lstQuestions.addEventListener("itemSelected",this);
       ank.utils.["\x18\x1e\x13"].addListener(this);
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       var _loc2_ = this.api.datacenter.Survey;
       this._lblTitle.text = _loc2_.title;

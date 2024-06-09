@@ -35,7 +35,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.AskMainMenu extends ank.gapi.ui.FlyWindow
       switch(_loc2_.target._name)
       {
          case "_btnChange":
-            this.api.kernel["\x16\x18\x1b"]();
+            this.api.kernel.changeServer();
             break;
          case "_btnDisconnect":
             this.api.kernel.disconnect();

@@ -46,7 +46,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.customset.CustomSetEdit extends dofus.§\x1
       }
       this.addToQueue({object:this,method:this.initTexts});
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
    }
    function initTexts()
    {
@@ -66,7 +66,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.customset.CustomSetEdit extends dofus.§\x1
       this._cgGrid.addEventListener("dblClickItem",this);
       this._cgGrid["\x19\x02\n"] = false;
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this["\x1c\t\x10"].enabled = !this._oRapidStuff.isEmptyRapidStuff;
       this._cgGrid.dataProvider = this._eaIcons;

@@ -17,7 +17,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MakeMimibiote extends dofus.§\x18\x03\x10�
    function createChildren()
    {
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
    }
    function addListeners()
@@ -48,7 +48,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MakeMimibiote extends dofus.§\x18\x03\x10�
       this["\x1c\x1b\x0f"].text = this.api.lang.getText("CUSTOMIZE");
       this._btnValidate.label = this.api.lang.getText("VALIDATE");
    }
-   function §\x18\t\x14§()
+   function initData()
    {
       this._ivInventoryViewer.hideNonEquipementFilters();
       this._ivInventoryViewer["\x1a\x1e\x04"] = false;
@@ -66,7 +66,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MakeMimibiote extends dofus.§\x18\x03\x10�
          return undefined;
       }
       var _loc5_ = new ank.utils.ExtendedArray();
-      _loc3_ = _loc3_["\x16\x1c\x1b"]();
+      _loc3_ = _loc3_.clone();
       _loc3_.Quantity = 1;
       if(!(!_loc4_ && _loc2_.dataProvider.length > 0))
       {
@@ -158,7 +158,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MakeMimibiote extends dofus.§\x18\x03\x10�
          {
             return undefined;
          }
-         var _loc5_ = _loc3_["\x16\x1c\x1b"]();
+         var _loc5_ = _loc3_.clone();
          if(_loc4_["\x1a\n\x05"] != undefined)
          {
             _loc5_.gfx = _loc4_["\x1a\n\x05"];

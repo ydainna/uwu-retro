@@ -95,7 +95,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          _loc3_.isInMove = false;
          _loc3_.GameActionsManager.cancel(_loc3_.cellNum,true);
       }
-      this.api.network.Dialog["\x17\x02\x04"](_loc2_);
+      this.api.network.Dialog.create(_loc2_);
    }
    function §\x16\x05\x15§(§\x1b\b\x10§)
    {
@@ -447,9 +447,9 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          }
       }
    }
-   function §\x1a\x1d\x0b§()
+   function showDisgraceSanction()
    {
-      var _loc2_ = this.api.datacenter.Player.rank["\x17\x07\x17"];
+      var _loc2_ = this.api.datacenter.Player.rank.disgrace;
       if(_loc2_ > 0)
       {
          var _loc3_ = "";
@@ -705,7 +705,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          var _loc6_ = _loc2_[_loc5_];
          if(_loc4_[_loc6_.unicID] == undefined)
          {
-            _loc4_[_loc6_.unicID] = _loc6_["\x16\x1c\x1b"]();
+            _loc4_[_loc6_.unicID] = _loc6_.clone();
          }
          else
          {
@@ -935,7 +935,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    }
    function §\x1a\x1e\f§(sPlayerID, §\x1b\x06\x1b§, §\x1b\x03\x10§, oCustomPopupPosition)
    {
-      if(this.api.datacenter.Player.isAuthorized && this.api.kernel["\x16\x01\r"].executeHotKeyBatch(_loc3_))
+      if(this.api.datacenter.Player.isAuthorized && this.api.kernel.AdminManager.executeHotKeyBatch(_loc3_))
       {
          return true;
       }
@@ -1014,11 +1014,11 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       {
          if(this.api.datacenter.Player.isAuthorized && !_loc5_)
          {
-            if(this.api.kernel["\x16\x01\r"].executeHotKeyBatch(_loc12_))
+            if(this.api.kernel.AdminManager.executeHotKeyBatch(_loc12_))
             {
                return undefined;
             }
-            var _loc15_ = this.api.kernel["\x16\x01\r"]["\x17\x13\x17"](_loc12_,false);
+            var _loc15_ = this.api.kernel.AdminManager["\x17\x13\x17"](_loc12_,false);
             if(_loc3_ == undefined)
             {
                _loc3_ = new Object();
@@ -1046,7 +1046,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    }
    function §\x1b\x01\x0b§(§\x1b\n\x11§)
    {
-      var _loc3_ = this.api.kernel["\x16\x01\r"]["\x17\x13\x17"](_loc2_,false);
+      var _loc3_ = this.api.kernel.AdminManager["\x17\x13\x17"](_loc2_,false);
       _loc3_.show(_root._xmouse,_root._ymouse,true);
    }
    function §\x17\x17\x01§(§\x17\n\x14§, §\x16\t\x11§)
@@ -1307,7 +1307,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
             {
                if(this.api.datacenter.Player.isAuthorized)
                {
-                  _loc12_["\x15\x1d\x12"](this.api.lang.getText("JOIN_SMALL"),this.api.kernel["\x16\x01\r"],this.api.kernel["\x16\x01\r"].sendCommand,["join " + _loc11_]);
+                  _loc12_["\x15\x1d\x12"](this.api.lang.getText("JOIN_SMALL"),this.api.kernel.AdminManager,this.api.kernel.AdminManager.sendCommand,["join " + _loc11_]);
                }
                else if(this.api.datacenter.["\x18\x18\x0e"].superarea == 3)
                {
@@ -1410,7 +1410,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
                return undefined;
             }
             this.api.kernel.showMessage(undefined,this.api.lang.getText("INFIGHT_INACTIVITY"),"ERROR_CHAT");
-            this.api.kernel["\x1b\x10\x0b"]["\x1a\x06\b"]("Banner",["_btnNextTurn"]);
+            this.api.kernel.TipsManager["\x1a\x06\b"]("Banner",["_btnNextTurn"]);
             this.api.datacenter.Basics.inactivity_signaled++;
          }
          this["\x1b\x0b\x01"]();

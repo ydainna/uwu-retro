@@ -56,7 +56,7 @@ if(!dofus.graphics.gapi.ui.spellscollection.SpellsCollectionItem)
       this._btnSpellGrade3._visible = false;
       this._mcSpellInDeck._visible = false;
       this.addToQueue({object:this,method:this.addListeners});
-      this.addToQueue({object:this,method:this["\x18\t\x14"]});
+      this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});
    };
    _loc1_.addListeners = function addListeners()
@@ -90,7 +90,7 @@ if(!dofus.graphics.gapi.ui.spellscollection.SpellsCollectionItem)
          ref.out({target:this});
       };
    };
-   _loc1_["\x18\t\x14"] = function §\x18\t\x14§()
+   _loc1_.initData = function initData()
    {
       this._ldrIcon.forceReload = true;
       this._ldrIcon.contentParams = this["\x1e\x05\x14"].params;
