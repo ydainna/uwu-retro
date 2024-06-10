@@ -268,7 +268,7 @@ class ank.battlefield.§\x1b\x07\t§
       }
       if(_loc4_["\x18\x05\x0e"] && !_loc3_)
       {
-         _loc4_["\x18\x15\x0b"]["\x18\x15\b"]["\x1a\f\n"](sID);
+         _loc4_["\x18\x15\x0b"]["\x18\x15\b"].removeItemAt(sID);
       }
       if(_loc4_["\x18\x05\x04"]())
       {
@@ -286,7 +286,7 @@ class ank.battlefield.§\x1b\x07\t§
       this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc4_.cellNum)["\x1a\f\x1c"](_loc4_.id);
       if(!_loc3_)
       {
-         this["\x1e\x05\x1c"]["\x1a\f\n"](sID);
+         this["\x1e\x05\x1c"].removeItemAt(sID);
       }
    }
    function §\x18\x06\x1c§(sID, §\x16\f\x12§)

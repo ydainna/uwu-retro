@@ -324,7 +324,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
                   this["\x1e\x05\n"].addAction(164,false,_loc37_,_loc38_,_loc2_.params[2]);
                   break;
                case "ADD_SPELL":
-                  var _loc39_ = new dofus.datacenter.["\x1b\x06\x06"](_loc2_.params[0],_loc2_.params[1],_loc2_.params[2]);
+                  var _loc39_ = new dofus.datacenter.Spell(_loc2_.params[0],_loc2_.params[1],_loc2_.params[2]);
                   this["\x1e\x05\n"].addAction(165,false,this.api.datacenter.Player,this.api.datacenter.Player["\x1b\x16\x06"],[_loc39_]);
                   break;
                case "SET_SPELLS":

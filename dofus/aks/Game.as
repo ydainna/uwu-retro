@@ -475,7 +475,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          if(!_loc4_[k])
          {
             _loc17_[k].mc.clear();
-            this.api.datacenter.Sprites["\x1a\f\n"](k);
+            this.api.datacenter.Sprites.removeItemAt(k);
          }
       }
       this.api.ui.getUIComponent("Timeline")["\x1b\x10\x03"]["\x1b\x14\f"]();

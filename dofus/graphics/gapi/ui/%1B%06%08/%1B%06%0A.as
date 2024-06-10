@@ -13,7 +13,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x1b\x06\b§.§\x1b\x06\n§ extends ank.g
    {
       if(_loc2_)
       {
-         this["\x1e\x03\x18"] = dofus.datacenter.["\x1b\x06\x06"](_loc4_);
+         this["\x1e\x03\x18"] = dofus.datacenter.Spell(_loc4_);
          this["\x1c\x1b\x0f"].text = this["\x1e\x03\x18"].name;
          this["\x1c\x1a\x07"].text = String(this["\x1e\x03\x18"].level);
       }

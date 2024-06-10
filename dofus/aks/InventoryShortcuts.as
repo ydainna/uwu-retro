@@ -30,6 +30,6 @@ class dofus.aks.InventoryShortcuts extends dofus.aks.Handler
    {
       var _loc3_ = Number(_loc2_);
       var _loc4_ = this.api.datacenter.Player.InventoryShortcuts;
-      _loc4_["\x1a\f\n"](_loc3_);
+      _loc4_.removeItemAt(_loc3_);
    }
 }

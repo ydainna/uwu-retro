@@ -99,7 +99,7 @@ class dofus.§\x17\x04\x19§.§\x1a\t\x07§ extends Object
          while(_loc17_ < _loc16_.length)
          {
             var _loc18_ = Number(_loc16_[_loc17_]);
-            var _loc19_ = new dofus.datacenter.["\x1b\x06\x06"](_loc18_,1);
+            var _loc19_ = new dofus.datacenter.Spell(_loc18_,1);
             _loc2_.push({iconFile:_loc19_.iconFile,label:_loc19_.name,params:_loc19_.params});
             _loc17_ = _loc17_ + 1;
          }

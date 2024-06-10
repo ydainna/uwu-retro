@@ -497,7 +497,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       var _loc4_ = Number(_loc3_[0]);
       var _loc5_ = Number(_loc3_[1]);
       var _loc6_ = _loc3_[2];
-      var _loc7_ = new dofus.datacenter.["\x1b\x06\x06"](_loc4_,_loc5_,_loc6_);
+      var _loc7_ = new dofus.datacenter.Spell(_loc4_,_loc5_,_loc6_);
       return _loc7_;
    }
    function §\x17\x1c\x0f§(sData)

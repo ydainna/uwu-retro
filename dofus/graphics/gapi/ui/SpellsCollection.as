@@ -20,7 +20,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
    {
       if(this._currentOverContainer != undefined && this._currentOverContainer.contentData != undefined)
       {
-         return dofus.datacenter.["\x1b\x06\x06"](this._currentOverContainer.contentData);
+         return dofus.datacenter.Spell(this._currentOverContainer.contentData);
       }
       return undefined;
    }
@@ -341,7 +341,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
          case this._tiSearch:
             if(_loc3_.text == this.api.lang.getText("SEARCH"))
             {
-               this._eoSpellFilters["\x1a\f\n"](1);
+               this._eoSpellFilters.removeItemAt(1);
             }
             else
             {
@@ -584,7 +584,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
          case this._ctrDeck13:
          case this._ctrDeck14:
             var _loc3_ = _loc2_.target;
-            var _loc4_ = dofus.datacenter.["\x1b\x06\x06"](_loc3_.contentData);
+            var _loc4_ = dofus.datacenter.Spell(_loc3_.contentData);
             if(_loc4_ != undefined)
             {
                this.showSpellDetails(true,_loc4_,true);
@@ -661,7 +661,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
             }
             else
             {
-               this._eoSpellFilters["\x1a\f\n"](3);
+               this._eoSpellFilters.removeItemAt(3);
             }
             this.applySpellFilters();
             this.api.sounds["\x17\x0e\x06"].onSpellCollectionButtonClick();
@@ -688,7 +688,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
             }
             else
             {
-               this._eoSpellFilters["\x1a\f\n"](4);
+               this._eoSpellFilters.removeItemAt(4);
             }
             this.applySpellFilters();
             this.api.sounds["\x17\x0e\x06"].onSpellCollectionButtonClick();
@@ -892,7 +892,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
       {
          return undefined;
       }
-      var _loc4_ = dofus.datacenter.["\x1b\x06\x06"](_loc3_.eoSpells.getItemAt(_loc2_.position));
+      var _loc4_ = dofus.datacenter.Spell(_loc3_.eoSpells.getItemAt(_loc2_.position));
       if(_loc4_ == undefined)
       {
          return undefined;
@@ -912,11 +912,11 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
          {
             return undefined;
          }
-         _loc3_ = dofus.datacenter.["\x1b\x06\x06"](_loc5_.contentData.spell);
+         _loc3_ = dofus.datacenter.Spell(_loc5_.contentData.spell);
       }
       if(_loc2_.grade != undefined)
       {
-         this.showSpellDetails(true,new dofus.datacenter.["\x1b\x06\x06"](_loc3_.ID,_loc2_.grade),_loc4_);
+         this.showSpellDetails(true,new dofus.datacenter.Spell(_loc3_.ID,_loc2_.grade),_loc4_);
       }
       else
       {
@@ -949,9 +949,9 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
       {
          return undefined;
       }
-      if(_loc3_ instanceof dofus.datacenter.["\x1b\x06\x06"])
+      if(_loc3_ instanceof dofus.datacenter.Spell)
       {
-         var _loc4_ = dofus.datacenter.["\x1b\x06\x06"](_loc3_);
+         var _loc4_ = dofus.datacenter.Spell(_loc3_);
          if(!_loc4_.isOwnedByPlayer)
          {
             return undefined;
@@ -1030,7 +1030,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
       if(_loc5_ != undefined && _loc5_.elementID == nElementID)
       {
          this._mcElementFilterSelected._visible = false;
-         this._eoSpellFilters["\x1a\f\n"](5);
+         this._eoSpellFilters.removeItemAt(5);
       }
       else
       {
@@ -1173,7 +1173,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
       for(var i in _loc2_)
       {
          var _loc5_ = _loc2_[i];
-         var _loc6_ = new dofus.datacenter.["\x1b\x06\x06"](Number(i),1);
+         var _loc6_ = new dofus.datacenter.Spell(Number(i),1);
          var _loc7_ = _loc6_["\x16\x17\f"];
          if(_loc7_ == dofus.graphics.gapi.ui.SpellsCollection.SPELLS_CATEGORY_TR2_BREED && _loc6_.spellBreed == this.api.datacenter.Player.Guild)
          {
@@ -1195,7 +1195,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
       for(var i in _loc3_)
       {
          var _loc5_ = _loc3_[i];
-         var _loc6_ = new dofus.datacenter.["\x1b\x06\x06"](Number(i),1);
+         var _loc6_ = new dofus.datacenter.Spell(Number(i),1);
          if(!_loc6_.isPassive)
          {
             var _loc7_ = _loc6_["\x16\x17\f"];

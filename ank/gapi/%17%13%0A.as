@@ -451,7 +451,7 @@ class ank.gapi.§\x17\x13\n§ extends ank.utils.§\x1a\t\t§
       {
          return undefined;
       }
-      if(this["\x1e\x03\x06"] instanceof dofus.datacenter.["\x1b\x06\x06"] && _loc2_ < ank.gapi["\x17\x13\n"].MAX_DELAY_CURSOR_SPELLS)
+      if(this["\x1e\x03\x06"] instanceof dofus.datacenter.Spell && _loc2_ < ank.gapi["\x17\x13\n"].MAX_DELAY_CURSOR_SPELLS)
       {
          return undefined;
       }

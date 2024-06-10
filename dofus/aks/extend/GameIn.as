@@ -737,7 +737,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
             var _loc19_ = _loc18_[k];
             this.api.gfx["\x1a\f\x19"](_loc19_.id);
          }
-         this.api.datacenter.["\x16\x18\x10"]["\x1a\f\n"](_loc6_);
+         this.api.datacenter.["\x16\x18\x10"].removeItemAt(_loc6_);
       }
    }
    function §\x19\x1d\x19§(sExtraData)

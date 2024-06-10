@@ -54,7 +54,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellForget extends dofus.§\x18\x03\x10§.
       switch(_loc2_.target)
       {
          case this._btnValidate:
-            var _loc3_ = dofus.datacenter.["\x1b\x06\x06"](this["\x1d\x07\x04"].selectedItem);
+            var _loc3_ = dofus.datacenter.Spell(this["\x1d\x07\x04"].selectedItem);
             this.api.kernel.showMessage(this.api.lang.getText("SPELL_FORGET"),this.api.lang.getText("SPELL_FORGET_CONFIRM",[_loc3_.name]),"CAUTION_YESNO",{name:"SpellForget",listener:this,params:{spell:_loc3_}});
             break;
          case this._btnClose:

@@ -178,7 +178,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MouseShortcuts extends dofus.
       {
          return undefined;
       }
-      this._ctrCC.contentData = new dofus.datacenter.["\x1b\x06\x06"](dofus.datacenter.["\x16\x1c\x1d"].CLOSE_COMBAT_SPELL_ID,1);
+      this._ctrCC.contentData = new dofus.datacenter.Spell(dofus.datacenter.["\x16\x1c\x1d"].CLOSE_COMBAT_SPELL_ID,1);
       if(this._ctrCC["\x17\x01\x05"])
       {
          this._ctrCC.content.applyColors();

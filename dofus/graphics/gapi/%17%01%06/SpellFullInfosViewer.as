@@ -18,7 +18,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpellFullInfosViewer extends 
       }
       if(!_loc2_["\x18\x10\n"])
       {
-         this["\x1e\x05\x14"] = new dofus.datacenter.["\x1b\x06\x06"](_loc2_.ID,1);
+         this["\x1e\x05\x14"] = new dofus.datacenter.Spell(_loc2_.ID,1);
       }
       else
       {

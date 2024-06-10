@@ -111,7 +111,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellViewerOnCreate extends dofus.§\x18\x0
       for(var i in _loc2_)
       {
          var _loc4_ = _loc2_[i];
-         var _loc5_ = new dofus.datacenter.["\x1b\x06\x06"](Number(i),1);
+         var _loc5_ = new dofus.datacenter.Spell(Number(i),1);
          var _loc6_ = _loc5_["\x16\x17\f"];
          if(_loc6_ == dofus.graphics.gapi.ui.SpellsCollection.SPELLS_CATEGORY_TR2_BREED && _loc5_.spellBreed == this["\x1d\x13\r"])
          {
@@ -140,7 +140,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellViewerOnCreate extends dofus.§\x18\x0
          var _loc4_ = _loc2_[_loc3_];
          if(_loc4_ != undefined)
          {
-            var _loc5_ = new dofus.datacenter.["\x1b\x06\x06"](_loc4_,1);
+            var _loc5_ = new dofus.datacenter.Spell(_loc4_,1);
             var _loc6_ = this["_ctr" + _loc3_];
             _loc6_.contentData = _loc5_;
             _loc6_._alpha = _loc3_ >= 3 ? 0 : 100;
@@ -240,7 +240,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellViewerOnCreate extends dofus.§\x18\x0
          var _loc3_ = _loc2_.target.contentData.ID;
          if(_loc3_ != undefined)
          {
-            var _loc4_ = dofus.datacenter.["\x1b\x06\x06"](this.api.kernel.CharactersManager["\x18\x01\x05"](_loc3_ + "~1~"));
+            var _loc4_ = dofus.datacenter.Spell(this.api.kernel.CharactersManager["\x18\x01\x05"](_loc3_ + "~1~"));
             this.gapi.showTooltip(_loc4_.name + ", " + this.api.lang.getText("REQUIRED_SPELL_LEVEL").toLowerCase() + ": " + _loc4_["\x18\x1d\x06"],_loc2_.target,-20);
          }
       }

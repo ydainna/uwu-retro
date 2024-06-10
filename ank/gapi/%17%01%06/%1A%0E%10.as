@@ -42,7 +42,7 @@ class ank.gapi.§\x17\x01\x06§.§\x1a\x0e\x10§ extends ContextMenu
                _loc6_["\x18\x11\x05"]["\x17\x02\x05"](_loc7_);
                return undefined;
             }
-            if(_loc7_ instanceof dofus.datacenter.["\x1b\x06\x06"])
+            if(_loc7_ instanceof dofus.datacenter.Spell)
             {
                _loc6_.createSpellActionPopupMenu(_loc7_);
                return undefined;

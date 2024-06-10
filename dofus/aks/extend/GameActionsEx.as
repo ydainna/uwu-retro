@@ -310,7 +310,7 @@ class dofus.aks.extend.GameActionsEx
             _loc72_.file = dofus.Constants["\x1b\x06\x15"] + _loc66_ + ".swf";
             _loc72_.level = _loc67_;
             _loc72_.bInFrontOfSprite = _loc71_;
-            _loc72_.params = new dofus.datacenter.["\x1b\x06\x06"](_loc64_,_loc67_)["\x17\f\x13"];
+            _loc72_.params = new dofus.datacenter.Spell(_loc64_,_loc67_)["\x17\f\x13"];
             _loc5_.addAction(88,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_LAUNCH_SPELL",[_loc63_.name,this.api.lang.getSpellText(_loc64_).n]),"INFO_FIGHT_CHAT"]);
             if(_loc69_ != undefined || _loc70_)
             {
@@ -476,7 +476,7 @@ class dofus.aks.extend.GameActionsEx
             var _loc117_ = Number(_loc113_[5]);
             var _loc118_ = this.api.datacenter.Sprites.getItemAt(sSenderID);
             var _loc119_ = this.api.datacenter.Sprites.getItemAt(_loc117_);
-            var _loc120_ = new dofus.datacenter.["\x1b\x06\x06"](_loc114_,_loc116_);
+            var _loc120_ = new dofus.datacenter.Spell(_loc114_,_loc116_);
             _loc5_.addAction(108,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_START_GLIPH",[_loc118_.name,_loc120_.name,_loc119_.name]),"INFO_FIGHT_CHAT"]);
             break;
          case 308:

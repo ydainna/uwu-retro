@@ -658,14 +658,14 @@ class ank.battlefield.§\x18\x18\x16§
             this["\x16\x14\x01"](_loc5_,_loc2_);
             if(!_loc8_)
             {
-               _loc5_["\x1a\x01\x1b"]["\x1a\f\n"](String(_loc2_));
+               _loc5_["\x1a\x01\x1b"].removeItemAt(String(_loc2_));
             }
          }
          else
          {
             _loc6_[_loc2_] = _loc7_;
             this["\x16\x14\x01"](_loc5_,_loc2_);
-            _loc5_["\x1a\x01\x1b"]["\x1a\f\n"](String(_loc2_));
+            _loc5_["\x1a\x01\x1b"].removeItemAt(String(_loc2_));
          }
       }
    }

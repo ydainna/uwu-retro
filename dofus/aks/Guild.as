@@ -269,7 +269,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          {
             var _loc14_ = Number(_loc3_[_loc13_][0]);
             var _loc15_ = Number(_loc3_[_loc13_][1]);
-            _loc12_.push(new dofus.datacenter.["\x1b\x06\x06"](_loc14_,_loc15_));
+            _loc12_.push(new dofus.datacenter.Spell(_loc14_,_loc15_));
             _loc13_ = _loc13_ + 1;
          }
          this.api.datacenter.Player.guildInfos["\x1a\x15\x03"](_loc4_,_loc5_,_loc6_,_loc7_,_loc8_,_loc9_,_loc10_,_loc12_);

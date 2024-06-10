@@ -96,7 +96,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Spells extends dofus.§\x18\x03\x10§.gapi.
                _loc8_ = _loc3_[_loc9_].ID == _loc7_;
                _loc9_ = _loc9_ + 1;
             }
-            var _loc10_ = new dofus.datacenter.["\x1b\x06\x06"](_loc7_,1);
+            var _loc10_ = new dofus.datacenter.Spell(_loc7_,1);
             if(!_loc8_ && (_loc10_["\x16\x1b\x0e"] == this["\x1d\x1c\x14"] || this["\x1d\x1c\x14"] == -2))
             {
                _loc3_.push(_loc10_);
@@ -134,7 +134,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Spells extends dofus.§\x18\x03\x10§.gapi.
       this.api.sounds["\x17\x0e\x06"]["\x19\x1d\x02"]();
       if(this["\x16\x15\x19"](_loc2_) != undefined)
       {
-         var _loc3_ = new dofus.datacenter.["\x1b\x06\x06"](_loc2_.ID,_loc2_.level + 1);
+         var _loc3_ = new dofus.datacenter.Spell(_loc2_.ID,_loc2_.level + 1);
          if(this.api.datacenter.Player.Level < _loc3_["\x18\x1d\x06"])
          {
             this.api.kernel.showMessage(undefined,this.api.lang.getText("LEVEL_NEED_TO_BOOST",[_loc3_["\x18\x1d\x06"]]),"ERROR_BOX");

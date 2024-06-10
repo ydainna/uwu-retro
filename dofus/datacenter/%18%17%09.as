@@ -831,7 +831,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
       }
       if(_loc4_ != undefined && _loc4_.isEquiped)
       {
-         this.InventoryByItemPositions["\x1a\f\n"](_loc4_.position);
+         this.InventoryByItemPositions.removeItemAt(_loc4_.position);
       }
       this.Inventory["\x1b\t\x13"](dofus.Constants["\x17\x06\x16"]);
       this.Inventory["\x1b\x15\x05"](_loc3_.index,_loc2_);
@@ -862,7 +862,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
       }
       if(_loc5_.isEquiped)
       {
-         this.InventoryByItemPositions["\x1a\f\n"](_loc5_.position);
+         this.InventoryByItemPositions.removeItemAt(_loc5_.position);
       }
       _loc5_.position = _loc3_;
       this.Inventory["\x1b\t\x13"](dofus.Constants["\x17\x06\x16"]);
@@ -899,7 +899,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
       this.Inventory["\x1a\f\x0b"](_loc3_.index,1);
       if(_loc4_.isEquiped)
       {
-         this.InventoryByItemPositions["\x1a\f\n"](_loc4_.position);
+         this.InventoryByItemPositions.removeItemAt(_loc4_.position);
       }
    }
    function getOwnedSpell(§\x19\x0e\x16§)

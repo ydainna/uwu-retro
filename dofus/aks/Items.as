@@ -331,7 +331,7 @@ if(!dofus.aks.Items)
       }
       else
       {
-         this.api.datacenter.Player["\x18\x10\x1d"]["\x1a\f\n"](_loc5_);
+         this.api.datacenter.Player["\x18\x10\x1d"].removeItemAt(_loc5_);
       }
    };
    _loc1_["\x19\x19\r"] = function §\x19\x19\r§(sExtraData)
