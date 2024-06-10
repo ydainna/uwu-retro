@@ -121,12 +121,12 @@ class dofus.aks.Guild extends dofus.aks.Handler
    {
       this.api.ui.loadUIComponent("CreateGuild","CreateGuild");
    }
-   function §\x19\x16\x0b§(bSuccess, sExtraData)
+   function onCreate(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
          this.api.kernel.showMessage(undefined,this.api.lang.getText("GUILD_CREATED"),"INFO_CHAT");
-         this.api.ui["\x18\x16\x19"]("Guild","Guild",{currentTab:"Members"},{bStayIfPresent:true});
+         this.api.ui.loadUIAutoHideComponent("Guild","Guild",{currentTab:"Members"},{bStayIfPresent:true});
       }
       else
       {
@@ -297,7 +297,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
             var _loc15_ = 0;
             while(_loc15_ < _loc14_.length)
             {
-               var _loc16_ = new dofus.datacenter..Mount(Number(_loc14_[_loc15_]));
+               var _loc16_ = new dofus.datacenter.Mount(Number(_loc14_[_loc15_]));
                _loc16_.name = _loc14_[_loc15_ + 1] != "" ? _loc14_[_loc15_ + 1] : this.api.lang.getText("NO_NAME");
                _loc16_["\x1a\x03\x06"] = _loc14_[_loc15_ + 2];
                _loc16_.sex = Number(_loc14_[_loc15_ + 3]);
@@ -634,7 +634,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
    {
       this.api.ui.unloadUIComponent("AskYesNoIgnoreGuild");
    }
-   function §\x19\x19\x16§()
+   function onLeave()
    {
       this.api.ui.unloadUIComponent("CreateGuild");
    }
@@ -778,7 +778,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          case "T":
             if(this.api.datacenter.Player.guildInfos.name != undefined)
             {
-               this.api.ui["\x18\x16\x19"]("Guild","Guild",{currentTab:"GuildHouses"});
+               this.api.ui.loadUIAutoHideComponent("Guild","Guild",{currentTab:"GuildHouses"});
             }
             else
             {
@@ -788,7 +788,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
          case "F":
             if(this.api.datacenter.Player.guildInfos.name != undefined)
             {
-               this.api.ui["\x18\x16\x19"]("Guild","Guild",{currentTab:"MountParks"});
+               this.api.ui.loadUIAutoHideComponent("Guild","Guild",{currentTab:"MountParks"});
                break;
             }
             this.api.kernel.showMessage(undefined,this.api.lang.getText("ITEM_NEED_GUILD"),"ERROR_CHAT");

@@ -159,7 +159,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       }
       if(this.api.gfx["\x19\x15\x04"](_loc2_))
       {
-         this.api.datacenter.Game["\x19\x10\x05"] |= dofus.datacenter..Game["\x1b\t\x1c"];
+         this.api.datacenter.Game["\x19\x10\x05"] |= dofus.datacenter.Game["\x1b\t\x1c"];
          if(nInstancedID != undefined)
          {
             this.api.network.GameActions["\x1a\x13\x14"](500,[_loc3_,_loc4_,nInstancedID]);
@@ -195,12 +195,12 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    {
       if(_loc2_ && this.api.datacenter.Game.isRunning)
       {
-         if(this.api.datacenter.Game["\x18\x0b\t"] == dofus.datacenter..Game["\x18\x0b\x1b"] || this.api.datacenter.Game["\x18\x0b\t"] == dofus.datacenter..Game["\x18\x0b\x17"])
+         if(this.api.datacenter.Game["\x18\x0b\t"] == dofus.datacenter.Game["\x18\x0b\x1b"] || this.api.datacenter.Game["\x18\x0b\t"] == dofus.datacenter.Game["\x18\x0b\x17"])
          {
             var _loc3_ = this.api.datacenter.Player["\x17\x03\x1d"];
             if(_loc3_ != null)
             {
-               var _loc4_ = this.api.datacenter.Game["\x18\x0b\t"] == dofus.datacenter..Game["\x18\x0b\x1b"];
+               var _loc4_ = this.api.datacenter.Game["\x18\x0b\t"] == dofus.datacenter.Game["\x18\x0b\x1b"];
                this["\x1b\r\n"](_loc3_,_loc4_);
                return undefined;
             }
@@ -246,7 +246,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          }
       }
       this.api.gfx["\x16\x1b\x14"]();
-      this.api.network.Game.extendIn["\x19\x19\x16"]();
+      this.api.network.Game.extendIn.onLeave();
    }
    function showEndPanel(§\x19\b\x0b§, bInputIsIndex)
    {

@@ -12,7 +12,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Inventory extends dofus.§\x18\x03\x10§.ga
    {
       if(this._currentOverContainer != undefined && this._currentOverContainer.contentData != undefined)
       {
-         return dofus.datacenter.["\x18\x10\x15"](this._currentOverContainer.contentData);
+         return dofus.datacenter.Item(this._currentOverContainer.contentData);
       }
       return undefined;
    }
@@ -88,7 +88,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Inventory extends dofus.§\x18\x03\x10§.ga
             var _loc4_ = this.api.datacenter.Player.["\x18\x10\x1d"].getItemAt(_loc2_["\x18\x10\x1c"]);
             if(_loc4_ == undefined)
             {
-               _loc4_ = new dofus.datacenter..ItemSet(_loc2_["\x18\x10\x1c"],"",[]);
+               _loc4_ = new dofus.datacenter.ItemSet(_loc2_["\x18\x10\x1c"],"",[]);
             }
             this["\x18\x06\x0e"](false);
             this._isvItemSetViewer["\x18\x10\x1b"] = _loc4_;
@@ -735,7 +735,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Inventory extends dofus.§\x18\x03\x10§.ga
    function overItem(oEvent)
    {
       var _loc3_ = _loc2_.target;
-      var _loc4_ = dofus.datacenter.["\x18\x10\x15"](_loc3_.contentData);
+      var _loc4_ = dofus.datacenter.Item(_loc3_.contentData);
       _loc4_["\x1b\x01\b"](_loc3_,_loc4_.style);
       this._currentOverContainer = _loc3_;
    }

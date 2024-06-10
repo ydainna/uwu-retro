@@ -2,35 +2,39 @@ class dofus.aks.Evenemential extends dofus.aks.Handler
 {
    function Evenemential(oAKS, oAPI)
    {
-      super.initialize(_loc3_,oAPI);
+      super.initialize(oAKS,oAPI);
    }
+
    function sendAskWorldUniqueDropsStates()
    {
       this.aks.send("YD");
    }
+
    function sendRollDice(nDicesCount, nDiceMaxValue, sChatChannelSymbol)
    {
       this.aks.send("Yd" + nDicesCount + "|" + nDiceMaxValue + "|" + sChatChannelSymbol);
    }
+   
    function onWorldUniqueDropsStates(sExtraData)
    {
-      var _loc3_ = new ank.utils.["\x17\x0e\r"]();
-      var _loc4_ = _loc2_.split("|");
+      var _loc3_ = new ank.utils.ExtendedObject();
+      var _loc4_ = sExtraData.split("|");
       var _loc5_ = 0;
       while(_loc5_ < _loc4_.length)
       {
          var _loc6_ = _loc4_[_loc5_].split(";");
          var _loc7_ = Number(_loc6_[0]);
          var _loc8_ = _loc6_[1] == "1";
-         var _loc9_ = new dofus.datacenter..evenemential.WorldUniqueDropState(_loc7_,_loc8_);
-         _loc3_["\x15\x1d\x13"](_loc7_,_loc9_);
+         var _loc9_ = new dofus.datacenter.evenemential.WorldUniqueDropState(_loc7_,_loc8_);
+         _loc3_.addItemAt(_loc7_,_loc9_);
          _loc5_ = _loc5_ + 1;
       }
       this.api.datacenter.Basics.worldUniqueDropsStates = _loc3_;
    }
+
    function onDicesRollResult(sExtraData)
    {
-      var _loc3_ = _loc2_.split("|");
+      var _loc3_ = sExtraData.split("|");
       var _loc4_ = _loc3_[0] == "E";
       if(_loc4_)
       {

@@ -310,7 +310,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MouseShortcuts extends dofus.
    function §\x1a\x17\x0e§(§\x19\b\x14§)
    {
       var _loc3_ = this["_ctr" + _loc2_];
-      var _loc4_ = dofus.datacenter..InventoryShortcutItem(_loc3_.contentData);
+      var _loc4_ = dofus.datacenter.InventoryShortcutItem(_loc3_.contentData);
       if(_loc4_ == undefined)
       {
          return undefined;
@@ -538,7 +538,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MouseShortcuts extends dofus.
             {
                return undefined;
             }
-            this.gapi["\x18\x16\x19"]("SpellInfos","SpellInfos",{spell:_loc3_},{bStayIfPresent:true});
+            this.gapi.loadUIAutoHideComponent("SpellInfos","SpellInfos",{spell:_loc3_},{bStayIfPresent:true});
             break;
          case "Items":
             if(!this.api.datacenter.Player.checkCanMoveItem())

@@ -102,7 +102,7 @@ class dofus.aks.Party extends dofus.aks.Handler
       this.api.ui.unloadUIComponent("AskYesNoIgnoreParty");
       this.api.ui.unloadUIComponent("AskCancelParty");
    }
-   function §\x19\x16\x0b§(bSuccess, sExtraData)
+   function onCreate(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -127,7 +127,7 @@ class dofus.aks.Party extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x19\x16§(sExtraData)
+   function onLeave(sExtraData)
    {
       var _loc3_ = this.api.ui.getUIComponent("Party");
       if(_loc3_["\x17\x11\x1b"] != undefined)

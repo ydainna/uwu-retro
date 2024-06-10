@@ -136,7 +136,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
    {
       var _loc3_ = _loc2_.indexOf(";");
       var _loc4_ = Number(_loc2_.substring(0,_loc3_));
-      if(dofus.Constants["\x1a\x10\x01"])
+      if(dofus.Constants.SAVING_THE_WORLD)
       {
          if(_loc2_ == ";0")
          {

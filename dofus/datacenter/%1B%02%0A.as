@@ -27,7 +27,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x02\n§ extends Object
       {
          return null;
       }
-      return new dofus.datacenter.["\x18\x10\x15"](0,this["\x1e\x05\x0e"].i);
+      return new dofus.datacenter.Item(0,this["\x1e\x05\x0e"].i);
    }
    function §\x1e\x1c\x12§()
    {

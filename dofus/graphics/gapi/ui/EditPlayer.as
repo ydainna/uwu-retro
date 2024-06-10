@@ -178,7 +178,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.EditPlayer extends dofus.§\x18\x03\x10§.g
          var _loc12_ = this.api.datacenter.Player.mount;
          if(_loc12_ != undefined)
          {
-            var _loc13_ = new dofus.datacenter..Mount(_loc12_.modelID,Number(_loc10_));
+            var _loc13_ = new dofus.datacenter.Mount(_loc12_.modelID,Number(_loc10_));
             if(_loc12_["\x18\r\x02"])
             {
                _loc13_["\x16\x17\x01"] = _loc12_["\x16\x17\x01"];

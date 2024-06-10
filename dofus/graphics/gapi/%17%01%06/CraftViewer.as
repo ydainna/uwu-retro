@@ -15,7 +15,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.CraftViewer extends dofus.§\
    {
       var _loc3_ = new ank.utils.ExtendedArray();
       _loc3_.push(_loc2_);
-      this["\x18\x11\f"] = new dofus.datacenter..Job(-1,_loc3_);
+      this["\x18\x11\f"] = new dofus.datacenter.Job(-1,_loc3_);
       return this["\t\t"]();
    }
    function §\x18\t\x04§()

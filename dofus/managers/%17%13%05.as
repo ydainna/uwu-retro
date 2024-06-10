@@ -25,7 +25,7 @@ class dofus.§\x18\x18\x0b§.GameActionsManager extends dofus.utils.ApiElement
    {
       if(!this["\x18\x10\x10"]())
       {
-         this.api.datacenter.Game["\x19\x10\x05"] |= dofus.datacenter..Game["\x1b\n\x05"];
+         this.api.datacenter.Game["\x19\x10\x05"] |= dofus.datacenter.Game["\x1b\n\x05"];
          this.api.network.GameActions["\x1a\x13\x14"](_loc2_,_loc3_);
          this["\x1e\r\x03"] = dofus.managers.GameActionsManager["\x1b\n\n"];
          this["\x1c\x0e\b"] = _loc2_;

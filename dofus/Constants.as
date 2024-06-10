@@ -13,7 +13,7 @@ class dofus.§\x16\x1e\x1b§ extends Object
    static var USE_JS_LOG = false;
    static var §\x1b\x17\x04§ = true;
    static var §\x1b\x17\x05§ = true;
-   static var §\x1a\x10\x01§ = false;
+   static var SAVING_THE_WORLD = false;
    static var VERSION = 1;
    static var SUBVERSION = 42;
    static var SUBSUBVERSION = 6;

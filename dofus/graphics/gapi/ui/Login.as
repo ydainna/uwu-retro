@@ -166,7 +166,7 @@ class dofus.graphics.gapi.ui.Login extends dofus.graphics.gapi.core.DofusAdvance
       this.addToQueue({object:this,method:this.constructPortsList});
       this.addToQueue({object:this,method:this.initSavedAccount});
       this.hideServerStatus();
-      this._siServerStatus = new dofus.datacenter..ServerInformations();
+      this._siServerStatus = new dofus.datacenter.ServerInformations();
       this._siServerStatus.addEventListener("onData",this);
       this._siServerStatus.addEventListener("onLoadError",this);
       this._siServerStatus.load();

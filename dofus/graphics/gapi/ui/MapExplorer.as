@@ -630,7 +630,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.
          if(_loc4_ != undefined)
          {
             var _loc5_ = this.api.lang["\x17\x1b\x0f"](_loc4_).n;
-            var _loc6_ = dofus.datacenter.["\x1b\x0b\x18"](this.api.datacenter..Subareas.getItemAt(_loc4_));
+            var _loc6_ = dofus.datacenter.["\x1b\x0b\x18"](this.api.datacenter.Subareas.getItemAt(_loc4_));
             this["\x1c\x12\x15"].text = this.api.lang.getText("AREA") + " : " + this.api.lang["\x17\x1b\x06"](_loc3_).n;
             if(_loc6_ != undefined)
             {

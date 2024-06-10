@@ -30,7 +30,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapInfos extends dofus.§\x18\x03\x10§.gap
       }
       else
       {
-         var _loc3_ = dofus.datacenter.["\x1b\x0b\x18"](this.api.datacenter..Subareas.getItemAt(_loc2_["\x1b\x0b\x17"]));
+         var _loc3_ = dofus.datacenter.["\x1b\x0b\x18"](this.api.datacenter.Subareas.getItemAt(_loc2_["\x1b\x0b\x17"]));
          var _loc4_ = _loc2_.name + (_loc3_ != undefined ? (_loc3_.alignment.name != undefined ? " - " + _loc3_.alignment.name : "") : "");
          this["\x1c\x12\x15"].text = _loc4_;
          this["\x1c\x15\x12"].text = _loc2_.coordinates;

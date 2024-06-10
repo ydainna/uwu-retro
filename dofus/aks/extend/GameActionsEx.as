@@ -46,11 +46,11 @@ class dofus.aks.extend.GameActionsEx
             {
                if(sSenderID == this.api.datacenter.Player.ID)
                {
-                  if((this.api.datacenter.Game["\x19\x10\x05"] & dofus.datacenter..Game["\x1b\n\x05"]) == dofus.datacenter..Game["\x1b\n\x07"])
+                  if((this.api.datacenter.Game["\x19\x10\x05"] & dofus.datacenter.Game["\x1b\n\x05"]) == dofus.datacenter.Game["\x1b\n\x07"])
                   {
                      this.api.datacenter.Player["\x1d\x1a\t"]++;
                   }
-                  this.api.datacenter.Game["\x19\x10\x05"] &= dofus.datacenter..Game["\x1b\n\x05"] ^ -1;
+                  this.api.datacenter.Game["\x19\x10\x05"] &= dofus.datacenter.Game["\x1b\n\x05"] ^ -1;
                }
                this.api.gfx["\x19\x01\x0b"](sSenderID,_loc10_,_loc5_,true,_loc11_,_loc12_,_loc13_);
             }
@@ -101,11 +101,11 @@ class dofus.aks.extend.GameActionsEx
             var _loc26_ = _loc22_[2] != undefined ? "anim" + _loc22_[2] : _loc25_["\x1b\x10\x1c"];
             if(sSenderID == this.api.datacenter.Player.ID)
             {
-               if((this.api.datacenter.Game["\x19\x10\x05"] & dofus.datacenter..Game["\x1b\t\x1c"]) == dofus.datacenter..Game["\x1b\n\x07"])
+               if((this.api.datacenter.Game["\x19\x10\x05"] & dofus.datacenter.Game["\x1b\t\x1c"]) == dofus.datacenter.Game["\x1b\n\x07"])
                {
                   this.api.datacenter.Player["\x1d\x16\x14"]++;
                }
-               this.api.datacenter.Game["\x19\x10\x05"] &= dofus.datacenter..Game["\x1b\t\x1c"] ^ -1;
+               this.api.datacenter.Game["\x19\x10\x05"] &= dofus.datacenter.Game["\x1b\t\x1c"] ^ -1;
             }
             _loc5_.addAction(111,false,this.api.gfx,this.api.gfx["\x16\x07\x11"],[sSenderID,_loc23_]);
             _loc5_.addAction(112,sSenderID == this.api.datacenter.Player.ID,this.api.gfx,this.api.gfx["\x1a\x1a\b"],[sSenderID,_loc26_,_loc24_],_loc24_,true);
@@ -388,7 +388,7 @@ class dofus.aks.extend.GameActionsEx
             var _loc89_ = _loc84_[1];
             var _loc90_ = Number(_loc84_[2]);
             var _loc91_ = _loc84_[3] != "1" ? false : true;
-            var _loc92_ = new dofus.datacenter.["\x16\x1c\x1d"](new dofus.datacenter.["\x18\x10\x15"](undefined,_loc83_[1]),_loc85_.Guild);
+            var _loc92_ = new dofus.datacenter.["\x16\x1c\x1d"](new dofus.datacenter.Item(undefined,_loc83_[1]),_loc85_.Guild);
             _loc5_.addAction(96,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_ATTACK_CC_NAME",[_loc85_.name,_loc83_[1] != 0 ? _loc92_.name : this.api.lang.getSpellText(0).n]),"INFO_FIGHT_CHAT"]);
             var _loc93_ = new ank.battlefield.datacenter.["\x1b\x18\x04"]();
             _loc93_.file = dofus.Constants["\x1b\x06\x15"] + _loc89_ + ".swf";
@@ -427,7 +427,7 @@ class dofus.aks.extend.GameActionsEx
          case 305:
             var _loc98_ = _loc6_.split(";");
             var _loc99_ = this.api.datacenter.Sprites.getItemAt(sSenderID);
-            var _loc100_ = _loc98_[0] != 0 ? new dofus.datacenter.["\x16\x1c\x1d"](new dofus.datacenter.["\x18\x10\x15"](undefined,_loc98_[0]),_loc99_.Guild) : this.api.lang.getSpellText(0).n;
+            var _loc100_ = _loc98_[0] != 0 ? new dofus.datacenter.["\x16\x1c\x1d"](new dofus.datacenter.Item(undefined,_loc98_[0]),_loc99_.Guild) : this.api.lang.getSpellText(0).n;
             _loc5_.addAction(102,false,this.api.sounds["\x17\x0e\x06"],this.api.sounds["\x17\x0e\x06"]["\x19\x17\x1d"],[]);
             _loc5_.addAction(103,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_ATTACK_CC_NAME",[_loc99_.name,_loc100_.name]),"INFO_FIGHT_CHAT"]);
             _loc5_.addAction(104,false,this.api.kernel,this.api.kernel.showMessage,[undefined,"(" + this.api.lang.getText("CRITICAL_MISS") + ")","INFO_FIGHT_CHAT"]);

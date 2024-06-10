@@ -51,7 +51,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
          this.api.gfx["\x1a\x1a\x0b"](_loc5_,_loc8_,true,_loc7_);
       }
    }
-   function §\x19\x19\x1c§(sExtraData)
+   function onList(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -84,7 +84,7 @@ class dofus.aks.Emotes extends dofus.aks.Handler
       }
       this.aks_a_logs();
    }
-   function §\x19\x13\x1b§(sExtraData)
+   function onAdd(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);

@@ -16,11 +16,11 @@ class dofus.§\x18\x18\x0b§.HousesManager extends dofus.utils.ApiElement
    }
    function getHouseInstances(§\x19\b\x06§)
    {
-      var _loc3_ = ank.utils.["\x17\x0e\r"](this.api.datacenter.Houses.getItemAt(_loc2_));
+      var _loc3_ = ank.utils.ExtendedObject(this.api.datacenter.Houses.getItemAt(_loc2_));
       if(_loc3_ == undefined)
       {
-         _loc3_ = new ank.utils.["\x17\x0e\r"]();
-         this.api.datacenter.Houses["\x15\x1d\x13"](_loc2_,_loc3_);
+         _loc3_ = new ank.utils.ExtendedObject();
+         this.api.datacenter.Houses.addItemAt(_loc2_,_loc3_);
       }
       return _loc3_;
    }
@@ -32,7 +32,7 @@ class dofus.§\x18\x18\x0b§.HousesManager extends dofus.utils.ApiElement
       {
          _loc5_ = new dofus.datacenter.["\x18\x07\x11"](_loc2_);
          _loc5_.instanceID = nInstanceID;
-         _loc4_["\x15\x1d\x13"](nInstanceID,_loc5_);
+         _loc4_.addItemAt(nInstanceID,_loc5_);
       }
       return _loc5_;
    }

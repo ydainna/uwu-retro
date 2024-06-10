@@ -614,7 +614,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       {
          var _loc6_ = Number(_loc3_[_loc5_]);
          var _loc7_ = _loc3_[_loc5_ + 1];
-         var _loc8_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc6_,1,1,_loc7_,1);
+         var _loc8_ = new dofus.datacenter.Item(0,_loc6_,1,1,_loc7_,1);
          var _loc9_ = "°" + _loc5_ / 2;
          var _loc10_ = this["\x17\x1a\x1b"](_loc8_,bHtml);
          var _loc11_ = _loc2_.indexOf(_loc9_);

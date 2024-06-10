@@ -56,7 +56,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.temporis.TemporisTower extend
          var _loc13_ = _loc7_ + _loc11_;
          var _loc14_ = _loc11_ == 1 || this.api.datacenter.Basics.isWorldUniqueItemAlreadyDropped(_loc13_);
          var _loc15_ = _loc10_ || this.isQuestStepFinished(_loc5_,_loc12_);
-         var _loc16_ = new dofus.datacenter..temporis2.T2TowerStepObject(_loc11_,_loc8_,_loc14_,_loc15_,_loc9_);
+         var _loc16_ = new dofus.datacenter.temporis2.T2TowerStepObject(_loc11_,_loc8_,_loc14_,_loc15_,_loc9_);
          _loc16_.addEventListener("onStepObjectIlluOver",this);
          _loc2_.push(_loc16_);
          if(!_loc15_)
@@ -95,7 +95,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.temporis.TemporisTower extend
       var _loc0_ = null;
       if((_loc0_ = _loc2_.owner) === this._cgSteps)
       {
-         var _loc4_ = dofus.datacenter..temporis2.T2TowerStepObject(_loc3_);
+         var _loc4_ = dofus.datacenter.temporis2.T2TowerStepObject(_loc3_);
          this.selectStepObject(_loc4_);
       }
    }

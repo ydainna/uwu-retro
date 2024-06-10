@@ -59,7 +59,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MountAncestorsViewer extends dofus.§\x18\x
             var _loc4_ = Number(_loc2_[_loc3_]);
             if(_loc4_ != 0)
             {
-               var _loc5_ = new dofus.datacenter..Mount(_loc4_);
+               var _loc5_ = new dofus.datacenter.Mount(_loc4_);
                var _loc6_ = ank.gapi.controls.Loader(this["_ldr" + _loc3_]);
                _loc6_["\x17\x12\x07"]();
                _loc6_.contentPath = _loc5_.gfxFile;

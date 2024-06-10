@@ -29,10 +29,10 @@ class dofus.§\x17\x04\x19§.modreport.ModReportStateChange
    }
    function get isToProcessState()
    {
-      return this.state == dofus.datacenter..modreport.ModReportStates.STATE_PENDING || this.state == dofus.datacenter..modreport.ModReportStates.STATE_STUDYING;
+      return this.state == dofus.datacenter.modreport.ModReportStates.STATE_PENDING || this.state == dofus.datacenter.modreport.ModReportStates.STATE_STUDYING;
    }
    function get isAlreadyProcessedState()
    {
-      return this.state == dofus.datacenter..modreport.ModReportStates.STATE_INVALID || (this.state == dofus.datacenter..modreport.ModReportStates.STATE_CONFIRMED || this.state == dofus.datacenter..modreport.ModReportStates.STATE_IGNORED);
+      return this.state == dofus.datacenter.modreport.ModReportStates.STATE_INVALID || (this.state == dofus.datacenter.modreport.ModReportStates.STATE_CONFIRMED || this.state == dofus.datacenter.modreport.ModReportStates.STATE_IGNORED);
    }
 }

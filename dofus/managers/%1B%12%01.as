@@ -308,7 +308,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
                   this["\x1e\x05\n"].addAction(161,false,this.api.ui,this.api.ui.loadUIComponent,[_loc2_.params[0],_loc2_.params[0],_loc2_.params[1],_loc2_.params[2]]);
                   break;
                case "UI_OPEN_AUTOHIDE":
-                  this["\x1e\x05\n"].addAction(162,false,this.api.ui,this.api.ui["\x18\x16\x19"],[_loc2_.params[0],_loc2_.params[0],_loc2_.params[1],_loc2_.params[2]]);
+                  this["\x1e\x05\n"].addAction(162,false,this.api.ui,this.api.ui.loadUIAutoHideComponent,[_loc2_.params[0],_loc2_.params[0],_loc2_.params[1],_loc2_.params[2]]);
                   break;
                case "UI_CLOSE":
                   this["\x1e\x05\n"].addAction(163,false,this.api.ui,this.api.ui.unloadUIComponent,[_loc2_.params[0]]);
@@ -328,7 +328,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
                   this["\x1e\x05\n"].addAction(165,false,this.api.datacenter.Player,this.api.datacenter.Player["\x1b\x16\x06"],[_loc39_]);
                   break;
                case "SET_SPELLS":
-                  this["\x1e\x05\n"].addAction(166,false,this.api.network.Spells,this.api.network.Spells["\x19\x19\x1c"],[_loc2_.params.join(";")]);
+                  this["\x1e\x05\n"].addAction(166,false,this.api.network.Spells,this.api.network.Spells.onList,[_loc2_.params.join(";")]);
                   break;
                case "REMOVE_SPELL":
                   this["\x1e\x05\n"].addAction(167,false,this.api.datacenter.Player,this.api.datacenter.Player["\x1a\f\x18"],_loc2_.params);

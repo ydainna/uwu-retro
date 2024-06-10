@@ -178,7 +178,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          }
          else
          {
-            _loc9_ = new dofus.datacenter..Exchange(_loc8_);
+            _loc9_ = new dofus.datacenter.Exchange(_loc8_);
          }
          this.api.datacenter.Exchange = _loc9_;
          if(this.api.datacenter.Player.ID == _loc5_)
@@ -262,7 +262,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       var _loc5_ = _loc4_ != this.api.datacenter.Player.ID ? 1 : 0;
       this.api.datacenter.Exchange["\x1a\n\x02"]["\x1b\x15\x05"](_loc5_,_loc3_);
    }
-   function §\x19\x19\x16§(bSuccess, sExtraData)
+   function onLeave(bSuccess, sExtraData)
    {
       delete this.api.datacenter.Basics.aks_exchange_echangeType;
       delete this.api.datacenter.Exchange;
@@ -296,12 +296,12 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       this.api.ui.unloadUIComponent("HouseSale");
       this.api.ui.unloadUIComponent("CardsRecycler");
       this.api.ui.unloadUIComponent("CardsUpgrader");
-      if(dofus.Constants["\x1a\x10\x01"])
+      if(dofus.Constants.SAVING_THE_WORLD)
       {
          dofus["\x1a\x0f\x1a"].getInstance()["\x19\x07\x05"]();
       }
    }
-   function §\x19\x16\x0b§(bSuccess, sExtraData)
+   function onCreate(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -349,11 +349,11 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          case 3:
             if(_loc5_ == 3)
             {
-               this.api.datacenter.Exchange = new dofus.datacenter..Exchange();
+               this.api.datacenter.Exchange = new dofus.datacenter.Exchange();
             }
             else
             {
-               this.api.datacenter.Exchange = new dofus.datacenter..Exchange(Number(_loc6_));
+               this.api.datacenter.Exchange = new dofus.datacenter.Exchange(Number(_loc6_));
             }
             this.api.datacenter.Exchange["\x18\f\n"] = this.api.datacenter.Player.Inventory.deepClone();
             if(_loc5_ == 3)
@@ -378,11 +378,11 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             }
             break;
          case 5:
-            _loc7_.Storage = new dofus.datacenter..Storage();
+            _loc7_.Storage = new dofus.datacenter.Storage();
             this.api.ui.loadUIComponent("Storage","Storage",{data:_loc7_.Storage},{nHideSprites:1});
             break;
          case 8:
-            _loc7_.Storage = new dofus.datacenter..TaxCollectorStorage();
+            _loc7_.Storage = new dofus.datacenter.TaxCollectorStorage();
             var _loc12_ = this.api.datacenter.Sprites.getItemAt(_loc6_);
             _loc7_.Storage.name = _loc12_.name;
             _loc7_.Storage.gfx = _loc12_.gfxID;
@@ -451,7 +451,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             break;
          case 15:
             this.api.ui.unloadUIComponent("Mount");
-            _loc7_.Storage = new dofus.datacenter..Storage();
+            _loc7_.Storage = new dofus.datacenter.Storage();
             this.api.ui.loadUIComponent("Storage","Storage",{isMount:true,data:_loc7_.Storage});
             break;
          case 16:
@@ -513,7 +513,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          var _loc16_ = _loc4_[9];
          var _loc17_ = _loc4_[10].split(",");
          var _loc18_ = new dofus.datacenter.["\x17\x01\x16"](_loc7_,_loc9_);
-         _loc18_["\x18\x11\f"] = new dofus.datacenter..Job(_loc6_,new ank.utils.ExtendedArray(),new dofus.datacenter.["\x18\x11\x0e"](Number(_loc17_[0]),Number(_loc17_[1])));
+         _loc18_["\x18\x11\f"] = new dofus.datacenter.Job(_loc6_,new ank.utils.ExtendedArray(),new dofus.datacenter.["\x18\x11\x0e"](Number(_loc17_[0]),Number(_loc17_[1])));
          _loc18_["\x18\x11\f"].level = _loc10_;
          _loc18_["\x18\x18\x17"] = _loc11_;
          _loc18_.inWorkshop = _loc12_;
@@ -631,7 +631,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
                var _loc7_ = _loc3_.substr(1).split(";");
                if(_loc7_.length == 1)
                {
-                  var _loc8_ = new dofus.datacenter.["\x18\x10\x15"](0,Number(_loc7_[0]),undefined,undefined,undefined);
+                  var _loc8_ = new dofus.datacenter.Item(0,Number(_loc7_[0]),undefined,undefined,undefined);
                   this.api.kernel.showMessage(undefined,this.api.lang.getText("CRAFT_SUCCESS_SELF",[_loc8_.name]),"INFO_CHAT");
                   this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x0f"]);
                   break;
@@ -719,7 +719,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             var _loc13_ = _loc12_["\x18\f\n"].findFirstItem("ID",_loc6_);
             if(_loc4_)
             {
-               var _loc14_ = new dofus.datacenter.["\x18\x10\x15"](_loc6_,_loc8_,_loc7_,-1,_loc9_,_loc10_);
+               var _loc14_ = new dofus.datacenter.Item(_loc6_,_loc8_,_loc7_,-1,_loc9_,_loc10_);
                _loc14_["\x1a\x0b\x11"] = _loc11_;
                if(_loc13_.index != -1)
                {
@@ -790,7 +790,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             if(_loc7_)
             {
                var _loc14_ = _loc12_.item;
-               var _loc15_ = new dofus.datacenter.["\x18\x10\x15"](_loc9_,_loc14_.unicID,_loc10_,-2,_loc14_.compressedEffects);
+               var _loc15_ = new dofus.datacenter.Item(_loc9_,_loc14_.unicID,_loc10_,-2,_loc14_.compressedEffects);
                var _loc16_ = -1;
                var _loc17_ = _loc11_.item.Quantity - _loc10_;
                if(_loc17_ == 0)
@@ -843,7 +843,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             var _loc14_ = _loc3_.findFirstItem("ID",_loc10_);
             if(_loc8_)
             {
-               var _loc15_ = new dofus.datacenter.["\x18\x10\x15"](_loc10_,_loc12_,_loc11_,-1,_loc13_);
+               var _loc15_ = new dofus.datacenter.Item(_loc10_,_loc12_,_loc11_,-1,_loc13_);
                var _loc16_ = _loc5_ == undefined ? _loc7_["\x17\b\x1d"] == undefined : _loc5_;
                if(_loc14_.index != -1)
                {
@@ -901,7 +901,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             var _loc13_ = _loc6_.findFirstItem("ID",_loc9_);
             if(_loc7_)
             {
-               var _loc14_ = new dofus.datacenter.["\x18\x10\x15"](_loc9_,_loc11_,_loc10_,-1,_loc12_);
+               var _loc14_ = new dofus.datacenter.Item(_loc9_,_loc11_,_loc10_,-1,_loc12_);
                if(_loc13_.index != -1)
                {
                   _loc6_["\x1b\t\x13"](dofus.Constants["\x17\x06\x16"]);
@@ -941,7 +941,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       var _loc12_ = _loc11_["\x18\f\n"].findFirstItem("ID",_loc6_);
       if(_loc4_)
       {
-         var _loc13_ = new dofus.datacenter.["\x18\x10\x15"](_loc6_,_loc8_,_loc7_,-1,_loc9_,_loc10_);
+         var _loc13_ = new dofus.datacenter.Item(_loc6_,_loc8_,_loc7_,-1,_loc9_,_loc10_);
          if(_loc12_.index != -1)
          {
             _loc11_["\x18\f\n"]["\x1b\x15\x05"](_loc12_.index,_loc13_);
@@ -961,7 +961,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       }
       this.api.ui.getUIComponent("PlayerShopModifier")["\x1a\x0b\x07"]();
    }
-   function §\x19\x19\x1c§(sExtraData)
+   function onList(sExtraData)
    {
       switch(this.api.datacenter.Basics.aks_exchange_echangeType)
       {
@@ -1014,7 +1014,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
                var _loc16_ = _loc8_[5] == "1";
                if(!_loc16_)
                {
-                  var _loc17_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc9_,undefined,undefined,_loc10_,_loc12_);
+                  var _loc17_ = new dofus.datacenter.Item(0,_loc9_,undefined,undefined,_loc10_,_loc12_);
                   _loc17_.customMoneyItemId = _loc11_;
                   _loc17_.resellCustomPrice = _loc13_;
                   _loc17_["\x1a\x06\x1d"] = this.api.lang.getConfigText("BUY_PRICE_MULTIPLICATOR");
@@ -1044,7 +1044,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
                }
             }
             this.api.datacenter.["\x1b\x0f\b"].Storage["\x18\f\n"] = _loc19_;
-            if(dofus.Constants["\x1a\x10\x01"])
+            if(dofus.Constants.SAVING_THE_WORLD)
             {
                dofus["\x1a\x0f\x1a"].getInstance()["\x19\x06\x1c"](_loc2_);
                dofus["\x1a\x0f\x1a"].getInstance()["\x19\x07\x05"]();
@@ -1063,7 +1063,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
                var _loc30_ = _loc26_[3];
                var _loc31_ = Number(_loc26_[4]);
                var _loc32_ = Number(_loc26_[5]);
-               var _loc33_ = new dofus.datacenter.["\x18\x10\x15"](_loc27_,_loc29_,_loc28_,-1,_loc30_,_loc31_);
+               var _loc33_ = new dofus.datacenter.Item(_loc27_,_loc29_,_loc28_,-1,_loc30_,_loc31_);
                if(!_global.isNaN(_loc32_))
                {
                   _loc33_.averagePrice = _loc32_;
@@ -1086,7 +1086,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
                   var _loc40_ = _loc36_[3];
                   var _loc41_ = Number(_loc36_[4]);
                   var _loc42_ = Number(_loc36_[5]);
-                  var _loc43_ = new dofus.datacenter.["\x18\x10\x15"](_loc37_,_loc39_,_loc38_,-1,_loc40_,_loc41_);
+                  var _loc43_ = new dofus.datacenter.Item(_loc37_,_loc39_,_loc38_,-1,_loc40_,_loc41_);
                   _loc43_["\x1a\x0b\x11"] = _loc42_;
                   _loc35_.push(_loc43_);
                }
@@ -1133,13 +1133,13 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          while(_loc7_ < _loc5_.length)
          {
             var _loc8_ = Number(_loc5_[_loc7_]);
-            if(dofus.datacenter.["\x18\x10\x15"].isFullSoul(_loc4_))
+            if(dofus.datacenter.Item.isFullSoul(_loc4_))
             {
-               var _loc9_ = new dofus.datacenter..MonsterInBidHouse(_loc8_,_loc4_);
+               var _loc9_ = new dofus.datacenter.MonsterInBidHouse(_loc8_,_loc4_);
             }
             else
             {
-               _loc9_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc8_,1,-1,"",0);
+               _loc9_ = new dofus.datacenter.Item(0,_loc8_,1,-1,"",0);
             }
             _loc6_.push(_loc9_);
             _loc7_ = _loc7_ + 1;
@@ -1164,7 +1164,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       var _loc6_ = _loc5_["\x18\f\n"].findFirstItem("unicID",_loc4_);
       if(_loc3_)
       {
-         var _loc7_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc4_,0,-1,"",0);
+         var _loc7_ = new dofus.datacenter.Item(0,_loc4_,0,-1,"",0);
          if(_loc6_.index != -1)
          {
             _loc5_["\x18\f\n"]["\x1b\x15\x05"](_loc6_.index,_loc7_);
@@ -1209,7 +1209,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          var _loc17_ = Number(_loc16_[0]);
          var _loc18_ = !!Number(_loc16_[1]);
          var _loc19_ = Number(_loc7_[5]);
-         var _loc20_ = new dofus.datacenter.["\x18\x10\x15"](_loc8_,_loc19_,0,-1,_loc9_,0);
+         var _loc20_ = new dofus.datacenter.Item(_loc8_,_loc19_,0,-1,_loc9_,0);
          var _loc21_ = {id:_loc8_,item:_loc20_,priceSet1:_loc11_,priceSet2:_loc14_,priceSet3:_loc17_,isMySale1:_loc12_,isMySale2:_loc15_,isMySale3:_loc18_};
          _loc5_.push(_loc21_);
          _loc6_ = _loc6_ + 1;
@@ -1236,7 +1236,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
       var _loc18_ = _loc17_["\x18\f\x0b"].findFirstItem("id",_loc5_);
       if(_loc3_)
       {
-         var _loc19_ = new dofus.datacenter.["\x18\x10\x15"](_loc5_,_loc6_,0,-1,_loc7_,0);
+         var _loc19_ = new dofus.datacenter.Item(_loc5_,_loc6_,0,-1,_loc7_,0);
          var _loc20_ = {id:_loc5_,item:_loc19_,priceSet1:_loc9_,priceSet2:_loc12_,priceSet3:_loc15_,isMySale1:_loc10_,isMySale2:_loc13_,isMySale3:_loc16_};
          if(_loc18_.index != -1)
          {

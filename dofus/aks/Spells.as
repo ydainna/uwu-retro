@@ -32,7 +32,7 @@ class dofus.aks.Spells extends dofus.aks.Handler
          this.api.kernel.showMessage(undefined,this.api.lang.getText("CANT_BOOST_SPELL"),"ERROR_BOX");
       }
    }
-   function §\x19\x19\x1c§(sExtraData)
+   function onList(sExtraData)
    {
       var _loc3_ = this.api.datacenter.Player;
       _loc3_.Spells["\x1a\f\x0b"](1,_loc3_.Spells.length);

@@ -129,7 +129,7 @@ class dofus.§\x17\x04\x19§.Job extends Object
                while(_loc11_ < _loc10_.length)
                {
                   var _loc12_ = _loc10_[_loc11_];
-                  var _loc13_ = new dofus.datacenter..Craft(_loc12_,_loc9_);
+                  var _loc13_ = new dofus.datacenter.Craft(_loc12_,_loc9_);
                   if(_loc13_.itemsCount <= _loc9_["\x1a\x03\r"])
                   {
                      this["\x1c\x0f\x04"].push(_loc13_);

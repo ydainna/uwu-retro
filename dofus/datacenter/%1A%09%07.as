@@ -64,7 +64,7 @@ class dofus.§\x17\x04\x19§.§\x1a\t\x07§ extends Object
          {
             var _loc6_ = Number(_loc4_[_loc5_][0]);
             var _loc7_ = _loc4_[_loc5_][1];
-            var _loc8_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc6_,_loc7_);
+            var _loc8_ = new dofus.datacenter.Item(0,_loc6_,_loc7_);
             _loc2_.push({iconFile:_loc8_.iconFile,label:(_loc7_ == 0 ? "" : "x" + _loc7_ + " ") + _loc8_.name});
             _loc5_ = _loc5_ + 1;
          }
@@ -87,7 +87,7 @@ class dofus.§\x17\x04\x19§.§\x1a\t\x07§ extends Object
          while(_loc13_ < _loc12_.length)
          {
             var _loc14_ = Number(_loc12_[_loc13_]);
-            var _loc15_ = new dofus.datacenter..Job(_loc14_);
+            var _loc15_ = new dofus.datacenter.Job(_loc14_);
             _loc2_.push({iconFile:_loc15_.iconFile,label:_loc15_.name});
             _loc13_ = _loc13_ + 1;
          }

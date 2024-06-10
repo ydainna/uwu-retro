@@ -9,7 +9,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x18\x1e\r§.MountStorageMountItem extend
       if(_loc2_)
       {
          this._lbl.text = _loc4_.name;
-         this["\x1e\x03\x18"] = dofus.datacenter..Mount(_loc4_);
+         this["\x1e\x03\x18"] = dofus.datacenter.Mount(_loc4_);
          if(this["\x1e\x03\x18"]["\x19\x06\x19"])
          {
             this["\x1d\x05\x19"].contentPath = "OeufCasse";

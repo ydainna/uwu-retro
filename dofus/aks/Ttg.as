@@ -2,20 +2,24 @@ class dofus.aks.Ttg extends dofus.aks.Handler
 {
    function Ttg(oAKS, oAPI)
    {
-      super.initialize(_loc3_,oAPI);
+      super.initialize(oAKS,oAPI);
    }
+
    function sendLeave()
    {
       this.aks.send("tc",true);
    }
-   function sendGetAllDates(§\x1b\t\x03§)
+
+   function sendGetAllDates(sTargetID)
    {
-      this.aks.send("td" + _loc2_);
+      this.aks.send("td" + sTargetID);
    }
+
    function sendShowCollection(sTargetName)
    {
       this.aks.send("ts" + sTargetName);
    }
+
    function sendRecycleCards(aToRecycle)
    {
       var _loc3_ = new Array();
@@ -38,10 +42,12 @@ class dofus.aks.Ttg extends dofus.aks.Handler
       }
       this.aks.send("tr" + _loc3_.join("|"),undefined,undefined,true);
    }
+
    function sendUpgradeCard(nCardObjectGenericID)
    {
       this.aks.send("tu" + nCardObjectGenericID);
    }
+
    function onOpenMyCollection()
    {
       var _loc2_ = this.api.datacenter.Player.ID;
@@ -49,7 +55,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
       var _loc4_ = dofus.graphics.gapi.ui.CardsCollection(this.api.ui.getUIComponent("CardsCollection"));
       if(_loc4_ == undefined)
       {
-         this.api.ui["\x18\x16\x19"]("CardsCollection","CardsCollection",{playerID:_loc2_,ttgCollection:_loc3_},{nHideSprites:1});
+         this.api.ui.loadUIAutoHideComponent("CardsCollection","CardsCollection",{playerID:_loc2_,ttgCollection:_loc3_},{nHideSprites:1});
       }
       else
       {
@@ -57,6 +63,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
          _loc4_.onUpdatedData();
       }
    }
+
    function onCardsRecyclerLoots(sExtraData)
    {
       var _loc3_ = dofus.graphics.gapi.ui.CardsRecycler(this.api.ui.getUIComponent("CardsRecycler"));
@@ -64,9 +71,9 @@ class dofus.aks.Ttg extends dofus.aks.Handler
       {
          return undefined;
       }
-      var _loc4_ = _loc2_.split("|");
+      var _loc4_ = sExtraData.split("|");
       var _loc5_ = new ank.utils.ExtendedArray();
-      if(_loc2_.length > 0)
+      if(sExtraData.length > 0)
       {
          var _loc6_ = 0;
          while(_loc6_ < _loc4_.length)
@@ -76,7 +83,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
             var _loc9_ = Number(_loc7_[1]);
             if(!(_global.isNaN(_loc8_) || _global.isNaN(_loc9_)))
             {
-               var _loc10_ = new dofus.datacenter.["\x18\x10\x15"](undefined,_loc8_,_loc9_);
+               var _loc10_ = new dofus.datacenter.Item(undefined,_loc8_,_loc9_);
                _loc5_.push(_loc10_);
             }
             _loc6_ = _loc6_ + 1;
@@ -84,25 +91,28 @@ class dofus.aks.Ttg extends dofus.aks.Handler
       }
       _loc3_.setRewardMode(_loc5_);
    }
-   function onOpenCardsUpgrader(§\x19\x0e\x0b§)
+
+   function onOpenCardsUpgrader(nSkillId)
    {
       if(this.api.ui.getUIComponent("CardsUpgrader"))
       {
          return undefined;
       }
-      this.api.ui.loadUIComponent("CardsUpgrader","CardsUpgrader",{skillId:_loc2_});
+      this.api.ui.loadUIComponent("CardsUpgrader","CardsUpgrader",{skillId:nSkillId});
    }
-   function onOpenCardsRecycler(§\x19\x0e\x0b§)
+   
+   function onOpenCardsRecycler(nSkillId)
    {
       if(this.api.ui.getUIComponent("CardsRecycler"))
       {
          return undefined;
       }
-      this.api.ui.loadUIComponent("CardsRecycler","CardsRecycler",{skillId:_loc2_});
+      this.api.ui.loadUIComponent("CardsRecycler","CardsRecycler",{skillId:nSkillId});
    }
-   function §\x19\x13\x1b§(sExtraData)
+
+   function onAdd(sExtraData)
    {
-      var _loc3_ = Number(_loc2_);
+      var _loc3_ = Number(sExtraData);
       var _loc4_ = this.api.datacenter.Player.ttgCollection.getTtgCard(_loc3_);
       if(_loc4_ == undefined)
       {
@@ -131,13 +141,14 @@ class dofus.aks.Ttg extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x19\x1c§(sExtraData)
+
+   function onList(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
       var _loc5_ = _loc3_[1];
       var _loc6_ = _loc3_[2];
-      var _loc7_ = new dofus.datacenter..ttg.TtgCollection(_loc4_,_loc5_,_loc6_);
+      var _loc7_ = new dofus.datacenter.ttg.TtgCollection(_loc4_,_loc5_,_loc6_);
       var _loc8_ = _loc4_ == this.api.datacenter.Player.ID;
       if(_loc8_)
       {
@@ -148,7 +159,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
          var _loc9_ = dofus.graphics.gapi.ui.CardsCollection(this.api.ui.getUIComponent("CardsCollection"));
          if(_loc9_ == undefined)
          {
-            this.api.ui["\x18\x16\x19"]("CardsCollection","CardsCollection",{playerID:_loc4_,ttgCollection:_loc7_});
+            this.api.ui.loadUIAutoHideComponent("CardsCollection","CardsCollection",{playerID:_loc4_,ttgCollection:_loc7_});
          }
          else
          {
@@ -157,9 +168,10 @@ class dofus.aks.Ttg extends dofus.aks.Handler
          }
       }
    }
+
    function onDates(sExtraData)
    {
-      var _loc3_ = _loc2_.split("|");
+      var _loc3_ = sExtraData.split("|");
       var _loc4_ = _loc3_[0];
       var _loc5_ = _loc3_[1];
       if(_loc5_ == undefined || _loc5_.length == 0)
@@ -168,6 +180,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
       }
       this.parseDates(_loc4_,_loc5_);
    }
+
    function parseDates(sPlayerID, sCards)
    {
       var _loc5_ = dofus.graphics.gapi.ui.CardsCollection(this.api.ui.getUIComponent("CardsCollection"));
@@ -216,13 +229,14 @@ class dofus.aks.Ttg extends dofus.aks.Handler
          _loc5_.onUpdatedData();
       }
    }
-   function §\x19\x16\x0b§(bSuccess, sExtraData)
+
+   function onCreate(bSuccess, sExtraData)
    {
-      if(!_loc2_)
+      if(!bSuccess)
       {
          return undefined;
       }
-      var _loc4_ = Number(_loc3_);
+      var _loc4_ = Number(sExtraData);
       switch(_loc4_)
       {
          case 854:
@@ -232,7 +246,8 @@ class dofus.aks.Ttg extends dofus.aks.Handler
             this.onOpenCardsUpgrader(189);
       }
    }
-   function §\x19\x19\x16§(bSuccess)
+
+   function onLeave(bSuccess)
    {
       delete this.api.datacenter.Basics.aks_exchange_echangeType;
       delete this.api.datacenter.Exchange;
@@ -240,7 +255,7 @@ class dofus.aks.Ttg extends dofus.aks.Handler
       this.api.ui.unloadUIComponent("AskCancelExchange");
       this.api.ui.unloadUIComponent("CardsUpgrader");
       this.api.ui.unloadUIComponent("CardsRecycler");
-      if(dofus.Constants["\x1a\x10\x01"])
+      if(dofus.Constants.SAVING_THE_WORLD)
       {
          dofus["\x1a\x0f\x1a"].getInstance()["\x19\x07\x05"]();
       }

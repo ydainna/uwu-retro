@@ -119,7 +119,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
       var _loc3_ = _loc2_.split("|");
       this.api.ui.loadUIComponent("MountParkSale","MountParkSale",{defaultPrice:Number(_loc3_[1]),§\x18\x0b\x01§:Number(_loc3_[2])});
    }
-   function §\x19\x19\x16§()
+   function onLeave()
    {
       this.api.ui.unloadUIComponent("MountParkSale");
    }
@@ -146,7 +146,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
    {
       var _loc4_ = _loc2_.split(":");
       var _loc5_ = Number(_loc4_[1]);
-      var _loc6_ = new dofus.datacenter..Mount(_loc5_,undefined,_loc3_);
+      var _loc6_ = new dofus.datacenter.Mount(_loc5_,undefined,_loc3_);
       _loc6_.ID = _loc4_[0];
       _loc6_.ancestors = _loc4_[2].split(",");
       var _loc7_ = _loc4_[3].split(",");

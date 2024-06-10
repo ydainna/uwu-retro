@@ -92,7 +92,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSelector extends dofus.§\x18\x03\x10§
                   this["\x1c\x0f\x13"].push({id:k,name:_loc4_.nn});
                   if(this["\x1c\f\x1b"].selectedIndex != 0)
                   {
-                     this["\x1c\x0f\x14"].push(new dofus.datacenter.["\x18\x10\x15"](0,Number(k)));
+                     this["\x1c\x0f\x14"].push(new dofus.datacenter.Item(0,Number(k)));
                   }
                }
             }
@@ -122,7 +122,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSelector extends dofus.§\x18\x03\x10§
       {
          if(_loc5_[k] >= _loc6_)
          {
-            _loc4_.push(new dofus.datacenter.["\x18\x10\x15"](0,Number(k)));
+            _loc4_.push(new dofus.datacenter.Item(0,Number(k)));
          }
       }
       this["\x1d\x06\x0b"].dataProvider = _loc4_;

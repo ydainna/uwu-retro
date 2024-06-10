@@ -263,7 +263,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.SpellFullInfosViewer extends 
                var _loc10_ = this.api.lang["\x17\x1c\t"](_loc8_);
                var _loc11_ = _loc10_["g" + _loc9_];
                _loc7_.push(_loc10_.n + " (" + this.api.lang.getText("LEVEL") + " " + _loc11_.l + ")");
-               var _loc12_ = !dofus.datacenter..Gladiatrool.isIncarnation(this.api.datacenter.Player["\x1b\x18\x1b"].unicID) ? this.api.datacenter.Player.Level : 200;
+               var _loc12_ = !dofus.datacenter.Gladiatrool.isIncarnation(this.api.datacenter.Player["\x1b\x18\x1b"].unicID) ? this.api.datacenter.Player.Level : 200;
                var _loc13_ = Math.floor(_loc11_.lp * (1 + _loc12_ / 100));
                _loc7_.push(this.api.lang.getText("LP") + " : " + _loc13_ + " (" + _loc11_.lp + " + " + (_loc13_ - _loc11_.lp) + ")");
                _loc7_.push(this.api.lang.getText("AP") + " : " + _loc11_.ap);

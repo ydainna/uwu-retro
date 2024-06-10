@@ -17,7 +17,7 @@ class dofus.§\x17\x04\x19§.RapidStuff extends Object
    }
    static function createEmptyRapidStuff(§\x19\b\x0b§)
    {
-      return new dofus.datacenter..RapidStuff(undefined,_loc2_);
+      return new dofus.datacenter.RapidStuff(undefined,_loc2_);
    }
    function §\x1e\x12\x05§()
    {

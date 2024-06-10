@@ -469,7 +469,7 @@ class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
       {
          this["\x1d\x1b\x05"] = _loc5_;
       }
-      this._oIconProperties = dofus.datacenter..SpellIconProperties.buildFromSpellText(this["\x1e\x05\x18"]);
+      this._oIconProperties = dofus.datacenter.SpellIconProperties.buildFromSpellText(this["\x1e\x05\x18"]);
       var _loc6_ = this["\x18\x01\x03"](15);
       var _loc7_ = _loc6_.split("");
       this["\x1b\x1c\x16"] = new Array();

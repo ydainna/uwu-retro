@@ -29,17 +29,17 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
       this["\x1b\x06\x12"] = new dofus.managers["\x1b\x06\x12"](this);
       this["\x18\x0b\b"] = new dofus.managers["\x18\x0b\b"](this,this.api);
       this.Inventory = new ank.utils.ExtendedArray();
-      this.InventoryByItemPositions = new ank.utils.["\x17\x0e\r"]();
-      this.InventoryShortcuts = new ank.utils.["\x17\x0e\r"]();
+      this.InventoryByItemPositions = new ank.utils.ExtendedObject();
+      this.InventoryShortcuts = new ank.utils.ExtendedObject();
       if(this.modReportSessionData == undefined)
       {
-         this.modReportSessionData = new dofus.datacenter..ModReportSessionData();
+         this.modReportSessionData = new dofus.datacenter.ModReportSessionData();
       }
       this.modReportSessionData.initialize();
-      this["\x18\x10\x1d"] = new ank.utils.["\x17\x0e\r"]();
+      this["\x18\x10\x1d"] = new ank.utils.ExtendedObject();
       this["\x18\x11\x0f"] = new ank.utils.ExtendedArray();
       this.Spells = new ank.utils.ExtendedArray();
-      this.Emotes = new ank.utils.["\x17\x0e\r"]();
+      this.Emotes = new ank.utils.ExtendedObject();
       this.ttgCollection = undefined;
       this.resetRapidStuffs();
       this.resetSpellsDecks();
@@ -706,41 +706,41 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
    }
    function getSpellsDeck(§\x19\b\x0b§)
    {
-      return dofus.datacenter..spellscollection.SpellsDeck(this.SpellsDecks.getItemAt(_loc2_));
+      return dofus.datacenter.spellscollection.SpellsDeck(this.SpellsDecks.getItemAt(_loc2_));
    }
    function putSpellsDeck(§\x19\b\x0b§, oSpellsDeck)
    {
-      this.SpellsDecks["\x15\x1d\x13"](_loc2_,oSpellsDeck);
+      this.SpellsDecks.addItemAt(_loc2_,oSpellsDeck);
       this["\x17\x07\x19"]({type:"spellsDeckPut",value:oSpellsDeck});
    }
    function resetSpellsDecks()
    {
-      this.SpellsDecks = new ank.utils.["\x17\x0e\r"]();
+      this.SpellsDecks = new ank.utils.ExtendedObject();
       var _loc2_ = 0;
       while(_loc2_ < dofus.datacenter.["\x18\x17\t"].MAX_SPELLS_DECKS_COUNT)
       {
-         var _loc3_ = dofus.datacenter..spellscollection.SpellsDeck.createEmptySpellsDeck(_loc2_);
-         this.SpellsDecks["\x15\x1d\x13"](_loc2_,_loc3_);
+         var _loc3_ = dofus.datacenter.spellscollection.SpellsDeck.createEmptySpellsDeck(_loc2_);
+         this.SpellsDecks.addItemAt(_loc2_,_loc3_);
          _loc2_ = _loc2_ + 1;
       }
    }
    function getRapidStuff(§\x19\b\x0b§)
    {
-      return dofus.datacenter..RapidStuff(this.RapidStuffs.getItemAt(_loc2_));
+      return dofus.datacenter.RapidStuff(this.RapidStuffs.getItemAt(_loc2_));
    }
    function putRapidStuff(§\x19\b\x0b§, oRapidStuff)
    {
-      this.RapidStuffs["\x15\x1d\x13"](_loc2_,oRapidStuff);
+      this.RapidStuffs.addItemAt(_loc2_,oRapidStuff);
       this["\x17\x07\x19"]({type:"rapidStuffPut",value:oRapidStuff});
    }
    function resetRapidStuffs()
    {
-      this.RapidStuffs = new ank.utils.["\x17\x0e\r"]();
+      this.RapidStuffs = new ank.utils.ExtendedObject();
       var _loc2_ = 0;
       while(_loc2_ < dofus.datacenter.["\x18\x17\t"].MAX_RAPID_STUFFS_COUNT)
       {
-         var _loc3_ = dofus.datacenter..RapidStuff.createEmptyRapidStuff(_loc2_);
-         this.RapidStuffs["\x15\x1d\x13"](_loc2_,_loc3_);
+         var _loc3_ = dofus.datacenter.RapidStuff.createEmptyRapidStuff(_loc2_);
+         this.RapidStuffs.addItemAt(_loc2_,_loc3_);
          _loc2_ = _loc2_ + 1;
       }
    }
@@ -799,7 +799,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
       this.Inventory.push(_loc2_);
       if(_loc2_.isEquiped)
       {
-         this.InventoryByItemPositions["\x15\x1d\x13"](_loc2_.position,_loc2_);
+         this.InventoryByItemPositions.addItemAt(_loc2_.position,_loc2_);
       }
    }
    function checkCanMoveItem()
@@ -837,7 +837,7 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
       this.Inventory["\x1b\x15\x05"](_loc3_.index,_loc2_);
       if(_loc2_.isEquiped)
       {
-         this.InventoryByItemPositions["\x15\x1d\x13"](_loc2_.position,_loc2_);
+         this.InventoryByItemPositions.addItemAt(_loc2_.position,_loc2_);
       }
    }
    function §\x1b\x15\b§(§\x19\b\x1a§, nQuantity)
@@ -870,12 +870,12 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
       this.Inventory.push(_loc5_);
       if(_loc5_.isEquiped)
       {
-         this.InventoryByItemPositions["\x15\x1d\x13"](_loc5_.position,_loc5_);
+         this.InventoryByItemPositions.addItemAt(_loc5_.position,_loc5_);
       }
    }
    function getInventoryItemQuantityByUnicID(§\x19\x10\n§)
    {
-      var _loc3_ = dofus.datacenter.["\x18\x10\x15"](this.Inventory.findFirstItem("unicID",_loc2_).item);
+      var _loc3_ = dofus.datacenter.Item(this.Inventory.findFirstItem("unicID",_loc2_).item);
       if(_loc3_ == undefined)
       {
          return 0;
@@ -1084,11 +1084,11 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
    }
    function §\x16\x1c\x02§()
    {
-      this.Emotes = new ank.utils.["\x17\x0e\r"]();
+      this.Emotes = new ank.utils.ExtendedObject();
    }
    function §\x15\x1d\t§(§\x19\x06\x13§)
    {
-      this.Emotes["\x15\x1d\x13"](_loc2_,true);
+      this.Emotes.addItemAt(_loc2_,true);
    }
    function §\x18\x05\b§(§\x19\x06\x13§)
    {

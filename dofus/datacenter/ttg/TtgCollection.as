@@ -3,10 +3,10 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollection
    function TtgCollection(sPlayerID, sUniqId, sHash)
    {
       this.api = _global.api;
-      this._eoTtgCardsByCardID = new ank.utils.["\x17\x0e\r"]();
-      this._eoTtgNonBrillantCardsByEntityID = new ank.utils.["\x17\x0e\r"]();
+      this._eoTtgCardsByCardID = new ank.utils.ExtendedObject();
+      this._eoTtgNonBrillantCardsByEntityID = new ank.utils.ExtendedObject();
       this._aTtgCardsIDs = new Array();
-      this._eoCardsByFamilies = new ank.utils.["\x17\x0e\r"]();
+      this._eoCardsByFamilies = new ank.utils.ExtendedObject();
       this._sPlayerID = sPlayerID;
       this["\x1e\x0b\x17"] = _loc3_;
       this.fillWithHash(sHash);
@@ -25,7 +25,7 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollection
       var _loc5_ = 0;
       while(_loc5_ < this._aTtgCardsIDs.length)
       {
-         var _loc6_ = dofus.datacenter..ttg.TtgCard(this._eoTtgCardsByCardID.getItemAt(this._aTtgCardsIDs[_loc5_]));
+         var _loc6_ = dofus.datacenter.ttg.TtgCard(this._eoTtgCardsByCardID.getItemAt(this._aTtgCardsIDs[_loc5_]));
          if(!_loc6_.isFoil)
          {
             if(!(fFilter != undefined && !fFilter.apply(this,[_loc6_])))
@@ -71,13 +71,13 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollection
    }
    function getFamiliesFoundByFilter(fFilter)
    {
-      var _loc3_ = new ank.utils.["\x17\x0e\r"]();
+      var _loc3_ = new ank.utils.ExtendedObject();
       var _loc4_ = this.getExtendedArrayForUX(fFilter);
       var _loc5_ = 0;
       while(_loc5_ < _loc4_.length)
       {
          var _loc6_ = _loc4_[_loc5_];
-         _loc3_["\x15\x1d\x13"](_loc6_.familyID,true);
+         _loc3_.addItemAt(_loc6_.familyID,true);
          _loc5_ = _loc5_ + 1;
       }
       return _loc3_["\x17\x1a\x07"]();
@@ -92,7 +92,7 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollection
          var _loc6_ = _loc4_[_loc5_];
          var _loc7_ = ttgStats.getOwnedPercentageByFamilyID(_loc6_);
          var _loc8_ = ttgStats.getOwnedFoilPercentageByFamilyID(_loc6_);
-         _loc3_.push(new dofus.datacenter..ttg.TtgCardFamily(_loc6_,_loc7_,_loc8_));
+         _loc3_.push(new dofus.datacenter.ttg.TtgCardFamily(_loc6_,_loc7_,_loc8_));
          _loc5_ = _loc5_ + 1;
       }
       _loc3_.sortOn("familyName");
@@ -117,7 +117,7 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollection
    }
    function isOwningTtgCard(nCardID)
    {
-      var _loc3_ = dofus.datacenter..ttg.TtgCard(this._eoTtgCardsByCardID.getItemAt(nCardID));
+      var _loc3_ = dofus.datacenter.ttg.TtgCard(this._eoTtgCardsByCardID.getItemAt(nCardID));
       if(_loc3_ == undefined)
       {
          return false;
@@ -126,7 +126,7 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollection
    }
    function getTtgCard(nCardID)
    {
-      return dofus.datacenter..ttg.TtgCard(this._eoTtgCardsByCardID.getItemAt(nCardID));
+      return dofus.datacenter.ttg.TtgCard(this._eoTtgCardsByCardID.getItemAt(nCardID));
    }
    function getTtgCardsItems()
    {
@@ -134,10 +134,10 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollection
    }
    function fillWithHash(sHash)
    {
-      var _loc3_ = new ank.utils.["\x17\x0e\r"]();
+      var _loc3_ = new ank.utils.ExtendedObject();
       var _loc4_ = new Array();
-      var _loc5_ = new ank.utils.["\x17\x0e\r"]();
-      var _loc6_ = new ank.utils.["\x17\x0e\r"]();
+      var _loc5_ = new ank.utils.ExtendedObject();
+      var _loc6_ = new ank.utils.ExtendedObject();
       var _loc7_ = new Array();
       var _loc8_ = this.api.lang.getTtgCards();
       for(var k in _loc8_)
@@ -157,19 +157,19 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollection
             if(_loc14_ != undefined)
             {
                var _loc15_ = (_loc12_ >> _loc13_ & 1) == 1;
-               var _loc16_ = new dofus.datacenter..ttg.TtgCard(_loc14_,_loc15_);
+               var _loc16_ = new dofus.datacenter.ttg.TtgCard(_loc14_,_loc15_);
                var _loc17_ = _loc16_.familyID;
-               _loc5_["\x15\x1d\x13"](_loc14_,_loc16_);
+               _loc5_.addItemAt(_loc14_,_loc16_);
                var _loc18_ = Array(_loc3_.getItemAt(_loc17_));
                if(_loc18_ == undefined)
                {
                   _loc18_ = new Array();
-                  _loc3_["\x15\x1d\x13"](_loc17_,_loc18_);
+                  _loc3_.addItemAt(_loc17_,_loc18_);
                }
                _loc18_.push(_loc16_);
                if(!_loc16_.isFoil)
                {
-                  _loc6_["\x15\x1d\x13"](_loc16_.entityID,_loc16_);
+                  _loc6_.addItemAt(_loc16_.entityID,_loc16_);
                }
                _loc4_.push(_loc14_);
                _loc9_ = _loc9_ - 1;
@@ -182,10 +182,10 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollection
       while(_loc19_ < _loc4_.length)
       {
          var _loc20_ = _loc4_[_loc19_];
-         var _loc21_ = dofus.datacenter..ttg.TtgCard(_loc5_.getItemAt(_loc20_));
+         var _loc21_ = dofus.datacenter.ttg.TtgCard(_loc5_.getItemAt(_loc20_));
          if(_loc21_.isFoil)
          {
-            var _loc22_ = dofus.datacenter..ttg.TtgCard(_loc6_.getItemAt(_loc21_.entityID));
+            var _loc22_ = dofus.datacenter.ttg.TtgCard(_loc6_.getItemAt(_loc21_.entityID));
             _loc22_.linkedFoil = _loc21_;
          }
          _loc19_ = _loc19_ + 1;

@@ -20,7 +20,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
    {
       if(this._currentOverContainer != undefined && this._currentOverContainer.contentData != undefined)
       {
-         return dofus.datacenter.["\x18\x10\x15"](this._currentOverContainer.contentData);
+         return dofus.datacenter.Item(this._currentOverContainer.contentData);
       }
       return undefined;
    }
@@ -33,7 +33,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
       this["\x1d\x19\x0f"] = Number(_loc2_);
       return this.maxItem;
    }
-   function §\x1c\x1d§(§\x19\x0e\x0b§)
+   function §\x1c\x1d§(nSkillId)
    {
       this["\x1d\x1c\x1c"] = Number(_loc2_);
       this["\x1d\x16\f"] = _global.api.lang["\x17\x1e\x14"](this["\x1d\x1c\x1c"]);
@@ -357,7 +357,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
    {
       this["\x1c\r\x04"].dataProvider = this["\x1c\x0f\x01"];
       this._mcFiligrane._visible = this["\x1c\x04\x02"] = this["\x1c\x0f\x01"] == undefined;
-      var _loc2_ = dofus.datacenter.["\x18\x10\x15"](this["\x1c\r\x04"]["\x17\x15\x12"](0).contentData);
+      var _loc2_ = dofus.datacenter.Item(this["\x1c\r\x04"]["\x17\x15\x12"](0).contentData);
       if(_loc2_ != undefined)
       {
          this["\x18\x06\x0f"](false);
@@ -556,7 +556,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
       var _loc2_ = this.api.kernel.GameManager["\x16\x03\x12"](this["\x18\x02\x02"](),this["\x1d\x1c\x1c"],this["\x1d\x19\x0f"]);
       if(_loc2_ != undefined)
       {
-         this["\x1a\x1e\x15"](new dofus.datacenter.["\x18\x10\x15"](-1,_loc2_,1,0,"",0),true);
+         this["\x1a\x1e\x15"](new dofus.datacenter.Item(-1,_loc2_,1,0,"",0),true);
       }
       else
       {
@@ -946,7 +946,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.
    function overItem(oEvent)
    {
       var _loc3_ = _loc2_.target;
-      var _loc4_ = dofus.datacenter.["\x18\x10\x15"](_loc3_.contentData);
+      var _loc4_ = dofus.datacenter.Item(_loc3_.contentData);
       _loc4_["\x1b\x01\b"](_loc3_,_loc4_.style);
       this._currentOverContainer = _loc3_;
    }

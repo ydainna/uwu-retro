@@ -34,7 +34,7 @@ class dofus.§\x1a\x0f\x1a§ extends dofus.utils.ApiElement
    }
    static function execute()
    {
-      if(dofus.Constants["\x1a\x10\x01"])
+      if(dofus.Constants.SAVING_THE_WORLD)
       {
          if(dofus["\x1a\x0f\x1a"]["\x19\x02\x1a"] != null)
          {

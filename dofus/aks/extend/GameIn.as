@@ -365,7 +365,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                            }
                            if(!_global.isNaN(_loc54_))
                            {
-                              var _loc58_ = new dofus.datacenter..Mount(_loc54_,Number(_loc21_));
+                              var _loc58_ = new dofus.datacenter.Mount(_loc54_,Number(_loc21_));
                               _loc58_.customColor1 = _loc55_;
                               _loc58_.customColor2 = _loc56_;
                               _loc58_.customColor3 = _loc57_;
@@ -377,7 +377,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                            var _loc59_ = Number(_loc10_[25]);
                            if(!_global.isNaN(_loc59_))
                            {
-                              _loc52_.mount = new dofus.datacenter..Mount(_loc59_,Number(_loc21_));
+                              _loc52_.mount = new dofus.datacenter.Mount(_loc59_,Number(_loc21_));
                            }
                         }
                         _loc52_.LPmax = _loc10_[28];
@@ -422,7 +422,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                            }
                            if(!_global.isNaN(_loc61_))
                            {
-                              var _loc65_ = new dofus.datacenter..Mount(_loc61_,Number(_loc21_));
+                              var _loc65_ = new dofus.datacenter.Mount(_loc61_,Number(_loc21_));
                               _loc65_.customColor1 = _loc62_;
                               _loc65_.customColor2 = _loc63_;
                               _loc65_.customColor3 = _loc64_;
@@ -434,7 +434,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                            var _loc66_ = Number(_loc10_[19]);
                            if(!_global.isNaN(_loc66_))
                            {
-                              _loc52_.mount = new dofus.datacenter..Mount(_loc66_,Number(_loc21_));
+                              _loc52_.mount = new dofus.datacenter.Mount(_loc66_,Number(_loc21_));
                            }
                         }
                      }
@@ -444,7 +444,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                      }
                      var _loc67_ = _loc51_.split(",");
                      _loc52_.alignment = new dofus.datacenter.Alignment(Number(_loc67_[0]),Number(_loc67_[1]));
-                     _loc52_.rank = new dofus.datacenter..Rank(Number(_loc67_[2]));
+                     _loc52_.rank = new dofus.datacenter.Rank(Number(_loc67_[2]));
                      _loc52_.alignment["\x17\x0f\x05"] = _loc67_[4] == 1;
                      if(_loc67_.length > 3 && _loc14_ != this.api.datacenter.Player.ID)
                      {
@@ -599,7 +599,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          var _loc8_ = _global.parseInt(_loc6_[1]);
          if(_loc3_)
          {
-            var _loc9_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc8_);
+            var _loc9_ = new dofus.datacenter.Item(0,_loc8_);
             var _loc10_ = Number(_loc6_[2]);
             switch(_loc10_)
             {
@@ -712,8 +712,8 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
       var _loc8_ = (Math.cos(_loc6_) + 1) * 8388607;
       if(_loc3_)
       {
-         var _loc9_ = new dofus.datacenter..Challenge(_loc6_,_loc7_);
-         this.api.datacenter.["\x16\x18\x10"]["\x15\x1d\x13"](_loc6_,_loc9_);
+         var _loc9_ = new dofus.datacenter.Challenge(_loc6_,_loc7_);
+         this.api.datacenter.["\x16\x18\x10"].addItemAt(_loc6_,_loc9_);
          var _loc10_ = 0;
          while(_loc10_ < _loc4_.length)
          {
@@ -804,7 +804,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          this.api.gfx.addSpriteOverHeadItem(_loc3_,"FightOptions",dofus.graphics.battlefield["\x17\x0f\x18"],[_loc4_],undefined);
       }
    }
-   function §\x19\x19\x16§()
+   function onLeave()
    {
       this.api.datacenter.Game["\x17\x03\x1a"] = undefined;
       this.api.ui.getUIComponent("Banner")["\x18\x06\x16"](true);
@@ -949,16 +949,16 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
       {
          if(bIsChest)
          {
-            var _loc16_ = new ank.utils.["\x17\x0e\r"]();
+            var _loc16_ = new ank.utils.ExtendedObject();
             var _loc17_ = new Array();
             var _loc18_ = _loc2_.currentPlayerInfos[0].items;
             var _loc19_ = 0;
             while(_loc19_ < _loc18_.length)
             {
                var _loc20_ = _loc18_[_loc19_];
-               var _loc21_ = new dofus.datacenter.["\x18\x10\x15"](undefined,_loc20_.unicID,_loc20_.Quantity);
+               var _loc21_ = new dofus.datacenter.Item(undefined,_loc20_.unicID,_loc20_.Quantity);
                _loc17_.push(_loc21_);
-               _loc16_["\x15\x1d\x13"](_loc20_.unicID,_loc21_);
+               _loc16_.addItemAt(_loc20_.unicID,_loc21_);
                _loc19_ = _loc19_ + 1;
             }
             var _loc22_ = _loc13_.items;
@@ -968,7 +968,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                var _loc24_ = _loc22_[_loc23_];
                if(_loc16_.getItemAt(_loc24_.unicID) != undefined)
                {
-                  var _loc25_ = dofus.datacenter.["\x18\x10\x15"](_loc16_.getItemAt(_loc24_.unicID));
+                  var _loc25_ = dofus.datacenter.Item(_loc16_.getItemAt(_loc24_.unicID));
                   _loc25_.Quantity += _loc24_.Quantity;
                }
                else
@@ -1037,7 +1037,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
          }
          if(_loc6_ != 0)
          {
-            var _loc8_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc6_,_loc7_);
+            var _loc8_ = new dofus.datacenter.Item(0,_loc6_,_loc7_);
             _loc3_.push(_loc8_);
          }
          _loc4_ = _loc4_ + 1;
@@ -1155,7 +1155,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
             this.api.datacenter.Player.data = _loc3_;
             this.api.ui.getUIComponent("Banner")["\x1b\x15\x0f"]();
          }
-         else if(this.api.gfx.SpriteHandler.hidePlayerSprites && (_loc3_ instanceof dofus.datacenter.["\x16\x19\x02"] || (_loc3_ instanceof dofus.datacenter..PlayerShop || _loc3_ instanceof dofus.datacenter.["\x18\x1d\x19"])))
+         else if(this.api.gfx.SpriteHandler.hidePlayerSprites && (_loc3_ instanceof dofus.datacenter.["\x16\x19\x02"] || (_loc3_ instanceof dofus.datacenter.PlayerShop || _loc3_ instanceof dofus.datacenter.["\x18\x1d\x19"])))
          {
             this.api.gfx.SpriteHandler["\x18\x06\x1c"](_loc5_,true);
          }

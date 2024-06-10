@@ -112,14 +112,14 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemUtility extends dofus.§\x18\x03\x10§.
    {
       var _loc4_ = _loc3_[_loc2_];
       var _loc5_ = new Object();
-      _loc5_["\x17\x01\x19"] = new dofus.datacenter.["\x18\x10\x15"](0,_loc2_,1);
+      _loc5_["\x17\x01\x19"] = new dofus.datacenter.Item(0,_loc2_,1);
       _loc5_.items = new Array();
       var _loc6_ = 0;
       while(_loc6_ < _loc4_.length)
       {
          var _loc7_ = _loc4_[_loc6_][0];
          var _loc8_ = _loc4_[_loc6_][1];
-         var _loc9_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc7_,_loc8_);
+         var _loc9_ = new dofus.datacenter.Item(0,_loc7_,_loc8_);
          _loc5_.items.push(_loc9_);
          _loc6_ = _loc6_ + 1;
       }

@@ -146,7 +146,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.NpcShop extends dofus.§\x18\x03\x10§.gapi
       }
       var api = this.api;
       var _loc9_ = "POPUP_QUANTITY_NPC_SHOP";
-      var sMoney = !this["\x1e\x05\t"].hasCustomMoneyItemId ? " " + api.lang.getText("KAMAS") : "x " + new dofus.datacenter.["\x18\x10\x15"](0,this["\x1e\x05\t"].customMoneyItemId).name;
+      var sMoney = !this["\x1e\x05\t"].hasCustomMoneyItemId ? " " + api.lang.getText("KAMAS") : "x " + new dofus.datacenter.Item(0,this["\x1e\x05\t"].customMoneyItemId).name;
       var _loc10_ = [function(§\x19\n\x0e§, §\x19\t\x19§, §\x19\x10\x10§)
       {
          var _loc5_ = _loc4_ * nPrice;

@@ -937,7 +937,7 @@ class dofus.aks.Account extends dofus.aks.Handler
       var _loc12_ = Number(_loc5_[4]);
       var _loc13_ = _loc5_[5] != "1" ? false : true;
       var _loc14_ = _loc4_.rank.disgrace;
-      _loc4_.rank = new dofus.datacenter..Rank(_loc10_,_loc11_,_loc12_,_loc13_);
+      _loc4_.rank = new dofus.datacenter.Rank(_loc10_,_loc11_,_loc12_,_loc13_);
       _loc4_.data.rank = _loc4_.rank.clone();
       if(_loc14_ != undefined && (_loc14_ != _loc12_ && _loc12_ > 0))
       {
@@ -1179,7 +1179,7 @@ class dofus.aks.Account extends dofus.aks.Handler
          }
          _loc21_ = _loc21_ + 1;
       }
-      var _loc23_ = new dofus.datacenter..Gift();
+      var _loc23_ = new dofus.datacenter.Gift();
       _loc23_.type = _loc4_;
       _loc23_.id = _loc5_;
       _loc23_.title = _loc16_;

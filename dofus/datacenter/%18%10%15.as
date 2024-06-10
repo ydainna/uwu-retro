@@ -34,7 +34,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    static function isFullSoul(§\x19\x10\x06§)
    {
-      return _loc2_ == dofus.datacenter.["\x18\x10\x15"].TYPE_FULL_SOUL_STONE_NORMAL || (_loc2_ == dofus.datacenter.["\x18\x10\x15"].TYPE_FULL_SOUL_STONE_ARCHI || _loc2_ == dofus.datacenter.["\x18\x10\x15"].TYPE_FULL_SOUL_STONE_BOSS);
+      return _loc2_ == dofus.datacenter.Item.TYPE_FULL_SOUL_STONE_NORMAL || (_loc2_ == dofus.datacenter.Item.TYPE_FULL_SOUL_STONE_ARCHI || _loc2_ == dofus.datacenter.Item.TYPE_FULL_SOUL_STONE_BOSS);
    }
    function get isShortcut()
    {
@@ -142,7 +142,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\x04\x1b§()
    {
-      var _loc2_ = ank.utils.PatternDecoder.getDescription(dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].n),dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1c"]());
+      var _loc2_ = ank.utils.PatternDecoder.getDescription(dofus.datacenter.Item.api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].n),dofus.datacenter.Item.api.lang["\x17\x19\x1c"]());
       if(dofus.Constants.DEBUG)
       {
          var _loc3_ = " (" + this.unicID;
@@ -157,7 +157,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function get nameUppercase()
    {
-      var _loc2_ = ank.utils.PatternDecoder.getDescription(dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].nn),dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1c"]());
+      var _loc2_ = ank.utils.PatternDecoder.getDescription(dofus.datacenter.Item.api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].nn),dofus.datacenter.Item.api.lang["\x17\x19\x1c"]());
       if(dofus.Constants.DEBUG)
       {
          var _loc3_ = " (" + this.unicID;
@@ -172,25 +172,25 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\x1e\x18\r§()
    {
-      var _loc2_ = dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1a"](this.type).n;
+      var _loc2_ = dofus.datacenter.Item.api.lang["\x17\x19\x1a"](this.type).n;
       if(this.isCeremonial)
       {
-         _loc2_ += " (" + dofus.datacenter.["\x18\x10\x15"].api.lang.getText("ITEM_TYPE_CEREMONIAL") + ")";
+         _loc2_ += " (" + dofus.datacenter.Item.api.lang.getText("ITEM_TYPE_CEREMONIAL") + ")";
       }
       var _loc3_ = "";
       if(this["\x18\r\x1d"])
       {
-         var _loc4_ = new dofus.datacenter..ItemSet(this["\x18\x10\x1c"]);
-         _loc3_ = "<u>" + _loc4_.name + " (" + dofus.datacenter.["\x18\x10\x15"].api.lang.getText("ITEM_TYPE") + " : " + _loc2_ + ")</u>\n";
+         var _loc4_ = new dofus.datacenter.ItemSet(this["\x18\x10\x1c"]);
+         _loc3_ = "<u>" + _loc4_.name + " (" + dofus.datacenter.Item.api.lang.getText("ITEM_TYPE") + " : " + _loc2_ + ")</u>\n";
       }
       else
       {
-         _loc3_ = "<u>" + dofus.datacenter.["\x18\x10\x15"].api.lang.getText("ITEM_TYPE") + " : " + _loc2_ + "</u>\n";
+         _loc3_ = "<u>" + dofus.datacenter.Item.api.lang.getText("ITEM_TYPE") + " : " + _loc2_ + "</u>\n";
       }
-      _loc3_ += ank.utils.PatternDecoder.getDescription(dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].d),dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1c"]());
+      _loc3_ += ank.utils.PatternDecoder.getDescription(dofus.datacenter.Item.api.lang["\x17\x0f\x12"](this["\x1e\x06\x06"].d),dofus.datacenter.Item.api.lang["\x17\x19\x1c"]());
       if(this.isCeremonial)
       {
-         _loc3_ += " " + dofus.datacenter.["\x18\x10\x15"].api.lang.getText("SUPERTYPE_" + this.superType + "_CERMONIAL_DESCRIPTION");
+         _loc3_ += " " + dofus.datacenter.Item.api.lang.getText("SUPERTYPE_" + this.superType + "_CERMONIAL_DESCRIPTION");
       }
       return _loc3_;
    }
@@ -231,9 +231,9 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function get isEnhanceableSuperType()
    {
-      for(var idx in dofus.datacenter.["\x18\x10\x15"].ENHANCEABLE_SUPER_TYPE)
+      for(var idx in dofus.datacenter.Item.ENHANCEABLE_SUPER_TYPE)
       {
-         if(dofus.datacenter.["\x18\x10\x15"].ENHANCEABLE_SUPER_TYPE[idx] == this.superType)
+         if(dofus.datacenter.Item.ENHANCEABLE_SUPER_TYPE[idx] == this.superType)
          {
             return true;
          }
@@ -242,9 +242,9 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function get canBeEnhanceableType()
    {
-      for(var idx in dofus.datacenter.["\x18\x10\x15"].NO_ENHANCEABLE_TYPE)
+      for(var idx in dofus.datacenter.Item.NO_ENHANCEABLE_TYPE)
       {
-         if(dofus.datacenter.["\x18\x10\x15"].NO_ENHANCEABLE_TYPE[idx] == this.type)
+         if(dofus.datacenter.Item.NO_ENHANCEABLE_TYPE[idx] == this.type)
          {
             return false;
          }
@@ -301,7 +301,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\f\x11§()
    {
-      return dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1a"](this.type);
+      return dofus.datacenter.Item.api.lang["\x17\x19\x1a"](this.type);
    }
    function §\n\x15§()
    {
@@ -309,7 +309,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\n\x16§()
    {
-      return dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x19"](this.superType);
+      return dofus.datacenter.Item.api.lang["\x17\x19\x19"](this.superType);
    }
    function §\x1e\x1c\x03§()
    {
@@ -317,11 +317,11 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\x1e\x19\n§()
    {
-      return dofus.datacenter.["\x18\x10\x15"]["\x17\x19\x11"](this["\x1b\x1c\x14"],dofus.datacenter.["\x18\x10\x15"].getBaseItemEffects(this.unicID),undefined,this.isReallyEnhanceable);
+      return dofus.datacenter.Item["\x17\x19\x11"](this["\x1b\x1c\x14"],dofus.datacenter.Item.getBaseItemEffects(this.unicID),undefined,this.isReallyEnhanceable);
    }
    function §\r\x05§()
    {
-      return dofus.datacenter.["\x18\x10\x15"]["\x17\x19\x11"](this["\x1b\x1c\x14"],dofus.datacenter.["\x18\x10\x15"].getBaseItemEffects(this.unicID),true,this.isReallyEnhanceable);
+      return dofus.datacenter.Item["\x17\x19\x11"](this["\x1b\x1c\x14"],dofus.datacenter.Item.getBaseItemEffects(this.unicID),true,this.isReallyEnhanceable);
    }
    function §\x1e\x14\x17§()
    {
@@ -438,7 +438,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\x1e\x12\x04§()
    {
-      var _loc2_ = dofus.datacenter.["\x18\x10\x15"].api.kernel.SpellsBoostsManager["\x18\x01\x04"](dofus.managers.SpellsBoostsManager.ACTION_BOOST_ITEM_AP_COST,dofus.datacenter.["\x18\x10\x15"].CLOSE_COMBAT_AS_ITEM_SPELL_ID);
+      var _loc2_ = dofus.datacenter.Item.api.kernel.SpellsBoostsManager["\x18\x01\x04"](dofus.managers.SpellsBoostsManager.ACTION_BOOST_ITEM_AP_COST,dofus.datacenter.Item.CLOSE_COMBAT_AS_ITEM_SPELL_ID);
       var _loc3_ = this["\x17\x19\x12"](1);
       if(_loc2_ > -1)
       {
@@ -477,23 +477,23 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    function §\x1e\x15\x10§()
    {
       var _loc2_ = new Array();
-      _loc2_.push(dofus.datacenter.["\x18\x10\x15"].api.lang.getText("ITEM_AP",[this["\x16\x04\x03"]]));
-      _loc2_.push(dofus.datacenter.["\x18\x10\x15"].api.lang.getText("ITEM_RANGE",[(this["\x1a\t\x14"] == 0 ? "" : this["\x1a\t\x14"] + " " + dofus.datacenter.["\x18\x10\x15"].api.lang.getText("TO_RANGE") + " ") + this["\x1a\t\x13"]]));
-      _loc2_.push(dofus.datacenter.["\x18\x10\x15"].api.lang.getText("ITEM_CRITICAL_BONUS",[this["\x17\x03\n"] <= 0 ? String(this["\x17\x03\n"]) : "+" + this["\x17\x03\n"]]));
-      _loc2_.push((this["\x17\x03\b"] == 0 ? "" : dofus.datacenter.["\x18\x10\x15"].api.lang.getText("ITEM_CRITICAL",[this["\x17\x03\b"]])) + (!(this["\x17\x03\b"] != 0 && this["\x17\x03\x06"] != 0) ? "" : " - ") + (this["\x17\x03\x06"] == 0 ? "" : dofus.datacenter.["\x18\x10\x15"].api.lang.getText("ITEM_MISS",[this["\x17\x03\x06"]])));
-      if(this["\x17\x03\b"] > 0 && this.ID == dofus.datacenter.["\x18\x10\x15"].api.datacenter.Player["\x1b\x18\x1b"].ID)
+      _loc2_.push(dofus.datacenter.Item.api.lang.getText("ITEM_AP",[this["\x16\x04\x03"]]));
+      _loc2_.push(dofus.datacenter.Item.api.lang.getText("ITEM_RANGE",[(this["\x1a\t\x14"] == 0 ? "" : this["\x1a\t\x14"] + " " + dofus.datacenter.Item.api.lang.getText("TO_RANGE") + " ") + this["\x1a\t\x13"]]));
+      _loc2_.push(dofus.datacenter.Item.api.lang.getText("ITEM_CRITICAL_BONUS",[this["\x17\x03\n"] <= 0 ? String(this["\x17\x03\n"]) : "+" + this["\x17\x03\n"]]));
+      _loc2_.push((this["\x17\x03\b"] == 0 ? "" : dofus.datacenter.Item.api.lang.getText("ITEM_CRITICAL",[this["\x17\x03\b"]])) + (!(this["\x17\x03\b"] != 0 && this["\x17\x03\x06"] != 0) ? "" : " - ") + (this["\x17\x03\x06"] == 0 ? "" : dofus.datacenter.Item.api.lang.getText("ITEM_MISS",[this["\x17\x03\x06"]])));
+      if(this["\x17\x03\b"] > 0 && this.ID == dofus.datacenter.Item.api.datacenter.Player["\x1b\x18\x1b"].ID)
       {
-         var _loc3_ = dofus.datacenter.["\x18\x10\x15"].api.kernel.GameManager["\x17\x15\x1a"](this["\x17\x03\b"]);
-         _loc2_.push(dofus.datacenter.["\x18\x10\x15"].api.lang.getText("ITEM_CRITICAL_REAL",["1/" + _loc3_]));
+         var _loc3_ = dofus.datacenter.Item.api.kernel.GameManager["\x17\x15\x1a"](this["\x17\x03\b"]);
+         _loc2_.push(dofus.datacenter.Item.api.lang.getText("ITEM_CRITICAL_REAL",["1/" + _loc3_]));
       }
       return _loc2_;
    }
    function §\x1e\x16\x0e§()
    {
       var _loc2_ = dofus.managers["\x17\f\t"].parseConditionsString(this["\x1e\x06\x06"].c);
-      if(this["\x1d\x1b\x17"] != undefined && dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).c != undefined)
+      if(this["\x1d\x1b\x17"] != undefined && dofus.datacenter.Item.api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).c != undefined)
       {
-         _loc2_ = _loc2_.concat(dofus.datacenter.["\x18\x10\x15"].api.lang.getText("INHERITED_FROM",[dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).n]) + " :",dofus.managers["\x17\f\t"].parseConditionsString(dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).c));
+         _loc2_ = _loc2_.concat(dofus.datacenter.Item.api.lang.getText("INHERITED_FROM",[dofus.datacenter.Item.api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).n]) + " :",dofus.managers["\x17\f\t"].parseConditionsString(dofus.datacenter.Item.api.lang["\x17\x19\x1d"](this["\x1d\x1b\x17"]).c));
       }
       return _loc2_;
    }
@@ -561,7 +561,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
       var _loc3_ = 1;
       while(_loc3_ < _loc2_)
       {
-         if(this._nLivingXp < dofus.datacenter.["\x18\x10\x15"]["\x18\x14\x12"][_loc3_])
+         if(this._nLivingXp < dofus.datacenter.Item["\x18\x14\x12"][_loc3_])
          {
             return _loc3_;
          }
@@ -579,9 +579,9 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
       var _loc3_ = 1;
       while(_loc3_ < _loc2_)
       {
-         if(this._nLivingXp < dofus.datacenter.["\x18\x10\x15"]["\x18\x14\x12"][_loc3_])
+         if(this._nLivingXp < dofus.datacenter.Item["\x18\x14\x12"][_loc3_])
          {
-            return dofus.datacenter.["\x18\x10\x15"]["\x18\x14\x12"][_loc3_];
+            return dofus.datacenter.Item["\x18\x14\x12"][_loc3_];
          }
          _loc3_ = _loc3_ + 1;
       }
@@ -593,9 +593,9 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
       var _loc3_ = 1;
       while(_loc3_ < _loc2_)
       {
-         if(this._nLivingXp < dofus.datacenter.["\x18\x10\x15"]["\x18\x14\x12"][_loc3_])
+         if(this._nLivingXp < dofus.datacenter.Item["\x18\x14\x12"][_loc3_])
          {
-            return dofus.datacenter.["\x18\x10\x15"]["\x18\x14\x12"][_loc3_ - 1];
+            return dofus.datacenter.Item["\x18\x14\x12"][_loc3_ - 1];
          }
          _loc3_ = _loc3_ + 1;
       }
@@ -647,8 +647,8 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function initialize(§\x19\b\x0b§, §\x19\x10\n§, nQuantity, §\x19\f\r§, §\x1a\x12\x0f§, §\x19\f\x10§, §\x19\x0e\r§, §\x19\n\x16§)
    {
-      dofus.datacenter.["\x18\x10\x15"].api = _global.api;
-      this._itemDateId = dofus.datacenter.["\x18\x10\x15"]["\x17\x05\x05"]--;
+      dofus.datacenter.Item.api = _global.api;
+      this._itemDateId = dofus.datacenter.Item["\x17\x05\x05"]--;
       this["\x1d\x17\x01"] = _loc2_;
       this["\x1d\x1e\x1a"] = _loc3_;
       this._nQuantity = _loc4_ != undefined ? _loc4_ : 1;
@@ -658,7 +658,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
          this["\x1d\x1b\n"] = _loc7_;
       }
       this["\x1c\x02\x10"] = true;
-      this["\x1e\x06\x06"] = dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](_loc3_);
+      this["\x1e\x06\x06"] = dofus.datacenter.Item.api.lang["\x17\x19\x1d"](_loc3_);
       this["\x1a\x16\x06"](_loc6_);
       this["\x1c\x06\x02"] = false;
       this["\x1b\x14\x15"]();
@@ -721,7 +721,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function clone()
    {
-      return new dofus.datacenter.["\x18\x10\x15"](this["\x1d\x17\x01"],this["\x1d\x1e\x1a"],this._nQuantity,this["\x1d\x1b\x05"],this["\x1e\t\x0b"]);
+      return new dofus.datacenter.Item(this["\x1d\x17\x01"],this["\x1d\x1e\x1a"],this._nQuantity,this["\x1d\x1b\x05"],this["\x1e\t\x0b"]);
    }
    function §\x17\r\x15§(§\x18\x10\x14§)
    {
@@ -729,7 +729,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    function §\x1b\x01\b§(§\x18\x1b\f§, sStyle)
    {
-      var _loc4_ = "<b>" + this.name + "</b>" + " - " + dofus.datacenter.["\x18\x10\x15"].api.lang.getText("LEVEL_SMALL") + " " + this.level;
+      var _loc4_ = "<b>" + this.name + "</b>" + " - " + dofus.datacenter.Item.api.lang.getText("LEVEL_SMALL") + " " + this.level;
       var _loc5_ = "";
       var _loc6_ = this["\x1b\x18\x02"];
       for(var s in _loc6_)
@@ -741,7 +741,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
          }
          _loc5_ = "\n" + _loc7_ + _loc5_;
       }
-      dofus.datacenter.["\x18\x10\x15"].api.ui.showTooltip(_loc4_ + "\n" + _loc5_,_loc2_,0,{bTopAlign:true},_loc3_ + "ToolTip");
+      dofus.datacenter.Item.api.ui.showTooltip(_loc4_ + "\n" + _loc5_,_loc2_,0,{bTopAlign:true},_loc3_ + "ToolTip");
    }
    function getMonsterList()
    {
@@ -753,11 +753,11 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
          var _loc5_ = _loc4_[0];
          new org.flashdevelop.utils.FlashConnect.trace(_loc5_ + " -> " + _loc4_[3],"dofus.datacenter.Item::getMonsterList","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/datacenter/Item.as",983);
          var _loc6_ = -1;
-         if(_loc5_ == dofus.datacenter.["\x18\x10\x15"]["\x19\x11\x1a"])
+         if(_loc5_ == dofus.datacenter.Item["\x19\x11\x1a"])
          {
             _loc6_ = _global.parseInt(_loc4_[4],dofus.aks.Items["\x16\x1e\x07"]);
          }
-         if(_loc5_ == dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_SUMMON_RANDOM_GRADE)
+         if(_loc5_ == dofus.datacenter.Item.OBJECT_ACTION_SUMMON_RANDOM_GRADE)
          {
             _loc6_ = _global.parseInt(_loc4_[3]);
          }
@@ -798,15 +798,15 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
                this["\x1d\x1a\x07"] = !_loc2_[3] ? 0 : _loc2_[3];
                break;
             case 969:
-               var _loc3_ = dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](!_loc2_[3] ? 0 : _loc2_[3]);
+               var _loc3_ = dofus.datacenter.Item.api.lang["\x17\x19\x1d"](!_loc2_[3] ? 0 : _loc2_[3]);
                this._oSkinItemInfos = _loc3_;
                break;
             case 970:
                this["\x1e\f\x05"] = this["\x1e\x06\x06"].g;
-               this["\x1e\t\x1a"] = dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x1d"](!_loc2_[3] ? 0 : _loc2_[3]).g;
+               this["\x1e\t\x1a"] = dofus.datacenter.Item.api.lang["\x17\x19\x1d"](!_loc2_[3] ? 0 : _loc2_[3]).g;
                this["\x1d\x1b\x17"] = _loc2_[3];
                break;
-            case dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_LINK_ACCOUNT:
+            case dofus.datacenter.Item.OBJECT_ACTION_LINK_ACCOUNT:
                this["\x1c\x02\x10"] = false;
                break;
             case 975:
@@ -823,19 +823,19 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
                this._durability = !_loc2_[2] ? -1 : Number(_loc2_[2]);
                this._durabilityMax = !_loc2_[3] ? -1 : Number(_loc2_[3]);
                break;
-            case dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_INCARNATION:
+            case dofus.datacenter.Item.OBJECT_ACTION_INCARNATION:
                this._bIsIncarnation = true;
          }
       }
       this._bUnknownSkinsCount = this._nNbSkin == undefined;
       if(this._bUnknownSkinsCount)
       {
-         this._nNbSkin = dofus.datacenter.["\x18\x10\x15"]["\x18\x14\x12"].length;
+         this._nNbSkin = dofus.datacenter.Item["\x18\x14\x12"].length;
       }
    }
    static function getBaseItemEffects(nItemId)
    {
-      var _loc3_ = dofus.datacenter.["\x18\x10\x15"].api.lang["\x17\x19\x18"](nItemId);
+      var _loc3_ = dofus.datacenter.Item.api.lang["\x17\x19\x18"](nItemId);
       var _loc4_ = _loc3_.split(",");
       var _loc5_ = new Array();
       var _loc6_ = 0;
@@ -853,18 +853,18 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
    }
    static function canBeExo(§\x19\x06\x11§)
    {
-      return _loc2_ != dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_LINK_CHARACTER && (_loc2_ != dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_CUSTOM_SKIN && (_loc2_ != dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_GIVE_AURA && (_loc2_ != dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_GIVE_TITLE && (_loc2_ != dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_LEARN_EMOTICON && (_loc2_ != dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_LINK_ACCOUNT && (_loc2_ != dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_LAST_MEAL && (_loc2_ != dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_FM_BY_CHARACTER && _loc2_ != dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_CRAFTED_BY_CHARACTER)))))));
+      return _loc2_ != dofus.datacenter.Item.OBJECT_ACTION_LINK_CHARACTER && (_loc2_ != dofus.datacenter.Item.OBJECT_ACTION_CUSTOM_SKIN && (_loc2_ != dofus.datacenter.Item.OBJECT_ACTION_GIVE_AURA && (_loc2_ != dofus.datacenter.Item.OBJECT_ACTION_GIVE_TITLE && (_loc2_ != dofus.datacenter.Item.OBJECT_ACTION_LEARN_EMOTICON && (_loc2_ != dofus.datacenter.Item.OBJECT_ACTION_LINK_ACCOUNT && (_loc2_ != dofus.datacenter.Item.OBJECT_ACTION_LAST_MEAL && (_loc2_ != dofus.datacenter.Item.OBJECT_ACTION_FM_BY_CHARACTER && _loc2_ != dofus.datacenter.Item.OBJECT_ACTION_CRAFTED_BY_CHARACTER)))))));
    }
    static function isOver(§\x19\x12\x13§, nMinValue, §\x19\n\n§)
    {
-      for(var idx in dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_SPELL_BOOSTS)
+      for(var idx in dofus.datacenter.Item.OBJECT_ACTION_SPELL_BOOSTS)
       {
-         if(dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_SPELL_BOOSTS[idx] == _loc2_.type)
+         if(dofus.datacenter.Item.OBJECT_ACTION_SPELL_BOOSTS[idx] == _loc2_.type)
          {
             return false;
          }
       }
-      if(_loc2_.type == dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_LAST_MEAL || _loc2_.type == dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_LINK_ACCOUNT)
+      if(_loc2_.type == dofus.datacenter.Item.OBJECT_ACTION_LAST_MEAL || _loc2_.type == dofus.datacenter.Item.OBJECT_ACTION_LINK_ACCOUNT)
       {
          return false;
       }
@@ -895,7 +895,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
             var _loc13_ = new Array();
             switch(_loc12_)
             {
-               case dofus.datacenter.["\x18\x10\x15"]["\x19\x11\x1a"]:
+               case dofus.datacenter.Item["\x19\x11\x1a"]:
                   var _loc14_ = _loc11_[4].split(dofus.aks.Items["\x17\f\x0f"]);
                   var _loc15_ = 0;
                   while(_loc15_ < _loc14_.length)
@@ -906,8 +906,8 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
                      _loc15_ = _loc15_ + 1;
                   }
                   break;
-               case dofus.datacenter.["\x18\x10\x15"].OBJECT_ACTION_REPLACE:
-                  var _loc18_ = dofus.datacenter.["\x18\x10\x15"].getBaseItemEffects(_loc11_[3]);
+               case dofus.datacenter.Item.OBJECT_ACTION_REPLACE:
+                  var _loc18_ = dofus.datacenter.Item.getBaseItemEffects(_loc11_[3]);
                   var _loc19_ = 0;
                   while(_loc19_ < _loc18_.length)
                   {
@@ -920,7 +920,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
                default:
                   var _loc22_ = new dofus.datacenter.["\x17\f\x02"](undefined,_loc12_,_loc11_[1],_loc11_[2],_loc11_[3],_loc11_[4]);
                   _loc8_[_loc12_] = _loc8_[_loc12_] != undefined ? _loc8_[_loc12_] + 1 : 0;
-                  var _loc23_ = bCanBeExo && dofus.datacenter.["\x18\x10\x15"].canBeExo(_loc12_);
+                  var _loc23_ = bCanBeExo && dofus.datacenter.Item.canBeExo(_loc12_);
                   var _loc24_ = false;
                   if(_loc9_ != undefined && _loc9_.length > 0)
                   {
@@ -932,7 +932,7 @@ class dofus.§\x17\x04\x19§.§\x18\x10\x15§ extends Object
                            _loc23_ = false;
                            var _loc26_ = _loc9_[_loc25_][1];
                            var _loc27_ = _loc9_[_loc25_][2];
-                           _loc24_ = dofus.datacenter.["\x18\x10\x15"].isOver(_loc22_,_loc26_,!_global.isNaN(_loc27_) ? _loc27_ : _loc26_);
+                           _loc24_ = dofus.datacenter.Item.isOver(_loc22_,_loc26_,!_global.isNaN(_loc27_) ? _loc27_ : _loc26_);
                            _loc9_.splice(_loc25_,1);
                            break;
                         }

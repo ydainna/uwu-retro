@@ -34,7 +34,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
             this["\x1c\x1b\x0f"].text = _loc4_.data.name;
             this["\x1c\x1a\x07"].text = "";
          }
-         else if(_loc4_.data instanceof dofus.datacenter..Specialization)
+         else if(_loc4_.data instanceof dofus.datacenter.Specialization)
          {
             this._ldrIcon._x = this["\x1d\x18\x0f"] + _loc5_;
             this["\x1c\x1b\x0f"]._x = this["\x1d\x18\x0e"] + _loc5_;

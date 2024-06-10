@@ -336,7 +336,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
                else
                {
                   var _loc6_ = this.firstGiftInStack;
-                  var _loc7_ = dofus.datacenter.["\x18\x10\x15"](_loc6_.items[0]);
+                  var _loc7_ = dofus.datacenter.Item(_loc6_.items[0]);
                   this.api.kernel.showMessage(this.api.lang.getText("THE_GIFT"),this.api.lang.getText("GIFT_ATTRIBUTION_CONFIRMATION",[_loc7_.name,_loc4_]),"CAUTION_YESNO",{name:"GiftAttribution",listener:this,params:{charId:this["_ccs" + this["\x1d\x1c\x10"]].data.id}});
                }
                break;
@@ -372,7 +372,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
    function overItem(oEvent)
    {
       var _loc3_ = _loc2_.target;
-      var _loc4_ = dofus.datacenter.["\x18\x10\x15"](_loc3_.contentData);
+      var _loc4_ = dofus.datacenter.Item(_loc3_.contentData);
       _loc4_["\x1b\x01\b"](_loc3_,_loc4_.style);
    }
    function outItem(oEvent)
@@ -389,7 +389,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Gifts extends dofus.§\x18\x03\x10§.gapi.�
    }
    function §\x16\x07\x02§(nCharID)
    {
-      var _loc3_ = dofus.datacenter..Gift(this.api.datacenter.Basics.aks_gifts_stack.shift());
+      var _loc3_ = dofus.datacenter.Gift(this.api.datacenter.Basics.aks_gifts_stack.shift());
       if(!this._bAttributingGifts)
       {
          this._bAttributingGifts = true;

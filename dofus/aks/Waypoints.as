@@ -12,7 +12,7 @@ class dofus.aks.Waypoints extends dofus.aks.Handler
    {
       this.aks.send("WU" + _loc2_,true);
    }
-   function §\x19\x16\x0b§(sExtraData)
+   function onCreate(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -29,7 +29,7 @@ class dofus.aks.Waypoints extends dofus.aks.Handler
       }
       this.api.ui.loadUIComponent("Waypoints","Waypoints",{data:_loc5_});
    }
-   function §\x19\x19\x16§()
+   function onLeave()
    {
       this.api.ui.unloadUIComponent("Waypoints");
    }

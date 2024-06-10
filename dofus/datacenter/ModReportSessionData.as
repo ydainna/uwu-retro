@@ -27,7 +27,7 @@ class dofus.§\x17\x04\x19§.ModReportSessionData
    {
       if(this._sDisabledReasonLangKey == undefined || this._sDisabledReasonLangKey.length == 0)
       {
-         return dofus.datacenter..ModReportSessionData.DEFAULT_DISABLED_REASON_LANG_KEY;
+         return dofus.datacenter.ModReportSessionData.DEFAULT_DISABLED_REASON_LANG_KEY;
       }
       return this._sDisabledReasonLangKey;
    }

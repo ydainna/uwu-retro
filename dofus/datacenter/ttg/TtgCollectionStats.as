@@ -8,12 +8,12 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollectionStats
    function initializeStats()
    {
       var _loc2_ = this._ttgCollection.getTtgCardsItems();
-      var _loc3_ = new ank.utils.["\x17\x0e\r"]();
-      var _loc4_ = new ank.utils.["\x17\x0e\r"]();
-      var _loc5_ = new ank.utils.["\x17\x0e\r"]();
-      var _loc6_ = new ank.utils.["\x17\x0e\r"]();
-      var _loc7_ = new ank.utils.["\x17\x0e\r"]();
-      var _loc8_ = new ank.utils.["\x17\x0e\r"]();
+      var _loc3_ = new ank.utils.ExtendedObject();
+      var _loc4_ = new ank.utils.ExtendedObject();
+      var _loc5_ = new ank.utils.ExtendedObject();
+      var _loc6_ = new ank.utils.ExtendedObject();
+      var _loc7_ = new ank.utils.ExtendedObject();
+      var _loc8_ = new ank.utils.ExtendedObject();
       var _loc9_ = 0;
       var _loc10_ = 0;
       var _loc11_ = 0;
@@ -32,7 +32,7 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollectionStats
                   _loc14_ = 0;
                }
                _loc14_ = _loc14_ + 1;
-               _loc7_["\x15\x1d\x13"](_loc13_.familyID,_loc14_);
+               _loc7_.addItemAt(_loc13_.familyID,_loc14_);
                if(_loc13_.owned)
                {
                   _loc12_ = _loc12_ + 1;
@@ -42,7 +42,7 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollectionStats
                      _loc15_ = 0;
                   }
                   _loc15_ = _loc15_ + 1;
-                  _loc5_["\x15\x1d\x13"](_loc13_.familyID,_loc15_);
+                  _loc5_.addItemAt(_loc13_.familyID,_loc15_);
                }
             }
             else
@@ -64,8 +64,8 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollectionStats
                }
                _loc16_ = _loc16_ + 1;
                _loc17_ = _loc17_ + 1;
-               _loc6_["\x15\x1d\x13"](_loc13_.familyID,_loc16_);
-               _loc8_["\x15\x1d\x13"](_loc13_.rarity,_loc17_);
+               _loc6_.addItemAt(_loc13_.familyID,_loc16_);
+               _loc8_.addItemAt(_loc13_.rarity,_loc17_);
                if(_loc13_.owned)
                {
                   var _loc18_ = Number(_loc3_.getItemAt(_loc13_.familyID));
@@ -80,8 +80,8 @@ class dofus.§\x17\x04\x19§.ttg.TtgCollectionStats
                   }
                   _loc18_ = _loc18_ + 1;
                   _loc19_ = _loc19_ + 1;
-                  _loc3_["\x15\x1d\x13"](_loc13_.familyID,_loc18_);
-                  _loc4_["\x15\x1d\x13"](_loc13_.rarity,_loc19_);
+                  _loc3_.addItemAt(_loc13_.familyID,_loc18_);
+                  _loc4_.addItemAt(_loc13_.rarity,_loc19_);
                }
             }
          }

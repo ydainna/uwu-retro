@@ -51,7 +51,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Temporis extends dofus.§\x18\x03\x10§.gap
    {
       if(this.api.datacenter.Player.temporisInfos == undefined)
       {
-         this.api.datacenter.Player.temporisInfos = new dofus.datacenter..TemporisInfos(10000);
+         this.api.datacenter.Player.temporisInfos = new dofus.datacenter.TemporisInfos(10000);
       }
       else
       {

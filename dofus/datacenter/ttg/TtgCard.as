@@ -60,7 +60,7 @@ class dofus.§\x17\x04\x19§.ttg.TtgCard
    }
    function get isFoil()
    {
-      return this._nVariant == dofus.datacenter..ttg.TtgCard.CARD_VARIANT_FOIL;
+      return this._nVariant == dofus.datacenter.ttg.TtgCard.CARD_VARIANT_FOIL;
    }
    function get rarity()
    {

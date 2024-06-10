@@ -427,7 +427,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreSell extends dofus.§\x18\x03\x10§
          this["\x1c\x11\x13"]["\x18\x10\x17"] = _loc2_.item;
          this["\x18\x06\x0f"](false);
          this["\x1a\x06\x0f"](_loc2_.item.Quantity);
-         this._bFullSoul = dofus.datacenter.["\x18\x10\x15"].isFullSoul(_loc2_.item.type);
+         this._bFullSoul = dofus.datacenter.Item.isFullSoul(_loc2_.item.type);
          if(this.canItemBeSold(_loc2_.item))
          {
             switch(_loc2_.target)

@@ -242,7 +242,7 @@ class ank.gapi.§\x17\x13\n§ extends ank.utils.§\x1a\t\t§
    {
       return this.unloadUIComponent(this["\x1e\n\x12"]);
    }
-   function §\x18\x16\x19§(§\x1b\x03\x03§, §\x1b\x02\x01§, §\x19\x12\x0b§, §\x1a\x02\x14§)
+   function loadUIAutoHideComponent(§\x1b\x03\x03§, §\x1b\x02\x01§, §\x19\x12\x0b§, §\x1a\x02\x14§)
    {
       if(this["\x1e\n\x12"] != _loc2_)
       {

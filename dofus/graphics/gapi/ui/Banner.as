@@ -974,7 +974,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
             else
             {
                this["\x1a\x1e\x1d"](false);
-               this.gapi["\x18\x16\x19"]("Conquest","Conquest",{currentTab:"Stats"});
+               this.gapi.loadUIAutoHideComponent("Conquest","Conquest",{currentTab:"Stats"});
             }
             break;
          case "_btnMount":
@@ -994,7 +994,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
                }
                else
                {
-                  this.gapi["\x18\x16\x19"]("Mount","Mount");
+                  this.gapi.loadUIAutoHideComponent("Mount","Mount");
                }
             }
             else
@@ -1013,7 +1013,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
             {
                var _loc3_ = _loc2_.currentTab == undefined ? "Members" : _loc2_.currentTab;
                this["\x1a\x1e\x1d"](false);
-               this.gapi["\x18\x16\x19"]("Guild","Guild",{currentTab:_loc3_});
+               this.gapi.loadUIAutoHideComponent("Guild","Guild",{currentTab:_loc3_});
             }
             else
             {
@@ -1028,7 +1028,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
                return undefined;
             }
             this["\x1a\x1e\x1d"](false);
-            this.gapi["\x18\x16\x19"]("StatsJob","StatsJob");
+            this.gapi.loadUIAutoHideComponent("StatsJob","StatsJob");
             break;
          case "_btnSpells":
             this.api.sounds["\x17\x0e\x06"]["\x19\x14\x11"]();
@@ -1038,7 +1038,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
                return undefined;
             }
             this["\x1a\x1e\x1d"](false);
-            !this.api.datacenter.Basics.aks_current_server.isTemporis() ? this.gapi["\x18\x16\x19"]("Spells","Spells") : this.gapi["\x18\x16\x19"]("SpellsCollection","SpellsCollection");
+            !this.api.datacenter.Basics.aks_current_server.isTemporis() ? this.gapi.loadUIAutoHideComponent("Spells","Spells") : this.gapi.loadUIAutoHideComponent("SpellsCollection","SpellsCollection");
             break;
          case "_btnTemporis":
             this.api.sounds["\x17\x0e\x06"]["\x19\x14\x11"]();
@@ -1048,27 +1048,27 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
                return undefined;
             }
             this["\x1a\x1e\x1d"](false);
-            this.gapi["\x18\x16\x19"]("Temporis","Temporis");
+            this.gapi.loadUIAutoHideComponent("Temporis","Temporis");
             break;
          case "_btnInventory":
             this.api.sounds["\x17\x0e\x06"]["\x19\x14\x11"]();
             this["\x1a\x1e\x1d"](false);
-            this.gapi["\x18\x16\x19"]("Inventory","Inventory");
+            this.gapi.loadUIAutoHideComponent("Inventory","Inventory");
             break;
          case "_btnQuests":
             this.api.sounds["\x17\x0e\x06"]["\x19\x14\x11"]();
             this["\x1a\x1e\x1d"](false);
-            this.gapi["\x18\x16\x19"]("Quests","Quests");
+            this.gapi.loadUIAutoHideComponent("Quests","Quests");
             break;
          case "_btnMap":
             this.api.sounds["\x17\x0e\x06"]["\x19\x14\x11"]();
             this["\x1a\x1e\x1d"](false);
-            this.gapi["\x18\x16\x19"]("MapExplorer","MapExplorer",undefined,{nHideSprites:1});
+            this.gapi.loadUIAutoHideComponent("MapExplorer","MapExplorer",undefined,{nHideSprites:1});
             break;
          case "_btnFriends":
             this.api.sounds["\x17\x0e\x06"]["\x19\x14\x11"]();
             this["\x1a\x1e\x1d"](false);
-            this.gapi["\x18\x16\x19"]("Friends","Friends");
+            this.gapi.loadUIAutoHideComponent("Friends","Friends");
             break;
          case "_btnFights":
             if(!this.api.datacenter.Game.isFight)
@@ -1445,7 +1445,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
             var _loc5_ = this.gapi.getUIComponent("Guild");
             if(_loc5_ == null)
             {
-               this.addToQueue({object:this.gapi,method:this.gapi["\x18\x16\x19"],params:["Guild","Guild",{currentTab:"TaxCollectors"},{bStayIfPresent:true}]});
+               this.addToQueue({object:this.gapi,method:this.gapi.loadUIAutoHideComponent,params:["Guild","Guild",{currentTab:"TaxCollectors"},{bStayIfPresent:true}]});
             }
             else
             {

@@ -32,7 +32,7 @@ if(!dofus.graphics.gapi.ui.ForgemagusCraft)
    {
       if(this._currentOverContainer != undefined && this._currentOverContainer.contentData != undefined)
       {
-         return dofus.datacenter.["\x18\x10\x15"](this._currentOverContainer.contentData);
+         return dofus.datacenter.Item(this._currentOverContainer.contentData);
       }
       return undefined;
    };
@@ -45,7 +45,7 @@ if(!dofus.graphics.gapi.ui.ForgemagusCraft)
       this["\x1d\x19\x0f"] = Number(_loc2_);
       return this.maxItem;
    };
-   _loc1_["\x1c\x1d"] = function §\x1c\x1d§(§\x19\x0e\x0b§)
+   _loc1_["\x1c\x1d"] = function §\x1c\x1d§(nSkillId)
    {
       this["\x1d\x1c\x1c"] = Number(_loc2_);
       this["\x1d\x16\f"] = _global.api.lang["\x17\x1e\x14"](this["\x1d\x1c\x1c"]);
@@ -291,7 +291,7 @@ if(!dofus.graphics.gapi.ui.ForgemagusCraft)
             if(this._ctrItem.contentData != undefined)
             {
                this["\x18\x06\x0f"](false);
-               this["\x1c\x11\x13"]["\x18\x10\x17"] = dofus.datacenter.["\x18\x10\x15"](this._ctrItem.contentData);
+               this["\x1c\x11\x13"]["\x18\x10\x17"] = dofus.datacenter.Item(this._ctrItem.contentData);
             }
          }
          _loc5_ = _loc5_ + 1;
@@ -321,7 +321,7 @@ if(!dofus.graphics.gapi.ui.ForgemagusCraft)
    _loc1_["\x1b\x14\x17"] = function §\x1b\x14\x17§()
    {
       this["\x1c\r\x05"].dataProvider = this["\x1c\x0f\b"];
-      var _loc2_ = dofus.datacenter.["\x18\x10\x15"](this["\x1c\r\x05"]["\x17\x15\x12"](0).contentData);
+      var _loc2_ = dofus.datacenter.Item(this["\x1c\r\x05"]["\x17\x15\x12"](0).contentData);
       if(_loc2_ != undefined)
       {
          this["\x18\x06\x0f"](false);
@@ -453,9 +453,9 @@ if(!dofus.graphics.gapi.ui.ForgemagusCraft)
          var _loc4_ = 0;
          while(_loc4_ < _loc2_[_loc3_].skills.length)
          {
-            if(dofus.datacenter.["\x1b\x02\n"](dofus.datacenter..Job(_loc2_[_loc3_]).skills[_loc4_]).id == this["\x1d\x1c\x1c"])
+            if(dofus.datacenter.["\x1b\x02\n"](dofus.datacenter.Job(_loc2_[_loc3_]).skills[_loc4_]).id == this["\x1d\x1c\x1c"])
             {
-               return dofus.datacenter..Job(_loc2_[_loc3_]).level;
+               return dofus.datacenter.Job(_loc2_[_loc3_]).level;
             }
             _loc4_ = _loc4_ + 1;
          }
@@ -846,7 +846,7 @@ if(!dofus.graphics.gapi.ui.ForgemagusCraft)
    _loc1_[undefined] = function §undefined§(oEvent)
    {
       var _loc3_ = _loc2_.target;
-      var _loc4_ = dofus.datacenter.["\x18\x10\x15"](_loc3_.contentData);
+      var _loc4_ = dofus.datacenter.Item(_loc3_.contentData);
       _loc4_["\x1b\x01\b"](_loc3_,_loc4_.style);
       this._currentOverContainer = _loc3_;
    };

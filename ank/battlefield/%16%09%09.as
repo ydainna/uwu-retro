@@ -635,7 +635,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this.spriteHandler["\x1a\x1a\x02"](sID,_loc3_);
    }
-   function §\x1b\x07\x0b§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§, §\x19\x02\x06§, §\x1b\t\x03§, §\x1a\x02\x0b§, §\x16\f\n§, §\x16\t\x12§)
+   function §\x1b\x07\x0b§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§, §\x19\x02\x06§, sTargetID, §\x1a\x02\x0b§, §\x16\f\n§, §\x16\t\x12§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -838,7 +838,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
          this._mcCellIds = this["\x18\x18\x15"].drawCellIds();
       }
    }
-   function §\x16\x01\b§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§, §\x1b\t\x03§)
+   function §\x16\x01\b§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§, sTargetID)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -863,7 +863,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this["\x1e\x03\b"].Map["\x16\x1b\x17"]();
       this["\x1e\x03\b"].Map = new ank.battlefield.datacenter.Map();
-      this["\x1e\x03\b"]Sprites = new ank.utils.["\x17\x0e\r"]();
+      this["\x1e\x03\b"]Sprites = new ank.utils.ExtendedObject();
       return true;
    }
    function §\x17\x02\x10§(§\x1b\x18\n§)

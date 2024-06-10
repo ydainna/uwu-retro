@@ -102,7 +102,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                   {
                      case 21:
                      case 22:
-                        var _loc14_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc11_[1]);
+                        var _loc14_ = new dofus.datacenter.Item(0,_loc11_[1]);
                         _loc11_ = [_loc11_[0],_loc14_.name];
                         break;
                      case 17:
@@ -123,7 +123,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                      case 65:
                      case 66:
                      case 73:
-                        var _loc15_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc11_[1]);
+                        var _loc15_ = new dofus.datacenter.Item(0,_loc11_[1]);
                         var _loc16_ = new ank.utils.ExtendedString(_loc11_[0])["\x15\x1e\x01"](this.api.lang.getConfigText("THOUSAND_SEPARATOR"),3);
                         _loc11_[0] = _loc16_;
                         _loc11_[2] = _loc15_.name;
@@ -135,7 +135,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                      case 84:
                         break;
                      case 120:
-                        if(dofus.Constants["\x1a\x10\x01"])
+                        if(dofus.Constants.SAVING_THE_WORLD)
                         {
                            dofus["\x1a\x0f\x1a"].getInstance()["\x1a\x0f\f"]();
                            dofus["\x1a\x0f\x1a"].getInstance()["\x19\x07\x05"]();
@@ -147,7 +147,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                         break;
                      case 150:
                         _loc6_ = "MESSAGE_CHAT";
-                        var _loc17_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc11_[0]);
+                        var _loc17_ = new dofus.datacenter.Item(0,_loc11_[0]);
                         var _loc18_ = new Array();
                         var _loc19_ = 3;
                         while(_loc19_ < _loc11_.length)
@@ -159,7 +159,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                         break;
                      case 151:
                         _loc6_ = "WHISP_CHAT";
-                        var _loc20_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc11_[0]);
+                        var _loc20_ = new dofus.datacenter.Item(0,_loc11_[0]);
                         var _loc21_ = new Array();
                         var _loc22_ = 2;
                         while(_loc22_ < _loc11_.length)
@@ -179,7 +179,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                         break;
                      case 220:
                      case 221:
-                        var _loc23_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc11_[0]);
+                        var _loc23_ = new dofus.datacenter.Item(0,_loc11_[0]);
                         _loc11_[0] = _loc23_.name;
                   }
                   if(_loc13_)
@@ -228,7 +228,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                      case 43:
                      case 44:
                      case 60:
-                        var _loc26_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc11_[0]);
+                        var _loc26_ = new dofus.datacenter.Item(0,_loc11_[0]);
                         _loc11_ = [_loc26_.name];
                         break;
                      case 266:
@@ -328,7 +328,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
       }
       var _loc5_ = _loc3_[1].charAt(0) == "+";
       var _loc6_ = _loc3_[1].substr(1);
-      var _loc7_ = _loc6_ != "" ? new dofus.datacenter.["\x18\x10\x15"](0,_loc6_,1) : undefined;
+      var _loc7_ = _loc6_ != "" ? new dofus.datacenter.Item(0,_loc6_,1) : undefined;
       if(!this.api.datacenter.Basics.isCraftLooping)
       {
          this.api.gfx.addSpriteOverHeadItem(_loc4_,"craft",dofus.graphics.battlefield["\x17\x01\x1c"],[_loc5_,_loc7_],2000);

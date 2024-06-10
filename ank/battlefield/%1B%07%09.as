@@ -57,7 +57,7 @@ class ank.battlefield.§\x1b\x07\t§
       }
       if(_loc4_)
       {
-         this["\x1e\x05\x1c"]["\x15\x1d\x13"](sID,_loc3_);
+         this["\x1e\x05\x1c"].addItemAt(sID,_loc3_);
       }
       this["\x1d\n\x06"]["sprite" + sID].removeMovieClip();
       var _loc5_ = ank.battlefieldutils.["\x1b\x07\x07"]["\x17\x18\x01"](this["\x1d\b\x12"]["\x18\x18\x15"],this["\x1e\x05\x1c"],_loc3_.cellNum,_loc3_["\x16\x03\x06"] && this["\x1d\b\x12"]["\x16\f\x0f"]);
@@ -90,7 +90,7 @@ class ank.battlefield.§\x1b\x07\t§
       }
       if(_loc6_)
       {
-         this["\x1e\x05\x1c"]["\x15\x1d\x13"](sID,_loc5_);
+         this["\x1e\x05\x1c"].addItemAt(sID,_loc5_);
       }
       var _loc8_ = ank.battlefieldutils.["\x1a\x04\b"]["\x17\x14\r"](this["\x1d\b\x12"]["\x18\x18\x15"],_loc7_.cellNum,_loc7_.direction,_loc4_);
       var _loc9_ = this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc8_);
@@ -104,7 +104,7 @@ class ank.battlefield.§\x1b\x07\t§
       }
       _loc5_["\x18\x15\x0b"] = _loc7_;
       _loc5_["\x16\x1b\x05"] = _loc4_;
-      _loc7_["\x18\x15\b"]["\x15\x1d\x13"](sID,_loc5_);
+      _loc7_["\x18\x15\b"].addItemAt(sID,_loc5_);
       this.addSprite(sID);
    }
    function §\x16\x17\x05§(sID, §\x1b\x05\x04§)
@@ -618,7 +618,7 @@ class ank.battlefield.§\x1b\x07\t§
          }
       }
    }
-   function §\x18\x13\x07§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§, §\x19\x02\x06§, §\x1b\t\x03§, §\x1a\x02\x0b§, §\x16\f\n§, §\x16\t\x12§)
+   function §\x18\x13\x07§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§, §\x19\x02\x06§, sTargetID, §\x1a\x02\x0b§, §\x16\f\n§, §\x16\t\x12§)
    {
       if(_loc10_ == undefined)
       {

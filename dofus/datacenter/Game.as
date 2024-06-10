@@ -25,11 +25,11 @@ class dofus.§\x17\x04\x19§.Game extends Object
    }
    function §\x1e\x1e\x01§()
    {
-      return dofus.datacenter..Game["\x1c\x06\x0e"];
+      return dofus.datacenter.Game["\x1c\x06\x0e"];
    }
    function §\x15\x1c§(§\x16\x0e\x12§)
    {
-      dofus.datacenter..Game["\x1c\x06\x0e"] = _loc2_;
+      dofus.datacenter.Game["\x1c\x06\x0e"] = _loc2_;
       return this["\x1e\x1e\x01"]();
    }
    function §\x1e\x1d\x0f§()
@@ -47,36 +47,36 @@ class dofus.§\x17\x04\x19§.Game extends Object
    }
    function §\x1e\x1e\x1a§()
    {
-      return dofus.datacenter..Game["\x1c\b\x14"];
+      return dofus.datacenter.Game["\x1c\b\x14"];
    }
    function §\x16\b§(§\x16\x13\x07§)
    {
-      dofus.datacenter..Game["\x1c\b\x14"] = _loc2_;
+      dofus.datacenter.Game["\x1c\b\x14"] = _loc2_;
       return this["\x1e\x1e\x1a"]();
    }
    function get isSpectatorBlocked()
    {
-      return dofus.datacenter..Game._bBlockSpectator;
+      return dofus.datacenter.Game._bBlockSpectator;
    }
    function set isSpectatorBlocked(bBlockSpectator)
    {
-      dofus.datacenter..Game._bBlockSpectator = bBlockSpectator;
+      dofus.datacenter.Game._bBlockSpectator = bBlockSpectator;
    }
    function get isNeedingHelp()
    {
-      return dofus.datacenter..Game._bNeedHelp;
+      return dofus.datacenter.Game._bNeedHelp;
    }
    function set isNeedingHelp(bNeedHelp)
    {
-      dofus.datacenter..Game._bNeedHelp = bNeedHelp;
+      dofus.datacenter.Game._bNeedHelp = bNeedHelp;
    }
    function get isFightBlocked()
    {
-      return dofus.datacenter..Game._bLockFight;
+      return dofus.datacenter.Game._bLockFight;
    }
    function set isFightBlocked(bLockFight)
    {
-      dofus.datacenter..Game._bLockFight = bLockFight;
+      dofus.datacenter.Game._bLockFight = bLockFight;
    }
    function §\x1a\f§(§\x19\f\x07§)
    {
@@ -162,18 +162,18 @@ class dofus.§\x17\x04\x19§.Game extends Object
    }
    function get resultsArray()
    {
-      return dofus.datacenter..Game._aResults;
+      return dofus.datacenter.Game._aResults;
    }
    function storeFightResults(§\x1a\x01\x19§)
    {
-      if(dofus.datacenter..Game._aResults.length >= this.api.lang.getConfigText("MAX_FIGHT_HISTORY"))
+      if(dofus.datacenter.Game._aResults.length >= this.api.lang.getConfigText("MAX_FIGHT_HISTORY"))
       {
-         dofus.datacenter..Game._aResults.pop();
-         dofus.datacenter..Game._aResults.unshift(_loc2_);
+         dofus.datacenter.Game._aResults.pop();
+         dofus.datacenter.Game._aResults.unshift(_loc2_);
       }
       else
       {
-         dofus.datacenter..Game._aResults.unshift(_loc2_);
+         dofus.datacenter.Game._aResults.unshift(_loc2_);
       }
    }
    function §\x16\x03§(§\x16\x11\x1a§)
@@ -212,22 +212,22 @@ class dofus.§\x17\x04\x19§.Game extends Object
       switch(_loc2_)
       {
          case "move":
-            this["\x1d\x17\x07"] = dofus.datacenter..Game["\x18\x0b\x19"];
+            this["\x1d\x17\x07"] = dofus.datacenter.Game["\x18\x0b\x19"];
             break;
          case "spell":
-            this["\x1d\x17\x07"] = dofus.datacenter..Game["\x18\x0b\x1b"];
+            this["\x1d\x17\x07"] = dofus.datacenter.Game["\x18\x0b\x1b"];
             break;
          case "cc":
-            this["\x1d\x17\x07"] = dofus.datacenter..Game["\x18\x0b\x17"];
+            this["\x1d\x17\x07"] = dofus.datacenter.Game["\x18\x0b\x17"];
             break;
          case "place":
-            this["\x1d\x17\x07"] = dofus.datacenter..Game["\x18\x0b\x1a"];
+            this["\x1d\x17\x07"] = dofus.datacenter.Game["\x18\x0b\x1a"];
             break;
          case "target":
-            this["\x1d\x17\x07"] = dofus.datacenter..Game["\x18\x0b\x1c"];
+            this["\x1d\x17\x07"] = dofus.datacenter.Game["\x18\x0b\x1c"];
             break;
          case "flag":
-            this["\x1d\x17\x07"] = dofus.datacenter..Game["\x18\x0b\x18"];
+            this["\x1d\x17\x07"] = dofus.datacenter.Game["\x18\x0b\x18"];
       }
    }
 }

@@ -11,7 +11,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ListInventoryViewer extends d
    {
       if(this._currentOverRow != undefined && this._currentOverRow.item != undefined)
       {
-         return dofus.datacenter.["\x18\x10\x15"](this._currentOverRow.item);
+         return dofus.datacenter.Item(this._currentOverRow.item);
       }
       return undefined;
    }

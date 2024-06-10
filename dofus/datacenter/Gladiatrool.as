@@ -7,9 +7,9 @@ class dofus.§\x17\x04\x19§.Gladiatrool
    static function isIncarnation(nItemId)
    {
       var _loc3_ = 0;
-      while(_loc3_ < dofus.datacenter..Gladiatrool.aIncarnations.length)
+      while(_loc3_ < dofus.datacenter.Gladiatrool.aIncarnations.length)
       {
-         if(dofus.datacenter..Gladiatrool.aIncarnations[_loc3_] == nItemId)
+         if(dofus.datacenter.Gladiatrool.aIncarnations[_loc3_] == nItemId)
          {
             return true;
          }

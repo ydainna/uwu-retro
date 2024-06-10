@@ -144,13 +144,13 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
       var _loc3_ = this.currentTargetCase.targetPlayerEntityInfos;
       this._winBackground.title = "N.M.R Admin - " + _loc3_.characterName + " (" + this.casesBookCurrentPageID + "/" + this.casesBookLastPageID + ")";
       var _loc4_ = new ank.utils.ExtendedArray();
-      var _loc5_ = new ank.utils.["\x17\x0e\r"]();
+      var _loc5_ = new ank.utils.ExtendedObject();
       var _loc6_ = _loc2_.reports;
       var _loc7_ = 0;
       while(_loc7_ < _loc6_.length)
       {
          var _loc8_ = _loc6_[_loc7_];
-         var _loc9_ = dofus.datacenter..modreport.ModReportCategory(this.api.datacenter.Player.modReportSessionData.ModReportCategories.getItemAt(_loc8_["\x16\x17\r"]));
+         var _loc9_ = dofus.datacenter.modreport.ModReportCategory(this.api.datacenter.Player.modReportSessionData.ModReportCategories.getItemAt(_loc8_["\x16\x17\r"]));
          if(_loc9_ != undefined)
          {
             var _loc10_ = _loc8_.score;
@@ -163,7 +163,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
             }
             else
             {
-               _loc5_["\x15\x1d\x13"](_loc8_["\x16\x17\r"],{id:_loc8_["\x16\x17\r"],categoryName:_loc9_.name,totalScore:_loc10_,totalReportsCount:_loc11_});
+               _loc5_.addItemAt(_loc8_["\x16\x17\r"],{id:_loc8_["\x16\x17\r"],categoryName:_loc9_.name,totalScore:_loc10_,totalReportsCount:_loc11_});
             }
          }
          _loc7_ = _loc7_ + 1;
@@ -405,9 +405,9 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
                var _loc12_ = this.api.ui["\x17\x02\x19"]();
                _loc12_["\x15\x1e\x18"](this._selectedModReportObject == undefined ? this.api.lang.getText("MARK_MASS") : this.api.lang.getText("MARK_INDIVIDUAL"));
                var _loc13_ = 0;
-               while(_loc13_ < dofus.datacenter..modreport.ModReportStates.STATES_ARRAY.length)
+               while(_loc13_ < dofus.datacenter.modreport.ModReportStates.STATES_ARRAY.length)
                {
-                  var _loc14_ = dofus.datacenter..modreport.ModReportStates.STATES_ARRAY[_loc13_];
+                  var _loc14_ = dofus.datacenter.modreport.ModReportStates.STATES_ARRAY[_loc13_];
                   if(this._selectedModReportObject != undefined)
                   {
                      var _loc15_ = !this._selectedModReportObject.isArchived && this._selectedModReportObject.lastStateChange.state != _loc14_;
@@ -605,7 +605,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.NewModReportAdmin extends dofus.§\x18\
    }
    function onModReportCategorySelected(§\x19\x04\x0b§)
    {
-      var _loc3_ = dofus.datacenter..modreport.ModReportCategory(this.api.datacenter.Player.modReportSessionData.ModReportCategories.getItemAt(_loc2_));
+      var _loc3_ = dofus.datacenter.modreport.ModReportCategory(this.api.datacenter.Player.modReportSessionData.ModReportCategories.getItemAt(_loc2_));
       if(_loc3_ == undefined)
       {
          return undefined;

@@ -8,7 +8,7 @@ class dofus.aks.Documents extends dofus.aks.Handler
    {
       this.aks.send("dV");
    }
-   function §\x19\x16\x0b§(bSuccess, sExtraData)
+   function onCreate(bSuccess, sExtraData)
    {
       if(_loc2_)
       {
@@ -18,7 +18,7 @@ class dofus.aks.Documents extends dofus.aks.Handler
          this.api.kernel.DocumentsServersManager["\x18\x15\x1a"](_loc5_ + "_" + _loc4_);
       }
    }
-   function §\x19\x19\x16§()
+   function onLeave()
    {
       this.api.ui.unloadUIComponent("Document");
    }

@@ -51,6 +51,6 @@ class dofus.§\x17\x04\x19§.Rank extends Object
    }
    function clone()
    {
-      return new dofus.datacenter..Rank(this["\x1e\x01\x03"],this["\x1d\x16\x19"],this["\x1d\x15\x13"],this._bEnabled);
+      return new dofus.datacenter.Rank(this["\x1e\x01\x03"],this["\x1d\x16\x19"],this["\x1d\x15\x13"],this._bEnabled);
    }
 }

@@ -137,7 +137,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x1a\x04\x03§.§\x1a\x04\x04§ extends d
    function §\x1a\x04\x05§()
    {
       this.api.network.Party["\x1b\x18\x1d"]();
-      this.api.ui["\x18\x16\x19"]("MapExplorer","MapExplorer");
+      this.api.ui.loadUIAutoHideComponent("MapExplorer","MapExplorer");
    }
    function initialization(oEvent)
    {

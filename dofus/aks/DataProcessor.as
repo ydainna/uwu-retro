@@ -30,7 +30,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.onTelemetry(_loc6_,_loc6_ == "yolo");
                   break;
                case "C":
-                  this.aks["\x19\x18\f"](_loc5_.substr(2));
+                  this.aks.onHelloConnectionServer(_loc5_.substr(2));
                   break;
                case "G":
                   this.aks.onHelloGameServer(_loc5_.substr(2));
@@ -98,13 +98,13 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                         this.aks.Basics.onAuthorizedCommand(true,_loc5_.substr(3));
                         break;
                      case "L":
-                        this.aks.Basics["\x19\x14\f"](_loc5_.substr(3));
+                        this.aks.Basics.onAuthorizedLine(_loc5_.substr(3));
                         break;
                      case "P":
                         this.aks.Basics.onAuthorizedCommandPrompt(_loc5_.substr(3));
                         break;
                      case "C":
-                        this.aks.Basics["\x19\x14\b"]();
+                        this.aks.Basics.onAuthorizedCommandClear();
                         break;
                      case "E":
                         this.aks.Basics.onAuthorizedCommand(false);
@@ -113,10 +113,10 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                         switch(_loc5_.charAt(3))
                         {
                            case "O":
-                              this.aks.Basics["\x19\x14\x0b"](_loc5_.substr(4));
+                              this.aks.Basics.onAuthorizedInterfaceOpen(_loc5_.substr(4));
                               break;
                            case "C":
-                              this.aks.Basics["\x19\x14\n"](_loc5_.substr(4));
+                              this.aks.Basics.onAuthorizedInterfaceClose(_loc5_.substr(4));
                               break;
                            default:
                               this.defaultProcessAction(_loc2_,_loc3_,_loc4_,_loc5_);
@@ -130,22 +130,22 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Basics["\x19\x1c\x03"](_loc5_.substr(2));
                   break;
                case "T":
-                  this.aks.Basics["\x19\x1b\x19"](_loc5_.substr(2));
+                  this.aks.Basics.onReferenceTime(_loc5_.substr(2));
                   break;
                case "D":
-                  this.aks.Basics["\x19\x16\x0f"](_loc5_.substr(2));
+                  this.aks.Basics.onDate(_loc5_.substr(2));
                   break;
                case "W":
-                  this.aks.Basics["\x19\x1e\x12"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Basics.onWhoIs(!_loc4_,_loc5_.substr(3));
                   break;
                case "P":
-                  this.aks.Basics["\x19\x1d\x14"](_loc5_.substr(2));
+                  this.aks.Basics.onSubscriberRestriction(_loc5_.substr(2));
                   break;
                case "C":
-                  this.aks.Basics["\x19\x17\x11"](_loc5_.substr(2));
+                  this.aks.Basics.onFileCheck(_loc5_.substr(2));
                   break;
                case "p":
-                  this.aks.Basics["\x19\x14\r"](_loc5_.substr(2));
+                  this.aks.Basics.onAveragePing(_loc5_.substr(2));
                   break;
                case "M":
                   this.aks.Basics["\x19\x1b\x07"](_loc5_.substr(2));
@@ -292,7 +292,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             switch(_loc3_)
             {
                case "C":
-                  this.aks.Game["\x19\x16\x0b"](!_loc4_,_loc5_.substr(4));
+                  this.aks.Game.onCreate(!_loc4_,_loc5_.substr(4));
                   break;
                case "J":
                   this.aks.Game["\x19\x19\x0e"](_loc5_.substr(3));
@@ -319,7 +319,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Game.extendIn["\x19\x1d\x19"](_loc5_.substr(2));
                   break;
                case "V":
-                  this.aks.Game.extendIn["\x19\x19\x16"](true,_loc5_.substr(2));
+                  this.aks.Game.extendIn.onLeave(true,_loc5_.substr(2));
                   break;
                case "f":
                   this.aks.Game["\x19\x17\x14"](_loc5_.substr(2));
@@ -461,13 +461,13 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Dialog["\x19\x16\r"](_loc5_.substr(2));
                   break;
                case "C":
-                  this.aks.Dialog["\x19\x16\x0b"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Dialog.onCreate(!_loc4_,_loc5_.substr(3));
                   break;
                case "Q":
                   this.aks.Dialog["\x19\x1b\x15"](_loc5_.substr(2));
                   break;
                case "V":
-                  this.aks.Dialog["\x19\x19\x16"]();
+                  this.aks.Dialog.onLeave();
                   break;
                case "P":
                   this.aks.Dialog["\x19\x1b\x02"]();
@@ -520,7 +520,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                case "L":
                   if((_loc0_ = _loc5_.charAt(2)) !== "o")
                   {
-                     this.aks.Spells["\x19\x19\x1c"](_loc5_.substr(2));
+                     this.aks.Spells.onList(_loc5_.substr(2));
                   }
                   else
                   {
@@ -559,7 +559,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Items["\x19\x16\x15"](!_loc4_,_loc5_.substr(3));
                   break;
                case "A":
-                  this.aks.Items["\x19\x13\x1b"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Items.onAdd(!_loc4_,_loc5_.substr(3));
                   break;
                case "C":
                   this.aks.Items["\x19\x15\b"](_loc5_.substr(3));
@@ -647,13 +647,13 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             switch(_loc3_)
             {
                case "C":
-                  this.aks.Key["\x19\x16\x0b"](_loc5_.substr(3));
+                  this.aks.Key.onCreate(_loc5_.substr(3));
                   break;
                case "K":
                   this.aks.KeyonKey(!_loc4_);
                   break;
                case "V":
-                  this.aks.Key["\x19\x19\x16"]();
+                  this.aks.Key.onLeave();
                   break;
                default:
                   this.defaultProcessAction(_loc2_,_loc3_,_loc4_,_loc5_);
@@ -691,10 +691,10 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Exchange["\x19\x1b\x18"](_loc5_.substr(2));
                   break;
                case "V":
-                  this.aks.Exchange["\x19\x19\x16"](!_loc4_,_loc5_.substr(2));
+                  this.aks.Exchange.onLeave(!_loc4_,_loc5_.substr(2));
                   break;
                case "C":
-                  this.aks.Exchange["\x19\x16\x0b"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Exchange.onCreate(!_loc4_,_loc5_.substr(3));
                   break;
                case "c":
                   this.aks.Exchange["\x19\x16\x05"](!_loc4_,_loc5_.substr(3));
@@ -730,7 +730,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Exchange["\x19\x1a\f"](_loc5_.substr(2));
                   break;
                case "L":
-                  this.aks.Exchange["\x19\x19\x1c"](_loc5_.substr(2));
+                  this.aks.Exchange.onList(_loc5_.substr(2));
                   break;
                case "S":
                   this.aks.Exchange["\x19\x1c\x10"](!_loc4_);
@@ -792,7 +792,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Houses["\x19\x1a\x02"](_loc5_.substr(2));
                   break;
                case "C":
-                  this.aks.Houses["\x19\x16\x0b"](_loc5_.substr(3));
+                  this.aks.Houses.onCreate(_loc5_.substr(3));
                   break;
                case "S":
                   this.aks.Houses["\x19\x1c\x10"](!_loc4_,_loc5_.substr(3));
@@ -801,7 +801,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Houses["\x19\x15\x01"](!_loc4_,_loc5_.substr(3));
                   break;
                case "V":
-                  this.aks.Houses["\x19\x19\x16"]();
+                  this.aks.Houses.onLeave();
                   break;
                case "G":
                   this.aks.Houses["\x19\x18\n"](_loc5_.substr(2));
@@ -833,10 +833,10 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Emotes["\x19\x1e\f"](!_loc4_,_loc5_.substr(3));
                   break;
                case "L":
-                  this.aks.Emotes["\x19\x19\x1c"](_loc5_.substr(2));
+                  this.aks.Emotes.onList(_loc5_.substr(2));
                   break;
                case "A":
-                  this.aks.Emotes["\x19\x13\x1b"](_loc5_.substr(2));
+                  this.aks.Emotes.onAdd(_loc5_.substr(2));
                   break;
                case "R":
                   this.aks.Emotes["\x19\x1b\x1c"](_loc5_.substr(2));
@@ -852,10 +852,10 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             switch(_loc3_)
             {
                case "C":
-                  this.aks.Documents["\x19\x16\x0b"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Documents.onCreate(!_loc4_,_loc5_.substr(3));
                   break;
                case "V":
-                  this.aks.Documents["\x19\x19\x16"]();
+                  this.aks.Documents.onLeave();
                   break;
                default:
                   this.defaultProcessAction(_loc2_,_loc3_,_loc4_,_loc5_);
@@ -878,7 +878,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Guild["\x19\x1a\x11"]();
                   break;
                case "C":
-                  this.aks.Guild["\x19\x16\x0b"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Guild.onCreate(!_loc4_,_loc5_.substr(3));
                   break;
                case "S":
                   this.aks.GuildonStats(_loc5_.substr(2));
@@ -947,7 +947,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   }
                   break;
                case "V":
-                  this.aks.Guild["\x19\x19\x16"]();
+                  this.aks.Guild.onLeave();
                   break;
                case "K":
                   this.aks.Guild["\x19\x14\x0f"](!_loc4_,_loc5_.substr(3));
@@ -982,19 +982,19 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             switch(_loc3_)
             {
                case "C":
-                  this.aks.Waypoints["\x19\x16\x0b"](_loc5_.substr(2));
+                  this.aks.Waypoints.onCreate(_loc5_.substr(2));
                   break;
                case "V":
-                  this.aks.Waypoints["\x19\x19\x16"]();
+                  this.aks.Waypoints.onLeave();
                   break;
                case "U":
                   this.aks.Waypoints["\x19\x1e\r"]();
                   break;
                case "c":
-                  this.aks.Subway["\x19\x16\x0b"](_loc5_.substr(2));
+                  this.aks.Subway.onCreate(_loc5_.substr(2));
                   break;
                case "v":
-                  this.aks.Subway["\x19\x19\x16"]();
+                  this.aks.Subway.onLeave();
                   break;
                case "u":
                   this.aks.Subway["\x19\x1e\r"]();
@@ -1013,7 +1013,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             switch(_loc3_)
             {
                case "l":
-                  this.aks.Subareas["\x19\x19\x1c"](_loc5_.substr(3));
+                  this.aks.Subareas.onList(_loc5_.substr(3));
                   break;
                case "m":
                   this.aks.Subareas["\x19\x14\x02"](_loc5_.substr(2));
@@ -1108,7 +1108,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Fights["\x19\x16\x03"](_loc5_.substr(2));
                   break;
                case "L":
-                  this.aks.Fights["\x19\x19\x1c"](_loc5_.substr(2));
+                  this.aks.Fights.onList(_loc5_.substr(2));
                   break;
                case "D":
                   this.aks.Fights["\x19\x16\x11"](_loc5_.substr(2));
@@ -1121,7 +1121,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             switch(_loc3_)
             {
                case "C":
-                  this.aks.Tutorial["\x19\x16\x0b"](_loc5_.substr(2));
+                  this.aks.Tutorial.onCreate(_loc5_.substr(2));
                   break;
                case "T":
                   this.aks.Tutorial["\x19\x1c\x19"](_loc5_.substr(2));
@@ -1140,7 +1140,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             switch(_loc3_)
             {
                case "L":
-                  this.aks.Quests["\x19\x19\x1c"](_loc5_.substr(3));
+                  this.aks.Quests.onList(_loc5_.substr(3));
                   break;
                case "S":
                   this.aks.Quests["\x19\x1d\r"](_loc5_.substr(2));
@@ -1153,22 +1153,22 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             switch(_loc3_)
             {
                case "s":
-                  this.aks.Ttg["\x19\x19\x1c"](_loc5_.substr(2));
+                  this.aks.Ttg.onList(_loc5_.substr(2));
                   break;
                case "d":
                   this.aks.Ttg.onDates(_loc5_.substr(2));
                   break;
                case "a":
-                  this.aks.Ttg["\x19\x13\x1b"](_loc5_.substr(2));
+                  this.aks.Ttg.onAdd(_loc5_.substr(2));
                   break;
                case "r":
                   this.aks.Ttg.onCardsRecyclerLoots(_loc5_.substr(2));
                   break;
                case "o":
-                  this.aks.Ttg["\x19\x16\x0b"](!_loc4_,_loc5_.substr(2));
+                  this.aks.Ttg.onCreate(!_loc4_,_loc5_.substr(2));
                   break;
                case "c":
-                  this.aks.Ttg["\x19\x19\x16"](!_loc4_);
+                  this.aks.Ttg.onLeave(!_loc4_);
                   break;
                case "i":
                   this.aks.Ttg.onOpenMyCollection();
@@ -1190,10 +1190,10 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Party["\x19\x13\x15"](_loc5_.substr(2));
                   break;
                case "C":
-                  this.aks.Party["\x19\x16\x0b"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Party.onCreate(!_loc4_,_loc5_.substr(3));
                   break;
                case "V":
-                  this.aks.Party["\x19\x19\x16"](_loc5_.substr(2));
+                  this.aks.Party.onLeave(_loc5_.substr(2));
                   break;
                case "F":
                   this.aks.Party["\x19\x17\x15"](!_loc4_,_loc5_.substr(3));
@@ -1227,7 +1227,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Mount["\x19\x1a\x0b"](_loc5_.substr(2));
                   break;
                case "v":
-                  this.aks.Mount["\x19\x19\x16"](_loc5_.substr(2));
+                  this.aks.Mount.onLeave(_loc5_.substr(2));
                   break;
                case "r":
                   this.aks.Mount["\x19\x1c\n"](_loc5_.substr(2));

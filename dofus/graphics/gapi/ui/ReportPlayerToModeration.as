@@ -10,7 +10,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ReportPlayerToModeration extends dofus.§\x
    {
       return this._sTargetID;
    }
-   function set targetID(§\x1b\t\x03§)
+   function set targetID(sTargetID)
    {
       this._sTargetID = _loc2_;
    }
@@ -86,7 +86,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ReportPlayerToModeration extends dofus.§\x
       for(var k in _loc3_)
       {
          var _loc5_ = _loc3_[k];
-         if(_loc5_ instanceof dofus.datacenter..modreport.ModReportCategory)
+         if(_loc5_ instanceof dofus.datacenter.modreport.ModReportCategory)
          {
             if(_loc5_.isRequiringOfflineCharacter && !this._bTargetIsOffline)
             {
@@ -100,7 +100,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ReportPlayerToModeration extends dofus.§\x
          }
       }
       _loc4_.sortOn("label");
-      _loc2_.push({id:dofus.datacenter..modreport.ModReportCategory.NOT_A_CATEGORY_ID,label:"(" + this.api.lang.getText("PLEASE_SELECT") + ")"});
+      _loc2_.push({id:dofus.datacenter.modreport.ModReportCategory.NOT_A_CATEGORY_ID,label:"(" + this.api.lang.getText("PLEASE_SELECT") + ")"});
       var _loc6_ = 0;
       while(_loc6_ < _loc4_.length)
       {
@@ -109,11 +109,11 @@ class dofus.§\x18\x03\x10§.gapi.ui.ReportPlayerToModeration extends dofus.§\x
       }
       this["\x1c\f\x19"].dataProvider = _loc2_;
       this["\x1c\f\x19"].selectedIndex = 0;
-      this.updateButtonsVisibilityByCategory(dofus.datacenter..modreport.ModReportCategory.NOT_A_CATEGORY_ID);
+      this.updateButtonsVisibilityByCategory(dofus.datacenter.modreport.ModReportCategory.NOT_A_CATEGORY_ID);
    }
    function updateButtonsVisibilityByCategory(§\x19\x04\x0b§, oCategory)
    {
-      if(_loc2_ == dofus.datacenter..modreport.ModReportCategory.NOT_A_CATEGORY_ID)
+      if(_loc2_ == dofus.datacenter.modreport.ModReportCategory.NOT_A_CATEGORY_ID)
       {
          this["\x1c\t\x1d"]._visible = false;
          this["\x1c\x19\x05"]._visible = false;
@@ -164,7 +164,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ReportPlayerToModeration extends dofus.§\x
       if((_loc0_ = _loc2_.owner._name) === "\x1c\f\x19")
       {
          var _loc3_ = _loc2_.item;
-         if(_loc3_.id == dofus.datacenter..modreport.ModReportCategory.NOT_A_CATEGORY_ID)
+         if(_loc3_.id == dofus.datacenter.modreport.ModReportCategory.NOT_A_CATEGORY_ID)
          {
             this.api.ui.hideTooltip();
          }

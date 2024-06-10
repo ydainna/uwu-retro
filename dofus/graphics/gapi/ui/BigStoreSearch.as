@@ -103,7 +103,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreSearch extends dofus.§\x18\x03\x10
             {
                if(_loc2_[_loc6_.t] && (_loc6_.h != true && _loc6_.l <= this["\x1d\x19\x12"]))
                {
-                  if(dofus.datacenter.["\x18\x10\x15"].isFullSoul(_loc6_.t))
+                  if(dofus.datacenter.Item.isFullSoul(_loc6_.t))
                   {
                      continue;
                   }
@@ -135,11 +135,11 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreSearch extends dofus.§\x18\x03\x10
          {
             if(this._bIsMonster)
             {
-               _loc4_.push(new dofus.datacenter..MonsterInBidHouse(Number(k)));
+               _loc4_.push(new dofus.datacenter.MonsterInBidHouse(Number(k)));
             }
             else
             {
-               _loc4_.push(new dofus.datacenter.["\x18\x10\x15"](0,Number(k)));
+               _loc4_.push(new dofus.datacenter.Item(0,Number(k)));
             }
          }
       }

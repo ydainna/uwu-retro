@@ -8,7 +8,7 @@ class ank.battlefield.§\x17\x04\x19§.§\x18\x18\x0e§ extends Object
    function initialize(§\x19\b\x0b§)
    {
       this.id = _loc2_;
-      this["\x1a\x01\x1b"] = new ank.utils.["\x17\x0e\r"]();
+      this["\x1a\x01\x1b"] = new ank.utils.ExtendedObject();
    }
    function §\x16\x1b\x17§()
    {

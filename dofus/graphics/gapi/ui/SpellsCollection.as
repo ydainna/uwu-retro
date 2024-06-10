@@ -346,7 +346,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
             else
             {
                var sText = new ank.utils.ExtendedString(_loc3_.text)["\x1a\x0b\x15"]().toLowerCase();
-               this._eoSpellFilters["\x15\x1d\x13"](1,{fn:function(§\x1a\x02\x06§)
+               this._eoSpellFilters.addItemAt(1,{fn:function(§\x1a\x02\x06§)
                {
                   return new ank.utils.ExtendedString(_loc2_.name)["\x1a\x0b\x15"]().toLowerCase().indexOf(sText) > -1;
                }});
@@ -356,7 +356,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
          case this._tiFromLevel:
          case this._tiToLevel:
             var ref = this;
-            this._eoSpellFilters["\x15\x1d\x13"](2,{fn:function(§\x1a\x02\x06§)
+            this._eoSpellFilters.addItemAt(2,{fn:function(§\x1a\x02\x06§)
             {
                var _loc3_ = _loc2_["\x19\x0b\r"];
                if(_loc3_ == undefined)
@@ -389,7 +389,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
       this._suSpell5["\x1a\x1b\x01"](true,undefined,_loc2_.passiveSpell);
       this.resetSpellFilters();
       this._btnFilterPossessed.selected = true;
-      this._eoSpellFilters["\x15\x1d\x13"](4,{fn:function(§\x1a\x02\x06§)
+      this._eoSpellFilters.addItemAt(4,{fn:function(§\x1a\x02\x06§)
       {
          return _loc2_.isOwnedByPlayer;
       }});
@@ -406,7 +406,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
    {
       var _loc2_ = this.api.datacenter.Player.Spells;
       var _loc3_ = 0;
-      while(_loc3_ < dofus.datacenter..spellscollection.SpellsDeck.DECK_CAPACITY)
+      while(_loc3_ < dofus.datacenter.spellscollection.SpellsDeck.DECK_CAPACITY)
       {
          var _loc4_ = this["_ctrDeck" + (_loc3_ + 1)];
          _loc4_.contentData = undefined;
@@ -510,7 +510,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
          }
          else
          {
-            _loc3_.push(new dofus.datacenter..spellscollection.SpellsCollectionItemObject(_loc8_));
+            _loc3_.push(new dofus.datacenter.spellscollection.SpellsCollectionItemObject(_loc8_));
          }
          _loc7_ = _loc7_ + 1;
       }
@@ -550,7 +550,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
       this._btnFilterUnknown.selected = false;
       this._btnFilterPossessed.selected = false;
       this._btnFilterNotPossessed.selected = false;
-      this._eoSpellFilters = new ank.utils.["\x17\x0e\r"]();
+      this._eoSpellFilters = new ank.utils.ExtendedObject();
    }
    function initTexts()
    {
@@ -640,21 +640,21 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
             _loc2_.target.selected = _loc5_;
             if(this._btnFilterMonster.selected)
             {
-               this._eoSpellFilters["\x15\x1d\x13"](3,{fn:function(§\x1a\x02\x06§)
+               this._eoSpellFilters.addItemAt(3,{fn:function(§\x1a\x02\x06§)
                {
                   return _loc2_.origin == dofus.graphics.gapi.ui.SpellsCollection.SPELLS_ORIGIN_DROP_ON_MONSTER;
                }});
             }
             else if(this._btnFilterCraft.selected)
             {
-               this._eoSpellFilters["\x15\x1d\x13"](3,{fn:function(§\x1a\x02\x06§)
+               this._eoSpellFilters.addItemAt(3,{fn:function(§\x1a\x02\x06§)
                {
                   return _loc2_.origin == dofus.graphics.gapi.ui.SpellsCollection.SPELLS_ORIGIN_CRAFT;
                }});
             }
             else if(this._btnFilterUnknown.selected)
             {
-               this._eoSpellFilters["\x15\x1d\x13"](3,{fn:function(§\x1a\x02\x06§)
+               this._eoSpellFilters.addItemAt(3,{fn:function(§\x1a\x02\x06§)
                {
                   return _loc2_.origin == dofus.graphics.gapi.ui.SpellsCollection.SPELLS_ORIGIN_UNKNOWN;
                }});
@@ -674,14 +674,14 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
             _loc2_.target.selected = _loc6_;
             if(this._btnFilterPossessed.selected)
             {
-               this._eoSpellFilters["\x15\x1d\x13"](4,{fn:function(§\x1a\x02\x06§)
+               this._eoSpellFilters.addItemAt(4,{fn:function(§\x1a\x02\x06§)
                {
                   return _loc2_.isOwnedByPlayer;
                }});
             }
             else if(this._btnFilterNotPossessed.selected)
             {
-               this._eoSpellFilters["\x15\x1d\x13"](4,{fn:function(§\x1a\x02\x06§)
+               this._eoSpellFilters.addItemAt(4,{fn:function(§\x1a\x02\x06§)
                {
                   return !_loc2_.isOwnedByPlayer;
                }});
@@ -1037,7 +1037,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
          this._mcElementFilterSelected._y = this._nMcElementFilterSelectedY + (nElementID - 1) * 25.5;
          this._mcElementFilterSelected._visible = true;
          var nSpellType = this.convertElementValueToSpellType(nElementID);
-         this._eoSpellFilters["\x15\x1d\x13"](5,{elementID:nElementID,fn:function(§\x1a\x02\x06§)
+         this._eoSpellFilters.addItemAt(5,{elementID:nElementID,fn:function(§\x1a\x02\x06§)
          {
             return _loc2_.type == nSpellType;
          }});
@@ -1107,7 +1107,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
    {
       var _loc2_ = 0;
       var _loc3_ = 0;
-      var _loc4_ = new ank.utils.["\x17\x0e\r"]();
+      var _loc4_ = new ank.utils.ExtendedObject();
       var _loc5_ = 0;
       while(_loc5_ < this._eaAvailableSpells.length)
       {
@@ -1127,7 +1127,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x
                _loc9_ = new Object();
                _loc9_.ownedCount = 0;
                _loc9_.totalCount = 0;
-               _loc4_["\x15\x1d\x13"](_loc7_,_loc9_);
+               _loc4_.addItemAt(_loc7_,_loc9_);
             }
             if(_loc8_)
             {

@@ -51,6 +51,6 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x1b\x18\x18§.§\x1b\x18\x19§ extends a
    }
    function click(oEvent)
    {
-      this["\x1d\r\t"].gapi["\x18\x16\x19"]("MapExplorer","MapExplorer",{mapID:this["\x1e\x03\x18"].id});
+      this["\x1d\r\t"].gapi.loadUIAutoHideComponent("MapExplorer","MapExplorer",{mapID:this["\x1e\x03\x18"].id});
    }
 }

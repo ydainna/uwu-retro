@@ -29,7 +29,7 @@ class dofus.aks.Tutorial extends dofus.aks.Handler
       var _loc3_ = Number(_loc2_);
       this.api.kernel.TipsManager.showNewTip(_loc3_);
    }
-   function §\x19\x16\x0b§(sExtraData)
+   function onCreate(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];

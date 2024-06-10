@@ -6,7 +6,7 @@ class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
       this._api = _loc2_;
       this._nActionId = nActionId;
       this._aPlayersIds = new Array();
-      this._eoPlayers = new ank.utils.["\x17\x0e\r"]();
+      this._eoPlayers = new ank.utils.ExtendedObject();
       this._aEvolutiveArgs = new Array();
       this._aPermanentArgs = aPermanentArgs;
    }
@@ -200,7 +200,7 @@ class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
    function §\x15\x1e\x05§(sPlayerId, sUniqId)
    {
       this._aPlayersIds.push(sPlayerId);
-      this._eoPlayers["\x15\x1d\x13"](sPlayerId,_loc3_);
+      this._eoPlayers.addItemAt(sPlayerId,_loc3_);
    }
    function appendEvolutiveArgs(aEvolutiveArgsToAppend)
    {
@@ -303,7 +303,7 @@ class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
          }
          _loc16_ = _loc16_ + 1;
       }
-      return _loc5_.join(dofus.datacenter..chat.FightEventMessage.JOIN_DELIMITER);
+      return _loc5_.join(dofus.datacenter.chat.FightEventMessage.JOIN_DELIMITER);
    }
    function getPrintableString(eoTeam0, eoTeam1)
    {
@@ -453,7 +453,7 @@ class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
                   }
                   else
                   {
-                     _loc7_ += _loc5_.apply(this,[_loc12_,_loc6_.argsForPlayers[_loc10_].join(dofus.datacenter..chat.FightEventMessage.JOIN_DELIMITER)]);
+                     _loc7_ += _loc5_.apply(this,[_loc12_,_loc6_.argsForPlayers[_loc10_].join(dofus.datacenter.chat.FightEventMessage.JOIN_DELIMITER)]);
                   }
                   _loc7_ += "\n";
                }
@@ -469,7 +469,7 @@ class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
             }
             return _loc7_;
          }
-         return String(_loc5_.apply(this,[this.getCleanedPlayerNamesString(eoTeam0,eoTeam1),_loc6_.cleanedArgs.join(dofus.datacenter..chat.FightEventMessage.JOIN_DELIMITER)]));
+         return String(_loc5_.apply(this,[this.getCleanedPlayerNamesString(eoTeam0,eoTeam1),_loc6_.cleanedArgs.join(dofus.datacenter.chat.FightEventMessage.JOIN_DELIMITER)]));
       }
       return undefined;
    }

@@ -37,7 +37,7 @@ class ank.gapi.§\x17\x01\x06§.§\x1a\x0e\x10§ extends ContextMenu
          if(_loc6_ != undefined)
          {
             var _loc7_ = _loc6_["\x17\x03\x19"];
-            if(_loc7_ instanceof dofus.datacenter.["\x18\x10\x15"])
+            if(_loc7_ instanceof dofus.datacenter.Item)
             {
                _loc6_["\x18\x11\x05"]["\x17\x02\x05"](_loc7_);
                return undefined;
@@ -47,7 +47,7 @@ class ank.gapi.§\x17\x01\x06§.§\x1a\x0e\x10§ extends ContextMenu
                _loc6_.createSpellActionPopupMenu(_loc7_);
                return undefined;
             }
-            if(_loc7_ instanceof dofus.datacenter..InventoryShortcutItem)
+            if(_loc7_ instanceof dofus.datacenter.InventoryShortcutItem)
             {
                _loc6_.createInventoryShortcutItemActionPopupMenu(_loc7_);
                return undefined;

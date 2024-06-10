@@ -72,7 +72,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       if(_loc5_ == undefined)
       {
          _loc5_ = new dofus.datacenter.["\x16\x19\x02"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID,_loc4_.title);
-         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
+         this.api.datacenter.Sprites.addItemAt(sID,_loc5_);
       }
       _loc5_.GameActionsManager.init();
       _loc5_.cellNum = Number(_loc4_.cell);
@@ -162,8 +162,8 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       var _loc5_ = this.api.datacenter.Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
       {
-         _loc5_ = new dofus.datacenter..Creature(sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID);
-         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
+         _loc5_ = new dofus.datacenter.Creature(sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID);
+         this.api.datacenter.Sprites.addItemAt(sID,_loc5_);
       }
       _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
@@ -217,7 +217,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       if(_loc5_ == undefined)
       {
          _loc5_ = new dofus.datacenter.["\x18\x1d\x18"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID);
-         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
+         this.api.datacenter.Sprites.addItemAt(sID,_loc5_);
       }
       _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
@@ -267,7 +267,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       if(_loc5_ == undefined)
       {
          _loc5_ = new dofus.datacenter.["\x18\x1d\x19"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_["\x16\x0f\x1c"]);
-         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
+         this.api.datacenter.Sprites.addItemAt(sID,_loc5_);
       }
       _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
@@ -288,7 +288,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       if(_loc5_ == undefined)
       {
          _loc5_ = new dofus.datacenter.["\x19\x0b\x07"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID,_loc4_.customArtwork);
-         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
+         this.api.datacenter.Sprites.addItemAt(sID,_loc5_);
       }
       _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
@@ -311,7 +311,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       if(_loc5_ == undefined)
       {
          _loc5_ = new dofus.datacenter.["\x19\x12\x19"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID);
-         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
+         this.api.datacenter.Sprites.addItemAt(sID,_loc5_);
       }
       _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
@@ -337,7 +337,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       if(_loc5_ == undefined)
       {
          _loc5_ = new dofus.datacenter.["\x1b\x0e\x04"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID,_loc4_["\x18\x0e\x1c"]);
-         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
+         this.api.datacenter.Sprites.addItemAt(sID,_loc5_);
       }
       _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
@@ -388,7 +388,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       if(_loc5_ == undefined)
       {
          _loc5_ = new dofus.datacenter.["\x1a\x07\x0b"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID);
-         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
+         this.api.datacenter.Sprites.addItemAt(sID,_loc5_);
       }
       _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
@@ -405,7 +405,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       if(_loc5_ == undefined)
       {
          _loc5_ = new dofus.datacenter.["\x1a\x03\x14"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc4_.gfxID + ".swf",_loc4_.cell,_loc4_.dir,_loc4_.gfxID,_loc4_.modelID);
-         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc5_);
+         this.api.datacenter.Sprites.addItemAt(sID,_loc5_);
       }
       _loc5_.GameActionsManager.init();
       _loc5_.cellNum = _loc4_.cell;
@@ -422,7 +422,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       if(_loc4_ == undefined)
       {
          _loc4_ = new dofus.datacenter.["\x19\x02\x13"](sID,ank.battlefield.mc.Sprite,dofus.Constants["\x16\x1c\x1a"] + _loc3_.gfxID + ".swf",_loc3_.cell,_loc3_.dir,_loc3_.gfxID);
-         this.api.datacenter.Sprites["\x15\x1d\x13"](sID,_loc4_);
+         this.api.datacenter.Sprites.addItemAt(sID,_loc4_);
       }
       _loc4_.GameActionsManager.init();
       _loc4_.scaleX = _loc3_.scaleX;
@@ -487,7 +487,7 @@ class dofus.§\x18\x18\x0b§.CharactersManager extends dofus.utils.ApiElement
       var _loc6_ = _global.parseInt(_loc3_[2],16);
       var _loc7_ = _loc3_[3].length != 0 ? _global.parseInt(_loc3_[3],16) : -1;
       var _loc8_ = _loc3_[4];
-      var _loc9_ = new dofus.datacenter.["\x18\x10\x15"](_loc4_,_loc5_,_loc6_,_loc7_,_loc8_);
+      var _loc9_ = new dofus.datacenter.Item(_loc4_,_loc5_,_loc6_,_loc7_,_loc8_);
       _loc9_["\x1a\x06\x1d"] = this.api.lang.getConfigText("SELL_PRICE_MULTIPLICATOR");
       return _loc9_;
    }

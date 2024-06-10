@@ -33,7 +33,7 @@ class dofus.§\x17\x04\x19§.Craft extends Object
    {
       this.api = _global.api;
       this["\x1e\x05\r"] = _loc3_;
-      this["\x1e\x02\x1a"] = new dofus.datacenter.["\x18\x10\x15"](0,_loc2_,1);
+      this["\x1e\x02\x1a"] = new dofus.datacenter.Item(0,_loc2_,1);
       this.name = this["\x1e\x02\x1a"].name;
       var _loc4_ = this.api.lang["\x17\x15\x19"](_loc2_);
       this["\x1b\x1d\n"] = new Array();
@@ -42,7 +42,7 @@ class dofus.§\x17\x04\x19§.Craft extends Object
          var _loc5_ = 0;
          while(_loc5_ < _loc4_.length)
          {
-            var _loc6_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc4_[_loc5_][0],_loc4_[_loc5_][1]);
+            var _loc6_ = new dofus.datacenter.Item(0,_loc4_[_loc5_][0],_loc4_[_loc5_][1]);
             this["\x1b\x1d\n"].push(_loc6_);
             _loc5_ = _loc5_ + 1;
          }

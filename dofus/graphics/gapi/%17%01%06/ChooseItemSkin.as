@@ -51,11 +51,11 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChooseItemSkin extends dofus.
       {
          if(this["\x1e\x03\x18"]["\x18\f\x13"])
          {
-            _loc5_.push(new dofus.datacenter.["\x18\x10\x15"](-1,this["\x1e\x03\x18"]["\x1a\n\x07"],1,0,"",0,_loc6_,1));
+            _loc5_.push(new dofus.datacenter.Item(-1,this["\x1e\x03\x18"]["\x1a\n\x07"],1,0,"",0,_loc6_,1));
          }
          else
          {
-            _loc5_.push(new dofus.datacenter.["\x18\x10\x15"](-1,this["\x1e\x03\x18"].unicID,1,0,"",0,_loc6_,1));
+            _loc5_.push(new dofus.datacenter.Item(-1,this["\x1e\x03\x18"].unicID,1,0,"",0,_loc6_,1));
          }
          _loc6_ = _loc6_ + 1;
       }

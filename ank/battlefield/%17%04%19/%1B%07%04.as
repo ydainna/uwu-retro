@@ -35,7 +35,7 @@ class ank.battlefield.§\x17\x04\x19§.§\x1b\x07\x04§ extends Object
       this["\x1c\x05\t"] = false;
       this["\x1c\f\x07"] = true;
       this["\x1c\x02\x19"] = false;
-      this["\x1c\x10\x17"] = new ank.utils.["\x17\x0e\r"]();
+      this["\x1c\x10\x17"] = new ank.utils.ExtendedObject();
       mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
       this["\x1e\r\x04"] = new Object();
       this._nCreationInstant = 4382;
@@ -389,11 +389,11 @@ class ank.battlefield.§\x17\x04\x19§.§\x1b\x07\x04§ extends Object
       this["\x1e\r\x04"][_loc3_] = _loc4_;
       if(_loc4_)
       {
-         dofus.datacenter..States.onStateAdded(_loc2_,this,_loc3_);
+         dofus.datacenter.States.onStateAdded(_loc2_,this,_loc3_);
       }
       else
       {
-         dofus.datacenter..States.onStateRemoved(_loc2_,this,_loc3_);
+         dofus.datacenter.States.onStateRemoved(_loc2_,this,_loc3_);
       }
       this["\x17\x07\x19"]({type:"statesChanged",value:this["\x1e\r\x04"]});
    }

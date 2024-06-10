@@ -30,7 +30,7 @@ class dofus.aks.Job extends dofus.aks.Handler
             var _loc11_ = _loc9_[_loc10_].split("~");
             _loc8_.push(new dofus.datacenter.["\x1b\x02\n"](_loc11_[0],_loc11_[1],_loc11_[2],_loc11_[3],_loc11_[4]));
          }
-         var _loc12_ = new dofus.datacenter..Job(_loc7_,_loc8_);
+         var _loc12_ = new dofus.datacenter.Job(_loc7_,_loc8_);
          var _loc13_ = _loc4_.findFirstItem("id",_loc7_);
          if(_loc13_.index != -1)
          {

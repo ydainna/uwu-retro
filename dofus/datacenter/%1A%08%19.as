@@ -36,7 +36,7 @@ class dofus.§\x17\x04\x19§.§\x1a\b\x19§ extends Object
    }
    function §\x15\x1e\x19§(§\x1a\x02\r§)
    {
-      this["\x1c\x10\x18"]["\x15\x1d\x13"](_loc2_.id,_loc2_);
+      this["\x1c\x10\x18"].addItemAt(_loc2_.id,_loc2_);
       if(_loc2_["\x18\r\t"])
       {
          this["\x1e\x03\x02"] = _loc2_;
@@ -49,7 +49,7 @@ class dofus.§\x17\x04\x19§.§\x1a\b\x19§ extends Object
    function initialize(§\x19\b\x0b§, §\x16\x0b\x14§, §\x19\x0e\x14§, bAccountQuest, bRepeatableQuest)
    {
       this.api = _global.api;
-      this["\x1c\x10\x18"] = new ank.utils.["\x17\x0e\r"]();
+      this["\x1c\x10\x18"] = new ank.utils.ExtendedObject();
       this["\x1d\x17\x01"] = _loc2_;
       this["\x1c\x04\x04"] = _loc3_;
       this.sortOrder = _loc4_;

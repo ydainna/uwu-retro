@@ -170,7 +170,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ItemViewer extends dofus.§\x
             this._ldrMoneyIcon._visible = this["\x1c\x07\x0e"];
             if(this["\x1c\x07\x0e"])
             {
-               var _loc4_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc2_.customMoneyItemId);
+               var _loc4_ = new dofus.datacenter.Item(0,_loc2_.customMoneyItemId);
                this._ldrMoneyIcon.contentParams = _loc4_.params;
                this._ldrMoneyIcon.contentPath = _loc4_.iconFile;
                _loc3_ = _loc3_ + "x " + _loc4_.name;
@@ -304,8 +304,8 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ItemViewer extends dofus.§\x
       {
          if(this["\x1e\b\x19"] == "Effects")
          {
-            var _loc3_ = dofus.datacenter.["\x18\x10\x15"].getBaseItemEffects(this["\x1e\x03\x18"].unicID);
-            var _loc4_ = dofus.datacenter.["\x18\x10\x15"]["\x17\x19\x11"](_loc3_,_loc3_,true,this["\x1e\x03\x18"].isReallyEnhanceable);
+            var _loc3_ = dofus.datacenter.Item.getBaseItemEffects(this["\x1e\x03\x18"].unicID);
+            var _loc4_ = dofus.datacenter.Item["\x17\x19\x11"](_loc3_,_loc3_,true,this["\x1e\x03\x18"].isReallyEnhanceable);
             var _loc5_ = new ank.utils.ExtendedArray();
             for(var s in _loc4_)
             {

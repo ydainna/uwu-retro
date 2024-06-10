@@ -36,7 +36,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
       var _loc7_ = this.api.lang["\x17\x14\x06"]();
       for(var k in _loc7_)
       {
-         var _loc8_ = new dofus.datacenter..Specialization(Number(k));
+         var _loc8_ = new dofus.datacenter.Specialization(Number(k));
          if(_loc8_.order.index == _loc5_)
          {
             if(_loc8_.description != "null")
@@ -87,7 +87,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
          for(var k in _loc13_)
          {
             var _loc18_ = _loc13_[k].data;
-            if(_loc18_ instanceof dofus.datacenter..Specialization)
+            if(_loc18_ instanceof dofus.datacenter.Specialization)
             {
                if(_loc18_.index == _loc4_)
                {
@@ -102,7 +102,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
    function itemSelected(oEvent)
    {
       this.gapi.hideTooltip();
-      if(_loc2_.row.item.data instanceof dofus.datacenter..Specialization)
+      if(_loc2_.row.item.data instanceof dofus.datacenter.Specialization)
       {
          this["\x17\x07\x19"]({type:"specializationSelected",specialization:_loc2_.row.item.data});
       }
@@ -123,7 +123,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentVie
    function itemRollOver(oEvent)
    {
       var _loc3_ = _loc2_.target.item.data;
-      if(_loc3_ instanceof dofus.datacenter..Specialization)
+      if(_loc3_ instanceof dofus.datacenter.Specialization)
       {
          this.gapi.showTooltip(_loc3_.description,this,this["\x0e\x06"] + 30);
       }

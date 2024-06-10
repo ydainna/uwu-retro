@@ -9,7 +9,7 @@ class dofus.§\x17\x04\x19§.§\x18\x04\x04§ extends Object
       this["\x1c\x0f\x18"] = new ank.utils.ExtendedArray();
       this["\x1c\x10\x10"] = new ank.utils.ExtendedArray();
       this["\x1c\x0f\x1a"] = new ank.utils.ExtendedArray();
-      this._oRanksName = new dofus.datacenter..GuildRanks();
+      this._oRanksName = new dofus.datacenter.GuildRanks();
    }
    function §\x04\x1b§()
    {

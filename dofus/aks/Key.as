@@ -12,7 +12,7 @@ class dofus.aks.Key extends dofus.aks.Handler
    {
       this.aks.send("KK" + _loc2_ + "|" + _loc3_);
    }
-   function §\x19\x16\x0b§(sExtraData)
+   function onCreate(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -25,7 +25,7 @@ class dofus.aks.Key extends dofus.aks.Handler
       var _loc3_ = !_loc2_ ? this.api.lang.getText("BAD_CODE") : this.api.lang.getText("CODE_CHANGED");
       this.api.kernel.showMessage(this.api.lang.getText("CODE"),_loc3_,"ERROR_BOX",{name:"Key"});
    }
-   function §\x19\x19\x16§()
+   function onLeave()
    {
       this.api.ui.unloadUIComponent("KeyCode");
    }

@@ -1,6 +1,6 @@
-class ank.utils.§\x17\x0e\r§ extends Object
+class ank.utils.ExtendedObject extends Object
 {
-   function §\x17\x0e\r§()
+   function ExtendedObject()
    {
       super();
       this.initialize();
@@ -16,7 +16,7 @@ class ank.utils.§\x17\x0e\r§ extends Object
       this["\x1c\r\x14"] = 0;
       this["\x17\x07\x19"]({type:"modelChanged"});
    }
-   function §\x15\x1d\x13§(§\x18\x11\x1b§, §\x18\x10\x14§)
+   function addItemAt(§\x18\x11\x1b§, §\x18\x10\x14§)
    {
       if(this["\x1c\x11\x10"][_loc2_] == undefined)
       {

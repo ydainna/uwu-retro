@@ -98,7 +98,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSummoner extends dofus.§\x18\x03\x10§
                if(_loc3_[_loc5_.t])
                {
                   this["\x1c\x0f\x13"].push({id:k,name:_loc5_.nn});
-                  this["\x1c\x0f\x14"].push(new dofus.datacenter.["\x18\x10\x15"](0,Number(k)));
+                  this["\x1c\x0f\x14"].push(new dofus.datacenter.Item(0,Number(k)));
                }
             }
          }
@@ -127,7 +127,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSummoner extends dofus.§\x18\x03\x10§
       {
          if(_loc5_[k] >= _loc6_)
          {
-            _loc4_.push(new dofus.datacenter.["\x18\x10\x15"](0,Number(k)));
+            _loc4_.push(new dofus.datacenter.Item(0,Number(k)));
          }
       }
       this["\x1d\x06\x0b"].dataProvider = _loc4_;
@@ -174,7 +174,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSummoner extends dofus.§\x18\x03\x10§
    {
       for(var i in this["\x1c\x0f\x0e"])
       {
-         var _loc2_ = dofus.datacenter.["\x18\x10\x15"](this["\x1c\x0f\x0e"][i]);
+         var _loc2_ = dofus.datacenter.Item(this["\x1c\x0f\x0e"][i]);
          this.api.network.Basics.autorisedCommand("getitem " + _loc2_.unicID + " " + _loc2_.Quantity);
       }
       this["\x1c\x0f\x0e"] = new ank.utils.ExtendedArray();
@@ -270,7 +270,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSummoner extends dofus.§\x18\x03\x10§
    }
    function dropItem(oEvent)
    {
-      var _loc3_ = dofus.datacenter.["\x18\x10\x15"](this.gapi["\x17\x16\x07"]());
+      var _loc3_ = dofus.datacenter.Item(this.gapi["\x17\x16\x07"]());
       if(_loc3_ == undefined)
       {
          return undefined;
@@ -298,12 +298,12 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemSummoner extends dofus.§\x18\x03\x10§
       var _loc0_ = null;
       if((_loc0_ = _loc2_.params.targetType) === "validateDrop")
       {
-         this.validateDrop(dofus.datacenter.["\x18\x10\x15"](_loc2_.params.item),_loc2_.value);
+         this.validateDrop(dofus.datacenter.Item(_loc2_.params.item),_loc2_.value);
       }
    }
    function selectItem(oEvent)
    {
-      var _loc3_ = dofus.datacenter.["\x18\x10\x15"](_loc2_.target.contentData);
+      var _loc3_ = dofus.datacenter.Item(_loc2_.target.contentData);
       if(_loc3_ == undefined)
       {
          this["\x18\x06\x0f"](true);

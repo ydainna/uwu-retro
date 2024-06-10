@@ -53,13 +53,13 @@ class dofus.§\x17\x04\x19§.MonsterInBidHouse
          var _loc2_ = this.api.lang["\x17\x1c\t"](this["\x1d\x1a\x05"]);
          if(dofus.datacenter.["\x18\x1d\x18"].isMiniBossCategory(_loc2_.b))
          {
-            return dofus.datacenter.["\x18\x10\x15"].TYPE_FULL_SOUL_STONE_ARCHI;
+            return dofus.datacenter.Item.TYPE_FULL_SOUL_STONE_ARCHI;
          }
          if(_loc2_.d)
          {
-            return dofus.datacenter.["\x18\x10\x15"].TYPE_FULL_SOUL_STONE_BOSS;
+            return dofus.datacenter.Item.TYPE_FULL_SOUL_STONE_BOSS;
          }
-         return dofus.datacenter.["\x18\x10\x15"].TYPE_FULL_SOUL_STONE_NORMAL;
+         return dofus.datacenter.Item.TYPE_FULL_SOUL_STONE_NORMAL;
       }
       return this._nBidHouseType;
    }

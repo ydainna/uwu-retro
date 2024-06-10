@@ -98,7 +98,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    {
       this.aks.send("Gdi" + _loc2_,false);
    }
-   function §\x19\x16\x0b§(bSuccess, sExtraData)
+   function onCreate(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -112,7 +112,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          ank.utils.Logger.err("[onCreate] Type incorrect");
          return undefined;
       }
-      this.api.datacenter.Game = new dofus.datacenter..Game();
+      this.api.datacenter.Game = new dofus.datacenter.Game();
       this.api.datacenter.Game.state = _loc5_;
       var _loc6_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
       dofus.graphics.gapi.ui["\x16\b\x1a"]["\x16\b\x1b"]["\x1a\x1d\x12"](_loc6_);
@@ -146,7 +146,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       var _loc7_ = _loc3_[3] != "0" ? true : false;
       var _loc8_ = Number(_loc3_[4]);
       var _loc9_ = Number(_loc3_[5]);
-      this.api.datacenter.Game = new dofus.datacenter..Game();
+      this.api.datacenter.Game = new dofus.datacenter.Game();
       this.api.datacenter.Game.state = _loc4_;
       this.api.datacenter.Game["\x17\x10\x02"] = _loc9_;
       var _loc10_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
@@ -529,7 +529,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    {
       this.api.gfx["\x1a\x1d\x05"](true);
       this.api.kernel.GameManager["\x16\x04\x0b"]();
-      if(dofus.Constants["\x1a\x10\x01"])
+      if(dofus.Constants.SAVING_THE_WORLD)
       {
          dofus["\x1a\x0f\x1a"].getInstance()["\x19\x07\x05"]();
       }
@@ -635,7 +635,7 @@ class dofus.aks.Game extends dofus.aks.Handler
                   _loc9_ += this.api.lang.getText("HUNT_FOUND_PART_3");
                   this.api.kernel.showMessage(undefined,_loc9_,"HUNT_CHAT",undefined,"START_CONFIRMATION");
             }
-            this.api.datacenter.Player.huntMatchmakingStatus = new dofus.datacenter..HuntMatchmakingStatus(_loc8_,_loc6_);
+            this.api.datacenter.Player.huntMatchmakingStatus = new dofus.datacenter.HuntMatchmakingStatus(_loc8_,_loc6_);
       }
    }
    function hunterAcceptPvPHunt()

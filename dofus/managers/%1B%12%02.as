@@ -20,7 +20,7 @@ class dofus.§\x18\x18\x0b§.TutorialServersManager extends dofus.§\x18\x18\x0b
    }
    function §\x19\x15\x18§(§\x18\x1b\f§)
    {
-      var _loc3_ = new dofus.datacenter..Tutorial(_loc2_);
+      var _loc3_ = new dofus.datacenter.Tutorial(_loc2_);
       this.addToQueue({object:this.api.kernel.TutorialManager,method:this.api.kernel.TutorialManager.start,params:[_loc3_]});
    }
    function §\x19\x17\b§()

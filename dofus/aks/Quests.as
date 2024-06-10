@@ -13,7 +13,7 @@ class dofus.aks.Quests extends dofus.aks.Handler
    {
       this.aks.send("QS" + _loc2_ + (_loc3_ == undefined ? "" : "|" + (_loc3_ <= 0 ? _loc3_ : "+" + _loc3_)));
    }
-   function §\x19\x19\x1c§(sExtraData)
+   function onList(sExtraData)
    {
       var _loc3_ = _loc2_;
       var _loc4_ = 0;

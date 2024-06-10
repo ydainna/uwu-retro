@@ -40,8 +40,8 @@ class dofus.§\x18\x03\x10§.gapi.ui.ItemFound extends dofus.§\x18\x03\x10§.ga
    }
    function initTexts()
    {
-      var _loc2_ = new dofus.datacenter.["\x18\x10\x15"](0,this["\x1d\x17\n"],this["\x1d\x1b\x11"]);
-      var _loc3_ = new dofus.datacenter.["\x18\x10\x15"](0,this["\x1d\x1c\x02"],1);
+      var _loc2_ = new dofus.datacenter.Item(0,this["\x1d\x17\n"],this["\x1d\x1b\x11"]);
+      var _loc3_ = new dofus.datacenter.Item(0,this["\x1d\x1c\x02"],1);
       this._ldrItem.contentPath = _loc2_.iconFile;
       this["\x1e\x0f\n"].text = this.api.lang.getText("ITEM_FOUND",[this["\x1d\x1b\x11"],_loc2_.name,_loc3_.name]);
    }

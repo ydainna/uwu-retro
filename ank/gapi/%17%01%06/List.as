@@ -113,7 +113,7 @@ class ank.gapi.§\x17\x01\x06§.List extends ank.gapi.§\x17\x01\x0f§.§\x1b\x1
       this["\x1a\x19\x10"](true);
       this["\x18\x13\x14"]();
    }
-   function §\x15\x1d\x13§(§\x19\x13\x07§, §\x19\b\x14§)
+   function addItemAt(§\x19\x13\x07§, §\x19\b\x14§)
    {
       this["\x1b\x1e\x17"].splice(_loc3_,0,{item:_loc2_,selected:false});
       this["\x1a\x19\x10"](true);

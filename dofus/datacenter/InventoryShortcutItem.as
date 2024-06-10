@@ -115,7 +115,7 @@ class dofus.§\x17\x04\x19§.InventoryShortcutItem extends Object
       {
          return this._oRealItem.params;
       }
-      return {frame:dofus.datacenter..InventoryShortcutItem.OBJI_DEFAULT_FRAME};
+      return {frame:dofus.datacenter.InventoryShortcutItem.OBJI_DEFAULT_FRAME};
    }
    function get isRealItemEquiped()
    {

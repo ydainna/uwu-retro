@@ -99,7 +99,7 @@ class dofus.§\x17\x04\x19§.Mount extends Object
    }
    function §\x1e\x19\n§()
    {
-      return dofus.datacenter.["\x18\x10\x15"]["\x17\x19\x11"](this["\x1b\x1c\x14"],undefined,true,false);
+      return dofus.datacenter.Item["\x17\x19\x11"](this["\x1b\x1c\x14"],undefined,true,false);
    }
    function §\x1a\x16\x06§(§\x16\x1e\x04§)
    {

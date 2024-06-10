@@ -481,7 +481,7 @@ if(!dofus.managers.AdminManager)
    };
    _loc1_["\x18\n\x12"] = function §\x18\n\x12§(§\x19\n\x1d§)
    {
-      this._eoHotKeysBatchNodes = new ank.utils.["\x17\x0e\r"]();
+      this._eoHotKeysBatchNodes = new ank.utils.ExtendedObject();
       var _loc3_ = false;
       while(_loc2_ != null && _loc2_ != undefined)
       {
@@ -504,7 +504,7 @@ if(!dofus.managers.AdminManager)
                {
                   if(_loc4_.attributes.type == "batch")
                   {
-                     this._eoHotKeysBatchNodes["\x15\x1d\x13"](_loc5_,_loc4_);
+                     this._eoHotKeysBatchNodes.addItemAt(_loc5_,_loc4_);
                   }
                }
                _loc4_ = _loc4_.nextSibling;

@@ -67,10 +67,10 @@ class dofus.§\x17\x04\x19§.Document extends Object
                var _loc7_ = 0;
                while(_loc6_ < _loc5_)
                {
-                  var _loc8_ = this["\x1b\x1b\x1d"].slice(_loc6_,_loc6_ + dofus.datacenter..Document["\x18\x1a\b"]);
+                  var _loc8_ = this["\x1b\x1b\x1d"].slice(_loc6_,_loc6_ + dofus.datacenter.Document["\x18\x1a\b"]);
                   _loc3_;
                   this["\x1b\x1e\n"].push({type:"index",num:_loc3_++,chapters:_loc8_});
-                  _loc6_ += dofus.datacenter..Document["\x18\x1a\b"];
+                  _loc6_ += dofus.datacenter.Document["\x18\x1a\b"];
                   _loc7_ = _loc7_ + 1;
                }
                if(_loc7_ % 2 == 0)

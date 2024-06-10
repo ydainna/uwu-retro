@@ -20,7 +20,7 @@ class dofus.§\x18\x18\x0b§.DocumentsServersManager extends dofus.§\x18\x18\x0
    }
    function §\x17\x16\x1c§(§\x18\x1b\f§)
    {
-      return new dofus.datacenter..Document(_loc2_);
+      return new dofus.datacenter.Document(_loc2_);
    }
    function §\x19\x15\x18§(§\x18\x1b\f§)
    {

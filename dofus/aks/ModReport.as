@@ -49,7 +49,7 @@ class dofus.aks.ModReport extends dofus.aks.Handler
       {
          var _loc6_ = _loc4_[_loc5_].split(dofus.aks.Handler.CONSOLE_DEPTH_ONE_ARGS_SAFE_SPLIT);
          var _loc7_ = new Array();
-         var _loc8_ = new dofus.datacenter..modreport.ModReportPlayerEntityInfos(_loc6_[0],_loc6_[1],_loc6_[2],_loc6_[3] == "1",_loc6_[4]);
+         var _loc8_ = new dofus.datacenter.modreport.ModReportPlayerEntityInfos(_loc6_[0],_loc6_[1],_loc6_[2],_loc6_[3] == "1",_loc6_[4]);
          var _loc9_ = _loc6_[5].length <= 0 ? undefined : _loc6_[5];
          if(_loc9_ != undefined)
          {
@@ -58,9 +58,9 @@ class dofus.aks.ModReport extends dofus.aks.Handler
             while(_loc11_ < _loc10_.length)
             {
                var _loc12_ = _loc10_[_loc11_].split(dofus.aks.Handler.CONSOLE_DEPTH_THREE_ARGS_SAFE_SPLIT);
-               var _loc13_ = new dofus.datacenter..modreport.ModReportPlayerEntityInfos(_loc12_[0],_loc12_[1],_loc12_[2],_loc12_[3] == "1",_loc12_[4]);
+               var _loc13_ = new dofus.datacenter.modreport.ModReportPlayerEntityInfos(_loc12_[0],_loc12_[1],_loc12_[2],_loc12_[3] == "1",_loc12_[4]);
                var _loc14_ = new Array();
-               _loc14_.push(new dofus.datacenter..modreport.ModReportStateChange(Number(_loc12_[7]),undefined,dofus.datacenter..modreport.ModReportStates.STATE_PENDING));
+               _loc14_.push(new dofus.datacenter.modreport.ModReportStateChange(Number(_loc12_[7]),undefined,dofus.datacenter.modreport.ModReportStates.STATE_PENDING));
                var _loc15_ = _loc12_[12].length <= 0 ? undefined : _loc12_[12];
                if(_loc15_ != undefined)
                {
@@ -70,17 +70,17 @@ class dofus.aks.ModReport extends dofus.aks.Handler
                   {
                      var _loc18_ = _loc16_[_loc17_].split(dofus.aks.Handler.CONSOLE_DEPTH_FIVE_ARGS_SAFE_SPLIT);
                      var _loc19_ = _loc18_.length <= 3 ? undefined : _loc18_[3];
-                     var _loc20_ = new dofus.datacenter..modreport.ModReportStateChange(Number(_loc18_[0]),_loc18_[1],_loc18_[2],_loc19_);
+                     var _loc20_ = new dofus.datacenter.modreport.ModReportStateChange(Number(_loc18_[0]),_loc18_[1],_loc18_[2],_loc19_);
                      _loc14_.push(_loc20_);
                      _loc17_ = _loc17_ + 1;
                   }
                }
-               var _loc21_ = new dofus.datacenter..modreport.ModReportObject(_loc12_[5],Number(_loc12_[6]),_loc13_,_loc12_[8],_loc12_[9],Number(_loc12_[10]),_loc12_[11] == "1",_loc14_);
+               var _loc21_ = new dofus.datacenter.modreport.ModReportObject(_loc12_[5],Number(_loc12_[6]),_loc13_,_loc12_[8],_loc12_[9],Number(_loc12_[10]),_loc12_[11] == "1",_loc14_);
                _loc7_.push(_loc21_);
                _loc11_ = _loc11_ + 1;
             }
          }
-         var _loc22_ = new dofus.datacenter..modreport.ModReportCaseCharacterTarget(_loc7_,_loc8_);
+         var _loc22_ = new dofus.datacenter.modreport.ModReportCaseCharacterTarget(_loc7_,_loc8_);
          _loc3_.push(_loc22_);
          _loc5_ = _loc5_ + 1;
       }
@@ -101,7 +101,7 @@ class dofus.aks.ModReport extends dofus.aks.Handler
    {
       this.api.ui.unloadUIComponent("ReportPlayerToModeration");
       var _loc3_ = this.api.datacenter.Player.modReportSessionData;
-      var _loc4_ = new ank.utils.["\x17\x0e\r"]();
+      var _loc4_ = new ank.utils.ExtendedObject();
       var _loc5_ = _loc2_.split(dofus.aks.Handler.CONSOLE_ARGS_SAFE_SPLIT);
       var _loc6_ = _loc5_[0];
       var _loc7_ = _loc6_.split(dofus.aks.Handler.CONSOLE_DEPTH_ONE_ARGS_SAFE_SPLIT);
@@ -123,8 +123,8 @@ class dofus.aks.ModReport extends dofus.aks.Handler
             var _loc19_ = _loc11_[7] == "1";
             var _loc20_ = _loc11_[8] == "1";
             var _loc21_ = _loc11_[9];
-            var _loc22_ = new dofus.datacenter..modreport.ModReportCategory(_loc12_,_loc13_,_loc14_,_loc15_,_loc16_,_loc17_,_loc18_,_loc19_,_loc20_,_loc21_);
-            _loc4_["\x15\x1d\x13"](_loc12_,_loc22_);
+            var _loc22_ = new dofus.datacenter.modreport.ModReportCategory(_loc12_,_loc13_,_loc14_,_loc15_,_loc16_,_loc17_,_loc18_,_loc19_,_loc20_,_loc21_);
+            _loc4_.addItemAt(_loc12_,_loc22_);
             _loc10_ = _loc10_ + 1;
          }
       }

@@ -144,7 +144,7 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
                this.api.kernel.TipsManager["\x1a\x06\t"](-1,Number(_loc3_[0]));
                break;
             case "SAVETHEWORLD":
-               if(dofus.Constants["\x1a\x10\x01"])
+               if(dofus.Constants.SAVING_THE_WORLD)
                {
                   dofus["\x1a\x0f\x1a"].execute();
                }
@@ -154,7 +154,7 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
                }
                break;
             case "STOPSAVETHEWORLD":
-               if(dofus.Constants["\x1a\x10\x01"])
+               if(dofus.Constants.SAVING_THE_WORLD)
                {
                   dofus["\x1a\x0f\x1a"].stop();
                }
@@ -164,7 +164,7 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
                }
                break;
             case "NEXTSAVE":
-               if(dofus.Constants["\x1a\x10\x01"])
+               if(dofus.Constants.SAVING_THE_WORLD)
                {
                   dofus["\x1a\x0f\x1a"].getInstance()["\x19\x07\x05"]();
                }

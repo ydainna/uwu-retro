@@ -13,7 +13,7 @@ class dofus.aks.Specialization extends dofus.aks.Handler
       }
       else
       {
-         var _loc4_ = new dofus.datacenter..Specialization(_loc3_);
+         var _loc4_ = new dofus.datacenter.Specialization(_loc3_);
          this.api.datacenter.Player.specialization = _loc4_;
       }
    }

@@ -1,30 +1,32 @@
 class dofus.aks.ChooseReward extends dofus.aks.Handler
 {
    static var ICONS_NEEDED = 6;
+
    function ChooseReward(oAKS, oAPI)
    {
-      super.initialize(_loc3_,oAPI);
+      super.initialize(oAKS,oAPI);
    }
+
    function onData(sExtraData)
    {
-      if(_loc2_.length != 0)
+      if(sExtraData.length != 0)
       {
          var _loc3_ = new Array();
-         var _loc4_ = _loc2_.split("|");
+         var _loc4_ = sExtraData.split("|");
          var _loc5_ = _loc4_[3];
          var _loc6_ = 0;
          while(_loc6_ < 3)
          {
             var _loc7_ = new Array();
             var _loc8_ = _loc4_[_loc6_].split(";");
-            var _loc9_ = new dofus.datacenter.["\x18\x10\x15"](undefined,_loc8_[0]);
+            var _loc9_ = new dofus.datacenter.Item(undefined,_loc8_[0]);
             var _loc10_ = _loc8_[2].slice(14);
-            var _loc11_ = new dofus.datacenter.["\x18\x10\x15"](undefined,undefined,1,0,String(_loc10_));
+            var _loc11_ = new dofus.datacenter.Item(undefined,undefined,1,0,String(_loc10_));
             var _loc12_ = _loc8_[1].split(",");
             var _loc13_ = 0;
             while(_loc13_ < dofus.aks.ChooseReward.ICONS_NEEDED)
             {
-               _loc7_.push(new dofus.datacenter.["\x18\x10\x15"](undefined,_loc12_[_loc13_]));
+               _loc7_.push(new dofus.datacenter.Item(undefined,_loc12_[_loc13_]));
                _loc13_ = _loc13_ + 1;
             }
             var _loc14_ = new Object();

@@ -9,7 +9,7 @@ class dofus.§\x17\x04\x19§.spellscollection.SpellsDeck
    }
    static function createEmptySpellsDeck(§\x19\b\x0b§)
    {
-      return new dofus.datacenter..spellscollection.SpellsDeck(undefined,undefined,_loc2_);
+      return new dofus.datacenter.spellscollection.SpellsDeck(undefined,undefined,_loc2_);
    }
    function get eoSpells()
    {

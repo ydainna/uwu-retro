@@ -71,7 +71,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsUpgrader extends dofus.§\x18\x03\x10�
       {
          return undefined;
       }
-      var _loc3_ = dofus.datacenter.["\x18\x10\x15"](_loc2_);
+      var _loc3_ = dofus.datacenter.Item(_loc2_);
       var _loc4_ = 1;
       while(_loc4_ <= 4)
       {
@@ -87,7 +87,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsUpgrader extends dofus.§\x18\x03\x10�
       {
          return undefined;
       }
-      var _loc3_ = new dofus.datacenter.["\x18\x10\x15"](undefined,oItemToPut.unicID);
+      var _loc3_ = new dofus.datacenter.Item(undefined,oItemToPut.unicID);
       var _loc4_ = 0;
       while(_loc4_ < 3)
       {
@@ -136,7 +136,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsUpgrader extends dofus.§\x18\x03\x10�
       }
       return true;
    }
-   function §\x1c\x1d§(§\x19\x0e\x0b§)
+   function §\x1c\x1d§(nSkillId)
    {
       this["\x1d\x1c\x1c"] = Number(_loc2_);
       return this.skillId;
@@ -150,7 +150,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsUpgrader extends dofus.§\x18\x03\x10�
       {
          case this["\x1c\t\x0f"]:
             var _loc3_ = this._ctr0.contentData;
-            this.sendUpgradeCard(_loc3_ == undefined ? undefined : dofus.datacenter.["\x18\x10\x15"](_loc3_));
+            this.sendUpgradeCard(_loc3_ == undefined ? undefined : dofus.datacenter.Item(_loc3_));
             break;
          case this._btnClose:
             this["\x16\x15\n"]();
@@ -169,14 +169,14 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsUpgrader extends dofus.§\x18\x03\x10�
       var _loc0_ = null;
       if((_loc0_ = _loc2_.owner._name) === "_ivInventoryViewer")
       {
-         this.fillContainersWithCard(dofus.datacenter.["\x18\x10\x15"](_loc3_));
+         this.fillContainersWithCard(dofus.datacenter.Item(_loc3_));
       }
    }
    function over(oEvent)
    {
       if(_loc2_.target == this["\x1c\t\x0f"])
       {
-         var _loc3_ = dofus.datacenter.["\x18\x10\x15"](this._ctr0.contentData);
+         var _loc3_ = dofus.datacenter.Item(this._ctr0.contentData);
          if(_loc3_ != undefined)
          {
             var _loc4_ = this.api.datacenter.Player.ttgCollection.isOwningTtgCard(_loc3_.gfx);
@@ -207,6 +207,6 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsUpgrader extends dofus.§\x18\x03\x10�
          return undefined;
       }
       this.gapi.removeCursor();
-      this.fillContainersWithCard(dofus.datacenter.["\x18\x10\x15"](_loc3_));
+      this.fillContainersWithCard(dofus.datacenter.Item(_loc3_));
    }
 }

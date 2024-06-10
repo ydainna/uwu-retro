@@ -15,7 +15,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Exchange extends dofus.§\x18\x03\x10§.gap
    {
       if(this._currentOverContainer != undefined && this._currentOverContainer.contentData != undefined)
       {
-         return dofus.datacenter.["\x18\x10\x15"](this._currentOverContainer.contentData);
+         return dofus.datacenter.Item(this._currentOverContainer.contentData);
       }
       return undefined;
    }
@@ -349,7 +349,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Exchange extends dofus.§\x18\x03\x10§.gap
    function overItem(oEvent)
    {
       var _loc3_ = _loc2_.target;
-      var _loc4_ = dofus.datacenter.["\x18\x10\x15"](_loc3_.contentData);
+      var _loc4_ = dofus.datacenter.Item(_loc3_.contentData);
       _loc4_["\x1b\x01\b"](_loc3_,_loc4_.style);
       this._currentOverContainer = _loc3_;
    }

@@ -167,7 +167,7 @@ class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.ApiElement
       {
          return false;
       }
-      var _loc4_ = dofus.datacenter..evenemential.WorldUniqueDropState(_loc3_);
+      var _loc4_ = dofus.datacenter.evenemential.WorldUniqueDropState(_loc3_);
       return _loc4_.dropped;
    }
 }

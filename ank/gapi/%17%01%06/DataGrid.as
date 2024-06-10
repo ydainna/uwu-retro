@@ -103,9 +103,9 @@ class ank.gapi.§\x17\x01\x06§.DataGrid extends ank.gapi.§\x17\x01\x0f§.§\x1
    {
       this._lstList["\x15\x1d\x12"](_loc2_);
    }
-   function §\x15\x1d\x13§(§\x19\x13\x07§, §\x19\b\x14§)
+   function addItemAt(§\x19\x13\x07§, §\x19\b\x14§)
    {
-      this._lstList["\x15\x1d\x13"](_loc2_,_loc3_);
+      this._lstList.addItemAt(_loc2_,_loc3_);
    }
    function §\x1a\f\n§(§\x19\x13\x07§, §\x19\b\x14§)
    {

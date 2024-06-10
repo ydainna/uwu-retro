@@ -38,7 +38,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
    }
    function §\x19\x1b\x12§(sExtraData)
    {
-      var _loc3_ = new ank.utils.["\x17\x0e\r"]();
+      var _loc3_ = new ank.utils.ExtendedObject();
       var _loc4_ = _loc2_.split("|");
       var _loc5_ = Number(_loc4_[0]);
       _loc4_.shift();
@@ -64,10 +64,10 @@ class dofus.aks.Houses extends dofus.aks.Handler
          _loc15_.isHuntTargetInside = _loc13_;
          _loc15_["\x18\x0e\x17"] = _loc14_;
          _loc15_["\x18\x17\x07"] = _loc9_ == this.api.datacenter.Basics.dofusPseudo;
-         _loc3_["\x15\x1d\x13"](_loc8_,_loc15_);
+         _loc3_.addItemAt(_loc8_,_loc15_);
          _loc6_ = _loc6_ + 1;
       }
-      this.api.datacenter.Houses["\x15\x1d\x13"](_loc5_,_loc3_);
+      this.api.datacenter.Houses.addItemAt(_loc5_,_loc3_);
    }
    function §\x19\x1a\x02§(sExtraData)
    {
@@ -78,7 +78,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
       var _loc7_ = this.api.kernel.HouseManager.getHouseByInstance(_loc4_,_loc5_);
       _loc7_["\x18\x0e\x17"] = _loc6_;
    }
-   function §\x19\x16\x0b§(sExtraData)
+   function onCreate(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -138,7 +138,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
          }
       }
    }
-   function §\x19\x19\x16§()
+   function onLeave()
    {
       this.api.ui.unloadUIComponent("HouseSale");
    }

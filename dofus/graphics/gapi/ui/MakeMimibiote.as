@@ -303,7 +303,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MakeMimibiote extends dofus.§\x18\x03\x10�
          }
          return undefined;
       }
-      _loc3_ = dofus.datacenter.["\x18\x10\x15"](this.gapi["\x17\x16\x07"]());
+      _loc3_ = dofus.datacenter.Item(this.gapi["\x17\x16\x07"]());
       if(_loc3_ == undefined)
       {
          return undefined;

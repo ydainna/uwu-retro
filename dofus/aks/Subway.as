@@ -20,7 +20,7 @@ class dofus.aks.Subway extends dofus.aks.Handler
    {
       this.aks.send("Wp" + mapID);
    }
-   function §\x19\x16\x0b§(sExtraData)
+   function onCreate(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -35,7 +35,7 @@ class dofus.aks.Subway extends dofus.aks.Handler
          var _loc11_ = 0;
          while(_loc11_ < _loc10_.length)
          {
-            var _loc12_ = new dofus.datacenter..Subway(_loc10_[_loc11_],_loc9_);
+            var _loc12_ = new dofus.datacenter.Subway(_loc10_[_loc11_],_loc9_);
             if(_loc5_[_loc12_["\x16\x17\r"]] == undefined)
             {
                _loc5_[_loc12_["\x16\x17\r"]] = new ank.utils.ExtendedArray();
@@ -47,7 +47,7 @@ class dofus.aks.Subway extends dofus.aks.Handler
       }
       this.api.ui.loadUIComponent("Subway","Subway",{data:_loc5_});
    }
-   function §\x19\x19\x16§()
+   function onLeave()
    {
       this.api.ui.unloadUIComponent("Subway");
    }

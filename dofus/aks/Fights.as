@@ -55,7 +55,7 @@ class dofus.aks.Fights extends dofus.aks.Handler
          this.api.ui.getUIComponent("Banner")["\x17\x0f\x1b"] = _loc3_;
       }
    }
-   function §\x19\x19\x1c§(sExtraData)
+   function onList(sExtraData)
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = new Array();

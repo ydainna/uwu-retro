@@ -32,7 +32,7 @@ class dofus.§\x17\x04\x19§.ItemSet extends Object
    }
    function §\x1e\x19\n§()
    {
-      return dofus.datacenter.["\x18\x10\x15"]["\x17\x19\x11"](this["\x1b\x1c\x14"],undefined,true,false);
+      return dofus.datacenter.Item["\x17\x19\x11"](this["\x1b\x1c\x14"],undefined,true,false);
    }
    function initialize(§\x19\b\x0b§, §\x1a\x12\x0f§, §\x16\x02\x05§)
    {
@@ -81,7 +81,7 @@ class dofus.§\x17\x04\x19§.ItemSet extends Object
          var _loc6_ = Number(_loc3_[_loc5_]);
          if(!_global.isNaN(_loc6_))
          {
-            var _loc7_ = new dofus.datacenter.["\x18\x10\x15"](0,_loc6_,1);
+            var _loc7_ = new dofus.datacenter.Item(0,_loc6_,1);
             var _loc8_ = _loc4_[_loc6_] == true;
             this["\x1b\x1d\n"].push({isEquiped:_loc8_,item:_loc7_});
          }

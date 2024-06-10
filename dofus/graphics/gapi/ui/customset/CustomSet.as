@@ -229,7 +229,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.customset.CustomSet extends dofus.§\x18\x0
       this["\x1b\x13\x1a"]();
       _loc2_.target.selected = true;
       var _loc3_ = _loc2_.target;
-      var _loc4_ = dofus.datacenter..RapidStuff(_loc3_.contentData);
+      var _loc4_ = dofus.datacenter.RapidStuff(_loc3_.contentData);
       this.onSelectedRapidStuff(_loc4_);
    }
    function onSelectedRapidStuff(oRapidStuff)

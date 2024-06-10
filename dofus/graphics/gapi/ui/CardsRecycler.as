@@ -81,14 +81,14 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsRecycler extends dofus.§\x18\x03\x10�
       for(; _loc5_ < _loc3_.length; _loc5_ = _loc5_ + 1)
       {
          var _loc6_ = _loc3_[_loc5_];
-         if(_loc6_.superType == dofus.datacenter.["\x18\x10\x15"].SUPERTYPE_TTG)
+         if(_loc6_.superType == dofus.datacenter.Item.SUPERTYPE_TTG)
          {
-            if(_loc6_.type != dofus.datacenter.["\x18\x10\x15"].TYPE_TTG_BOOSTER)
+            if(_loc6_.type != dofus.datacenter.Item.TYPE_TTG_BOOSTER)
             {
                if(_loc4_ != undefined)
                {
                   var _loc7_ = _loc4_.getTtgCard(_loc6_.gfx);
-                  if(_loc7_ != undefined && _loc7_.rarity == dofus.datacenter..ttg.TtgCard.CARD_RARITY_UNIC)
+                  if(_loc7_ != undefined && _loc7_.rarity == dofus.datacenter.ttg.TtgCard.CARD_RARITY_UNIC)
                   {
                      continue;
                   }
@@ -143,7 +143,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsRecycler extends dofus.§\x18\x03\x10�
       this._bRecyclingInProgress = true;
       this.api.network.Ttg.sendRecycleCards(_loc3_);
    }
-   function §\x1c\x1d§(§\x19\x0e\x0b§)
+   function §\x1c\x1d§(nSkillId)
    {
       this["\x1d\x1c\x1c"] = Number(_loc2_);
       return this.skillId;
@@ -253,7 +253,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsRecycler extends dofus.§\x18\x03\x10�
          }
          else
          {
-            var _loc9_ = new dofus.datacenter.["\x18\x10\x15"](_loc2_.ID,_loc2_.unicID,_loc4_,-2,_loc2_.compressedEffects);
+            var _loc9_ = new dofus.datacenter.Item(_loc2_.ID,_loc2_.unicID,_loc4_,-2,_loc2_.compressedEffects);
             _loc6_["\x1b\t\x13"](dofus.Constants["\x17\x06\x16"]);
             _loc6_.push(_loc9_);
          }
@@ -285,7 +285,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsRecycler extends dofus.§\x18\x03\x10�
          }
          else
          {
-            var _loc12_ = new dofus.datacenter.["\x18\x10\x15"](_loc2_.ID,_loc2_.unicID,_loc4_,-1,_loc2_.compressedEffects);
+            var _loc12_ = new dofus.datacenter.Item(_loc2_.ID,_loc2_.unicID,_loc4_,-1,_loc2_.compressedEffects);
             _loc5_["\x1b\t\x13"](dofus.Constants["\x17\x06\x16"]);
             _loc5_.push(_loc12_);
          }

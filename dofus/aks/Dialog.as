@@ -28,7 +28,7 @@ class dofus.aks.Dialog extends dofus.aks.Handler
          getURL("javascript:DownloadOs()","_self");
       }
    }
-   function §\x19\x16\x0b§(bSuccess, sExtraData)
+   function onCreate(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -61,7 +61,7 @@ class dofus.aks.Dialog extends dofus.aks.Handler
    {
       this.api.ui.getUIComponent("NpcDialog")["\x1a\x18\x15"]();
    }
-   function §\x19\x19\x16§()
+   function onLeave()
    {
       this.api.ui.unloadUIComponent("NpcDialog");
    }

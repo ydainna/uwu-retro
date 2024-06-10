@@ -20,7 +20,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreBuy extends dofus.§\x18\x03\x10§.
    }
    function get isFullSoul()
    {
-      return dofus.datacenter.["\x18\x10\x15"].isFullSoul(this._nCurrentTypeSelected);
+      return dofus.datacenter.Item.isFullSoul(this._nCurrentTypeSelected);
    }
    function get previousBoughtId()
    {
@@ -76,7 +76,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreBuy extends dofus.§\x18\x03\x10§.
          }
          _loc4_ = _loc4_ + 1;
       }
-      this._mcPricesGrid["\x1b\x15\x05"](new dofus.datacenter.["\x18\x10\x15"](0,_loc2_),false);
+      this._mcPricesGrid["\x1b\x15\x05"](new dofus.datacenter.Item(0,_loc2_),false);
    }
    function §\x16\x06\x04§(§\x19\x13\x07§)
    {

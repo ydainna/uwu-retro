@@ -468,7 +468,7 @@ class ank.battlefield.§\x18\x18\x16§
             {
                _loc7_[eval("\x16\x17\x16")] = _loc5_[eval("\x16\x17\x16")];
             }
-            _loc4_["\x1a\x01\x1b"]["\x15\x1d\x13"](String(_loc2_),_loc7_);
+            _loc4_["\x1a\x01\x1b"].addItemAt(String(_loc2_),_loc7_);
          }
          _loc5_["\x1b\x11\x1a"](this,_loc4_);
       }
@@ -517,7 +517,7 @@ class ank.battlefield.§\x18\x18\x16§
             {
                _loc25_[k] = _loc24_[k];
             }
-            this["\x1e\x03\b"].Map["\x1a\x01\x1b"]["\x15\x1d\x13"](_loc2_,_loc25_);
+            this["\x1e\x03\b"].Map["\x1a\x01\x1b"].addItemAt(_loc2_,_loc25_);
             _loc24_["\x19\f\x05"] = _loc5_;
          }
       }

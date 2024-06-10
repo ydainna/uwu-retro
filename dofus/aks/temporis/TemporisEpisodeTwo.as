@@ -54,7 +54,7 @@ class dofus.aks.temporis.TemporisEpisodeTwo
          }
          var _loc9_ = _loc7_[1];
          var _loc10_ = _loc7_[2].split(";");
-         var _loc11_ = new ank.utils.["\x17\x0e\r"]();
+         var _loc11_ = new ank.utils.ExtendedObject();
          var _loc12_ = 0;
          while(_loc12_ < _loc10_.length)
          {
@@ -62,10 +62,10 @@ class dofus.aks.temporis.TemporisEpisodeTwo
             var _loc14_ = new dofus.datacenter.["\x1b\x06\x06"](_loc13_.spellID);
             _loc14_.position = _loc13_.position;
             _loc14_.flags = _loc13_.flags;
-            _loc11_["\x15\x1d\x13"](_loc13_.position,_loc14_);
+            _loc11_.addItemAt(_loc13_.position,_loc14_);
             _loc12_ = _loc12_ + 1;
          }
-         var _loc15_ = new dofus.datacenter..spellscollection.SpellsDeck(_loc11_,_loc9_,_loc8_);
+         var _loc15_ = new dofus.datacenter.spellscollection.SpellsDeck(_loc11_,_loc9_,_loc8_);
          this.api.datacenter.Player.putSpellsDeck(_loc8_,_loc15_);
          _loc6_ = _loc6_ + 1;
       }
@@ -119,7 +119,7 @@ class dofus.aks.temporis.TemporisEpisodeTwo
       var _loc10_ = new dofus.datacenter.["\x1b\x06\x06"](_loc5_.spellID);
       _loc10_.position = _loc5_.position;
       _loc10_.flags = _loc5_.flags;
-      _loc7_["\x15\x1d\x13"](_loc5_.position,_loc10_);
+      _loc7_.addItemAt(_loc5_.position,_loc10_);
    }
    function onSpellsQuickEditResult(sExtraData)
    {

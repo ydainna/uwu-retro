@@ -211,7 +211,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Conquest extends dofus.§\x18\x03\x10§.gap
    }
    function rankChanged(oEvent)
    {
-      this._rRank = dofus.datacenter..Rank(_loc2_.rank);
+      this._rRank = dofus.datacenter.Rank(_loc2_.rank);
       if(this._rRank.enable && this["\x1d\x02\b"].text != undefined)
       {
          var _loc3_ = this.api.datacenter.Player.alignment.index;

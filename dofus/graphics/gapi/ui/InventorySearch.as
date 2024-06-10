@@ -97,7 +97,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.InventorySearch extends dofus.§\x18\x03\x1
       {
          if(_loc5_[k].wordCount >= _loc6_)
          {
-            _loc4_.push(new dofus.datacenter.["\x18\x10\x15"](0,Number(k),_loc5_[k].quantity));
+            _loc4_.push(new dofus.datacenter.Item(0,Number(k),_loc5_[k].quantity));
          }
       }
       this._lstItems.dataProvider = _loc4_;

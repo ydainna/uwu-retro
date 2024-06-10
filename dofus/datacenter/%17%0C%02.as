@@ -231,7 +231,7 @@ class dofus.§\x17\x04\x19§.§\x17\f\x02§ extends Object
          case 939:
          case 940:
          case 969:
-            var _loc13_ = new dofus.datacenter.["\x18\x10\x15"](-1,Number(_loc4_[2]),1,0,"",0);
+            var _loc13_ = new dofus.datacenter.Item(-1,Number(_loc4_[2]),1,0,"",0);
             _loc4_[2] = _loc13_.name;
             break;
          case 649:

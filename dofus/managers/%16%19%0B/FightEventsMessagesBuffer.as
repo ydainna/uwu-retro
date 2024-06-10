@@ -14,7 +14,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x0b§.FightEventsMessagesBuffer
       var _loc7_ = this.getFightEventMessage(nActionId);
       if(_loc7_ == undefined)
       {
-         _loc7_ = new dofus.datacenter..chat.FightEventMessage(this.api,nActionId,aPermanentArgs);
+         _loc7_ = new dofus.datacenter.chat.FightEventMessage(this.api,nActionId,aPermanentArgs);
          this._aMessagesBuffer.push(_loc7_);
       }
       _loc7_["\x15\x1e\x05"](sPlayerId,_loc6_);
@@ -54,8 +54,8 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x0b§.FightEventsMessagesBuffer
       }
       var _loc2_ = this._aMessagesBuffer;
       this._aMessagesBuffer = new Array();
-      var _loc3_ = new ank.utils.["\x17\x0e\r"]();
-      var _loc4_ = new ank.utils.["\x17\x0e\r"]();
+      var _loc3_ = new ank.utils.ExtendedObject();
+      var _loc4_ = new ank.utils.ExtendedObject();
       var _loc5_ = this.api.datacenter.Sprites;
       for(var i in _loc5_.getItems())
       {
@@ -65,11 +65,11 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x0b§.FightEventsMessagesBuffer
          {
             if(_loc7_ == 0)
             {
-               _loc3_["\x15\x1d\x13"](_loc6_.id,_loc6_);
+               _loc3_.addItemAt(_loc6_.id,_loc6_);
             }
             else if(_loc7_ == 1)
             {
-               _loc4_["\x15\x1d\x13"](_loc6_.id,_loc6_);
+               _loc4_.addItemAt(_loc6_.id,_loc6_);
             }
          }
       }

@@ -178,7 +178,7 @@ if(!dofus.aks.Items)
          }
       }
    };
-   _loc1_["\x19\x13\x1b"] = function §\x19\x13\x1b§(bSuccess, sExtraData)
+   _loc1_.onAdd = function onAdd(bSuccess, sExtraData)
    {
       if(!_loc2_)
       {
@@ -326,8 +326,8 @@ if(!dofus.aks.Items)
       var _loc7_ = _loc4_[2];
       if(_loc3_)
       {
-         var _loc8_ = new dofus.datacenter..ItemSet(_loc5_,_loc7_,_loc6_);
-         this.api.datacenter.Player["\x18\x10\x1d"]["\x15\x1d\x13"](_loc5_,_loc8_);
+         var _loc8_ = new dofus.datacenter.ItemSet(_loc5_,_loc7_,_loc6_);
+         this.api.datacenter.Player["\x18\x10\x1d"].addItemAt(_loc5_,_loc8_);
       }
       else
       {
@@ -358,7 +358,7 @@ if(!dofus.aks.Items)
             var _loc13_ = !_global.isNaN(Number(_loc10_[2])) ? Number(_loc10_[2]) : undefined;
             var _loc14_ = !_global.isNaN(Number(_loc10_[3])) ? Number(_loc10_[3]) : undefined;
             var _loc15_ = {name:"UseItem",listener:this,params:{objectID:_loc11_,spriteID:_loc12_,cellID:_loc13_}};
-            var _loc16_ = new dofus.datacenter.["\x18\x10\x15"](-1,_loc14_,1,0,"",0);
+            var _loc16_ = new dofus.datacenter.Item(-1,_loc14_,1,0,"",0);
             this.api.kernel.showMessage(undefined,this.api.lang.getText("ITEM_USE_CONFIRMATION",[_loc16_.name]),"CAUTION_YESNO",_loc15_);
       }
    };

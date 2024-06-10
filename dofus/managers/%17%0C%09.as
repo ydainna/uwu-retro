@@ -253,7 +253,7 @@ class dofus.§\x18\x18\x0b§.§\x17\f\t§ extends dofus.utils.ApiElement
                         _loc14_ = _loc14_ != "1" ? _loc3_.lang.getText("DO_NOT_OWN_HOUSE") : _loc3_.lang.getText("OWN_HOUSE");
                         break;
                      }
-                     var _loc17_ = new dofus.datacenter.["\x18\x10\x15"](-1,Number(_loc14_),1,0,"",0);
+                     var _loc17_ = new dofus.datacenter.Item(-1,Number(_loc14_),1,0,"",0);
                      _loc14_ = _loc17_.name;
                      break;
                }

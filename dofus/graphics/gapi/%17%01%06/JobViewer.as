@@ -72,7 +72,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.JobViewer extends dofus.§\x1
       {
          this["\x1c\x1c\x02"]._visible = false;
          this["\x1c\x11\x13"]._visible = true;
-         var _loc4_ = dofus.datacenter.["\x18\x10\x15"](this.api.datacenter.Player.Inventory.findFirstItem("position",1).item);
+         var _loc4_ = dofus.datacenter.Item(this.api.datacenter.Player.Inventory.findFirstItem("position",1).item);
          this["\x1c\x11\x13"]["\x18\x10\x17"] = _loc4_;
       }
       else

@@ -127,8 +127,8 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Card extends dofus.§\x18\x03
       {
          this._lblCardNameNotUnlocked.text = "#" + this.ID + " " + this.name + "\n\n" + this.api.lang.getText("RARITY") + " : " + this.rarity;
          this._lblCardNameNotUnlocked.styleName = "BrownCenterMediumBoldCardLabel";
-         var _loc2_ = new dofus.datacenter..ttg.TtgCard(this.ID,false);
-         var _loc3_ = dofus.datacenter.["\x18\x10\x15"](this.api.datacenter.Player.Inventory.findFirstItem("unicID",_loc2_.correspondingItemID).item);
+         var _loc2_ = new dofus.datacenter.ttg.TtgCard(this.ID,false);
+         var _loc3_ = dofus.datacenter.Item(this.api.datacenter.Player.Inventory.findFirstItem("unicID",_loc2_.correspondingItemID).item);
          if(_loc3_ != undefined)
          {
             this._mcInventory._visible = true;
@@ -142,13 +142,13 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Card extends dofus.§\x18\x03
    {
       switch(this.rarity)
       {
-         case dofus.datacenter..ttg.TtgCard.CARD_RARITY_COMMON:
+         case dofus.datacenter.ttg.TtgCard.CARD_RARITY_COMMON:
             return 119;
-         case dofus.datacenter..ttg.TtgCard.CARD_RARITY_RARE:
+         case dofus.datacenter.ttg.TtgCard.CARD_RARITY_RARE:
             return 120;
-         case dofus.datacenter..ttg.TtgCard.CARD_RARITY_EPIC:
+         case dofus.datacenter.ttg.TtgCard.CARD_RARITY_EPIC:
             return 121;
-         case dofus.datacenter..ttg.TtgCard.CARD_RARITY_UNIC:
+         case dofus.datacenter.ttg.TtgCard.CARD_RARITY_UNIC:
             return 122;
          default:
       }

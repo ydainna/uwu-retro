@@ -32,6 +32,6 @@ class dofus.§\x17\x04\x19§.SpellIconProperties extends Object
    static function buildFromSpellText(oSpellText)
    {
       var _loc3_ = oSpellText.i;
-      return new dofus.datacenter..SpellIconProperties(_loc3_.up,_loc3_.b,_loc3_.pc,_loc3_.bc,_loc3_.fc);
+      return new dofus.datacenter.SpellIconProperties(_loc3_.up,_loc3_.b,_loc3_.pc,_loc3_.bc,_loc3_.fc);
    }
 }

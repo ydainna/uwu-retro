@@ -89,7 +89,7 @@ class dofus.§\x17\x04\x19§.modreport.ModReportCaseCharacterTarget
                {
                   var _loc7_ = _loc6_.lastStateChange;
                   var _loc8_ = _loc7_.state;
-                  if(!(_loc8_ == dofus.datacenter..modreport.ModReportStates.STATE_INVALID || (_loc8_ == dofus.datacenter..modreport.ModReportStates.STATE_CONFIRMED || _loc8_ == dofus.datacenter..modreport.ModReportStates.STATE_IGNORED)))
+                  if(!(_loc8_ == dofus.datacenter.modreport.ModReportStates.STATE_INVALID || (_loc8_ == dofus.datacenter.modreport.ModReportStates.STATE_CONFIRMED || _loc8_ == dofus.datacenter.modreport.ModReportStates.STATE_IGNORED)))
                   {
                      if(_loc8_ != sNewState)
                      {

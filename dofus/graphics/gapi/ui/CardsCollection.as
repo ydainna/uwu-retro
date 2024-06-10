@@ -309,7 +309,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsCollection extends dofus.§\x18\x03\x1
    }
    function refreshTtgCollectionStatistics()
    {
-      this._ttgCollectionStats = new dofus.datacenter..ttg.TtgCollectionStats(this._ttgCollection);
+      this._ttgCollectionStats = new dofus.datacenter.ttg.TtgCollectionStats(this._ttgCollection);
       var ref = this;
       this.applyTtgCollectionMinMaxStatisticString("TOTAL_CARDS_OWNED",function()
       {
@@ -491,7 +491,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsCollection extends dofus.§\x18\x03\x1
          {
             if(this._sPlayerID == this.api.datacenter.Player.ID && !_loc3_.owned)
             {
-               var _loc4_ = dofus.datacenter.["\x18\x10\x15"](this.api.datacenter.Player.Inventory.findFirstItem("unicID",_loc3_.correspondingItemID).item);
+               var _loc4_ = dofus.datacenter.Item(this.api.datacenter.Player.Inventory.findFirstItem("unicID",_loc3_.correspondingItemID).item);
                if(_loc4_ != undefined)
                {
                   this.api.network.Items.use(_loc4_.ID);
@@ -543,7 +543,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsCollection extends dofus.§\x18\x03\x1
             var _loc5_ = _loc3_.contentData;
             if(Key.isDown(dofus.Constants["\x16\x19\x13"]))
             {
-               this.api.kernel.GameManager["\x18\n\x1d"](new dofus.datacenter.["\x18\x10\x15"](-1,_loc5_.correspondingItemID));
+               this.api.kernel.GameManager["\x18\n\x1d"](new dofus.datacenter.Item(-1,_loc5_.correspondingItemID));
                return undefined;
             }
             break;
@@ -625,7 +625,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsCollection extends dofus.§\x18\x03\x1
                var _loc8_ = false;
                if(this._sPlayerID == this.api.datacenter.Player.ID)
                {
-                  var _loc9_ = dofus.datacenter.["\x18\x10\x15"](this.api.datacenter.Player.Inventory.findFirstItem("unicID",_loc7_.correspondingItemID).item);
+                  var _loc9_ = dofus.datacenter.Item(this.api.datacenter.Player.Inventory.findFirstItem("unicID",_loc7_.correspondingItemID).item);
                   if(_loc9_ != undefined)
                   {
                      _loc8_ = true;

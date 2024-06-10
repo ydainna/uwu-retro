@@ -34,17 +34,17 @@ class dofus.§\x18\x03\x10§.gapi.ui.nmr.ModReportObjectItem extends ank.gapi.§
          }
          switch(_loc4_.currentState)
          {
-            case dofus.datacenter..modreport.ModReportStates.STATE_CONFIRMED:
+            case dofus.datacenter.modreport.ModReportStates.STATE_CONFIRMED:
                this._ldrCurrentState.contentPath = "NewValid";
                break;
-            case dofus.datacenter..modreport.ModReportStates.STATE_INVALID:
+            case dofus.datacenter.modreport.ModReportStates.STATE_INVALID:
                this._ldrCurrentState.contentPath = "NewCross";
                break;
-            case dofus.datacenter..modreport.ModReportStates.STATE_STUDYING:
+            case dofus.datacenter.modreport.ModReportStates.STATE_STUDYING:
                this._ldrCurrentState.contentPath = "Loupe";
                break;
-            case dofus.datacenter..modreport.ModReportStates.STATE_PENDING:
-            case dofus.datacenter..modreport.ModReportStates.STATE_IGNORED:
+            case dofus.datacenter.modreport.ModReportStates.STATE_PENDING:
+            case dofus.datacenter.modreport.ModReportStates.STATE_IGNORED:
                this._ldrCurrentState.contentPath = "";
          }
       }
