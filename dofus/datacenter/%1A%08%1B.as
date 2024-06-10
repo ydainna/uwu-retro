@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Question extends Object
+class dofus.datacenter.Question extends Object
 {
    function Question(nQuestionID, §\x16\x05\x07§, §\x16\x04\x19§)
    {

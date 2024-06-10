@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.battlefield.SpellFullIcon extends ank.utils.§\x1a\t\t§
+class dofus.graphics.battlefield.SpellFullIcon extends ank.utils.§\x1a\t\t§
 {
    function SpellFullIcon()
    {

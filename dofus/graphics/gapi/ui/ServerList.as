@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.ServerList extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.ui.ServerList extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x10§ = "ServerList";
    static var §\x1a\x12\f§ = 500;

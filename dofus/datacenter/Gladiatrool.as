@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Gladiatrool
+class dofus.datacenter.Gladiatrool
 {
    static var aIncarnations = [12782,12783,12784,12785,12786,12787,12788,12789,12790,12791,12792,12793];
    function Gladiatrool()

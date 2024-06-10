@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.SecureCraft extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.ui.SecureCraft extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x10§ = "SecureCraft";
    static var §\x1a\n\x03§ = {ra:70,rb:0,ga:70,gb:0,ba:70,bb:0};

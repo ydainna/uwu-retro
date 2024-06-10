@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.modreport.ModReportPlayerEntityInfos
+class dofus.datacenter.modreport.ModReportPlayerEntityInfos
 {
    function ModReportPlayerEntityInfos(sCharacterID, §\x1a\x10\x15§, sAccountPseudo, bIsOnline, sContext)
    {

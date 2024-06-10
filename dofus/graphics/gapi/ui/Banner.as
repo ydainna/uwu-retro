@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.ui.Banner extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x01§ = 250;
    static var §\x16\x1b\x10§ = "Banner";
@@ -266,7 +266,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
       this.api.kernel.KeyManager.addShortcutsListener("onShortcut",this);
       this.api.kernel.KeyManager["\x15\x1d\x15"]("onKeys",this);
       this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x06\x02"]);
-      this.api.network.Game["\x19\t\f"] = -1;
+      this.api.network.Game.nLastMapIdReceived = -1;
       this._txtConsole.onSetFocus = function()
       {
          this._parent.onSetFocus();

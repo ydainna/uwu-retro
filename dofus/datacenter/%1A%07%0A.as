@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1a\x07\n§ extends Object
+class dofus.datacenter.§\x1a\x07\n§ extends Object
 {
    function §\x1a\x07\n§(§\x18\x18\r§, cost, attackNear)
    {

@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.spellscollection.SpellsDeck
+class dofus.datacenter.spellscollection.SpellsDeck
 {
    static var DECK_CAPACITY = 14;
    function SpellsDeck(eoSpells, sName, §\x19\b\x0b§)

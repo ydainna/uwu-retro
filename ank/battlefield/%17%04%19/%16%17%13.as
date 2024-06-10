@@ -1,4 +1,4 @@
-class ank.battlefield.§\x17\x04\x19§.§\x16\x17\x13§ extends Object
+class ank.battlefield.datacenter.§\x16\x17\x13§ extends Object
 {
    var §\x15\x1c\x1a§ = true;
    var §\x18\x15\x05§ = true;

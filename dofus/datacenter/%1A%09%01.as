@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1a\t\x01§
+class dofus.datacenter.§\x1a\t\x01§
 {
    function §\x1a\t\x01§(§\x19\b\x0b§, §\x16\x0b\x14§)
    {

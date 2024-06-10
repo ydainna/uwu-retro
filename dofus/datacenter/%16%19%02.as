@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x16\x19\x02§ extends dofus.§\x17\x04\x19§.§\x1a\x05\t§
+class dofus.datacenter.§\x16\x19\x02§ extends dofus.datacenter.§\x1a\x05\t§
 {
    static var MAX_NEUTRAL_RESISTANCE_MIXED = 50;
    static var MAX_EARTH_RESISTANCE_MIXED = 50;

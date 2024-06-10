@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.ui.MapExplorer extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x10§ = "MapExplorer";
    static var §\x1a\x03\x02§ = {ra:0,rb:255,ga:0,gb:102,ba:0,bb:0};

@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Challenge extends Object
+class dofus.datacenter.Challenge extends Object
 {
    function Challenge(§\x19\b\x0b§, §\x19\x07\x12§)
    {

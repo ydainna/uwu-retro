@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x15\x1b\x15§ extends Object
+class dofus.datacenter.§\x15\x1b\x15§ extends Object
 {
    function §\x15\x1b\x15§(§\x19\x10\n§, §\x19\x10\x06§, §\x19\x07\x19§)
    {

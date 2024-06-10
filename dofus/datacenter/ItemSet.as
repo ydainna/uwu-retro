@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.ItemSet extends Object
+class dofus.datacenter.ItemSet extends Object
 {
    function ItemSet(§\x19\b\x0b§, §\x1a\x12\x0f§, §\x16\x02\x05§)
    {

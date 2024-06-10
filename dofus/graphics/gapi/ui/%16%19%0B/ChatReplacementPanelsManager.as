@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x19\x0b§.ChatReplacementPanelsManager
+class dofus.graphics.gapi.ui.§\x16\x19\x0b§.ChatReplacementPanelsManager
 {
    static var NO_REPLACEMENT_PANEL = -1;
    static var MINIMAP = 0;

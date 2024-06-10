@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
+class dofus.datacenter.§\x16\x19\x0b§.FightEventMessage
 {
    static var JOIN_DELIMITER = ", ";
    function FightEventMessage(§\x16\x04\x05§, nActionId, aPermanentArgs)

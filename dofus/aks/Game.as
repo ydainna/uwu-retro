@@ -1,27 +1,32 @@
 class dofus.aks.Game extends dofus.aks.Handler
 {
-   static var §\x1b\x12\x1b§ = 1;
-   static var §\x1b\x12\x13§ = 2;
+   static var TYPE_SOLO = 1;
+   static var TYPE_FIGHT = 2;
+
    var bSubareaHasWhiteFloor = false;
-   var §\x1c\x05\x15§ = false;
-   var §\x19\t\f§ = -1;
+   var _bIsBusy = false;
+   var nLastMapIdReceived = -1;
+
    function Game(oAKS, oAPI)
    {
-      super.initialize(_loc3_,oAPI);
-      this.extendIn = new dofus.aks.extend.GameIn(_loc3_,oAPI);
+      super.initialize(oAKS,oAPI);
+      this.extendIn = new dofus.aks.extend.GameIn(oAKS,oAPI);
    }
-   function §\x1e\x1c\x1c§()
+
+   function get isBusy()
    {
-      return this["\x1c\x05\x15"];
+      return this._bIsBusy;
    }
+
    function __set__isBusy(bIsBusy)
    {
-      this["\x1c\x05\x15"] = bIsBusy;
-      return this["\x1e\x1c\x1c"]();
+      this._bIsBusy = bIsBusy;
+      return this.isBusy();
    }
+
    function create()
    {
-      this.aks.send("GC" + dofus.aks.Game["\x1b\x12\x1b"]);
+      this.aks.send("GC" + dofus.aks.Game.TYPE_SOLO);
    }
    function leave(§\x1b\b\x10§)
    {
@@ -522,7 +527,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          return undefined;
       }
       this.api.gfx["\x1a\x1d\x05"](false);
-      this["\x19\t\f"] = _global.parseInt(_loc4_,10);
+      this.nLastMapIdReceived = _global.parseInt(_loc4_,10);
       this.api.kernel.MapsServersManager["\x18\x16\f"](_loc4_,_loc5_,_loc6_);
    }
    function §\x19\x1a\x07§()

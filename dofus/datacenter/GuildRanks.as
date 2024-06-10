@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.GuildRanks
+class dofus.datacenter.GuildRanks
 {
    function GuildRanks()
    {

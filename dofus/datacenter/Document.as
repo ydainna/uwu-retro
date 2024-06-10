@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Document extends Object
+class dofus.datacenter.Document extends Object
 {
    static var §\x18\x1a\b§ = 13;
    function Document(§\x18\x1c\x04§)

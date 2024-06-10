@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.InventoryShortcutItem extends Object
+class dofus.datacenter.InventoryShortcutItem extends Object
 {
    static var OBJI_DEFAULT_FRAME = "H0";
    function InventoryShortcutItem(nGenericID, §\x19\f\r§, §\x1a\x12\x0f§)

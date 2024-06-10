@@ -1,4 +1,4 @@
-class ank.gapi.ui.FlyWindow extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x03§
+class ank.gapi.ui.FlyWindow extends ank.gapi.core.§\x1b\x13\x03§
 {
    static var §\x16\x1b\x10§ = "FlyWindow";
    function FlyWindow()

@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1b\x11\x1c§ extends Object
+class dofus.datacenter.§\x1b\x11\x1c§ extends Object
 {
    static var §\x1b\x12\x0e§ = 0;
    static var §\x1b\x12\x1d§ = 1;

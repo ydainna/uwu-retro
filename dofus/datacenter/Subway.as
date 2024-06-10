@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Subway extends dofus.§\x17\x04\x19§.§\x18\x07\b§
+class dofus.datacenter.Subway extends dofus.datacenter.§\x18\x07\b§
 {
    function Subway(§\x17\x04\x18§, cost)
    {

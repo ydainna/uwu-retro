@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.§\x16\b\x1a§.§\x16\b\x1b§
+class dofus.graphics.gapi.ui.§\x16\b\x1a§.§\x16\b\x1b§
 {
    function §\x16\b\x1b§()
    {

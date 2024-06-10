@@ -1,4 +1,4 @@
-class ank.gapi.§\x17\x01\x06§.ToolTip extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class ank.gapi.§\x17\x01\x06§.ToolTip extends ank.gapi.core.UIBasicComponent
 {
    static var §\x16\x1b\x10§ = "ToolTip";
    static var §\x18\x1b\x0b§ = 250;

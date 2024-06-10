@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.ServerInformations extends Object
+class dofus.datacenter.ServerInformations extends Object
 {
    function ServerInformations()
    {

@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x18\x1d\x18§ extends dofus.§\x17\x04\x19§.§\x1a\x05\t§
+class dofus.datacenter.§\x18\x1d\x18§ extends dofus.datacenter.§\x1a\x05\t§
 {
    static var MONSTER_CATEGORY_MINI_BOSS = 78;
    var §\x1d\x1d\x06§ = 1;

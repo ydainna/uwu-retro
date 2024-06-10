@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.TitleDisplayer extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.ui.TitleDisplayer extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x10§ = "TitleDisplayer";
    function TitleDisplayer()

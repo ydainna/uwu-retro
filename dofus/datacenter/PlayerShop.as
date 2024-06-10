@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.PlayerShop extends Object
+class dofus.datacenter.PlayerShop extends Object
 {
    function PlayerShop()
    {

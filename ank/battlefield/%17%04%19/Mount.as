@@ -1,4 +1,4 @@
-class ank.battlefield.§\x17\x04\x19§.Mount extends Object
+class ank.battlefield.datacenter.Mount extends Object
 {
    function Mount(§\x1a\x1b\x1b§, sChevauchorGfxFile)
    {

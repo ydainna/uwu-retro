@@ -17,7 +17,7 @@ class dofus.aks.Documents extends dofus.aks.Handler
          var _loc4_ = sExtraData;
          var _loc5_ = this.api.config.language;
          this.api.ui.loadUIComponent("CenterText","CenterText",{text:this.api.lang.getText("LOADING"),background:false},{bForceLoad:true});
-         this.api.kernel.DocumentsServersManager["\x18\x15\x1a"](_loc5_ + "_" + _loc4_);
+         this.api.kernel.DocumentsServersManager.loadDocument(_loc5_ + "_" + _loc4_);
       }
    }
 

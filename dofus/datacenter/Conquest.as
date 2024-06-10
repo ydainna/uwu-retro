@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Conquest extends Object
+class dofus.datacenter.Conquest extends Object
 {
    function Conquest()
    {

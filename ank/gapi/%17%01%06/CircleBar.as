@@ -1,4 +1,4 @@
-class ank.gapi.§\x17\x01\x06§.CircleBar extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class ank.gapi.§\x17\x01\x06§.CircleBar extends ank.gapi.core.UIBasicComponent
 {
    static var §\x16\x1b\x10§ = "CircleBar";
    var §\x1e\x01\x03§ = 0;

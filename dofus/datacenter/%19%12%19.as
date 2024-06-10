@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x19\x12\x19§ extends ank.battlefield.§\x17\x04\x19§.§\x1b\x07\x04§
+class dofus.datacenter.§\x19\x12\x19§ extends ank.battlefield.datacenter.§\x1b\x07\x04§
 {
    var §\x1b\x1a\x10§ = {staticL:true,staticF:true,staticR:true};
    function §\x19\x12\x19§(sID, §\x16\x1c\x16§, §\x1a\x1b\x1b§, §\x16\x17\x18§, §\x17\x07\x13§, gfxID)

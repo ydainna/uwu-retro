@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x18\x04\x05§.GuildMembersViewerMember extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class dofus.graphics.gapi.§\x17\x01\x06§.§\x18\x04\x05§.GuildMembersViewerMember extends ank.gapi.core.UIBasicComponent
 {
    var _nIconOffset = 15;
    var §\x17\x12\x1b§ = 150;

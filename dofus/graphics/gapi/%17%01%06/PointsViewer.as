@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.PointsViewer extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class dofus.graphics.gapi.§\x17\x01\x06§.PointsViewer extends ank.gapi.core.UIBasicComponent
 {
    static var §\x16\x1b\x10§ = "PointsViewer";
    function PointsViewer()

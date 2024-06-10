@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.AskSecretAnswer extends ank.gapi.ui.FlyWindow
+class dofus.graphics.gapi.ui.AskSecretAnswer extends ank.gapi.ui.FlyWindow
 {
    static var §\x16\x1b\x10§ = "AskSecretAnswer";
    var §\x18\r\x06§ = false;

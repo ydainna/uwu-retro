@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x18\x1e\t§ extends Object
+class dofus.datacenter.§\x18\x1e\t§ extends Object
 {
    function §\x18\x1e\t§(nOwner, §\x19\f\x10§, §\x19\x0e\n§, nCurrentItems, nMaxItems, §\x1a\x1c\x02§, §\x19\x13\x04§, §\x19\t\x14§, §\x19\b\n§, nInstance)
    {

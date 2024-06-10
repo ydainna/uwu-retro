@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x18\x1d\x19§ extends ank.battlefield.§\x17\x04\x19§.§\x1b\x07\x04§
+class dofus.datacenter.§\x18\x1d\x19§ extends ank.battlefield.datacenter.§\x1b\x07\x04§
 {
    var §\x1e\b\x1d§ = "static";
    var §\x1c\x01\x19§ = false;

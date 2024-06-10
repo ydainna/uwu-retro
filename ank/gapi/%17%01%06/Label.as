@@ -1,4 +1,4 @@
-class ank.gapi.§\x17\x01\x06§.Label extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class ank.gapi.§\x17\x01\x06§.Label extends ank.gapi.core.UIBasicComponent
 {
    static var §\x16\x1b\x10§ = "Label";
    var §\x1e\r\x07§ = "dynamic";

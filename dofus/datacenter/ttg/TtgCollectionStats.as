@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.ttg.TtgCollectionStats
+class dofus.datacenter.ttg.TtgCollectionStats
 {
    function TtgCollectionStats(ttgCollection)
    {

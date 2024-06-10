@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.§\x16\t\t§
+class dofus.graphics.battlefield.§\x17\t\x0b§ extends ank.battlefield.§\x16\t\t§
 {
    function §\x17\t\x0b§()
    {

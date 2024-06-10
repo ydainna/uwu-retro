@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.Options extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.ui.Options extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x10§ = "Options";
    static var §\x1a\x11\x15§ = 20;

@@ -1,4 +1,4 @@
-class ank.gapi.§\x17\x01\x06§.ColorPicker extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class ank.gapi.§\x17\x01\x06§.ColorPicker extends ank.gapi.core.UIBasicComponent
 {
    static var §\x16\x1b\x10§ = "ColorPicker";
    static var §\x18\x19\x0b§ = {matrixType:"box",x:0,y:0,w:1,h:1,r:0};

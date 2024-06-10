@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x18\x03\x1d§.GuildBoostsViewerSpell extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class dofus.graphics.gapi.§\x17\x01\x06§.§\x18\x03\x1d§.GuildBoostsViewerSpell extends ank.gapi.core.UIBasicComponent
 {
    static var §\x16\x1d\x11§ = {ra:60,rb:0,ga:60,gb:0,ba:60,bb:0};
    static var §\x19\x0b\x11§ = {ra:100,rb:0,ga:100,gb:0,ba:100,bb:0};

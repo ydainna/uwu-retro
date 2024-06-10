@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.MovableContainerBar extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.ui.MovableContainerBar extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x10§ = "MovableContainerBar";
    static var FORCE_HORIZONTAL_BAR_CONTAINERS_COUNT = 15;

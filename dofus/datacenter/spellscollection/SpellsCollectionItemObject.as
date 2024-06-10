@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.spellscollection.SpellsCollectionItemObject
+class dofus.datacenter.spellscollection.SpellsCollectionItemObject
 {
    function SpellsCollectionItemObject(§\x1a\x02\x06§)
    {

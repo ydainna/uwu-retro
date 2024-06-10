@@ -21,7 +21,7 @@ if(!dofus.graphics.gapi.ui.ForgemagusCraft)
       super();
       this._cgLocal._visible = false;
       this["\x1c\r\x05"]._visible = false;
-   } extends dofus.graphics.gapi["\x17\x01\x0f"]["\x17\t\n"];
+   } extends dofus.graphics.gapi.core["\x17\t\n"];
    var _loc1_ = dofus.graphics.gapi.ui.ForgemagusCraft = function()
    {
       super();

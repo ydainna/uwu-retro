@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1a\x14\b§ extends Object
+class dofus.datacenter.§\x1a\x14\b§ extends Object
 {
    function §\x1a\x14\b§(nTimestamp, nEventID, bTranslated, §\x1a\x11\x04§)
    {

@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.MonsterInBidHouse
+class dofus.datacenter.MonsterInBidHouse
 {
    function MonsterInBidHouse(§\x19\n\x14§, nBidHouseType)
    {

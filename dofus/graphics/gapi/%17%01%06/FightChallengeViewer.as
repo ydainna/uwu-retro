@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.FightChallengeViewer extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x03§
+class dofus.graphics.gapi.§\x17\x01\x06§.FightChallengeViewer extends ank.gapi.core.§\x1b\x13\x03§
 {
    var §\x1c\x11\x1c§ = 0;
    function FightChallengeViewer()

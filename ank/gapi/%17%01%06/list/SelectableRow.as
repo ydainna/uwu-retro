@@ -1,4 +1,4 @@
-class ank.gapi.§\x17\x01\x06§.list.SelectableRow extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class ank.gapi.§\x17\x01\x06§.list.SelectableRow extends ank.gapi.core.UIBasicComponent
 {
    var §\x1c\x03\b§ = false;
    function SelectableRow()

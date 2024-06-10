@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.TaxCollectorStorage extends dofus.§\x17\x04\x19§.§\x1a\x1c\x0e§
+class dofus.datacenter.TaxCollectorStorage extends dofus.datacenter.§\x1a\x1c\x0e§
 {
    function TaxCollectorStorage()
    {

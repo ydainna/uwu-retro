@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.modreport.ModReportStateChange
+class dofus.datacenter.modreport.ModReportStateChange
 {
    function ModReportStateChange(nCreationInstant, sIssuerAccountPseudo, §\x1b\b\x15§, sIssuerCustomNote)
    {

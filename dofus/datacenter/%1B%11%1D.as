@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1b\x11\x1d§ extends dofus.§\x17\x04\x19§.§\x1b\x11\x1c§
+class dofus.datacenter.§\x1b\x11\x1d§ extends dofus.datacenter.§\x1b\x11\x1c§
 {
    function §\x1b\x11\x1d§(sID, mLeft, §\x1b\x04\x11§, mRight, mNextBlocTrueID, mNextBlocFalseID)
    {

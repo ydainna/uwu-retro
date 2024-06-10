@@ -1,4 +1,4 @@
-class ank.gapi.§\x17\x01\x06§.MapNavigator extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x03§
+class ank.gapi.§\x17\x01\x06§.MapNavigator extends ank.gapi.core.§\x1b\x13\x03§
 {
    static var §\x16\x1b\x10§ = "MapNavigator";
    var §\x1d\x13\x0f§ = 5;

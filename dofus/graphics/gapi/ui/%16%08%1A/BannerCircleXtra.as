@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.§\x16\b\x1a§.BannerCircleXtra
+class dofus.graphics.gapi.ui.§\x16\b\x1a§.BannerCircleXtra
 {
    function BannerCircleXtra(§\x16\x04\x05§, uiBanner)
    {

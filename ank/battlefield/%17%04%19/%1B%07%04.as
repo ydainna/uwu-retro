@@ -1,4 +1,4 @@
-class ank.battlefield.§\x17\x04\x19§.§\x1b\x07\x04§ extends Object
+class ank.battlefield.datacenter.§\x1b\x07\x04§ extends Object
 {
    static var ANGELS_OF_THE_WORLD_SPRITE_ID = "999";
    static var ANGELS_OF_THE_WORLD_REPLACEMENT_SPRITE_ID = "8023";

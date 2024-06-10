@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.temporis2.T2TowerStepObject
+class dofus.datacenter.temporis2.T2TowerStepObject
 {
    function T2TowerStepObject(§\x19\b\x0b§, bIsUnlocked, bIsKeyFound, bIsCompletedByPlayer, bIsHintVisible)
    {

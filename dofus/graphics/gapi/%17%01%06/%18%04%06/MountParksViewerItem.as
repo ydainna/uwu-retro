@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x18\x04\x06§.MountParksViewerItem extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.§\x17\x01\x06§.§\x18\x04\x06§.MountParksViewerItem extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var MAX_PARK_SLOTS = 20;
    function MountParksViewerItem()

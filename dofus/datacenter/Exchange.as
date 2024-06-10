@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Exchange extends Object
+class dofus.datacenter.Exchange extends Object
 {
    var §\x1d\x18\x1a§ = 0;
    var §\x1d\x15\x17§ = 0;

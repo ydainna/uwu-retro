@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Craft extends Object
+class dofus.datacenter.Craft extends Object
 {
    function Craft(§\x19\b\x0b§, §\x1a\x02\x04§)
    {

@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.SpellsCollection extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.ui.SpellsCollection extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x10§ = "SpellsCollection";
    static var SPELLS_CATEGORY_TR2_BREED = 10;

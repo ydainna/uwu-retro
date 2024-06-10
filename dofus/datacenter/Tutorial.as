@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Tutorial extends Object
+class dofus.datacenter.Tutorial extends Object
 {
    static var §\x19\x0b\x0e§ = 0;
    static var §\x17\x0e\n§ = 1;

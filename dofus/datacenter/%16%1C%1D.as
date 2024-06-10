@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x16\x1c\x1d§ extends Object
+class dofus.datacenter.§\x16\x1c\x1d§ extends Object
 {
    static var CLOSE_COMBAT_SPELL_ID = 0;
    function §\x16\x1c\x1d§(§\x19\x13\x07§, §\x19\x05\x05§)

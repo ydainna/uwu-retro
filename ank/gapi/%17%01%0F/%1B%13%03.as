@@ -1,4 +1,4 @@
-class ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x03§ extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class ank.gapi.core.§\x1b\x13\x03§ extends ank.gapi.core.UIBasicComponent
 {
    function §\x1b\x13\x03§()
    {

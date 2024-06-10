@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.battlefield.§\x15\x1b\f§ extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class dofus.graphics.battlefield.AbstractTextOverHead extends ank.gapi.core.UIBasicComponent
 {
    static var §\x16\b\n§ = 70;
    static var §\x16\b\x0b§ = 0;
@@ -9,7 +9,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x15\x1b\f§ extends ank.gapi.§\x17\
    static var §\x17\x01\x12§ = 0;
    static var §\x1b\x19\x0b§ = 4;
    static var §\x18\x05\x14§ = 4;
-   function §\x15\x1b\f§()
+   function AbstractTextOverHead()
    {
       super();
    }
@@ -28,7 +28,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x15\x1b\f§ extends ank.gapi.§\x17\
    }
    function §\x17\t\x18§(§\x19\x10\x18§, §\x19\b\x03§, §\x19\x05\x06§)
    {
-      this["\x17\n\x0f"](this["\x1d\x11\x10"],(0 - _loc2_) / 2,0,_loc2_,_loc3_,3,_loc4_,dofus.graphics.battlefield["\x15\x1b\f"]["\x16\b\n"]);
+      this["\x17\n\x0f"](this["\x1d\x11\x10"],(0 - _loc2_) / 2,0,_loc2_,_loc3_,3,_loc4_,dofus.graphics.battlefield.AbstractTextOverHead["\x16\b\n"]);
    }
    function §\x17\n\x03§(§\x1a\x1b\x0f§, §\x19\x07\x19§)
    {

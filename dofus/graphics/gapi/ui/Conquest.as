@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.Conquest extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.ui.Conquest extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x10§ = "Conquest";
    var §\x1e\b\x19§ = "Stats";

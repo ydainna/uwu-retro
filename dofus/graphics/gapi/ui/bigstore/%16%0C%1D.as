@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.bigstore.§\x16\f\x1d§ extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class dofus.graphics.gapi.ui.bigstore.§\x16\f\x1d§ extends ank.gapi.core.UIBasicComponent
 {
    static var NUMBER_OF_PRICES = 3;
    function §\x16\f\x1d§()

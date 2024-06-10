@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.modreport.ModReportCategory extends Object
+class dofus.datacenter.modreport.ModReportCategory extends Object
 {
    static var NOT_A_CATEGORY_ID = -1;
    function ModReportCategory(§\x19\x04\x0b§, sName, §\x1a\x12\x01§, bRequiresOnlineCharacter, bRequiresOfflineCharacter, bAllowIncludeChatConversation, bForceIncludeChatConversation, bAllowIncludeCustomText, bIsFakeCategory, sFakeCategoryRedirectionText)

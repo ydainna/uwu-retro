@@ -1,4 +1,4 @@
-class ank.gapi.§\x17\x01\x06§.Button extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class ank.gapi.§\x17\x01\x06§.Button extends ank.gapi.core.UIBasicComponent
 {
    static var §\x16\x1b\x10§ = "Button";
    var §\x1c\x0b\x13§ = false;

@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.RapidStuff extends Object
+class dofus.datacenter.RapidStuff extends Object
 {
    function RapidStuff(nIcon, §\x19\b\x0b§, sName)
    {

@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x1b\x10\x02§.TimelineItem extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.§\x17\x01\x06§.§\x1b\x10\x02§.TimelineItem extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x10§ = "Timeline";
    var §\x1c\x04\x1a§ = false;

@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Job extends Object
+class dofus.datacenter.Job extends Object
 {
    function Job(§\x19\b\x0b§, §\x17\x0b\x14§, §\x1a\x01\b§)
    {

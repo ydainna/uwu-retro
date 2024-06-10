@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x17\x02\x02§.CraftViewerCraftItem extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class dofus.graphics.gapi.§\x17\x01\x06§.§\x17\x02\x02§.CraftViewerCraftItem extends ank.gapi.core.UIBasicComponent
 {
    function CraftViewerCraftItem()
    {

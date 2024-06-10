@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ListInventoryViewer extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x18\f\r§
+class dofus.graphics.gapi.§\x17\x01\x06§.ListInventoryViewer extends dofus.graphics.gapi.§\x17\x01\x06§.§\x18\f\r§
 {
    static var §\x16\x1b\x10§ = "ListInventoryViewer";
    var §\x1c\x03\x0f§ = true;

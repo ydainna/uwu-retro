@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x17\x0f\x15§ extends Object
+class dofus.datacenter.§\x17\x0f\x15§ extends Object
 {
    function §\x17\x0f\x15§(§\x18\b\f§, showTarget, targetId, basicXpBonus, teamXpBonus, basicDropBonus, teamDropBonus, state)
    {

@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.CenterInfo extends dofus.§\x18\x03\x10§.gapi.ui.CenterText
+class dofus.graphics.gapi.ui.CenterInfo extends dofus.graphics.gapi.ui.CenterText
 {
    static var §\x16\x1b\x10§ = "CenterInfo";
    function CenterInfo()

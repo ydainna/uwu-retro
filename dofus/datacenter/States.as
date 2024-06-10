@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.States
+class dofus.datacenter.States
 {
    static var STATE_TEMPORIS_1_NEW_SRAM = 1073;
    static var STATE_TEMPORIS_1_NEW_SRAM_MASS = 1074;

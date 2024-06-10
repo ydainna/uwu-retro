@@ -1,4 +1,4 @@
-class ank.gapi.§\x17\x01\x06§.List extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class ank.gapi.§\x17\x01\x06§.List extends ank.gapi.core.UIBasicComponent
 {
    static var §\x16\x1b\x10§ = "List";
    var §\x1b\x1e\x17§ = new Array();

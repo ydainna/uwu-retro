@@ -14,7 +14,7 @@ class dofus.§\x18\x18\x0b§.DocumentsServersManager extends dofus.§\x18\x18\x0
    {
       super.initialize(oAPI,"docs","docs/");
    }
-   function §\x18\x15\x1a§(sID)
+   function loadDocument(sID)
    {
       this["\x18\x15\x18"](sID + ".swf");
    }

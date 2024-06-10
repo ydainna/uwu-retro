@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.ChallengeMenu extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.ui.ChallengeMenu extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x16\x1b\x10§ = "ChallengeMenu";
    static var §\x1b\x1a\x13§ = 90;

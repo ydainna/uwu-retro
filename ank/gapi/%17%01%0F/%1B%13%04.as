@@ -1,4 +1,4 @@
-class ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§ extends ank.utils.§\x1a\t\t§
+class ank.gapi.core.UIBasicComponent extends ank.utils.§\x1a\t\t§
 {
    static var §\x16\x10\x0b§ = 1;
    static var §\x16\x10\n§ = 50;
@@ -7,7 +7,7 @@ class ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§ extends ank.utils.§\x1a\t\t§
    var §\x1c\x03\x1a§ = true;
    var _bDisabledStyle = false;
    var _bDisableClickEvents = false;
-   function §\x1b\x13\x04§()
+   function UIBasicComponent()
    {
       super();
       this.init();
@@ -76,7 +76,7 @@ class ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§ extends ank.utils.§\x1a\t\t§
       if(_loc2_.length == 0 || (_loc2_ == undefined || _loc2_ == "default"))
       {
          var _loc3_ = this._parent;
-         while(!(_loc3_ instanceof ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]) && _loc3_ != undefined)
+         while(!(_loc3_ instanceof ank.gapi.core.UIBasicComponent) && _loc3_ != undefined)
          {
             _loc3_ = _loc3_._parent;
          }
@@ -187,22 +187,22 @@ class ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§ extends ank.utils.§\x1a\t\t§
          this.createEmptyMovieClip("border_mc",0);
       }
       this.border_mc.clear();
-      this.border_mc.lineStyle(ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\x0b"],7305079,ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\n"]);
+      this.border_mc.lineStyle(ank.gapi.core.UIBasicComponent["\x16\x10\x0b"],7305079,ank.gapi.core.UIBasicComponent["\x16\x10\n"]);
       this.border_mc.lineTo(this["\x1d"],0);
-      this.border_mc.lineStyle(ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\x0b"],9542041,ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\n"]);
+      this.border_mc.lineStyle(ank.gapi.core.UIBasicComponent["\x16\x10\x0b"],9542041,ank.gapi.core.UIBasicComponent["\x16\x10\n"]);
       this.border_mc.lineTo(this["\x1d"],this["\x0e\x06"]);
-      this.border_mc.lineStyle(ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\x0b"],14015965,ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\n"]);
+      this.border_mc.lineStyle(ank.gapi.core.UIBasicComponent["\x16\x10\x0b"],14015965,ank.gapi.core.UIBasicComponent["\x16\x10\n"]);
       this.border_mc.lineTo(0,this["\x0e\x06"]);
-      this.border_mc.lineStyle(ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\x0b"],9542041,ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\n"]);
+      this.border_mc.lineStyle(ank.gapi.core.UIBasicComponent["\x16\x10\x0b"],9542041,ank.gapi.core.UIBasicComponent["\x16\x10\n"]);
       this.border_mc.lineTo(0,0);
       this.border_mc.moveTo(1,1);
-      this.border_mc.lineStyle(ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\x0b"],13290700,ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\n"]);
+      this.border_mc.lineStyle(ank.gapi.core.UIBasicComponent["\x16\x10\x0b"],13290700,ank.gapi.core.UIBasicComponent["\x16\x10\n"]);
       this.border_mc.lineTo(this["\x1d"] - 1,1);
-      this.border_mc.lineStyle(ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\x0b"],14015965,ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\n"]);
+      this.border_mc.lineStyle(ank.gapi.core.UIBasicComponent["\x16\x10\x0b"],14015965,ank.gapi.core.UIBasicComponent["\x16\x10\n"]);
       this.border_mc.lineTo(this["\x1d"] - 1,this["\x0e\x06"] - 1);
-      this.border_mc.lineStyle(ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\x0b"],15658734,ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\n"]);
+      this.border_mc.lineStyle(ank.gapi.core.UIBasicComponent["\x16\x10\x0b"],15658734,ank.gapi.core.UIBasicComponent["\x16\x10\n"]);
       this.border_mc.lineTo(1,this["\x0e\x06"] - 1);
-      this.border_mc.lineStyle(ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\x0b"],14015965,ank.gapi["\x17\x01\x0f"]["\x1b\x13\x04"]["\x16\x10\n"]);
+      this.border_mc.lineStyle(ank.gapi.core.UIBasicComponent["\x16\x10\x0b"],14015965,ank.gapi.core.UIBasicComponent["\x16\x10\n"]);
       this.border_mc.lineTo(1,1);
    }
    function §\x17\n\x0f§(§\x18\x1b\f§, §\x1b\x19\x14§, §\x1b\x1a\x14§, §\x1b\x18\x10§, §\x18\x04\x1a§, §\x1a\t\r§, c, §\x16\x03\f§, §\x1a\x0e\x18§, §\x18\x03\x0f§, §\x1a\t\x19§)

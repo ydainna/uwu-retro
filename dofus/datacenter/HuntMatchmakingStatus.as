@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.HuntMatchmakingStatus
+class dofus.datacenter.HuntMatchmakingStatus
 {
    function HuntMatchmakingStatus(§\x16\b\x0f§, sCurrentStatus)
    {

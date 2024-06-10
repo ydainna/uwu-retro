@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x1b\x07§.ChooseServerListItem extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class dofus.graphics.gapi.ui.§\x16\x1b\x07§.ChooseServerListItem extends ank.gapi.core.UIBasicComponent
 {
    function ChooseServerListItem()
    {

@@ -1,4 +1,4 @@
-class ank.battlefield.§\x17\x04\x19§.§\x18\x18\x0e§ extends Object
+class ank.battlefield.datacenter.§\x18\x18\x0e§ extends Object
 {
    function §\x18\x18\x0e§(§\x19\b\x0b§)
    {

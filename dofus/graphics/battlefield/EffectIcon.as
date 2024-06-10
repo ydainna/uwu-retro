@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.battlefield.EffectIcon extends MovieClip
+class dofus.graphics.battlefield.EffectIcon extends MovieClip
 {
    static var §\x16\x1d\x10§ = 255;
    static var §\x16\x1d\x0f§ = 16711680;

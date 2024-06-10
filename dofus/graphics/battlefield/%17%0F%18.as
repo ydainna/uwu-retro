@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.battlefield.§\x17\x0f\x18§ extends MovieClip
+class dofus.graphics.battlefield.§\x17\x0f\x18§ extends MovieClip
 {
    static var §\x18\b\n§ = 20;
    function §\x17\x0f\x18§(§\x1b\x11\x15§)

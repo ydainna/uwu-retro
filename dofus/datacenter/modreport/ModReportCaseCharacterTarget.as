@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.modreport.ModReportCaseCharacterTarget
+class dofus.datacenter.modreport.ModReportCaseCharacterTarget
 {
    function ModReportCaseCharacterTarget(aReports, targetPlayerEntityInfos)
    {

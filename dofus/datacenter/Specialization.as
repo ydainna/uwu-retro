@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Specialization extends Object
+class dofus.datacenter.Specialization extends Object
 {
    function Specialization(§\x19\b\x14§)
    {

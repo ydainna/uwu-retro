@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.ttg.TtgCardFamily
+class dofus.datacenter.ttg.TtgCardFamily
 {
    function TtgCardFamily(nFamilyID, nFamilyCompletionPercentage, nFamilyFoilCompletionPercentage)
    {

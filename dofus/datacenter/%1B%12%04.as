@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1b\x12\x04§ extends Object
+class dofus.datacenter.§\x1b\x12\x04§ extends Object
 {
    static var §\x16\x17\t§ = "TIMEOUT";
    static var §\x16\x17\b§ = "DEFAULT";

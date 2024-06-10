@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.modreport.ModReportObject
+class dofus.datacenter.modreport.ModReportObject
 {
    function ModReportObject(sUUID, §\x19\x04\x0b§, reporterPlayerEntityInfos, sChatConversation, sReporterCustomNote, nScore, bArchived, aStatesChanges)
    {

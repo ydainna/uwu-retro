@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.PopupQuantityWithDescription extends dofus.§\x18\x03\x10§.gapi.ui.PopupQuantity
+class dofus.graphics.gapi.ui.PopupQuantityWithDescription extends dofus.graphics.gapi.ui.PopupQuantity
 {
    static var §\x16\x1b\x10§ = "PopupQuantityWithDescription";
    function PopupQuantityWithDescription()

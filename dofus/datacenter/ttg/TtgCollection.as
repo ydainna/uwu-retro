@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.ttg.TtgCollection
+class dofus.datacenter.ttg.TtgCollection
 {
    function TtgCollection(sPlayerID, sUniqId, sHash)
    {

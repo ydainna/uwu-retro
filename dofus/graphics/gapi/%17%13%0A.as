@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.§\x17\x13\n§ extends ank.gapi.§\x17\x13\n§
+class dofus.graphics.gapi.§\x17\x13\n§ extends ank.gapi.§\x17\x13\n§
 {
    function §\x17\x13\n§()
    {

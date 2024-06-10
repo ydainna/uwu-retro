@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x17\t\x0f§ extends ank.battlefield.§\x17\x04\x19§.§\x18\x18\x0e§
+class dofus.datacenter.§\x17\t\x0f§ extends ank.battlefield.datacenter.§\x18\x18\x0e§
 {
    function §\x17\t\x0f§(§\x19\b\x0b§)
    {

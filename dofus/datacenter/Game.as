@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Game extends Object
+class dofus.datacenter.Game extends Object
 {
    static var §\x18\x0b\x19§ = 1;
    static var §\x18\x0b\x1b§ = 2;

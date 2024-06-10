@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Storage extends Object
+class dofus.datacenter.Storage extends Object
 {
    var §\x1c\x06\f§ = false;
    var §\x1c\x06\r§ = false;

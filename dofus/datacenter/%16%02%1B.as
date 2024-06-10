@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Alignment implements com.ankamagames.§\x18\f\x03§.§\x18\b\x07§
+class dofus.datacenter.Alignment implements com.ankamagames.§\x18\f\x03§.§\x18\b\x07§
 {
    var §\x17\x0f\x05§ = false;
    function Alignment(§\x19\b\x14§, §\x19\x10\x10§)

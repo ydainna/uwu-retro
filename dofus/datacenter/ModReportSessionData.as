@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.ModReportSessionData
+class dofus.datacenter.ModReportSessionData
 {
    static var DEFAULT_DISABLED_REASON_LANG_KEY = "ERROR_226";
    function ModReportSessionData()

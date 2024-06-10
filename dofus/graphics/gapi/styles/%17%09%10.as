@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.styles.§\x17\t\x10§ extends Object
+class dofus.graphics.gapi.styles.§\x17\t\x10§ extends Object
 {
    static var ScrollBar = {sbarrowbgcolor:10447155,sbarrowcolor:16777215,sbthumbcolor:4139540,sbtrackcolor:10447155};
    static var ItemSetToolTip = {font:"_sans",embedfonts:false,size:10,color:16692022,bold:false,italic:false,bgcolor:0,bgalpha:70};

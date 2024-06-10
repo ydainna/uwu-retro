@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Rank extends Object
+class dofus.datacenter.Rank extends Object
 {
    function Rank(§\x19\x10\x10§, §\x19\b\x04§, §\x19\x06\x04§, §\x16\x0b\t§)
    {

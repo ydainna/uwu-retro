@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1b\x0e\x15§ extends ank.battlefield.§\x17\x04\x19§.§\x1b\x07\x04§
+class dofus.datacenter.§\x1b\x0e\x15§ extends ank.battlefield.datacenter.§\x1b\x07\x04§
 {
    static var §\x1a\x01\f§ = "BlockJoiner";
    static var §\x1a\x01\x0e§ = "BlockSpectator";

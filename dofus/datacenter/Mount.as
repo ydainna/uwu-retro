@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Mount extends Object
+class dofus.datacenter.Mount extends Object
 {
    var §\x1b\x16\x13§ = false;
    function Mount(nModelID, nChevauchorGfxID, bNewBorn)

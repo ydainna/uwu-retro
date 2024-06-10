@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.battlefield.§\x17\f\f§ extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.battlefield.§\x17\f\f§ extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x18\b\n§ = 20;
    function §\x17\f\f§(§\x1a\x02\b§)

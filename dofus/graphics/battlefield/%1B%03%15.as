@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.battlefield.SmileyOverHead extends MovieClip
+class dofus.graphics.battlefield.SmileyOverHead extends MovieClip
 {
    function SmileyOverHead(nSmileyID)
    {

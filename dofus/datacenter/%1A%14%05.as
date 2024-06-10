@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1a\x14\x05§
+class dofus.datacenter.§\x1a\x14\x05§
 {
    static var SERVER_OFFLINE = 0;
    static var SERVER_ONLINE = 1;

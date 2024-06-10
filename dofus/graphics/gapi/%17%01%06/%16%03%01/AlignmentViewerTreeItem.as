@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentViewerTreeItem extends dofus.§\x18\x03\x10§.gapi.§\x17\x01\x0f§.§\x17\t\n§
+class dofus.graphics.gapi.§\x17\x01\x06§.§\x16\x03\x01§.AlignmentViewerTreeItem extends dofus.graphics.gapi.core.§\x17\t\n§
 {
    static var §\x17\x07\x05§ = 10;
    function AlignmentViewerTreeItem()

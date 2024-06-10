@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.ttg.TtgCard
+class dofus.datacenter.ttg.TtgCard
 {
    static var CARD_IS_NOT_VARIANT = 0;
    static var CARD_VARIANT_FOIL = 1;

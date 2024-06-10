@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.modreport.ModReportStates
+class dofus.datacenter.modreport.ModReportStates
 {
    static var STATE_PENDING = "PENDING";
    static var STATE_CONFIRMED = "CONFIRMED";

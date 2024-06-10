@@ -24,7 +24,7 @@ if(!dofus.graphics.gapi.ui.spellscollection.SpellsCollectionItem)
    {
       super();
       this.initialize();
-   } extends dofus.graphics.gapi["\x17\x01\x0f"]["\x17\t\n"];
+   } extends dofus.graphics.gapi.core["\x17\t\n"];
    var _loc1_ = dofus.graphics.gapi.ui.spellscollection.SpellsCollectionItem = function()
    {
       super();

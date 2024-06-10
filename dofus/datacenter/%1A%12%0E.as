@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1a\x12\x0e§ extends dofus.§\x17\x04\x19§.Exchange
+class dofus.datacenter.§\x1a\x12\x0e§ extends dofus.datacenter.Exchange
 {
    var §\x1d\x1b\x01§ = 0;
    var §\x1d\x1a\x1d§ = 0;

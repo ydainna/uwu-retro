@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1a\b\x19§ extends Object
+class dofus.datacenter.§\x1a\b\x19§ extends Object
 {
    function §\x1a\b\x19§(§\x19\b\x0b§, §\x16\x0b\x14§, §\x19\x0e\x14§, bAccountQuest, bRepeatableQuest)
    {

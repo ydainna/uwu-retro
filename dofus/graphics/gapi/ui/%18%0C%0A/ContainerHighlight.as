@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.§\x18\f\n§.ContainerHighlight extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class dofus.graphics.gapi.ui.§\x18\f\n§.ContainerHighlight extends ank.gapi.core.UIBasicComponent
 {
    static var §\x16\x1b\x10§ = "ContainerHighlight";
    function ContainerHighlight()

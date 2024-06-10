@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.SpellIconProperties extends Object
+class dofus.datacenter.SpellIconProperties extends Object
 {
    function SpellIconProperties(nUpFileID, nBackgroundFileID, aPrintColors, aBackgroundColors, aFrameColors)
    {

@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.Gift extends Object
+class dofus.datacenter.Gift extends Object
 {
    function Gift()
    {

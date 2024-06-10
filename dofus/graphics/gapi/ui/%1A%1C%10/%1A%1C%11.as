@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.§\x1a\x1c\x10§.§\x1a\x1c\x11§ extends ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x04§
+class dofus.graphics.gapi.ui.§\x1a\x1c\x10§.§\x1a\x1c\x11§ extends ank.gapi.core.UIBasicComponent
 {
    function §\x1a\x1c\x11§()
    {

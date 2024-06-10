@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.§\x1b\x06\x06§ extends Object
+class dofus.datacenter.§\x1b\x06\x06§ extends Object
 {
    var _nFlags = 0;
    function §\x1b\x06\x06§(§\x19\b\x0b§, §\x19\t\x0f§, §\x1a\x11\x03§)

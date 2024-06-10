@@ -1,4 +1,4 @@
-class dofus.§\x17\x04\x19§.TemporisInfos extends Object
+class dofus.datacenter.TemporisInfos extends Object
 {
    function TemporisInfos(nMaxTempokens)
    {

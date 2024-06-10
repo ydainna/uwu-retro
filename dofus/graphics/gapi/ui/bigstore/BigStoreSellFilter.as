@@ -1,4 +1,4 @@
-class dofus.§\x18\x03\x10§.gapi.ui.bigstore.BigStoreSellFilter implements dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x18\f\f§.§\x18\b\x10§
+class dofus.graphics.gapi.ui.bigstore.BigStoreSellFilter implements dofus.graphics.gapi.§\x17\x01\x06§.§\x18\f\f§.§\x18\b\x10§
 {
    var §\x1d\x19\r§ = null;
    var §\x1b\x1b\x12§ = null;

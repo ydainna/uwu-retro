@@ -115,7 +115,7 @@ class dofus.§\x18\x18\x0b§.MapsServersManager extends dofus.§\x18\x18\x0b§.�
       }
       new org.flashdevelop.utils.FlashConnect.trace("===== Build Map =====","dofus.managers.MapsServersManager::parseMap","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/MapsServersManager.as",155);
       this["\x1c\x03\x07"] = false;
-      if(this.api.network.Game["\x19\t\f"] != _loc3_ && (this.api.network.Game["\x19\t\f"] != -1 && this.api.lang.getConfigText("CHECK_MAP_FILE_ID")))
+      if(this.api.network.Game.nLastMapIdReceived != _loc3_ && (this.api.network.Game.nLastMapIdReceived != -1 && this.api.lang.getConfigText("CHECK_MAP_FILE_ID")))
       {
          new org.flashdevelop.utils.FlashConnect.trace("Donnée de map ne correspondant pas à la carte courante","dofus.managers.MapsServersManager::parseMap","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/MapsServersManager.as",162);
          this.api.gfx["\x19\x1a\x07"]();
