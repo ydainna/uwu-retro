@@ -5,16 +5,16 @@ class dofus.utils.consoleParsers.§\x15\x1b\x0b§
    }
    function §\x1e\x12\x05§()
    {
-      return this["\x1e\x02\t"];
+      return this._oAPI;
    }
    function §\x0e\x17§(§\x19\x11\x11§)
    {
-      this["\x1e\x02\t"] = _loc2_;
+      this._oAPI = _loc2_;
       return this["\x1e\x12\x05"]();
    }
    function initialize(oAPI)
    {
-      this["\x1e\x02\t"] = oAPI;
+      this._oAPI = oAPI;
       this["\x1b\x1c\b"] = new Array();
       this["\x1d\x14\x06"] = 0;
    }

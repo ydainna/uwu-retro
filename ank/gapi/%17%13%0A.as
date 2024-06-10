@@ -22,12 +22,12 @@ class ank.gapi.§\x17\x13\n§ extends ank.utils.§\x1a\t\t§
    }
    function §\x0e\x17§(oAPI)
    {
-      this["\x1e\x02\t"] = oAPI;
+      this._oAPI = oAPI;
       return this["\x1e\x12\x05"]();
    }
    function §\x1e\x12\x05§()
    {
-      return this["\x1e\x02\t"];
+      return this._oAPI;
    }
    function §\b\x0b§()
    {
@@ -334,7 +334,7 @@ class ank.gapi.§\x17\x13\n§ extends ank.utils.§\x1a\t\t§
       {
          _loc4_ = new Object();
       }
-      _loc4_.api = this["\x1e\x02\t"];
+      _loc4_.api = this._oAPI;
       _loc4_.gapi = this;
       _loc4_["\x18\x0b\x02"] = _loc3_;
       if(_loc8_)

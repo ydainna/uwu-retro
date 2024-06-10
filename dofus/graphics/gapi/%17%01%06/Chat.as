@@ -104,7 +104,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Chat extends dofus.§\x18\x03
       this._y -= _loc5_ * dofus.graphics.gapi.controls.Chat["\x1a\x01\x06"];
       this["\x1c\x07\x07"] = !_loc2_;
    }
-   function useReplacementPanel(nReplacementPanel, §\x15\x1b\t§)
+   function useReplacementPanel(nReplacementPanel, aArgs)
    {
       var _loc4_ = nReplacementPanel == dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.NO_REPLACEMENT_PANEL;
       this._chatFilters._visible = _loc4_;
@@ -114,7 +114,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Chat extends dofus.§\x18\x03
       this._mcReplacementPanelMask._visible = !_loc4_;
       this.addToQueue({object:this._replacementPanelsManager,method:this._replacementPanelsManager.changeReplacementPanel,params:[nReplacementPanel,undefined,_loc3_]});
    }
-   function useTemporaryReplacementPanel(nReplacementPanel, §\x15\x1b\t§)
+   function useTemporaryReplacementPanel(nReplacementPanel, aArgs)
    {
       this._replacementPanelsManager.currentTemporaryReplacementPanel = nReplacementPanel;
       this.addToQueue({object:this._replacementPanelsManager,method:this._replacementPanelsManager.changeReplacementPanel,params:[nReplacementPanel,undefined,_loc3_]});

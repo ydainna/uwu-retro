@@ -7,7 +7,7 @@ class dofus.§\x17\x04\x19§.§\x17\x04\x1a§ extends Object
    }
    function initialize(oAPI)
    {
-      this["\x1e\x02\t"] = oAPI;
+      this._oAPI = oAPI;
       this["Player"] = new dofus.datacenter.["\x18\x17\t"](oAPI);
       thisBasics = new dofus.datacenter.Basics();
       this["\x16\x18\x10"] = new ank.utils.ExtendedObject();
@@ -23,7 +23,7 @@ class dofus.§\x17\x04\x19§.§\x17\x04\x1a§ extends Object
    }
    function clear()
    {
-      this["Player"] = new dofus.datacenter.["\x18\x17\t"](this["\x1e\x02\t"]);
+      this["Player"] = new dofus.datacenter.["\x18\x17\t"](this._oAPI);
       thisBasics.initialize();
       this["\x16\x18\x10"] = new ank.utils.ExtendedObject();
       thisSprites = new ank.utils.ExtendedObject();

@@ -6,7 +6,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
    }
    function §\x1e\x12\x05§()
    {
-      return this["\x1e\x02\t"];
+      return this._oAPI;
    }
    function §\b\x04§()
    {
@@ -25,7 +25,7 @@ class dofus.§\x18\x03\x10§.battlefield.§\x17\t\x0b§ extends ank.battlefield.
    {
       super.initialize(_loc3_,_loc4_,_loc5_,_loc6_,oAPI);
       mx.["\x17\x0e\x06"]["\x17\x0e\x04"].initialize(this);
-      this["\x1e\x02\t"] = oAPI;
+      this._oAPI = oAPI;
    }
    function §\x15\x1e\x16§(sID, §\x1b\f\x15§, nTypePoint)
    {

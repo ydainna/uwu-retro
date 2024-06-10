@@ -732,7 +732,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this["\x1a\x06\x0b"]["\x15\x1e\b"](sID,_loc7_,_loc8_,_loc3_,nTypePoint);
    }
-   function addSpriteOverHeadItem(sID, §\x1b\x02\x18§, §\x16\x1b\x0f§, §\x15\x1b\t§, §\x19\x05\x1a§, §\x16\x0b\r§)
+   function addSpriteOverHeadItem(sID, §\x1b\x02\x18§, §\x16\x1b\x0f§, aArgs, §\x19\x05\x1a§, §\x16\x0b\r§)
    {
       var _loc8_ = this["\x1e\x03\b"]Sprites.getItemAt(sID);
       if(_loc8_ == undefined)

@@ -6,16 +6,16 @@ class ank.gapi.§\x17\x01\x0f§.§\x1b\x13\x03§ extends ank.gapi.§\x17\x01\x0f
    }
    function §\x0e\x17§(oAPI)
    {
-      this["\x1e\x02\t"] = oAPI;
+      this._oAPI = oAPI;
       return this["\x1e\x12\x05"]();
    }
    function §\x1e\x12\x05§()
    {
-      if(this["\x1e\x02\t"] == undefined)
+      if(this._oAPI == undefined)
       {
          return this._parent.api;
       }
-      return this["\x1e\x02\t"];
+      return this._oAPI;
    }
    function §\x15\x02§(§\x1b\x02\x01§)
    {

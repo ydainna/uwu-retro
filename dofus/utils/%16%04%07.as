@@ -11,12 +11,12 @@ class dofus.utils.ApiElement extends Object
    }
    function §\x0e\x17§(§\x19\x11\x11§)
    {
-      this["\x1e\x02\t"] = _loc2_;
+      this._oAPI = _loc2_;
       return this["\x1e\x12\x05"]();
    }
    function initialize(oAPI)
    {
-      this["\x1e\x02\t"] = oAPI;
+      this._oAPI = oAPI;
    }
    function §\x16\x01\x04§(§\x19\x12\x03§)
    {

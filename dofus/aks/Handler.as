@@ -6,31 +6,35 @@ class dofus.aks.Handler extends dofus.utils.ApiElement
    static var CONSOLE_DEPTH_THREE_ARGS_SAFE_SPLIT = "";
    static var CONSOLE_DEPTH_FOUR_ARGS_SAFE_SPLIT = "";
    static var CONSOLE_DEPTH_FIVE_ARGS_SAFE_SPLIT = "";
+
    function Handler()
    {
       super();
    }
-   function §\x1e\x11\x15§()
+
+   function get aks()
    {
-      return this["\x1e\x02\x06"];
+      return this._oAKS;
    }
+
    function initialize(oAKS, oAPI)
    {
       super.initialize(oAPI);
-      this["\x1e\x02\x06"] = _loc3_;
-      this["\x1e\x02\t"] = oAPI;
+      this._oAKS = _loc3_;
+      this._oAPI = oAPI;
    }
-   function getSerializedArgs(§\x15\x1b\t§)
+
+   function getSerializedArgs(aArgs)
    {
-      if(_loc2_ == undefined || _loc2_.length == 0)
+      if(aArgs == undefined || aArgs.length == 0)
       {
          return "";
       }
       var _loc3_ = new Array();
       var _loc4_ = 0;
-      while(_loc4_ < _loc2_.length)
+      while(_loc4_ < aArgs.length)
       {
-         var _loc5_ = _loc2_[_loc4_];
+         var _loc5_ = aArgs[_loc4_];
          if(_loc5_ != undefined)
          {
             if(_loc5_ == true)
