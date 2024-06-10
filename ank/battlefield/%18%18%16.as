@@ -34,7 +34,7 @@ class ank.battlefield.§\x18\x18\x16§
    }
    function get validCellsData()
    {
-      return this["\x1e\x03\b"]["\x18\x18\x0e"].validCells;
+      return this["\x1e\x03\b"].Map.validCells;
    }
    function initialize(§\x16\b\b§, c, d)
    {
@@ -45,7 +45,7 @@ class ank.battlefield.§\x18\x18\x16§
    }
    function §\x16\x14\x01§(§\x19\x13\x10§, §\x19\x04\x12§, §\x16\t\x15§)
    {
-      this["\x1e\x03\b"]["\x18\x18\x0e"] = _loc2_;
+      this["\x1e\x03\b"].Map = _loc2_;
       var _loc5_ = ank.battlefield.Constants["\x16\x18\t"];
       var _loc6_ = ank.battlefield.Constants["\x16\x17\x1d"];
       var _loc7_ = ank.battlefield.Constants["\x16\x17\x1c"];
@@ -401,7 +401,7 @@ class ank.battlefield.§\x18\x18\x16§
       {
          return undefined;
       }
-      var _loc4_ = this["\x1e\x03\b"]["\x18\x18\x0e"];
+      var _loc4_ = this["\x1e\x03\b"].Map;
       var _loc5_ = _loc4_.data;
       if(_loc2_)
       {
@@ -436,7 +436,7 @@ class ank.battlefield.§\x18\x18\x16§
          ank.utils.Logger.err("[updateCell] Cellule " + _loc2_ + " inexistante");
          return undefined;
       }
-      var _loc4_ = this["\x1e\x03\b"]["\x18\x18\x0e"];
+      var _loc4_ = this["\x1e\x03\b"].Map;
       var _loc5_ = _loc4_.data[_loc2_];
       if(!_loc5_["\x15\x1c\x1a"])
       {
@@ -507,7 +507,7 @@ class ank.battlefield.§\x18\x18\x16§
       var _loc21_ = (_loc6_ & 4) != 0;
       var _loc22_ = (_loc6_ & 2) != 0;
       var _loc23_ = (_loc6_ & 1) != 0;
-      var _loc24_ = this["\x1e\x03\b"]["\x18\x18\x0e"].data[_loc2_];
+      var _loc24_ = this["\x1e\x03\b"].Map.data[_loc2_];
       if(_loc5_ > 0)
       {
          if(_loc24_["\x19\f\x05"] == 0)
@@ -517,7 +517,7 @@ class ank.battlefield.§\x18\x18\x16§
             {
                _loc25_[k] = _loc24_[k];
             }
-            this["\x1e\x03\b"]["\x18\x18\x0e"]["\x1a\x01\x1b"]["\x15\x1d\x13"](_loc2_,_loc25_);
+            this["\x1e\x03\b"].Map["\x1a\x01\x1b"]["\x15\x1d\x13"](_loc2_,_loc25_);
             _loc24_["\x19\f\x05"] = _loc5_;
          }
       }
@@ -590,7 +590,7 @@ class ank.battlefield.§\x18\x18\x16§
          _loc24_.layerObjectExternalAutoSize = _loc3_.layerObjectExternalAutoSize;
       }
       _loc24_.layerObjectExternalData = _loc3_.layerObjectExternalData;
-      this["\x16\x14\x01"](this["\x1e\x03\b"]["\x18\x18\x0e"],_loc2_);
+      this["\x16\x14\x01"](this["\x1e\x03\b"].Map,_loc2_);
    }
    function §\x18\n\x01§(§\x19\f\x05§)
    {
@@ -602,7 +602,7 @@ class ank.battlefield.§\x18\x18\x16§
       {
          _loc2_ = Number(_loc2_);
       }
-      var _loc3_ = this["\x1e\x03\b"]["\x18\x18\x0e"];
+      var _loc3_ = this["\x1e\x03\b"].Map;
       if(_loc3_.savedBackgroundNum != undefined)
       {
          if(_loc3_.savedBackgroundNum == 0)
@@ -632,7 +632,7 @@ class ank.battlefield.§\x18\x18\x16§
       {
          _loc3_ = Number(_loc3_);
       }
-      var _loc5_ = this["\x1e\x03\b"]["\x18\x18\x0e"];
+      var _loc5_ = this["\x1e\x03\b"].Map;
       var _loc6_ = _loc5_.data;
       var _loc7_ = _loc5_["\x1a\x01\x1b"].getItemAt(String(_loc2_));
       if(_loc7_ == undefined)
@@ -681,7 +681,7 @@ class ank.battlefield.§\x18\x18\x16§
          ank.utils.Logger.err("[setObject2Frame] Cellule " + _loc2_ + " inexistante");
          return undefined;
       }
-      var _loc4_ = this["\x1e\x03\b"]["\x18\x18\x0e"].data[_loc2_];
+      var _loc4_ = this["\x1e\x03\b"].Map.data[_loc2_];
       var _loc5_ = _loc4_.mcObject2;
       if(ank.battlefield.Constants["\x1b\x17\x02"] && (ank.battlefield.Constants["\x1b\x0b\x0f"] == "explod" && !_loc5_.fullLoaded))
       {
@@ -714,7 +714,7 @@ class ank.battlefield.§\x18\x18\x16§
          ank.utils.Logger.err("[setObject2Frame] Cellule " + _loc2_ + " inexistante");
          return undefined;
       }
-      var _loc4_ = this["\x1e\x03\b"]["\x18\x18\x0e"].data[_loc2_];
+      var _loc4_ = this["\x1e\x03\b"].Map.data[_loc2_];
       var _loc5_ = _loc4_.mcObjectExternal["\x1d\x0b\b"];
       _loc5_.gotoAndStop(_loc3_);
    }
@@ -725,7 +725,7 @@ class ank.battlefield.§\x18\x18\x16§
          ank.utils.Logger.err("[setObject2State] Cellule " + _loc2_ + " inexistante");
          return undefined;
       }
-      var _loc5_ = this["\x1e\x03\b"]["\x18\x18\x0e"].data[_loc2_];
+      var _loc5_ = this["\x1e\x03\b"].Map.data[_loc2_];
       if(_loc5_.mcObject2 == this.api.gfx["\x1a\x0e\x15"])
       {
          this.api.gfx["\x19\x1a\x1b"](_loc5_.mcObject2);
@@ -736,23 +736,23 @@ class ank.battlefield.§\x18\x18\x16§
    }
    function §\x17\x14\x1c§(§\x1b\x18\n§)
    {
-      return this["\x1e\x03\b"]["\x18\x18\x0e"].data.length;
+      return this["\x1e\x03\b"].Map.data.length;
    }
    function §\x17\x14\x1d§(§\x19\x04\x12§)
    {
-      return this["\x1e\x03\b"]["\x18\x18\x0e"].data[_loc2_];
+      return this["\x1e\x03\b"].Map.data[_loc2_];
    }
    function §\x17\x15\x02§(§\x1b\x18\n§)
    {
-      return this["\x1e\x03\b"]["\x18\x18\x0e"].data;
+      return this["\x1e\x03\b"].Map.data;
    }
    function §\x18\x02\r§(§\x1b\x18\n§)
    {
-      return this["\x1e\x03\b"]["\x18\x18\x0e"].width;
+      return this["\x1e\x03\b"].Map.width;
    }
    function §\x17\x18\x0f§(§\x1b\x18\n§)
    {
-      return this["\x1e\x03\b"]["\x18\x18\x0e"].height;
+      return this["\x1e\x03\b"].Map.height;
    }
    function §\x17\x14\x1b§(§\x19\x10\x1a§, §\x19\x11\x05§)
    {
@@ -769,9 +769,9 @@ class ank.battlefield.§\x18\x18\x16§
    function §\x17\x1a\x15§(§\x19\x12\x06§)
    {
       var _loc3_ = new Array();
-      for(var i in this["\x1e\x03\b"]["\x18\x18\x0e"].data)
+      for(var i in this["\x1e\x03\b"].Map.data)
       {
-         _loc3_.push(this["\x1e\x03\b"]["\x18\x18\x0e"].data[i][_loc2_]);
+         _loc3_.push(this["\x1e\x03\b"].Map.data[i][_loc2_]);
       }
       return _loc3_;
    }
@@ -928,7 +928,7 @@ class ank.battlefield.§\x18\x18\x16§
       }
       if(this["\x1e\x05\f"][_loc5_.num] != undefined)
       {
-         var _loc6_ = this["\x1e\x03\b"]["\x18\x18\x0e"].data[_loc5_.num].mcObject2;
+         var _loc6_ = this["\x1e\x03\b"].Map.data[_loc5_.num].mcObject2;
          for(var s in _loc6_)
          {
             if(_loc6_[s] instanceof MovieClip)
@@ -958,7 +958,7 @@ class ank.battlefield.§\x18\x18\x16§
    {
       if(_loc2_ == undefined || _loc3_ == undefined)
       {
-         var _loc4_ = this.api.lang["\x17\x1b\x11"](this["\x1e\x03\b"]["\x18\x18\x0e"].id);
+         var _loc4_ = this.api.lang["\x17\x1b\x11"](this["\x1e\x03\b"].Map.id);
          if(_loc4_.p1 == undefined || _loc4_.p2 == undefined)
          {
             return undefined;

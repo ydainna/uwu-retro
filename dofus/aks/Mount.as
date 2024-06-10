@@ -82,7 +82,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
    }
    function §\x19\x1a\n§(sExtraData)
    {
-      this.api.datacenter.["\x18\x18\x0e"].resetMountPark();
+      this.api.datacenter.Map.resetMountPark();
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_.shift());
       var _loc5_ = 0;
@@ -97,8 +97,8 @@ class dofus.aks.Mount extends dofus.aks.Handler
          var _loc12_ = _loc6_[5];
          var _loc13_ = this.api.kernel.CharactersManager["\x17\x02\x0f"](_loc12_);
          var _loc14_ = Number(_loc6_[6]);
-         var _loc15_ = new dofus.datacenter.["\x18\x1e\t"](_loc7_,_loc8_,_loc9_,undefined,_loc10_,_loc11_,_loc13_,this.api.datacenter.["\x18\x18\x0e"].id,_loc4_,_loc14_);
-         this.api.datacenter.["\x18\x18\x0e"].addMountPark(_loc15_);
+         var _loc15_ = new dofus.datacenter.["\x18\x1e\t"](_loc7_,_loc8_,_loc9_,undefined,_loc10_,_loc11_,_loc13_,this.api.datacenter.Map.id,_loc4_,_loc14_);
+         this.api.datacenter.Map.addMountPark(_loc15_);
          _loc5_ = _loc5_ + 1;
       }
    }

@@ -247,7 +247,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.BigStoreSell extends dofus.§\x18\x03\x10§
       }
       return true;
    }
-   function §\x1a\x15\x01§(§\x1b\x03\x10§)
+   function §\x1a\x15\x01§(sMessage)
    {
       this._mcBuyArrow._visible = false;
       this["\x1d\x0e\x1b"]._visible = false;

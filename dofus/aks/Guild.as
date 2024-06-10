@@ -16,7 +16,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
    {
       this.aks.send("gITV",false);
    }
-   function §\x18\f\x0f§(§\x1b\x06\x1b§)
+   function §\x18\f\x0f§(sUniqId)
    {
       this.aks.send("gJR" + _loc2_);
    }
@@ -56,7 +56,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
    {
       this.aks.send("gIH",false);
    }
-   function §\x16\b\x19§(§\x1b\x06\x1b§)
+   function §\x16\b\x19§(sUniqId)
    {
       this.aks.send("gK" + _loc2_);
    }
@@ -581,13 +581,13 @@ class dofus.aks.Guild extends dofus.aks.Handler
       var _loc4_ = _loc3_[0];
       var _loc5_ = _loc3_[1];
       var _loc6_ = _loc3_[2];
-      if(this.api.kernel.ChatManager["\x18\f\x16"](_loc5_))
+      if(this.api.kernel.ChatManager.isBlacklisted(_loc5_))
       {
          this["\x1a\x0b\r"](Number(_loc4_));
          return undefined;
       }
       this.api.electron.makeNotification(this.api.lang.getText("A_INVIT_YOU_IN_GUILD",[_loc5_,_loc6_]));
-      this.api.kernel.showMessage(undefined,this.api.lang.getText("CHAT_A_INVIT_YOU_IN_GUILD",[this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc4_,_loc5_),_loc6_]),"INFO_CHAT");
+      this.api.kernel.showMessage(undefined,this.api.lang.getText("CHAT_A_INVIT_YOU_IN_GUILD",[this.api.kernel.ChatManager.getLinkName(_loc4_,_loc5_),_loc6_]),"INFO_CHAT");
       this.api.kernel.showMessage(this.api.lang.getText("GUILD"),this.api.lang.getText("A_INVIT_YOU_IN_GUILD",[_loc5_,_loc6_]),"CAUTION_YESNOIGNORE",{name:"Guild",player:_loc5_,listener:this,params:{spriteID:_loc4_,player:_loc5_}});
    }
    function §\x19\x19\x10§(sExtraData)

@@ -12,7 +12,7 @@ class ank.battlefield.§\x18\x03\x14§
    function draw(§\x16\b\x13§)
    {
       this["\x1d\x0b\x1b"] = this["\x1d\n\x06"].createEmptyMovieClip("\x18\x1b\x16",10);
-      var _loc3_ = this["\x1e\x03\b"]["\x18\x18\x0e"].data;
+      var _loc3_ = this["\x1e\x03\b"].Map.data;
       var _loc4_ = ank.battlefield.Constants["\x16\x17\x1b"];
       var _loc6_ = new Object();
       this["\x1d\x0b\x1b"].lineStyle(1,ank.battlefield.Constants["\x18\x03\x16"],ank.battlefield.Constants["\x18\x03\x15"]);
@@ -33,7 +33,7 @@ class ank.battlefield.§\x18\x03\x14§
             }
          }
       }
-      var _loc7_ = this["\x1e\x03\b"]["\x18\x18\x0e"].width;
+      var _loc7_ = this["\x1e\x03\b"].Map.width;
       var _loc8_ = [0 - _loc7_,0 - (_loc7_ - 1)];
       for(var k in _loc6_)
       {

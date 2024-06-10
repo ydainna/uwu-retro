@@ -20,7 +20,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MountParkSale extends dofus.§\x18\x03\x10�
    }
    function createChildren()
    {
-      this["\x1e\x04\x12"] = this.api.datacenter.["\x18\x18\x0e"].getMountPark(this.instance);
+      this["\x1e\x04\x12"] = this.api.datacenter.Map.getMountPark(this.instance);
       this.addToQueue({object:this,method:this.addListeners});
       this.addToQueue({object:this,method:this.initData});
       this.addToQueue({object:this,method:this.initTexts});

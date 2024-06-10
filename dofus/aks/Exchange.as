@@ -200,12 +200,12 @@ class dofus.aks.Exchange extends dofus.aks.Handler
          else
          {
             var _loc12_ = this.api.datacenter.Sprites.getItemAt(_loc5_);
-            if(this.api.kernel.ChatManager["\x18\f\x16"](_loc12_.name))
+            if(this.api.kernel.ChatManager.isBlacklisted(_loc12_.name))
             {
                this["\x18\x13\x1d"]();
                return undefined;
             }
-            this.api.kernel.showMessage(undefined,this.api.lang.getText("CHAT_A_WANT_EXCHANGE",[this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc12_.id,_loc12_.name)]),"INFO_CHAT");
+            this.api.kernel.showMessage(undefined,this.api.lang.getText("CHAT_A_WANT_EXCHANGE",[this.api.kernel.ChatManager.getLinkName(_loc12_.id,_loc12_.name)]),"INFO_CHAT");
             switch(_loc7_)
             {
                case 1:
@@ -646,10 +646,10 @@ class dofus.aks.Exchange extends dofus.aks.Handler
                switch(_loc9_)
                {
                   case "T":
-                     this.api.kernel.showMessage(undefined,this.api.kernel.ChatManager["\x1a\x03\x19"](this.api.lang.getText("CRAFT_SUCCESS_TARGET",[_loc10_]),_loc13_),"INFO_CHAT");
+                     this.api.kernel.showMessage(undefined,this.api.kernel.ChatManager.parseInlineItems(this.api.lang.getText("CRAFT_SUCCESS_TARGET",[_loc10_]),_loc13_),"INFO_CHAT");
                      break loop0;
                   case "B":
-                     this.api.kernel.showMessage(undefined,this.api.kernel.ChatManager["\x1a\x03\x19"](this.api.lang.getText("CRAFT_SUCCESS_OTHER",[_loc10_]),_loc13_),"INFO_CHAT");
+                     this.api.kernel.showMessage(undefined,this.api.kernel.ChatManager.parseInlineItems(this.api.lang.getText("CRAFT_SUCCESS_OTHER",[_loc10_]),_loc13_),"INFO_CHAT");
                }
             }
       }
@@ -790,7 +790,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             if(_loc7_)
             {
                var _loc14_ = _loc12_.item;
-               var _loc15_ = new dofus.datacenter.["\x18\x10\x15"](_loc9_,_loc14_.unicID,_loc10_,-2,_loc14_["\x16\x1e\x05"]);
+               var _loc15_ = new dofus.datacenter.["\x18\x10\x15"](_loc9_,_loc14_.unicID,_loc10_,-2,_loc14_.compressedEffects);
                var _loc16_ = -1;
                var _loc17_ = _loc11_.item.Quantity - _loc10_;
                if(_loc17_ == 0)

@@ -1,7 +1,7 @@
 class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.ApiElement
 {
    static var DISPLAY_STYLE_WIDESCREEN_PANELS = "widescreenpanels";
-   static var §\x17\x06\x10§ = {loaded:true,Grid:false,Transparency:false,SpriteInfos:true,SpriteMove:true,MapInfos:true,AutoHideSmileys:false,StringCourse:true,ColorfulTactic:true,PointsOverHead:true,ChatEffects:true,CreaturesMode:50,Buff:true,GuildMessageSound:false,BannerShortcuts:true,StartTurnSound:true,TipsOnStart:true,DisplayStyle:"normal",DebugSizeIndex:0,ServerPortIndex:0,MovableBar:false,ViewAllMonsterInGroup:true,MovableBarSize:5,ShortcutSet:1,ShortcutSetDefault:1,CharacterPreview:true,MapFilters:[0,1,1,1,1,1,1],Aura:true,AudioMusicVol:60,AudioEffectVol:100,AudioEnvVol:60,AudioMusicMute:false,AudioEffectMute:false,AudioEnvMute:false,FloatingTipsCoord:new com.ankamagames.types["\x1a\x06\x02"](415,30),DisplayingFreshTips:true,CensorshipFilter:true,BigStoreSellFilter:false,RememberAccountName:false,LastAccountNameUsed:"",DefaultQuality:"high",ConquestFilter:-2,FightGroupAutoLock:false,BannerIllustrationMode:"artwork",BannerGaugeMode:"xp",AskForWrongCraft:true,AdvancedLineOfSight:true,RemindTurnTime:true,HideSpellBar:false,SeeAllSpell:true,UseSpeakingItems:true,ConfirmDropItem:true,TimestampInChat:true,ViewDicesDammages:false,AnonymousGameEvents:false,NightMode:true,SeeDamagesColor:true,RemasteredSpellIconsPack:1,EnableWidescreenPanels:true,chatReplacementPanel:dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.MINIMAP,UseLightEndFightUI:false,RegroupDamage:true,StylePoint:1,ViewHPAsBar:true,AnimateHPBar:true};
+   static var §\x17\x06\x10§ = {loaded:true,Grid:false,Transparency:false,SpriteInfos:true,SpriteMove:true,MapInfos:true,AutoHideSmileys:false,StringCourse:true,ColorfulTactic:true,PointsOverHead:true,ChatEffects:true,CreaturesMode:50,Buff:true,GuildMessageSound:false,BannerShortcuts:true,StartTurnSound:true,TipsOnStart:true,DisplayStyle:"normal",DebugSizeIndex:0,ServerPortIndex:0,MovableBar:false,ViewAllMonsterInGroup:true,MovableBarSize:5,ShortcutSet:1,ShortcutSetDefault:1,CharacterPreview:true,MapFilters:[0,1,1,1,1,1,1],Aura:true,AudioMusicVol:60,AudioEffectVol:100,AudioEnvVol:60,AudioMusicMute:false,AudioEffectMute:false,AudioEnvMute:false,FloatingTipsCoord:new com.ankamagames.types["\x1a\x06\x02"](415,30),DisplayingFreshTips:true,CensorshipFilter:true,BigStoreSellFilter:false,RememberAccountName:false,LastAccountNameUsed:"",DefaultQuality:"high",ConquestFilter:-2,FightGroupAutoLock:false,BannerIllustrationMode:"artwork",BannerGaugeMode:"xp",AskForWrongCraft:true,AdvancedLineOfSight:true,RemindTurnTime:true,HideSpellBar:false,SeeAllSpell:true,UseSpeakingItems:true,ConfirmDropItem:true,TimestampInChat:true,ViewDicesDammages:false,AnonymousGameEvents:false,NightMode:true,SeeDamagesColor:true,RemasteredSpellIconsPack:1,EnableWidescreenPanels:true,chatReplacementPanel:dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.MINIMAP,UseLightEndFightUI:false,RegroupDamage:true,StylePoint:1,ViewHPAsBar:true,AnimateHPBar:true};
    static var OPTION_SPELL_PACK_REMASTERED = 1;
    static var OPTION_SPELL_PACK_CONTRAST = 2;
    static var OPTION_SPELL_PACK_CLASSIC = 3;
@@ -129,7 +129,7 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.ApiElement
             {
                break;
             }
-            var _loc4_ = this.api.datacenter.["\x18\x18\x0e"];
+            var _loc4_ = this.api.datacenter.Map;
             if(_loc3_ && (_loc4_ && _loc4_.bOutdoor))
             {
                this.api.kernel.NightManager.clear();
@@ -275,15 +275,15 @@ class dofus.§\x18\x18\x0b§.§\x1a\x01\t§ extends dofus.utils.ApiElement
       var _loc2_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
       if(_loc2_ != undefined)
       {
-         var _loc3_ = _loc2_["\x16\x19\x0b"].replacementPanelsManager;
-         if(_loc3_.currentReplacementPanel == dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.SHORTCUTS)
+         var _loc3_ = _loc2_.chat.replacementPanelsManager;
+         if(_loc3_.currentReplacementPanel == dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.SHORTCUTS)
          {
-            _loc3_.changeReplacementPanel(dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.MINIMAP,true);
+            _loc3_.changeReplacementPanel(dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.MINIMAP,true);
          }
       }
-      if(this.getOption("chatReplacementPanel") == dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.SHORTCUTS)
+      if(this.getOption("chatReplacementPanel") == dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.SHORTCUTS)
       {
-         this.setOption("chatReplacementPanel",dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.MINIMAP);
+         this.setOption("chatReplacementPanel",dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.MINIMAP);
       }
    }
 }

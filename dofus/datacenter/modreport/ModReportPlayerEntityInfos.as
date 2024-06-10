@@ -1,6 +1,6 @@
 class dofus.§\x17\x04\x19§.modreport.ModReportPlayerEntityInfos
 {
-   function ModReportPlayerEntityInfos(§\x1a\x10\x12§, §\x1a\x10\x15§, sAccountPseudo, bIsOnline, sContext)
+   function ModReportPlayerEntityInfos(sCharacterID, §\x1a\x10\x15§, sAccountPseudo, bIsOnline, sContext)
    {
       this._sCharacterID = _loc2_;
       this["\x1e\b\x07"] = _loc3_;

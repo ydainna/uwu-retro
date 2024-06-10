@@ -130,7 +130,7 @@ class dofus.§\x18\x18\x0b§..TipsManager extends ank.utils.§\x1a\t\t§
    {
       if(this.api.datacenter.Basics.aks_current_map_id == _loc2_ || _loc2_ == -1)
       {
-         var _loc4_ = this.api.gfx.spriteHandler.getSprites().getItems();
+         var _loc4_ = this.api.gfx.SpriteHandler.getSprites().getItems();
          for(var k in _loc4_)
          {
             if(_loc4_[k].gfxFile == dofus.Constants["\x16\x1c\x1a"] + _loc3_ + ".swf")

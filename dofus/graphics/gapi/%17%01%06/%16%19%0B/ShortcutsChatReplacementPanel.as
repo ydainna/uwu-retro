@@ -17,7 +17,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x19\x0b§.ShortcutsCha
    }
    function §\x18\t\x04§()
    {
-      super.init(false,dofus.graphics.gapi.controls["\x16\x19\x0b"].ShortcutsChatReplacementPanel.CLASS_NAME);
+      super.init(false,dofus.graphics.gapi.controls.chat.ShortcutsChatReplacementPanel.CLASS_NAME);
       this._banner = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
       this._mouseShortcuts = this._banner["\x1a\x1c\x10"];
    }
@@ -72,7 +72,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x19\x0b§.ShortcutsCha
          var _loc2_ = 72;
          var _loc3_ = {_x:_loc2_,_y:this._mcMiniMapMask._y,contentPath:"\x18\x18\x0e",enabled:true,showHintsMaxDistance:10,customBgScaleWidth:this._mcMiniMapMask._width,customBgScaleHeight:this._mcMiniMapMask._height,customBgScaleX:0 - _loc2_,customBgScaleY:0,customBgColor:14012330};
          var _loc4_ = this.attachMovie("MiniMap","_mcMiniMap",this.getNextHighestDepth(),_loc3_);
-         _loc4_.addEventListener("click",this._banner["\x16\x19\x0b"].replacementPanelsManager);
+         _loc4_.addEventListener("click",this._banner.chat.replacementPanelsManager);
       }
       this._mcMiniMap.setMask(this._mcMiniMapMask);
    }
@@ -82,7 +82,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x19\x0b§.ShortcutsCha
    function addListeners()
    {
       var _loc2_ = 0;
-      while(_loc2_ < dofus.graphics.gapi.controls["\x16\x19\x0b"].ShortcutsChatReplacementPanel["\x18\x1a\n"])
+      while(_loc2_ < dofus.graphics.gapi.controls.chat.ShortcutsChatReplacementPanel["\x18\x1a\n"])
       {
          var _loc3_ = this["_ctr" + _loc2_];
          var _loc4_ = 15 + _loc2_;
@@ -99,7 +99,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x19\x0b§.ShortcutsCha
       }
       this._mouseShortcuts["\x1b\x14\x13"]();
       this.api.kernel.KeyManager.addShortcutsListener("onShortcut",this);
-      var §\x16\x19\x0b§ = this._banner["\x16\x19\x0b"];
+      var §\x16\x19\x0b§ = this._banner.chat;
       this._mcMiniMapMask.onRelease = function()
       {
          var _loc2_ = new Object();
@@ -110,7 +110,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x19\x0b§.ShortcutsCha
    function onShortcut(§\x1a\x1c\x0f§)
    {
       var _loc3_ = 0;
-      while(_loc3_ < dofus.graphics.gapi.controls["\x16\x19\x0b"].ShortcutsChatReplacementPanel["\x18\x1a\n"])
+      while(_loc3_ < dofus.graphics.gapi.controls.chat.ShortcutsChatReplacementPanel["\x18\x1a\n"])
       {
          if(_loc2_ == "MOVABLEBAR_SH" + _loc3_)
          {

@@ -579,7 +579,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.MiniMap extends dofus.§\x18\
    }
    function §\x1b\x14\x16§()
    {
-      this["\x1c\x0e\x18"] = this.api.datacenter.["\x18\x18\x0e"];
+      this["\x1c\x0e\x18"] = this.api.datacenter.Map;
       this._bIsInDungeon = this["\x1c\x0e\x18"].isDungeon && !this.api.datacenter.Player.isAuthorized;
       this["\x1d\x0b\x10"]._visible = !this._bIsInDungeon;
       this["\x1d\n\x11"].oMap = this["\x1c\x0e\x18"];

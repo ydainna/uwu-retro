@@ -352,7 +352,7 @@ class ank.battlefield.mc.§\x1b\x07\x04§ extends MovieClip
          this._y = _loc4_;
          this._oData.isInMove = false;
          this.setAnim(this._oData["\x17\x06\x03"]);
-         if(this.api.gfx.spriteHandler["\x18\x0f\x15"] && this.data instanceof dofus.datacenter.["\x18\x1d\x19"])
+         if(this.api.gfx.SpriteHandler["\x18\x0f\x15"] && this.data instanceof dofus.datacenter.["\x18\x1d\x19"])
          {
             this["\x1e\x07\n"](true);
          }

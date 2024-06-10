@@ -39,10 +39,10 @@ class dofus.§\x18\x18\x0b§.HousesManager extends dofus.utils.ApiElement
    function openHouseMenu(sDoorName, §\x19\b\x06§, §\x16\x06\x01§, §\x18\x1b\x10§)
    {
       sDoorName = sDoorName != undefined ? sDoorName + " " : "";
-      if(this.api.datacenter.["\x18\x18\x0e"].isMyHome)
+      if(this.api.datacenter.Map.isMyHome)
       {
          var _loc6_ = _loc3_;
-         _loc3_ = this.api.lang["\x17\x18\x19"](this.api.datacenter.["\x18\x18\x0e"].id);
+         _loc3_ = this.api.lang["\x17\x18\x19"](this.api.datacenter.Map.id);
          var _loc7_ = this.api.kernel.HouseManager.getHouseByInstance(_loc3_,_loc6_);
          this.openInstancedHouseMenu(sDoorName,_loc7_,_loc4_);
          return undefined;
@@ -113,11 +113,11 @@ class dofus.§\x18\x18\x0b§.HousesManager extends dofus.utils.ApiElement
             }
          }
       }
-      if(!this.api.datacenter.["\x18\x18\x0e"].isMyHome && _loc3_.isHuntTargetInside)
+      if(!this.api.datacenter.Map.isMyHome && _loc3_.isHuntTargetInside)
       {
          _loc8_["\x15\x1d\x12"](this.api.lang.getText("ASSAULT") + " " + this.api.lang.getText("HUNTED"),this.api.kernel.GameManager,this.api.kernel.GameManager.askAttackIndoor);
       }
-      if(this.api.datacenter.["\x18\x18\x0e"].isMyHome && (this.api.datacenter.Player.guildInfos != undefined && this.api.datacenter.Player.guildInfos["\x18\x10\n"]))
+      if(this.api.datacenter.Map.isMyHome && (this.api.datacenter.Player.guildInfos != undefined && this.api.datacenter.Player.guildInfos["\x18\x10\n"]))
       {
          _loc8_["\x15\x1d\x12"](this.api.lang.getText("GUILD_HOUSE_CONFIGURATION"),_loc3_,_loc3_.loadGuildRightsComponent,[_loc3_]);
       }

@@ -140,9 +140,9 @@ class dofus.§\x16\x1e\x1b§ extends Object
    static var §\x18\x07\x18§ = "login/xml/";
    static var §\x18\x07\x17§ = "alert.xml";
    static var §\x16\b\x04§ = 15;
-   static var §\x16\x1c\x14§ = 800;
+   static var CLICK_MIN_DELAY = 800;
    static var §\x1a\x14\x03§ = 10000;
-   static var §\x18\x1a\x0b§ = 1000;
+   static var MAX_DATA_LENGTH = 1000;
    static var MAX_MESSAGE_LENGTH = 200;
    static var §\x18\x1a\x16§ = 50;
    static var §\x19\x12\x04§ = 9000;
@@ -152,8 +152,8 @@ class dofus.§\x16\x1e\x1b§ extends Object
    static var §\x17\r\x14§ = [1,1,1,1,1,1,1,1,1,1,1,18];
    static var §\x16\x11\x03§ = [[0,3,0,3,0,3,3,0,0,2,3,0],[0,3,0,3,0,3,3,0,0,3,3,0]];
    static var §\x16\x11\x02§ = [[0,15648155,0,15854274,0,16446963,14129488,0,0,9656642,16634268,0],[0,15516310,0,16701093,0,16640204,15648155,0,0,10247750,16764573,0]];
-   static var §\x1b\x03\x17§ = 3000;
-   static var §\x17\f\x1b§ = "*";
+   static var SMILEY_DELAY = 3000;
+   static var EMOTE_CHAR = "*";
    static var INFO_CHAT_COLOR = "009900";
    static var MSG_CHAT_COLOR = "111111";
    static var EMOTE_CHAT_COLOR = "222222";

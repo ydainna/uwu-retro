@@ -34,8 +34,8 @@ class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.ApiElement
       this["\x1b\x1d\x0f"] = _loc2_;
       var _loc3_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
       _loc3_["\x18\b\x12"]["\x1b\x14\x1a"]();
-      _loc3_["\x16\x19\x0b"].miniMapReplacementPanel["\x1b\x14\x1a"]();
-      _loc3_["\x16\x19\x0b"].shortcutsReplacementPanel.miniMap["\x1b\x14\x1a"]();
+      _loc3_.chat.miniMapReplacementPanel["\x1b\x14\x1a"]();
+      _loc3_.chat.shortcutsReplacementPanel.miniMap["\x1b\x14\x1a"]();
       return this["\x1e\x11\x16"]();
    }
    function §\x0f\x10§(§\x15\x1c\x03§)
@@ -43,8 +43,8 @@ class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.ApiElement
       this["\x1c\x01\x1d"] = _loc2_;
       var _loc3_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
       _loc3_["\x18\b\x12"]["\x1b\x14\x1a"]();
-      _loc3_["\x16\x19\x0b"].miniMapReplacementPanel["\x1b\x14\x1a"]();
-      _loc3_["\x16\x19\x0b"].shortcutsReplacementPanel.miniMap["\x1b\x14\x1a"]();
+      _loc3_.chat.miniMapReplacementPanel["\x1b\x14\x1a"]();
+      _loc3_.chat.shortcutsReplacementPanel.miniMap["\x1b\x14\x1a"]();
       return this["\x1e\x12\x1c"]();
    }
    function §\x1e\x12\x1c§()
@@ -77,7 +77,7 @@ class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.ApiElement
       this.aks_server_will_disconnect = false;
       this.aks_gifts_stack = new Array();
       delete this.aks_chat_lastActionTime;
-      this["\x16\x19\x14"] = new Object();
+      this.chat_type_visible = new Object();
       delete this.aks_emote_lastActionTime;
       delete this.aks_exchange_echangeType;
       _global.clearInterval(this.aks_infos_lifeRestoreInterval);
@@ -153,8 +153,8 @@ class dofus.§\x17\x04\x19§.§\x16\t\x06§ extends dofus.utils.ApiElement
       }
       var _loc5_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
       _loc5_["\x18\b\x12"]["\x1b\x14\x1a"]();
-      _loc5_["\x16\x19\x0b"].miniMapReplacementPanel["\x1b\x14\x1a"]();
-      _loc5_["\x16\x19\x0b"].shortcutsReplacementPanel.miniMap["\x1b\x14\x1a"]();
+      _loc5_.chat.miniMapReplacementPanel["\x1b\x14\x1a"]();
+      _loc5_.chat.shortcutsReplacementPanel.miniMap["\x1b\x14\x1a"]();
    }
    function isWorldUniqueItemAlreadyDropped(nItemGenericID)
    {

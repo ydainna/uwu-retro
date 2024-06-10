@@ -45,7 +45,7 @@ class dofus.aks.Evenemential extends dofus.aks.Handler
       var _loc9_ = Number(_loc3_[4]);
       var _loc10_ = Number(_loc3_[5]);
       var _loc11_ = _loc3_.length <= 6 ? "" : "(" + this.api.lang.getText(_loc3_[6]) + ") ";
-      var _loc12_ = this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc6_,_loc7_);
+      var _loc12_ = this.api.kernel.ChatManager.getLinkName(_loc6_,_loc7_);
       var _loc13_ = this.api.kernel.DebugManager.getTimestampShort() + " " + _loc11_ + this.api.lang.getText("DICE_LAUNCH_RESULT",[_loc12_,_loc8_,_loc9_,_loc10_]);
       this.api.kernel.showMessage(undefined,_loc13_,"INFO_CHAT");
    }

@@ -116,8 +116,8 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.datacenter.Game.state = _loc5_;
       var _loc6_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
       dofus.graphics.gapi.ui["\x16\b\x1a"]["\x16\b\x1b"]["\x1a\x1d\x12"](_loc6_);
-      _loc6_["\x16\x19\x0b"].removeTemporaryReplacementPanel();
-      var _loc7_ = _loc6_["\x16\x19\x0b"].shortcutsReplacementPanel;
+      _loc6_.chat.removeTemporaryReplacementPanel();
+      var _loc7_ = _loc6_.chat.shortcutsReplacementPanel;
       if(_loc7_ != undefined)
       {
          _loc7_.showMiniMap(true);
@@ -135,9 +135,9 @@ class dofus.aks.Game extends dofus.aks.Handler
    function §\x19\x19\x0e§(sExtraData)
    {
       this.api.datacenter.Player.guildInfos["\x17\x06\x11"] = undefined;
-      if(this.api.gfx.spriteHandler["\x18\x0f\f"])
+      if(this.api.gfx.SpriteHandler.hidePlayerSprites)
       {
-         this.api.gfx.spriteHandler.hideSprites(false);
+         this.api.gfx.SpriteHandler.hideSprites(false);
       }
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = Number(_loc3_[0]);
@@ -152,7 +152,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       var _loc10_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
       _loc10_["\x1a\n\x13"]();
       _loc10_["\x1b\x14\x19"]();
-      this.api.datacenter.Game["\x18\x0f\x1b"] = _loc7_;
+      this.api.datacenter.Game.isSpectator = _loc7_;
       if(!_loc7_)
       {
          this.api.datacenter.Player.data["\x18\t\b"](false);
@@ -175,7 +175,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.gfx["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\x0f"]);
       this.api.ui["\x1b\x13\x12"]();
       this.api.ui.unloadUIComponent("FightsInfos");
-      switch(this.api.datacenter.["\x18\x18\x0e"]["\x1b\x0b\x17"])
+      switch(this.api.datacenter.Map["\x1b\x0b\x17"])
       {
          case 320:
          case 321:
@@ -271,11 +271,11 @@ class dofus.aks.Game extends dofus.aks.Handler
    {
       this.api.ui.getUIComponent("Banner").stopTimer();
       this.aks.GameActions["\x19\x13\x18"](this.api.datacenter.Player.ID);
-      this.api.sounds["\x17\x0e\x06"]["\x19\x18\x05"](this.api.datacenter.["\x18\x18\x0e"].musics);
+      this.api.sounds["\x17\x0e\x06"]["\x19\x18\x05"](this.api.datacenter.Map.musics);
       this.api.kernel.StreamingDisplayManager["\x19\x17\x10"]();
       var _loc2_ = this.api.ui.getUIComponent("Banner");
       _loc2_.showGiveUpButton(true);
-      if(!this.api.datacenter.Game["\x18\x0f\x1b"])
+      if(!this.api.datacenter.Game.isSpectator)
       {
          var _loc3_ = this.api.datacenter.Player.data;
          _loc3_["\x18\t\b"]();
@@ -317,7 +317,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       if(this.api.datacenter.Game["\x18\r\x18"])
       {
          this.api.datacenter.Game["\x18\r\x18"] = false;
-         var _loc3_ = this.api.gfx.spriteHandler.getSprites().getItems();
+         var _loc3_ = this.api.gfx.SpriteHandler.getSprites().getItems();
          for(var sID in _loc3_)
          {
             this.api.gfx["\x1a\f\x1b"](sID,true);
@@ -363,7 +363,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       {
          this.api.gfx["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\n"]);
          this.api.ui.getUIComponent("Timeline")["\x1b\t\x0b"](_loc6_);
-         if(this.api.datacenter.Game["\x18\x0f\x1b"] && this.api.kernel.OptionsManager.getOption("SpriteInfos"))
+         if(this.api.datacenter.Game.isSpectator && this.api.kernel.OptionsManager.getOption("SpriteInfos"))
          {
             this.api.ui.getUIComponent("Banner")["\x1a\x1e\x17"]("BannerSpriteInfos",{data:_loc9_},true);
          }
@@ -376,7 +376,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          _loc10_[3] = _loc9_.color3;
          this.api.ui.loadUIComponent("StringCourse","StringCourse",{gfx:_loc9_["\x16\x05\x0e"],name:_loc9_.name,level:this.api.lang.getText("LEVEL_SMALL") + " " + _loc9_.Level,colors:_loc10_},{bForceLoad:true});
       }
-      if(this.api.datacenter.Game["\x18\x0f\x1b"] && this.api.electron["\x18\x10\x11"])
+      if(this.api.datacenter.Game.isSpectator && this.api.electron["\x18\x10\x11"])
       {
          !this.bSubareaHasWhiteFloor ? this.api.gfx["\x15\x1e\x11"](_loc5_,dofus.Constants.HIGHLIGHT_FILE,undefined,true) : this.api.gfx["\x15\x1e\x11"](_loc5_,dofus.Constants.HIGHLIGHT_FILE,0,true);
       }
@@ -516,7 +516,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       var _loc4_ = _loc3_[0];
       var _loc5_ = _loc3_[1];
       var _loc6_ = _loc3_[2];
-      if(Number(_loc4_) == this.api.datacenter.["\x18\x18\x0e"].id)
+      if(Number(_loc4_) == this.api.datacenter.Map.id)
       {
          this.api.gfx["\x19\x1a\x07"]();
          return undefined;
@@ -545,7 +545,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       this.api.ui.removeCursor();
       this.api.ui.getUIComponent("Banner")["\x1a\x1c\x10"].setCurrentTab("Items");
       this.api.datacenter.Basics.gfx_isSpritesHidden = false;
-      this.api.gfx.spriteHandler["\x1b\x13\x15"]();
+      this.api.gfx.SpriteHandler["\x1b\x13\x15"]();
       if(this.api.ui.getUIComponent("Banner") == undefined)
       {
          this.api.kernel.OptionsManager.applyAllOptions();

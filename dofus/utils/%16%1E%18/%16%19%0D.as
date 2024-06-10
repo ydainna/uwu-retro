@@ -248,12 +248,12 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
                this.api.kernel.showMessage(undefined,"Average ping : " + this.api.network.getAveragePing() + "ms (on " + this.api.network.getAveragePingPacketsCount() + " packets)","COMMANDS_CHAT");
                break;
             case "MAPID":
-               this.api.kernel.showMessage(undefined,"MAP ID : " + this.api.datacenter.["\x18\x18\x0e"].id,"COMMANDS_CHAT");
+               this.api.kernel.showMessage(undefined,"MAP ID : " + this.api.datacenter.Map.id,"COMMANDS_CHAT");
                if(this.api.datacenter.Player.isAuthorized)
                {
-                  this.api.kernel.showMessage(undefined,"Area : " + this.api.datacenter.["\x18\x18\x0e"].area,"COMMANDS_CHAT");
-                  this.api.kernel.showMessage(undefined,"Sub area : " + this.api.datacenter.["\x18\x18\x0e"]["\x1b\x0b\x17"],"COMMANDS_CHAT");
-                  this.api.kernel.showMessage(undefined,"Super Area : " + this.api.datacenter.["\x18\x18\x0e"].superarea,"COMMANDS_CHAT");
+                  this.api.kernel.showMessage(undefined,"Area : " + this.api.datacenter.Map.area,"COMMANDS_CHAT");
+                  this.api.kernel.showMessage(undefined,"Sub area : " + this.api.datacenter.Map["\x1b\x0b\x17"],"COMMANDS_CHAT");
+                  this.api.kernel.showMessage(undefined,"Super Area : " + this.api.datacenter.Map.superarea,"COMMANDS_CHAT");
                }
                break;
             case "CELLID":
@@ -307,7 +307,7 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
                break;
             case "SPECTATOR":
             case "SPEC":
-               if(!this.api.datacenter.Game.isRunning || this.api.datacenter.Game["\x18\x0f\x1b"])
+               if(!this.api.datacenter.Game.isRunning || this.api.datacenter.Game.isSpectator)
                {
                   this.api.kernel.showMessage(undefined,this.api.lang.getText("CANT_DO_COMMAND_HERE",[_loc6_]),"ERROR_CHAT");
                   return undefined;
@@ -385,7 +385,7 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
                var _loc39_ = _loc5_.join(" ");
                if(this.api.datacenter.Player.canChatToAll)
                {
-                  this.api.network.Chat.send(dofus.Constants["\x17\f\x1b"] + _loc39_ + dofus.Constants["\x17\f\x1b"],"*",_loc4_);
+                  this.api.network.Chat.send(dofus.Constants.EMOTE_CHAR + _loc39_ + dofus.Constants.EMOTE_CHAR,"*",_loc4_);
                }
                break;
             case "KB":
@@ -562,11 +562,11 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
    {
       ank.utils.Extensions.addExtensions();
       var _loc3_ = this.api.lang.getText("INLINE_VARIABLE_POSITION").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc3_,"[" + this.api.datacenter.["\x18\x18\x0e"].x + ", " + this.api.datacenter.["\x18\x18\x0e"].y + "]");
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc3_,"[" + this.api.datacenter.Map.x + ", " + this.api.datacenter.Map.y + "]");
       var _loc4_ = this.api.lang.getText("INLINE_VARIABLE_AREA").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc4_,this.api.lang["\x17\x1b\x06"](this.api.datacenter.["\x18\x18\x0e"].area).n);
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc4_,this.api.lang["\x17\x1b\x06"](this.api.datacenter.Map.area).n);
       var _loc5_ = this.api.lang.getText("INLINE_VARIABLE_SUBAREA").split(",");
-      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc5_,this.api.lang["\x17\x1b\x0f"](this.api.datacenter.["\x18\x18\x0e"]["\x1b\x0b\x17"]).n);
+      _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc5_,this.api.lang["\x17\x1b\x0f"](this.api.datacenter.Map["\x1b\x0b\x17"]).n);
       var _loc6_ = this.api.lang.getText("INLINE_VARIABLE_MYSELF").split(",");
       _loc2_ = new ank.utils.ExtendedString(_loc2_).replace(_loc6_,this.api.datacenter.Player.Name);
       var _loc7_ = this.api.lang.getText("INLINE_VARIABLE_LEVEL").split(",");

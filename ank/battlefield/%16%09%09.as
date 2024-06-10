@@ -218,7 +218,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
    {
       if(_loc8_ == undefined)
       {
-         _loc8_ = new ank.battlefield.datacenter.["\x18\x18\x0e"]();
+         _loc8_ = new ank.battlefield.datacenter.Map();
       }
       ank.battlefieldutils.Compressor["\x1b\x13\r"](_loc2_,_loc3_,_loc4_,_loc5_,_loc6_,_loc7_,_loc8_,_loc9_);
       this["\x16\x14\x03"](_loc8_,_loc9_);
@@ -659,7 +659,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this.spriteHandler["\x1a\x13\x0f"](sID,_loc3_);
    }
-   function §\x15\x1e\x10§(sID, sText, §\x19\x10\x06§)
+   function addSpriteBubble(sID, sText, §\x19\x10\x06§)
    {
       var _loc5_ = this["\x1e\x03\b"]Sprites.getItemAt(sID);
       if(_loc5_ == undefined)
@@ -680,7 +680,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       var _loc8_ = _loc6_._y;
       if(_loc4_ == undefined)
       {
-         _loc4_ = ank.battlefield["\x1b\x0f\x13"]["\x16\x13\x1b"];
+         _loc4_ = ank.battlefield.TextHandler["\x16\x13\x1b"];
       }
       if(_loc7_ == 0 || _loc8_ == 0)
       {
@@ -732,7 +732,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this["\x1a\x06\x0b"]["\x15\x1e\b"](sID,_loc7_,_loc8_,_loc3_,nTypePoint);
    }
-   function §\x15\x1e\x15§(sID, §\x1b\x02\x18§, §\x16\x1b\x0f§, §\x15\x1b\t§, §\x19\x05\x1a§, §\x16\x0b\r§)
+   function addSpriteOverHeadItem(sID, §\x1b\x02\x18§, §\x16\x1b\x0f§, §\x15\x1b\t§, §\x19\x05\x1a§, §\x16\x0b\r§)
    {
       var _loc8_ = this["\x1e\x03\b"]Sprites.getItemAt(sID);
       if(_loc8_ == undefined)
@@ -861,8 +861,8 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       {
          return false;
       }
-      this["\x1e\x03\b"]["\x18\x18\x0e"]["\x16\x1b\x17"]();
-      this["\x1e\x03\b"]["\x18\x18\x0e"] = new ank.battlefield.datacenter.["\x18\x18\x0e"]();
+      this["\x1e\x03\b"].Map["\x16\x1b\x17"]();
+      this["\x1e\x03\b"].Map = new ank.battlefield.datacenter.Map();
       this["\x1e\x03\b"]Sprites = new ank.utils.["\x17\x0e\r"]();
       return true;
    }
@@ -876,7 +876,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       this["\x1a\x12\x1c"] = new ank.battlefield["\x1a\x12\x1d"](this,this._mcMainContainer["\x17\x0e\x12"],this["\x1e\x03\b"]);
       this["\x18\x03\x13"] = new ank.battlefield["\x18\x03\x14"](this._mcMainContainer["\x17\x0e\x12"].Grid,this["\x1e\x03\b"]);
       this["\x1b\x18\x05"] = new ank.battlefield["\x1b\x18\x06"](this,this._mcMainContainer["\x17\x0e\x12"].Object2);
-      this["\x1b\x0f\x12"] = new ank.battlefield["\x1b\x0f\x13"](this,this._mcMainContainer["\x1b\x0f\x10"],this["\x1e\x03\b"]);
+      this["\x1b\x0f\x12"] = new ank.battlefield.TextHandler(this,this._mcMainContainer["\x1b\x0f\x10"],this["\x1e\x03\b"]);
       this["\x1a\x06\x0b"] = new ank.battlefield["\x1a\x06\f"](this,this._mcMainContainer["\x1a\x06\n"],this["\x1e\x03\b"]);
       this["\x1a\x02\x1a"] = new ank.battlefield["\x1a\x02\x1b"](this,this._mcMainContainer["\x1a\x02\x19"]);
    }

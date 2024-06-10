@@ -112,8 +112,8 @@ class dofus.DofusCore extends ank.utils.§\x1a\t\t§
       Object.registerClass("ButtonRightUp",ank.gapi.controls["\x16\x14\x0f"]["\x16\x14\x10"]);
       Object.registerClass("ButtonLeftDown",ank.gapi.controls["\x16\x14\x0f"]["\x16\x14\x10"]);
       Object.registerClass("ButtonLeftUp",ank.gapi.controls["\x16\x14\x0f"]["\x16\x14\x10"]);
-      Object.registerClass("ShortcutsChatReplacementPanel",dofus.graphics.gapi.controls["\x16\x19\x0b"].ShortcutsChatReplacementPanel);
-      Object.registerClass("FighterEffectsReplacementPanel",dofus.graphics.gapi.controls["\x16\x19\x0b"].FighterEffectsReplacementPanel);
+      Object.registerClass("ShortcutsChatReplacementPanel",dofus.graphics.gapi.controls.chat.ShortcutsChatReplacementPanel);
+      Object.registerClass("FighterEffectsReplacementPanel",dofus.graphics.gapi.controls.chat.FighterEffectsReplacementPanel);
       Object.registerClass("UI_MakeReport",dofus.graphics.gapi.ui.MakeReport);
       Object.registerClass("UI_NewModReportAdmin",dofus.graphics.gapi.ui.nmr.NewModReportAdmin);
       Object.registerClass("UI_ModReportCategoryItem",dofus.graphics.gapi.ui.nmr.ModReportCategoryItem);

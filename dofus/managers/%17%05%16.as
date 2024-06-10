@@ -31,7 +31,7 @@ class dofus.§\x18\x18\x0b§.DebugManager extends dofus.utils.ApiElement
       {
          return undefined;
       }
-      var _loc5_ = this["\x18\x01\x17"]() + " ";
+      var _loc5_ = this..getTimestamp() + " ";
       _loc5_ += _loc2_;
       var _loc6_ = "DEBUG_INFO";
       switch(_loc3_)
@@ -206,7 +206,7 @@ class dofus.§\x18\x18\x0b§.DebugManager extends dofus.utils.ApiElement
       _loc4_ += _loc2_;
       return _loc4_;
    }
-   function §\x18\x01\x17§()
+   function getTimestamp()
    {
       var _loc2_ = new ank.utils.ExtendedDate();
       return "[" + _loc2_.getHoursPadded() + ":" + _loc2_.getMinutesPadded() + ":" + _loc2_.getSecondsPadded() + ":" + _loc2_.getMillisecondsPadded() + "]";

@@ -73,14 +73,14 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
                }
                break;
             case "CHATPLUS":
-               var _loc9_ = dofus.graphics.gapi.controls.Chat(this.api.ui.getUIComponent("Banner")["\x16\x19\x0b"]);
+               var _loc9_ = dofus.graphics.gapi.controls.Chat(this.api.ui.getUIComponent("Banner").chat);
                if(_loc9_ != undefined)
                {
                   _loc9_["\x1a\x01\x03"](false);
                }
                break;
             case "CHATMINUS":
-               var _loc10_ = dofus.graphics.gapi.controls.Chat(this.api.ui.getUIComponent("Banner")["\x16\x19\x0b"]);
+               var _loc10_ = dofus.graphics.gapi.controls.Chat(this.api.ui.getUIComponent("Banner").chat);
                if(_loc10_ != undefined)
                {
                   _loc10_["\x1a\x01\x03"](true);
@@ -119,7 +119,7 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
                }
                break;
             case "LISTSPRITES":
-               var _loc13_ = this.api.gfx.spriteHandler.getSprites().getItems();
+               var _loc13_ = this.api.gfx.SpriteHandler.getSprites().getItems();
                for(var k in _loc13_)
                {
                   var _loc14_ = _loc13_[k];
@@ -375,7 +375,7 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
                var _loc46_ = "Svr:";
                _loc46_ += "\nNb:";
                _loc46_ += "\n Map  : " + String(this.api.datacenter.Game["\x1a\x05\x10"]);
-               _loc46_ += "\n Cell : " + this.api.datacenter.["\x18\x18\x0e"].data[this.api.datacenter.Player.data.cellNum]["\x1b\x07\f"];
+               _loc46_ += "\n Cell : " + this.api.datacenter.Map.data[this.api.datacenter.Player.data.cellNum]["\x1b\x07\f"];
                _loc46_ += "\nDataServers:";
                var _loc47_ = 0;
                while(_loc47_ < this.api.config["\x17\x04\x1c"].length)
@@ -713,10 +713,10 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
                this.api.network.ping();
                break;
             case "MAPID":
-               this.showMessage(undefined,"carte : " + this.api.datacenter.["\x18\x18\x0e"].id,"DEBUG_LOG");
-               this.showMessage(undefined,"Area : " + this.api.datacenter.["\x18\x18\x0e"].area,"DEBUG_LOG");
-               this.showMessage(undefined,"Sub area : " + this.api.datacenter.["\x18\x18\x0e"]["\x1b\x0b\x17"],"DEBUG_LOG");
-               this.showMessage(undefined,"Super Area : " + this.api.datacenter.["\x18\x18\x0e"].superarea,"DEBUG_LOG");
+               this.showMessage(undefined,"carte : " + this.api.datacenter.Map.id,"DEBUG_LOG");
+               this.showMessage(undefined,"Area : " + this.api.datacenter.Map.area,"DEBUG_LOG");
+               this.showMessage(undefined,"Sub area : " + this.api.datacenter.Map["\x1b\x0b\x17"],"DEBUG_LOG");
+               this.showMessage(undefined,"Super Area : " + this.api.datacenter.Map.superarea,"DEBUG_LOG");
                break;
             case "CELLID":
                this.showMessage(undefined,"cellule : " + this.api.datacenter.Player.data.cellNum,"DEBUG_LOG");
@@ -767,11 +767,11 @@ class dofus.utils.consoleParsers.DebugConsoleParser extends dofus.utils.consoleP
                this.api.datacenter.Basics.gfx_isSpritesHidden = !this.api.datacenter.Basics.gfx_isSpritesHidden;
                if(this.api.datacenter.Basics.gfx_isSpritesHidden)
                {
-                  this.api.gfx.spriteHandler["\x18\x19\t"]();
+                  this.api.gfx.SpriteHandler["\x18\x19\t"]();
                }
                else
                {
-                  this.api.gfx.spriteHandler["\x1b\x13\x15"]();
+                  this.api.gfx.SpriteHandler["\x1b\x13\x15"]();
                }
                break;
             case "DRAWZONE":

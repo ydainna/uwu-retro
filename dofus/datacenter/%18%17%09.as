@@ -806,8 +806,8 @@ class dofus.§\x17\x04\x19§.§\x18\x17\t§ extends dofus.utils.ApiElement
    {
       var _loc2_ = this.api.datacenter.Game.isRunning;
       var _loc3_ = this.api.datacenter.Exchange != undefined;
-      var _loc4_ = this.api.datacenter.["\x18\x18\x0e"].bCanEquipItem;
-      var _loc5_ = this.api.datacenter.["\x18\x18\x0e"].bCanUseItem;
+      var _loc4_ = this.api.datacenter.Map.bCanEquipItem;
+      var _loc5_ = this.api.datacenter.Map.bCanUseItem;
       if(_loc2_ || (_loc3_ || (!_loc4_ || !_loc5_)))
       {
          this.api.ui.loadUIComponent("AskOk","AskOkInventory",{title:this.api.lang.getText("INFORMATIONS"),text:this.api.lang.getText("CANT_MOVE_ITEM")});

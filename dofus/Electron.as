@@ -759,7 +759,7 @@ class dofus.Electron extends dofus.utils.ApiElement
     {
       return undefined;
     }
-    var _loc2_ = this.api.gfx.spriteHandler.getSprites().getItems();
+    var _loc2_ = this.api.gfx.SpriteHandler.getSprites().getItems();
     for(var sID in _loc2_)
     {
       var _loc3_ = _loc2_[sID];
@@ -778,7 +778,7 @@ class dofus.Electron extends dofus.utils.ApiElement
     {
       return undefined;
     }
-    var _loc2_ = this.api.gfx.spriteHandler.getSprites().getItems();
+    var _loc2_ = this.api.gfx.SpriteHandler.getSprites().getItems();
     for(var sID in _loc2_)
     {
       var _loc3_ = _loc2_[sID];

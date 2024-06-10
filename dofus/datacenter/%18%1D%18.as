@@ -70,7 +70,7 @@ class dofus.§\x17\x04\x19§.§\x18\x1d\x18§ extends dofus.§\x17\x04\x19§.§\
    }
    function §\x16\x02\x17§()
    {
-      var _loc2_ = this.api.datacenter.["\x18\x18\x0e"];
+      var _loc2_ = this.api.datacenter.Map;
       return this.name + " niveau " + this.Level + " en " + _loc2_.x + "," + _loc2_.y + ".";
    }
 }

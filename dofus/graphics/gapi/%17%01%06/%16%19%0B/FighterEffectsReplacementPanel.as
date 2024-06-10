@@ -12,7 +12,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.§\x16\x19\x0b§.FighterEffec
    }
    function §\x18\t\x04§()
    {
-      super.init(false,dofus.graphics.gapi.controls["\x16\x19\x0b"].FighterEffectsReplacementPanel.CLASS_NAME);
+      super.init(false,dofus.graphics.gapi.controls.chat.FighterEffectsReplacementPanel.CLASS_NAME);
    }
    function createChildren()
    {

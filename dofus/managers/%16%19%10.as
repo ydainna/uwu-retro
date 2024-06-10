@@ -63,7 +63,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       super.initialize(oAPI);
       this["\x1b\x1d\x0b"] = new Array();
       this["\x1b\x1e\x11"] = new Array();
-      this._feMessagesBuffer = new dofus.managers["\x16\x19\x0b"].FightEventsMessagesBuffer(oAPI);
+      this._feMessagesBuffer = new dofus.managers.chat.FightEventsMessagesBuffer(oAPI);
       this["\x1d\x17\f"] = 0;
       this["\x1b\x1b\x17"] = new Array();
       this["\x1b\x15\x1a"]();
@@ -120,11 +120,11 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       this["\x1c\x01\x13"] = _loc2_;
       this.aks_a_logs(true);
    }
-   function §\x18\x10\b§(§\x19\x10\x06§)
+   function isTypeVisible(§\x19\x10\x06§)
    {
       return this["\x1c\x01\x13"][_loc2_];
    }
-   function §\x1a\x1a\x1c§(§\x19\x10\x06§, §\x16\x14\x17§)
+   function setTypeVisible(§\x19\x10\x06§, §\x16\x14\x17§)
    {
       this["\x1c\x01\x13"][_loc2_] = _loc3_;
       this.api.electron.retroChatRefresh(this["\x1c\x01\x13"]);
@@ -146,7 +146,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
          }
       }
    }
-   function §\x16\x04\x11§(sText)
+   function applyOutputCensorship(sText)
    {
       if(this.api.datacenter.Player.isAuthorized)
       {
@@ -198,7 +198,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       }
       return true;
    }
-   function §\x16\x04\r§(sText)
+   function applyInputCensorship(sText)
    {
       if(!this.api.kernel.OptionsManager.getOption("CensorshipFilter") || !this.api.lang.getConfigText("CENSORSHIP_ENABLE_INPUT"))
       {
@@ -459,7 +459,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       if(_loc9_)
       {
          _loc2_ = this["\x15\x1d\x1a"](_loc2_);
-         _loc2_ = this["\x16\x04\r"](_loc2_.substring(0,_loc2_.length - 4)) + _loc2_.substring(_loc2_.length - 4);
+         _loc2_ = this.applyInputCensorship(_loc2_.substring(0,_loc2_.length - 4)) + _loc2_.substring(_loc2_.length - 4);
       }
       if(_loc8_ && this.api.kernel.NightManager.time.length)
       {
@@ -603,7 +603,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       }
       return {v:_loc3_,t:_loc2_.split("<").join("&lt;").split(">").join("&gt;")};
    }
-   function §\x1a\x03\x19§(§\x1b\x03\x10§, §\x16\x02\x06§, bHtml)
+   function parseInlineItems(sMessage, §\x16\x02\x06§, bHtml)
    {
       if(bHtml == undefined)
       {
@@ -628,7 +628,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       }
       return _loc2_;
    }
-   function parseInlinePos(§\x1b\x03\x10§)
+   function parseInlinePos(sMessage)
    {
       var _loc3_ = _loc2_;
       var _loc4_ = 0;
@@ -667,7 +667,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       }
       return _loc2_;
    }
-   function §\x1a\x03\x1d§(§\x1b\x03\x10§)
+   function parseSecretsEmotes(sMessage)
    {
       if(!this.api.lang.getConfigText("CHAT_USE_SECRETS_EMOTES"))
       {
@@ -689,15 +689,15 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
             this.api.network.GameActions["\x19\x13\x17"](";208;" + this.api.datacenter.Player.ID + ";" + this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Player.ID).cellNum + ",2069,10,1,1");
             this.api.network.GameActions["\x19\x13\x17"](";208;" + this.api.datacenter.Player.ID + ";" + (this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Player.ID).cellNum + 1) + ",2904,11,8,3");
             this.api.network.GameActions["\x19\x13\x17"](";208;" + this.api.datacenter.Player.ID + ";" + (this.api.datacenter.Sprites.getItemAt(this.api.datacenter.Player.ID).cellNum - 1) + ",2904,11,8,3");
-            this.api.network.Chat["\x19\x1c\x1b"](this.api.datacenter.Player.ID + "|1");
+            this.api.network.Chat.onSmiley(this.api.datacenter.Player.ID + "|1");
             this.api.kernel.AudioManager.playSound("SPEAK_TRIGGER_LEVEL_UP");
-            this.api.network.Chat["\x19\x1a\b"](true,this.api.datacenter.Player.ID + "|" + this.api.datacenter.Player.Name + "|" + _loc2_);
+            this.api.network.Chat.onMessage(true,this.api.datacenter.Player.ID + "|" + this.api.datacenter.Player.Name + "|" + _loc2_);
          }
          _loc2_ = "";
       }
       return _loc2_;
    }
-   function §\x17\x1a\x1d§(sPlayerID, §\x1b\x06\x1b§)
+   function getLinkName(sPlayerID, sUniqId)
    {
       if(sPlayerID == undefined)
       {
@@ -749,7 +749,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
       }
       return undefined;
    }
-   static function §\x18\x0f\r§(§\x1a\x10\x0f§)
+   static function isPonctuation(§\x1a\x10\x0f§)
    {
       var _loc3_ = 0;
       while(_loc3_ < dofus.managers.ChatManager["\x1a\x06\x0e"].length)
@@ -764,7 +764,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
    }
    function §\x16\x01\x03§(sName, nClass)
    {
-      if(_loc2_ != this.api.datacenter.Player.Name && !this["\x18\f\x16"](_loc2_))
+      if(_loc2_ != this.api.datacenter.Player.Name && !this.isBlacklisted(_loc2_))
       {
          this["\x1b\x1b\x17"].push({sName:_loc2_,nClass:_loc3_});
       }
@@ -786,7 +786,7 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x10§ extends dofus.utils.ApiElement
    {
       return this["\x1b\x1b\x17"];
    }
-   function §\x18\f\x16§(sName)
+   function isBlacklisted(sName)
    {
       for(var i in this["\x1b\x1b\x17"])
       {

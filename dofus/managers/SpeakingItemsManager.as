@@ -79,7 +79,7 @@ class dofus.§\x18\x18\x0b§.SpeakingItemsManager extends dofus.utils.ApiElement
                var _loc7_ = 0;
                for(; _loc7_ < _loc4_.length; _loc7_ = _loc7_ + 1)
                {
-                  var _loc5_ = this.api.lang["\x17\x1e\x1a"](_loc4_[_loc7_]);
+                  var _loc5_ = this.api.lang.getSpeakingItemsText(_loc4_[_loc7_]);
                   if(_loc5_.l <= _loc3_["\x18\x19\x1c"])
                   {
                      if(_loc5_.r != undefined && _loc5_.r != "")
@@ -118,7 +118,7 @@ class dofus.§\x18\x18\x0b§.SpeakingItemsManager extends dofus.utils.ApiElement
                   var _loc12_ = _loc6_[Math.floor(Math.random() * _loc6_.length)];
                   if(!(_loc14_ != -1 && _loc12_ > _loc14_))
                   {
-                     _loc5_ = this.api.lang["\x17\x1e\x1a"](_loc12_);
+                     _loc5_ = this.api.lang.getSpeakingItemsText(_loc12_);
                      if(Math.random() < _loc5_.p)
                      {
                         _loc11_ = true;

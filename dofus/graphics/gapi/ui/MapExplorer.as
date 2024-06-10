@@ -217,7 +217,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.
    {
       if(this["\x1c\x0e\x18"] == undefined)
       {
-         this["\x1c\x0e\x18"] = this.api.datacenter.["\x18\x18\x0e"];
+         this["\x1c\x0e\x18"] = this.api.datacenter.Map;
       }
       this._bIsInDungeon = this["\x1c\x0e\x18"].isDungeon;
       if(this._bIsInDungeon)
@@ -262,7 +262,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.
       this._mnMap.contentPath = dofus.Constants["\x18\x17\n"] + _loc2_ + ".swf";
       this._mnMap.clear();
       this._mnMap["\x1a\x17\x18"](this["\x1c\x0e\x18"].x,this["\x1c\x0e\x18"].y);
-      var _loc3_ = this.api.datacenter.["\x18\x18\x0e"];
+      var _loc3_ = this.api.datacenter.Map;
       this._mnMap["\x16\x01\t"]("UI_MapExplorerSelectRectangle","rectangle","currentPosition",_loc3_.x,_loc3_.y,dofus.Constants["\x18\x18\x19"],50);
       if(this._dmHighlightMap != undefined && this._dmHighlightMap != _loc3_)
       {
@@ -345,7 +345,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.
    {
       this["\x1c\x12\x15"]._visible = true;
       this["\x1c\x12\x15"].text = this["\x1c\x0e\x18"].dungeonName;
-      var _loc2_ = this.api.datacenter.["\x18\x18\x0e"];
+      var _loc2_ = this.api.datacenter.Map;
       this._mnMap.contentPath = "";
       this._mnMap.clear();
       this._mnMap["\x17\x03\x01"]("dungeonParchment");
@@ -521,7 +521,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.
             }
             else
             {
-               this._mnMap["\x1a\x17\x18"](this.api.datacenter.["\x18\x18\x0e"].x,this.api.datacenter.["\x18\x18\x0e"].y);
+               this._mnMap["\x1a\x17\x18"](this.api.datacenter.Map.x,this.api.datacenter.Map.y);
             }
             break;
          case this._btnDungeon:
@@ -545,8 +545,8 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapExplorer extends dofus.§\x18\x03\x10§.
                this["\x1a\x1d\x19"](_loc5_,_loc6_);
                var _loc7_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
                _loc7_["\x18\b\x12"]["\x1b\x15\x02"]();
-               _loc7_["\x16\x19\x0b"].miniMapReplacementPanel["\x1b\x15\x02"]();
-               _loc7_["\x16\x19\x0b"].shortcutsReplacementPanel.miniMap["\x1b\x15\x02"]();
+               _loc7_.chat.miniMapReplacementPanel["\x1b\x15\x02"]();
+               _loc7_.chat.shortcutsReplacementPanel.miniMap["\x1b\x15\x02"]();
                break;
             }
             var _loc8_ = !this.api.datacenter.Basics.mapExplorer_grid;

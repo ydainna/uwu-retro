@@ -9,7 +9,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x19\x0b§.ChatReplacementPanelsManag
    {
       this._api = _loc2_;
       this._chat = chat;
-      this._nCurrentPanel = dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.NO_REPLACEMENT_PANEL;
+      this._nCurrentPanel = dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.NO_REPLACEMENT_PANEL;
    }
    function §\x1e\x12\x05§()
    {
@@ -44,16 +44,16 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x19\x0b§.ChatReplacementPanelsManag
       this._bCurrentPanelInstanciated = true;
       switch(this._nCurrentPanel)
       {
-         case dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.MINIMAP:
+         case dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.MINIMAP:
             this.instanciateMiniMap();
             break;
-         case dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.SHORTCUTS:
+         case dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.SHORTCUTS:
             this.instanciateShortcuts();
             break;
-         case dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.FULL_WIDTH_FIGHTER_EFFECTS:
+         case dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.FULL_WIDTH_FIGHTER_EFFECTS:
             this.instanciateFighterEffectsPanel(aPanelArgs);
       }
-      if(this._nCurrentPanel == dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.MINIMAP)
+      if(this._nCurrentPanel == dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.MINIMAP)
       {
          this._chat._mcMiniMapReplacementPanel._visible = true;
       }
@@ -108,7 +108,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x19\x0b§.ChatReplacementPanelsManag
       }
       if(this._nCurrentTemporaryPanel != undefined)
       {
-         if(nPanelWished == dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.SHORTCUTS && this._nCurrentTemporaryPanel == dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.FULL_WIDTH_FIGHTER_EFFECTS)
+         if(nPanelWished == dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.SHORTCUTS && this._nCurrentTemporaryPanel == dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.FULL_WIDTH_FIGHTER_EFFECTS)
          {
             this._nCurrentTemporaryPanel = undefined;
             var _loc5_ = nPanelWished;
@@ -133,7 +133,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x19\x0b§.ChatReplacementPanelsManag
       {
          this.removeCurrentReplacementPanel();
       }
-      if(_loc5_ != dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.NO_REPLACEMENT_PANEL)
+      if(_loc5_ != dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.NO_REPLACEMENT_PANEL)
       {
          this.instanciateCurrentReplacementPanel(aPanelArgs);
       }
@@ -150,8 +150,8 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\x19\x0b§.ChatReplacementPanelsManag
             var _loc3_ = this.api.ui["\x17\x02\x19"]();
             var _loc4_ = this.api.kernel.OptionsManager.getOption("chatReplacementPanel");
             _loc3_["\x15\x1e\x18"](this.api.lang.getText("SHOW"));
-            _loc3_["\x15\x1d\x12"](this.api.lang.getText("BANNER_MAP"),this,this.changeReplacementPanel,[dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.MINIMAP,true],_loc4_ != dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.MINIMAP);
-            _loc3_["\x15\x1d\x12"](this.api.lang.getText("BANNER_SHORTCUTS_BAR"),this,this.changeReplacementPanel,[dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.SHORTCUTS,true],_loc4_ != dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.SHORTCUTS);
+            _loc3_["\x15\x1d\x12"](this.api.lang.getText("BANNER_MAP"),this,this.changeReplacementPanel,[dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.MINIMAP,true],_loc4_ != dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.MINIMAP);
+            _loc3_["\x15\x1d\x12"](this.api.lang.getText("BANNER_SHORTCUTS_BAR"),this,this.changeReplacementPanel,[dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.SHORTCUTS,true],_loc4_ != dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.SHORTCUTS);
             _loc3_.show(_root._xmouse,_root._ymouse,true);
       }
    }

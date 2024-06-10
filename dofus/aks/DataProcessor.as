@@ -439,16 +439,16 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             switch(_loc3_)
             {
                case "M":
-                  this.aks.Chat["\x19\x1a\b"](!_loc4_,_loc5_.substr(3));
+                  this.aks.Chat.onMessage(!_loc4_,_loc5_.substr(3));
                   break;
                case "s":
                   this.aks.Chat.onServerMessage(_loc5_.substr(2));
                   break;
                case "S":
-                  this.aks.Chat["\x19\x1c\x1b"](_loc5_.substr(2));
+                  this.aks.Chat.onSmiley(_loc5_.substr(2));
                   break;
                case "C":
-                  this.aks.Chat["\x19\x1d\x13"](_loc5_.substr(2));
+                  this.aks.Chat.onSubscribeChannel(_loc5_.substr(2));
                   break;
                default:
                   this.defaultProcessAction(_loc2_,_loc3_,_loc4_,_loc5_);
@@ -489,7 +489,7 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
                   this.aks.Infos["\x19\x18\x14"](_loc5_.substr(2));
                   break;
                case "m":
-                  this.aks.Infos["\x19\x1a\b"](_loc5_.substr(2));
+                  this.aks.Infos.onMessage(_loc5_.substr(2));
                   break;
                case "Q":
                   this.aks.Infos["\x19\x1b\x14"](_loc5_.substr(2));

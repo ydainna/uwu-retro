@@ -34,9 +34,9 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
    {
       this["\x1c\x05\f"] = false;
       ank.utils.Timer.removeTimer(this,"tutorial");
-      this.api.gfx.spriteHandler.hideSprites(false,2);
-      this.api.gfx.spriteHandler.hideSprites(false,3);
-      this.api.gfx.spriteHandler.hideSprites(false,4);
+      this.api.gfx.SpriteHandler.hideSprites(false,2);
+      this.api.gfx.SpriteHandler.hideSprites(false,3);
+      this.api.gfx.SpriteHandler.hideSprites(false,4);
       this.api.ui.getUIComponent("GameResult")._visible = true;
       this.api.ui.getUIComponent("GameResultLight")._visible = true;
       this["\x1e\x06\b"] = new Object();
@@ -142,13 +142,13 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
                   this["\x1e\x05\n"].addAction(128,false,this.api.kernel,this.api.kernel.showMessage,[undefined,_loc2_.params[0],_loc2_.params[1]]);
                   break;
                case "HIDE_NPC":
-                  this.api.gfx.spriteHandler.hideSprites(_loc2_.params,2);
+                  this.api.gfx.SpriteHandler.hideSprites(_loc2_.params,2);
                   break;
                case "HIDE_MONSTER":
-                  this.api.gfx.spriteHandler.hideSprites(_loc2_.params,3);
+                  this.api.gfx.SpriteHandler.hideSprites(_loc2_.params,3);
                   break;
                case "HIDE_OTHER_PLAYERS":
-                  this.api.gfx.spriteHandler.hideSprites(_loc2_.params,4);
+                  this.api.gfx.SpriteHandler.hideSprites(_loc2_.params,4);
                   break;
                case "GFX_CLEAN_MAP":
                   this["\x1e\x05\n"].addAction(129,false,this.api.gfx,this.api.gfx["\x16\x1b\x14"],[undefined,true]);
@@ -208,13 +208,13 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
                   var _loc16_ = ank.battlefieldutils.["\x1a\x04\b"]["\x1a\x04\x07"](this.api,this.api.gfx["\x18\x18\x15"],_loc15_.cellNum,_loc2_.params[1],{bAllDirections:false,bIgnoreSprites:true,bCellNumOnly:true,bWithBeginCellNum:true});
                   if(_loc16_ != null)
                   {
-                     this.api.gfx.spriteHandler["\x19\x01\n"](_loc15_.id,_loc16_,this["\x1e\x05\n"],false,undefined,false,false);
+                     this.api.gfx.SpriteHandler["\x19\x01\n"](_loc15_.id,_loc16_,this["\x1e\x05\n"],false,undefined,false,false);
                   }
                   break;
                case "GFX_ADD_SPRITE_BUBBLE":
                   var _loc17_ = this["\x18\x01\t"](_loc2_.params[0]);
                   this["\x1e\x05\n"].addAction(140,true,this.api.gfx,this.api.gfx["\x1a\f\x1a"],[_loc17_],200);
-                  this["\x1e\x05\n"].addAction(141,false,this.api.gfx,this.api.gfx["\x15\x1e\x10"],[_loc17_,_loc2_.params[1]]);
+                  this["\x1e\x05\n"].addAction(141,false,this.api.gfx,this.api.gfx.addSpriteBubble,[_loc17_,_loc2_.params[1]]);
                   break;
                case "GFX_CLEAR_SPRITE_BUBBLES":
                   this["\x1e\x05\n"].addAction(142,false,this.api.gfx["\x1b\x0f\x12"],this.api.gfx["\x1b\x0f\x12"].clear,[]);
@@ -438,7 +438,7 @@ class dofus.§\x18\x18\x0b§.§\x1b\x12\x01§ extends dofus.utils.ApiElement
       }
       if(typeof _loc2_ == "string")
       {
-         return this.api.datacenter.["\x18\x18\x0e"].data[_loc2_.substr(1)]["\x1b\x07\r"];
+         return this.api.datacenter.Map.data[_loc2_.substr(1)]["\x1b\x07\r"];
       }
    }
    function §\x1a\x1a\x19§(§\x1b\f\x16§, §\x19\x10\x10§)

@@ -55,8 +55,8 @@ class ank.battlefield.mc.Container extends MovieClip
    }
    function §\x16\x04\x0f§(§\x16\x0b\x12§)
    {
-      var _loc3_ = this["\x1e\x03\b"]["\x18\x18\x0e"].width - 1;
-      var _loc4_ = this["\x1e\x03\b"]["\x18\x18\x0e"].height - 1;
+      var _loc3_ = this["\x1e\x03\b"].Map.width - 1;
+      var _loc4_ = this["\x1e\x03\b"].Map.height - 1;
       if(_loc2_ == undefined)
       {
          _loc2_ = true;
@@ -122,8 +122,8 @@ class ank.battlefield.mc.Container extends MovieClip
    {
       var _loc3_ = this._xscale / 100;
       var _loc4_ = this._yscale / 100;
-      var _loc5_ = (this["\x1d\b\x12"]["\x1a\x11\t"] - ank.battlefield.Constants["\x16\x18\t"] * _loc3_ * (this["\x1e\x03\b"]["\x18\x18\x0e"].width - 1)) / 2;
-      var _loc6_ = (this["\x1d\b\x12"]["\x1a\x11\x07"] - ank.battlefield.Constants["\x16\x18\x01"] * _loc4_ * (this["\x1e\x03\b"]["\x18\x18\x0e"].height - 1)) / 2;
+      var _loc5_ = (this["\x1d\b\x12"]["\x1a\x11\t"] - ank.battlefield.Constants["\x16\x18\t"] * _loc3_ * (this["\x1e\x03\b"].Map.width - 1)) / 2;
+      var _loc6_ = (this["\x1d\b\x12"]["\x1a\x11\x07"] - ank.battlefield.Constants["\x16\x18\x01"] * _loc4_ * (this["\x1e\x03\b"].Map.height - 1)) / 2;
       this["\x1a\x1b\t"](_loc5_,_loc6_);
    }
    function §\x1b\x1b\x0e§(§\x1b\x18\n§)
@@ -138,8 +138,8 @@ class ank.battlefield.mc.Container extends MovieClip
    }
    function §\x18\x02\x13§(§\x1b\x18\n§)
    {
-      var _loc3_ = this["\x1e\x03\b"]["\x18\x18\x0e"].width;
-      var _loc4_ = this["\x1e\x03\b"]["\x18\x18\x0e"].height;
+      var _loc3_ = this["\x1e\x03\b"].Map.width;
+      var _loc4_ = this["\x1e\x03\b"].Map.height;
       var _loc5_ = 0;
       if(_loc3_ <= ank.battlefield.Constants["\x17\x06\f"])
       {

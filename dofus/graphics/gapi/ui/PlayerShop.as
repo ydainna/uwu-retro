@@ -166,7 +166,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.PlayerShop extends dofus.§\x18\x03\x10§.g
    {
       var _loc3_ = this.api.datacenter.["\x1b\x0f\b"]["\x1a\x1c\x0e"].id;
       var _loc4_ = new Array();
-      var _loc5_ = this.api.gfx.spriteHandler.getSprites().getItems();
+      var _loc5_ = this.api.gfx.SpriteHandler.getSprites().getItems();
       for(var sID in _loc5_)
       {
          var _loc6_ = _loc5_[sID];

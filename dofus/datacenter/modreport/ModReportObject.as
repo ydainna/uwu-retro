@@ -33,7 +33,7 @@ class dofus.§\x17\x04\x19§.modreport.ModReportObject
             if(_loc11_ != undefined && _loc11_.length > 0)
             {
                var _loc12_ = _loc11_.split("!");
-               _loc10_ = _loc3_.kernel.ChatManager["\x1a\x03\x19"](_loc10_,_loc12_,true);
+               _loc10_ = _loc3_.kernel.ChatManager.parseInlineItems(_loc10_,_loc12_,true);
             }
             _loc5_.push(_loc9_ + " : " + _loc10_);
          }

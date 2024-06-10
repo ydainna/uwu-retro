@@ -16,7 +16,7 @@ class dofus.§\x18\x18\x0b§.MountParksManager extends dofus.utils.ApiElement
    }
    function openMountParkMenu(sObject2Name, §\x16\x06\x01§, §\x18\x1b\x10§, oMountPark)
    {
-      var _loc6_ = this.api.datacenter.["\x18\x18\x0e"].mountParks;
+      var _loc6_ = this.api.datacenter.Map.mountParks;
       if(_loc6_.length == 1 || dofus.datacenter.["\x18\x1e\t"](_loc6_[0])["\x18\x0e\x1c"](this.api))
       {
          var _loc7_ = dofus.datacenter.["\x18\x1e\t"](_loc6_[0]);

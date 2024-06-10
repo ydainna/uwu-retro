@@ -475,7 +475,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                            _loc52_.pvpGain = _loc73_;
                         }
                      }
-                     if(!this.api.datacenter.Game.isFight && (_global.parseInt(_loc14_,10) != this.api.datacenter.Player.ID && ((this.api.datacenter.Player.alignment.index == 1 || this.api.datacenter.Player.alignment.index == 2) && ((_loc52_.alignment.index == 1 || _loc52_.alignment.index == 2) && (_loc52_.alignment.index != this.api.datacenter.Player.alignment.index && (_loc52_.rank.value && this.api.datacenter.["\x18\x18\x0e"].bCanAttack))))))
+                     if(!this.api.datacenter.Game.isFight && (_global.parseInt(_loc14_,10) != this.api.datacenter.Player.ID && ((this.api.datacenter.Player.alignment.index == 1 || this.api.datacenter.Player.alignment.index == 2) && ((_loc52_.alignment.index == 1 || _loc52_.alignment.index == 2) && (_loc52_.alignment.index != this.api.datacenter.Player.alignment.index && (_loc52_.rank.value && this.api.datacenter.Map.bCanAttack))))))
                      {
                         if(this.api.datacenter.Player.rank.value > _loc52_.rank.value)
                         {
@@ -539,7 +539,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
                   var _loc85_ = this["\x1b\x1d\x01"][_loc82_];
                   if(!_global.isNaN(_loc85_) && 7935 - _loc85_ < 300)
                   {
-                     this.api.kernel.showMessage(undefined,this.api.kernel.DebugManager["\x18\x01\x17"]() + " (Map) " + this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc82_,_loc84_) + " s\'est déconnecté (" + _loc82_ + ")","ADMIN_CHAT");
+                     this.api.kernel.showMessage(undefined,this.api.kernel.DebugManager.getTimestamp() + " (Map) " + this.api.kernel.ChatManager.getLinkName(_loc82_,_loc84_) + " s\'est déconnecté (" + _loc82_ + ")","ADMIN_CHAT");
                   }
                   this["\x1b\x1d\x01"][_loc82_] = 1787;
                }
@@ -801,7 +801,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
             case "P":
                _loc4_["\x1a\x01\b"][dofus.datacenter.["\x1b\x0e\x15"]["\x1a\x01\r"]] = _loc5_;
          }
-         this.api.gfx["\x15\x1e\x15"](_loc3_,"FightOptions",dofus.graphics.battlefield["\x17\x0f\x18"],[_loc4_],undefined);
+         this.api.gfx.addSpriteOverHeadItem(_loc3_,"FightOptions",dofus.graphics.battlefield["\x17\x0f\x18"],[_loc4_],undefined);
       }
    }
    function §\x19\x19\x16§()
@@ -831,7 +831,7 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
       this.api.kernel.StreamingDisplayManager["\x19\x17\r"]();
       var _loc4_ = {winners:[],loosers:[],collectors:[],challenges:_loc3_.challenges.deepClone(),currentTableTurn:this.api.datacenter.Game.currentTableTurn,currentPlayerInfos:[],currentPlayerInfosWithChest:[]};
       this.api.datacenter.Game["\x1a\x0e\t"] = _loc4_;
-      if(!this.api.datacenter.Game["\x18\x0f\x1b"])
+      if(!this.api.datacenter.Game.isSpectator)
       {
          this.api.datacenter.Basics.currentSessionFightCount++;
          _loc4_.id = this.api.datacenter.Basics.currentSessionFightCount;
@@ -1155,11 +1155,11 @@ class dofus.aks.extend.GameIn extends dofus.aks.Handler
             this.api.datacenter.Player.data = _loc3_;
             this.api.ui.getUIComponent("Banner")["\x1b\x15\x0f"]();
          }
-         else if(this.api.gfx.spriteHandler["\x18\x0f\f"] && (_loc3_ instanceof dofus.datacenter.["\x16\x19\x02"] || (_loc3_ instanceof dofus.datacenter..PlayerShop || _loc3_ instanceof dofus.datacenter.["\x18\x1d\x19"])))
+         else if(this.api.gfx.SpriteHandler.hidePlayerSprites && (_loc3_ instanceof dofus.datacenter.["\x16\x19\x02"] || (_loc3_ instanceof dofus.datacenter..PlayerShop || _loc3_ instanceof dofus.datacenter.["\x18\x1d\x19"])))
          {
-            this.api.gfx.spriteHandler["\x18\x06\x1c"](_loc5_,true);
+            this.api.gfx.SpriteHandler["\x18\x06\x1c"](_loc5_,true);
          }
-         else if(this.api.gfx.spriteHandler["\x18\x0f\x15"] && _loc3_ instanceof dofus.datacenter.["\x18\x1d\x19"])
+         else if(this.api.gfx.SpriteHandler["\x18\x0f\x15"] && _loc3_ instanceof dofus.datacenter.["\x18\x1d\x19"])
          {
             _loc3_.mc["\x1e\x07\n"](true);
          }

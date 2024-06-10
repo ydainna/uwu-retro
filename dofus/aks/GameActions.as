@@ -672,7 +672,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             break;
          case "AskYesNoMarriage":
             this["\x15\x1b\x12"](_loc2_.params.refID);
-            this.api.gfx["\x15\x1e\x10"](_loc2_.params.spriteID,this.api.lang.getText("YES"));
+            this.api.gfx.addSpriteBubble(_loc2_.params.spriteID,this.api.lang.getText("YES"));
       }
    }
    function no(oEvent)
@@ -684,7 +684,7 @@ class dofus.aks.GameActions extends dofus.aks.Handler
             break;
          case "AskYesNoMarriage":
             this["\x1a\x0b\x0e"](_loc2_.params.refID);
-            this.api.gfx["\x15\x1e\x10"](_loc2_.params.spriteID,this.api.lang.getText("NO"));
+            this.api.gfx.addSpriteBubble(_loc2_.params.spriteID,this.api.lang.getText("NO"));
       }
    }
    function ignore(oEvent)

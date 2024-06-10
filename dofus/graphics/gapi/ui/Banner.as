@@ -165,31 +165,31 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
    }
    function §\x1a\x1e\x17§(§\x1b\x05\x02§, oParams, §\x16\x12\x18§, §\x16\x0f\x01§)
    {
-      if(this.api.datacenter.Game["\x18\x0f\x1b"] && this._mcRightPanel.bMouseSpriteRollover == true)
+      if(this.api.datacenter.Game.isSpectator && this._mcRightPanel.bMouseSpriteRollover == true)
       {
          return undefined;
       }
-      if(this._mcRightPanel["\x16\x1b\x0f"] == _loc2_ && !(this.api.datacenter.Game["\x18\x0f\x1b"] && _loc4_ == true))
+      if(this._mcRightPanel["\x16\x1b\x0f"] == _loc2_ && !(this.api.datacenter.Game.isSpectator && _loc4_ == true))
       {
          return undefined;
       }
-      if(!(this.api.datacenter.Game["\x18\x0f\x1b"] && _loc4_ != true))
+      if(!(this.api.datacenter.Game.isSpectator && _loc4_ != true))
       {
-         var _loc6_ = this["\x16\x19\x0b"].fightSpectatorReplacementPanel;
+         var _loc6_ = this.chat.fightSpectatorReplacementPanel;
          if(_loc6_ != undefined)
          {
             _loc6_.update(_loc3_.data);
          }
          else if(this.api.kernel.OptionsManager.getOption("SpriteInfos"))
          {
-            if(this["\x16\x19\x0b"].replacementPanelsManager.currentReplacementPanel == dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.SHORTCUTS)
+            if(this.chat.replacementPanelsManager.currentReplacementPanel == dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.SHORTCUTS)
             {
-               this["\x16\x19\x0b"].shortcutsReplacementPanel.showMiniMap(false);
-               this["\x16\x19\x0b"].shortcutsReplacementPanel["\x1b\x16\t"](_loc3_.data);
+               this.chat.shortcutsReplacementPanel.showMiniMap(false);
+               this.chat.shortcutsReplacementPanel["\x1b\x16\t"](_loc3_.data);
             }
             else
             {
-               this["\x16\x19\x0b"].useTemporaryReplacementPanel(dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.FULL_WIDTH_FIGHTER_EFFECTS,[_loc3_.data]);
+               this.chat.useTemporaryReplacementPanel(dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.FULL_WIDTH_FIGHTER_EFFECTS,[_loc3_.data]);
             }
          }
          if(this._mcRightPanel["\x16\x1b\x0f"] == _loc2_)
@@ -221,7 +221,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
       {
          this._mcRightPanel.bMouseSpriteRollover = false;
       }
-      if(this._mcRightPanel != undefined && !(this.api.datacenter.Game["\x18\x0f\x1b"] && _loc2_ != true))
+      if(this._mcRightPanel != undefined && !(this.api.datacenter.Game.isSpectator && _loc2_ != true))
       {
          this._mcRightPanel.swapDepths(this["\x1d\x0f\x12"]);
          this._mcRightPanel.removeMovieClip();
@@ -1089,7 +1089,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
          case "_btnGiveUp":
             if(this.api.datacenter.Game.isFight)
             {
-               if(this.api.datacenter.Game["\x18\x0f\x1b"])
+               if(this.api.datacenter.Game.isSpectator)
                {
                   this.api.network.Game["\x18\x13\x1d"]();
                }
@@ -1239,7 +1239,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
             this.gapi.showTooltip(this.api.lang.getText("CHAT_MENU"),_loc2_.target,-20,{bXLimit:false,bYLimit:false});
             break;
          case "_btnGiveUp":
-            if(this.api.datacenter.Game["\x18\x0f\x1b"])
+            if(this.api.datacenter.Game.isSpectator)
             {
                var _loc3_ = this.api.lang.getText("GIVE_UP_SPECTATOR");
             }
@@ -1509,7 +1509,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
    function configureUseFlashChat(bUse)
    {
       this._bUseFlashChat = bUse;
-      this._cChat.useReplacementPanel(!!bUse ? dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.NO_REPLACEMENT_PANEL : this.api.kernel.OptionsManager.getOption("chatReplacementPanel"));
+      this._cChat.useReplacementPanel(!!bUse ? dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.NO_REPLACEMENT_PANEL : this.api.kernel.OptionsManager.getOption("chatReplacementPanel"));
       this._txtConsole._visible = bUse;
       this._mcBgTxtConsole._visible = bUse;
       this._cChat._btnOpenClose._visible = bUse;

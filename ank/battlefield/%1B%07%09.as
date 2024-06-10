@@ -600,7 +600,7 @@ class ank.battlefield.§\x1b\x07\t§
    function §\x1a\x1e\x0e§(bShow)
    {
       ank.battlefield.SpriteHandler["\x1c\b\r"] = _loc2_;
-      var _loc3_ = this.api.gfx.spriteHandler.getSprites().getItems();
+      var _loc3_ = this.api.gfx.SpriteHandler.getSprites().getItems();
       for(var sID in _loc3_)
       {
          var _loc4_ = _loc3_[sID].mc;

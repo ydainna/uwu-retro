@@ -4,7 +4,7 @@ class dofus.aks.ModReport extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function sendCreateReportToModeration(§\x1a\x10\x12§, §\x19\x04\x0b§, bLinkChatConversation, sNote)
+   function sendCreateReportToModeration(sCharacterID, §\x19\x04\x0b§, bLinkChatConversation, sNote)
    {
       if(sNote == undefined)
       {
@@ -12,7 +12,7 @@ class dofus.aks.ModReport extends dofus.aks.Handler
       }
       this.aks.send("mC" + super.getSerializedArgs([_loc3_,_loc4_,bLinkChatConversation,sNote]),true,undefined,true);
    }
-   function sendNMRAdminNonArchivedReportsChangeState(§\x1a\x10\x12§, §\x19\x04\x0b§, §\x1b\b\x15§, sNote)
+   function sendNMRAdminNonArchivedReportsChangeState(sCharacterID, §\x19\x04\x0b§, §\x1b\b\x15§, sNote)
    {
       if(sNote == undefined)
       {
@@ -20,7 +20,7 @@ class dofus.aks.ModReport extends dofus.aks.Handler
       }
       this.aks.send("mS" + super.getSerializedArgs([_loc3_,_loc4_,_loc5_,sNote]),true,undefined,true);
    }
-   function sendNMRAdminNonArchivedReportChangeState(§\x1a\x10\x12§, sReportUUID, §\x1b\b\x15§, sNote)
+   function sendNMRAdminNonArchivedReportChangeState(sCharacterID, sReportUUID, §\x1b\b\x15§, sNote)
    {
       if(sNote == undefined)
       {

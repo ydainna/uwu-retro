@@ -79,7 +79,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
       }
       this.api.datacenter.Basics["\x16\x02\x0f"] = _loc3_;
    }
-   function §\x19\x1a\b§(sExtraData)
+   function onMessage(sExtraData)
    {
       var _loc3_ = new Array();
       var _loc4_ = _loc2_.charAt(0);
@@ -142,7 +142,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
                         }
                         break;
                      case 123:
-                        var _loc12_ = this.api.kernel.ChatManager["\x1a\x03\x19"](this.api.lang.getText("INFOS_" + _loc10_),_loc11_);
+                        var _loc12_ = this.api.kernel.ChatManager.parseInlineItems(this.api.lang.getText("INFOS_" + _loc10_),_loc11_);
                         _loc13_ = false;
                         break;
                      case 150:
@@ -322,7 +322,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
    {
       var _loc3_ = _loc2_.split("|");
       var _loc4_ = _loc3_[0];
-      if(_loc4_ != this.api.datacenter.Player.ID && this.api.gfx.spriteHandler["\x18\x0f\f"])
+      if(_loc4_ != this.api.datacenter.Player.ID && this.api.gfx.SpriteHandler.hidePlayerSprites)
       {
          return undefined;
       }
@@ -331,7 +331,7 @@ class dofus.aks.Infos extends dofus.aks.Handler
       var _loc7_ = _loc6_ != "" ? new dofus.datacenter.["\x18\x10\x15"](0,_loc6_,1) : undefined;
       if(!this.api.datacenter.Basics.isCraftLooping)
       {
-         this.api.gfx["\x15\x1e\x15"](_loc4_,"craft",dofus.graphics.battlefield["\x17\x01\x1c"],[_loc5_,_loc7_],2000);
+         this.api.gfx.addSpriteOverHeadItem(_loc4_,"craft",dofus.graphics.battlefield["\x17\x01\x1c"],[_loc5_,_loc7_],2000);
       }
    }
    function §\x19\x19\x1a§(sExtraData)

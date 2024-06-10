@@ -9,12 +9,12 @@ class dofus.§\x18\x18\x0b§.§\x16\x19\x0b§.FightEventsMessagesBuffer
    {
       return this._api;
    }
-   function addFightEventMessage(nActionId, aPermanentArgs, aEvolutiveArgsToAppend, sPlayerId, §\x1b\x06\x1b§)
+   function addFightEventMessage(nActionId, aPermanentArgs, aEvolutiveArgsToAppend, sPlayerId, sUniqId)
    {
       var _loc7_ = this.getFightEventMessage(nActionId);
       if(_loc7_ == undefined)
       {
-         _loc7_ = new dofus.datacenter.["\x16\x19\x0b"].FightEventMessage(this.api,nActionId,aPermanentArgs);
+         _loc7_ = new dofus.datacenter..chat.FightEventMessage(this.api,nActionId,aPermanentArgs);
          this._aMessagesBuffer.push(_loc7_);
       }
       _loc7_["\x15\x1e\x05"](sPlayerId,_loc6_);

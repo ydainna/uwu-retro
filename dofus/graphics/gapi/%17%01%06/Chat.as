@@ -17,15 +17,15 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Chat extends dofus.§\x18\x03
    }
    function get shortcutsReplacementPanel()
    {
-      if(this.replacementPanelsManager.currentReplacementPanel != dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.SHORTCUTS)
+      if(this.replacementPanelsManager.currentReplacementPanel != dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.SHORTCUTS)
       {
          return undefined;
       }
-      return dofus.graphics.gapi.controls["\x16\x19\x0b"].ShortcutsChatReplacementPanel(this._mcReplacementPanel);
+      return dofus.graphics.gapi.controls.chat.ShortcutsChatReplacementPanel(this._mcReplacementPanel);
    }
    function get miniMapReplacementPanel()
    {
-      if(this.replacementPanelsManager.currentReplacementPanel != dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.MINIMAP)
+      if(this.replacementPanelsManager.currentReplacementPanel != dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.MINIMAP)
       {
          return undefined;
       }
@@ -33,11 +33,11 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Chat extends dofus.§\x18\x03
    }
    function get fightSpectatorReplacementPanel()
    {
-      if(this.replacementPanelsManager.currentReplacementPanel != dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.FULL_WIDTH_FIGHTER_EFFECTS)
+      if(this.replacementPanelsManager.currentReplacementPanel != dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.FULL_WIDTH_FIGHTER_EFFECTS)
       {
          return undefined;
       }
-      return dofus.graphics.gapi.controls["\x16\x19\x0b"].FighterEffectsReplacementPanel(this._mcReplacementPanel);
+      return dofus.graphics.gapi.controls.chat.FighterEffectsReplacementPanel(this._mcReplacementPanel);
    }
    function §\x1e\x1a\x0e§()
    {
@@ -106,11 +106,11 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Chat extends dofus.§\x18\x03
    }
    function useReplacementPanel(nReplacementPanel, §\x15\x1b\t§)
    {
-      var _loc4_ = nReplacementPanel == dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.NO_REPLACEMENT_PANEL;
+      var _loc4_ = nReplacementPanel == dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.NO_REPLACEMENT_PANEL;
       this._chatFilters._visible = _loc4_;
       this["\x1e\x0f\x02"]._visible = _loc4_;
       this._mcReplacementPanel._visible = !_loc4_;
-      this._mcMiniMapReplacementPanel._visible = nReplacementPanel == dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager.MINIMAP && (!_loc4_ && !this._replacementPanelsManager.isCurrentReplacementPanelTemporary);
+      this._mcMiniMapReplacementPanel._visible = nReplacementPanel == dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager.MINIMAP && (!_loc4_ && !this._replacementPanelsManager.isCurrentReplacementPanelTemporary);
       this._mcReplacementPanelMask._visible = !_loc4_;
       this.addToQueue({object:this._replacementPanelsManager,method:this._replacementPanelsManager.changeReplacementPanel,params:[nReplacementPanel,undefined,_loc3_]});
    }
@@ -142,14 +142,14 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.Chat extends dofus.§\x18\x03
    {
       this._btnSitDown._visible = _loc2_;
    }
-   function §\x1a\x12\x1a§(§\x19\x07\x16§, §\x16\x12\x04§)
+   function selectFilter(§\x19\x07\x16§, §\x16\x12\x04§)
    {
-      this._chatFilters["\x1a\x12\x1a"](_loc2_,_loc3_);
+      this._chatFilters.selectFilter(_loc2_,_loc3_);
    }
    function §\x18\t\x04§()
    {
       super.init(false,dofus.graphics.gapi.controls.Chat.CLASS_NAME);
-      this._replacementPanelsManager = new dofus.graphics.gapi.ui["\x16\x19\x0b"].ChatReplacementPanelsManager(this.api,this);
+      this._replacementPanelsManager = new dofus.graphics.gapi.ui.chat.ChatReplacementPanelsManager(this.api,this);
       this.api.kernel.ChatManager["\x1b\x15\x1a"]();
    }
    function createChildren()

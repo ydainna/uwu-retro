@@ -20,7 +20,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MapInfos extends dofus.§\x18\x03\x10§.gap
    }
    function §\x18\n\x14§()
    {
-      var _loc2_ = this.api.datacenter.["\x18\x18\x0e"];
+      var _loc2_ = this.api.datacenter.Map;
       if(_loc2_.name == undefined)
       {
          this["\x1c\x12\x15"].text = "";

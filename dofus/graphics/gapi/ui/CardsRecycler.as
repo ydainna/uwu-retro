@@ -253,7 +253,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsRecycler extends dofus.§\x18\x03\x10�
          }
          else
          {
-            var _loc9_ = new dofus.datacenter.["\x18\x10\x15"](_loc2_.ID,_loc2_.unicID,_loc4_,-2,_loc2_["\x16\x1e\x05"]);
+            var _loc9_ = new dofus.datacenter.["\x18\x10\x15"](_loc2_.ID,_loc2_.unicID,_loc4_,-2,_loc2_.compressedEffects);
             _loc6_["\x1b\t\x13"](dofus.Constants["\x17\x06\x16"]);
             _loc6_.push(_loc9_);
          }
@@ -285,7 +285,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CardsRecycler extends dofus.§\x18\x03\x10�
          }
          else
          {
-            var _loc12_ = new dofus.datacenter.["\x18\x10\x15"](_loc2_.ID,_loc2_.unicID,_loc4_,-1,_loc2_["\x16\x1e\x05"]);
+            var _loc12_ = new dofus.datacenter.["\x18\x10\x15"](_loc2_.ID,_loc2_.unicID,_loc4_,-1,_loc2_.compressedEffects);
             _loc5_["\x1b\t\x13"](dofus.Constants["\x17\x06\x16"]);
             _loc5_.push(_loc12_);
          }

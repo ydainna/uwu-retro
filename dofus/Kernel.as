@@ -238,7 +238,7 @@ class dofus.Kernel extends dofus.utils.ApiElement
    }
 
    //TODO : check param (_loc2_)
-   function onFastServerSwitchFail(§\x1b\x03\x10§)
+   function onFastServerSwitchFail(sMessage)
    {
       dofus.kernel.FAST_SWITCHING_SERVER_REQUEST = undefined;
       if(_loc2_ == undefined)
@@ -248,7 +248,7 @@ class dofus.Kernel extends dofus.utils.ApiElement
       this.api.kernel.showMessage(undefined,"Fast server switching failed : " + _loc2_,"ERROR_BOX");
    }
 
-   function onFastServerSwitchSuccess(§\x1b\x03\x10§)
+   function onFastServerSwitchSuccess(sMessage)
    {
       dofus.kernel.FAST_SWITCHING_SERVER_REQUEST = undefined;
       this.api.kernel.showMessage(undefined,"<b>(Fast server switch)</b> : Welcome on <b>" + this.api.datacenter.Basics.aks_current_server.label + "</b>","COMMANDS_CHAT");

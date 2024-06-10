@@ -457,13 +457,13 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.ApiElement
          this.api.gfx["\x1b\x13\x18"](true);
          this.api.gfx["\x18\x18\x15"]["\x1a\x1d\x1a"] = false;
       }
-      if(this.api.gfx.spriteHandler["\x18\x0f\x15"])
+      if(this.api.gfx.SpriteHandler["\x18\x0f\x15"])
       {
-         this.api.gfx.spriteHandler["\x1a\x1e\x0e"](false);
+         this.api.gfx.SpriteHandler["\x1a\x1e\x0e"](false);
       }
-      if(this.api.gfx.spriteHandler["\x18\x0f\f"] && (!this.api.ui.isComponentHiddingSprites && !this.api.kernel.TutorialManager["\x18\x10\x07"]))
+      if(this.api.gfx.SpriteHandler.hidePlayerSprites && (!this.api.ui.isComponentHiddingSprites && !this.api.kernel.TutorialManager["\x18\x10\x07"]))
       {
-         this.api.gfx.spriteHandler.hideSprites(false,1);
+         this.api.gfx.SpriteHandler.hideSprites(false,1);
       }
       if(this.api.kernel.AdminManager["\x1b\x15\x1d"](_loc3_,_loc2_))
       {
@@ -497,13 +497,13 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.ApiElement
          this.api.gfx["\x1b\x13\x18"](true);
          this.api.gfx["\x18\x18\x15"]["\x1a\x1d\x1a"] = false;
       }
-      if(this.api.gfx.spriteHandler["\x18\x0f\x15"])
+      if(this.api.gfx.SpriteHandler["\x18\x0f\x15"])
       {
-         this.api.gfx.spriteHandler["\x1a\x1e\x0e"](false);
+         this.api.gfx.SpriteHandler["\x1a\x1e\x0e"](false);
       }
-      if(this.api.gfx.spriteHandler["\x18\x0f\f"] && (!this.api.ui.isComponentHiddingSprites && !this.api.kernel.TutorialManager["\x18\x10\x07"]))
+      if(this.api.gfx.SpriteHandler.hidePlayerSprites && (!this.api.ui.isComponentHiddingSprites && !this.api.kernel.TutorialManager["\x18\x10\x07"]))
       {
-         this.api.gfx.spriteHandler.hideSprites(false,1);
+         this.api.gfx.SpriteHandler.hideSprites(false,1);
       }
       var _loc2_ = Key.getCode();
       delete this["\x1c\x07\r"][_loc2_];
@@ -552,18 +552,18 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.ApiElement
          case "SHOWMONSTERSTOOLTIP":
             if(!this.api.kernel.TutorialManager["\x18\x10\x07"])
             {
-               this.api.gfx.spriteHandler["\x1a\x1e\x0e"](true);
+               this.api.gfx.SpriteHandler["\x1a\x1e\x0e"](true);
             }
             _loc3_ = false;
             break;
          case "SHOWTRIGGERS":
-            if(this.api.datacenter.Game.isFight || 7789 - this["\x1d\x18\t"] < dofus.Constants["\x16\x1c\x14"])
+            if(this.api.datacenter.Game.isFight || 7789 - this["\x1d\x18\t"] < dofus.Constants.CLICK_MIN_DELAY)
             {
                break;
             }
             if(!this.api.datacenter.Game.isFight)
             {
-               if(7929 - this["\x1d\x18\t"] >= dofus.Constants["\x16\x1c\x14"])
+               if(7929 - this["\x1d\x18\t"] >= dofus.Constants.CLICK_MIN_DELAY)
                {
                   this["\x1d\x18\t"] = 10054;
                   this.api.gfx["\x18\x18\x15"]["\x1b\x01\x10"]();
@@ -573,9 +573,9 @@ class dofus.§\x18\x18\x0b§.§\x18\x11\x1c§ extends dofus.utils.ApiElement
             }
             break;
          case "HIDESPRITES":
-            if(!this.api.gfx.spriteHandler["\x18\x0f\f"] && !this.api.kernel.TutorialManager["\x18\x10\x07"])
+            if(!this.api.gfx.SpriteHandler.hidePlayerSprites && !this.api.kernel.TutorialManager["\x18\x10\x07"])
             {
-               this.api.gfx.spriteHandler.hideSprites(true,1);
+               this.api.gfx.SpriteHandler.hideSprites(true,1);
             }
             _loc3_ = false;
             break;

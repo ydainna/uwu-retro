@@ -23,7 +23,7 @@ class dofus.aks.Waypoints extends dofus.aks.Handler
          var _loc7_ = _loc3_[_loc6_].split(";");
          var _loc8_ = Number(_loc7_[0]);
          var _loc9_ = Number(_loc7_[1]);
-         var _loc10_ = new dofus.datacenter.["\x1b\x18\x17"](_loc8_,_loc8_ == this.api.datacenter.["\x18\x18\x0e"].id,_loc8_ == _loc4_,_loc9_);
+         var _loc10_ = new dofus.datacenter.["\x1b\x18\x17"](_loc8_,_loc8_ == this.api.datacenter.Map.id,_loc8_ == _loc4_,_loc9_);
          _loc5_.push(_loc10_);
          _loc6_ = _loc6_ + 1;
       }

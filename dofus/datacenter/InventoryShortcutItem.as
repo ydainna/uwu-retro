@@ -35,7 +35,7 @@ class dofus.§\x17\x04\x19§.InventoryShortcutItem extends Object
          var _loc3_ = _loc2_[k];
          if(_loc3_.unicID == this._nGenericID)
          {
-            if(_loc3_["\x16\x1e\x05"] == this["\x1e\t\x0b"])
+            if(_loc3_.compressedEffects == this["\x1e\t\x0b"])
             {
                return _loc3_;
             }
@@ -67,7 +67,7 @@ class dofus.§\x17\x04\x19§.InventoryShortcutItem extends Object
          var _loc5_ = _loc3_[k];
          if(_loc5_.unicID == this._nGenericID)
          {
-            if(_loc5_["\x16\x1e\x05"] == this["\x1e\t\x0b"])
+            if(_loc5_.compressedEffects == this["\x1e\t\x0b"])
             {
                var _loc4_ = _loc5_;
                if(_loc5_.isEquiped)

@@ -9,7 +9,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChatFilters extends dofus.§\
    {
       return new Array(this._btnFilter0.selected,this._btnFilter1.selected,this._btnFilter2.selected,this._btnFilter3.selected,this._btnFilter4.selected,this._btnFilter5.selected,this._btnFilter6.selected,this._btnFilter7.selected,this._btnFilter8.selected,this._btnFilter9.selected,this._btnFilter10.selected);
    }
-   function §\x1a\x12\x1a§(§\x19\x07\x16§, §\x16\x12\x04§)
+   function selectFilter(§\x19\x07\x16§, §\x16\x12\x04§)
    {
       var _loc4_ = this["_btnFilter" + _loc2_];
       if(_loc4_ == undefined)
@@ -79,13 +79,13 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.ChatFilters extends dofus.§\
          var _loc4_ = this["_btnFilter" + _loc3_];
          if(_loc4_ != undefined)
          {
-            _loc4_.selected = this.api.datacenter.Basics["\x16\x19\x14"][_loc3_] == true;
-            this.api.kernel.ChatManager["\x1a\x1a\x1c"](_loc3_,_loc4_.selected);
+            _loc4_.selected = this.api.datacenter.Basics.chat_type_visible[_loc3_] == true;
+            this.api.kernel.ChatManager.setTypeVisible(_loc3_,_loc4_.selected);
          }
          _loc3_ = _loc3_ + 1;
       }
-      this.api.kernel.ChatManager["\x1a\x1a\x1c"](1,true);
-      this.api.kernel.ChatManager["\x1a\x1a\x1c"](9,true);
+      this.api.kernel.ChatManager.setTypeVisible(1,true);
+      this.api.kernel.ChatManager.setTypeVisible(9,true);
    }
    function click(oEvent)
    {

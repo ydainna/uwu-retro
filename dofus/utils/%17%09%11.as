@@ -684,7 +684,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.ApiElement
    {
       return this["\x18\x02\t"]("SIM");
    }
-   function §\x17\x1e\x1a§(§\x19\b\x0b§)
+   function getSpeakingItemsText(§\x19\b\x0b§)
    {
       return this["\x18\x02\t"]("SIM")[_loc2_];
    }

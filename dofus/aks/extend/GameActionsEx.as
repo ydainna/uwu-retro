@@ -116,7 +116,7 @@ class dofus.aks.extend.GameActionsEx
             var _loc28_ = this.api.datacenter.Sprites.getItemAt(Number(_loc27_[0]));
             var _loc29_ = this.api.datacenter.Sprites.getItemAt(Number(_loc27_[1]));
             var _loc30_ = _loc27_[2];
-            this.api.gfx["\x15\x1e\x10"](_loc30_,this.api.lang.getText("A_ASK_MARRIAGE_B",[_loc28_.name,_loc29_.name]));
+            this.api.gfx.addSpriteBubble(_loc30_,this.api.lang.getText("A_ASK_MARRIAGE_B",[_loc28_.name,_loc29_.name]));
             if(_loc28_.id == this.api.datacenter.Player.ID)
             {
                this.api.kernel.showMessage(this.api.lang.getText("MARRIAGE"),this.api.lang.getText("A_ASK_MARRIAGE_B",[_loc28_.name,_loc29_.name]),"CAUTION_YESNO",{name:"Marriage",listener:this._parent,params:{spriteID:_loc28_.id,refID:sSenderID}});
@@ -130,7 +130,7 @@ class dofus.aks.extend.GameActionsEx
             var _loc33_ = this.api.datacenter.Sprites.getItemAt(Number(_loc31_[1]));
             var _loc34_ = _loc31_[2];
             var _loc35_ = _loc3_ != 618 ? "A_NOT_MARRIED_B" : "A_MARRIED_B";
-            this.api.gfx["\x15\x1e\x10"](_loc34_,this.api.lang.getText(_loc35_,[_loc32_.name,_loc33_.name]));
+            this.api.gfx.addSpriteBubble(_loc34_,this.api.lang.getText(_loc35_,[_loc32_.name,_loc33_.name]));
             break;
          case 900:
             oContext.bSequence = false;
@@ -142,14 +142,14 @@ class dofus.aks.extend.GameActionsEx
                _loc8_ = false;
                break;
             }
-            this.api.kernel.showMessage(undefined,this.api.lang.getText("A_CHALENGE_B",[this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc36_.id,_loc36_.name),this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc37_.id,_loc37_.name)]),"INFO_CHAT");
+            this.api.kernel.showMessage(undefined,this.api.lang.getText("A_CHALENGE_B",[this.api.kernel.ChatManager.getLinkName(_loc36_.id,_loc36_.name),this.api.kernel.ChatManager.getLinkName(_loc37_.id,_loc37_.name)]),"INFO_CHAT");
             if(_loc36_.id == this.api.datacenter.Player.ID)
             {
                this.api.kernel.showMessage(this.api.lang.getText("CHALENGE"),this.api.lang.getText("YOU_CHALENGE_B",[_loc37_.name]),"INFO_CANCEL",{name:"Challenge",listener:this._parent,params:{spriteID:_loc36_.id}});
             }
             if(_loc37_.id == this.api.datacenter.Player.ID)
             {
-               if(this.api.kernel.ChatManager["\x18\f\x16"](_loc36_.name))
+               if(this.api.kernel.ChatManager.isBlacklisted(_loc36_.name))
                {
                   this._parent["\x1a\x0b\f"](_loc36_.id);
                   _loc8_ = false;
@@ -244,7 +244,7 @@ class dofus.aks.extend.GameActionsEx
             {
                break;
             }
-            this.api.kernel.showMessage(undefined,this.api.lang.getText("A_ATTACK_B",[this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc39_.id,_loc41_),this.api.kernel.ChatManager["\x17\x1a\x1d"](_loc40_.id,_loc42_)]),"INFO_CHAT");
+            this.api.kernel.showMessage(undefined,this.api.lang.getText("A_ATTACK_B",[this.api.kernel.ChatManager.getLinkName(_loc39_.id,_loc41_),this.api.kernel.ChatManager.getLinkName(_loc40_.id,_loc42_)]),"INFO_CHAT");
             if(_loc38_ == this.api.datacenter.Player.ID)
             {
                this.api.electron.makeNotification(this.api.lang.getText("A_ATTACK_B",[_loc41_,_loc42_]));
@@ -359,7 +359,7 @@ class dofus.aks.extend.GameActionsEx
             _loc5_.addAction(92,false,this.api.sounds["\x17\x0e\x06"],this.api.sounds["\x17\x0e\x06"]["\x19\x17\x1d"],[]);
             _loc5_.addAction(93,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_LAUNCH_SPELL",[_loc80_.name,this.api.lang.getSpellText(_loc79_).n]),"INFO_FIGHT_CHAT"]);
             _loc5_.addAction(94,false,this.api.kernel,this.api.kernel.showMessage,[undefined,"(" + this.api.lang.getText("CRITICAL_MISS") + ")","INFO_FIGHT_CHAT"]);
-            _loc5_.addAction(95,false,this.api.gfx,this.api.gfx["\x15\x1e\x10"],[sSenderID,this.api.lang.getText("CRITICAL_MISS")]);
+            _loc5_.addAction(95,false,this.api.gfx,this.api.gfx.addSpriteBubble,[sSenderID,this.api.lang.getText("CRITICAL_MISS")]);
             if(sSenderID == this.api.datacenter.Player.ID)
             {
                this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x13"]);
@@ -431,7 +431,7 @@ class dofus.aks.extend.GameActionsEx
             _loc5_.addAction(102,false,this.api.sounds["\x17\x0e\x06"],this.api.sounds["\x17\x0e\x06"]["\x19\x17\x1d"],[]);
             _loc5_.addAction(103,false,this.api.kernel,this.api.kernel.showMessage,[undefined,this.api.lang.getText("HAS_ATTACK_CC_NAME",[_loc99_.name,_loc100_.name]),"INFO_FIGHT_CHAT"]);
             _loc5_.addAction(104,false,this.api.kernel,this.api.kernel.showMessage,[undefined,"(" + this.api.lang.getText("CRITICAL_MISS") + ")","INFO_FIGHT_CHAT"]);
-            _loc5_.addAction(105,false,this.api.gfx,this.api.gfx["\x15\x1e\x10"],[sSenderID,this.api.lang.getText("CRITICAL_MISS")]);
+            _loc5_.addAction(105,false,this.api.gfx,this.api.gfx.addSpriteBubble,[sSenderID,this.api.lang.getText("CRITICAL_MISS")]);
             if(sSenderID == this.api.datacenter.Player.ID)
             {
                this.api.kernel.SpeakingItemsManager["\x1b\x11\x0e"](dofus.managers.SpeakingItemsManager["\x1b\x05\x13"]);

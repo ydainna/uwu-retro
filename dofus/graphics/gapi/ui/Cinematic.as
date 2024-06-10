@@ -70,11 +70,11 @@ class dofus.§\x18\x03\x10§.gapi.ui.Cinematic extends dofus.§\x18\x03\x10§.ga
       }
       if(!this._bDisplayNpc)
       {
-         this.api.gfx.spriteHandler.hideSprites(true,2);
+         this.api.gfx.SpriteHandler.hideSprites(true,2);
       }
       if(!this._bDisplayMonster)
       {
-         this.api.gfx.spriteHandler.hideSprites(true,3);
+         this.api.gfx.SpriteHandler.hideSprites(true,3);
       }
       _loc2_.gotoAndPlay(this._nFrameToStart);
       this._btnCancel._visible = this._bCanCancel || this.api.datacenter.Player.isAuthorized;
@@ -139,11 +139,11 @@ class dofus.§\x18\x03\x10§.gapi.ui.Cinematic extends dofus.§\x18\x03\x10§.ga
       }
       if(!this._bDisplayNpc)
       {
-         this.api.gfx.spriteHandler.hideSprites(false,2);
+         this.api.gfx.SpriteHandler.hideSprites(false,2);
       }
       if(!this._bDisplayMonster)
       {
-         this.api.gfx.spriteHandler.hideSprites(false,3);
+         this.api.gfx.SpriteHandler.hideSprites(false,3);
       }
       if(!this["\x1d\b\n"]._visible)
       {

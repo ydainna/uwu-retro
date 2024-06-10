@@ -160,7 +160,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.StatsJob extends dofus.§\x18\x03\x10§.gap
          _loc4_ = _loc4_ + 1;
       }
       this["\x1c\x1b\x0f"].text = this.api.datacenter.Player.Name;
-      this["\x15\x1c\x18"](!this.api.datacenter.Game.isFight && this.api.datacenter.["\x18\x18\x0e"].bCanBoostStats);
+      this["\x15\x1c\x18"](!this.api.datacenter.Game.isFight && this.api.datacenter.Map.bCanBoostStats);
    }
    function initTexts()
    {

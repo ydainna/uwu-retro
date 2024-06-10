@@ -52,7 +52,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       super.initialize(oAPI);
       this.api.ui.addEventListener("removeCursor",this);
    }
-   function §\x16\x06\x07§(§\x1b\x06\x1b§)
+   function §\x16\x06\x07§(sUniqId)
    {
       var _loc3_ = this.api.ui.loadUIComponent("AskPrivateChat","AskPrivateChat",{title:this.api.lang.getText("WISPER_MESSAGE") + " " + this.api.lang.getText("TO_DESTINATION") + " " + _loc2_,params:{playerName:_loc2_}});
       _loc3_.addEventListener("send",this);
@@ -224,8 +224,8 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          return undefined;
       }
       this.api.sounds["\x17\x0e\x06"]["\x19\x18\x01"]();
-      this.api.sounds["\x1a\x05\x1a"](this.api.datacenter.["\x18\x18\x0e"].musicID);
-      if(!this.api.datacenter.Game["\x18\x0f\x1b"])
+      this.api.sounds["\x1a\x05\x1a"](this.api.datacenter.Map.musicID);
+      if(!this.api.datacenter.Game.isSpectator)
       {
          this.api.kernel.showMessage(undefined,this.api.lang.getText("OPEN_WINDOW",[this.api.lang.getText("GAME_END"),"<b><a href=\"asfunction:onHref,showEndPanel," + this.api.datacenter.Game["\x1a\x0e\t"].id + ",false\">" + this.api.lang.getText("FIGHT_END") + "</a></b>"]),"INFO_CHAT");
          this.printFightResultInfo(8,this.api.datacenter.Basics.exp_lastGained);
@@ -601,7 +601,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          }
          return false;
       }
-      var _loc6_ = this.api.datacenter.["\x18\x18\x0e"];
+      var _loc6_ = this.api.datacenter.Map;
       if(_loc5_["\x18\b\x13"] != "map")
       {
          _loc5_.circleXtra["\x1a\x1c\x1d"]("compass",true,{bMask:true},{updateOnLoad:false});
@@ -818,8 +818,8 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          var _loc13_ = _loc4_ * _loc2_ / 100;
          var _loc14_ = _loc5_ - _loc12_;
          var _loc15_ = _loc6_ - _loc13_;
-         var _loc16_ = (this.api.datacenter.["\x18\x18\x0e"].width - 1) * _loc8_ * _loc2_ / 100;
-         var _loc17_ = (this.api.datacenter.["\x18\x18\x0e"].height - 1) * _loc9_ * _loc2_ / 100;
+         var _loc16_ = (this.api.datacenter.Map.width - 1) * _loc8_ * _loc2_ / 100;
+         var _loc17_ = (this.api.datacenter.Map.height - 1) * _loc9_ * _loc2_ / 100;
          if(_loc14_ > 0)
          {
             _loc14_ = 0;
@@ -899,11 +899,11 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          var _loc3_ = this.api.kernel.OptionsManager.getOption("CreaturesMode");
          if(_loc2_ >= _loc3_)
          {
-            this.api.gfx.spriteHandler["\x1a\x15\x17"](true);
+            this.api.gfx.SpriteHandler["\x1a\x15\x17"](true);
          }
          else if(_loc2_ < _loc3_ - 2)
          {
-            this.api.gfx.spriteHandler["\x1a\x15\x17"](false);
+            this.api.gfx.SpriteHandler["\x1a\x15\x17"](false);
          }
       }
    }
@@ -933,7 +933,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    {
       return this["\x1e\n\x14"];
    }
-   function §\x1a\x1e\f§(sPlayerID, §\x1b\x06\x1b§, §\x1b\x03\x10§, oCustomPopupPosition)
+   function §\x1a\x1e\f§(sPlayerID, sUniqId, sMessage, oCustomPopupPosition)
    {
       if(this.api.datacenter.Player.isAuthorized && this.api.kernel.AdminManager.executeHotKeyBatch(_loc3_))
       {
@@ -1134,7 +1134,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          this.api.kernel.showMessage(undefined,this.api.lang.getText("TEMPORARY_BLACKLISTED",[_loc2_]),"INFO_CHAT");
       }
    }
-   function reportPlayer(sPlayerID, §\x1b\x06\x1b§, bIsVendor)
+   function reportPlayer(sPlayerID, sUniqId, bIsVendor)
    {
       if(sPlayerID == undefined || (_loc3_ == undefined || bIsVendor == undefined))
       {
@@ -1222,7 +1222,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       var _loc11_ = _loc3_.sPlayerName == undefined ? _loc2_.name : _loc3_.sPlayerName;
       var _loc12_ = this.api.ui["\x17\x02\x19"]();
       _loc12_["\x15\x1e\x18"](_loc11_);
-      var _loc13_ = this.api.kernel.ChatManager["\x18\f\x16"](_loc11_);
+      var _loc13_ = this.api.kernel.ChatManager.isBlacklisted(_loc11_);
       if(_loc13_)
       {
          _loc12_["\x15\x1e\x18"]("(" + this.api.lang.getText("IGNORED_WORD") + ")");
@@ -1257,7 +1257,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       }
       else
       {
-         if(!this.api.kernel.ChatManager["\x18\f\x16"](_loc11_))
+         if(!this.api.kernel.ChatManager.isBlacklisted(_loc11_))
          {
             _loc12_["\x15\x1d\x12"](this.api.lang.getText("BLACKLIST_TEMPORARLY"),this.api.kernel.GameManager,this.api.kernel.GameManager["\x1a\r\x12"],[_loc11_,_loc10_,undefined,_loc2_]);
          }
@@ -1309,7 +1309,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
                {
                   _loc12_["\x15\x1d\x12"](this.api.lang.getText("JOIN_SMALL"),this.api.kernel.AdminManager,this.api.kernel.AdminManager.sendCommand,["join " + _loc11_]);
                }
-               else if(this.api.datacenter.["\x18\x18\x0e"].superarea == 3)
+               else if(this.api.datacenter.Map.superarea == 3)
                {
                   _loc12_["\x15\x1d\x12"](this.api.lang.getText("JOIN_SMALL"),this.api.network.Friends,this.api.network.Friends["\x18\x11\x13"],[_loc11_]);
                }
@@ -1317,7 +1317,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          }
          if(!_loc9_ && (_loc2_ != null && (_loc2_.gfxID != ank.battlefield.datacenter..Sprite.ANGELS_OF_THE_WORLD_SPRITE_ID && !_loc5_)))
          {
-            if(this.api.datacenter.["\x18\x18\x0e"].isMyHome)
+            if(this.api.datacenter.Map.isMyHome)
             {
                _loc12_["\x15\x1d\x12"](this.api.lang.getText("KICKOFF"),this.api.network.Houses,this.api.network.Houses["\x18\x12\x01"],[_loc10_]);
             }
@@ -1327,16 +1327,16 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
             }
             if(this.api.datacenter.Player.canChallenge && _loc2_["\x16\x15\x16"])
             {
-               _loc12_["\x15\x1d\x12"](this.api.lang.getText("CHALLENGE"),this.api.network.GameActions,this.api.network.GameActions.challenge,[_loc10_],this.api.datacenter.["\x18\x18\x0e"].bCanChallenge);
+               _loc12_["\x15\x1d\x12"](this.api.lang.getText("CHALLENGE"),this.api.network.GameActions,this.api.network.GameActions.challenge,[_loc10_],this.api.datacenter.Map.bCanChallenge);
             }
             if(this.api.datacenter.Player.canAssault && !_loc2_["\x1a\x1d\x1c"])
             {
                var _loc16_ = this.api.datacenter.Player.data.alignment.index;
                if(this.api.lang["\x17\x13\x1b"](_loc16_,_loc2_.alignment.index))
                {
-                  var _loc17_ = this.api.datacenter.["\x18\x18\x0e"].bCanAttack;
+                  var _loc17_ = this.api.datacenter.Map.bCanAttack;
                   var _loc18_ = this.api.datacenter.Basics.pvpHuntedSpriteID != undefined && this.api.datacenter.Basics.pvpHuntedSpriteID == _loc10_;
-                  if(!_loc17_ && (_loc18_ && this.api.datacenter.["\x18\x18\x0e"].bCanAttackHunt))
+                  if(!_loc17_ && (_loc18_ && this.api.datacenter.Map.bCanAttackHunt))
                   {
                      _loc17_ = true;
                   }

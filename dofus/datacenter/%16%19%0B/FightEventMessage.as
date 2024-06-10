@@ -197,7 +197,7 @@ class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
       this._sTotal = "<font color=\"#" + _loc5_ + "\">" + _loc4_ + "</font>";
       return _loc6_;
    }
-   function §\x15\x1e\x05§(sPlayerId, §\x1b\x06\x1b§)
+   function §\x15\x1e\x05§(sPlayerId, sUniqId)
    {
       this._aPlayersIds.push(sPlayerId);
       this._eoPlayers["\x15\x1d\x13"](sPlayerId,_loc3_);
@@ -303,7 +303,7 @@ class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
          }
          _loc16_ = _loc16_ + 1;
       }
-      return _loc5_.join(dofus.datacenter.["\x16\x19\x0b"].FightEventMessage.JOIN_DELIMITER);
+      return _loc5_.join(dofus.datacenter..chat.FightEventMessage.JOIN_DELIMITER);
    }
    function getPrintableString(eoTeam0, eoTeam1)
    {
@@ -453,7 +453,7 @@ class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
                   }
                   else
                   {
-                     _loc7_ += _loc5_.apply(this,[_loc12_,_loc6_.argsForPlayers[_loc10_].join(dofus.datacenter.["\x16\x19\x0b"].FightEventMessage.JOIN_DELIMITER)]);
+                     _loc7_ += _loc5_.apply(this,[_loc12_,_loc6_.argsForPlayers[_loc10_].join(dofus.datacenter..chat.FightEventMessage.JOIN_DELIMITER)]);
                   }
                   _loc7_ += "\n";
                }
@@ -469,7 +469,7 @@ class dofus.§\x17\x04\x19§.§\x16\x19\x0b§.FightEventMessage
             }
             return _loc7_;
          }
-         return String(_loc5_.apply(this,[this.getCleanedPlayerNamesString(eoTeam0,eoTeam1),_loc6_.cleanedArgs.join(dofus.datacenter.["\x16\x19\x0b"].FightEventMessage.JOIN_DELIMITER)]));
+         return String(_loc5_.apply(this,[this.getCleanedPlayerNamesString(eoTeam0,eoTeam1),_loc6_.cleanedArgs.join(dofus.datacenter..chat.FightEventMessage.JOIN_DELIMITER)]));
       }
       return undefined;
    }

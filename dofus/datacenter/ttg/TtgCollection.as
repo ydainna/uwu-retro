@@ -1,6 +1,6 @@
 class dofus.§\x17\x04\x19§.ttg.TtgCollection
 {
-   function TtgCollection(sPlayerID, §\x1b\x06\x1b§, sHash)
+   function TtgCollection(sPlayerID, sUniqId, sHash)
    {
       this.api = _global.api;
       this._eoTtgCardsByCardID = new ank.utils.["\x17\x0e\r"]();

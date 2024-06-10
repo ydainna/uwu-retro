@@ -141,7 +141,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x16\b\x1a§.BannerCircleXtra
             _loc9_ = ["complete","click","over","out"];
             break;
          case "compass":
-            var _loc11_ = this.api.datacenter.["\x18\x18\x0e"];
+            var _loc11_ = this.api.datacenter.Map;
             _loc6_ = "Compass";
             _loc8_ = {_x:this._banner._mcCircleXtraPlacer._x,_y:this._banner._mcCircleXtraPlacer._y,_width:this._banner._mcCircleXtraPlacer._width,_height:this._banner._mcCircleXtraPlacer._height,arrow:"UI_BannerCompassArrow",noArrow:"UI_BannerCompassNoArrow",background:"UI_BannerCompassBack",targetCoords:this.api.datacenter.Basics["\x16\b\x1c"],currentCoords:[_loc11_.x,_loc11_.y]};
             _loc9_ = ["click","over","out"];

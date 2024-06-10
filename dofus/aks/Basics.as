@@ -28,7 +28,7 @@ if(!dofus.aks.Basics)
    {
       this.aks.send("BaM" + _loc2_ + "," + _loc3_,false);
    };
-   _loc1_["\x16\x07\x1b"] = function §\x16\x07\x1b§(§\x1b\x06\x1b§, §\x19\x0f\x14§, §\x1b\x03\x10§)
+   _loc1_["\x16\x07\x1b"] = function §\x16\x07\x1b§(sUniqId, §\x19\x0f\x14§, sMessage)
    {
       this.aks.send("BaK" + _loc2_ + "|" + _loc3_ + "|" + _loc4_,false);
    };
@@ -126,7 +126,7 @@ if(!dofus.aks.Basics)
                   var _loc16_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
                   if(_loc16_ != undefined)
                   {
-                     _loc16_["\x16\x19\x0b"]["\x1a\x01\x03"](true);
+                     _loc16_.chat["\x1a\x01\x03"](true);
                   }
                   break;
                }

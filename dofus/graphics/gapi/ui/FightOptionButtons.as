@@ -41,7 +41,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.FightOptionButtons extends dofus.§\x18\x03
    }
    function initData()
    {
-      if(!this.api.datacenter.Game["\x18\x0f\x1b"])
+      if(!this.api.datacenter.Game.isSpectator)
       {
          if(!this.api.datacenter.Player.inParty)
          {
@@ -117,7 +117,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.FightOptionButtons extends dofus.§\x18\x03
             this.api.network.Fights["\x19\x06\r"]();
             break;
          case this["\x1c\t\x06"]:
-            if(dofus.datacenter.["\x17\t\x0f"].isTournament(this.api.datacenter.["\x18\x18\x0e"].id))
+            if(dofus.datacenter.["\x17\t\x0f"].isTournament(this.api.datacenter.Map.id))
             {
                var _loc6_ = this.gapi.loadUIComponent("AskYesNo","AskYesNoDisableSpectator",{title:this.api.lang.getText("QUESTION"),text:this.api.lang.getText("FIGHT_OPTION_SPECTATOR") + " ?"});
                _loc6_.addEventListener("yes",this);
@@ -134,10 +134,10 @@ class dofus.§\x18\x03\x10§.gapi.ui.FightOptionButtons extends dofus.§\x18\x03
             this.api.datacenter.Basics.gfx_isSpritesHidden = !this.api.datacenter.Basics.gfx_isSpritesHidden;
             if(this.api.datacenter.Basics.gfx_isSpritesHidden)
             {
-               this.api.gfx.spriteHandler["\x18\x19\t"]();
+               this.api.gfx.SpriteHandler["\x18\x19\t"]();
                break;
             }
-            this.api.gfx.spriteHandler["\x1b\x13\x15"]();
+            this.api.gfx.SpriteHandler["\x1b\x13\x15"]();
             break;
       }
    }

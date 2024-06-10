@@ -42,7 +42,7 @@ if(!dofus.managers.AdminManager)
       }
       return XMLNode(this._eoHotKeysBatchNodes.getItemAt(_loc2_));
    };
-   _loc1_.executeHotKeyBatch = function executeHotKeyBatch(§\x1b\x06\x1b§)
+   _loc1_.executeHotKeyBatch = function executeHotKeyBatch(sUniqId)
    {
       if(!Key.isDown(Key.getCode()))
       {
@@ -217,7 +217,7 @@ if(!dofus.managers.AdminManager)
          _loc2_.load(dofus.Constants["\x1b\x1a\x01"]);
       }
    };
-   _loc1_["\x17\x13\x17"] = function §\x17\x13\x17§(§\x1b\x06\x1b§, §\x16\x11\t§)
+   _loc1_["\x17\x13\x17"] = function §\x17\x13\x17§(sUniqId, §\x16\x11\t§)
    {
       this["\x1c\x07\x15"] = _loc3_;
       Selection.setFocus(null);
@@ -803,7 +803,7 @@ if(!dofus.managers.AdminManager)
       _loc4_.push({f:"%h",t:this._aPreparedReplaceVars[1]});
       _loc4_.push({f:"%t",t:this.api.kernel.NightManager.time});
       _loc4_.push({f:"%s",t:this.api.datacenter.Basics.aks_a_prompt});
-      _loc4_.push({f:"%m",t:this.api.datacenter.["\x18\x18\x0e"].id});
+      _loc4_.push({f:"%m",t:this.api.datacenter.Map.id});
       _loc4_.push({f:"%v",t:dofus.Constants.VERSION + "." + dofus.Constants.SUBVERSION + "." + dofus.Constants.SUBSUBVERSION + " (" + dofus.Constants.VERSIONDATE + ")"});
       if(bLabel)
       {

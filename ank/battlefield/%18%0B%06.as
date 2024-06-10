@@ -167,7 +167,7 @@ class ank.battlefield.§\x18\x0b\x06§
    }
    function §\x1a\x16\f§(§\x16\x10\x02§)
    {
-      var _loc3_ = this["\x1e\x03\b"]["\x18\x18\x0e"].data;
+      var _loc3_ = this["\x1e\x03\b"].Map.data;
       for(var k in _loc3_)
       {
          var _loc4_ = _loc3_[k].mcObject2;
@@ -190,7 +190,7 @@ class ank.battlefield.§\x18\x0b\x06§
    }
    function §\x1a\x16\x0e§(§\x16\x10\x02§)
    {
-      var _loc3_ = this["\x1e\x03\b"]["\x18\x18\x0e"].data;
+      var _loc3_ = this["\x1e\x03\b"].Map.data;
       for(var k in _loc3_)
       {
          var _loc4_ = _loc3_[k].mcObject2;
@@ -212,7 +212,7 @@ class ank.battlefield.§\x18\x0b\x06§
    }
    function §\x1a\x16\r§(§\x16\x10\x02§)
    {
-      var _loc3_ = this["\x1e\x03\b"]["\x18\x18\x0e"].data;
+      var _loc3_ = this["\x1e\x03\b"].Map.data;
       for(var k in _loc3_)
       {
          var _loc4_ = _loc3_[k].mcObject2;

@@ -8,7 +8,7 @@ class dofus.utils.§\x17\x03\x04§.§\x1b\x0b\x19§.§\x1b\x0b\x1a§ extends dof
    {
       this["\x1e\x0b\x11"] = _loc2_;
       this["\x1d\x12\x18"] = _loc3_;
-      this._aSubarea = dofus.datacenter.["\x1b\x0b\x18"](this.api.datacenter..Subareas.getItemAt(this.api.datacenter.["\x18\x18\x0e"]["\x1b\x0b\x17"]));
+      this._aSubarea = dofus.datacenter.["\x1b\x0b\x18"](this.api.datacenter..Subareas.getItemAt(this.api.datacenter.Map["\x1b\x0b\x17"]));
    }
    function §\x18\r\x16§()
    {

@@ -55,7 +55,7 @@ class dofus.§\x17\x04\x19§.§\x18\x1d\x19§ extends ank.battlefield.§\x17\x04
    }
    function §\x16\x02\x17§()
    {
-      var _loc2_ = this.api.datacenter.["\x18\x18\x0e"];
+      var _loc2_ = this.api.datacenter.Map;
       return "Groupe niveau " + this["\x1b\x11\x05"] + " en " + _loc2_.x + "," + _loc2_.y + " : <br/>" + this["\x17\x1c\x0e"]("<br/>");
    }
    function §\x17\x04§(§\x1b\x17\x16§)

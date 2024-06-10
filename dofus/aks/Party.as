@@ -21,8 +21,8 @@ class dofus.aks.Party extends dofus.aks.Handler
       this.aks.send("PV" + (_loc2_ == undefined ? "" : _loc2_));
       var _loc3_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
       _loc3_["\x18\b\x12"]["\x1b\x14\x1a"]();
-      _loc3_["\x16\x19\x0b"].miniMapReplacementPanel["\x1b\x14\x1a"]();
-      _loc3_["\x16\x19\x0b"].shortcutsReplacementPanel.miniMap["\x1b\x14\x1a"]();
+      _loc3_.chat.miniMapReplacementPanel["\x1b\x14\x1a"]();
+      _loc3_.chat.shortcutsReplacementPanel.miniMap["\x1b\x14\x1a"]();
    }
    function §\x17\x11\x19§(§\x16\x13\x01§, §\x1b\b\x10§)
    {
@@ -54,13 +54,13 @@ class dofus.aks.Party extends dofus.aks.Handler
          }
          if(_loc6_ == this.api.datacenter.Player.Name)
          {
-            if(this.api.kernel.ChatManager["\x18\f\x16"](_loc5_))
+            if(this.api.kernel.ChatManager.isBlacklisted(_loc5_))
             {
                this["\x1a\x0b\r"]();
                return undefined;
             }
             this.api.electron.makeNotification(this.api.lang.getText("A_INVITE_YOU_IN_PARTY",[_loc5_]));
-            this.api.kernel.showMessage(undefined,this.api.lang.getText("CHAT_A_INVITE_YOU_IN_PARTY",[this.api.kernel.ChatManager["\x17\x1a\x1d"](undefined,_loc5_)]),"INFO_CHAT");
+            this.api.kernel.showMessage(undefined,this.api.lang.getText("CHAT_A_INVITE_YOU_IN_PARTY",[this.api.kernel.ChatManager.getLinkName(undefined,_loc5_)]),"INFO_CHAT");
             this.api.kernel.showMessage(this.api.lang.getText("PARTY"),this.api.lang.getText("A_INVITE_YOU_IN_PARTY",[_loc5_]),"CAUTION_YESNOIGNORE",{name:"Party",player:_loc5_,listener:this,params:{player:_loc5_}});
             this.api.sounds["\x17\x0e\x06"]["\x19\x18\x02"]();
          }

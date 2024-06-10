@@ -172,7 +172,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
       _loc9_["\x18\x17\x07"] = true;
       _loc9_["\x18\x0e\x17"] = _loc7_;
       _loc9_["\x18\x0f\x14"] = _loc8_;
-      this.api.datacenter.["\x18\x18\x0e"].isMyHome = _loc9_["\x18\x17\x07"];
+      this.api.datacenter.Map.isMyHome = _loc9_["\x18\x17\x07"];
       var _loc10_ = this.api.lang["\x17\x18\x18"]();
       this.api.ui.loadUIComponent("HouseIndoor","HouseIndoor",{skills:_loc10_,house:_loc9_},{bStayIfPresent:true});
    }

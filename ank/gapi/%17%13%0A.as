@@ -287,7 +287,7 @@ class ank.gapi.§\x17\x13\n§ extends ank.utils.§\x1a\t\t§
       }
       if(_loc5_.nHideSprites != undefined && this._sComponentHiddingSprites == undefined)
       {
-         this.api.gfx.spriteHandler.hideSprites(true,_loc5_.nHideSprites);
+         this.api.gfx.SpriteHandler.hideSprites(true,_loc5_.nHideSprites);
          this._sComponentHiddingSprites = _loc3_;
       }
       if(dofus.Constants.TRIPLEFRAMERATE)
@@ -381,7 +381,7 @@ class ank.gapi.§\x17\x13\n§ extends ank.utils.§\x1a\t\t§
       _loc3_.destroy();
       if(_loc2_ == this._sComponentHiddingSprites)
       {
-         this.api.gfx.spriteHandler.hideSprites(false);
+         this.api.gfx.SpriteHandler.hideSprites(false);
          this._sComponentHiddingSprites = undefined;
       }
       Key.removeListener(_loc3_);
