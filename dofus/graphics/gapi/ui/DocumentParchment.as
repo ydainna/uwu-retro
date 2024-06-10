@@ -16,7 +16,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.DocumentParchment extends dofus.§\x18\x03\
    }
    function §\x16\x15\n§()
    {
-      this.api.network.Documents["\x18\x13\x1d"]();
+      this.api.network.Documents.leave();
       return true;
    }
    function createChildren()
@@ -80,7 +80,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.DocumentParchment extends dofus.§\x18\x03\
       if(!_global.isNaN(_loc4_))
       {
          this.api.network.GameActions["\x1a\x13\x14"](_loc4_,_loc5_);
-         this.api.network.Documents["\x18\x13\x1d"]();
+         this.api.network.Documents.leave();
       }
    }
 }

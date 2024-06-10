@@ -16,7 +16,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.DocumentRoadSign extends dofus.§\x18\x03\x
    }
    function §\x16\x15\n§()
    {
-      this.api.network.Documents["\x18\x13\x1d"]();
+      this.api.network.Documents.leave();
       return true;
    }
    function createChildren()

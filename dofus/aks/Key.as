@@ -4,7 +4,7 @@ class dofus.aks.Key extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function §\x18\x13\x1d§()
+   function leave()
    {
       this.aks.send("KV",false);
    }

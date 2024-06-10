@@ -19,7 +19,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CreateGuild extends dofus.§\x18\x03\x10§.
    {
       if(this._bEnabled)
       {
-         this.api.network.Guild["\x18\x13\x1d"]();
+         this.api.network.Guild.leave();
          return true;
       }
       return false;
@@ -158,7 +158,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.CreateGuild extends dofus.§\x18\x03\x10§.
       {
          case "_btnClose":
          case "_btnCancel":
-            this.api.network.Guild["\x18\x13\x1d"]();
+            this.api.network.Guild.leave();
             break;
          case "_btnCreate":
             var _loc3_ = this["\x1c\x11\x12"].text;

@@ -298,7 +298,7 @@ class dofus.utils.consoleParsers.ChatConsoleParser extends dofus.utils.consolePa
                }
                if(_loc36_ != undefined)
                {
-                  this.api.network.Game["\x18\x13\x1d"](_loc36_);
+                  this.api.network.Game.leave(_loc36_);
                }
                else
                {

@@ -166,7 +166,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x1a\x04\x03§.§\x1a\x04\x04§ extends d
       _loc2_["\x15\x1d\x12"](this.api.lang.getText("PARTY_WHERE"),this,this["\x1a\x04\x05"],[]);
       if(this["\x1e\x05\x1a"].id == this.api.datacenter.Player.ID)
       {
-         _loc2_["\x15\x1d\x12"](this.api.lang.getText("LEAVE_PARTY"),this.api.network.Party,this.api.network.Party["\x18\x13\x1d"],[]);
+         _loc2_["\x15\x1d\x12"](this.api.lang.getText("LEAVE_PARTY"),this.api.network.Party,this.api.network.Party.leave,[]);
          if(this["\x18\x0e\x16"]())
          {
             if(this["\x1c\x05\x17"])
@@ -202,7 +202,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.§\x1a\x04\x03§.§\x1a\x04\x04§ extends d
             {
                _loc2_["\x15\x1d\x12"](this.api.lang.getText("PARTY_FOLLOW_HIM_ALL"),this.api.network.Party,this.api.network.Party["\x17\x11\x1a"],[false,this["\x1e\x05\x1a"].id]);
             }
-            _loc2_["\x15\x1d\x12"](this.api.lang.getText("KICK_FROM_PARTY"),this.api.network.Party,this.api.network.Party["\x18\x13\x1d"],[this["\x1e\x05\x1a"].id]);
+            _loc2_["\x15\x1d\x12"](this.api.lang.getText("KICK_FROM_PARTY"),this.api.network.Party,this.api.network.Party.leave,[this["\x1e\x05\x1a"].id]);
          }
       }
    }

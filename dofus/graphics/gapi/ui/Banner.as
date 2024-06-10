@@ -1091,7 +1091,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Banner extends dofus.§\x18\x03\x10§.gapi.
             {
                if(this.api.datacenter.Game.isSpectator)
                {
-                  this.api.network.Game["\x18\x13\x1d"]();
+                  this.api.network.Game.leave();
                }
                else
                {

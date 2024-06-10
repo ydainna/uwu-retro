@@ -16,7 +16,7 @@ class dofus.aks.Party extends dofus.aks.Handler
    {
       this.aks.send("PA");
    }
-   function §\x18\x13\x1d§(§\x1b\b\x10§)
+   function leave(§\x1b\b\x10§)
    {
       this.aks.send("PV" + (_loc2_ == undefined ? "" : _loc2_));
       var _loc3_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));

@@ -40,7 +40,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
    {
       this.aks.send("Rb" + _loc2_,true);
    }
-   function §\x18\x13\x1d§()
+   function leave()
    {
       this.aks.send("Rv");
    }

@@ -63,7 +63,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.QuestStepViewer extends dofus
          case this["\x1c\t\x13"]:
             var _loc3_ = this["\x1e\x05\x1d"].dialogID;
             var _loc4_ = this["\x1e\x05\x1d"]["\x17\x07\r"];
-            var _loc5_ = new dofus.datacenter.["\x1a\b\x1b"](_loc3_,undefined,_loc4_);
+            var _loc5_ = new dofus.datacenter.Question(_loc3_,undefined,_loc4_);
             this.gapi.showTooltip(this.api.lang.getText("STEP_DIALOG") + " :\n\n" + _loc5_.label,_loc2_.target,20);
             break;
          case this._ldrAccountQuest:
@@ -84,7 +84,7 @@ class dofus.§\x18\x03\x10§.gapi.§\x17\x01\x06§.QuestStepViewer extends dofus
       {
          var _loc3_ = this["\x1e\x05\x1d"].dialogID;
          var _loc4_ = this["\x1e\x05\x1d"]["\x17\x07\r"];
-         var _loc5_ = new dofus.datacenter.["\x1a\b\x1b"](_loc3_,undefined,_loc4_);
+         var _loc5_ = new dofus.datacenter.Question(_loc3_,undefined,_loc4_);
          this.api.kernel.showMessage(this.api.lang.getText("STEP_DIALOG"),_loc5_.label,"ERROR_BOX");
       }
    }

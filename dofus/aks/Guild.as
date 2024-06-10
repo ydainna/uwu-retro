@@ -8,7 +8,7 @@ class dofus.aks.Guild extends dofus.aks.Handler
    {
       this.aks.send("gC" + _loc2_ + "|" + _loc3_ + "|" + _loc4_ + "|" + _loc5_ + "|" + _loc6_);
    }
-   function §\x18\x13\x1d§()
+   function leave()
    {
       this.aks.send("gV");
    }

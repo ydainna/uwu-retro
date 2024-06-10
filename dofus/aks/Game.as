@@ -23,7 +23,7 @@ class dofus.aks.Game extends dofus.aks.Handler
    {
       this.aks.send("GC" + dofus.aks.Game["\x1b\x12\x1b"]);
    }
-   function §\x18\x13\x1d§(§\x1b\b\x10§)
+   function leave(§\x1b\b\x10§)
    {
       this.aks.send("GQ" + (_loc2_ != undefined ? _loc2_ : ""));
    }

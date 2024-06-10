@@ -35,7 +35,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.Subway extends dofus.§\x18\x03\x10§.gapi.
       switch(this["\x1d\x1e\x18"])
       {
          case dofus.graphics.gapi.ui.Subway["\x1b\f\x06"]:
-            this.api.network.Subway["\x18\x13\x1d"]();
+            this.api.network.Subway.leave();
             break;
          case dofus.graphics.gapi.ui.Subway["\x1b\f\x05"]:
             this.api.network.Subway["\x1a\x07\t"]();

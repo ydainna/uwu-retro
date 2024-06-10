@@ -1,6 +1,6 @@
-class dofus.§\x17\x04\x19§.§\x1a\b\x1b§ extends Object
+class dofus.§\x17\x04\x19§.Question extends Object
 {
-   function §\x1a\b\x1b§(§\x19\f\x1c§, §\x16\x05\x07§, §\x16\x04\x19§)
+   function Question(nQuestionID, §\x16\x05\x07§, §\x16\x04\x19§)
    {
       super();
       this.initialize(_loc3_,_loc4_,_loc5_);
@@ -17,7 +17,7 @@ class dofus.§\x17\x04\x19§.§\x1a\b\x1b§ extends Object
    {
       return this["\x1c\x10\n"];
    }
-   function initialize(§\x19\f\x1c§, §\x16\x05\x07§, §\x16\x04\x19§)
+   function initialize(nQuestionID, §\x16\x05\x07§, §\x16\x04\x19§)
    {
       this.api = _global.api;
       this["\x1d\x1b\x13"] = _loc2_;

@@ -5,7 +5,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function §\x18\x13\x1d§()
+   function leave()
    {
       this.aks.send("EV",true);
    }
@@ -202,7 +202,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
             var _loc12_ = this.api.datacenter.Sprites.getItemAt(_loc5_);
             if(this.api.kernel.ChatManager.isBlacklisted(_loc12_.name))
             {
-               this["\x18\x13\x1d"]();
+               this.leave();
                return undefined;
             }
             this.api.kernel.showMessage(undefined,this.api.lang.getText("CHAT_A_WANT_EXCHANGE",[this.api.kernel.ChatManager.getLinkName(_loc12_.id,_loc12_.name)]),"INFO_CHAT");
@@ -1297,7 +1297,7 @@ class dofus.aks.Exchange extends dofus.aks.Handler
    }
    function cancel(oEvent)
    {
-      this["\x18\x13\x1d"]();
+      this.leave();
    }
    function yes(oEvent)
    {
@@ -1305,12 +1305,12 @@ class dofus.aks.Exchange extends dofus.aks.Handler
    }
    function no(oEvent)
    {
-      this["\x18\x13\x1d"]();
+      this.leave();
    }
    function ignore(oEvent)
    {
       this.api.kernel.ChatManager["\x16\x01\x03"](_loc2_.params.player);
       this.api.kernel.showMessage(undefined,this.api.lang.getText("TEMPORARY_BLACKLISTED",[_loc2_.params.player]),"INFO_CHAT");
-      this["\x18\x13\x1d"]();
+      this.leave();
    }
 }

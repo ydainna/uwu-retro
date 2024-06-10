@@ -30,6 +30,6 @@ class dofus.§\x18\x18\x0b§.DocumentsServersManager extends dofus.§\x18\x18\x0
    function §\x19\x17\b§()
    {
       this.addToQueue({object:this.api.kernel,method:this.api.kernel.showMessage,params:[undefined,this.api.lang.getText("NO_DOCUMENTDATA_FILE"),"ERROR_BOX",{name:"NoMapData"}]});
-      this.api.network.Documents["\x18\x13\x1d"]();
+      this.api.network.Documents.leave();
    }
 }

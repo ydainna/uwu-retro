@@ -47,7 +47,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.KeyCode extends dofus.§\x18\x03\x10§.gapi
    }
    function §\x16\x15\n§()
    {
-      this.api.network.Key["\x18\x13\x1d"]();
+      this.api.network.Key.leave();
       return true;
    }
    function createChildren()

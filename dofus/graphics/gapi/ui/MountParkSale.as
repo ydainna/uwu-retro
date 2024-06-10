@@ -15,7 +15,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.MountParkSale extends dofus.§\x18\x03\x10�
    }
    function §\x16\x15\n§()
    {
-      this.api.network.Mount["\x18\x13\x1d"]();
+      this.api.network.Mount.leave();
       return true;
    }
    function createChildren()

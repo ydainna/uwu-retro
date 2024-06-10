@@ -87,7 +87,7 @@ if(!dofus.graphics.gapi.ui.ForgemagusCraft)
    };
    _loc1_["\x16\x15\n"] = function §\x16\x15\n§()
    {
-      this.api.network.Exchange["\x18\x13\x1d"]();
+      this.api.network.Exchange.leave();
       return true;
    };
    _loc1_.createChildren = function createChildren()

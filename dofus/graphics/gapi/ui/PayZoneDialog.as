@@ -38,7 +38,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.PayZoneDialog extends dofus.§\x18\x03\x10�
    }
    function §\x16\x15\n§()
    {
-      this.api.network.Dialog["\x18\x13\x1d"]();
+      this.api.network.Dialog.leave();
       return true;
    }
    function createChildren()
@@ -74,9 +74,9 @@ class dofus.§\x18\x03\x10§.gapi.ui.PayZoneDialog extends dofus.§\x18\x03\x10�
             _loc3_.label = this.api.lang.getText("PAYZONE_MSG_" + this["\x1d\x15\x0f"]) + "\n\n" + this.api.lang.getText("PAYZONE_BASE");
             _loc3_["\x1a\x0e\x04"].push({label:this.api.lang.getText("PAYZONE_MORE_INFOS"),id:dofus.graphics.gapi.ui.PayZoneDialog.PAYZONE_MORE_INFOS});
       }
-      this["\x1a\x19\x03"](_loc3_);
+      this.setQuestion(_loc3_);
    }
-   function §\x1a\x19\x03§(§\x1a\x01\x10§)
+   function setQuestion(§\x1a\x01\x10§)
    {
       if(this._qvQuestionViewer == undefined)
       {

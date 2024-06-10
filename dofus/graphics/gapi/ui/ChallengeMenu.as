@@ -59,6 +59,6 @@ class dofus.§\x18\x03\x10§.gapi.ui.ChallengeMenu extends dofus.§\x18\x03\x10�
    }
    function §\x1a\x13\x15§()
    {
-      this.api.network.Game["\x18\x13\x1d"]();
+      this.api.network.Game.leave();
    }
 }

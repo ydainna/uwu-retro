@@ -559,7 +559,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       switch(_loc2_.target._name)
       {
          case "AskYesNoGiveUp":
-            this.api.network.Game["\x18\x13\x1d"]();
+            this.api.network.Game.leave();
             break;
          case "AskYesNoOfflineExchange":
             this.api.network.Exchange["\x19\x12\x1a"]();
@@ -884,7 +884,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       _loc7_["\x15\x1e\x18"](_loc6_);
       if(_loc4_ && (!this.api.datacenter.Game.isRunning && (_loc3_["\x18\x12\x02"] || this.api.datacenter.Player.isAuthorized)))
       {
-         _loc7_["\x15\x1d\x12"](this.api.lang.getText("KICK"),this.api.network.Game,this.api.network.Game["\x18\x13\x1d"],[_loc5_]);
+         _loc7_["\x15\x1d\x12"](this.api.lang.getText("KICK"),this.api.network.Game,this.api.network.Game.leave,[_loc5_]);
       }
       if(_loc7_.items.length > 1)
       {
@@ -1233,7 +1233,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          {
             if(_loc2_ != null && _loc10_ != this.api.datacenter.Player.ID)
             {
-               _loc12_["\x15\x1d\x12"](this.api.lang.getText("KICK"),this.api.network.Game,this.api.network.Game["\x18\x13\x1d"],[_loc10_]);
+               _loc12_["\x15\x1d\x12"](this.api.lang.getText("KICK"),this.api.network.Game,this.api.network.Game.leave,[_loc10_]);
             }
          }
       }

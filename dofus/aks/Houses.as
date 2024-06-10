@@ -8,7 +8,7 @@ class dofus.aks.Houses extends dofus.aks.Handler
    {
       this.aks.send("hQ" + _loc2_);
    }
-   function §\x18\x13\x1d§()
+   function leave()
    {
       this.aks.send("hV");
    }

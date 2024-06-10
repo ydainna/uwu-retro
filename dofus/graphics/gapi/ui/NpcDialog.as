@@ -37,7 +37,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.NpcDialog extends dofus.§\x18\x03\x10§.ga
    }
    function §\x16\x15\n§()
    {
-      this.api.network.Dialog["\x18\x13\x1d"]();
+      this.api.network.Dialog.leave();
       return true;
    }
    function createChildren()
@@ -64,7 +64,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.NpcDialog extends dofus.§\x18\x03\x10§.ga
       }
       this._winBackgroundUp.title = this["\x1e\x0b\x06"];
    }
-   function §\x1a\x18\x15§()
+   function setPause()
    {
       this["\x1a\x1d\f"](false);
    }
@@ -76,7 +76,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.NpcDialog extends dofus.§\x18\x03\x10§.ga
       this._winBackgroundUp._visible = _loc2_;
       this._qvQuestionViewer._visible = _loc2_;
    }
-   function §\x1a\x19\x03§(§\x1a\x01\x10§)
+   function setQuestion(§\x1a\x01\x10§)
    {
       this["\x1e\x05\x02"] = _loc2_;
       if(this._qvQuestionViewer == undefined)
@@ -115,7 +115,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.NpcDialog extends dofus.§\x18\x03\x10§.ga
    {
       if(_loc2_.response.id == -1)
       {
-         this.api.network.Dialog["\x18\x13\x1d"]();
+         this.api.network.Dialog.leave();
       }
       else
       {

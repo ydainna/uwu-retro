@@ -1,5 +1,6 @@
 class dofus.aks.Handler extends dofus.utils.ApiElement
 {
+   //Using for split message (packet) modReport
    static var CONSOLE_ARGS_SAFE_SPLIT = "";
    static var CONSOLE_DEPTH_ONE_ARGS_SAFE_SPLIT = "";
    static var CONSOLE_DEPTH_TWO_ARGS_SAFE_SPLIT = "";

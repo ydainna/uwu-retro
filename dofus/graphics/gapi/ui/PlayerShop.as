@@ -38,7 +38,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.PlayerShop extends dofus.§\x18\x03\x10§.g
    }
    function §\x16\x15\n§()
    {
-      this.api.network.Exchange["\x18\x13\x1d"]();
+      this.api.network.Exchange.leave();
       return true;
    }
    function createChildren()
@@ -216,7 +216,7 @@ class dofus.§\x18\x03\x10§.gapi.ui.PlayerShop extends dofus.§\x18\x03\x10§.g
       }
       this._btnViewNextMerchant.enabled = false;
       this._btnViewPreviousMerchant.enabled = false;
-      this.api.network.Exchange["\x18\x13\x1d"]();
+      this.api.network.Exchange.leave();
       this.api.kernel.GameManager["\x1b\t\x0f"](4,_loc7_.id,_loc7_.cellNum);
    }
    function modelChanged(oEvent)

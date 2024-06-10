@@ -458,19 +458,19 @@ class dofus.aks.DataProcessor extends dofus.aks.Handler
             switch(_loc3_)
             {
                case "A":
-                  this.aks.Dialog["\x19\x16\r"](_loc5_.substr(2));
+                  this.aks.Dialog.onCustomAction(_loc5_.substr(2));
                   break;
                case "C":
                   this.aks.Dialog.onCreate(!_loc4_,_loc5_.substr(3));
                   break;
                case "Q":
-                  this.aks.Dialog["\x19\x1b\x15"](_loc5_.substr(2));
+                  this.aks.Dialog.onQuestion(_loc5_.substr(2));
                   break;
                case "V":
                   this.aks.Dialog.onLeave();
                   break;
                case "P":
-                  this.aks.Dialog["\x19\x1b\x02"]();
+                  this.aks.Dialog.onPause();
                   break;
                default:
                   this.defaultProcessAction(_loc2_,_loc3_,_loc4_,_loc5_);

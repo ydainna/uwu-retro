@@ -233,7 +233,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.ApiElement
    {
       return Number(this["\x18\x02\t"]("SK")[_loc2_].f);
    }
-   function §\x17\x16\x12§(§\x19\f\x1c§)
+   function §\x17\x16\x12§(nQuestionID)
    {
       return this["\x18\x02\t"]("D").q[_loc2_];
    }
