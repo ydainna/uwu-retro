@@ -18,12 +18,12 @@ class ank.battlefield.datacenter.§\x1b\x07\x04§ extends Object
    var §\x1c\x0b\x16§ = false;
    var §\x16\r\x06§ = false;
    var _bIsInvisibleInFight = false;
-   function §\x1b\x07\x04§(§\x19\b\x0b§, §\x17\x0f\x0b§, §\x1a\x1b\x1b§, §\x19\x04\x12§, §\x19\x06\x01§)
+   function §\x1b\x07\x04§(§\x19\b\x0b§, §\x17\x0f\x0b§, §\x1a\x1b\x1b§, nCellNum, §\x19\x06\x01§)
    {
       super();
       this.initialize(_loc3_,_loc4_,_loc5_,_loc6_,_loc7_);
    }
-   function initialize(sID, §\x17\x0f\x0b§, §\x1a\x1b\x1b§, §\x19\x04\x12§, §\x19\x06\x01§)
+   function initialize(sID, §\x17\x0f\x0b§, §\x1a\x1b\x1b§, nCellNum, §\x19\x06\x01§)
    {
       this.id = sID;
       this["\x16\x1c\x16"] = _loc3_;

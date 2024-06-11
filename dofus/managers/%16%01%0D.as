@@ -756,7 +756,7 @@ if(!dofus.managers.AdminManager)
    {
       this.api.ui.getUIComponent("Debug").clear();
    };
-   _loc1_.move = function move(§\x19\x04\x12§, §\x16\b\x16§)
+   _loc1_.move = function move(nCellNum, §\x16\b\x16§)
    {
       this.api.datacenter.Player["\x18\x0b\b"]["\x16\x15\b"](this.api.gfx["\x18\x18\x15"],_loc2_,true,this.api.datacenter.Game.isFight,true,_loc3_);
       if(this.api.datacenter.Basics.interactionsManager_path.length != 0)

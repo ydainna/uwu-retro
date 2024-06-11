@@ -9,7 +9,7 @@ class dofus.aks.Tutorial extends dofus.aks.Handler
    {
       super.initialize(_loc3_,oAPI);
    }
-   function end(§\x19\x03\x03§, §\x19\x04\x12§, §\x19\x06\x01§)
+   function end(§\x19\x03\x03§, nCellNum, §\x19\x06\x01§)
    {
       if(_loc2_ == undefined)
       {

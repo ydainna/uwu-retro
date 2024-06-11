@@ -47,7 +47,7 @@ class ank.gapi.§\x17\x01\x06§.TextInput extends ank.gapi.§\x17\x01\x06§.Labe
    {
       return this._tText.tabIndex;
    }
-   function §\x1d\x1b§(§\x16\x0b\t§)
+   function §\x1d\x1b§(bEnabled)
    {
       this._tText.tabEnabled = _loc2_;
       return this["\n\x18"]();

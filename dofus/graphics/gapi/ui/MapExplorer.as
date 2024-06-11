@@ -9,7 +9,7 @@ class dofus.graphics.gapi.ui.MapExplorer extends dofus.graphics.gapi.core.§\x17
    {
       super();
    }
-   function §\x17\x12§(§\x19\t\x14§)
+   function §\x17\x12§(nMapID)
    {
       this._dmHighlightMap = new dofus.datacenter.["\x17\t\x0f"](_loc2_);
       return this["\x02\x1d"]();
@@ -281,7 +281,7 @@ class dofus.graphics.gapi.ui.MapExplorer extends dofus.graphics.gapi.core.§\x17
    {
       this["\x1d\x11\b"]._visible = this["\x1d\x11\x06"]._visible = this["\x1d\x11\x07"]._visible = this["\x1d\x11\f"]._visible = this["\x1d\x11\x05"]._visible = this["\x1d\x11\x0b"]._visible = this["\x1d\x11\t"]._visible = this["\x1d\x11\n"]._visible = !_loc2_;
    }
-   function setMapFilter(§\x16\x17\r§, §\x16\x0b\t§)
+   function setMapFilter(§\x16\x17\r§, bEnabled)
    {
       var _loc4_ = this.api.kernel.OptionsManager.getOption("MapFilters");
       if(_loc4_[_loc2_] != _loc3_)

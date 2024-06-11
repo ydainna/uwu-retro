@@ -30,7 +30,7 @@ class dofus.graphics.gapi.ui.ChallengeMenu extends dofus.graphics.gapi.core.§\x
       }
       return this.cancelButton;
    }
-   function §\x1b\x07§(§\x16\x10\x18§)
+   function §\x1b\x07§(bReady)
    {
       this["\x1c\x07\x11"] = _loc2_;
       this["\x1d\x10\x19"]._visible = _loc2_;

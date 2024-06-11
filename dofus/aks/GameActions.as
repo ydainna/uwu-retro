@@ -28,23 +28,23 @@ class dofus.aks.GameActions extends dofus.aks.Handler
    {
       this.aks.send("GKE" + _loc2_ + "|" + _loc3_,false);
    }
-   function challenge(§\x1b\b\x10§)
+   function challenge(sSpriteID)
    {
       this["\x1a\x13\x14"](900,[_loc2_]);
    }
-   function §\x15\x1b\x10§(§\x1b\b\x10§)
+   function §\x15\x1b\x10§(sSpriteID)
    {
       this["\x1a\x13\x14"](901,[_loc2_]);
    }
-   function §\x1a\x0b\f§(§\x1b\b\x10§)
+   function §\x1a\x0b\f§(sSpriteID)
    {
       this["\x1a\x13\x14"](902,[_loc2_]);
    }
-   function §\x18\x11\x12§(§\x19\x04\x16§, §\x1b\b\x10§)
+   function §\x18\x11\x12§(§\x19\x04\x16§, sSpriteID)
    {
       this["\x1a\x13\x14"](903,[_loc2_,_loc3_]);
    }
-   function joinChallengeAsSpectator(§\x19\x04\x16§, §\x1b\b\x10§)
+   function joinChallengeAsSpectator(§\x19\x04\x16§, sSpriteID)
    {
       if(this.api.datacenter.Game.isRunning || this.api.datacenter.Exchange != undefined)
       {
@@ -57,31 +57,31 @@ class dofus.aks.GameActions extends dofus.aks.Handler
       }
       this["\x1a\x13\x14"](976,[_loc2_,_loc3_]);
    }
-   function §\x16\x06\x19§(§\x1b\b\x10§)
+   function §\x16\x06\x19§(sSpriteID)
    {
       this["\x1a\x13\x14"](906,[_loc2_]);
    }
-   function §\x16\x07\x01§(§\x1b\b\x10§)
+   function §\x16\x07\x01§(sSpriteID)
    {
       this["\x1a\x13\x14"](909,[_loc2_]);
    }
-   function §\x19\x02\x14§(§\x1b\b\x10§)
+   function §\x19\x02\x14§(sSpriteID)
    {
       this["\x1a\x13\x14"](910,[_loc2_]);
    }
-   function §\x16\x06\x1d§(§\x1b\b\x10§)
+   function §\x16\x06\x1d§(sSpriteID)
    {
       this["\x1a\x13\x14"](912,[_loc2_]);
    }
-   function §\x1b\x16\x18§(§\x1b\b\x10§)
+   function §\x1b\x16\x18§(sSpriteID)
    {
       this["\x1a\x13\x14"](512,[_loc2_]);
    }
-   function §\x15\x1b\x12§(§\x1b\b\x10§)
+   function §\x15\x1b\x12§(sSpriteID)
    {
       this["\x1a\x13\x14"](618,[_loc2_]);
    }
-   function §\x1a\x0b\x0e§(§\x1b\b\x10§)
+   function §\x1a\x0b\x0e§(sSpriteID)
    {
       this["\x1a\x13\x14"](619,[_loc2_]);
    }

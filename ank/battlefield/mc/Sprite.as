@@ -141,7 +141,7 @@ class ank.battlefield.mc.§\x1b\x07\x04§ extends MovieClip
       var _loc3_ = new Color(this);
       _loc3_.setTransform(_loc2_);
    }
-   function §\x1a\x18\x05§(§\x19\x04\x12§)
+   function §\x1a\x18\x05§(nCellNum)
    {
       this._oData.cellNum = Number(_loc2_);
    }
@@ -154,7 +154,7 @@ class ank.battlefield.mc.§\x1b\x07\x04§ extends MovieClip
       this._oData.direction = _loc2_;
       this.setAnim(this._oData["\x16\x03\x17"]);
    }
-   function §\x1a\x18\x18§(§\x19\x04\x12§)
+   function §\x1a\x18\x18§(nCellNum)
    {
       this["\x1b\x15\x11"](_loc2_,this._oData["\x18\x10\x0e"]);
       this["\x1a\x16\x02"](_loc2_);
@@ -172,7 +172,7 @@ class ank.battlefield.mc.§\x1b\x07\x04§ extends MovieClip
       this._x = _loc3_.x;
       this._y = _loc3_.y - _loc5_ * ank.battlefield.Constants["\x18\x14\x0e"];
    }
-   function §\x1a\x16\x02§(§\x19\x04\x12§)
+   function §\x1a\x16\x02§(nCellNum)
    {
       if(_loc2_ == undefined)
       {
@@ -649,7 +649,7 @@ class ank.battlefield.mc.§\x1b\x07\x04§ extends MovieClip
       }
       return this._oData["\x16\x03\x17"] != "static" || this._oData.isInMove;
    }
-   function §\x1b\x15\x11§(§\x19\x04\x12§, §\x16\x14\x17§, §\x16\n\x1b§)
+   function §\x1b\x15\x11§(nCellNum, §\x16\x14\x17§, §\x16\n\x1b§)
    {
       var _loc5_ = this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc2_);
       if(_loc5_ == undefined)

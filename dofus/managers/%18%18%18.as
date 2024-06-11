@@ -44,7 +44,7 @@ class dofus.§\x18\x18\x0b§.MapsServersManager extends dofus.§\x18\x18\x0b§.�
       }
       this["\x18\x15\x18"](sID + "_" + _loc3_ + (this._aKeys[Number(sID)] == undefined ? "" : "X") + ".swf");
    }
-   function §\x17\x1b\x0b§(§\x19\t\x14§)
+   function §\x17\x1b\x0b§(nMapID)
    {
       var _loc3_ = this.api.lang["\x17\x1b\x11"](_loc2_);
       var _loc4_ = this.api.lang["\x17\x1b\x04"](_loc3_.sa);

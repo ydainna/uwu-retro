@@ -16,7 +16,7 @@ class ank.battlefield.§\x1b\x1b\n§
       this["\x1d\x12\x05"] = this["\x1d\n\x06"].createEmptyMovieClip("\x1b\x1b\x0b",10);
       this["\x1d\x1a\x0e"] = 0;
    }
-   function §\x16\x1c\x12§(§\x19\x04\x12§, §\x1a\t\x0f§, §\x18\x13\b§)
+   function §\x16\x1c\x12§(nCellNum, §\x1a\t\x0f§, §\x18\x13\b§)
    {
       _loc2_ = Number(_loc2_);
       _loc3_ = Number(_loc3_);
@@ -35,7 +35,7 @@ class ank.battlefield.§\x1b\x1b\n§
    {
       this["\x1d\x12\x05"][_loc2_].removeMovieClip();
    }
-   function §\x17\n\x10§(§\x19\x04\x12§, §\x1a\t\x10§, §\x1a\t\x11§, §\x18\x13\b§, §\x16\x1d\x05§, nShapeID)
+   function §\x17\n\x10§(nCellNum, §\x1a\t\x10§, §\x1a\t\x11§, §\x18\x13\b§, §\x16\x1d\x05§, nShapeID)
    {
       _loc2_ = Number(_loc2_);
       _loc3_ = Number(_loc3_);
@@ -145,7 +145,7 @@ class ank.battlefield.§\x1b\x1b\n§
          this["\x19\x01\x13"](_loc9_,_loc2_);
       }
    }
-   function §\x19\x01\x13§(§\x1b\x1b\x07§, §\x19\x04\x12§)
+   function §\x19\x01\x13§(§\x1b\x1b\x07§, nCellNum)
    {
       var _loc4_ = this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc3_);
       _loc2_._x = _loc4_.x;

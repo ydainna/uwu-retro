@@ -43,7 +43,7 @@ class ank.battlefield.§\x18\x18\x16§
       this["\x1d\n\x06"] = c;
       this.api = _global.api;
    }
-   function §\x16\x14\x01§(§\x19\x13\x10§, §\x19\x04\x12§, §\x16\t\x15§)
+   function §\x16\x14\x01§(§\x19\x13\x10§, nCellNum, §\x16\t\x15§)
    {
       this["\x1e\x03\b"].Map = _loc2_;
       var _loc5_ = ank.battlefield.Constants["\x16\x18\t"];
@@ -429,7 +429,7 @@ class ank.battlefield.§\x18\x18\x16§
       }
       this["\x1c\b\x14"] = _loc2_;
    }
-   function §\x1b\r\x18§(§\x19\x04\x12§, §\x16\x10\f§)
+   function §\x1b\r\x18§(nCellNum, §\x16\x10\f§)
    {
       if(_loc2_ > this["\x17\x14\x1c"]())
       {
@@ -474,7 +474,7 @@ class ank.battlefield.§\x18\x18\x16§
       }
       this["\x16\x14\x01"](_loc4_,_loc2_);
    }
-   function §\x1b\x14\b§(§\x19\x04\x12§, §\x19\x17\x05§, §\x1b\x03\f§, §\x19\f\x05§)
+   function §\x1b\x14\b§(nCellNum, §\x19\x17\x05§, §\x1b\x03\f§, §\x19\f\x05§)
    {
       if(_loc2_ > this["\x17\x14\x1c"]())
       {
@@ -622,7 +622,7 @@ class ank.battlefield.§\x18\x18\x16§
       }
       this["\x1c\b\x14"] = false;
    }
-   function §\x18\t\x1b§(§\x19\x04\x12§, §\x19\f\x05§, §\x16\x11\x1d§)
+   function §\x18\t\x1b§(nCellNum, §\x19\f\x05§, §\x16\x11\x1d§)
    {
       if(_loc3_ == undefined)
       {
@@ -669,7 +669,7 @@ class ank.battlefield.§\x18\x18\x16§
          }
       }
    }
-   function §\x1a\x18\x0e§(§\x19\x04\x12§, §\x17\x12\x0f§)
+   function §\x1a\x18\x0e§(nCellNum, §\x17\x12\x0f§)
    {
       if(typeof _loc3_ == "number" && _loc3_ < 1)
       {
@@ -702,7 +702,7 @@ class ank.battlefield.§\x18\x18\x16§
          _loc5_.gotoAndStop(_loc3_);
       }
    }
-   function §\x1a\x18\x10§(§\x19\x04\x12§, §\x17\x12\x0f§)
+   function §\x1a\x18\x10§(nCellNum, §\x17\x12\x0f§)
    {
       if(typeof _loc3_ == "number" && _loc3_ < 1)
       {
@@ -718,7 +718,7 @@ class ank.battlefield.§\x18\x18\x16§
       var _loc5_ = _loc4_.mcObjectExternal["\x1d\x0b\b"];
       _loc5_.gotoAndStop(_loc3_);
    }
-   function §\x1a\x18\x0f§(§\x19\x04\x12§, §\x16\r\r§, §\x19\f\x05§)
+   function §\x1a\x18\x0f§(nCellNum, §\x16\r\r§, §\x19\f\x05§)
    {
       if(_loc2_ > this["\x17\x14\x1c"]())
       {
@@ -738,7 +738,7 @@ class ank.battlefield.§\x18\x18\x16§
    {
       return this["\x1e\x03\b"].Map.data.length;
    }
-   function §\x17\x14\x1d§(§\x19\x04\x12§)
+   function §\x17\x14\x1d§(nCellNum)
    {
       return this["\x1e\x03\b"].Map.data[_loc2_];
    }
@@ -759,7 +759,7 @@ class ank.battlefield.§\x18\x18\x16§
       var _loc4_ = this["\x18\x02\r"]();
       return _loc2_ * _loc4_ + _loc3_ * (_loc4_ - 1);
    }
-   function §\x17\x15\x01§(§\x19\x04\x12§)
+   function §\x17\x15\x01§(nCellNum)
    {
       var _loc3_ = this["\x17\x14\x1d"](_loc2_);
       var _loc4_ = !(_loc3_["\x18\x03\x1a"] == undefined || _loc3_["\x18\x03\x1a"] == 1) ? 0.5 : 0;
@@ -984,7 +984,7 @@ class ank.battlefield.§\x18\x18\x16§
          _loc7_ += 2;
       }
    }
-   function §\x17\x11\x11§(§\x19\x04\x12§, sSprite)
+   function §\x17\x11\x11§(nCellNum, sSprite)
    {
       if(sSprite == undefined)
       {

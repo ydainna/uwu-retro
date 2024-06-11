@@ -20,7 +20,7 @@ class ank.battlefield.mc.§\x1b\x1b\b§ extends MovieClip
    {
       this.removeMovieClip();
    }
-   function createCellMc(§\x19\x04\x11§)
+   function createCellMc(nCellID)
    {
       return this["\x1d\x12\x01"].createEmptyMovieClip("cell" + _loc2_,this["\x1d\x12\x01"].getNextHighestDepth());
    }
@@ -311,7 +311,7 @@ class ank.battlefield.mc.§\x1b\x1b\b§ extends MovieClip
       }
       _loc18_.endFill();
    }
-   function §\x17\x18\n§(§\x19\x04\x12§)
+   function §\x17\x18\n§(nCellNum)
    {
       var _loc3_ = this["\x1e\x04\x0e"]["\x17\x14\x1d"](_loc2_);
       var _loc4_ = _loc3_["\x18\x03\x1a"] != undefined ? _loc3_["\x18\x03\x1a"] : 1;

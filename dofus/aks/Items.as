@@ -48,7 +48,7 @@ if(!dofus.aks.Items)
    {
       this.aks.send("OR" + _loc2_,false);
    };
-   _loc1_.use = function §\x1b\x16\x11§(§\x19\b\x0b§, §\x1b\b\x10§, §\x19\x04\x12§, §\x16\n\x06§, nQuantity)
+   _loc1_.use = function §\x1b\x16\x11§(§\x19\b\x0b§, sSpriteID, nCellNum, §\x16\n\x06§, nQuantity)
    {
       if(_loc6_ == undefined)
       {

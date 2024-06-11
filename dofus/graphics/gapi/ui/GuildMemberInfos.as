@@ -169,7 +169,7 @@ class dofus.graphics.gapi.ui.GuildMemberInfos extends dofus.graphics.gapi.core.�
    {
       this.api.kernel.showMessage(undefined,this.api.lang.getText("DO_U_GIVERIGHTS",[this["\x1e\x04\x0f"].name]),"CAUTION_YESNO",{name:"GuildSetBoss",listener:this});
    }
-   function showRankEditor(§\x16\x0b\t§)
+   function showRankEditor(bEnabled)
    {
       this._btnEditGradeName._visible = _loc2_;
       this._btnResetRank._visible = _loc2_;
@@ -187,7 +187,7 @@ class dofus.graphics.gapi.ui.GuildMemberInfos extends dofus.graphics.gapi.core.�
       this["\x1e\r\x10"]["\x1b\x07\x05"] = ["emoteStatic14R","emoteStatic14L"];
       this["\x1e\r\x10"]["\x19\x0b\x01"] = true;
    }
-   function zoomSprite(§\x16\x0b\t§)
+   function zoomSprite(bEnabled)
    {
       if(_loc2_)
       {

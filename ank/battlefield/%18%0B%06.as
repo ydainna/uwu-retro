@@ -87,7 +87,7 @@ class ank.battlefield.§\x18\x0b\x06§
             this["\x1a\x16\x10"](ank.battlefield.mc.Sprite.prototype,true);
       }
    }
-   function §\x1a\x16\n§(§\x19\x04\x12§, §\x19\x0e\x1d§)
+   function §\x1a\x16\n§(nCellNum, §\x19\x0e\x1d§)
    {
       var _loc4_ = this["\x1d\n\x06"]["cell" + _loc2_];
       if(_loc4_ == undefined)

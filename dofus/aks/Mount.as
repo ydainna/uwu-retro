@@ -28,7 +28,7 @@ class dofus.aks.Mount extends dofus.aks.Handler
    {
       this.aks.send("Rp" + _loc2_,true);
    }
-   function §\x1a\f\x11§(§\x19\x04\x12§)
+   function §\x1a\f\x11§(nCellNum)
    {
       this.aks.send("Ro" + _loc2_,true);
    }

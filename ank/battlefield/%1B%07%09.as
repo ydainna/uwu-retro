@@ -155,7 +155,7 @@ class ank.battlefield.§\x1b\x07\t§
          }
       }
    }
-   function §\x1b\x13\n§(sID, §\x19\x04\x12§, §\x16\x14\x1c§, §\x1a\x01\x1d§)
+   function §\x1b\x13\n§(sID, nCellNum, §\x16\x14\x1c§, §\x1a\x01\x1d§)
    {
       var §\x1a\x02\b§ = this["\x1e\x05\x1c"].getItemAt(sID);
       if(eval("\x1a\x02\b") == undefined)
@@ -391,7 +391,7 @@ class ank.battlefield.§\x1b\x07\t§
       var _loc6_ = _loc4_.mc;
       _loc6_["\x1a\x16\x04"](_loc3_);
    }
-   function §\x1a\x1a\t§(sID, §\x19\x04\x12§, §\x19\x06\x01§)
+   function §\x1a\x1a\t§(sID, nCellNum, §\x19\x06\x01§)
    {
       var _loc5_ = this["\x1e\x05\x1c"].getItemAt(sID);
       if(_loc5_ == undefined)
@@ -426,7 +426,7 @@ class ank.battlefield.§\x1b\x07\t§
       var _loc8_ = _loc5_.mc;
       _loc8_["\x1a\x18\x18"](_loc3_);
    }
-   function §\x1b\x0b\x04§(sID, §\x1a\x01\x1d§, §\x19\x04\x12§)
+   function §\x1b\x0b\x04§(sID, §\x1a\x01\x1d§, nCellNum)
    {
       _loc3_.clearAllNextActions();
       var _loc5_ = this["\x1e\x05\x1c"].getItemAt(sID);
@@ -554,7 +554,7 @@ class ank.battlefield.§\x1b\x07\t§
       }
       _loc4_.execute();
    }
-   function §\x1a\x15\x17§(§\x16\x0b\t§)
+   function §\x1a\x15\x17§(bEnabled)
    {
       var _loc3_ = this.api.datacenter.Sprites.getItems();
       for(var k in _loc3_)
@@ -618,7 +618,7 @@ class ank.battlefield.§\x1b\x07\t§
          }
       }
    }
-   function §\x18\x13\x07§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§, §\x19\x02\x06§, sTargetID, §\x1a\x02\x0b§, §\x16\f\n§, §\x16\t\x12§)
+   function §\x18\x13\x07§(sID, §\x19\x12\x14§, nCellNum, §\x19\x06\x06§, §\x19\x02\x06§, sTargetID, §\x1a\x02\x0b§, §\x16\f\n§, §\x16\t\x12§)
    {
       if(_loc10_ == undefined)
       {
@@ -734,7 +734,7 @@ class ank.battlefield.§\x1b\x07\t§
       }
       _loc14_.execute();
    }
-   function §\x18\x13\x03§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§)
+   function §\x18\x13\x03§(sID, §\x19\x12\x14§, nCellNum, §\x19\x06\x06§)
    {
       var _loc6_ = this["\x1e\x05\x1c"].getItemAt(sID);
       var _loc7_ = _loc6_.sequencer;
@@ -750,7 +750,7 @@ class ank.battlefield.§\x1b\x07\t§
       _loc7_.addAction(23,false,this,this["\x1a\x1a\x03"],[sID,"static"]);
       _loc7_.execute();
    }
-   function §\x16\x07\x11§(sID, §\x19\x04\x12§)
+   function §\x16\x07\x11§(sID, nCellNum)
    {
       var _loc4_ = this["\x1e\x05\x1c"].getItemAt(sID);
       if(_loc4_ == undefined)

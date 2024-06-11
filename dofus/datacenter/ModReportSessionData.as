@@ -14,7 +14,7 @@ class dofus.datacenter.ModReportSessionData
    {
       return this._bEnabled && (this._eoModReportCategories != undefined && this._eoModReportCategories["\x17\x1a\x17"]() > 0);
    }
-   function __set__isEnabled(§\x16\x0b\t§)
+   function __set__isEnabled(bEnabled)
    {
       this._bEnabled = _loc2_;
       return this.isEnabled;

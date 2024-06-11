@@ -65,7 +65,7 @@ class ank.gapi.§\x17\x01\x06§.PopupMenu extends ank.gapi.core.UIBasicComponent
       _loc3_.bEnabled = false;
       this["\x1b\x1d\n"].push(_loc3_);
    }
-   function §\x15\x1d\x12§(§\x1b\x0f\x11§, §\x19\x11\x13§, §\x17\x11\x17§, §\x16\x05\n§, §\x16\x0b\t§)
+   function §\x15\x1d\x12§(§\x1b\x0f\x11§, §\x19\x11\x13§, §\x17\x11\x17§, §\x16\x05\n§, bEnabled)
    {
       if(_loc6_ == undefined)
       {

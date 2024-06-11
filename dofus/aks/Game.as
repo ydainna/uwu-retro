@@ -18,7 +18,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       return this._bIsBusy;
    }
 
-   function __set__isBusy(bIsBusy)
+   function set isBusy(bIsBusy)
    {
       this._bIsBusy = bIsBusy;
       return this.isBusy();
@@ -28,26 +28,30 @@ class dofus.aks.Game extends dofus.aks.Handler
    {
       this.aks.send("GC" + dofus.aks.Game.TYPE_SOLO);
    }
-   function leave(§\x1b\b\x10§)
+   function leave(sSpriteID)
    {
-      this.aks.send("GQ" + (_loc2_ != undefined ? _loc2_ : ""));
+      this.aks.send("GQ" + (sSpriteID != undefined ? sSpriteID : ""));
    }
-   function §\x1a\x18\x17§(§\x19\x04\x12§)
+
+   function setPlayerPosition(nCellNum)
    {
-      this.aks.send("Gp" + _loc2_,true);
+      this.aks.send("Gp" + nCellNum,true);
    }
-   function ready(§\x16\x10\x18§)
+
+   function ready(bReady)
    {
-      this.aks.send("GR" + (!_loc2_ ? "0" : "1"));
+      this.aks.send("GR" + (!bReady ? "0" : "1"));
    }
-   function §\x17\x1b\x07§(§\x19\t\x14§)
+
+   function getMapData(nMapID)
    {
       if(this.api.lang.getConfigText("ENABLE_CLIENT_MAP_REQUEST"))
       {
-         this.aks.send("GD" + (_loc2_ == undefined ? "" : String(_loc2_)));
+         this.aks.send("GD" + (nMapID == undefined ? "" : String(nMapID)));
       }
    }
-   function §\x17\x17\x14§()
+
+   function getExtraInformations()
    {
       var _loc2_ = "G";
       if(!this.aksunknown)
@@ -58,7 +62,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          }
          else
          {
-            _loc2_ += "І";
+            _loc2_ += "І"; //Cyrillique letter
          }
          this.aksunknown = true;
       }
@@ -68,41 +72,50 @@ class dofus.aks.Game extends dofus.aks.Handler
       }
       this.aks.send(_loc2_);
    }
-   function §\x1b\x11\x16§()
+
+   function turnEnd()
    {
       if(this.api.datacenter.Player.isCurrentPlayer)
       {
          this.aks.send("Gt",false);
       }
    }
-   function §\x1b\x11\x17§(§\x1b\b\x10§)
+
+   function turnOk(sSpriteID)
    {
-      this.aks.send("GT" + (_loc2_ == undefined ? "" : _loc2_),false);
+      this.aks.send("GT" + (sSpriteID == undefined ? "" : sSpriteID),false);
    }
-   function §\x1b\x11\x18§(§\x1b\b\x10§)
+
+   function turnOk2(sSpriteID)
    {
-      this.aks.send("GT" + (_loc2_ == undefined ? "" : _loc2_),false);
+      this.aks.send("GT" + (sSpriteID == undefined ? "" : sSpriteID),false);
    }
-   function §\x16\x05\x1c§()
+
+   function askDisablePVPMode()
    {
       this.aks.send("GP*",false);
    }
-   function §\x17\r\x05§(§\x16\x0b\t§)
+
+   function enabledPVPMode(bEnabled)
    {
-      this.aks.send("GP" + (!_loc2_ ? "-" : "+"),false);
+      this.aks.send("GP" + (!bEnabled ? "-" : "+"),false);
    }
+
    function freeMySoul()
    {
       this.aks.send("GF",false);
    }
-   function §\x1a\x16\x15§(§\x19\x04\x11§)
+
+   function setFlag(nCellID)
    {
-      this.aks.send("Gf" + _loc2_,false);
+      this.aks.send("Gf" + nCellID,false);
    }
-   function §\x1a\x1d\x0e§(§\x16\x18\x0f§)
+
+   function showFightChallengeTarget(challengeId)
    {
-      this.aks.send("Gdi" + _loc2_,false);
+      this.aks.send("Gdi" + challengeId,false);
    }
+
    function onCreate(bSuccess, sExtraData)
    {
       if(!_loc2_)
@@ -349,7 +362,7 @@ class dofus.aks.Game extends dofus.aks.Handler
          }
          if(this.api.kernel.GameManager["\x16\b\x01"] && this.api.datacenter.Game.isFight)
          {
-            this.api.network.Game["\x1b\x11\x16"]();
+            this.api.network.Game.turnEnd();
          }
          this.api.gfx["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\r"]);
          if(!_loc8_)
@@ -492,11 +505,11 @@ class dofus.aks.Game extends dofus.aks.Handler
          return undefined;
       }
       var _loc2_ = this.api.datacenter.Player.data.sequencer;
-      if(_loc2_["\x17\x01\x03"](this,this["\x1b\x11\x16"]))
+      if(_loc2_["\x17\x01\x03"](this,this.turnEnd))
       {
          return undefined;
       }
-      _loc2_.addAction(24,false,this,this["\x1b\x11\x16"],[]);
+      _loc2_.addAction(24,false,this,this.turnEnd,[]);
       _loc2_.execute();
    }
    function §\x19\x1e\b§(sExtraData)
@@ -506,13 +519,13 @@ class dofus.aks.Game extends dofus.aks.Handler
       if(_loc4_ != undefined)
       {
          var _loc5_ = _loc4_.sequencer;
-         _loc5_.addAction(25,false,this,this["\x1b\x11\x17"]);
+         _loc5_.addAction(25,false,this,this.turnOk);
          _loc5_.execute();
       }
       else
       {
          ank.utils.Logger.err("[onTurnReday] le sprite " + _loc3_ + " n\'existe pas");
-         this["\x1b\x11\x18"]();
+         this.turnOk2();
       }
    }
    function §\x19\x1a\x05§(sExtraData)
@@ -568,7 +581,7 @@ class dofus.aks.Game extends dofus.aks.Handler
       }
       this.api.gfx["\x16\x1b\x14"](2);
    }
-   function §\x19\x1b\x13§(sExtraData, §\x16\x0b\t§)
+   function §\x19\x1b\x13§(sExtraData, bEnabled)
    {
       if(!_loc3_)
       {
@@ -706,10 +719,10 @@ class dofus.aks.Game extends dofus.aks.Handler
       switch(_loc2_.target._name)
       {
          case "AskYesNoEnabledPVP":
-            this.api.network.Game["\x17\r\x05"](true);
+            this.api.network.Game.enabledPVPMode(true);
             break;
          case "AskYesNoDisabledPVP":
-            this.api.network.Game["\x17\r\x05"](false);
+            this.api.network.Game.enabledPVPMode(false);
       }
    }
    function no(oEvent)

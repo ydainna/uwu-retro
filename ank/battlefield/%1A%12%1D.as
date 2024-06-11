@@ -44,7 +44,7 @@ class ank.battlefield.§\x1a\x12\x1d§
       }
       _loc3_.removeMovieClip();
    }
-   function select(§\x16\x12\x06§, §\x19\x04\x12§, §\x19\x05\x06§, §\x1b\x02\x17§, §\x19\x03\x07§, bAnimate)
+   function select(§\x16\x12\x06§, nCellNum, §\x19\x05\x06§, §\x1b\x02\x17§, §\x19\x03\x07§, bAnimate)
    {
       var _loc8_ = this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc3_);
       if(_loc5_ == undefined)

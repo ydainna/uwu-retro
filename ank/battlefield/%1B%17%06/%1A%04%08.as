@@ -365,7 +365,7 @@ class ank.battlefield.utils.§\x1a\x04\b§
       }
       return 1;
    }
-   static function §\x17\x14\r§(§\x18\x18\x15§, §\x19\x04\x12§, §\x19\x06\x03§, §\x19\b\x14§)
+   static function §\x17\x14\r§(§\x18\x18\x15§, nCellNum, §\x19\x06\x03§, §\x19\b\x14§)
    {
       var _loc6_ = _loc2_["\x18\x02\r"]();
       var _loc7_ = [1,_loc6_,_loc6_ * 2 - 1,_loc6_ - 1,-1,0 - _loc6_,0 - _loc6_ * 2 + 1,0 - (_loc6_ - 1)];

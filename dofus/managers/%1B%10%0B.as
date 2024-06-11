@@ -106,7 +106,7 @@ class dofus.§\x18\x18\x0b§..TipsManager extends ank.utils.§\x1a\t\t§
       this.api.ui.loadUIComponent("Indicator","Indicator" + this["\x1d\x17\x04"],{coordinates:[_loc11_,_loc12_],offset:_loc14_},{bAlwaysOnTop:true});
       this["\x1b\x1d\b"][this["\x1d\x17\x04"]] = _global.setInterval(this,"onIndicatorHide",dofus.managers.TipsManager["\x18\b\x1a"] * 1000,this["\x1d\x17\x04"]++);
    }
-   function §\x1a\x06\x03§(§\x19\t\x14§, §\x19\x04\x11§, §\x19\x0b\x03§)
+   function §\x1a\x06\x03§(nMapID, nCellID, §\x19\x0b\x03§)
    {
       if(this.api.datacenter.Basics.aks_current_map_id == _loc2_ || _loc2_ == -1)
       {
@@ -126,7 +126,7 @@ class dofus.§\x18\x18\x0b§..TipsManager extends ank.utils.§\x1a\t\t§
       new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.InvalidOperationException(this,"TipsManager","\x1a\x06\x03","We are no more on the right map."),"dofus.managers.TipsManager::pointCell","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/TipsManager.as",258);
       return undefined;
    }
-   function §\x1a\x06\r§(§\x19\t\x14§, §\x19\b\x01§)
+   function §\x1a\x06\r§(nMapID, §\x19\b\x01§)
    {
       if(this.api.datacenter.Basics.aks_current_map_id == _loc2_ || _loc2_ == -1)
       {
@@ -148,7 +148,7 @@ class dofus.§\x18\x18\x0b§..TipsManager extends ank.utils.§\x1a\t\t§
       new org.flashdevelop.utils.FlashConnect.trace(new com.ankamagames.exceptions.InvalidOperationException(this,"TipsManager","\x1a\x06\x03","We are no more on the right map."),"dofus.managers.TipsManager::pointSprite","C:\\Users\\ddallinge\\Git\\client\\src\\core\\classes/dofus/managers/TipsManager.as",298);
       return undefined;
    }
-   function §\x1a\x06\t§(§\x19\t\x14§, §\x19\f\x06§)
+   function §\x1a\x06\t§(nMapID, §\x19\f\x06§)
    {
       if(this.api.datacenter.Basics.aks_current_map_id == _loc2_ || _loc2_ == -1)
       {
@@ -325,7 +325,7 @@ class dofus.§\x18\x18\x0b§..TipsManager extends ank.utils.§\x1a\t\t§
       _global.clearInterval(this["\x1b\x1d\b"][_loc2_]);
       this.api.ui.unloadUIComponent("Indicator" + _loc2_);
    }
-   function §\x19\x1a\x14§(§\x19\t\x14§)
+   function §\x19\x1a\x14§(nMapID)
    {
       var _loc3_ = String(this["\x17\x1b\r"]()["MAP" + _loc2_]);
       if(_loc3_ != undefined && _loc3_.length > 0)

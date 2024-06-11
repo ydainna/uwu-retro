@@ -136,7 +136,7 @@ class dofus.graphics.gapi.ui.Guild extends dofus.graphics.gapi.core.§\x17\t\n§
          this.api.kernel.showMessage(this.api.lang.getText("INFORMATIONS"),this.api.lang.getText("AUTO_DISJOIN_TAX"),"ERROR_BOX");
       }
    }
-   function toggleInfosEditor(§\x16\x0b\t§)
+   function toggleInfosEditor(bEnabled)
    {
       this._taGuildNote["\x17\x0b\x1c"] = _loc2_;
       this._taGuildNote.html = !_loc2_;

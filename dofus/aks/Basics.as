@@ -40,7 +40,7 @@ if(!dofus.aks.Basics)
    {
       this.aks.send("BW" + _loc2_);
    };
-   _loc1_["\x18\x12\x01"] = function §\x18\x12\x01§(§\x19\x04\x12§)
+   _loc1_["\x18\x12\x01"] = function §\x18\x12\x01§(nCellNum)
    {
       this.aks.send("BQ" + _loc2_,false);
    };

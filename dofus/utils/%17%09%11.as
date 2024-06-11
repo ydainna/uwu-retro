@@ -52,7 +52,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.ApiElement
    {
       return this["\x18\x02\t"]("MA").m;
    }
-   function §\x17\x1b\t§(§\x19\t\x14§)
+   function §\x17\x1b\t§(nMapID)
    {
       var _loc3_ = this["\x18\x02\t"]("MA").m[_loc2_].c;
       if(_loc3_ == undefined || _global.isNaN(_loc3_))
@@ -61,7 +61,7 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.ApiElement
       }
       return _loc3_;
    }
-   function §\x17\x1b\n§(§\x19\t\x14§)
+   function §\x17\x1b\n§(nMapID)
    {
       var _loc3_ = this["\x18\x02\t"]("MA").m[_loc2_].t;
       if(_loc3_ == undefined || _global.isNaN(_loc3_))
@@ -153,11 +153,11 @@ class dofus.utils.§\x17\t\x11§ extends dofus.utils.ApiElement
    {
       return this["\x18\x02\t"]("H").h[_loc2_];
    }
-   function §\x17\x18\x19§(§\x19\t\x14§)
+   function §\x17\x18\x19§(nMapID)
    {
       return this["\x18\x02\t"]("H").m[_loc2_];
    }
-   function §\x17\x18\x17§(§\x19\t\x14§, §\x19\x04\x12§)
+   function §\x17\x18\x17§(nMapID, nCellNum)
    {
       return this["\x18\x02\t"]("H").d[_loc2_]["c" + _loc3_];
    }

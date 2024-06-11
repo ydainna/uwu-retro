@@ -20,7 +20,7 @@ class ank.gapi.§\x17\x01\x06§.Loader extends ank.gapi.core.UIBasicComponent
    {
       this._oTempVars = oTempVars;
    }
-   function §\x13\x02§(§\x16\x0b\t§)
+   function §\x13\x02§(bEnabled)
    {
       super["\x13\x02"](_loc3_);
       return this["\x1e\x19\x17"]();
@@ -134,7 +134,7 @@ class ank.gapi.§\x17\x01\x06§.Loader extends ank.gapi.core.UIBasicComponent
       this.size();
       return this["\x1e\x1a\x18"]();
    }
-   function §\x10\x01§(§\x16\x0b\t§)
+   function §\x10\x01§(bEnabled)
    {
       this["\x18\x07\f"].content_mc["\x16\x15\x06"] = _loc2_;
       return this["\x1e\x13\x10"]();

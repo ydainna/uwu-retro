@@ -1,6 +1,6 @@
 class dofus.datacenter.Rank extends Object
 {
-   function Rank(§\x19\x10\x10§, §\x19\b\x04§, §\x19\x06\x04§, §\x16\x0b\t§)
+   function Rank(§\x19\x10\x10§, §\x19\b\x04§, §\x19\x06\x04§, bEnabled)
    {
       super();
       this.api = _global.api;
@@ -42,7 +42,7 @@ class dofus.datacenter.Rank extends Object
       this._bEnabled = _loc2_;
       return this["\x1e\x19\x15"]();
    }
-   function initialize(§\x19\x10\x10§, §\x19\b\x04§, §\x19\x06\x04§, §\x16\x0b\t§)
+   function initialize(§\x19\x10\x10§, §\x19\b\x04§, §\x19\x06\x04§, bEnabled)
    {
       this["\x1e\x01\x03"] = !(_global.isNaN(_loc2_) || _loc2_ == undefined) ? _loc2_ : 0;
       this["\x1d\x16\x19"] = !(_global.isNaN(_loc3_) || _loc3_ == undefined) ? _loc3_ : 0;

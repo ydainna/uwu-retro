@@ -34,7 +34,7 @@ class ank.gapi.core.UIBasicComponent extends ank.utils.§\x1a\t\t§
    {
       return this["\x1e\b\t"];
    }
-   function §\x13\x02§(§\x16\x0b\t§)
+   function §\x13\x02§(bEnabled)
    {
       this._bEnabled = _loc2_;
       this.addToQueue({object:this,method:this["\x1a\x16\x07"]});

@@ -296,7 +296,7 @@ class dofus.graphics.gapi.§\x17\x01\x06§.SpriteViewer extends dofus.graphics.g
       this["\x16\x06\x13"](this["\x1d\x1d\b"] - 1);
       this["\x16\x04\x16"]();
    }
-   function displayBackground(§\x16\x0b\t§)
+   function displayBackground(bEnabled)
    {
       this["\x1d\b\n"]._visible = _loc2_;
    }

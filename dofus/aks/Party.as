@@ -16,7 +16,7 @@ class dofus.aks.Party extends dofus.aks.Handler
    {
       this.aks.send("PA");
    }
-   function leave(§\x1b\b\x10§)
+   function leave(sSpriteID)
    {
       this.aks.send("PV" + (_loc2_ == undefined ? "" : _loc2_));
       var _loc3_ = dofus.graphics.gapi.ui.Banner(this.api.ui.getUIComponent("Banner"));
@@ -24,7 +24,7 @@ class dofus.aks.Party extends dofus.aks.Handler
       _loc3_.chat.miniMapReplacementPanel["\x1b\x14\x1a"]();
       _loc3_.chat.shortcutsReplacementPanel.miniMap["\x1b\x14\x1a"]();
    }
-   function §\x17\x11\x19§(§\x16\x13\x01§, §\x1b\b\x10§)
+   function §\x17\x11\x19§(§\x16\x13\x01§, sSpriteID)
    {
       this.aks.send("PF" + (!_loc2_ ? "+" : "-") + _loc3_);
    }
@@ -32,7 +32,7 @@ class dofus.aks.Party extends dofus.aks.Handler
    {
       this.aks.send("PW");
    }
-   function §\x17\x11\x1a§(§\x16\x13\x01§, §\x1b\b\x10§)
+   function §\x17\x11\x1a§(§\x16\x13\x01§, sSpriteID)
    {
       this.aks.send("PG" + (!_loc2_ ? "+" : "-") + _loc3_);
    }

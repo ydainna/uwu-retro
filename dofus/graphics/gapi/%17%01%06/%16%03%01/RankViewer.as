@@ -48,7 +48,7 @@ class dofus.graphics.gapi.§\x17\x01\x06§.§\x16\x03\x01§.RankViewer extends d
          case "_btnEnabled":
             if(this.api.datacenter.Player.rank.enable)
             {
-               this.api.network.Game["\x16\x05\x1c"]();
+               this.api.network.Game.askDisablePVPMode();
             }
             else
             {

@@ -223,7 +223,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       ank.battlefieldutils.Compressor["\x1b\x13\r"](_loc2_,_loc3_,_loc4_,_loc5_,_loc6_,_loc7_,_loc8_,_loc9_);
       this["\x16\x14\x03"](_loc8_,_loc9_);
    }
-   function §\x1b\x14\b§(§\x19\x04\x12§, §\x1a\x11\x01§, §\x1b\x03\r§, §\x19\f\x05§)
+   function §\x1b\x14\b§(nCellNum, §\x1a\x11\x01§, §\x1b\x03\r§, §\x19\f\x05§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -252,7 +252,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
          }
       }
    }
-   function §\x1a\x18\x0e§(§\x19\x04\x12§, §\x17\x12\x0f§)
+   function §\x1a\x18\x0e§(nCellNum, §\x17\x12\x0f§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -260,7 +260,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this["\x18\x18\x15"]["\x1a\x18\x0e"](_loc2_,_loc3_);
    }
-   function §\x1a\x18\x0f§(§\x19\x04\x12§, §\x16\r\r§, §\x19\f\x05§)
+   function §\x1a\x18\x0f§(nCellNum, §\x16\r\r§, §\x19\f\x05§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -268,7 +268,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this["\x18\x18\x15"]["\x1a\x18\x0f"](_loc2_,_loc3_,_loc4_);
    }
-   function §\x1b\x14\t§(§\x19\x04\x12§, §\x1a\x1b\x0f§, §\x19\f\x05§, §\x16\r\r§, §\x16\t\x0f§, §\x19\x12\x18§)
+   function §\x1b\x14\t§(nCellNum, §\x1a\x1b\x0f§, §\x19\f\x05§, §\x16\r\r§, §\x16\t\x0f§, §\x19\x12\x18§)
    {
       var _loc8_ = new ank.battlefield.datacenter.["\x16\x17\x13"]();
       _loc8_.layerObjectExternal = _loc3_;
@@ -277,7 +277,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       _loc8_.layerObjectExternalData = _loc7_;
       this["\x18\x18\x15"]["\x1b\x14\b"](_loc2_,_loc8_,"1C000",_loc4_);
    }
-   function §\x1a\x18\x10§(§\x19\x04\x12§, §\x17\x12\x0f§)
+   function §\x1a\x18\x10§(nCellNum, §\x17\x12\x0f§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -285,7 +285,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this["\x18\x18\x15"]["\x1a\x18\x10"](_loc2_,_loc3_);
    }
-   function §\x18\t\x1b§(§\x19\x04\x12§, §\x19\f\x05§)
+   function §\x18\t\x1b§(nCellNum, §\x19\f\x05§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -352,7 +352,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this["\x18\x0b\x05"]["\x1a\x16\x07"](_loc2_);
    }
-   function §\x1a\x17\x07§(§\x19\x04\x12§, §\x19\x0e\x1d§)
+   function §\x1a\x17\x07§(nCellNum, §\x19\x0e\x1d§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -371,7 +371,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
          this["\x18\x0b\x05"]["\x1a\x16\n"](_loc2_[k],_loc3_);
       }
    }
-   function §\x17\n\x10§(§\x19\x04\x12§, §\x19\r\x02§, §\x19\r\x03§, §\x1b\x02\x17§, §\x19\x05\x06§, nShapeID)
+   function §\x17\n\x10§(nCellNum, §\x19\r\x02§, §\x19\r\x03§, §\x1b\x02\x17§, §\x19\x05\x06§, nShapeID)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -379,7 +379,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this["\x1b\x1b\t"]["\x17\n\x10"](_loc2_,_loc3_,_loc4_,_loc5_,_loc6_,nShapeID);
    }
-   function §\x16\x1c\x12§(§\x19\x04\x12§, §\x19\r\x01§, §\x1b\x02\x17§)
+   function §\x16\x1c\x12§(nCellNum, §\x19\r\x01§, §\x1b\x02\x17§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -415,7 +415,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
    {
       this["\x1a\x06\x06"]["\x15\x1e\x0e"](_loc2_,_loc3_,_loc4_,_loc5_);
    }
-   function §\x17\n\x0b§(§\x19\x04\x12§)
+   function §\x17\n\x0b§(nCellNum)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -467,7 +467,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this.spriteHandler["\x1a\f\x01"](_loc2_);
    }
-   function §\x1b\x13\n§(sID, §\x19\x04\x12§, §\x16\x14\x1c§, §\x1a\x01\x1d§)
+   function §\x1b\x13\n§(sID, nCellNum, §\x16\x14\x1c§, §\x1a\x01\x1d§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -511,7 +511,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this.spriteHandler["\x18\x06\x1c"](sID,_loc3_);
    }
-   function §\x1a\x1a\t§(sID, §\x19\x04\x12§, §\x17\x07\x13§)
+   function §\x1a\x1a\t§(sID, nCellNum, §\x17\x07\x13§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -527,7 +527,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this.spriteHandler["\x1a\x1a\x05"](sID,_loc3_);
    }
-   function §\x1b\x0b\x04§(sID, §\x1a\x01\x1d§, §\x19\x04\x12§)
+   function §\x1b\x0b\x04§(sID, §\x1a\x01\x1d§, nCellNum)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -555,7 +555,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
          this.spriteHandler["\x19\x01\n"](sID,_loc3_,_loc4_,_loc5_,_loc9_,_loc6_,_loc7_,_loc8_);
       }
    }
-   function §\x1b\x03\x02§(sID, §\x19\x04\x12§, §\x1a\x01\x1d§, §\x1a\x0f\x10§)
+   function §\x1b\x03\x02§(sID, nCellNum, §\x1a\x01\x1d§, §\x1a\x0f\x10§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -563,7 +563,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this.spriteHandler["\x1b\x03\x02"](sID,_loc3_,_loc4_,_loc5_);
    }
-   function §\x16\x07\x11§(sID, §\x19\x04\x12§)
+   function §\x16\x07\x11§(sID, nCellNum)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -635,7 +635,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this.spriteHandler["\x1a\x1a\x02"](sID,_loc3_);
    }
-   function §\x1b\x07\x0b§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§, §\x19\x02\x06§, sTargetID, §\x1a\x02\x0b§, §\x16\f\n§, §\x16\t\x12§)
+   function §\x1b\x07\x0b§(sID, §\x19\x12\x14§, nCellNum, §\x19\x06\x06§, §\x19\x02\x06§, sTargetID, §\x1a\x02\x0b§, §\x16\f\n§, §\x16\t\x12§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -643,7 +643,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
       }
       this.spriteHandler["\x18\x13\x07"](sID,_loc3_,_loc4_,_loc5_,_loc6_,_loc7_,_loc8_,_loc9_,_loc10_);
    }
-   function §\x1b\x07\n§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§)
+   function §\x1b\x07\n§(sID, §\x19\x12\x14§, nCellNum, §\x19\x06\x06§)
    {
       if(!this["\x18\x0e\x1b"])
       {
@@ -838,7 +838,7 @@ class ank.battlefield.§\x16\t\t§ extends MovieClip
          this._mcCellIds = this["\x18\x18\x15"].drawCellIds();
       }
    }
-   function §\x16\x01\b§(sID, §\x19\x12\x14§, §\x19\x04\x12§, §\x19\x06\x06§, sTargetID)
+   function §\x16\x01\b§(sID, §\x19\x12\x14§, nCellNum, §\x19\x06\x06§, sTargetID)
    {
       if(!this["\x18\x0e\x1b"])
       {

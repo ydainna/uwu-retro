@@ -177,7 +177,7 @@ class dofus.graphics.gapi.§\x17\x01\x06§.ConquestStatsViewer extends dofus.gra
          case this["\x1c\x0b\x0b"]:
             if(this.api.datacenter.Player.rank.enable)
             {
-               this.api.network.Game["\x16\x05\x1c"]();
+               this.api.network.Game.askDisablePVPMode();
                break;
             }
             this.api.network.Game["\x19\x1b\x13"]("",true);
@@ -191,7 +191,7 @@ class dofus.graphics.gapi.§\x17\x01\x06§.ConquestStatsViewer extends dofus.gra
       {
          if(!this.api.datacenter.Player.rank.enable)
          {
-            this.api.network.Game["\x17\r\x05"](true);
+            this.api.network.Game.enabledPVPMode(true);
          }
          this.api.network.Game.toggleHunterMatchmakingRegister();
       }

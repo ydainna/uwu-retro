@@ -25,7 +25,7 @@ class ank.battlefield.§\x1a\x06\x07§
    {
       this["\x1b\x1e\x1c"].push({shape:_loc2_,size:_loc3_,col:_loc4_,cellNumRef:_loc5_});
    }
-   function draw(§\x19\x04\x12§)
+   function draw(nCellNum)
    {
       var _loc3_ = this["\x1b\x1e\x1c"];
       if(_loc3_.length == 0)
@@ -175,7 +175,7 @@ class ank.battlefield.§\x1a\x06\x07§
          _loc4_ = _loc4_ + 1;
       }
    }
-   function §\x19\x01\x07§(§\x18\x1c\x07§, §\x19\x04\x12§)
+   function §\x19\x01\x07§(§\x18\x1c\x07§, nCellNum)
    {
       var _loc4_ = this["\x1d\b\x12"]["\x18\x18\x15"]["\x17\x14\x1d"](_loc3_);
       _loc2_._x = _loc4_.x;

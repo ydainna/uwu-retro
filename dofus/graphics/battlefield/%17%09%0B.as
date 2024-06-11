@@ -58,7 +58,7 @@ class dofus.graphics.battlefield.§\x17\t\x0b§ extends ank.battlefield.§\x16\t
          this["\x1a\x17\x06"](ank.battlefield.Constants["\x18\x0b\x12"]);
       }
       this.api.datacenter.Game["\x1a\x17\t"]("move");
-      this.api.network.Game["\x17\x17\x14"]();
+      this.api.network.Game.getExtraInformations();
       this.api.ui["\x1b\x13\x12"]();
       this.api.ui["\x1a\f\x15"]();
       this.api.ui.getUIComponent("MapInfos").update();
@@ -250,7 +250,7 @@ class dofus.graphics.battlefield.§\x17\t\x0b§ extends ank.battlefield.§\x16\t
             {
                break;
             }
-            this.api.network.Game["\x1a\x18\x17"](_loc2_.num);
+            this.api.network.Game.setPlayerPosition(_loc2_.num);
             break;
          case 5:
             if(this.api.datacenter.Player["\x17\x03\x1d"] != null && this.api.datacenter.Basics.gfx_canLaunch == true)
@@ -269,7 +269,7 @@ class dofus.graphics.battlefield.§\x17\t\x0b§ extends ank.battlefield.§\x16\t
             {
                if(_loc2_.num != undefined)
                {
-                  this.api.network.Game["\x1a\x16\x15"](_loc2_.num);
+                  this.api.network.Game.setFlag(_loc2_.num);
                }
                this.api.gfx["\x16\x1c\x0b"]();
                this.api.gfx["\x1b\x13\x1b"]("startPosition");

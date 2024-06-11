@@ -77,7 +77,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
    {
       this.api.kernel.showMessage(undefined,this.api.lang.getText("DO_U_OFFLINEEXCHANGE",[_loc2_,_loc3_,_loc4_]),"CAUTION_YESNO",{name:"OfflineExchange",listener:this,price:_loc4_});
    }
-   function §\x1b\t\x0f§(§\x19\x07\x04§, §\x1b\b\x10§, §\x19\x04\x12§)
+   function §\x1b\t\x0f§(§\x19\x07\x04§, sSpriteID, nCellNum)
    {
       var _loc5_ = this.api.datacenter.Player.data;
       if(_loc5_.isInMove)
@@ -87,7 +87,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       }
       this.api.network.Exchange["\x1a\r\x13"](_loc2_,Number(_loc3_),_loc4_);
    }
-   function §\x1b\t\r§(§\x1b\b\x10§)
+   function §\x1b\t\r§(sSpriteID)
    {
       var _loc3_ = this.api.datacenter.Player.data;
       if(_loc3_.isInMove)
@@ -97,7 +97,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       }
       this.api.network.Dialog.create(_loc2_);
    }
-   function §\x16\x05\x15§(§\x1b\b\x10§)
+   function §\x16\x05\x15§(sSpriteID)
    {
       var _loc3_ = this.api.datacenter.Sprites.getItemAt(_loc2_);
       var _loc4_ = "";
@@ -145,12 +145,12 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
       _loc2_ += this.api.lang.getText("DO_U_ATTACK",[this.api.lang.getText("YOUR_TARGET")]);
       this.api.kernel.showMessage(undefined,_loc2_,"CAUTION_YESNO",{name:"PunishIndoor",listener:this});
    }
-   function §\x16\x06\t§(§\x1b\b\x10§)
+   function §\x16\x06\t§(sSpriteID)
    {
       var _loc3_ = this.api.datacenter.Sprites.getItemAt(_loc2_).name;
       this.api.kernel.showMessage(undefined,this.api.lang.getText("DO_U_REMOVE_TAXCOLLECTOR",[_loc3_]),"CAUTION_YESNO",{name:"RemoveTaxCollector",listener:this,params:{spriteID:_loc2_}});
    }
-   function §\x1b\x16\x19§(§\x18\x1b\x10§, §\x19\x04\x12§, §\x19\x0e\f§, nInstancedID)
+   function §\x1b\x16\x19§(§\x18\x1b\x10§, nCellNum, §\x19\x0e\f§, nInstancedID)
    {
       var _loc6_ = this.api.datacenter.Player.data.GameActionsManager;
       if(_loc6_ == undefined || _loc6_["\x18\x0f\n"](1))
@@ -181,7 +181,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          this.api.gfx["\x1a\x17\x06"](_loc2_);
       }
    }
-   function §\x16\x1b\x15§(§\x1b\b\x10§)
+   function §\x16\x1b\x15§(sSpriteID)
    {
       if(_loc2_ != this.api.datacenter.Game["\x17\x03\x1a"])
       {
@@ -1406,7 +1406,7 @@ class dofus.§\x18\x18\x0b§.§\x17\x13\x06§ extends dofus.utils.ApiElement
          {
             if(this["\x16\b\x01"])
             {
-               this.api.network.Game["\x1b\x11\x16"]();
+               this.api.network.Game.turnEnd();
                return undefined;
             }
             this.api.kernel.showMessage(undefined,this.api.lang.getText("INFIGHT_INACTIVITY"),"ERROR_CHAT");

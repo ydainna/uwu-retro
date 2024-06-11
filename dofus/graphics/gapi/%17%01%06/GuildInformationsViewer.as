@@ -64,7 +64,7 @@ class dofus.graphics.gapi.§\x17\x01\x06§.GuildInformationsViewer extends dofus
          this._bEmptyTextField = false;
       }
    }
-   function toggleInfosEditor(§\x16\x0b\t§)
+   function toggleInfosEditor(bEnabled)
    {
       this._taGuildInformations["\x17\x0b\x1c"] = _loc2_;
       this._taGuildInformations.html = !_loc2_;

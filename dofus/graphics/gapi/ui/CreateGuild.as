@@ -111,7 +111,7 @@ class dofus.graphics.gapi.ui.CreateGuild extends dofus.graphics.gapi.core.§\x17
       this._eEmblem.upID = this["\x1e\x01\x02"];
       this._eEmblem.upColor = this["\x1d\x1e\x1c"];
    }
-   function §\x1a\x16\x07§(§\x16\x0b\t§)
+   function §\x1a\x16\x07§(bEnabled)
    {
       this._btnCancel.enabled = this._bEnabled;
       this._btnClose.enabled = this._bEnabled;

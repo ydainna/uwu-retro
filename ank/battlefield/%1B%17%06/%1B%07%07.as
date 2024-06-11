@@ -3,7 +3,7 @@ class ank.battlefield.utils.§\x1b\x07\x07§
    function §\x1b\x07\x07§()
    {
    }
-   static function §\x17\x18\x01§(§\x18\x18\x15§, §\x1a\x02\n§, §\x19\x04\x12§, §\x16\f\x0f§)
+   static function §\x17\x18\x01§(§\x18\x18\x15§, §\x1a\x02\n§, nCellNum, §\x16\f\x0f§)
    {
       if(_loc4_ < 0)
       {

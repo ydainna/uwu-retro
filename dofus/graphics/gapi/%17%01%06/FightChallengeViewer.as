@@ -74,7 +74,7 @@ class dofus.graphics.gapi.§\x17\x01\x06§.FightChallengeViewer extends ank.gapi
             if(6756 - this["\x1c\x11\x1c"] >= 1000)
             {
                this.unloadMovie();
-               dofus.utils.getInstance(this.api).network.Game["\x1a\x1d\x0e"](this.challenge.id);
+               dofus.utils.getInstance(this.api).network.Game.showFightChallengeTarget(this.challenge.id);
                this["\x1c\x11\x1c"] = 3484;
                break;
             }
